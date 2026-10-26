@@ -70,7 +70,7 @@ Semua berada pada satu profil dan QR, tetapi status pendaftaran masing-masing in
 
 **Studi Destinasi Berkelanjutan (6 Januari)** merupakan kegiatan **onsite**. Cukup manifest peserta/rombongan, titik kehadiran, dan fasilitas sarapan/lunch sesuai jadwal. Kelompok Pengabdian Internasional menurut TOR mencakup bidang **Pendidikan, Ekonomi, dan Sosial Budaya**. Tidak ada kebutuhan membangun aplikasi wisata umum.
 
-TOR menuliskan bundle **MoU + Pembinaan + PKM + Studi Destinasi** seharga **IDR 1.000.000**, tetapi **belum menjelaskan unit tagihan per orang/institusi dan detail cakupan fasilitas**. Jangan mencampur kategori tarif dengan keanggotaan delegasi resmi. Registrasi MoU institusional tetap berdasarkan PIC dan verifikasi panitia.
+**KEPUTUSAN BARU:** paket program pendamping dalam TOR (**MoU + Pembinaan Riset/PKM + Pengabdian Internasional + Studi Destinasi**) berbiaya **IDR 1.000.000 PER ORANG**, terpisah dari **Co-Host Rp3.000.000 per institusi** yang khusus mencakup jalur paper International Conference. Peserta dari institusi Co-Host yang memilih program pendamping tetap memiliki kewajiban Rp1 juta masing-masing. **Pendaftaran institusi untuk MoU, pengusulan delegasi, keikutsertaan individu, dan bukti MoU Signed tetap dipisahkan**; membayar paket pendamping tidak otomatis menandatangani MoU. Rincian fasilitas dan kemungkinan harga untuk peserta yang hanya memilih sebagian program masih terbuka. [Kebijakan biaya lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
 ## Poin keputusan terbuka
 
