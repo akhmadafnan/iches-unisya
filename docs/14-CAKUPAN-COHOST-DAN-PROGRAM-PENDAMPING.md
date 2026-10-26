@@ -21,17 +21,17 @@
 
 ```mermaid
 flowchart TD
-  I["Universitas A — Institusi Co-Host"] --> A["Tagihan institusi Rp3.000.000"]
-  I --> R["Roster 1–5 anggota Conference"]
-  I --> BR["Pengakuan publik: Co-Host ICHES 2027"]
-  R --> P["Paper International Conference"]
-  R --> X["Individu login Dashboard pribadi"]
-  X --> Y{"User sendiri memilih satu Paket Program Internasional?"}
-  Y -->|Tidak| N["Tidak ada tagihan paket Rp1 juta"]
-  Y -->|Ya| B["SATU tagihan personal Rp1 juta"]
-  B --> E["EMPAT akses: MoU + Upgrading + PKM + Destinasi"]
+  I["PIC Institusi Co-Host"] --> A["Satu invoice institusi Rp3.000.000"]
+  I --> R["Roster Conference maksimal lima anggota"]
+  I --> BR["Pengakuan publik Co-Host ICHES 2027"]
+  R --> P["Jalur paper International Conference"]
+  U["User Co-Host maupun non-Co-Host"] --> X["Dashboard Peserta PRIBADI"]
+  X --> Y{"Peserta memilih Paket Program Internasional?"}
+  Y -->|Tidak| N["Tidak ada tagihan paket"]
+  Y -->|Ya| B["SATU invoice pribadi Rp1.000.000"]
+  B --> E["Empat akses: MoU + Upgrading + PKM + Destinasi"]
   P --> RV["Review → ACCEPT → Full Paper → Presentasi"]
-  E --> QR["Personal QR, absensi dan fasilitas sesuai hak"]
+  E --> QR["Personal QR, absensi tiap kegiatan"]
   RV --> QR
 ```
 
