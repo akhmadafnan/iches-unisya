@@ -5,6 +5,8 @@
 
 > **Pembaruan 26 Oktober 2026:** [TOR Warek I](10-ANALISIS-TOR-DAN-REBASELINE-2027.md) menetapkan **lima rangkaian kegiatan** pada **5–6 Januari 2027**. Peta tiga jalur di dokumen ini merupakan konsep awal; dua kegiatan tambahan (**Pembinaan Riset/PKM** dan **Studi Destinasi Berkelanjutan**) wajib tercakup dalam desain baru.
 
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## Tujuan produk
 
 Satu portal untuk menghubungkan informasi acara, registrasi, proses akademik, pendaftaran institusi MoU, kegiatan pengabdian internasional, operasional pelayanan, dan sertifikat. Sistem **single-event ICHES 2027** dengan model satu akun / satu profil / satu QR pribadi dan banyak keikutsertaan.
@@ -51,8 +53,8 @@ flowchart TD
 - **Visitor:** melihat website, call for papers, jadwal publik, dan verifikasi sertifikat.
 - **User/Participant:** memiliki akun dan kegiatan aktif.
 - **Submitting Author:** pengelola paper dan seluruh tautan sertifikat penulisnya.
-- **Reviewer:** mengerjakan penilaian yang ditugaskan tanpa menetapkan keputusan akademik final.
-- **Academic Authority:** screening, penugasan review, keputusan, jadwal dan final academic check.
+- **Reviewer:** mencari/filter paper valid menurut track, Claim sendiri, menilai; tidak menetapkan keputusan final.
+- **Academic Authority:** memantau reviewer claim, mengatasi klaim macet, keputusan final, jadwal dan final academic check.
 - **PIC MoU:** mewakili administrasi pendaftaran institusi dan mengusulkan delegasi.
 - **Verified Delegate:** individu terundang dengan akun/QR sendiri.
 - **ICD Coordinator:** mengelola peserta dan bukti kegiatan.

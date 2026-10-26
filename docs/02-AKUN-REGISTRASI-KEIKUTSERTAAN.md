@@ -4,6 +4,8 @@
 
 > **Rebaseline TOR:** ICHES 2027 memiliki **lima rangkaian acara**. Konsep multi-keikutsertaan tetap berlaku, tetapi **kategori biaya/bundle bukan sinonim kegiatan**. TOR memiliki paket gabungan MoU + Pembinaan + PKM + Destinasi senilai **IDR 1.000.000**, dan kategori Co-Host **IDR 3.000.000** (**koreksi terbaru**; TOR masih mencetak IDR 450.000). Kuota Co-Host **maks. lima peserta per institusi** sudah disepakati. **Biaya Co-Host berlaku sekali PER INSTITUSI untuk maksimal lima peserta (sudah final)**; detail benefit dan eligibility lainnya masih memerlukan keputusan. Lihat [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
 
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## Identity: satu profil untuk berbagai aktivitas
 
 Alur peserta ditetapkan sebagai:
@@ -55,6 +57,12 @@ Konsep Conference memisahkan Participant dan jalur Presenter. Presenter membuat 
 Satu orang boleh menambah Conference, Pembinaan Riset/PKM, MoU, ICD, dan Studi Destinasi melalui dashboard tanpa membuat akun baru, dengan status masing-masing (draft/pending/verified/confirmed dan seterusnya sesuai domain). Tidak ada batas 'hanya satu aktivitas per akun'.
 
 MoU berbeda karena yang didaftarkan adalah institusi; orang ditautkan sebagai PIC atau delegasi. **Co-Host juga mempunyai satu tagihan per institusi Rp3.000.000 untuk maksimal lima peserta, tanpa tagihan Co-Host berulang per orang.** Status Co-Host dan pendaftaran MoU merupakan dua hubungan institusi yang berbeda, meskipun dapat menggunakan satu master institusi. **Biaya Co-Host dan bundle TOR tidak boleh otomatis diperlakukan sebagai pembayaran per kegiatan.** Paket biaya dapat memberikan akses ke beberapa kegiatan tanpa menggandakan tagihan/serving. Lihat [04 — MoU dan ICD](04-MOU-DAN-ICD.md).
+
+### Usulan hubungan anggota Co-Host (lima slot)
+
+Satu **Institution** dengan satu **Co-Host Registration**, satu akun **PIC**, maksimal **5 anggota**. PIC input nama+email masing-masing lalu sistem mengundang lewat Email Magic Link: yang sudah punya akun dihubungkan tanpa akun ganda; yang belum punya akun melakukan aktivasi dan melengkapi profil. Undangan mencadangkan slot agar tak melebihi lima. **PIC hanya dihitung sebagai salah satu dari lima peserta bila PIC ikut acara**. Per anggota tetap personal QR sendiri; Finance mencatat **satu** pembayaran institusi Rp3.000.000.
+
+Penggantian anggota sebelum check-in/layanan bisa dikelola PIC; sesudah hadir atau menerima fasilitas dikoordinasikan Admin tanpa menghapus fakta lama. Ketentuan ini **usulan**, belum final. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## Aturan biaya Co-Host untuk model registrasi
 

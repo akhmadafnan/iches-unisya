@@ -5,13 +5,15 @@
 >
 > **Gagasan utama:** satu portal konferensi, satu akun, satu QR pribadi, **lima rangkaian kegiatan menurut TOR**, dan layanan panitia yang fleksibel.
 
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## KEPUTUSAN TERBARU UNTUK PRESENTASI WAREK I
 
 | Keputusan | Rumusan terbaru |
 |---|---|
 | Co-Host | **Rp3.000.000 per institusi, satu tagihan mencakup maksimal lima peserta** (koreksi atas Rp450.000 pada TOR) |
 | Agenda paralel | MoU/Pembinaan dan Panel Session boleh berjalan bersamaan; kehadiran per kegiatan tidak disamakan, tidak perlu optimasi jadwal |
-| Reviewer | Sejak submission awal 1 Desember, abstract **lolos screening** masuk **Reviewer Index**; semua reviewer mencari/filter topik dan melakukan **Claim** mandiri |
+| Reviewer | Sejak submission awal 1 Desember, abstract **valid disubmit** masuk **Reviewer Index**; semua reviewer mencari/filter topik dan melakukan **Claim** mandiri |
 | Full Paper | Tombol unggah terbuka bagi paper yang **ACCEPTED dan keputusannya diumumkan ke author**; **REJECTED** tidak memperoleh akses |
 | Pembayaran | Presenter bayar **setelah ACCEPT**, tetapi **tidak menjadi syarat membuka unggah Full Paper** |
 
@@ -19,8 +21,8 @@
 
 ```mermaid
 flowchart TD
-  A["Abstrak masuk 1–20 Desember"] --> B["Administrative Screening"]
-  B -->|Lolos| C["Reviewer Abstract Index"]
+  A["Abstrak masuk 1–20 Desember"] --> B["Validasi form + server saat Submit"]
+  B -->|Valid| C["Reviewer Abstract Index"]
   C --> D["Search / Filter Topik"]
   D --> E["Reviewer Claim Paper"]
   E --> F["Review Submitted"]
@@ -140,7 +142,7 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  A["Submitting Author: Abstract Text + PDF"] --> B["Administrative Screening"]
+  A["Submitting Author: Abstract Text + PDF"] --> B["Validasi form + server saat Submit"]
   B -->|Correction| A
   B -->|Pass| C["Reviewer Index: cari/filter Track"]
   C --> D["Reviewer Claim mandiri"]
@@ -160,7 +162,7 @@ flowchart TD
 ```
 
 - **Disepakati:** text abstrak dan PDF wajib; **file abstrak PDF saja**. Submitting/Corresponding Author mengelola seluruh submission, tidak harus First Author.
-- **Disepakati terbaru:** reviewer **bebas mencari/filter topik** dari indeks abstrak lolos screening dan **Claim** mandiri; bukan menunggu penugasan manual atau akhir masa submission. Reviewer memberi rekomendasi, komite membuat final decision.
+- **Disepakati terbaru:** reviewer **bebas mencari/filter topik** dari indeks abstrak valid disubmit dan **Claim** mandiri; bukan menunggu penugasan manual atau akhir masa submission. Reviewer memberi rekomendasi, komite membuat final decision.
 - **Baseline repo lama:** single-anonymous; satu reviewer default tetapi configurable. **Jumlah reviewer resmi ICHES masih terbuka.**
 - **Disepakati terbaru:** Full Paper terbuka ketika **ACCEPT resmi diumumkan kepada author**. Rejected tidak dapat upload. Pembayaran presenter setelah ACCEPT dan proses administratifnya terpisah.
 - **Disepakati:** paper yang benar-benar dipresentasikan membuat **semua author** memenuhi dasar sertifikat; panitia melakukan **publikasi massal**, satu URL dan PDF unik setiap penulis.
@@ -221,7 +223,7 @@ flowchart TD
 | Peserta / Submitting Author | Profil, kegiatan, abstrak, revisi, pembayaran, dokumen, sertifikat |
 | PIC MoU | Pendaftaran institusi, pengusulan delegasi |
 | Reviewer | Search/filter abstrak berdasarkan topik, claim mandiri, dan nilai paper yang tersedia |
-| Komite Akademik | Screening, reviewer, keputusan, full paper, jadwal |
+| Komite Akademik | Pantau paper yang belum diklaim, review dan keputusan final, full paper, jadwal |
 | Moderator | Konfirmasi pelaksanaan presentasi, bukan memutuskan ACCEPT |
 | Finance | Memeriksa bukti pembayaran |
 | Admin & Koordinator | Hak fasilitas, pos, slot, petugas, koreksi operasional |

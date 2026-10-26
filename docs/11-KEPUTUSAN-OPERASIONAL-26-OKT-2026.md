@@ -5,6 +5,8 @@
 >
 > [Kembali ke presentasi besar](00-PRESENTASI-WAREK-I.md) · [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md) · [Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).
 
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## 1. Lima keputusan yang sudah ditegaskan
 
 | No | Pokok | Keputusan |
@@ -22,7 +24,7 @@
 ```mermaid
 flowchart TD
   A["1 Desember: penerimaan abstrak dibuka"] --> B["Author kirim text + PDF"]
-  B --> C["Administrative Screening"]
+  B --> C["Validasi form + server saat Submit"]
   C -->|Perbaikan| B
   C -->|Lolos| D["Reviewer Abstract Index"]
   D --> E["Pencarian / Filter 8 Conference Tracks"]
@@ -49,12 +51,12 @@ flowchart TD
 
 Tabel contoh di atas berisi **data fiktif**, bukan pendaftar nyata.
 
-- Semua reviewer yang sudah **memiliki peran Reviewer** dapat melihat paper **lolos screening** yang tersedia. **Tidak ada konfigurasi batas Reviewer A hanya Topik 1 / Reviewer B hanya Topik 2.**
+- Semua reviewer yang sudah **memiliki peran Reviewer** dapat melihat paper **valid disubmit** yang tersedia. **Tidak ada konfigurasi batas Reviewer A hanya Topik 1 / Reviewer B hanya Topik 2.**
 - Search: judul, kode paper; filter: daftar delapan subtema TOR. Reviewer memilih sesuai keahliannya.
 - **Claim sekali secara atomik**, cegah slot diambil dua reviewer melebihi kuota; blokir reviewer mengklaim paper sendiri atau konflik langsung yang diketahui. Jumlah slot mengikuti konfigurasi jumlah reviewer per paper.
 - Setelah Claim, paper tampil dalam **My Reviews**. Koordinator Akademik tetap bisa melepas/reassign klaim yang macet. **Tidak perlu deadline wajib per reviewer, SLA otomatis, atau engine reminder yang rumit.**
 - **Reviewer bukan pengambil keputusan final**; penilaian diberikan kepada Komite Akademik untuk keputusan dan publikasi kepada author.
-- TOR memuat tanggal pengumuman **22 Desember 2026**. Tanggal ini tetap **milestone acara**, bukan alasan menahan abstract sampai akhir masa kirim 20 Desember. Review dimulai bergulir sejak submission pertama yang lolos screening.
+- TOR memuat tanggal pengumuman **22 Desember 2026**. Tanggal ini tetap **milestone acara**, bukan alasan menahan abstract sampai akhir masa kirim 20 Desember. Review dimulai bergulir sejak submission pertama yang valid disubmit.
 
 **Yang masih terbuka:** jumlah reviewer default operasional ICHES (baseline repo lama **1, configurable**), penanganan klaim tidak dikerjakan (cukup tindakan manual koordinator), standar rubrik dan jumlah revisi. Jangan mengunci '2 reviewer wajib' tanpa keputusan baru.
 
@@ -115,7 +117,7 @@ MoU/Pembinaan dan Parallel Panel memang berjalan pada jam beririsan di TOR. **Ti
 | Backoffice Finance | Satu tagihan **Rp3 juta per institusi Co-Host** dengan daftar maksimum lima peserta; verifikasi pembayaran satu kali |
 | Institusi/Co-Host | Batas 5 orang **per institusi**, tidak global |
 | Reviewer UI | Menu **Abstract Index**, **My Claimed Reviews**, filter track, tombol Claim |
-| Academic Backoffice | Screening, monitor unclaimed/claimed, release claim, final decision, **Publish Decision** |
+| Academic Backoffice | Monitor unclaimed/claimed, release claim, final decision, **Publish Decision** |
 | Submitting Author Dashboard | Hasil ACCEPT diumumkan → tampil LoA dan **Upload Full Paper** |
 | Jadwal/QR | Agenda paralel diterima; hanya kehadiran/status presenter yang dicatat terpisah |
 | Product Documentation | Catat bahwa TOR masih menulis Rp450 ribu dan jadwal Full Paper berbasis tanggal; **produk terbaru** menggantikan kedua hal tersebut |

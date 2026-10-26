@@ -5,7 +5,9 @@
 >
 > Gunakan status: **TERCANTUM DI TOR**, **SUDAH DISEPAKATI PRODUK**, **USULAN SISTEM**, atau **PERLU KONFIRMASI PANITIA/WAREK I**.
 
-> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang valid disubmit dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## I. Identitas kegiatan yang harus masuk konfigurasi acara
 
@@ -82,7 +84,7 @@ Dari TOR hal. 3:
 
 **DIPUTUSKAN SETELAH TOR:** Meski TOR menulis Full Paper 23–28 Desember dan pembayaran 24–28 Desember, akses unggah Full Paper **dibuka saat keputusan final ACCEPT sudah diumumkan kepada submitting author**, **bukan** berdasarkan tanggal hard gate atau pembayaran VERIFIED. Setelah ACCEPT, pembayaran dapat berjalan paralel. Tanggal TOR tetap disimpan sebagai target/milestone dan dapat dikomunikasikan panitia.
 
-**RESPONS PRODUK UNTUK JADWAL SINGKAT:** Sejak abstrak masuk 1 Desember dan **lolos screening**, paper tampil pada **Reviewer Abstract Index**. Reviewer mencari/filter sesuai topic/track dan **claim mandiri**; tanpa pemetaan hak akun ke topik tertentu. Review berjalan **bergulir**, tidak menunggu 20 Desember atau deadline per reviewer. Koordinator memantau indeks paper yang belum diklaim dan dapat membebaskan claim yang tertunda; keputusan final Academic Authority dan publikasi hasil tetap diperlukan. Target pengumuman 22 Desember pada TOR tetap milestone penyelenggaraan.
+**RESPONS PRODUK UNTUK JADWAL SINGKAT:** Sejak abstrak masuk 1 Desember dan **valid disubmit**, paper tampil pada **Reviewer Abstract Index**. Reviewer mencari/filter sesuai topic/track dan **claim mandiri**; tanpa pemetaan hak akun ke topik tertentu. Review berjalan **bergulir**, tidak menunggu 20 Desember atau deadline per reviewer. Koordinator memantau indeks paper yang belum diklaim dan dapat membebaskan claim yang tertunda; keputusan final Academic Authority dan publikasi hasil tetap diperlukan. Target pengumuman 22 Desember pada TOR tetap milestone penyelenggaraan.
 
 ## V. Biaya dan kategori peserta persis dari TOR (hal. 5)
 
@@ -191,7 +193,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 1. **Co-Host SUDAH FINAL:** Rp3.000.000 **per institusi untuk maksimal lima peserta**; unit pembayaran bundle Rp1.000.000, kemungkinan biaya paper Presenter dan pembayaran multi-kegiatan masih terbuka.
 2. **Co-Host maksimal 5:** **TERJAWAB — per institusi**.
 3. **Agenda paralel 5 Januari:** **TERJAWAB — boleh bersamaan, tak perlu fitur anti-benturan khusus**.
-4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah screening**. Jumlah reviewer dan aturan revisi detail tetap terbuka.
+4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah validasi Submit**. Jumlah reviewer dan aturan revisi detail tetap terbuka.
 5. **Full Paper:** **TERJAWAB — unlock saat ACCEPT diumumkan, bukan berdasarkan tanggal atau Finance Verified**.
 6. **Peserta Day 2:** pendaftaran mandiri/bundle, kuota, transport, pembagian kelompok, titik check-in, fasilitas.
 7. **Output & sertifikat non-akademik:** sertifikat Pembinaan, MoU, PKM, Studi Destinasi dan syarat kelayakannya.
@@ -202,7 +204,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 
 **Gelombang 1 — sebelum 1 Desember:** website/CfP, akun/email, profil, jalur partisipasi, 8 tracks, abstract online + PDF, konfigurasi fee awal dan important dates.
 
-**Gelombang 2 — selama periode 1–28 Desember:** screening berlangsung sejak abstrak masuk, reviewer claim bergulir setelah tiap paper lolos screening, kemudian keputusan akademik/LoA; Full Paper unlock saat ACCEPT diumumkan dan tagihan/pembayaran setelah ACCEPT; delegasi, jadwal, pos, entitlement.
+**Gelombang 2 — selama periode 1–28 Desember:** validasi form dan server dilakukan saat Submit, reviewer claim bergulir segera setelah tiap paper valid disubmit, kemudian keputusan akademik/LoA; Full Paper unlock saat ACCEPT diumumkan dan tagihan/pembayaran setelah ACCEPT; delegasi, jadwal, pos, entitlement.
 
 **Gelombang 3 — sebelum 5 Januari:** scan personal QR, registrasi on-site, slot konsumsi/kit, check-in khusus MoU, moderator dan sesi parallel, manifest dan kelompok Day 2.
 

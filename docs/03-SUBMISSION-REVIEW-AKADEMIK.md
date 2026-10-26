@@ -2,7 +2,9 @@
 
 > **STATUS CAMPURAN:** 'Disepakati' bersumber diskusi ICHES baru. 'Baseline lama' dari [repository referensi](https://github.com/akhmadafnan/international-conference-platform/tree/develop), **belum otomatis berarti implementasi tersedia**.
 
-> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang valid disubmit dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+
+> **KEPUTUSAN TERBARU:** *Validasi form + server saat Submit* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## Penetapan jadwal akademik dari TOR (halaman 5)
 
@@ -33,7 +35,7 @@
 
 ```mermaid
 flowchart TD
-  A["Abstract Text + PDF"] --> B["Administrative Screening"]
+  A["Abstract Text + PDF"] --> B["Validasi form + server saat Submit"]
   B -->|Correction| A
   B -->|Pass| C["Reviewer Index"]
   C --> D["Cari / Filter topik dari delapan Conference Tracks"]
@@ -53,7 +55,7 @@ flowchart TD
   M --> N["Kelayakan sertifikat semua penulis"]
 ```
 
-Reviewer mulai bekerja secara **bergulir** sejak abstract submission dimulai 1 Desember dan sebuah paper **lolos screening**, bukan setelah tanggal penutupan abstrak. Akses reviewer index hanya bagi reviewer terautentikasi. Filter dan pencarian berdasarkan track digunakan untuk memilih paper **tanpa membatasi reviewer pada akun yang didaftarkan ke topik tertentu**.
+Reviewer mulai bekerja secara **bergulir** sejak abstract submission dimulai 1 Desember dan sebuah paper **valid disubmit**, bukan setelah tanggal penutupan abstrak. Akses reviewer index hanya bagi reviewer terautentikasi. Filter dan pencarian berdasarkan track digunakan untuk memilih paper **tanpa membatasi reviewer pada akun yang didaftarkan ke topik tertentu**.
 
 Untuk mencegah claim ganda, claim harus atomik dan mengikuti jumlah slot reviewer per paper yang dikonfigurasi. Reviewer tidak boleh mengklaim karya sendiri; Koordinator Akademik dapat melepaskan/reassign claim yang tak kunjung dikerjakan, tanpa mesin deadline atau approval panjang. Rekomendasi reviewer tetap bukan keputusan akademik. Komite secara eksplisit membuat keputusan final lalu **mengumumkannya kepada penulis**, dan **hanya ACCEPT yang sudah diumumkan** mengaktifkan upload Full Paper.
 
@@ -80,11 +82,13 @@ Sumber: [Submission Scholarly Metadata Contract](https://github.com/akhmadafnan/
 - Dokumen dan metadata final disimpan sebagai versi/snapshot; profil akun belakangan tidak otomatis mengubah versi final.
 - Metadata untuk OJS/prosiding disiapkan untuk *handoff*, bukan langsung menerbitkan DOI melalui aplikasi konferensi.
 
-## Administrative screening
+## Validasi form dan server — tanpa administrative screening
 
-Panitia memeriksa kesesuaian scope, metadata, kata kunci, jumlah kata dan aturan PDF yang telah diputuskan, kelengkapan penulis, keterbacaan dan konsistensi **teks online dengan file PDF**. Jangan mengklaim pemeriksaan kesamaan isi otomatis tersedia; tahap awal cukup checklist staf.
+**Keputusan terbaru menggantikan screening pasca-Submit:** form harus memvalidasi judul, track aktif, metadata penulis, satu corresponding author, Abstract Text, PDF wajib dengan tipe dan ukuran terkonfigurasi, keywords, serta persetujuan kesesuaian isi. **Backend mengulangi validasi ketika Submit**; jika gagal tetap Draft dengan pesan kesalahan; jika berhasil menjadi Submitted, versi dikunci dan paper **langsung tersedia di Reviewer Index**.
 
-Hasil screening: PASS, CORRECTION_REQUIRED, atau INELIGIBLE menurut aturan. Koreksi administrasi **bukan** putaran review akademik.
+Tidak ada antrean PASS/RETURN/REJECT oleh admin sebelum reviewer dapat Claim. Jika setelah submit ditemukan masalah isi PDF atau substansi, reviewer memberi komentar dan Komite Akademik dapat meminta koreksi melalui submission sama; ini bukan screening rutin.
+
+Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## Operasional Reviewer Abstract Index
 
@@ -117,7 +121,7 @@ Sumber: [V1 Academic Review Baseline](https://github.com/akhmadafnan/internation
 
 | Ranah | Contoh fakta/status |
 |---|---|
-| Academic | Draft, Submitted, Screening, Under Review, Revision, Accepted, Rejected |
+| Academic | Draft, Submitted, Submitted, Under Review, Revision, Accepted, Rejected |
 | Finance | No obligation before ACCEPT, Due, Proof Submitted, Under Verification, Verified |
 | Full Paper | Pending, Submitted, Correction Required, Cleared, Final ACC |
 | Presentation | Scheduled, Presented, No Show |

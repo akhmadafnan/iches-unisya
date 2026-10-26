@@ -41,6 +41,8 @@ Pilihan ini mempertahankan stack relevan dari [repo lama](https://github.com/akh
 
 Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template next` di aplikasi Vue; `--template next` untuk React/Next.js. Saat pengembangan diizinkan, pakai komponen shadcn-vue dan terjemahkan pilihan visual preset ke token Vue.
 
+**Arah UI baru:** Reviewer: `Abstract Index → filter topik → Claim → My Reviews`, tanpa tombol PASS screening pada akademik. PIC Co-Host: `Institution Details → 5 Seats (invite/status) → Single Rp3m Institutional Payment`. Ini pola UI sederhana; detail undangan masih usulan. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## Area UI
 
 | Workspace | Prinsip |
@@ -51,7 +53,7 @@ Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template n
 | PIC MoU | Institusi, delegasi usulan, status verifikasi dan undangan |
 | Pembinaan Riset/PKM | Agenda pembinaan dan daftar peserta sesuai TOR |
 | Studi Destinasi | Rombongan peserta, titik kehadiran dan fasilitas lapangan untuk 6 Januari |
-| Reviewer | Hanya assignment yang diberikan, penilaian dan komentar |
+| Reviewer | Abstract Index, filter topik, Claim, My Reviews, penilaian dan komentar |
 | Moderator | Daftar sesi/paper, Presented/No Show |
 | Finance | Bukti transfer, status verifikasi, koreksi terbatas |
 | Coordinator/Admin | CRUD layanan, hak, petugas, penjadwalan, rekap, penerbitan sertifikat |

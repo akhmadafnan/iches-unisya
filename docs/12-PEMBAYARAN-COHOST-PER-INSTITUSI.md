@@ -5,6 +5,20 @@
 > **Status:** spesifikasi bisnis/dokumen presentasi; **belum coding, belum invoice nyata**.  
 > [Kembali ke Presentasi Warek I](00-PRESENTASI-WAREK-I.md) · [Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md) · [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
 
+## Solusi praktis menautkan maksimal lima anggota (usulan, belum final)
+
+```mermaid
+flowchart TD
+  A["PIC institusi Co-Host"] --> B["Roster maksimal lima email"]
+  B --> C["Email Invitation / Magic Link"]
+  C --> D["Tautkan akun lama atau aktivasi akun baru"]
+  D --> E["Personal QR tiap anggota"]
+  A --> F["Satu tagihan institusi Rp3.000.000"]
+  F --> G["Finance verifikasi satu pembayaran"]
+```
+
+Undangan belum aktif tetap mencadangkan slot. PIC tidak memakai slot kecuali ikut sebagai peserta. Setiap anggota dapat ikut kegiatan lain dengan akun/QR sama. Penggantian setelah layanan dipakai perlu Admin agar fakta kehadiran tidak dihapus. **Cakupan benefit Co-Host tetap keputusan terbuka.** [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## 1. Keputusan yang sudah final
 
 | Aturan | Ketetapan |

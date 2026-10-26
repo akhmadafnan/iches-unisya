@@ -6,6 +6,8 @@
 
 > **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
 
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+
 ## Rebaseline TOR dari Warek I — sumber acara, bukan keputusan implementasi
 
 Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianalisis. **Lima** rangkaian acara dicantumkan (Conference, Pembinaan Riset/PKM, MoU, Pengabdian Internasional, Studi Destinasi); tanggal **5–6 Januari 2027**; delapan subtema; **sembilan kategori biaya**; serta jadwal submission mulai **1 Desember 2026**. Lihat [Analisis TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
@@ -53,7 +55,7 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 | NEW-026 | Tarif kategori Co-Host | **Rp3.000.000 PER INSTITUSI, satu kali tagihan untuk maksimal lima peserta**; menggantikan Rp450.000 pada TOR tertulis | **DISETUJUI FINAL** |
 | NEW-027 | Kuota Co-Host | Maksimal **5 peserta per institusi**, semua tercakup dalam tagihan institusi Rp3.000.000 | **DISETUJUI FINAL** |
 | NEW-028 | Agenda MoU dan Panel | Boleh berjalan paralel, tanpa modul otomatis menangani benturan | DISETUJUI |
-| NEW-029 | Reviewer Abstract Index | Daftar paper yang sudah lolos screening, dapat dicari/filter menurut topic; tidak membatasi akun reviewer berdasarkan track | DISETUJUI |
+| NEW-029 | Reviewer Abstract Index | Daftar paper yang valid disubmit, dapat dicari/filter menurut topic; tidak membatasi akun reviewer berdasarkan track | DISETUJUI |
 | NEW-030 | Reviewer self-claim | Reviewer mengambil paper tersedia sendiri sejak mulai masuk, tanpa menunggu review window khusus | DISETUJUI |
 | NEW-031 | Full Paper gate | **Keputusan ACCEPT yang telah diumumkan kepada author** membuka unggah Full Paper; REJECTED tidak | DISETUJUI |
 | NEW-032 | Pembayaran | Tetap setelah ACCEPT; tidak wajib Finance VERIFIED agar Full Paper terbuka | KONSISTENSI NEW-019/031 |
@@ -70,6 +72,18 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 **Tidak dibahas sebagai kebijakan final:** komponen biaya apa saja yang tercakup bagi pemakalah Co-Host, jumlah paper yang dibiayai paket, proses pergantian delegasi, refund, serta apakah tarif Co-Host mencakup paket MoU/PKM lainnya. Ketentuan ini tidak boleh disimpulkan hanya dari nominal dan kuota.
 
 [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
+
+## A3. Keputusan Submission dan usulan penautan Co-Host
+
+| ID | Ketentuan | Status |
+|---|---|---|
+| NEW-035 | **Hapus Administrative Screening** setelah Submit; tidak perlu Admin menekan PASS untuk review | **DISETUJUI** (menggantikan alur sebelumnya) |
+| NEW-036 | Kelengkapan abstract/author/topic/PDF divalidasi saat Submit oleh form dan server | **DISETUJUI** (limit teknis belum final) |
+| NEW-037 | Submission yang valid **langsung** tersedia di Reviewer Abstract Index untuk self-claim | **DISETUJUI** |
+| PROP-011 | PIC Co-Host mengundang anggota maksimal lima email melalui Magic Link, menautkan akun/QR personal | **USULAN SOLUSI**, belum dikunci |
+| PROP-012 | Undangan mencadangkan slot; PIC hanya memakai slot jika hadir; penggantian anggota diatur sederhana | **USULAN**, belum dikunci |
+
+**Alur baru:** Draft → Submit (validasi) → Submitted → Reviewer Index → Claimed → Reviewed → Komite Decision → Publish Result. Status `Under Screening` / `Screening Passed` tidak lagi diperlukan.
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
@@ -112,7 +126,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | TOR-Q03 | Satu orang ikut Conference + bundle: penagihan dan hak layanan bagaimana? | Tinggi |
 | TOR-Q04 | **TERJAWAB:** agenda boleh paralel; cukup pencatatan kehadiran dan presentasi masing-masing | Selesai |
 | TOR-Q05 | **TERJAWAB:** Full Paper unlocked saat **ACCEPT diumumkan**, tidak bergantung tanggal atau Finance Verified | Selesai |
-| TOR-Q06 | **Alur TERJAWAB:** reviewer claim dari index filter track sejak paper lolos screening; **jumlah reviewer dan detail revisi** masih terbuka | Sebagian |
+| TOR-Q06 | **Alur TERJAWAB:** reviewer claim dari index filter track sejak paper valid disubmit; **jumlah reviewer dan detail revisi** masih terbuka | Sebagian |
 | TOR-Q07 | Day 2: daftar transport/rombongan, kelompok PKM, kuota, titik check-in? | Sedang |
 | TOR-Q08 | Sertifikat untuk Pembinaan, MoU, PKM, dan Destinasi? | Sedang |
 | TOR-Q09 | Beberapa kombinasi tarif peserta tidak dicantumkan dalam TOR | Sedang |
