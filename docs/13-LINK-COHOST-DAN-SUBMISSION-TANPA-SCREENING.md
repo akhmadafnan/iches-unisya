@@ -124,7 +124,9 @@ Jika PDF ternyata berbeda substansinya dari teks online, reviewer bisa melaporka
 | Search/filter track dan reviewer self-claim | **DISETUJUI** |
 | PIC invite anggota Co-Host via Magic Link | **USULAN SOLUSI** |
 | Slot undangan dihitung kuota, PIC bila hadir memakai slot | **USULAN OPERASIONAL** |
-| Benefit Co-Host terkait biaya paper dan kegiatan tambahan | **BELUM DIPUTUSKAN** |
+| Cakupan Co-Host **hanya paper International Conference**, tidak termasuk paket program pendamping Rp1 juta/orang | **DISETUJUI** |
+| Jumlah paper yang termasuk paket institusi Rp3 juta dan detail fasilitas | **BELUM DIPUTUSKAN** |
+| Pengakuan institusi sebagai Co-Host penyelenggaraan ICHES 2027 | **DISETUJUI**; rincian media nama/logo masih usulan |
 | Batas kata, PDF size, jumlah reviewer | **BELUM DIPUTUSKAN** |
 
 Acuan: [Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md) · [Submission akademik](03-SUBMISSION-REVIEW-AKADEMIK.md) · [Co-Host billing](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
