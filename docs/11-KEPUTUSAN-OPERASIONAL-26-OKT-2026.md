@@ -25,8 +25,8 @@
 flowchart TD
   A["1 Desember: penerimaan abstrak dibuka"] --> B["Author kirim text + PDF"]
   B --> C["Validasi form + server saat Submit"]
-  C -->|Perbaikan| B
-  C -->|Lolos| D["Reviewer Abstract Index"]
+  C -->|Invalid| B
+  C -->|Valid, Submitted| D["Reviewer Abstract Index"]
   D --> E["Pencarian / Filter 8 Conference Tracks"]
   E --> F["Reviewer memilih sesuai kompetensinya"]
   F --> G{"Claim aman dan slot tersedia?"}
