@@ -108,7 +108,7 @@ flowchart TD
 - **Price value sudah final dalam rancangan baru:** Rp3.000.000.
 - **Price unit FINAL:** Rp3.000.000 **per institusi**, satu tagihan mencakup hingga lima peserta. Jangan membuat invoice per peserta Co-Host.
 - Catat sumber historis Rp450.000 pada TOR halaman 5 sebagai teks yang dikoreksi pemilik produk. **Jangan gunakan** Rp450.000 untuk perhitungan tagihan baru.
-- Paket MoU + Pembinaan + PKM + Destinasi **Rp1.000.000** pada TOR **tidak dikoreksi** dalam diskusi ini.
+- **Keputusan terbaru:** Paket Program Internasional **Rp1.000.000/orang sebagai satu produk empat akses** dari **Dashboard pribadi**, bukan menu/tambahan pembayaran Co-Host. [Rancangan 15](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
 ## 5. Agenda sore 5 Januari: cukup satu prinsip
 
