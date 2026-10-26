@@ -4,7 +4,7 @@
 
 > **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang valid disubmit dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
 
-> **KEPUTUSAN TERBARU:** *Validasi form + server saat Submit* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+> **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## Penetapan jadwal akademik dari TOR (halaman 5)
 
@@ -36,8 +36,8 @@
 ```mermaid
 flowchart TD
   A["Abstract Text + PDF"] --> B["Validasi form + server saat Submit"]
-  B -->|Correction| A
-  B -->|Pass| C["Reviewer Index"]
+  B -->|Invalid, tetap Draft| A
+  B -->|Valid, Submitted| C["Reviewer Index"]
   C --> D["Cari / Filter topik dari delapan Conference Tracks"]
   D --> E{"Claim slot masih tersedia?"}
   E -->|Ya| F["Reviewer melakukan review single-anonymous"]
