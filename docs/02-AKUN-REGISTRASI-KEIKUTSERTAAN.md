@@ -2,6 +2,8 @@
 
 > **Status:** sebagian besar prinsip disepakati; detail form serta model staf masih perlu validasi.
 
+> **Rebaseline TOR:** ICHES 2027 memiliki **lima rangkaian acara**. Konsep multi-keikutsertaan tetap berlaku, tetapi **kategori biaya/bundle bukan sinonim kegiatan**. TOR memiliki paket gabungan MoU + Pembinaan + PKM + Destinasi senilai **IDR 1.000.000**, dan kategori Co-Host **IDR 450.000**. Unit tarif dan eligibility tetap perlu konfirmasi. Lihat [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
+
 ## Identity: satu profil untuk berbagai aktivitas
 
 Alur peserta ditetapkan sebagai:
@@ -50,9 +52,9 @@ Konsep Conference memisahkan Participant dan jalur Presenter. Presenter membuat 
 
 ## Multi-keikutsertaan
 
-Satu orang boleh menambah Conference, MoU, ICD melalui dashboard tanpa membuat akun baru, dengan status masing-masing (draft/pending/verified/confirmed dan seterusnya sesuai domain). Tidak ada batas 'hanya satu aktivitas per akun'.
+Satu orang boleh menambah Conference, Pembinaan Riset/PKM, MoU, ICD, dan Studi Destinasi melalui dashboard tanpa membuat akun baru, dengan status masing-masing (draft/pending/verified/confirmed dan seterusnya sesuai domain). Tidak ada batas 'hanya satu aktivitas per akun'.
 
-MoU berbeda karena yang didaftarkan adalah institusi; orang ditautkan sebagai PIC atau delegasi. Lihat [04 — MoU dan ICD](04-MOU-DAN-ICD.md).
+MoU berbeda karena yang didaftarkan adalah institusi; orang ditautkan sebagai PIC atau delegasi. **Biaya Co-Host dan bundle TOR tidak boleh otomatis diperlakukan sebagai pembayaran per kegiatan.** Paket biaya dapat memberikan akses ke beberapa kegiatan tanpa menggandakan tagihan/serving. Lihat [04 — MoU dan ICD](04-MOU-DAN-ICD.md).
 
 ## Batas keamanan
 

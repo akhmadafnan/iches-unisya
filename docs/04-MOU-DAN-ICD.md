@@ -2,6 +2,8 @@
 
 > **Status:** alur institusional MoU dan undangan delegasi telah dipilih sebagai konsep produk; beberapa rincian operasional masih terbuka.
 
+> **TOR 2027, bagian N:** Pada **5 Januari**, rangkaian MoU + Pembinaan Kemenag tercatat **13.00–17.15**; pada waktu yang sama, Panel Session berlangsung **13.15–16.30+**. Admin harus bisa mengidentifikasi benturan penugasan/keikutsertaan. Pada **6 Januari**, Pengabdian dilaksanakan secara luring bersama perjalanan Teras Semeru → Desa Sidomulyo → Tumpak Sewu. Lihat [audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
+
 ## MoU: entitas pendaftaran adalah institusi
 
 **Satu institusi mempunyai tepat satu pendaftaran MoU dalam ICHES 2027.** PIC adalah orang pengelola administrasi pendaftaran, bukan selalu pejabat yang menandatangani. Delegasi dan signatory dapat berbeda dari PIC.
@@ -61,6 +63,14 @@ Satu orang bisa menjadi:
 - peserta ICD.
 
 Semua berada pada satu profil dan QR, tetapi status pendaftaran masing-masing independen. Lunch bersama yang sama hanya sekali per slot.
+
+## Pembinaan Riset/PKM dan Studi Destinasi dalam TOR
+
+**Pembinaan Riset dan PKM (5 Januari)** tercantum sebagai rangkaian resmi bersama kegiatan MoU; diperlukan daftar peserta yang berhak, jadwal, fasilitas, dan check-in jika disyaratkan. Tidak perlu membangun sistem learning management.
+
+**Studi Destinasi Berkelanjutan (6 Januari)** merupakan kegiatan **onsite**. Cukup manifest peserta/rombongan, titik kehadiran, dan fasilitas sarapan/lunch sesuai jadwal. Kelompok Pengabdian Internasional menurut TOR mencakup bidang **Pendidikan, Ekonomi, dan Sosial Budaya**. Tidak ada kebutuhan membangun aplikasi wisata umum.
+
+TOR menuliskan bundle **MoU + Pembinaan + PKM + Studi Destinasi** seharga **IDR 1.000.000**, tetapi **belum menjelaskan unit tagihan per orang/institusi dan detail cakupan fasilitas**. Jangan mencampur kategori tarif dengan keanggotaan delegasi resmi. Registrasi MoU institusional tetap berdasarkan PIC dan verifikasi panitia.
 
 ## Poin keputusan terbuka
 

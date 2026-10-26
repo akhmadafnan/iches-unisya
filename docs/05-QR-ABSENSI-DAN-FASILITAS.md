@@ -3,6 +3,8 @@
 > **Keputusan utama DISETUJUI:** scanner **Model C hybrid**, absensi **Model C hybrid**, hak fasilitas default dan individual override, serta konsumsi bersama **satu kali per orang per slot**.  
 > Petugas operasional tidak perlu memakai akun berbeda untuk tiap pos.
 
+> **TOR 2027:** Hari 1 (**5 Januari**) memiliki registrasi pagi 08.00–08.45, parallel panel sore, MoU/Pembinaan sore, serta coffee break 15.40–15.55 pada panel. Hari 2 (**6 Januari**) merupakan perjalanan **03.00–15.30** termasuk sarapan **06.00–07.00** dan Lunch **12.30–13.30**; keduanya **slot berbeda**. Seluruh check-in lapangan memerlukan fallback prosedural jika konektivitas buruk. Lihat [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
+
 ## Tiga konsep jangan disamakan
 
 1. **Personal identity / QR:** menunjuk seseorang. QR bukan daftar hak permanen.
@@ -114,6 +116,21 @@ flowchart TD
 ## Koreksi pelayanan tanpa audit berlebihan
 
 Data transaksi minimum: penerima, layanan/slot, petugas, pos, timestamp, status konfirmasi atau pembatalan/koreksi. Koordinator terkait dan Admin dapat membatalkan penyerahan keliru serta menyesuaikan stok/hak klaim sesuai fakta. Riwayat transaksi perlu untuk mencegah duplikasi; **tidak perlu sistem audit seluruh klik CRUD pengaturan hak**.
+
+## Penyesuaian operasional TOR 5–6 Januari
+
+- **REG-05JAN-AM:** check-in umum konferensi (slot awal sesuai registrasi pagi TOR).
+- **MOU-05JAN-PM:** check-in khusus MoU; jangan dipakai sebagai bukti penandatanganan.
+- **COACH-05JAN-PM:** check-in pembinaan Riset/PKM, bila diaktifkan.
+- **PANEL-05JAN-PM:** kehadiran sesi panel bila diperlukan; Moderator tetap mengonfirmasi **Presented**.
+- **FNB-05JAN-COFFEE:** coffee break panel adalah layanan konsumsi, bukan check-in akademik.
+- **TRIP-06JAN-DEPART:** kehadiran rombongan saat keberangkatan luring (TOR mulai 03.00).
+- **FNB-06JAN-BREAKFAST:** slot sarapan hari 2.
+- **ICD-06JAN-GROUP:** check-in/pembagian kelompok PKM untuk Pendidikan, Ekonomi, Sosial Budaya.
+- **FNB-06JAN-LUNCH:** slot makan siang hari 2.
+- **DEST-06JAN:** kehadiran kegiatan destinasi apabila disyaratkan.
+
+Semua kode di atas **usulan teknis**, bukan nama pos fisik final. Tambahkan pemeriksaan benturan waktu: peserta yang ikut dua agenda pada 5 Januari tidak boleh otomatis dianggap hadir pada keduanya.
 
 ## Hal yang belum dipilih
 

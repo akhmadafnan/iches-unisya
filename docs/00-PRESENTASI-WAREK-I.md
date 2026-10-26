@@ -3,7 +3,41 @@
 > **Bahan presentasi untuk Wakil Rektor I — 26 Oktober 2026**  
 > **Status:** konsep produk dan alur operasional untuk masukan/arah kebijakan; **belum** aplikasi operasional, belum pengesahan formal.
 >
-> **Gagasan utama:** satu portal konferensi, satu akun, satu QR pribadi, banyak keikutsertaan, dan layanan panitia yang fleksibel.
+> **Gagasan utama:** satu portal konferensi, satu akun, satu QR pribadi, **lima rangkaian kegiatan menurut TOR**, dan layanan panitia yang fleksibel.
+
+## REBASELINE: Temuan TOR Warek I (dibaca terlebih dahulu)
+
+**Dokumen sumber:** `TOR ICHES 6 UNISYA 2027.docx` (9 halaman). **Acuan acara:** 5 Januari 2027 Conference hybrid; 6 Januari 2027 Pengabdian dan Destinasi onsite. Tema resmi **Islamic Values in a Changing World: Education, Accountability, and Social Resilience for Inclusive Development**.
+
+**TOR memuat lima rangkaian kegiatan, bukan hanya tiga jalur awal:**
+
+```mermaid
+flowchart TD
+  A["ICHES 2027 — UNISYA"] --> B["International Conference / 5 Jan"]
+  A --> C["Pembinaan Riset dan PKM / 5 Jan"]
+  A --> D["International MoU / 5 Jan"]
+  A --> E["Pengabdian Internasional / 6 Jan"]
+  A --> F["Studi Destinasi Berkelanjutan / 6 Jan"]
+  B --> G["Satu akun + QR personal"]
+  C --> G
+  D --> G
+  E --> G
+  F --> G
+```
+
+**Jadwal kunci:** Abstrak 1–20 Desember; hasil 22 Desember; full paper 23–28 Desember; registrasi/pembayaran 24–28 Desember; prosiding ditargetkan 28 Januari 2027.
+
+**Konflik kebijakan/operasional yang wajib dijelaskan pada Warek I:**
+- Full paper mulai **23 Desember** sedangkan pembayaran baru **24 Desember** → rekomendasi proses paralel setelah ACCEPT, bukan menunggu VERIFIED untuk membuka upload.
+- **MoU/Pembinaan 13.00–17.15** dan **Parallel Panel 13.15–16.30** pada 5 Januari **beririsan** → butuh peringatan benturan jadwal, verifikasi hadir khusus, dan pengganti presenter/delegasi jika diperlukan.
+- Ada **sembilan tarif** pada TOR, termasuk tarif **Co-Host IDR 450.000**, dan **bundle MoU+Pembinaan+PKM+Destinasi IDR 1.000.000**. Unit tarif dan kuota Co-Host (TOR menyebut maks. 5 peserta) masih perlu konfirmasi.
+- Research Coaching/Pembinaan Riset dan **Studi Destinasi** bukan lagi modul opsional dalam cakupan acara menurut TOR; desain pendaftaran tetap sederhana.
+
+**➡️ [Audit TOR dan matriks perubahan selengkapnya](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
+
+> **Catatan pembacaan:** Diagram tiga jalur pada bagian di bawah adalah **ilustrasi rancangan PRA-TOR**. Setelah TOR, konfigurasi produk perlu mencakup **lima rangkaian** di atas. Ketentuan ambiguitas tidak dianggap diputuskan.
+
+---
 
 ## 1. Masalah yang ingin diselesaikan
 

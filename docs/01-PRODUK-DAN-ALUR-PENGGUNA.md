@@ -3,6 +3,8 @@
 > **Konteks:** The 6th ICHES 2027. **Status:** rancangan produk; keputusan yang belum final ditandai.  
 > **Rujukan visual:** [Presentasi Warek I](00-PRESENTASI-WAREK-I.md).
 
+> **Pembaruan 26 Oktober 2026:** [TOR Warek I](10-ANALISIS-TOR-DAN-REBASELINE-2027.md) menetapkan **lima rangkaian kegiatan** pada **5–6 Januari 2027**. Peta tiga jalur di dokumen ini merupakan konsep awal; dua kegiatan tambahan (**Pembinaan Riset/PKM** dan **Studi Destinasi Berkelanjutan**) wajib tercakup dalam desain baru.
+
 ## Tujuan produk
 
 Satu portal untuk menghubungkan informasi acara, registrasi, proses akademik, pendaftaran institusi MoU, kegiatan pengabdian internasional, operasional pelayanan, dan sertifikat. Sistem **single-event ICHES 2027** dengan model satu akun / satu profil / satu QR pribadi dan banyak keikutsertaan.
@@ -14,7 +16,7 @@ Bukan platform multi-edition, ERP, OJS pengganti, sistem penandatanganan kontrak
 | Prinsip | Implikasi |
 |---|---|
 | Satu identitas | Peserta, presenter, delegasi, dan peserta ICD dapat berupa orang yang sama |
-| Multi-keikutsertaan | Conference, MoU, ICD dapat diikuti sendiri-sendiri atau bersamaan |
+| Multi-keikutsertaan | Conference, Pembinaan Riset/PKM, MoU, Pengabdian Internasional, dan Studi Destinasi tercakup; enrollment dan paket harga tetap dibedakan |
 | Hak != kehadiran != layanan | Berhak Lunch tidak sama dengan sudah mengambil Lunch; datang tidak sama dengan telah presentasi |
 | Institusi != individu | MoU didaftarkan sekali per institusi; PIC dan delegasi tetap mempunyai identitas masing-masing |
 | Akun pengelola submission | Submitting/Corresponding Author dapat berbeda dengan First Author |
@@ -70,15 +72,17 @@ flowchart TD
 | Public website | Call for Papers, agenda, narasumber, tempat, info biaya, tautan registrasi | Isi publik dapat dikelola panitia |
 | Identity/profile | Email OTP / Magic Link, WhatsApp, foto crop, personal QR | Peserta tanpa password |
 | Conference | Participant dan Presenter; academic lifecycle | Sistem sendiri bukan OJS |
+| Pembinaan Riset dan PKM | Registrasi/akses sesi, agenda, kehadiran | Tidak menjadi LMS atau pelatihan jangka panjang |
 | MoU | Satu institusi satu pendaftaran, PIC, delegasi, validasi | Tidak menjadi contract-management engine |
 | ICD | Pendaftaran, kehadiran, penyelesaian bila dipersyaratkan | Tidak menjadi mini-KKN |
+| Studi Destinasi Berkelanjutan | Keikutsertaan, daftar rombongan, titik kegiatan, kehadiran | Pengaturan rute/transport detail bila panitia memerlukan |
 | Finance | Transfer manual, upload bukti, verifikasi | Presenter setelah ACCEPT |
 | Operations | Pos, penugasan petugas, slot, entitlement, scanner | Berbasis CRUD |
 | Certificates | Kelayakan, publikasi massal, URL unik, PDF, perbaikan | Co-author dapat unduh publik |
 
 ## Batas yang belum diputuskan
 
-Research Coaching dan Sustainable Destination Study pernah dibahas sebagai **opsi tambahan**, namun bukan tiga jalur awal yang sudah ditegaskan. Kehadiran opsional tidak berarti harus dibangun pada tahap pertama. Semua aturan jumlah peserta, tanggal riil acara, jadwal, biaya, dan kapasitas akan mengikuti keputusan panitia.
+**SETELAH TOR:** Pembinaan Riset dan PKM serta Sustainable Destination Study **tercantum sebagai rangkaian resmi dalam TOR**. Keduanya bukan lagi sekadar ide tambahan di luar acara; kedalaman fitur, struktur pembayaran, dan hak layanannya masih memerlukan keputusan. Kehadiran opsional tidak berarti harus dibangun pada tahap pertama. Semua aturan jumlah peserta, tanggal riil acara, jadwal, biaya, dan kapasitas akan mengikuti keputusan panitia.
 
 ## Kriteria validasi bersama Warek I
 

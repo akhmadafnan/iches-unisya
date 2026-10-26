@@ -2,6 +2,21 @@
 
 > **STATUS CAMPURAN:** 'Disepakati' bersumber diskusi ICHES baru. 'Baseline lama' dari [repository referensi](https://github.com/akhmadafnan/international-conference-platform/tree/develop), **belum otomatis berarti implementasi tersedia**.
 
+## Penetapan jadwal akademik dari TOR (halaman 5)
+
+| Tahap | Jendela TOR |
+|---|---|
+| Abstract submission | **1–20 Desember 2026** |
+| Pengumuman Abstract Acceptance | **22 Desember 2026** |
+| Full Paper upload | **23–28 Desember 2026** |
+| Registration / Payment | **24–28 Desember 2026** |
+| Parallel Panel | **5 Januari 2027, 13.15–16.30+** |
+| Target prosiding | **28 Januari 2027** |
+
+**Implikasi:** setelah ACCEPT/LoA, jalur **Full Paper** dan **pembayaran** harus independen dan berjalan paralel: TOR membuka Full Paper satu hari lebih awal daripada pembayaran. Jangan menunggu Finance VERIFIED hanya agar peserta boleh mengunggah paper pada 23 Desember. Jadikan Finance Verified sebagai syarat administratif untuk finalisasi yang disepakati panitia.
+
+**Delapan Conference Track** berasal dari TOR bagian E dan harus diinisialisasi sebagai data editable (lihat [Audit TOR bagian III](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)). Reviewer count tidak dicantumkan pada TOR; baseline repo lama **1 reviewer default configurable**, bukan ketetapan baru dua reviewer.
+
 ## Keputusan terbaru yang disepakati
 
 1. **Submitting/Corresponding Author** adalah akun pengelola submission, tidak harus First Author.

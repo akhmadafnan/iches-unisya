@@ -4,6 +4,16 @@
 > **Tanggal kompilasi:** 26 Oktober 2026.  
 > **Label:** **DISETUJUI** (pemilik produk memilih eksplisit), **BASELINE LAMA** (repositori terdahulu, belum otomatis ditetapkan baru), **USULAN**, **TERBUKA**.
 
+## Rebaseline TOR dari Warek I — sumber acara, bukan keputusan implementasi
+
+Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianalisis. **Lima** rangkaian acara dicantumkan (Conference, Pembinaan Riset/PKM, MoU, Pengabdian Internasional, Studi Destinasi); tanggal **5–6 Januari 2027**; delapan subtema; **sembilan kategori biaya**; serta jadwal submission mulai **1 Desember 2026**. Lihat [Analisis TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
+
+- Status `TOR-FACT`: tercantum dalam TOR, bukan bukti seluruh detail telah disetujui menjadi konfigurasi aplikasi final.
+- Status `NEW-*`: keputusan pemilik produk mengenai **mekanisme aplikasi**, tetap berlaku sepanjang tidak bertentangan TOR.
+- **NEW-005 Diperluas oleh TOR**: tiga jalur yang semula dibahas tetap ada, ditambah **Pembinaan Riset dan PKM** serta **Studi Destinasi Berkelanjutan** karena keduanya rangkaian resmi TOR. Struktur enrollment vs bundle fee **belum final**.
+- Potensi konflik TOR: Full Paper 23 Desember mulai **sebelum** window payment 24 Desember, dan MoU/Pembinaan beririsan dengan Panel pada sore 5 Januari. Tandai untuk keputusan pimpinan, jangan diam-diam mengasumsikan jadwal berubah.
+- TOR **tidak menetapkan** batas kata, PDF max size, default reviewer, unit tarif Co-Host maupun bundle MoU. Usulan lama pada area ini **belum berubah status menjadi disetujui**.
+
 ## A. Keputusan yang sudah disetujui (dalam diskusi)
 
 | ID | Topik | Kebijakan | Status |
@@ -12,7 +22,7 @@
 | NEW-002 | Identitas | Satu user satu akun/profil dan QR personal | DISETUJUI |
 | NEW-003 | Login peserta | Email OTP / Magic Link tanpa password | DISETUJUI |
 | NEW-004 | Profil | WhatsApp; foto max 2 MB; modal crop 1:1 | DISETUJUI |
-| NEW-005 | Kegiatan | Satu orang dapat ikut Conference, MoU dan ICD bersamaan | DISETUJUI |
+| NEW-005 | Kegiatan | Satu orang dapat ikut Conference, MoU dan ICD bersamaan; **TOR menambahkan Pembinaan Riset/PKM dan Studi Destinasi** sebagai rangkaian kegiatan | DISETUJUI + TOR-FACT |
 | NEW-006 | MoU | Satu pendaftaran MoU per institusi | DISETUJUI |
 | NEW-007 | Delegasi | PIC mengusulkan, panitia verifikasi tiap delegasi | DISETUJUI |
 | NEW-008 | Delegasi aktif | Undangan email Magic Link setelah verifikasi, akun sendiri | DISETUJUI |
@@ -65,6 +75,20 @@
 | PROP-008 | Kode URL pendek `/c/<acak>` | USULAN TEKNIS |
 | PROP-009 | Palet admin primer #176747, background #F7F9F7 | USULAN VISUAL |
 | PROP-010 | Panel Next Action dan penugasan scanner dengan pemilih pos/mode | USULAN DETAIL UX |
+
+## TOR-specific confirmations untuk Warek I
+
+| Ref | Hal yang belum jelas di TOR | Prioritas |
+|---|---|---|
+| TOR-Q01 | Co-Host maksimal **5**: per institusi atau total? | Tinggi |
+| TOR-Q02 | IDR 450.000 Co-Host dan IDR 1.000.000 bundle: **per orang / per institusi / per paper**? | Tinggi |
+| TOR-Q03 | Satu orang ikut Conference + bundle: penagihan dan hak layanan bagaimana? | Tinggi |
+| TOR-Q04 | MoU/Pembinaan **13.00–17.15** vs Panel **13.15–16.30** pada 5 Jan: penugasan/kehadiran rangkap? | Tinggi |
+| TOR-Q05 | Full Paper buka 23 Des sedangkan pembayaran 24 Des: setuju **alur paralel**? | Tinggi |
+| TOR-Q06 | Review harus selesai 22 Des: apakah 1 reviewer default cukup? Aturan revisi? | Tinggi |
+| TOR-Q07 | Day 2: daftar transport/rombongan, kelompok PKM, kuota, titik check-in? | Sedang |
+| TOR-Q08 | Sertifikat untuk Pembinaan, MoU, PKM, dan Destinasi? | Sedang |
+| TOR-Q09 | Beberapa kombinasi tarif peserta tidak dicantumkan dalam TOR | Sedang |
 
 ## D. Isu yang perlu keputusan pimpinan/panitia
 
