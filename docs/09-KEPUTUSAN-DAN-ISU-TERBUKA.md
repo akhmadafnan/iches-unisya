@@ -13,7 +13,7 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 - Status `TOR-FACT`: tercantum dalam TOR, bukan bukti seluruh detail telah disetujui menjadi konfigurasi aplikasi final.
 - Status `NEW-*`: keputusan pemilik produk mengenai **mekanisme aplikasi**, tetap berlaku sepanjang tidak bertentangan TOR.
 - **NEW-005 Diperluas oleh TOR**: tiga jalur yang semula dibahas tetap ada, ditambah **Pembinaan Riset dan PKM** serta **Studi Destinasi Berkelanjutan** karena keduanya rangkaian resmi TOR. Struktur enrollment vs bundle fee **belum final**.
-- Potensi konflik TOR: Full Paper 23 Desember mulai **sebelum** window payment 24 Desember, dan MoU/Pembinaan beririsan dengan Panel pada sore 5 Januari. Tandai untuk keputusan pimpinan, jangan diam-diam mengasumsikan jadwal berubah.
+- **Kebijakan SUDAH DIPUTUSKAN:** Full Paper **dibuka saat ACCEPT diumumkan** (tanggal TOR tidak menjadi gate); MoU/Pembinaan dan Panel **boleh paralel** tanpa penanganan benturan khusus. Kehadiran/sesi tetap dicatat secara terpisah.
 - TOR tidak menetapkan batas kata, PDF max size, atau default reviewer. Koreksi pengguna: Co-Host **Rp3.000.000**, kuota **5 peserta per institusi**. **Unit penagihan** Co-Host masih terbuka.
 
 ## A. Keputusan yang sudah disetujui (dalam diskusi)
