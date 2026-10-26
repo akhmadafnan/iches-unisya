@@ -144,7 +144,7 @@ flowchart LR
 flowchart TD
   A["Submitting Author: Abstract Text + PDF"] --> B["Validasi form + server saat Submit"]
   B -->|Correction| A
-  B -->|Pass| C["Reviewer Index: cari/filter Track"]
+  B -->|Valid, Submitted| C["Reviewer Index: cari/filter Track"]
   C --> D["Reviewer Claim mandiri"]
   D --> E["Single-anonymous Review"]
   E --> F{"Komite Akademik: keputusan final"}
