@@ -4,6 +4,8 @@
 
 > **TOR 2027, bagian N:** Pada **5 Januari**, rangkaian MoU + Pembinaan Kemenag tercatat **13.00–17.15**; pada waktu yang sama, Panel Session berlangsung **13.15–16.30+**. Admin harus bisa mengidentifikasi benturan penugasan/keikutsertaan. Pada **6 Januari**, Pengabdian dilaksanakan secara luring bersama perjalanan Teras Semeru → Desa Sidomulyo → Tumpak Sewu. Lihat [audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
 
+**KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## MoU: entitas pendaftaran adalah institusi
 
 **Satu institusi mempunyai tepat satu pendaftaran MoU dalam ICHES 2027.** PIC adalah orang pengelola administrasi pendaftaran, bukan selalu pejabat yang menandatangani. Delegasi dan signatory dapat berbeda dari PIC.

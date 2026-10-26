@@ -9,6 +9,8 @@
 
 > **Kebijakan institusi terbaru:** Co-Host ICHES 2027 membayar **Rp3 juta/institusi** khusus jalur paper International Conference (maks. 5 orang), tetapi memperoleh pengakuan publik sebagai **institusi Co-Host acara**. Paket MoU/Pembinaan/International PKM/Destinasi dibayar **Rp1 juta per orang** secara terpisah. [Ketentuan dan diagram](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+**KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## Tujuan produk
 
 Satu portal untuk menghubungkan informasi acara, registrasi, proses akademik, pendaftaran institusi MoU, kegiatan pengabdian internasional, operasional pelayanan, dan sertifikat. Sistem **single-event ICHES 2027** dengan model satu akun / satu profil / satu QR pribadi dan banyak keikutsertaan.

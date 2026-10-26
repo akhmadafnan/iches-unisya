@@ -70,6 +70,12 @@ Penggantian anggota sebelum check-in/layanan bisa dikelola PIC; sesudah hadir at
 
 **Benefit non-uang Co-Host yang disepakati:** pengakuan institusi sebagai **Co-Host penyelenggaraan ICHES 2027**, tercantum secara publik sesuai ketentuan publikasi dan identitas institusi resmi. Perincian media logo/nama masih usulan. [Diagram lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+### Fitur paket program hanya di Dashboard Peserta
+
+**KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+PIC Co-Host tetap mengurus institusi, lima anggota Conference, pembayaran Rp3 juta, dan pengakuan institusi. **Jangan menambahkan tombol pendaftaran paket Rp1 juta, rincian pembayaran pribadi anggota, atau total gabungan pada panel Co-Host.**
+
 ## Aturan biaya Co-Host untuk model registrasi
 
 - Satu institusi Co-Host dapat memiliki **maksimal lima peserta terdaftar** untuk ICHES 2027.

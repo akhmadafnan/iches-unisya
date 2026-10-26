@@ -95,9 +95,21 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | NEW-041 | Co-Host tidak otomatis membayar/mendaftarkan anggota ke program pendamping; anggota yang memilih paket pendamping memiliki **kewajiban sendiri Rp1 juta/orang** | **KONSEKUENSI DISETUJUI** |
 | PROP-013 | Nama/logo institusi pada website, materi resmi, buku program, dokumen konfirmasi Co-Host opsional; tampil publik setelah dikonfirmasi panitia | **USULAN IMPLEMENTASI** |
 
-**TERBUKA:** Berapa jumlah paper tercakup paket Rp3 juta? Apakah biaya di luar paket timbul per paper tambahan? Apakah tersedia harga jika peserta hanya memilih sebagian program pendamping? Media resmi mana untuk nama/logo dan persetujuannya? **Tidak ada lagi ketidakjelasan unit tarif Rp1 juta: satuannya per orang untuk paket pendamping.**
+**TERBUKA:** Jumlah paper tercakup paket Rp3 juta, biaya paper tambahan, tenggat/refund/aktivasi hak Paket Rp1 juta dan media pengakuan institusi. **SUDAH FINAL:** Rp1 juta **satu paket empat akses**, dipesan secara mandiri user, bukan empat pembayaran atau menu Co-Host.
 
 [Lihat dokumen keputusan Co-Host dan program pendamping](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
+## A5. Keputusan paket satu harga, Dashboard pribadi
+
+| ID | Keputusan | Status |
+|---|---|---|
+| NEW-042 | **Paket Program Internasional Rp1 juta dipesan/dibayar mandiri oleh user pada Dashboard Peserta** | **DISETUJUI** |
+| NEW-043 | **Menu/PIC Co-Host tidak memuat paket Rp1 juta, tagihan individu, atau tambah harga institusi** | **DISETUJUI** |
+| NEW-044 | **SATU paket Rp1 juta/orang** mencakup **International MoU + Upgrading Kasubdit Penelitian-PKM Kemenag RI + PKM Internasional + Destinasi Tumpak Sewu–Teras Semeru** | **DISETUJUI** |
+| NEW-045 | Peserta Co-Host dan non-Co-Host dapat membeli paket yang sama di Dashboard masing-masing | **DISETUJUI** |
+| PROP-014 | Satu pendaftaran aktif/user dan aktivasi hak setelah pembayaran diverifikasi | **USULAN** |
+
+Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang disahkan panitia. [Spesifikasi lengkap](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 

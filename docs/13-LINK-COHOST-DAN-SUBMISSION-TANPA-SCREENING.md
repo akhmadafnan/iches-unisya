@@ -7,6 +7,9 @@
 
 > **Cakupan terbaru:** satu tagihan Co-Host **Rp3 juta/institusi khusus paper International Conference**, dengan pengakuan institusi sebagai **Co-Host ICHES 2027**. Anggota yang mendaftar paket MoU/Pembinaan/International PKM/Destinasi membayar **Rp1 juta/orang secara terpisah**; tidak otomatis masuk paket Co-Host. **Jumlah paper Co-Host masih terbuka**. [Dokumen 14](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+> **KEPUTUSAN TERBARU:** pada fitur Co-Host, PIC **hanya** mengurus institusi/roster Conference/invoice Rp3 juta. Pembelian **satu Paket Program Internasional Rp1 juta untuk empat akses** dilakukan sendiri oleh anggota dari **Dashboard pribadi**. [Dokumen 15](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+
 ## A. Menghubungkan lima peserta dengan satu Co-Host institusi
 
 ```mermaid

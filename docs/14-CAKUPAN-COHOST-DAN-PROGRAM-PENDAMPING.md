@@ -5,6 +5,8 @@
 > **BELUM FINAL:** jumlah paper yang dicakup Rp3 juta; daftar media publikasi pengakuan, ketentuan izin logo, masa/aktivasi status resmi; harga jika memilih satu kegiatan pendamping saja di luar paket.  
 > **Tidak ada coding atau transaksi yang telah dijalankan.**
 
+**KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## A. Pemisahan tiga hal yang sering tertukar
 
 | Lapisan | Siapa/apa | Ketentuan |
@@ -23,17 +25,17 @@ flowchart TD
   I --> R["Roster 1–5 anggota Conference"]
   I --> BR["Pengakuan publik: Co-Host ICHES 2027"]
   R --> P["Paper International Conference"]
-  R --> X{"Individu ikut program pendamping?"}
-  X -->|Tidak| N["Tidak ada tagihan paket Rp1 juta"]
-  X -->|Ya| Y["Daftar paket program pendamping"]
-  Y --> B["Tagihan Rp1.000.000 PER ORANG"]
-  Y --> E["MoU / Pembinaan / PKM Internasional / Studi Destinasi menurut aturan paket"]
+  R --> X["Individu login Dashboard pribadi"]
+  X --> Y{"User sendiri memilih satu Paket Program Internasional?"}
+  Y -->|Tidak| N["Tidak ada tagihan paket Rp1 juta"]
+  Y -->|Ya| B["SATU tagihan personal Rp1 juta"]
+  B --> E["EMPAT akses: MoU + Upgrading + PKM + Destinasi"]
   P --> RV["Review → ACCEPT → Full Paper → Presentasi"]
   E --> QR["Personal QR, absensi dan fasilitas sesuai hak"]
   RV --> QR
 ```
 
-Contoh **bukan simulasi harga wajib per paper**: satu institusi Co-Host membayar Rp3 juta. Tiga anggota institusi itu **juga memilih paket program pendamping** sehingga timbul **3 × Rp1 juta = Rp3 juta** kewajiban individual. Total kedua jenis biaya **Rp6 juta**. Dua anggota lain yang hanya di jalur Conference **tidak otomatis** mendapat tagihan Rp1 juta.
+Contoh: **tagihan Co-Host institusi tetap Rp3 juta**. Tiga anggota secara mandiri membeli **satu paket pribadi Rp1 juta untuk empat akses** di Dashboard masing-masing. Tagihan pribadi mereka **tidak masuk invoice Co-Host**; jangan tampilkan Rp6 juta sebagai kewajiban pembayaran institusi.
 
 Nominal Rp3 juta **bukan berarti lima paper**, dan bukan berarti setiap lima author sebuah paper berhak masuk roster Co-Host. **Kuota peserta institusi berbeda dari jumlah author maupun jumlah submission**. Jumlah paper yang ditanggung paket Conference masih butuh keputusan panitia.
 
@@ -52,7 +54,7 @@ Setiap anggota dapat secara independen memilih program pendamping. Jika memilih,
 | Institusi lain bukan Co-Host tetapi ada delegasi ikut paket pendamping | Berlaku ketentuan Rp1.000.000 per orang bagi yang mendaftar |
 | Paper dari penulis yang bukan anggota roster Co-Host | **Tidak otomatis** masuk cakupan biaya institusi |
 
-**Belum disepakati:** apakah satu tagihan Rp1 juta selalu mencakup keempat kegiatan pendamping sebagai satu paket penuh untuk peserta yang memenuhi syarat, atau ada opsi pilihan subset dengan biaya tersendiri. Dasar TOR adalah **paket gabungan**; jangan membuat empat tagihan Rp1 juta terpisah secara otomatis.
+**TELAH DISETUJUI:** **SATU tagihan Rp1 juta mencakup keempat program sekaligus**. User membelinya sendiri pada Dashboard pribadi, tidak melalui menu/PIC Co-Host. Tidak ada empat tagihan Rp1 juta atau pembelian setiap kegiatan satu per satu. Kehadiran tiap kegiatan tetap dicatat terpisah.
 
 ## D. Benefit Co-Host: pengakuan institusi sebagai mitra penyelenggara
 
@@ -93,7 +95,7 @@ Daftar co-host publik dan kaitan roster tidak perlu menjadi CRM sponsorship yang
 | NEW-041 | Keikutsertaan MoU, Pembinaan, PKM, Destinasi tidak otomatis dari status Co-Host; bayar terpisah per orang yang berpartisipasi | **KONSEKUENSI DISETUJUI** |
 | PROP-013 | Daftar nama/logo publik, status konfirmasi, materi promosi, surat kerja sama Co-Host opsional | **USULAN RINCIAN IMPLEMENTASI** |
 
-**Masih terbuka:** kuota jumlah paper per paket Rp3 juta; ketentuan paper dari anggota roster versus co-author eksternal; apakah pembayaran presenter per paper yang melebihi kuota ditagih tambahan; batas registrasi program pendamping; cakupan paket penuh/subset; media pengakuan yang wajib serta otorisasi nama/logo.
+**Masih terbuka:** kuota paper Co-Host, biaya paper tambahan, tenggat/refund dan aktivasi paket Rp1 juta, media nama/logo institusi. **Sudah final:** Rp1 juta SATU paket empat akses, dibeli sendiri dari Dashboard Peserta, tidak di menu Co-Host.
 
 > **Penting bagi presentasi:** bedakan **manfaat administratif/biaya khusus paper konferensi** dari **manfaat reputasi dan atribusi institusi sebagai Co-Host acara ICHES 2027**.
 

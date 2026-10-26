@@ -7,6 +7,8 @@
 
 > **KEPUTUSAN PEMILIK PRODUK TERBARU (26 Oktober 2026):** **Co-Host Rp3.000.000 SEKALI PER INSTITUSI (maksimal 5 orang)** berlaku **hanya untuk jalur paper International Conference**. Paket **MoU + Pembinaan Riset/PKM + Pengabdian Internasional + Studi Destinasi** yang tercantum di TOR adalah **Rp1.000.000 PER ORANG** dan dibayar terpisah oleh orang yang ikut program pendamping, termasuk anggota Co-Host. Institusi Co-Host memperoleh **pengakuan publik sebagai institusi yang turut menyelenggarakan/berkolaborasi dalam ICHES 2027**. Jumlah paper dalam paket Rp3 juta dan rincian media/format pengakuan institusi belum diputuskan. **Jangan menyimpulkan Co-Host otomatis menjadi delegasi MoU atau peserta program pendamping.** Baca [14 — Cakupan Co-Host dan Paket Program Pendamping](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+**BATAS MODUL CO-HOST — DISETUJUI:** paket Rp1 juta tidak ditampilkan atau dibeli melalui PIC/menu Co-Host, **tidak menjadi add-on invoice Rp3 juta institusi**. Anggota Co-Host yang berminat mendaftar **satu Paket Program Internasional untuk empat akses** dari Dashboard pribadinya, dengan satu tagihan atas nama user. [Lihat alur mandiri](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## Solusi praktis menautkan maksimal lima anggota (usulan, belum final)
 
 ```mermaid
@@ -97,7 +99,7 @@ Pendaftaran Co-Host **berbeda konsep** dari MoU. Satu master institusi dapat ter
 | Anggota Co-Host tidak ikut paket pendamping | **Tidak ditagih Rp1 juta** | Tidak otomatis memperoleh hak layanan/kehadiran program pendamping |
 | Institusi Co-Host sebagai mitra | Pengakuan tercantum pada paket Co-Host | Dapat dicantumkan sebagai **institusi Co-Host ICHES 2027** pada publikasi acara yang disahkan panitia |
 
-Contoh: Institusi A membayar Rp3 juta sebagai Co-Host, mempunyai lima anggota, tiga di antaranya ikut paket program pendamping. Maka **satu kewajiban institusi Rp3 juta** dan **tiga kewajiban individual Rp1 juta**. Total Rp6 juta; **tidak ada** tagihan Rp1 juta untuk dua anggota yang tidak ikut paket.
+Contoh: Institusi A mempunyai invoice Co-Host **Rp3 juta tetap**. Budi, Siti, dan Ani memilih secara mandiri satu Paket Program Internasional **Rp1 juta per akun**. Tiga invoice pribadi tersebut **tidak muncul sebagai tambahan biaya di menu Co-Host/PIC**, dan **institusi tidak ditagih Rp6 juta**. Satu paket Rp1 juta sudah meliputi empat akses.
 
 **Jumlah paper yang dapat didaftarkan/dibiayai dari satu paket Co-Host Rp3 juta BELUM DIPUTUSKAN**. Jangan menyimpulkan otomatis lima paper atau bebas submit tanpa batas. Status Co-Host tidak menjamin abstrak ACCEPT, paper Presented, maupun MoU Signed. Full Paper tetap setelah ACCEPT diumumkan; reviewer tetap self-claim tanpa administrative screening.
 
@@ -110,7 +112,7 @@ Contoh: Institusi A membayar Rp3 juta sebagai Co-Host, mempunyai lima anggota, t
 ## 8. Hal yang masih perlu diputuskan
 
 1. **Jumlah paper** dalam satu paket Rp3 juta dan aturan jika anggota institusi submit lebih banyak paper.
-2. Apakah paket program pendamping Rp1 juta **mewajibkan mengikuti paket penuh**, atau tersedia harga jika hanya satu aktivitas.
+2. Paket Rp1 juta **SUDAH FINAL sebagai satu pembelian empat akses**; waktu pembayaran, aktivasi hak, dan refund masih terbuka.
 3. Kapan status Co-Host resmi dan kapan nama/logo diumumkan; media resmi/izin logo serta bentuk bukti status.
 4. Mekanisme penggantian anggota roster, refund, batas pembayaran, dan kewenangan PIC jika perlu.
 5. Batasan apakah tagihan Conference reguler lain timbul di luar jatah paper Co-Host yang nantinya diputuskan.

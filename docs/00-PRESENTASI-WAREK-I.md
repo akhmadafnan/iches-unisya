@@ -7,6 +7,21 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## KOREKSI: SATU PAKET Rp1 JUTA, BELI SENDIRI DI DASHBOARD PESERTA
+
+**Paket Program Internasional bukan fitur Co-Host.** User yang tertarik memilihnya sendiri di Dashboard pribadi dengan **satu pembayaran Rp1 juta untuk empat program**: International MoU, Upgrading Kasubdit Penelitian-PKM Kemenag RI, PKM Internasional, dan Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta × 4 program**; PIC Co-Host **tidak mengelola tagihan pribadi anggota**.
+
+```mermaid
+flowchart TD
+  P["PIC Co-Host"] --> C["Institusi / Roster Conference 1–5 / Invoice Rp3 juta"]
+  U["Peserta login, Co-Host ataupun reguler"] --> D["Dashboard pribadi"]
+  D --> O["Pilih Paket Program Internasional"]
+  O --> T["SATU tagihan user Rp1 juta"]
+  T --> A["Empat akses: MoU + Upgrading + PKM + Destinasi"]
+```
+
+Lihat [alur user lengkap](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## ATURAN CO-HOST FINAL: CONFERENCE ONLY + PAKET PENDAMPING PER ORANG
 
 **Co-Host Rp3.000.000 berlaku sekali PER INSTITUSI untuk maksimal 5 anggota jalur paper International Conference.** Manfaat finansialnya **tidak mencakup** International PKM, Pembinaan, MoU, maupun Studi Destinasi. Bagi peserta yang memilih paket program pendamping tersebut, berlaku **Rp1.000.000 PER ORANG** secara terpisah. **Institusi yang menjadi Co-Host berhak dicantumkan sebagai institusi kolaborator penyelenggara ICHES 2027** pada identitas resmi acara; rincian logo dan media pencantuman perlu disepakati panitia.
@@ -16,13 +31,14 @@ flowchart TD
   I["Institusi Co-Host ICHES 2027"] --> C["Rp3 juta / institusi: khusus paper Conference"]
   I --> R["Roster maks. 5 peserta Conference"]
   I --> B["Pengakuan institusi sebagai Co-Host"]
-  R --> A{"Individu ikut program pendamping?"}
-  A -->|Ya| F["Rp1 juta / orang: paket MoU + Pembinaan + PKM + Destinasi"]
-  A -->|Tidak| N["Tidak ditagih paket Rp1 juta"]
+  R --> A["User punya akun pribadi"]
+  A --> X{"User sendiri memilih paket?"}
+  X -->|Ya| F["Dashboard pribadi: satu tagihan Rp1 juta untuk empat akses"]
+  X -->|Tidak| N["Tidak ada tagihan paket Rp1 juta"]
   B --> P["Nama dan logo pada kanal resmi, sesuai persetujuan"]
 ```
 
-**Contoh:** Institusi A Co-Host Rp3 juta, tiga dari lima anggotanya memilih paket pendamping. Maka biaya institusi **Rp3 juta**, ditambah **Rp3 juta** total biaya tiga individu. **Batas lima orang tidak berarti otomatis lima paper**; jumlah paper paket masih terbuka.
+**Contoh:** Institusi A memiliki invoice Co-Host **Rp3 juta tetap**. Jika tiga anggotanya masing-masing membeli **satu Paket Program Internasional Rp1 juta dari Dashboard pribadi**, ketiga tagihan adalah **milik user**, tidak ditambahkan menjadi invoice institusi Rp6 juta. Satu paket Rp1 juta sudah mencakup empat akses. **Kuota lima orang bukan kuota lima paper**.
 
 [Buka diagram dan aturan lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 

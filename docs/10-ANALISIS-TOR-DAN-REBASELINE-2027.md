@@ -11,6 +11,8 @@
 
 > **Revisi kebijakan pasca-TOR, 26 Oktober 2026:** Co-Host **Rp3 juta/institusi untuk maksimal lima peserta** **khusus jalur paper International Conference**. Tarif Rp1 juta dalam baris 9 TOR **berlaku per orang** bagi peserta paket program pendamping (MoU + Pembinaan + International PKM + Studi Destinasi). Co-Host memberi pengakuan **institusi sebagai kolaborator penyelenggaraan ICHES 2027**; **tidak otomatis membebaskan biaya program pendamping**. TOR tertulis masih dicatat apa adanya sebagai bukti sumber; perubahan ini berasal dari keputusan pemilik produk sesudah TOR. [Aturan terbaru](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+**KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## I. Identitas kegiatan yang harus masuk konfigurasi acara
 
 | Komponen | TOR (halaman) | Status |

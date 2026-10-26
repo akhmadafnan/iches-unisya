@@ -45,6 +45,8 @@ Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template n
 
 **Backoffice Co-Host dan publikasi institusi:** satu record institusi berisi PIC, roster maksimal 5 peserta, satu tagihan Conference Rp3 juta, serta status institusi sebagai **Co-Host ICHES 2027**. Daftar nama/logo Co-Host yang sudah dikonfirmasi dapat ditampilkan pada **Public Website** tanpa menambah aplikasi sponsor yang besar. Anggota yang memilih **paket pendamping Rp1 juta per orang** mempunyai pembayaran pribadinya sendiri; Co-Host tidak otomatis mengaktifkan kegiatan pendamping. [Aturan lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+**Pemisahan komponen UI dikunci:** Dashboard Peserta memiliki **satu kartu Paket Program Internasional Rp1 juta** berisi empat program. Menu Co-Host/PIC hanya data institusi, anggota Conference, invoice Rp3 juta, status pengakuan. **Tidak ada add-on Rp1 juta milik anggota pada Co-Host.** Finance dapat melihat pembayaran kedua domain pada rekap keseluruhan sesuai pembayar. [Detail](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## Area UI
 
 | Workspace | Prinsip |

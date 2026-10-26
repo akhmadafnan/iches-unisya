@@ -18,6 +18,8 @@ Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebaga
 
 **KEBIJAKAN PEMBIAYAAN DAN KOLABORASI:** Co-Host **Rp3.000.000/institusi (maks. 5 orang)** **khusus paper International Conference**, sementara paket program **MoU + Pembinaan + International PKM + Studi Destinasi berbiaya Rp1.000.000 per orang** bagi yang mengikutinya. Institusi Co-Host mendapat **pengakuan sebagai mitra penyelenggara ICHES 2027**; akses program pendamping **tidak otomatis diberikan** kepada anggota Co-Host. [Lihat diagram dan contoh](docs/14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
+**FINAL:** Paket Program Internasional **Rp1 juta/orang merupakan SATU paket empat program**, dibeli sendiri di **Dashboard Peserta**, terpisah sepenuhnya dari menu PIC/invoice Co-Host Rp3 juta. [Alur dan diagram](docs/15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
 ## Apa yang akan dibangun?
 
 **Keputusan produk terbaru:** Co-Host **Rp3.000.000** (mengganti Rp450.000 pada TOR tertulis) dan maksimal **5 peserta per institusi**; review melalui **filter topik + claim mandiri**, dimulai setelah setiap abstrak valid disubmit; Full Paper berdasarkan **ACCEPT yang diumumkan**, bukan tanggal kaku. **Biaya ini satu kali per institusi, mencakup maksimal lima peserta.**
@@ -57,6 +59,7 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [12 — Pembayaran Co-Host per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md) | Satu tagihan Rp3 juta per institusi, maksimal lima peserta, validasi Finance, kaitan dengan kategori lain |
 | [13 — Linking peserta dan tanpa screening](docs/13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md) | Skema undangan lima peserta Co-Host; validasi form; reviewer langsung claim |
 | [14 — Cakupan Co-Host dan Program Pendamping](docs/14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md) | Co-Host Rp3 juta khusus paper konferensi; paket pendamping Rp1 juta/orang; pengakuan institusi Co-Host |
+| [15 — Paket Program Internasional mandiri](docs/15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) | Dashboard peserta: beli sendiri satu paket Rp1 juta untuk empat akses; tidak melalui Co-Host |
 
 ## Ringkasan alur terpadu
 
