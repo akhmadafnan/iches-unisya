@@ -16,6 +16,8 @@ Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebaga
 
 **Keputusan akademik terbaru:** tidak ada lagi *administrative screening* pasca-Submit. Form + server memvalidasi naskah wajib (termasuk teks abstrak dan PDF), lalu submission valid **langsung** tampil di Reviewer Index untuk self-claim. **Co-Host** tetap satu tagihan **Rp3.000.000/institusi** (maks. lima orang); disarankan PIC menghubungkan anggota melalui undangan email/Magic Link. **Detail mekanisme undangan masih usulan.** [Buka diagram](docs/13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+**KEBIJAKAN PEMBIAYAAN DAN KOLABORASI:** Co-Host **Rp3.000.000/institusi (maks. 5 orang)** **khusus paper International Conference**, sementara paket program **MoU + Pembinaan + International PKM + Studi Destinasi berbiaya Rp1.000.000 per orang** bagi yang mengikutinya. Institusi Co-Host mendapat **pengakuan sebagai mitra penyelenggara ICHES 2027**; akses program pendamping **tidak otomatis diberikan** kepada anggota Co-Host. [Lihat diagram dan contoh](docs/14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## Apa yang akan dibangun?
 
 **Keputusan produk terbaru:** Co-Host **Rp3.000.000** (mengganti Rp450.000 pada TOR tertulis) dan maksimal **5 peserta per institusi**; review melalui **filter topik + claim mandiri**, dimulai setelah setiap abstrak valid disubmit; Full Paper berdasarkan **ACCEPT yang diumumkan**, bukan tanggal kaku. **Biaya ini satu kali per institusi, mencakup maksimal lima peserta.**
@@ -54,6 +56,7 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [11 — Keputusan terbaru](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md) | Tarif Co-Host Rp3 juta per institusi, reviewer claim mandiri, Full Paper setelah ACCEPT diumumkan |
 | [12 — Pembayaran Co-Host per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md) | Satu tagihan Rp3 juta per institusi, maksimal lima peserta, validasi Finance, kaitan dengan kategori lain |
 | [13 — Linking peserta dan tanpa screening](docs/13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md) | Skema undangan lima peserta Co-Host; validasi form; reviewer langsung claim |
+| [14 — Cakupan Co-Host dan Program Pendamping](docs/14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md) | Co-Host Rp3 juta khusus paper konferensi; paket pendamping Rp1 juta/orang; pengakuan institusi Co-Host |
 
 ## Ringkasan alur terpadu
 

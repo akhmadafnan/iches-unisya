@@ -9,6 +9,8 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+> **Revisi kebijakan pasca-TOR, 26 Oktober 2026:** Co-Host **Rp3 juta/institusi untuk maksimal lima peserta** **khusus jalur paper International Conference**. Tarif Rp1 juta dalam baris 9 TOR **berlaku per orang** bagi peserta paket program pendamping (MoU + Pembinaan + International PKM + Studi Destinasi). Co-Host memberi pengakuan **institusi sebagai kolaborator penyelenggaraan ICHES 2027**; **tidak otomatis membebaskan biaya program pendamping**. TOR tertulis masih dicatat apa adanya sebagai bukti sumber; perubahan ini berasal dari keputusan pemilik produk sesudah TOR. [Aturan terbaru](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## I. Identitas kegiatan yang harus masuk konfigurasi acara
 
 | Komponen | TOR (halaman) | Status |
@@ -107,10 +109,10 @@ TOR bagian J juga mengelompokkan peserta: Reguler; delegasi PTKIS Tapal Kuda; In
 **Jangan mengasumsikan hal yang tidak dinyatakan TOR:**
 - **TERJAWAB:** batas Co-Host maksimal **5 peserta PER INSTITUSI**.
 - **TERJAWAB FINAL:** Co-Host **Rp3.000.000 PER INSTITUSI** mencakup maksimal lima peserta, menggantikan Rp450.000 dalam TOR. **Tidak ada biaya Co-Host Rp3 juta per peserta.**
-- Bundle IDR 1.000.000 itu **per orang atau per institusi**, dan apakah termasuk layanan/transport/akomodasi tertentu? Perlu konfirmasi.
+- **TERJAWAB:** tarif bundle program MoU + Pembinaan + International PKM + Studi Destinasi **Rp1.000.000 PER ORANG**, terpisah dari Co-Host Conference. Fasilitas detail (transport, akomodasi, dll.) belum dinyatakan.
 - Apakah delegasi PTKIS Tapal Kuda memiliki diskon atau harga khusus? **Tidak ada tabel tarif khusus Tapal Kuda** dalam TOR.
 - Bagaimana peserta nasional yang ingin *participant-only online*, peserta internasional non-pemakalah onsite, atau mahasiswa internasional ditagih? Tidak ada kategori eksplisit untuk beberapa kombinasi.
-- Bagaimana harga jika orang yang sama sudah membayar Conference tetapi juga membeli bundle Rp1.000.000? Double charge / diskon / tarif bundle masih perlu diputuskan.
+- **TERJAWAB untuk Co-Host:** keikutsertaan Co-Host dalam Conference dibiayai Rp3 juta/institusi, sedangkan tiap orang dari institusi itu yang ikut paket pendamping **membayar Rp1 juta tambahan secara individual**. Harga di luar kombinasi ini dan paket program sebagian tetap memerlukan kebijakan.
 - **Biaya yang dibebankan sebelum ACCEPT bagi Presenter tetap tidak boleh terjadi** menurut keputusan produk; window TOR 24–28 Desember mendukung aturan itu.
 
 **Model sistem yang direkomendasikan:** Admin mengonfigurasi kategori fee + mode onsite/online + mata uang, eligibility rules, opsi bundle, dan kewajiban pembayarannya. Setiap pembebanan biaya menyimpan snapshot kategori, nominal, mata uang, dan tujuan transfer. Tidak perlu mesin konversi USD otomatis tanpa kebijakan finansial; transfer manual dan verifikasi Finance tetap dapat dipakai.
@@ -190,7 +192,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 
 ## IX. Keputusan krusial yang perlu dibawa ke Warek I
 
-1. **Co-Host SUDAH FINAL:** Rp3.000.000 **per institusi untuk maksimal lima peserta**; unit pembayaran bundle Rp1.000.000, kemungkinan biaya paper Presenter dan pembayaran multi-kegiatan masih terbuka.
+1. **Co-Host FINAL:** Rp3.000.000 **per institusi, maks. lima orang, khusus paper Conference**. **Paket pendamping Rp1.000.000/orang** terpisah. **Yang terbuka:** jumlah paper Co-Host, dan biaya jika hanya sebagian paket pendamping.
 2. **Co-Host maksimal 5:** **TERJAWAB — per institusi**.
 3. **Agenda paralel 5 Januari:** **TERJAWAB — boleh bersamaan, tak perlu fitur anti-benturan khusus**.
 4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah validasi Submit**. Jumlah reviewer dan aturan revisi detail tetap terbuka.

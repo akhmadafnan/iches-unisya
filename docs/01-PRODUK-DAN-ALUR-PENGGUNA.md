@@ -7,6 +7,8 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+> **Kebijakan institusi terbaru:** Co-Host ICHES 2027 membayar **Rp3 juta/institusi** khusus jalur paper International Conference (maks. 5 orang), tetapi memperoleh pengakuan publik sebagai **institusi Co-Host acara**. Paket MoU/Pembinaan/International PKM/Destinasi dibayar **Rp1 juta per orang** secara terpisah. [Ketentuan dan diagram](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## Tujuan produk
 
 Satu portal untuk menghubungkan informasi acara, registrasi, proses akademik, pendaftaran institusi MoU, kegiatan pengabdian internasional, operasional pelayanan, dan sertifikat. Sistem **single-event ICHES 2027** dengan model satu akun / satu profil / satu QR pribadi dan banyak keikutsertaan.

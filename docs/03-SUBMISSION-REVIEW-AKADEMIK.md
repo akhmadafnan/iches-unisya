@@ -21,6 +21,12 @@
 
 **Delapan Conference Track** berasal dari TOR bagian E dan harus diinisialisasi sebagai data editable (lihat [Audit TOR bagian III](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)). Reviewer count tidak dicantumkan pada TOR; baseline repo lama **1 reviewer default configurable**, bukan ketetapan baru dua reviewer.
 
+## Kaitan paket akademik dengan institusi Co-Host
+
+Paket Co-Host **Rp3 juta/institusi untuk maksimal lima peserta** memiliki cakupan finansial **khusus paper International Conference**. Jumlah paper yang masuk paket ini **belum ditentukan** dan tidak otomatis identik dengan jumlah peserta. **Usulan:** daftar submission dapat dihubungkan secara eksplisit dengan institusi Co-Host melalui pemilik submission/anggota terverifikasi; validasi hak paket dilakukan saat kewajiban pembayaran diperiksa, bukan saat reviewer memilih topic. Proses reviewer, final ACCEPT, LoA dan Full Paper tetap sama untuk paper reguler maupun Co-Host.
+
+Paket program pendamping (MoU, Pembinaan, PKM, Destinasi) **Rp1.000.000 per orang** tidak termasuk Rp3 juta Co-Host. [Baca keputusan](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## Keputusan terbaru yang disepakati
 
 1. **Submitting/Corresponding Author** adalah akun pengelola submission, tidak harus First Author.

@@ -69,7 +69,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | NEW-033 | Satuan tarif Co-Host Rp3.000.000 adalah **per institusi**, mencakup maksimal lima peserta dalam **satu tagihan**, bukan tarif per orang | **DISETUJUI FINAL** — memperjelas NEW-026 |
 | NEW-034 | Identitas tagihan mengikuti **pendaftaran Co-Host institusi**, sehingga lima akun personal tidak menimbulkan lima tagihan Co-Host | Turunan rancangan dari NEW-033; implementasi belum dibuat |
 
-**Tidak dibahas sebagai kebijakan final:** komponen biaya apa saja yang tercakup bagi pemakalah Co-Host, jumlah paper yang dibiayai paket, proses pergantian delegasi, refund, serta apakah tarif Co-Host mencakup paket MoU/PKM lainnya. Ketentuan ini tidak boleh disimpulkan hanya dari nominal dan kuota.
+**KEPUTUSAN TERBARU mengisi celah ini:** Co-Host Rp3 juta **hanya untuk paper International Conference**, **tidak** mencakup paket MoU/Pembinaan/International PKM/Destinasi. Paket program tersebut **Rp1 juta per orang**. Institusi Co-Host diakui sebagai kolaborator penyelenggaraan ICHES 2027. **Masih terbuka:** jumlah paper yang tercakup, refund, pergantian anggota, serta detail atribut pengakuan publik.
 
 [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
@@ -84,6 +84,20 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | PROP-012 | Undangan mencadangkan slot; PIC hanya memakai slot jika hadir; penggantian anggota diatur sederhana | **USULAN**, belum dikunci |
 
 **Alur baru:** Draft → Submit (validasi) → Submitted → Reviewer Index → Claimed → Reviewed → Komite Decision → Publish Result. Status `Under Screening` / `Screening Passed` tidak lagi diperlukan.
+
+## A4. Cakupan biaya Co-Host dan pengakuan institusi (KEPUTUSAN TERBARU)
+
+| ID | Keputusan | Status |
+|---|---|---|
+| NEW-038 | Biaya Co-Host **Rp3 juta/institusi, maks. lima orang** hanya untuk **jalur paper International Conference** | **DISETUJUI** |
+| NEW-039 | Paket program pendamping di TOR (MoU, Pembinaan, International PKM, Destinasi) **Rp1 juta PER ORANG** | **DISETUJUI**, memperjelas satuan tarif TOR |
+| NEW-040 | Institusi Co-Host memperoleh pengakuan bahwa **ICHES 2027 diselenggarakan bersama/berkolaborasi dengan institusi tersebut** | **DISETUJUI**; format dan media pengakuan masih terbuka |
+| NEW-041 | Co-Host tidak otomatis membayar/mendaftarkan anggota ke program pendamping; anggota yang memilih paket pendamping memiliki **kewajiban sendiri Rp1 juta/orang** | **KONSEKUENSI DISETUJUI** |
+| PROP-013 | Nama/logo institusi pada website, materi resmi, buku program, dokumen konfirmasi Co-Host opsional; tampil publik setelah dikonfirmasi panitia | **USULAN IMPLEMENTASI** |
+
+**TERBUKA:** Berapa jumlah paper tercakup paket Rp3 juta? Apakah biaya di luar paket timbul per paper tambahan? Apakah tersedia harga jika peserta hanya memilih sebagian program pendamping? Media resmi mana untuk nama/logo dan persetujuannya? **Tidak ada lagi ketidakjelasan unit tarif Rp1 juta: satuannya per orang untuk paket pendamping.**
+
+[Lihat dokumen keputusan Co-Host dan program pendamping](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
@@ -122,8 +136,8 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | Ref | Hal yang belum jelas di TOR | Prioritas |
 |---|---|---|
 | TOR-Q01 | **TERJAWAB:** maksimal **5 per institusi** | Selesai |
-| TOR-Q02 | **TERJAWAB:** tarif Co-Host **Rp3.000.000 per institusi**, mencakup maksimal lima orang; bundle Rp1.000.000 masih perlu keputusan satuannya. | **Selesai untuk Co-Host** |
-| TOR-Q03 | Satu orang ikut Conference + bundle: penagihan dan hak layanan bagaimana? | Tinggi |
+| TOR-Q02 | **TERJAWAB:** tarif Co-Host **Rp3.000.000 per institusi**, mencakup maksimal lima orang; bundle Rp1.000.000 **sudah diputuskan per orang**. | **Selesai untuk Co-Host** |
+| TOR-Q03 | **TERJAWAB prinsip:** Co-Host Conference dibayar institusi Rp3 juta; jika anggotanya ikut paket pendamping maka **Rp1 juta/orang secara terpisah**. Hak fasilitas spesifik tetap mengikuti kategori/pengecualian. | Selesai prinsip |
 | TOR-Q04 | **TERJAWAB:** agenda boleh paralel; cukup pencatatan kehadiran dan presentasi masing-masing | Selesai |
 | TOR-Q05 | **TERJAWAB:** Full Paper unlocked saat **ACCEPT diumumkan**, tidak bergantung tanggal atau Finance Verified | Selesai |
 | TOR-Q06 | **Alur TERJAWAB:** reviewer claim dari index filter track sejak paper valid disubmit; **jumlah reviewer dan detail revisi** masih terbuka | Sebagian |
@@ -137,7 +151,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 |---|---|---|
 | Tinggi | Batas kata, keywords, PDF size, bahasa submission, template abstrak | Komite Akademik |
 | Tinggi | Jumlah reviewer per paper, claim macet, rubrik, dan batas revisi | Komite Akademik |
-| Tinggi | Komponen biaya Presenter/Participant yang tercakup dalam paket Co-Host; unit bundle Rp1 juta dan kebijakan tagihan lintas kegiatan | Panitia & Keuangan |
+| Tinggi | **Jumlah paper** yang ditanggung paket Co-Host Rp3 juta; rincian tagihan paper tambahan dan harga paket pendamping jika hanya sebagian kegiatan; pengakuan nama/logo institusi | Panitia & Keuangan |
 | Tinggi | Rincian hari/sesi; agenda paralel sudah diperbolehkan | Panitia Program |
 | Tinggi | Full-paper requirement & penilaian pascapresentasi; publikasi prosiding/jurnal | Komite Akademik |
 | Sedang | Kuota delegasi MoU, bukti keabsahan delegasi/signatory | Koordinator MoU |

@@ -7,6 +7,8 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+> **KEPUTUSAN PEMILIK PRODUK TERBARU (26 Oktober 2026):** **Co-Host Rp3.000.000 SEKALI PER INSTITUSI (maksimal 5 orang)** berlaku **hanya untuk jalur paper International Conference**. Paket **MoU + Pembinaan Riset/PKM + Pengabdian Internasional + Studi Destinasi** yang tercantum di TOR adalah **Rp1.000.000 PER ORANG** dan dibayar terpisah oleh orang yang ikut program pendamping, termasuk anggota Co-Host. Institusi Co-Host memperoleh **pengakuan publik sebagai institusi yang turut menyelenggarakan/berkolaborasi dalam ICHES 2027**. Jumlah paper dalam paket Rp3 juta dan rincian media/format pengakuan institusi belum diputuskan. **Jangan menyimpulkan Co-Host otomatis menjadi delegasi MoU atau peserta program pendamping.** Baca [14 — Cakupan Co-Host dan Paket Program Pendamping](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## 1. Lima keputusan yang sudah ditegaskan
 
 | No | Pokok | Keputusan |
@@ -17,7 +19,7 @@
 | 4 | Reviewer | Reviewer berwenang dapat **mencari/filter abstract berdasarkan track** dan **Claim** sendiri tanpa menjadi anggota wajib track tertentu |
 | 5 | Full Paper | Terbuka **bila keputusan final ACCEPT sudah DIUMUMKAN kepada Submitting Author**; tidak memakai tanggal sebagai gate upload |
 
-**KEPUTUSAN FINAL TAMBAHAN:** biaya Co-Host **Rp3.000.000 dibayar sekali per institusi**, mencakup maksimal **lima peserta**, bukan tarif per orang. Perhitungan Co-Host pada sistem harus menghasilkan **satu tagihan institusi**. Yang masih terbuka hanyalah isi fasilitas/biaya presenter di dalam paket, bukan satuan harga.
+**KEPUTUSAN FINAL TAMBAHAN:** biaya Co-Host **Rp3.000.000 dibayar sekali per institusi**, mencakup maksimal **lima peserta**, bukan tarif per orang. Perhitungan Co-Host pada sistem harus menghasilkan **satu tagihan institusi**. **Cakupan paket sudah dipersempit: khusus paper International Conference.** Kewajiban Rp1 juta/orang untuk paket program pendamping terpisah, sedangkan **jumlah paper** yang termasuk Co-Host masih perlu keputusan.
 
 ## 2. Visual: alur reviewer aktif, bukan menunggu akhir submission
 
@@ -124,6 +126,6 @@ MoU/Pembinaan dan Parallel Panel memang berjalan pada jam beririsan di TOR. **Ti
 
 ## 7. Satu pertanyaan yang belum perlu menghambat pembahasan
 
-**Keputusan sudah dijawab dan ditutup:** Rp3.000.000 **ditagihkan satu kali kepada tiap institusi Co-Host**, mencakup maksimal lima peserta. Yang tetap memerlukan arahan adalah rincian manfaat paket terhadap biaya paper/Presenter atau pendaftaran kegiatan lain. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
+**Keputusan sudah dijawab dan ditutup:** Rp3.000.000 **ditagihkan satu kali kepada tiap institusi Co-Host**, mencakup maksimal lima peserta. **Sudah diputuskan paket Rp3 juta hanya untuk paper International Conference** dan **paket pendamping Rp1 juta/orang terpisah**. Yang belum diputuskan adalah jumlah paper dan detail pengakuan institusi. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
 **Status:** perancangan produk saja; dokumen/diagram GitHub dapat dipresentasikan. Belum coding, belum deployment dan belum ada migrasi database.

@@ -7,6 +7,27 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## ATURAN CO-HOST FINAL: CONFERENCE ONLY + PAKET PENDAMPING PER ORANG
+
+**Co-Host Rp3.000.000 berlaku sekali PER INSTITUSI untuk maksimal 5 anggota jalur paper International Conference.** Manfaat finansialnya **tidak mencakup** International PKM, Pembinaan, MoU, maupun Studi Destinasi. Bagi peserta yang memilih paket program pendamping tersebut, berlaku **Rp1.000.000 PER ORANG** secara terpisah. **Institusi yang menjadi Co-Host berhak dicantumkan sebagai institusi kolaborator penyelenggara ICHES 2027** pada identitas resmi acara; rincian logo dan media pencantuman perlu disepakati panitia.
+
+```mermaid
+flowchart TD
+  I["Institusi Co-Host ICHES 2027"] --> C["Rp3 juta / institusi: khusus paper Conference"]
+  I --> R["Roster maks. 5 peserta Conference"]
+  I --> B["Pengakuan institusi sebagai Co-Host"]
+  R --> A{"Individu ikut program pendamping?"}
+  A -->|Ya| F["Rp1 juta / orang: paket MoU + Pembinaan + PKM + Destinasi"]
+  A -->|Tidak| N["Tidak ditagih paket Rp1 juta"]
+  B --> P["Nama dan logo pada kanal resmi, sesuai persetujuan"]
+```
+
+**Contoh:** Institusi A Co-Host Rp3 juta, tiga dari lima anggotanya memilih paket pendamping. Maka biaya institusi **Rp3 juta**, ditambah **Rp3 juta** total biaya tiga individu. **Batas lima orang tidak berarti otomatis lima paper**; jumlah paper paket masih terbuka.
+
+[Buka diagram dan aturan lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
+---
+
 ## KEPUTUSAN TERBARU UNTUK PRESENTASI WAREK I
 
 | Keputusan | Rumusan terbaru |
@@ -17,7 +38,7 @@
 | Full Paper | Tombol unggah terbuka bagi paper yang **ACCEPTED dan keputusannya diumumkan ke author**; **REJECTED** tidak memperoleh akses |
 | Pembayaran | Presenter bayar **setelah ACCEPT**, tetapi **tidak menjadi syarat membuka unggah Full Paper** |
 
-**Kebijakan Co-Host sudah dikunci:** Rp3.000.000 dibayarkan **sekali per institusi** dan mencakup **maksimal lima peserta**, bukan ditagihkan kepada masing-masing peserta. Ketentuan cakupan biaya presenter tambahan di luar paket Co-Host, serta jumlah reviewer per paper, masih memerlukan keputusan komite. Jadwal TOR 22 Desember untuk pengumuman masih menjadi **milestone**, tetapi bukan gate teknis untuk membuka review atau full paper. Tanggal 23–28 Desember untuk Full Paper tetap dicatat sebagai **rencana pada TOR**, bukan syarat unlock aplikasi.
+**Kebijakan Co-Host sudah dikunci:** Rp3.000.000 dibayarkan **sekali per institusi** dan mencakup **maksimal lima peserta**, bukan ditagihkan kepada masing-masing peserta. **Paket tersebut hanya untuk paper International Conference; biaya paket program pendamping adalah Rp1 juta per orang bagi pesertanya.** Jumlah paper yang tercakup, serta jumlah reviewer per paper, masih perlu keputusan komite. Jadwal TOR 22 Desember untuk pengumuman masih menjadi **milestone**, tetapi bukan gate teknis untuk membuka review atau full paper. Tanggal 23–28 Desember untuk Full Paper tetap dicatat sebagai **rencana pada TOR**, bukan syarat unlock aplikasi.
 
 ```mermaid
 flowchart TD
@@ -69,7 +90,7 @@ flowchart TD
 **Konflik kebijakan/operasional yang wajib dijelaskan pada Warek I:**
 - **TELAH DIPUTUSKAN:** Full Paper terbuka saat keputusan ACCEPT resmi diumumkan ke author, bukan berdasarkan tanggal atau verifikasi pembayaran. Tanggal Full Paper pada TOR menjadi milestone acara.
 - **TELAH DIPUTUSKAN:** MoU/Pembinaan dan Panel berjalan paralel bila diperlukan; tidak perlu fitur khusus optimasi benturan. Kehadiran tiap kegiatan dan bukti presentasi tetap terpisah.
-- **Koreksi:** tarif Co-Host **Rp3.000.000**, bukan **Rp450.000** yang tertulis di TOR; batas **lima peserta PER INSTITUSI**. **Unit pembayaran sudah final: satu tagihan Rp3 juta PER INSTITUSI yang mencakup paling banyak lima peserta.** Bundle Rp1.000.000 tetap mengikuti TOR.
+- **Koreksi:** tarif Co-Host **Rp3.000.000**, bukan **Rp450.000** yang tertulis di TOR; batas **lima peserta PER INSTITUSI**. **Unit pembayaran sudah final: satu tagihan Rp3 juta PER INSTITUSI yang mencakup paling banyak lima peserta.** **Bundle Rp1.000.000 per orang** berlaku terpisah bagi peserta program pendamping, termasuk bila orang tersebut anggota Co-Host.
 - Research Coaching/Pembinaan Riset dan **Studi Destinasi** bukan lagi modul opsional dalam cakupan acara menurut TOR; desain pendaftaran tetap sederhana.
 
 **➡️ [Audit TOR dan matriks perubahan selengkapnya](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
@@ -120,7 +141,7 @@ flowchart TD
   G --> H["Kelima peserta terhubung ke institusi + QR pribadi"]
 ```
 
-**Contoh:** Institusi A membawa tiga peserta = **satu tagihan Rp3.000.000**; Institusi B membawa lima peserta = **satu tagihan Rp3.000.000**. Menambah peserta keenam **tidak dibenarkan dalam paket lima orang**, dan tidak boleh otomatis menghasilkan tagihan Co-Host kedua. Verifikasi administrasi dan apa saja fasilitas/biaya presenter yang termasuk paket ini masih perlu perincian panitia. [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)
+**Contoh:** Institusi A membawa tiga peserta = **satu tagihan Rp3.000.000**; Institusi B membawa lima peserta = **satu tagihan Rp3.000.000**. Menambah peserta keenam **tidak dibenarkan dalam paket lima orang**, dan tidak boleh otomatis menghasilkan tagihan Co-Host kedua. Paket Co-Host **khusus jalur paper International Conference**; jumlah paper dan fasilitas yang termasuk masih perlu perincian panitia. Program pendamping dikenai **Rp1 juta per peserta**, tidak termasuk Rp3 juta institusi. [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)
 
 ## 3. Contoh perjalanan peserta
 
@@ -250,7 +271,7 @@ Repository referensi: [international-conference-platform — develop](https://gi
 |---|---|
 | Academic policy | Batas kata/keyword, template PDF, jumlah reviewer per paper, aturan klaim reviewer macet, siklus revisi final |
 | Full paper & publikasi | Unlock Full Paper segera saat ACCEPT diumumkan; validasi pra-acara, penilaian pascapresentasi, kebijakan prosiding/jurnal |
-| Keuangan | Tarif presenter: per paper atau per peserta; kategori participant Free/Paid |
+| Keuangan | Co-Host Rp3 juta/institusi khusus paper Conference; program pendamping Rp1 juta/orang; kuota paper Co-Host dan tarif kategori lain belum final |
 | Fasilitas | Conference Kit sekali per orang; souvenir MoU per institusi atau per orang; kuota delegasi |
 | Sertifikat | Apakah MoU Delegate dan ICD memiliki sertifikat tersendiri; aturan kelayakan |
 | Jadwal | Jadwal acara dan layanan; agenda paralel diterima tanpa modul konflik kompleks |

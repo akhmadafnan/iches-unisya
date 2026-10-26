@@ -43,11 +43,13 @@ Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template n
 
 **Arah UI baru:** Reviewer: `Abstract Index → filter topik → Claim → My Reviews`, tanpa tombol PASS screening pada akademik. PIC Co-Host: `Institution Details → 5 Seats (invite/status) → Single Rp3m Institutional Payment`. Ini pola UI sederhana; detail undangan masih usulan. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+**Backoffice Co-Host dan publikasi institusi:** satu record institusi berisi PIC, roster maksimal 5 peserta, satu tagihan Conference Rp3 juta, serta status institusi sebagai **Co-Host ICHES 2027**. Daftar nama/logo Co-Host yang sudah dikonfirmasi dapat ditampilkan pada **Public Website** tanpa menambah aplikasi sponsor yang besar. Anggota yang memilih **paket pendamping Rp1 juta per orang** mempunyai pembayaran pribadinya sendiri; Co-Host tidak otomatis mengaktifkan kegiatan pendamping. [Aturan lengkap](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## Area UI
 
 | Workspace | Prinsip |
 |---|---|
-| Public | Hero, informasi konferensi, call for papers, agenda, pembicara, venue, sponsor, register, verify certificate |
+| Public | Hero, informasi konferensi, **daftar institusi Co-Host**, call for papers, agenda, pembicara, venue, sponsor, register, verify certificate |
 | Participant | Profil, aktivitas yang diikuti, personal QR, Next Action, dokumen |
 | Submitting Author | My Submissions, draft/revisi, LoA, bukti pembayaran, full paper, sertifikat seluruh penulis |
 | PIC MoU | Institusi, delegasi usulan, status verifikasi dan undangan |

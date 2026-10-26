@@ -5,6 +5,8 @@
 > **USULAN DESAIN (belum dikunci):** cara menghubungkan lima orang memakai undangan email/Magic Link dan lima slot anggota institusi.  
 > **Status:** dokumentasi perancangan saja; tidak ada kode aplikasi.
 
+> **Cakupan terbaru:** satu tagihan Co-Host **Rp3 juta/institusi khusus paper International Conference**, dengan pengakuan institusi sebagai **Co-Host ICHES 2027**. Anggota yang mendaftar paket MoU/Pembinaan/International PKM/Destinasi membayar **Rp1 juta/orang secara terpisah**; tidak otomatis masuk paket Co-Host. **Jumlah paper Co-Host masih terbuka**. [Dokumen 14](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+
 ## A. Menghubungkan lima peserta dengan satu Co-Host institusi
 
 ```mermaid
@@ -48,7 +50,7 @@ Members: 3 / 5                             Status: Under Verification
 - Email sama tidak boleh mengisi dua slot dalam institusi yang sama. Jika pengguna terkait institusi Co-Host lain, panitia dapat menyelesaikannya tanpa menggandakan identitas atau hak.
 - Sebelum peserta melakukan check-in/mengambil hak layanan, PIC boleh meminta pergantian slot secara sederhana. Setelah ada catatan kehadiran/penyerahan, Admin menangani koreksi tanpa menghapus fakta lama.
 - Tidak ada biaya Co-Host tambahan untuk anggota kedua hingga kelima; satu tagihan **Rp3 juta per institusi** tetap berlaku meskipun peserta yang datang kurang dari lima.
-- Kapan manfaat Co-Host aktif, apakah mencakup biaya presenter/paper tertentu, serta hak fasilitas apa saja **belum diputuskan**. Jangan otomatis membebaskan tagihan konferensi lain.
+- **SUDAH DIPUTUSKAN:** biaya Co-Host mencakup **jalur paper International Conference**, bukan program pendamping. Paket program pendamping **Rp1 juta per peserta** jika dipilih terpisah. **Masih terbuka:** jumlah paper dan rincian hak layanan konferensi; jangan otomatis membebaskan tagihan paper di luar jatah yang kelak ditentukan.
 
 ## B. Abstract langsung ke Reviewer Index, tanpa screening
 
