@@ -1,0 +1,87 @@
+# 01 — Peta Produk dan Perjalanan Pengguna
+
+> **Konteks:** The 6th ICHES 2027. **Status:** rancangan produk; keputusan yang belum final ditandai.  
+> **Rujukan visual:** [Presentasi Warek I](00-PRESENTASI-WAREK-I.md).
+
+## Tujuan produk
+
+Satu portal untuk menghubungkan informasi acara, registrasi, proses akademik, pendaftaran institusi MoU, kegiatan pengabdian internasional, operasional pelayanan, dan sertifikat. Sistem **single-event ICHES 2027** dengan model satu akun / satu profil / satu QR pribadi dan banyak keikutsertaan.
+
+Bukan platform multi-edition, ERP, OJS pengganti, sistem penandatanganan kontrak legal, sistem kepegawaian petugas, atau mesin penilaian akademik otomatis.
+
+## Prinsip yang telah dipilih
+
+| Prinsip | Implikasi |
+|---|---|
+| Satu identitas | Peserta, presenter, delegasi, dan peserta ICD dapat berupa orang yang sama |
+| Multi-keikutsertaan | Conference, MoU, ICD dapat diikuti sendiri-sendiri atau bersamaan |
+| Hak != kehadiran != layanan | Berhak Lunch tidak sama dengan sudah mengambil Lunch; datang tidak sama dengan telah presentasi |
+| Institusi != individu | MoU didaftarkan sekali per institusi; PIC dan delegasi tetap mempunyai identitas masing-masing |
+| Akun pengelola submission | Submitting/Corresponding Author dapat berbeda dengan First Author |
+| Sertifikat individu | Satu sertifikat unik per penulis per paper yang memenuhi syarat |
+| Backoffice terbatas per peran | Petugas hanya melihat dan mengerjakan yang menjadi penugasannya |
+
+## Peta perjalanan utama
+
+```mermaid
+flowchart TD
+  P["Portal Publik"] --> A["Akun terverifikasi"]
+  A --> U["Profil lengkap + QR personal"]
+  U --> C["Conference"]
+  U --> M["International MoU"]
+  U --> I["International Community Development"]
+  C --> CP["Presenter: Submission → Review → Accept → Payment → Present"]
+  C --> CT["Participant: Registrasi → Biaya jika ada → Hadir"]
+  M --> MD["PIC Institusi → Delegasi Terverifikasi"]
+  I --> ID["Registrasi → Kehadiran → Penyelesaian jika disyaratkan"]
+  CP --> Q["QR Services & Certificate"]
+  CT --> Q
+  MD --> Q
+  ID --> Q
+```
+
+## Aktor
+
+- **Visitor:** melihat website, call for papers, jadwal publik, dan verifikasi sertifikat.
+- **User/Participant:** memiliki akun dan kegiatan aktif.
+- **Submitting Author:** pengelola paper dan seluruh tautan sertifikat penulisnya.
+- **Reviewer:** mengerjakan penilaian yang ditugaskan tanpa menetapkan keputusan akademik final.
+- **Academic Authority:** screening, penugasan review, keputusan, jadwal dan final academic check.
+- **PIC MoU:** mewakili administrasi pendaftaran institusi dan mengusulkan delegasi.
+- **Verified Delegate:** individu terundang dengan akun/QR sendiri.
+- **ICD Coordinator:** mengelola peserta dan bukti kegiatan.
+- **Finance:** memeriksa bukti pembayaran, bukan menetapkan ACCEPT.
+- **Moderator:** memverifikasi presentasi paper pada sesi.
+- **Admin/Service Coordinator/Scanner Operator:** mengatur atau mengeksekusi hak layanan menurut scope.
+- **Certificate Authority:** mempratinjau dan memublikasikan sertifikat.
+
+## Contoh skenario lintas aktivitas
+
+**Skenario A — Satu orang, tiga kegiatan:** orang yang sama mengikuti Conference + MoU + ICD; ia menggunakan akun dan QR identik, tetapi masing-masing pendaftaran/kehadiran tetap independen. Lunch bersama Hari 1 hanya dapat diambil sekali.
+
+**Skenario B — Penulis berbeda dari presenter:** akun pengelola mengirim paper empat penulis. Satu penulis benar-benar menyampaikan paper; Moderator menandai Presented, lalu panitia dapat menerbitkan **empat** Presenter Certificate unik sesuai keputusan terbaru.
+
+**Skenario C — MoU tanpa Conference:** delegasi MoU tidak otomatis menjadi Conference Participant/Presenter atau menerima kit. Koordinator Kit yang diberi kewenangan boleh memberikan hak kit khusus tanpa membuat registrasi akademik palsu.
+
+## Peta cakupan fitur
+
+| Modul | Target fungsional | Catatan |
+|---|---|---|
+| Public website | Call for Papers, agenda, narasumber, tempat, info biaya, tautan registrasi | Isi publik dapat dikelola panitia |
+| Identity/profile | Email OTP / Magic Link, WhatsApp, foto crop, personal QR | Peserta tanpa password |
+| Conference | Participant dan Presenter; academic lifecycle | Sistem sendiri bukan OJS |
+| MoU | Satu institusi satu pendaftaran, PIC, delegasi, validasi | Tidak menjadi contract-management engine |
+| ICD | Pendaftaran, kehadiran, penyelesaian bila dipersyaratkan | Tidak menjadi mini-KKN |
+| Finance | Transfer manual, upload bukti, verifikasi | Presenter setelah ACCEPT |
+| Operations | Pos, penugasan petugas, slot, entitlement, scanner | Berbasis CRUD |
+| Certificates | Kelayakan, publikasi massal, URL unik, PDF, perbaikan | Co-author dapat unduh publik |
+
+## Batas yang belum diputuskan
+
+Research Coaching dan Sustainable Destination Study pernah dibahas sebagai **opsi tambahan**, namun bukan tiga jalur awal yang sudah ditegaskan. Kehadiran opsional tidak berarti harus dibangun pada tahap pertama. Semua aturan jumlah peserta, tanggal riil acara, jadwal, biaya, dan kapasitas akan mengikuti keputusan panitia.
+
+## Kriteria validasi bersama Warek I
+
+Apakah cakupan tiga jalur awal sudah memadai? Siapa yang berwenang memutuskan kebijakan akademik dan keuangan? Apakah LoA serta sertifikat menggunakan penandatangan UNISYA yang sesuai? Apakah ada kegiatan tambahan yang benar-benar wajib pada ICHES 2027?
+
+**Keputusan yang dipresentasikan di dokumen ini adalah hasil diskusi produk, bukan keputusan formal pimpinan.**
