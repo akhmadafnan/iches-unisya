@@ -9,13 +9,13 @@
 
 | Keputusan | Rumusan terbaru |
 |---|---|
-| Co-Host | **Rp3.000.000** (koreksi atas Rp450.000 yang tertulis di TOR), **maks. lima peserta tiap institusi** |
+| Co-Host | **Rp3.000.000 per institusi, satu tagihan mencakup maksimal lima peserta** (koreksi atas Rp450.000 pada TOR) |
 | Agenda paralel | MoU/Pembinaan dan Panel Session boleh berjalan bersamaan; kehadiran per kegiatan tidak disamakan, tidak perlu optimasi jadwal |
 | Reviewer | Sejak submission awal 1 Desember, abstract **lolos screening** masuk **Reviewer Index**; semua reviewer mencari/filter topik dan melakukan **Claim** mandiri |
 | Full Paper | Tombol unggah terbuka bagi paper yang **ACCEPTED dan keputusannya diumumkan ke author**; **REJECTED** tidak memperoleh akses |
 | Pembayaran | Presenter bayar **setelah ACCEPT**, tetapi **tidak menjadi syarat membuka unggah Full Paper** |
 
-**Yang belum ditegaskan:** tarif Co-Host Rp3 juta berlaku per institusi atau per peserta; jumlah reviewer target per paper dapat mengikuti baseline lama **1 reviewer configurable** sampai komite memutuskan lain. Jadwal TOR 22 Desember untuk pengumuman masih menjadi **milestone**, tetapi bukan gate teknis untuk membuka review atau full paper. Tanggal 23–28 Desember untuk Full Paper tetap dicatat sebagai **rencana pada TOR**, bukan syarat unlock aplikasi.
+**Kebijakan Co-Host sudah dikunci:** Rp3.000.000 dibayarkan **sekali per institusi** dan mencakup **maksimal lima peserta**, bukan ditagihkan kepada masing-masing peserta. Ketentuan cakupan biaya presenter tambahan di luar paket Co-Host, serta jumlah reviewer per paper, masih memerlukan keputusan komite. Jadwal TOR 22 Desember untuk pengumuman masih menjadi **milestone**, tetapi bukan gate teknis untuk membuka review atau full paper. Tanggal 23–28 Desember untuk Full Paper tetap dicatat sebagai **rencana pada TOR**, bukan syarat unlock aplikasi.
 
 ```mermaid
 flowchart TD
@@ -67,7 +67,7 @@ flowchart TD
 **Konflik kebijakan/operasional yang wajib dijelaskan pada Warek I:**
 - **TELAH DIPUTUSKAN:** Full Paper terbuka saat keputusan ACCEPT resmi diumumkan ke author, bukan berdasarkan tanggal atau verifikasi pembayaran. Tanggal Full Paper pada TOR menjadi milestone acara.
 - **TELAH DIPUTUSKAN:** MoU/Pembinaan dan Panel berjalan paralel bila diperlukan; tidak perlu fitur khusus optimasi benturan. Kehadiran tiap kegiatan dan bukti presentasi tetap terpisah.
-- **Koreksi:** tarif Co-Host **Rp3.000.000**, bukan **Rp450.000** yang tertulis di TOR; batas **lima peserta PER INSTITUSI**. Unit tagihan Rp3 juta masih belum dinyatakan. Bundle Rp1.000.000 tetap mengikuti TOR.
+- **Koreksi:** tarif Co-Host **Rp3.000.000**, bukan **Rp450.000** yang tertulis di TOR; batas **lima peserta PER INSTITUSI**. **Unit pembayaran sudah final: satu tagihan Rp3 juta PER INSTITUSI yang mencakup paling banyak lima peserta.** Bundle Rp1.000.000 tetap mengikuti TOR.
 - Research Coaching/Pembinaan Riset dan **Studi Destinasi** bukan lagi modul opsional dalam cakupan acara menurut TOR; desain pendaftaran tetap sederhana.
 
 **➡️ [Audit TOR dan matriks perubahan selengkapnya](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
@@ -104,6 +104,21 @@ flowchart TD
 ```
 
 **Prinsip:** keikutsertaan di lima rangkaian bisa terkait kategori pembayaran/paket, tetapi kehadiran dan hak fasilitas masing-masing dicatat dengan benar. Satu personal QR berlaku lintas kegiatan.
+
+## Co-Host: satu institusi, satu tagihan, lima peserta maksimal
+
+```mermaid
+flowchart TD
+  A["Institusi Co-Host"] --> B["Registrasi Co-Host institusional"]
+  B --> C["Daftarkan 1 sampai 5 peserta"]
+  C --> D["Satu tagihan Rp3.000.000 kepada institusi"]
+  D --> E["Upload bukti pembayaran"]
+  E --> F["Finance verifikasi"]
+  F --> G["Status pembayaran Co-Host institusi"]
+  G --> H["Kelima peserta terhubung ke institusi + QR pribadi"]
+```
+
+**Contoh:** Institusi A membawa tiga peserta = **satu tagihan Rp3.000.000**; Institusi B membawa lima peserta = **satu tagihan Rp3.000.000**. Menambah peserta keenam **tidak dibenarkan dalam paket lima orang**, dan tidak boleh otomatis menghasilkan tagihan Co-Host kedua. Verifikasi administrasi dan apa saja fasilitas/biaya presenter yang termasuk paket ini masih perlu perincian panitia. [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)
 
 ## 3. Contoh perjalanan peserta
 

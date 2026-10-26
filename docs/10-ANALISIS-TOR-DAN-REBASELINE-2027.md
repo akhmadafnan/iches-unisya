@@ -5,7 +5,7 @@
 >
 > Gunakan status: **TERCANTUM DI TOR**, **SUDAH DISEPAKATI PRODUK**, **USULAN SISTEM**, atau **PERLU KONFIRMASI PANITIA/WAREK I**.
 
-> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **Unit penagihan Rp3 juta belum dinyatakan** (per institusi/per peserta). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
 
 ## I. Identitas kegiatan yang harus masuk konfigurasi acara
 
@@ -100,11 +100,11 @@ Dari TOR hal. 3:
 
 TOR bagian J juga mengelompokkan peserta: Reguler; delegasi PTKIS Tapal Kuda; Institusi Co-Host dengan keterangan **maksimal 5 peserta** (hal. 5). **Pengguna telah memperjelas: batas lima peserta berlaku PER INSTITUSI.**
 
-**KOREKSI NOMINAL SETELAH TOR:** tarif Co-Host **Rp3.000.000**, bukan Rp450.000 yang masih tampak dalam naskah TOR. Simpan Rp450.000 hanya sebagai bukti bunyi dokumen asal; **jangan gunakan untuk menghitung tagihan sistem ICHES baru**. Belum dinyatakan tegas apakah Rp3 juta merupakan pembayaran per institusi atau per peserta.
+**KOREKSI NOMINAL SETELAH TOR:** tarif Co-Host **Rp3.000.000**, bukan Rp450.000 yang masih tampak dalam naskah TOR. Simpan Rp450.000 hanya sebagai bukti bunyi dokumen asal; **jangan gunakan untuk menghitung tagihan sistem ICHES baru**. **KEPUTUSAN TERBARU: Rp3 juta adalah tarif per institusi, satu tagihan mencakup maksimal lima peserta.**
 
 **Jangan mengasumsikan hal yang tidak dinyatakan TOR:**
 - **TERJAWAB:** batas Co-Host maksimal **5 peserta PER INSTITUSI**.
-- **NOMINAL TERJAWAB:** Co-Host **Rp3.000.000**, menggantikan Rp450.000 di TOR. **Unit tagihan** per orang/institusi/per paper masih perlu konfirmasi.
+- **TERJAWAB FINAL:** Co-Host **Rp3.000.000 PER INSTITUSI** mencakup maksimal lima peserta, menggantikan Rp450.000 dalam TOR. **Tidak ada biaya Co-Host Rp3 juta per peserta.**
 - Bundle IDR 1.000.000 itu **per orang atau per institusi**, dan apakah termasuk layanan/transport/akomodasi tertentu? Perlu konfirmasi.
 - Apakah delegasi PTKIS Tapal Kuda memiliki diskon atau harga khusus? **Tidak ada tabel tarif khusus Tapal Kuda** dalam TOR.
 - Bagaimana peserta nasional yang ingin *participant-only online*, peserta internasional non-pemakalah onsite, atau mahasiswa internasional ditagih? Tidak ada kategori eksplisit untuk beberapa kombinasi.
@@ -177,7 +177,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 |---|---|---|
 | 3 jalur utama dan 2 opsional | Lima rangkaian acara bagian F | **PROMOTE** Pembinaan Riset/PKM dan Studi Destinasi menjadi cakupan acara |
 | Tanggal/kegiatan sebagai contoh | Important Dates lengkap bagian K | **SET** tanggal sebagai milestone TOR, bukan hard gate Full Paper |
-| Tipe biaya belum jelas | 9 baris fee bagian L | **IMPORT AS POLICY DRAFT**, cek unit tarif/eligibility/bundling |
+| Tipe biaya belum jelas | 9 baris fee bagian L | **Co-Host: Rp3 juta per institusi (maks. 5 peserta) FINAL**, kategori lain dan paket gabungan perlu parameter/validasi |
 | Semua memilih keikutsertaan independen | Bundle MoU + Pembinaan + PKM + Destinasi | **KEEP** enrollment terpisah; **ADD** bundle pricing sehingga tidak memalsukan registrasi |
 | Full paper mengikuti pembayaran | Full Paper 23 Des, pembayaran 24 Des | **OVERRIDE** upload unlock setelah ACCEPT diumumkan; pembayaran tetap paralel |
 | Absensi konseptual | Registrasi, plenary, MoU, panel, dan field visits ada jamnya | **SCOPE** station/slot dan bukti hadir per kegiatan |
@@ -188,7 +188,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 
 ## IX. Keputusan krusial yang perlu dibawa ke Warek I
 
-1. **Unit tagihan masih terbuka:** Co-Host **Rp3.000.000** (sudah dikoreksi), tetapi per institusi atau per peserta belum dijelaskan; bundle Rp1.000.000 dan pembayaran multi-kegiatan juga terbuka.
+1. **Co-Host SUDAH FINAL:** Rp3.000.000 **per institusi untuk maksimal lima peserta**; unit pembayaran bundle Rp1.000.000, kemungkinan biaya paper Presenter dan pembayaran multi-kegiatan masih terbuka.
 2. **Co-Host maksimal 5:** **TERJAWAB — per institusi**.
 3. **Agenda paralel 5 Januari:** **TERJAWAB — boleh bersamaan, tak perlu fitur anti-benturan khusus**.
 4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah screening**. Jumlah reviewer dan aturan revisi detail tetap terbuka.

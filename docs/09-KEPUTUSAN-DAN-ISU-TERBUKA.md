@@ -4,7 +4,7 @@
 > **Tanggal kompilasi:** 26 Oktober 2026.  
 > **Label:** **DISETUJUI** (pemilik produk memilih eksplisit), **BASELINE LAMA** (repositori terdahulu, belum otomatis ditetapkan baru), **USULAN**, **TERBUKA**.
 
-> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **Unit penagihan Rp3 juta belum dinyatakan** (per institusi/per peserta). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
 
 ## Rebaseline TOR dari Warek I — sumber acara, bukan keputusan implementasi
 
@@ -14,7 +14,7 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 - Status `NEW-*`: keputusan pemilik produk mengenai **mekanisme aplikasi**, tetap berlaku sepanjang tidak bertentangan TOR.
 - **NEW-005 Diperluas oleh TOR**: tiga jalur yang semula dibahas tetap ada, ditambah **Pembinaan Riset dan PKM** serta **Studi Destinasi Berkelanjutan** karena keduanya rangkaian resmi TOR. Struktur enrollment vs bundle fee **belum final**.
 - **Kebijakan SUDAH DIPUTUSKAN:** Full Paper **dibuka saat ACCEPT diumumkan** (tanggal TOR tidak menjadi gate); MoU/Pembinaan dan Panel **boleh paralel** tanpa penanganan benturan khusus. Kehadiran/sesi tetap dicatat secara terpisah.
-- TOR tidak menetapkan batas kata, PDF max size, atau default reviewer. Koreksi pengguna: Co-Host **Rp3.000.000**, kuota **5 peserta per institusi**. **Unit penagihan** Co-Host masih terbuka.
+- TOR tidak menetapkan batas kata, PDF max size, atau default reviewer. Koreksi pengguna: Co-Host **Rp3.000.000**, kuota **5 peserta per institusi**. **Unit tagihan Co-Host FINAL: Rp3.000.000 per institusi mencakup maksimal 5 peserta.**
 
 ## A. Keputusan yang sudah disetujui (dalam diskusi)
 
@@ -50,8 +50,8 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 
 | ID | Kebijakan | Ketetapan | Status |
 |---|---|---|---|
-| NEW-026 | Tarif kategori Co-Host | **Rp3.000.000** menggantikan Rp450.000 pada TOR tertulis | DISETUJUI nominal; satuan tagihan TERBUKA |
-| NEW-027 | Kuota Co-Host | Maksimal **5 peserta per institusi** | DISETUJUI |
+| NEW-026 | Tarif kategori Co-Host | **Rp3.000.000 PER INSTITUSI, satu kali tagihan untuk maksimal lima peserta**; menggantikan Rp450.000 pada TOR tertulis | **DISETUJUI FINAL** |
+| NEW-027 | Kuota Co-Host | Maksimal **5 peserta per institusi**, semua tercakup dalam tagihan institusi Rp3.000.000 | **DISETUJUI FINAL** |
 | NEW-028 | Agenda MoU dan Panel | Boleh berjalan paralel, tanpa modul otomatis menangani benturan | DISETUJUI |
 | NEW-029 | Reviewer Abstract Index | Daftar paper yang sudah lolos screening, dapat dicari/filter menurut topic; tidak membatasi akun reviewer berdasarkan track | DISETUJUI |
 | NEW-030 | Reviewer self-claim | Reviewer mengambil paper tersedia sendiri sejak mulai masuk, tanpa menunggu review window khusus | DISETUJUI |
@@ -59,6 +59,17 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 | NEW-032 | Pembayaran | Tetap setelah ACCEPT; tidak wajib Finance VERIFIED agar Full Paper terbuka | KONSISTENSI NEW-019/031 |
 
 Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal mengikuti konfigurasi akademik, Koordinator dapat release claim macet. **Jumlah reviewer per paper masih belum final** (baseline lama 1 configurable).
+
+### Keputusan tambahan — identitas pembayaran Co-Host
+
+| ID | Ketetapan | Status |
+|---|---|---|
+| NEW-033 | Satuan tarif Co-Host Rp3.000.000 adalah **per institusi**, mencakup maksimal lima peserta dalam **satu tagihan**, bukan tarif per orang | **DISETUJUI FINAL** — memperjelas NEW-026 |
+| NEW-034 | Identitas tagihan mengikuti **pendaftaran Co-Host institusi**, sehingga lima akun personal tidak menimbulkan lima tagihan Co-Host | Turunan rancangan dari NEW-033; implementasi belum dibuat |
+
+**Tidak dibahas sebagai kebijakan final:** komponen biaya apa saja yang tercakup bagi pemakalah Co-Host, jumlah paper yang dibiayai paket, proses pergantian delegasi, refund, serta apakah tarif Co-Host mencakup paket MoU/PKM lainnya. Ketentuan ini tidak boleh disimpulkan hanya dari nominal dan kuota.
+
+[Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
@@ -97,7 +108,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | Ref | Hal yang belum jelas di TOR | Prioritas |
 |---|---|---|
 | TOR-Q01 | **TERJAWAB:** maksimal **5 per institusi** | Selesai |
-| TOR-Q02 | **Rp3.000.000 Co-Host** (koreksi; TOR Rp450.000). **Per institusi atau peserta?** Masih perlu konfirmasi. Unit bundle Rp1.000.000 juga belum jelas. | Tinggi |
+| TOR-Q02 | **TERJAWAB:** tarif Co-Host **Rp3.000.000 per institusi**, mencakup maksimal lima orang; bundle Rp1.000.000 masih perlu keputusan satuannya. | **Selesai untuk Co-Host** |
 | TOR-Q03 | Satu orang ikut Conference + bundle: penagihan dan hak layanan bagaimana? | Tinggi |
 | TOR-Q04 | **TERJAWAB:** agenda boleh paralel; cukup pencatatan kehadiran dan presentasi masing-masing | Selesai |
 | TOR-Q05 | **TERJAWAB:** Full Paper unlocked saat **ACCEPT diumumkan**, tidak bergantung tanggal atau Finance Verified | Selesai |
@@ -112,7 +123,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 |---|---|---|
 | Tinggi | Batas kata, keywords, PDF size, bahasa submission, template abstrak | Komite Akademik |
 | Tinggi | Jumlah reviewer per paper, claim macet, rubrik, dan batas revisi | Komite Akademik |
-| Tinggi | Tarif Presenter per orang/per paper; Participant FREE/PAID; waiver | Panitia & Keuangan |
+| Tinggi | Komponen biaya Presenter/Participant yang tercakup dalam paket Co-Host; unit bundle Rp1 juta dan kebijakan tagihan lintas kegiatan | Panitia & Keuangan |
 | Tinggi | Rincian hari/sesi; agenda paralel sudah diperbolehkan | Panitia Program |
 | Tinggi | Full-paper requirement & penilaian pascapresentasi; publikasi prosiding/jurnal | Komite Akademik |
 | Sedang | Kuota delegasi MoU, bukti keabsahan delegasi/signatory | Koordinator MoU |

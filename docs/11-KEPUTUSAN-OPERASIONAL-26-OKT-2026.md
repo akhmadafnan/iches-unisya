@@ -9,13 +9,13 @@
 
 | No | Pokok | Keputusan |
 |---|---|---|
-| 1 | Tarif Co-Host | **Rp3.000.000**, bukan **Rp450.000** seperti tercetak di TOR |
+| 1 | Tarif Co-Host | **Rp3.000.000 per institusi untuk maksimal 5 peserta**, bukan Rp450.000 pada TOR atau Rp3 juta per peserta |
 | 2 | Kuota Co-Host | **Maksimal lima peserta PER INSTITUSI**, bukan lima peserta seluruh acara |
 | 3 | MoU/Pembinaan dan Parallel Panel | Jadwal boleh **beririsan**, tidak butuh mekanisme penanganan benturan otomatis |
 | 4 | Reviewer | Reviewer berwenang dapat **mencari/filter abstract berdasarkan track** dan **Claim** sendiri tanpa menjadi anggota wajib track tertentu |
 | 5 | Full Paper | Terbuka **bila keputusan final ACCEPT sudah DIUMUMKAN kepada Submitting Author**; tidak memakai tanggal sebagai gate upload |
 
-**Belum diputuskan:** apakah nominal Rp3 juta Co-Host adalah tarif **per institusi** atau **per peserta**. Batas **lima peserta per institusi** sudah final, tetapi batas tersebut **tidak otomatis menentukan satuan tarif**. Admin belum boleh membuat asumsi saat menghitung pembayaran.
+**KEPUTUSAN FINAL TAMBAHAN:** biaya Co-Host **Rp3.000.000 dibayar sekali per institusi**, mencakup maksimal **lima peserta**, bukan tarif per orang. Perhitungan Co-Host pada sistem harus menghasilkan **satu tagihan institusi**. Yang masih terbuka hanyalah isi fasilitas/biaya presenter di dalam paket, bukan satuan harga.
 
 ## 2. Visual: alur reviewer aktif, bukan menunggu akhir submission
 
@@ -94,13 +94,13 @@ flowchart TD
   B --> D["Kategori biaya: Rp3.000.000"]
   C --> E["Delegasi/anggota 1-5"]
   E --> F["Akun/QR personal bila hadir"]
-  D --> G{"Unit tagihan?"}
-  G --> H["PER INSTITUSI atau PER PESERTA: belum final"]
+  D --> G["Satu tagihan untuk institusi"]
+  G --> H["Mencakup 1–5 peserta, tanpa biaya Co-Host tambahan per orang"]
 ```
 
 - **Quota rule sudah final:** maksimal 5 orang untuk **setiap** institusi Co-Host.
 - **Price value sudah final dalam rancangan baru:** Rp3.000.000.
-- **Price unit masih terbuka:** jangan menyimpulkan otomatis Rp3 juta per institusi hanya karena kuotanya per institusi.
+- **Price unit FINAL:** Rp3.000.000 **per institusi**, satu tagihan mencakup hingga lima peserta. Jangan membuat invoice per peserta Co-Host.
 - Catat sumber historis Rp450.000 pada TOR halaman 5 sebagai teks yang dikoreksi pemilik produk. **Jangan gunakan** Rp450.000 untuk perhitungan tagihan baru.
 - Paket MoU + Pembinaan + PKM + Destinasi **Rp1.000.000** pada TOR **tidak dikoreksi** dalam diskusi ini.
 
@@ -112,7 +112,7 @@ MoU/Pembinaan dan Parallel Panel memang berjalan pada jam beririsan di TOR. **Ti
 
 | Modul | Perubahan paling relevan |
 |---|---|
-| Backoffice Finance | Koreksi angka kategori Co-Host menjadi Rp3 juta; unit tagihan belum final |
+| Backoffice Finance | Satu tagihan **Rp3 juta per institusi Co-Host** dengan daftar maksimum lima peserta; verifikasi pembayaran satu kali |
 | Institusi/Co-Host | Batas 5 orang **per institusi**, tidak global |
 | Reviewer UI | Menu **Abstract Index**, **My Claimed Reviews**, filter track, tombol Claim |
 | Academic Backoffice | Screening, monitor unclaimed/claimed, release claim, final decision, **Publish Decision** |
@@ -122,6 +122,6 @@ MoU/Pembinaan dan Parallel Panel memang berjalan pada jam beririsan di TOR. **Ti
 
 ## 7. Satu pertanyaan yang belum perlu menghambat pembahasan
 
-**Tarif Co-Host Rp3.000.000 ingin ditagihkan sekali kepada setiap institusi Co-Host, atau kepada masing-masing peserta Co-Host?** Ini menentukan siapa yang menjadi pembayar, bukan membatalkan keputusan nominal/kuota yang sudah Anda pilih.
+**Keputusan sudah dijawab dan ditutup:** Rp3.000.000 **ditagihkan satu kali kepada tiap institusi Co-Host**, mencakup maksimal lima peserta. Yang tetap memerlukan arahan adalah rincian manfaat paket terhadap biaya paper/Presenter atau pendaftaran kegiatan lain. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
 **Status:** perancangan produk saja; dokumen/diagram GitHub dapat dipresentasikan. Belum coding, belum deployment dan belum ada migrasi database.
