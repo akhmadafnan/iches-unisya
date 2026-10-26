@@ -5,6 +5,43 @@
 >
 > **Gagasan utama:** satu portal konferensi, satu akun, satu QR pribadi, **lima rangkaian kegiatan menurut TOR**, dan layanan panitia yang fleksibel.
 
+## KEPUTUSAN TERBARU UNTUK PRESENTASI WAREK I
+
+| Keputusan | Rumusan terbaru |
+|---|---|
+| Co-Host | **Rp3.000.000** (koreksi atas Rp450.000 yang tertulis di TOR), **maks. lima peserta tiap institusi** |
+| Agenda paralel | MoU/Pembinaan dan Panel Session boleh berjalan bersamaan; kehadiran per kegiatan tidak disamakan, tidak perlu optimasi jadwal |
+| Reviewer | Sejak submission awal 1 Desember, abstract **lolos screening** masuk **Reviewer Index**; semua reviewer mencari/filter topik dan melakukan **Claim** mandiri |
+| Full Paper | Tombol unggah terbuka bagi paper yang **ACCEPTED dan keputusannya diumumkan ke author**; **REJECTED** tidak memperoleh akses |
+| Pembayaran | Presenter bayar **setelah ACCEPT**, tetapi **tidak menjadi syarat membuka unggah Full Paper** |
+
+**Yang belum ditegaskan:** tarif Co-Host Rp3 juta berlaku per institusi atau per peserta; jumlah reviewer target per paper dapat mengikuti baseline lama **1 reviewer configurable** sampai komite memutuskan lain. Jadwal TOR 22 Desember untuk pengumuman masih menjadi **milestone**, tetapi bukan gate teknis untuk membuka review atau full paper. Tanggal 23–28 Desember untuk Full Paper tetap dicatat sebagai **rencana pada TOR**, bukan syarat unlock aplikasi.
+
+```mermaid
+flowchart TD
+  A["Abstrak masuk 1–20 Desember"] --> B["Administrative Screening"]
+  B -->|Lolos| C["Reviewer Abstract Index"]
+  C --> D["Search / Filter Topik"]
+  D --> E["Reviewer Claim Paper"]
+  E --> F["Review Submitted"]
+  F --> G["Komite Akademik putuskan"]
+  G --> H["Keputusan diumumkan ke Author"]
+  H -->|ACCEPTED| I["Full Paper Unlock + LoA"]
+  H -->|REJECTED| J["Jalur Presenter Closed"]
+  I --> K["Full Paper Upload"]
+  I --> L["Pembayaran setelah ACCEPT"]
+  K --> M["Jadwal & Presentasi"]
+  L --> M
+```
+
+Catatan: Reviewer **tidak diberi larangan topik A/B/C** melalui pengaturan akun. Pemeriksaan minimal saat claim: reviewer terautentikasi, paper masih tersedia, bukan paper sendiri, dan slot review belum penuh. Koordinator Akademik dapat membatalkan claim yang tidak dikerjakan tanpa aturan deadline otomatis yang berlebihan. Keputusan final tetap di Komite Akademik.
+
+**➡️ [Dokumen visual dan ketentuan lengkap](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md)**
+
+---
+
+
+
 ## REBASELINE: Temuan TOR Warek I (dibaca terlebih dahulu)
 
 **Dokumen sumber:** `TOR ICHES 6 UNISYA 2027.docx` (9 halaman). **Acuan acara:** 5 Januari 2027 Conference hybrid; 6 Januari 2027 Pengabdian dan Destinasi onsite. Tema resmi **Islamic Values in a Changing World: Education, Accountability, and Social Resilience for Inclusive Development**.
@@ -28,9 +65,9 @@ flowchart TD
 **Jadwal kunci:** Abstrak 1–20 Desember; hasil 22 Desember; full paper 23–28 Desember; registrasi/pembayaran 24–28 Desember; prosiding ditargetkan 28 Januari 2027.
 
 **Konflik kebijakan/operasional yang wajib dijelaskan pada Warek I:**
-- Full paper mulai **23 Desember** sedangkan pembayaran baru **24 Desember** → rekomendasi proses paralel setelah ACCEPT, bukan menunggu VERIFIED untuk membuka upload.
-- **MoU/Pembinaan 13.00–17.15** dan **Parallel Panel 13.15–16.30** pada 5 Januari **beririsan** → butuh peringatan benturan jadwal, verifikasi hadir khusus, dan pengganti presenter/delegasi jika diperlukan.
-- Ada **sembilan tarif** pada TOR, termasuk tarif **Co-Host IDR 450.000**, dan **bundle MoU+Pembinaan+PKM+Destinasi IDR 1.000.000**. Unit tarif dan kuota Co-Host (TOR menyebut maks. 5 peserta) masih perlu konfirmasi.
+- **TELAH DIPUTUSKAN:** Full Paper terbuka saat keputusan ACCEPT resmi diumumkan ke author, bukan berdasarkan tanggal atau verifikasi pembayaran. Tanggal Full Paper pada TOR menjadi milestone acara.
+- **TELAH DIPUTUSKAN:** MoU/Pembinaan dan Panel berjalan paralel bila diperlukan; tidak perlu fitur khusus optimasi benturan. Kehadiran tiap kegiatan dan bukti presentasi tetap terpisah.
+- **Koreksi:** tarif Co-Host **Rp3.000.000**, bukan **Rp450.000** yang tertulis di TOR; batas **lima peserta PER INSTITUSI**. Unit tagihan Rp3 juta masih belum dinyatakan. Bundle Rp1.000.000 tetap mengikuti TOR.
 - Research Coaching/Pembinaan Riset dan **Studi Destinasi** bukan lagi modul opsional dalam cakupan acara menurut TOR; desain pendaftaran tetap sederhana.
 
 **➡️ [Audit TOR dan matriks perubahan selengkapnya](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
@@ -49,25 +86,24 @@ Penyelenggaraan konferensi internasional mencakup registrasi peserta, seleksi ab
 
 ```mermaid
 flowchart TD
-  P["PORTAL PUBLIK ICHES 2027"] --> U["AKUN TER-VERIFIKASI + PROFIL + QR PRIBADI"]
-  U --> A["INTERNATIONAL CONFERENCE"]
-  U --> B["INTERNATIONAL MoU"]
-  U --> C["INTERNATIONAL COMMUNITY DEVELOPMENT"]
-  U --> R["PEMBINAAN RISET DAN PKM"]
-  U --> T["STUDI DESTINASI BERKELANJUTAN"]
-  A --> A1["Presenter: Abstract → Review → Accept → LoA → Payment → Full Paper → Present"]
-  A --> A2["Participant: Registrasi → Ketentuan biaya → Kehadiran"]
-  B --> B1["PIC Institusi → Verifikasi → Delegasi → Kehadiran → Status MoU"]
-  C --> C1["Pendaftaran ICD → Kehadiran → Kegiatan"]
-  A1 --> O["PANITIA / BACKOFFICE"]
-  A2 --> O
-  B1 --> O
-  C1 --> O
-  O --> S["QR Scanner / Fasilitas / Absensi"]
-  O --> T["Sertifikat Unik + URL Publik + PDF"]
+  P["PORTAL ICHES 2027"] --> U["Satu Akun + Personal QR"]
+  U --> C["International Conference"]
+  U --> M["International MoU"]
+  U --> I["Pengabdian Internasional"]
+  U --> R["Pembinaan Riset dan PKM"]
+  U --> D["Studi Destinasi Berkelanjutan"]
+  C --> A["Presenter / Participant + Academic Submission"]
+  M --> B["PIC Institusi + Delegasi"]
+  I --> O["BACKOFFICE"]
+  R --> O
+  D --> O
+  A --> O
+  B --> O
+  O --> S["Scanner QR / Fasilitas / Absensi"]
+  O --> T["Sertifikat Publik + URL Unik + PDF"]
 ```
 
-**Prinsip:** Conference, MoU, dan ICD dapat dipilih bersama atau terpisah tanpa membuat akun/QR baru. Hak fasilitas tidak sama dengan keikutsertaan akademik.
+**Prinsip:** keikutsertaan di lima rangkaian bisa terkait kategori pembayaran/paket, tetapi kehadiran dan hak fasilitas masing-masing dicatat dengan benar. Satu personal QR berlaku lintas kegiatan.
 
 ## 3. Contoh perjalanan peserta
 
@@ -89,28 +125,30 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  A["Submitting Author"] --> B["Judul, Track, Daftar Penulis, Abstract Text + PDF"]
-  B --> C["Screening Administratif"]
-  C -->|Perbaikan| B
-  C -->|Lolos| D["Review Single-anonymous"]
-  D --> E{"Keputusan Komite Akademik"}
-  E -->|Revisi| B
-  E -->|Rejected| X["Jalur presenter ditutup"]
-  E -->|Accepted| F["LoA + Kewajiban Pembayaran"]
-  F --> G["Verifikasi Finance + Full Paper"]
-  G --> H["Penjadwalan dan Konfirmasi Moderator"]
-  H --> I["PAPER PRESENTED"]
-  I --> J["Sertifikat per seluruh penulis"]
-  J --> K["Publikasi Massal oleh Panitia"]
-  K --> L["URL publik unik + PDF per author"]
+  A["Submitting Author: Abstract Text + PDF"] --> B["Administrative Screening"]
+  B -->|Correction| A
+  B -->|Pass| C["Reviewer Index: cari/filter Track"]
+  C --> D["Reviewer Claim mandiri"]
+  D --> E["Single-anonymous Review"]
+  E --> F{"Komite Akademik: keputusan final"}
+  F -->|Revision| A
+  F -->|Rejected announced| X["Jalur presenter ditutup"]
+  F -->|Accepted announced| G["LoA + Full Paper Unlock"]
+  G --> H["Upload Full Paper"]
+  G --> I["Pembayaran setelah ACCEPT"]
+  H --> J["Penjadwalan + Moderator"]
+  I --> J
+  J --> K["Paper PRESENTED"]
+  K --> L["Semua Author Eligible"]
+  L --> M["Panitia Publikasi Massal"]
+  M --> N["Satu PDF + URL publik unik per penulis"]
 ```
 
-- **Disepakati:** teks abstrak **dan** PDF wajib; format file abstrak **PDF saja**.
-- **Disepakati:** pemilik submission adalah akun *Submitting/Corresponding Author*; ia tidak harus First Author. Co-author tidak wajib membuat akun.
-- **Disepakati:** pembayaran presenter baru setelah keputusan **ACCEPT**; LoA bukan bukti lunas.
-- **Baseline repo lama:** reviewer abstrak default **1**, jumlah dapat diatur; single-anonymous; satu putaran revisi normal; keputusan final oleh Komite Akademik.
-- **Belum final:** batas kata, jumlah keyword, ukuran PDF, jumlah reviewer operasional ICHES.
-- **Disepakati baru:** ketika paper benar-benar dipresentasikan, **seluruh penulis** berhak memperoleh *Presenter Certificate*, walaupun tidak semuanya tampil secara fisik.
+- **Disepakati:** text abstrak dan PDF wajib; **file abstrak PDF saja**. Submitting/Corresponding Author mengelola seluruh submission, tidak harus First Author.
+- **Disepakati terbaru:** reviewer **bebas mencari/filter topik** dari indeks abstrak lolos screening dan **Claim** mandiri; bukan menunggu penugasan manual atau akhir masa submission. Reviewer memberi rekomendasi, komite membuat final decision.
+- **Baseline repo lama:** single-anonymous; satu reviewer default tetapi configurable. **Jumlah reviewer resmi ICHES masih terbuka.**
+- **Disepakati terbaru:** Full Paper terbuka ketika **ACCEPT resmi diumumkan kepada author**. Rejected tidak dapat upload. Pembayaran presenter setelah ACCEPT dan proses administratifnya terpisah.
+- **Disepakati:** paper yang benar-benar dipresentasikan membuat **semua author** memenuhi dasar sertifikat; panitia melakukan **publikasi massal**, satu URL dan PDF unik setiap penulis.
 
 ## 5. International MoU adalah pendaftaran institusi
 
@@ -167,7 +205,7 @@ flowchart TD
 |---|---|
 | Peserta / Submitting Author | Profil, kegiatan, abstrak, revisi, pembayaran, dokumen, sertifikat |
 | PIC MoU | Pendaftaran institusi, pengusulan delegasi |
-| Reviewer | Menilai abstrak yang ditugaskan |
+| Reviewer | Search/filter abstrak berdasarkan topik, claim mandiri, dan nilai paper yang tersedia |
 | Komite Akademik | Screening, reviewer, keputusan, full paper, jadwal |
 | Moderator | Konfirmasi pelaksanaan presentasi, bukan memutuskan ACCEPT |
 | Finance | Memeriksa bukti pembayaran |
@@ -193,12 +231,12 @@ Repository referensi: [international-conference-platform — develop](https://gi
 
 | Area | Perlu arahan |
 |---|---|
-| Academic policy | Batas kata/keyword, template PDF, reviewer default 1 vs 2, siklus revisi final |
-| Full paper & publikasi | Validasi pra-acara dan penilaian pasca-presentasi, kebijakan prosiding/jurnal |
+| Academic policy | Batas kata/keyword, template PDF, jumlah reviewer per paper, aturan klaim reviewer macet, siklus revisi final |
+| Full paper & publikasi | Unlock Full Paper segera saat ACCEPT diumumkan; validasi pra-acara, penilaian pascapresentasi, kebijakan prosiding/jurnal |
 | Keuangan | Tarif presenter: per paper atau per peserta; kategori participant Free/Paid |
 | Fasilitas | Conference Kit sekali per orang; souvenir MoU per institusi atau per orang; kuota delegasi |
 | Sertifikat | Apakah MoU Delegate dan ICD memiliki sertifikat tersendiri; aturan kelayakan |
-| Jadwal | Tanggal, slot konsumsi, paralel session, batas submission dan pembayaran |
+| Jadwal | Jadwal acara dan layanan; agenda paralel diterima tanpa modul konflik kompleks |
 | Identitas visual | Logo, template resmi, finalisasi token warna/font |
 
 ## 11. Usulan tahapan kerja (belum coding)

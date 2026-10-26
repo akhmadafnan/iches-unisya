@@ -5,6 +5,8 @@
 >
 > Gunakan status: **TERCANTUM DI TOR**, **SUDAH DISEPAKATI PRODUK**, **USULAN SISTEM**, atau **PERLU KONFIRMASI PANITIA/WAREK I**.
 
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **Unit penagihan Rp3 juta belum dinyatakan** (per institusi/per peserta). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+
 ## I. Identitas kegiatan yang harus masuk konfigurasi acara
 
 | Komponen | TOR (halaman) | Status |
@@ -70,17 +72,17 @@ Dari TOR hal. 3:
 | Tahap | Jadwal tertulis TOR | Implikasi aplikasi |
 |---|---|---|
 | Abstract submission | **1–20 Desember 2026** | Window formulir abstrak |
-| Pengumuman abstrak diterima | **22 Desember 2026** | Deadline komite final decision dan notifikasi massal |
-| Full Paper | **23–28 Desember 2026** | Upload terbuka setelah ACCEPT/LoA |
+| Pengumuman abstrak diterima | **22 Desember 2026** | Target pengumuman TOR, bukan hambatan untuk review bergulir |
+| Full Paper | **23–28 Desember 2026** | **Jadwal TOR**; akses aplikasi dibuka saat ACCEPT diumumkan |
 | Registrasi / pembayaran | **24–28 Desember 2026** | Window tagihan dan verifikasi keuangan |
 | Konferensi | **5 Januari 2027** | Plenary, panel, MoU, pembinaan |
 | Pengabdian dan destinasi | **6 Januari 2027** | Rombongan onsite dan check-in lokasi |
 | Prosiding | **28 Januari 2027** | Target *publication handoff/monitoring*, bukan otomatis terbit di ICHES |
 | Jurnal | Mengikuti jurnal tujuan | Tidak menjanjikan tanggal terbit di platform |
 
-**PERUBAHAN PENTING:** Full Paper **mulai 23 Desember**, tetapi window pembayaran **mulai 24 Desember**. Maka **jangan mengunci unggah full paper di belakang pembayaran VERIFIED**. Untuk sistem baru: setelah Accepted + LoA, beri akses full paper dan pembayaran secara **paralel** menurut jadwal masing-masing. Pembayaran valid diperlukan untuk status administrasi/kelayakan yang ditentukan komite, namun tidak boleh memblokir pembukaan full paper 23 Desember.
+**DIPUTUSKAN SETELAH TOR:** Meski TOR menulis Full Paper 23–28 Desember dan pembayaran 24–28 Desember, akses unggah Full Paper **dibuka saat keputusan final ACCEPT sudah diumumkan kepada submitting author**, **bukan** berdasarkan tanggal hard gate atau pembayaran VERIFIED. Setelah ACCEPT, pembayaran dapat berjalan paralel. Tanggal TOR tetap disimpan sebagai target/milestone dan dapat dikomunikasikan panitia.
 
-**Risiko tenggat:** submission ditutup 20 Desember dan pengumuman hasil 22 Desember → rentang penilaian sangat pendek jika ada banyak paper dan revisi. TOR **tidak menetapkan** jumlah reviewer atau putaran revisi. Untuk operasional sarankan screening berjalan setiap submission masuk, review bergulir, reminder, pemantauan reviewer, dan bulk publication **hasil keputusan yang sudah disahkan**, bukan auto-accept. Tetap perlu konfirmasi apakah revisi abstrak dapat dilakukan sebelum pengumuman.
+**RESPONS PRODUK UNTUK JADWAL SINGKAT:** Sejak abstrak masuk 1 Desember dan **lolos screening**, paper tampil pada **Reviewer Abstract Index**. Reviewer mencari/filter sesuai topic/track dan **claim mandiri**; tanpa pemetaan hak akun ke topik tertentu. Review berjalan **bergulir**, tidak menunggu 20 Desember atau deadline per reviewer. Koordinator memantau indeks paper yang belum diklaim dan dapat membebaskan claim yang tertunda; keputusan final Academic Authority dan publikasi hasil tetap diperlukan. Target pengumuman 22 Desember pada TOR tetap milestone penyelenggaraan.
 
 ## V. Biaya dan kategori peserta persis dari TOR (hal. 5)
 
@@ -93,14 +95,16 @@ Dari TOR hal. 3:
 | 5 | Peserta (Nasional) | Non-pemakalah, luring / onsite | **IDR 150.000** |
 | 6 | Peserta (Internasional) | Non-pemakalah, daring / online | **USD 10** |
 | 7 | Peserta Mahasiswa | Non-pemakalah, luring / daring | **IDR 100.000** |
-| 8 | Peserta Institusi Co-Host | Pemakalah & peserta, luring / daring | **IDR 450.000** |
+| 8 | Peserta Institusi Co-Host | Pemakalah & peserta, luring / daring | **IDR 450.000 (angka asli dalam TOR; DIKOREKSI pengguna menjadi Rp3.000.000)** |
 | 9 | MoU + Upgrading Kemenag + PKM Internasional + Destinasi Internasional | Peserta, luring / onsite | **IDR 1.000.000** |
 
-TOR bagian J juga mengelompokkan peserta: Reguler; delegasi PTKIS Tapal Kuda; Institusi Co-Host dengan keterangan **maksimal 5 peserta** (hal. 5).
+TOR bagian J juga mengelompokkan peserta: Reguler; delegasi PTKIS Tapal Kuda; Institusi Co-Host dengan keterangan **maksimal 5 peserta** (hal. 5). **Pengguna telah memperjelas: batas lima peserta berlaku PER INSTITUSI.**
+
+**KOREKSI NOMINAL SETELAH TOR:** tarif Co-Host **Rp3.000.000**, bukan Rp450.000 yang masih tampak dalam naskah TOR. Simpan Rp450.000 hanya sebagai bukti bunyi dokumen asal; **jangan gunakan untuk menghitung tagihan sistem ICHES baru**. Belum dinyatakan tegas apakah Rp3 juta merupakan pembayaran per institusi atau per peserta.
 
 **Jangan mengasumsikan hal yang tidak dinyatakan TOR:**
-- Co-Host maksimal 5 itu **per institusi atau total keseluruhan**? Perlu konfirmasi.
-- Biaya Co-Host IDR 450.000 itu **per orang, per paper, atau paket institusi**? Perlu konfirmasi.
+- **TERJAWAB:** batas Co-Host maksimal **5 peserta PER INSTITUSI**.
+- **NOMINAL TERJAWAB:** Co-Host **Rp3.000.000**, menggantikan Rp450.000 di TOR. **Unit tagihan** per orang/institusi/per paper masih perlu konfirmasi.
 - Bundle IDR 1.000.000 itu **per orang atau per institusi**, dan apakah termasuk layanan/transport/akomodasi tertentu? Perlu konfirmasi.
 - Apakah delegasi PTKIS Tapal Kuda memiliki diskon atau harga khusus? **Tidak ada tabel tarif khusus Tapal Kuda** dalam TOR.
 - Bagaimana peserta nasional yang ingin *participant-only online*, peserta internasional non-pemakalah onsite, atau mahasiswa internasional ditagih? Tidak ada kategori eksplisit untuk beberapa kombinasi.
@@ -126,12 +130,7 @@ TOR bagian J juga mengelompokkan peserta: Reguler; delegasi PTKIS Tapal Kuda; In
 | MoU + Pembinaan Kemenag | **13.00–17.15** (registrasi di awal; upgrading 15.15–16.30) |
 | Parallel Panel | **13.15–16.30+** (presentasi 13.40–15.40; catatan reviewer 16.15–16.30) |
 
-**Risiko besar:** seseorang bisa menjadi presenter konferensi sekaligus delegasi MoU/peserta pembinaan. Jadwal dua kegiatan sore **beririsan**, sehingga keberadaan pada salah satunya **tidak boleh otomatis menyatakan kehadiran penuh pada yang lain**. Perlu:
-- tampilan **schedule conflict** pada dashboard personal;
-- status siapa *actual presenter* per paper;
-- QR/check-in per aktivitas khusus bila diwajibkan;
-- kebijakan pengganti delegasi atau presenter apabila tugas bertabrakan;
-- keputusan apakah waktu presentasi/pembinaan perlu disesuaikan oleh panitia.
+**KEPUTUSAN BARU — CUKUP SEDERHANA:** MoU/Pembinaan dan Panel boleh berjalan paralel. Kita **tidak membangun engine konflik jadwal** atau sistem pengalihan peserta otomatis. Kehadiran tetap dicatat **menurut kegiatan** jika diperlukan, sedangkan Moderator mengonfirmasi status Presented pada paper. Perubahan jadwal atau orang yang hadir, jika memang perlu, dilakukan panitia melalui CRUD/penjadwalan biasa.
 
 Detail TOR MoU pukul **13.00–13.30** memiliki kolom kegiatan kosong (PIC Sie Registrasi), jadi sebut **slot registrasi/penyambutan sementara**, belum mengklaim deskripsi final. TOR menulis format waktu tidak seragam pada beberapa baris; normalisasi jam diperlukan sebelum input sebagai jadwal aplikasi.
 
@@ -177,23 +176,23 @@ TOR bagian G, hal. 3–4 menargetkan:
 | Rancangan sebelumnya | Bukti TOR | Penyesuaian |
 |---|---|---|
 | 3 jalur utama dan 2 opsional | Lima rangkaian acara bagian F | **PROMOTE** Pembinaan Riset/PKM dan Studi Destinasi menjadi cakupan acara |
-| Tanggal/kegiatan sebagai contoh | Important Dates lengkap bagian K | **SET** jadwal konkret (masih dikonfirmasi saat publikasi) |
+| Tanggal/kegiatan sebagai contoh | Important Dates lengkap bagian K | **SET** tanggal sebagai milestone TOR, bukan hard gate Full Paper |
 | Tipe biaya belum jelas | 9 baris fee bagian L | **IMPORT AS POLICY DRAFT**, cek unit tarif/eligibility/bundling |
 | Semua memilih keikutsertaan independen | Bundle MoU + Pembinaan + PKM + Destinasi | **KEEP** enrollment terpisah; **ADD** bundle pricing sehingga tidak memalsukan registrasi |
-| Full paper mengikuti pembayaran | Full Paper 23 Des, pembayaran 24 Des | **ADJUST** izinkan jalur Full Paper dan payment paralel setelah ACCEPT |
+| Full paper mengikuti pembayaran | Full Paper 23 Des, pembayaran 24 Des | **OVERRIDE** upload unlock setelah ACCEPT diumumkan; pembayaran tetap paralel |
 | Absensi konseptual | Registrasi, plenary, MoU, panel, dan field visits ada jamnya | **SCOPE** station/slot dan bukti hadir per kegiatan |
-| Jadwal hanya akademik | Dua rangkaian sore beririsan | **ADD** conflict warning dan operator pemetaan |
+| Jadwal hanya akademik | Dua rangkaian sore beririsan | **KEEP SIMPLE** agenda paralel diperbolehkan, tanpa conflict optimizer |
 | ICD generik | PKM per kelompok Pendidikan/Ekonomi/Sosial Budaya | **ADD** group allocation sederhana |
 | Studi destinasi belum wajib | Hari 2 penuh onsite | **ADD** manifest dan checkpoint lapangan |
 | Output hanya sertifikat/paper | 6 outputs pada bagian G | **ADD** ringkasan pelaporan, arsip tautan hasil |
 
 ## IX. Keputusan krusial yang perlu dibawa ke Warek I
 
-1. **Kebijakan biaya:** unit pembayaran Co-Host (Rp450.000) dan bundling Rp1.000.000, serta jika satu orang ikut beberapa kegiatan.
-2. **Co-Host maksimal 5:** per institusi atau total?
-3. **Konflik sesi sore 5 Januari:** apakah jadwal akhir memang paralel dan bagaimana presenter sekaligus delegasi MoU ditangani?
-4. **Reviewer/timeline:** apakah pengumuman 22 Desember realistis dengan reviewer 1 default, dan apakah perlu revisi abstrak terjadwal?
-5. **Full Paper:** unggah mulai 23 Desember sebelum payment window 24 Desember — apakah setuju proses paralel tanpa menunggu pembayaran?
+1. **Unit tagihan masih terbuka:** Co-Host **Rp3.000.000** (sudah dikoreksi), tetapi per institusi atau per peserta belum dijelaskan; bundle Rp1.000.000 dan pembayaran multi-kegiatan juga terbuka.
+2. **Co-Host maksimal 5:** **TERJAWAB — per institusi**.
+3. **Agenda paralel 5 Januari:** **TERJAWAB — boleh bersamaan, tak perlu fitur anti-benturan khusus**.
+4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah screening**. Jumlah reviewer dan aturan revisi detail tetap terbuka.
+5. **Full Paper:** **TERJAWAB — unlock saat ACCEPT diumumkan, bukan berdasarkan tanggal atau Finance Verified**.
 6. **Peserta Day 2:** pendaftaran mandiri/bundle, kuota, transport, pembagian kelompok, titik check-in, fasilitas.
 7. **Output & sertifikat non-akademik:** sertifikat Pembinaan, MoU, PKM, Studi Destinasi dan syarat kelayakannya.
 8. **Kategori tarif yang belum tercakup:** peserta internasional onsite non-pemakalah, nasional online non-pemakalah, dll.
@@ -203,7 +202,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 
 **Gelombang 1 — sebelum 1 Desember:** website/CfP, akun/email, profil, jalur partisipasi, 8 tracks, abstract online + PDF, konfigurasi fee awal dan important dates.
 
-**Gelombang 2 — sebelum 20–28 Desember:** screening dan reviewer, keputusan akademik, LoA, tagihan/pembayaran, full paper, daftar peserta/delegasi, jadwal dan pengaturan stasiun/entitlements.
+**Gelombang 2 — selama periode 1–28 Desember:** screening berlangsung sejak abstrak masuk, reviewer claim bergulir setelah tiap paper lolos screening, kemudian keputusan akademik/LoA; Full Paper unlock saat ACCEPT diumumkan dan tagihan/pembayaran setelah ACCEPT; delegasi, jadwal, pos, entitlement.
 
 **Gelombang 3 — sebelum 5 Januari:** scan personal QR, registrasi on-site, slot konsumsi/kit, check-in khusus MoU, moderator dan sesi parallel, manifest dan kelompok Day 2.
 

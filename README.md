@@ -8,11 +8,14 @@
 ## 📍 Mulai dari sini
 
 **➡️ [Buka presentasi visual untuk Warek I](docs/00-PRESENTASI-WAREK-I.md)**  
-**➡️ [Baca analisis TOR resmi dan perubahan aplikasi](docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
+**➡️ [Baca analisis TOR resmi dan perubahan aplikasi](docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**  
+**➡️ [Lihat keputusan terbaru: Co-Host, reviewer self-claim, Full Paper](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md)**
 
 Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
 ## Apa yang akan dibangun?
+
+**Keputusan produk terbaru:** Co-Host **Rp3.000.000** (mengganti Rp450.000 pada TOR tertulis) dan maksimal **5 peserta per institusi**; review melalui **filter topik + claim mandiri**, dimulai setelah setiap abstrak lolos screening; Full Paper berdasarkan **ACCEPT yang diumumkan**, bukan tanggal kaku. Satuan tarif Rp3 juta masih perlu konfirmasi.
 
 **Acuan TOR Warek I:** Konferensi **5 Januari 2027** (hybrid); Pembinaan/MoU/Parallel Session pada hari yang sama; Pengabdian dan Studi Destinasi **6 Januari 2027** (onsite). TOR menetapkan **lima kegiatan** dan **sembilan kategori biaya**. Ketentuan yang masih ambigu dicatat di audit TOR.
 
@@ -45,6 +48,7 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [08 — Audit referensi repo lama](docs/08-AUDIT-REPO-LAMA.md) | Apa yang dipakai, dirancang ulang, atau ditinggalkan |
 | [09 — Register keputusan](docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md) | Disepakati / usulan / masih perlu keputusan |
 | [10 — Analisis TOR Warek I](docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md) | Lima kegiatan, tanggal resmi, sembilan biaya, rundown, konflik operasional, prioritas MVP |
+| [11 — Keputusan terbaru](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md) | Tarif Co-Host Rp3 juta, kuota institusi, reviewer claim mandiri, Full Paper setelah ACCEPT diumumkan |
 
 ## Ringkasan alur terpadu
 

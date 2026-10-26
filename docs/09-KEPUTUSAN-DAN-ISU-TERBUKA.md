@@ -4,6 +4,8 @@
 > **Tanggal kompilasi:** 26 Oktober 2026.  
 > **Label:** **DISETUJUI** (pemilik produk memilih eksplisit), **BASELINE LAMA** (repositori terdahulu, belum otomatis ditetapkan baru), **USULAN**, **TERBUKA**.
 
+> **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang lolos screening dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **Unit penagihan Rp3 juta belum dinyatakan** (per institusi/per peserta). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
+
 ## Rebaseline TOR dari Warek I — sumber acara, bukan keputusan implementasi
 
 Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianalisis. **Lima** rangkaian acara dicantumkan (Conference, Pembinaan Riset/PKM, MoU, Pengabdian Internasional, Studi Destinasi); tanggal **5–6 Januari 2027**; delapan subtema; **sembilan kategori biaya**; serta jadwal submission mulai **1 Desember 2026**. Lihat [Analisis TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
@@ -12,7 +14,7 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 - Status `NEW-*`: keputusan pemilik produk mengenai **mekanisme aplikasi**, tetap berlaku sepanjang tidak bertentangan TOR.
 - **NEW-005 Diperluas oleh TOR**: tiga jalur yang semula dibahas tetap ada, ditambah **Pembinaan Riset dan PKM** serta **Studi Destinasi Berkelanjutan** karena keduanya rangkaian resmi TOR. Struktur enrollment vs bundle fee **belum final**.
 - Potensi konflik TOR: Full Paper 23 Desember mulai **sebelum** window payment 24 Desember, dan MoU/Pembinaan beririsan dengan Panel pada sore 5 Januari. Tandai untuk keputusan pimpinan, jangan diam-diam mengasumsikan jadwal berubah.
-- TOR **tidak menetapkan** batas kata, PDF max size, default reviewer, unit tarif Co-Host maupun bundle MoU. Usulan lama pada area ini **belum berubah status menjadi disetujui**.
+- TOR tidak menetapkan batas kata, PDF max size, atau default reviewer. Koreksi pengguna: Co-Host **Rp3.000.000**, kuota **5 peserta per institusi**. **Unit penagihan** Co-Host masih terbuka.
 
 ## A. Keputusan yang sudah disetujui (dalam diskusi)
 
@@ -43,6 +45,20 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 | NEW-023 | Sertifikat publishing | Publikasi massal oleh panitia, bukan otomatis Moderator | DISETUJUI |
 | NEW-024 | Admin UI | shadcn-vue / Shadcn Vue Admin, gaya putih–hijau polos, tanpa gradient | DISETUJUI |
 | NEW-025 | Rujukan repo | Audit dan seleksi hasil repository lama, bukan membangun dari asumsi | DISETUJUI |
+
+## A2. Revisi keputusan 26 Oktober 2026
+
+| ID | Kebijakan | Ketetapan | Status |
+|---|---|---|---|
+| NEW-026 | Tarif kategori Co-Host | **Rp3.000.000** menggantikan Rp450.000 pada TOR tertulis | DISETUJUI nominal; satuan tagihan TERBUKA |
+| NEW-027 | Kuota Co-Host | Maksimal **5 peserta per institusi** | DISETUJUI |
+| NEW-028 | Agenda MoU dan Panel | Boleh berjalan paralel, tanpa modul otomatis menangani benturan | DISETUJUI |
+| NEW-029 | Reviewer Abstract Index | Daftar paper yang sudah lolos screening, dapat dicari/filter menurut topic; tidak membatasi akun reviewer berdasarkan track | DISETUJUI |
+| NEW-030 | Reviewer self-claim | Reviewer mengambil paper tersedia sendiri sejak mulai masuk, tanpa menunggu review window khusus | DISETUJUI |
+| NEW-031 | Full Paper gate | **Keputusan ACCEPT yang telah diumumkan kepada author** membuka unggah Full Paper; REJECTED tidak | DISETUJUI |
+| NEW-032 | Pembayaran | Tetap setelah ACCEPT; tidak wajib Finance VERIFIED agar Full Paper terbuka | KONSISTENSI NEW-019/031 |
+
+Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal mengikuti konfigurasi akademik, Koordinator dapat release claim macet. **Jumlah reviewer per paper masih belum final** (baseline lama 1 configurable).
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
@@ -80,12 +96,12 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 
 | Ref | Hal yang belum jelas di TOR | Prioritas |
 |---|---|---|
-| TOR-Q01 | Co-Host maksimal **5**: per institusi atau total? | Tinggi |
-| TOR-Q02 | IDR 450.000 Co-Host dan IDR 1.000.000 bundle: **per orang / per institusi / per paper**? | Tinggi |
+| TOR-Q01 | **TERJAWAB:** maksimal **5 per institusi** | Selesai |
+| TOR-Q02 | **Rp3.000.000 Co-Host** (koreksi; TOR Rp450.000). **Per institusi atau peserta?** Masih perlu konfirmasi. Unit bundle Rp1.000.000 juga belum jelas. | Tinggi |
 | TOR-Q03 | Satu orang ikut Conference + bundle: penagihan dan hak layanan bagaimana? | Tinggi |
-| TOR-Q04 | MoU/Pembinaan **13.00–17.15** vs Panel **13.15–16.30** pada 5 Jan: penugasan/kehadiran rangkap? | Tinggi |
-| TOR-Q05 | Full Paper buka 23 Des sedangkan pembayaran 24 Des: setuju **alur paralel**? | Tinggi |
-| TOR-Q06 | Review harus selesai 22 Des: apakah 1 reviewer default cukup? Aturan revisi? | Tinggi |
+| TOR-Q04 | **TERJAWAB:** agenda boleh paralel; cukup pencatatan kehadiran dan presentasi masing-masing | Selesai |
+| TOR-Q05 | **TERJAWAB:** Full Paper unlocked saat **ACCEPT diumumkan**, tidak bergantung tanggal atau Finance Verified | Selesai |
+| TOR-Q06 | **Alur TERJAWAB:** reviewer claim dari index filter track sejak paper lolos screening; **jumlah reviewer dan detail revisi** masih terbuka | Sebagian |
 | TOR-Q07 | Day 2: daftar transport/rombongan, kelompok PKM, kuota, titik check-in? | Sedang |
 | TOR-Q08 | Sertifikat untuk Pembinaan, MoU, PKM, dan Destinasi? | Sedang |
 | TOR-Q09 | Beberapa kombinasi tarif peserta tidak dicantumkan dalam TOR | Sedang |
@@ -95,9 +111,9 @@ Dokumen sumber `TOR ICHES 6 UNISYA 2027.docx` (bagian E/F/H/K/L/N) telah dianali
 | Prioritas | Keputusan terbuka | Penanggung jawab yang disarankan |
 |---|---|---|
 | Tinggi | Batas kata, keywords, PDF size, bahasa submission, template abstrak | Komite Akademik |
-| Tinggi | Reviewer default 1 atau 2; durasi review/revisi; rubrik | Komite Akademik |
+| Tinggi | Jumlah reviewer per paper, claim macet, rubrik, dan batas revisi | Komite Akademik |
 | Tinggi | Tarif Presenter per orang/per paper; Participant FREE/PAID; waiver | Panitia & Keuangan |
-| Tinggi | Tanggal dan struktur hari/sesi acara | Panitia Program |
+| Tinggi | Rincian hari/sesi; agenda paralel sudah diperbolehkan | Panitia Program |
 | Tinggi | Full-paper requirement & penilaian pascapresentasi; publikasi prosiding/jurnal | Komite Akademik |
 | Sedang | Kuota delegasi MoU, bukti keabsahan delegasi/signatory | Koordinator MoU |
 | Sedang | Souvenir MoU per orang/per institusi; kit entitlement | Koordinator Fasilitas |
