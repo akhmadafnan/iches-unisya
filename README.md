@@ -55,10 +55,14 @@ flowchart TD
   C --> D["International Conference"]
   C --> E["International MoU"]
   C --> F["International Community Development"]
+  C --> K["Pembinaan Riset dan PKM"]
+  C --> L["Studi Destinasi Berkelanjutan"]
   D --> G["Submission, Review, LoA, Payment, Presentasi"]
   E --> H["PIC Institusi, Delegasi, Penandatanganan"]
-  F --> I["Keikutsertaan, Kehadiran, Kegiatan"]
-  G --> J["Layanan QR dan Sertifikat"]
+  F --> I["Kelompok PKM, Kehadiran, Kegiatan"]
+  K --> J["Layanan QR dan Sertifikat"]
+  L --> J
+  G --> J
   H --> J
   I --> J
 ```

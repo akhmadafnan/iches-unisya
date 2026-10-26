@@ -9,6 +9,8 @@ Dokumen [CURRENT_STATE](https://github.com/akhmadafnan/international-conference-
 
 Dokumen akademik lama bersifat matang sebagai **spesifikasi**, bukan bukti bahwa fitur akademiknya selesai.
 
+> **TOR update:** dokumen ini merupakan audit repository lama. Untuk cakupan ICHES **setelah TOR Warek I**, lihat [Analisis TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md): lima kegiatan resmi, 5–6 Januari 2027, sembilan kategori tarif, dan titik konflik operasional.
+
 ## Reuse decision matrix
 
 | Domain | Bukti repo lama | Keputusan baru |

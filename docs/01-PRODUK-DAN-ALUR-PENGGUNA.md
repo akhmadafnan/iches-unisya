@@ -32,10 +32,14 @@ flowchart TD
   U --> C["Conference"]
   U --> M["International MoU"]
   U --> I["International Community Development"]
+  U --> RC["Pembinaan Riset dan PKM"]
+  U --> DS["Studi Destinasi Berkelanjutan"]
   C --> CP["Presenter: Submission → Review → Accept → Payment → Present"]
   C --> CT["Participant: Registrasi → Biaya jika ada → Hadir"]
   M --> MD["PIC Institusi → Delegasi Terverifikasi"]
   I --> ID["Registrasi → Kehadiran → Penyelesaian jika disyaratkan"]
+  RC --> Q["Check-in dan layanan"]
+  DS --> Q
   CP --> Q["QR Services & Certificate"]
   CT --> Q
   MD --> Q

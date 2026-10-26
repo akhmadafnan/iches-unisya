@@ -49,6 +49,8 @@ Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template n
 | Participant | Profil, aktivitas yang diikuti, personal QR, Next Action, dokumen |
 | Submitting Author | My Submissions, draft/revisi, LoA, bukti pembayaran, full paper, sertifikat seluruh penulis |
 | PIC MoU | Institusi, delegasi usulan, status verifikasi dan undangan |
+| Pembinaan Riset/PKM | Agenda pembinaan dan daftar peserta sesuai TOR |
+| Studi Destinasi | Rombongan peserta, titik kehadiran dan fasilitas lapangan untuk 6 Januari |
 | Reviewer | Hanya assignment yang diberikan, penilaian dan komentar |
 | Moderator | Daftar sesi/paper, Presented/No Show |
 | Finance | Bukti transfer, status verifikasi, koreksi terbatas |
@@ -78,6 +80,7 @@ Menu tidak perlu terlihat bila tidak relevan dengan akun. Satu orang boleh memeg
 - Accounts / Profiles / Role authority
 - Participations (Conference, ICD, MoU delegate)
 - Institutions & MoU
+- Research Coaching + Sustainable Destination Study (lightweight activity workflows)
 - Academic Submission / Review / Decisions / Scheduling
 - Finance / Payment proof
 - Operational Services / Entitlements / Fulfillments / Attendance

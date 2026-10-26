@@ -35,7 +35,7 @@ flowchart TD
 
 **➡️ [Audit TOR dan matriks perubahan selengkapnya](10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**
 
-> **Catatan pembacaan:** Diagram tiga jalur pada bagian di bawah adalah **ilustrasi rancangan PRA-TOR**. Setelah TOR, konfigurasi produk perlu mencakup **lima rangkaian** di atas. Ketentuan ambiguitas tidak dianggap diputuskan.
+> **Catatan pembacaan:** Diagram produk pada bagian di bawah telah disesuaikan agar menampilkan **lima rangkaian dari TOR**. Detail pendaftaran, kuota, dan paket biaya tiap kegiatan masih menunggu keputusan yang belum tertulis pada TOR.
 
 ---
 
@@ -53,6 +53,8 @@ flowchart TD
   U --> A["INTERNATIONAL CONFERENCE"]
   U --> B["INTERNATIONAL MoU"]
   U --> C["INTERNATIONAL COMMUNITY DEVELOPMENT"]
+  U --> R["PEMBINAAN RISET DAN PKM"]
+  U --> T["STUDI DESTINASI BERKELANJUTAN"]
   A --> A1["Presenter: Abstract → Review → Accept → LoA → Payment → Full Paper → Present"]
   A --> A2["Participant: Registrasi → Ketentuan biaya → Kehadiran"]
   B --> B1["PIC Institusi → Verifikasi → Delegasi → Kehadiran → Status MoU"]
