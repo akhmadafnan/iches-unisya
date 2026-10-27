@@ -113,6 +113,9 @@ flowchart TD
 
 ## 6. Register
 
+> **Tahap 18C-01 DRAFT, MENUNGGU REVIEW:** [arsitektur relasional/empat ERD](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) dan [kamus data/constraints/urutan migration/36 UAT](18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md) menurunkan kebijakan Admin-centered CRUD, Finance, Co-Host, Conference, QR & Sertifikat ke kandidat tabel. **Belum schema final, belum database, belum coding.** Pilihan tabel dan DB engine boleh direvisi.
+
+
 > **18B-07A/08 — lanjutan rancangan Finance:** opsi transfer susulan pada invoice sama, pencatatan surplus/duplikasi, permohonan refund manual, dan due date editable **masih draft dan belum keputusan final**. **Invoice PDF** adalah tagihan, **bukti transfer** belum berarti lunas, dan **Payment Receipt** hanya boleh terbit setelah Finance VERIFIED; notifikasi in-app/email masih **usulan UI**. [Kebijakan draf](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Invoice/Receipt/Notifikasi](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
 
 

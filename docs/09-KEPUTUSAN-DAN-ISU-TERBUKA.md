@@ -237,6 +237,23 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [Draft 18B-07A](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Rancangan 18B-08](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
 
+## A14. Tahap 18C-01 — Arsitektur Database & ERD (DRAFT untuk review)
+
+**STATUS KESELURUHAN: DRAFT REKOMENDASI, BELUM FINAL.** Pengguna meminta dokumen komprehensif dahulu; desain **boleh direvisi** sebelum persetujuan implementasi. Ketentuan bisnis Finance, Co-Host, Akademik, QR dan Sertifikat yang sudah disepakati tetap menjadi constraints kebutuhan produk; **pilihan tabel/ERD/DB engine tidak otomatis disetujui**.
+
+| ID | Rekomendasi teknis | Status |
+|---|---|---|
+| PROP-050 | **Satu database relasional** dengan 38 kandidat tabel domain dikelompokkan Identity, Co-Host, Conference, Program, Finance, QR/Fasilitas, Sertifikat dan Notifikasi | **DRAFT MENUNGGU REVIEW**, tabel boleh dipangkas |
+| PROP-051 | **Empat ERD Mermaid**: (A) identitas/Co-Host/Paper, (B) Review/Decision/Session/Certificate, (C) Package/Finance, (D) QR/Attendance/Service | **DRAFT MENUNGGU REVIEW** |
+| PROP-052 | **Satu User multi-role, snapshot paper authors independen dari user, satu invoices untuk institusi/person dengan source FK eksplisit** | **DRAFT REKOMENDASI** |
+| PROP-053 | Constraint slot Co-Host 1–5, satu sponsored paper/member, verified activation, package empat hak, published ACCEPT unlocking, receipt hanya Verified | **USULAN TEKNIS MENURUNKAN KEPUTUSAN FINAL BISNIS** |
+| PROP-054 | Database PostgreSQL vs MySQL, BIGINT vs ULID, strategi active unique/soft archive | **TERBUKA / BELUM DIPILIH** |
+| PROP-055 | **36 skenario UAT integritas database**, urutan migration, field dictionary dan pseudocode transaksi | **RENCANA UAT / DRAFT, BELUM DIJALANKAN** |
+
+**Tidak ada migration atau coding yang dibuat.** Refund, top-up, kategori non-TOR, presenter multi-paper, penggantian member/paper, jumlah reviewer dan arsitektur scanner offline masih kebijakan terpisah yang BELUM FINAL. Jangan memasukkan batasan tak disepakati ke migration final.
+
+[18C-01 DRAFT ERD](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) · [18C-01A DRAFT Data Dictionary & UAT](18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

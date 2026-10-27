@@ -7,6 +7,14 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAHAP 18C-01 — DRAFT ARSITEKTUR DATABASE (MENUNGGU REVIEW)
+
+**Hanya rekomendasi arsitektur; tidak final dan belum dibuat database/migration.** Saya mengusulkan **satu database relasional** dengan **38 kandidat tabel** di delapan domain dan **empat ERD**. Keputusan bisnis telah dipertahankan: Co-Host VERIFIED sebelum lima seat/paper aktif dan tanpa tagihan Conference kedua; Paket pribadi Rp1 juta VERIFIED untuk empat hak; Published ACCEPT membuka Full Paper; seluruh listed author paper Presented eligible sertifikat setelah batch panitia.
+
+**Untuk dibahas sebelum coding:** apakah tabel perlu dipangkas, strategi identitas authors, satu invoice lintas domain, PostgreSQL/MySQL, BIGINT/ULID, serta index/locking pada QR dan pembayaran. Rekomendasi ini tidak menciptakan refund dan deadline baru. [DRAFT 18C-01 ERD](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) · [DRAFT 18C-01A Kamus Data/36 UAT](18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md).
+
+---
+
 ## TAHAP 18B — FINANCE, CO-HOST & PAKET INTERNASIONAL (KEPUTUSAN 27 OKTOBER)
 
 **Satu rekening resmi, transfer manual, bukti JPG/PNG/PDF, Finance Verified; tanpa payment gateway.** Bank aktual masih akan dipilih (BRI/BNI/Mandiri/BCA/BSI); **Superadmin** mengubah nomor rekening langsung tanpa approval kedua. Invoice kategori WNA internasional memakai USD sesuai TOR, biaya transfer internasional seluruhnya pada peserta.
