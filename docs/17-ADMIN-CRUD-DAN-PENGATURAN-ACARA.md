@@ -25,6 +25,8 @@ flowchart TD
 
 > **Tahap 18A tersedia:** [Role Permission & Navigasi](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) mengusulkan siapa berhak mengelola CRUD dari matriks ini, cakupan institusi/program/pos, dan pola satu akun multi-role; [Alur Operasional & UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md) menyediakan 25 skenario simulasi. **Belum final:** nama role dan pemberian izin per user; keputusan bisnis Admin-centered CRUD sudah final.
 
+**Turunan field-level khusus International Conference** telah dirancang pada [18B-02 — Submission Settings, Tracks, All Papers & Author Wizard](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) serta [18B-03 — Reviewer, Keputusan, Full Paper, Sessions, Moderator & UAT](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md). Ini memperinci matriks CRUD umum di bawah tanpa mengubah keputusan final maupun memulai coding.
+
 ## 2. Matriks modul CRUD Backoffice
 
 | Menu Admin | Pengaturan dan aksi utama |

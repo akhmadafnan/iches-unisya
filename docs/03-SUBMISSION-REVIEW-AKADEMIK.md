@@ -9,6 +9,8 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+> **Spesifikasi detail Tahap 18B sudah tersedia:** [18B-02 — Settings/Tracks/Submissions](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) dan [18B-03 — Reviewer/Decision/Full Paper/Session](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md). Seluruh kebijakan yang disepakati pada dokumen 03 tetap berlaku; nama form, aksi, status dan field yang belum diputuskan di 18B adalah **usulan UI**, bukan implementasi.
+
 ## Penetapan jadwal akademik dari TOR (halaman 5)
 
 | Tahap | Jendela TOR |

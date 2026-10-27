@@ -12,7 +12,9 @@
 **➡️ [Lihat keputusan terbaru: Co-Host, reviewer self-claim, Full Paper](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md)**  
 **➡️ [Buka alur pembayaran Co-Host Rp3 juta per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)**  
 **➡️ [Tahap 18A: Role, Permission, Navigasi Admin](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md)**  
-**➡️ [Tahap 18B: Android Scanner Offline dan Keamanan](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md)**
+**➡️ [Tahap 18B: Android Scanner Offline dan Keamanan](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md)**  
+**➡️ [Tahap 18B: International Conference — Detail CRUD](docs/18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md)**  
+**➡️ [Tahap 18B: Review, Decision, Full Paper & Session UAT](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md)**
 
 Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
@@ -72,6 +74,8 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [18A — Simulasi Operasional dan UAT](docs/18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md) | Alur lintas peran, diagram, 25 skenario pengujian untuk tahap implementasi nanti |
 | [18B-00 — QR Android, Offline dan Security](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) | Arsitektur Android offline-first, sinkronisasi, SOP konflik, ketahanan server dan keamanan berlapis |
 | [18B-01 — CRUD Scanner & Sync](docs/18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md) | Field/table Admin device, assignment, monitoring, conflict reconciliation, UAT |
+| [18B-02 — Conference Settings, Tracks & Abstract](docs/18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) | Spesifikasi field Admin dan Author: pengaturan, 8 track, form Text+PDF, paper, Co-Host 5 paper, validasi |
+| [18B-03 — Reviewer hingga Presentasi](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md) | Reviewer Index/Claim, Academic Decision/Publish, LoA, Full Paper, Sessions, Moderator, 28 UAT |
 
 ## Ringkasan alur terpadu
 

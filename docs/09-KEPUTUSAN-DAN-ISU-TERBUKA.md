@@ -151,6 +151,21 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 [18B-00 Arsitektur Offline/Keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [18B-01 Field CRUD](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
 
+## A9. Tahap 18B — CRUD International Conference (field-level, belum coding)
+
+| ID | Area usulan yang sudah dirinci | Status |
+|---|---|---|
+| PROP-025 | Halaman A-01 sampai A-06: Overview, Conference Settings, 8 Tracks, Submission Settings, All Submissions, Paper Detail | **DESAIN TAHAP 18B**, menurunkan keputusan Admin CRUD + TOR |
+| PROP-026 | Author Wizard U-01 sampai U-05: Paper/Authors/Abstract Text+PDF, Draft/Submit, Result, LoA/Full Paper | **DESAIN UI**, empat langkah wizard masih usulan |
+| PROP-027 | Reviewer R-01/R-02/R-03: index/search/filter track, Claim atomik, My Claimed Reviews, review recommendation | **DESAIN TEKNIS**, prinsip self-claim tanpa screening SUDAH DISETUJUI |
+| PROP-028 | A-07 dan A-08: monitor/release claim, final decision internal terpisah dari action Publish Decision | **DESAIN TEKNIS**, otoritas Komite/ACCEPT-announced SUDAH DISETUJUI |
+| PROP-029 | A-09/A-10/A-11: Full Paper, Sessions/Moderators, Reports/Export, status akademik/finance/presentation terpisah | **DESAIN TEKNIS**, kaidah domain terdahulu tetap berlaku |
+| PROP-030 | 12 acceptance criteria form/paper + 28 acceptance criteria review/Full Paper/session = **40 skenario uji yang direncanakan** | **RENCANA UAT**, belum dites |
+
+**Keputusan yang TIDAK DIBUKA KEMBALI:** Valid Submit langsung masuk Reviewer Index; tidak ada Administrative Screening; reviewer bebas memilih paper dari track apa pun; final ACCEPT harus diumumkan untuk membuka Full Paper; presenter bayar pasca-ACCEPT; Co-Host 5 paper/5 orang; Presented oleh Moderator; sertifikat seluruh author dipublikasikan massal panitia. **Field yang TERBUKA:** reviewer count (baseline lama 1 configurable), ukuran/kata PDF/abstract, rubrik, template/closing Full Paper, aturan revisi No Show, final syarat administrasi sebelum presentasi.
+
+[18B-02 Settings, Tracks, Author Form](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) · [18B-03 Reviewer, Decision, Full Paper & UAT](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

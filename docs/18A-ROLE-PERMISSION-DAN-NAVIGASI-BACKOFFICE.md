@@ -249,6 +249,8 @@ flowchart TD
 
 **Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
 
+**Turunan Tahap 18B untuk role Akademik:** [18B-02 Field-level Conference](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) dan [18B-03 Review→Certificate Handoff](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md) menggunakan peran dan scope dari dokumen ini. **Keputusan bisnis telah disetujui; field teknis dan role assignment orang tertentu masih rancangan.**
+
 ## 9. Yang dianggap FINAL vs yang masih membutuhkan persetujuan
 
 | Jenis | Isi |

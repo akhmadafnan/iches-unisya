@@ -7,6 +7,29 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAHAP 18B — CRUD INTERNATIONAL CONFERENCE (RANCANGAN HALAMAN)
+
+Seluruh alur akademik telah diturunkan ke **spesifikasi layar dan field**, bukan lagi diagram konseptual saja: **Conference Settings, delapan Tracks, Abstract Submission Settings, All Submissions, Paper Detail, Reviewer Index + Claim, Academic Decisions + Publish Result, Full Paper, Sessions, Moderator, dan Reports**. Admin CRUD mengatur tanggal/ketentuan, sementara **Reviewer self-claim langsung setelah Submit valid tanpa screening**, Komite memutuskan, serta **Full Paper terbuka ketika ACCEPT diumumkan**.
+
+```mermaid
+flowchart TD
+  AD["Admin: Settings/Tracks/Form"] --> U["Author: Abstract Text + PDF"]
+  U --> VAL{"Submit valid by server?"}
+  VAL -->|Tidak| U
+  VAL -->|Ya| IDX["Reviewer Index — langsung"]
+  IDX --> REV["Reviewer: filter topik + Claim"]
+  REV --> COM["Komite: Final Decision"]
+  COM --> PUB["Publish Decision ke Author"]
+  PUB -->|ACCEPTED| FP["LoA + Full Paper"]
+  FP --> SES["Sessions + Moderator"]
+  SES --> PR["Confirmed Presented"]
+  PR --> CERT["Eligible authors → Panitia Publish Certificates"]
+```
+
+**Dokumen rinci:** [18B-02 Form, Settings & Paper](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) · [18B-03 Review, Decisions, Full Paper, Sessions & UAT](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md).
+
+---
+
 ## TAHAP 18B — SCANNER ANDROID, JARINGAN & KEAMANAN (USULAN)
 
 **Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
