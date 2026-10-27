@@ -124,6 +124,19 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 **Supersedes:** kalimat di dokumen historis yang menganggap jumlah paper Co-Host masih terbuka atau menganggap kuota lima orang tidak terkait jatah lima paper. **Deadline aktual paket masih dipilih Admin**, bukan angka tanggal final di dokumen TOR. [Lima paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
 
 
+## A7. Tahap 18A — Role, Permission, dan Navigasi (USULAN untuk divalidasi)
+
+| ID | Ketentuan yang diajukan | Status |
+|---|---|---|
+| PROP-016 | **Satu user bisa memiliki beberapa assignment peran** (reviewer, moderator, PIC, staff) dengan scope event/program/institusi/layanan | **USULAN TAHAP 18A**, belum dikunci |
+| PROP-017 | Template role minimal: Admin, Academic Coordinator, Reviewer, Moderator, Finance, Program Coordinator (scoped), Service Coordinator (scoped), Operator QR, PIC Institusi, Participant/Author | **USULAN TAHAP 18A**, belum dikunci |
+| PROP-018 | Pemisahan menu **Personal Dashboard / Institution Workspace / Role-Based Backoffice**, dengan satu login | **USULAN TAHAP 18A**, belum dikunci |
+| PROP-019 | Delegasi opsional **Certificate Officer / CMS Editor** tanpa menambah silo aplikasi, dan pembatasan aksi berdasarkan izin server-side | **USULAN TAHAP 18A**, belum dikunci |
+
+**Bukan keputusan baru:** Admin CRUD semua modul, reviewer self-claim tanpa screening, keputusan akademik oleh komite, Finance verification, Presented oleh Moderator, kuota Co-Host 5 paper/5 anggota, paket Rp1 juta mandiri, dan sertifikat massal semua author Presented semuanya **sudah diputuskan pada tahap sebelumnya**. Tahap 18A menjabarkan cara mengelola kewenangannya.
+
+**Hasil dokumentasi**: [Role, Permission, Navigation](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) · [Operasional dan 25 rencana UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

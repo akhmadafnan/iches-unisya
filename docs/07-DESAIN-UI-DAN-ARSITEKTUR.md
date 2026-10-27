@@ -66,6 +66,8 @@ Jangan menjalankan `pnpm dlx shadcn@latest init --preset b3G0JXXL04 --template n
 | Coordinator/Admin | CRUD layanan, hak, petugas, penjadwalan, rekap, penerbitan sertifikat |
 | Scanner | Kamera besar, pilih pos/mode, detail peserta, tombol konfirmasi layanan |
 
+> **Penyelarasan Tahap 18A (USULAN):** satu akun dengan role+scope, pemisahan Dashboard Peserta / PIC Institusi / Backoffice, Admin pusat konfigurasi, Komite final decision, Reviewer self-claim, Finance verification, Moderator Presented, Service Coordinator per layanan, Operator hanya pos assigned. Tabel peran, permission dan sidebar lebih rinci ada di [18A Role & Navigation](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md); simulasi di [18A Alur & UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md). Pengaturan nama role final masih menunggu validasi pemilik produk.
+
 ## Backoffice: navigasi bersyarat sesuai kewenangan
 
 ```mermaid

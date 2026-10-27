@@ -7,6 +7,30 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAHAP 18A — Role, Permission, dan Navigasi (rancangan untuk validasi)
+
+**Sudah didokumentasikan:** siapa mengelola data dari Admin, siapa memutuskan ACCEPT, siapa memverifikasi pembayaran, siapa mengonfirmasi Presented, dan siapa hanya boleh scan QR pada pos yang ditugaskan. **Role/template menu terperinci adalah USULAN 18A**, sementara keputusan bisnis yang mendasarinya sudah tercatat sebagai ketetapan sebelumnya.
+
+```mermaid
+flowchart TD
+  A["Satu akun / satu identitas"] --> P["Dashboard Peserta"]
+  A --> I["PIC Institusi (jika ditugaskan)"]
+  A --> B["Backoffice (jika berhak)"]
+  B --> AD["Admin: konfigurasi semua modul"]
+  B --> AC["Komite: Academic Decision"]
+  B --> RE["Reviewer: filter topik + Claim"]
+  B --> FI["Finance: verifikasi pembayaran"]
+  B --> MO["Moderator: Presented"]
+  B --> CO["Koordinator program/layanan sesuai scope"]
+  B --> OP["Operator QR: assigned pos"]
+  P --> PK["Paket Rp1 juta pribadi; paper milik sendiri"]
+  I --> CH["Co-Host: 5 akun, 5 paper, invoice Rp3 juta institusi"]
+```
+
+[Role, Permission & Menu](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) · [Simulasi dan 25 skenario UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md).
+
+---
+
 ## KEBIJAKAN FINAL 27 OKTOBER: 5 PAPER CO-HOST DAN ADMIN PUSAT CRUD
 
 **Co-Host Rp3.000.000 per institusi: lima perwakilan, masing-masing memiliki satu jatah paper International Conference.** Setiap perwakilan mengirim papernya sendiri melalui akun ICHES, total **lima paper dalam paket institusi**.

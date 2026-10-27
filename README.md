@@ -10,7 +10,8 @@
 **➡️ [Buka presentasi visual untuk Warek I](docs/00-PRESENTASI-WAREK-I.md)**  
 **➡️ [Baca analisis TOR resmi dan perubahan aplikasi](docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**  
 **➡️ [Lihat keputusan terbaru: Co-Host, reviewer self-claim, Full Paper](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md)**  
-**➡️ [Buka alur pembayaran Co-Host Rp3 juta per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)**
+**➡️ [Buka alur pembayaran Co-Host Rp3 juta per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)**  
+**➡️ [Tahap 18A: Role, Permission, Navigasi Admin](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md)**
 
 Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
@@ -66,6 +67,8 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [15 — Paket Program Internasional mandiri](docs/15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) | Dashboard peserta: beli sendiri satu paket Rp1 juta untuk empat akses; tidak melalui Co-Host |
 | [16 — Lima perwakilan/lima paper](docs/16-COHOST-LIMA-PAPER-PERWAKILAN.md) | Co-Host 5 wakil, masing-masing satu paper di akun sendiri |
 | [17 — Admin CRUD seluruh ICHES](docs/17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md) | Admin bisa mengatur deadline dan seluruh modul konferensi, program dan website |
+| [18A — Role, Permission, Navigasi Backoffice](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) | Struktur peran dan scope, matriks akses, menu Personal/PIC/Backoffice, alur reviewer, keamanan |
+| [18A — Simulasi Operasional dan UAT](docs/18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md) | Alur lintas peran, diagram, 25 skenario pengujian untuk tahap implementasi nanti |
 
 ## Ringkasan alur terpadu
 

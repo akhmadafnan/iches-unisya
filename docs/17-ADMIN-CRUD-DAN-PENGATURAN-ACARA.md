@@ -23,6 +23,8 @@ flowchart TD
   G --> M["Public Website"]
 ```
 
+> **Tahap 18A tersedia:** [Role Permission & Navigasi](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) mengusulkan siapa berhak mengelola CRUD dari matriks ini, cakupan institusi/program/pos, dan pola satu akun multi-role; [Alur Operasional & UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md) menyediakan 25 skenario simulasi. **Belum final:** nama role dan pemberian izin per user; keputusan bisnis Admin-centered CRUD sudah final.
+
 ## 2. Matriks modul CRUD Backoffice
 
 | Menu Admin | Pengaturan dan aksi utama |
