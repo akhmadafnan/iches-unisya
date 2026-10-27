@@ -11,7 +11,8 @@
 **➡️ [Baca analisis TOR resmi dan perubahan aplikasi](docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md)**  
 **➡️ [Lihat keputusan terbaru: Co-Host, reviewer self-claim, Full Paper](docs/11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md)**  
 **➡️ [Buka alur pembayaran Co-Host Rp3 juta per institusi](docs/12-PEMBAYARAN-COHOST-PER-INSTITUSI.md)**  
-**➡️ [Tahap 18A: Role, Permission, Navigasi Admin](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md)**
+**➡️ [Tahap 18A: Role, Permission, Navigasi Admin](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md)**  
+**➡️ [Tahap 18B: Android Scanner Offline dan Keamanan](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md)**
 
 Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
@@ -69,6 +70,8 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [17 — Admin CRUD seluruh ICHES](docs/17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md) | Admin bisa mengatur deadline dan seluruh modul konferensi, program dan website |
 | [18A — Role, Permission, Navigasi Backoffice](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) | Struktur peran dan scope, matriks akses, menu Personal/PIC/Backoffice, alur reviewer, keamanan |
 | [18A — Simulasi Operasional dan UAT](docs/18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md) | Alur lintas peran, diagram, 25 skenario pengujian untuk tahap implementasi nanti |
+| [18B-00 — QR Android, Offline dan Security](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) | Arsitektur Android offline-first, sinkronisasi, SOP konflik, ketahanan server dan keamanan berlapis |
+| [18B-01 — CRUD Scanner & Sync](docs/18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md) | Field/table Admin device, assignment, monitoring, conflict reconciliation, UAT |
 
 ## Ringkasan alur terpadu
 

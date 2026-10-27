@@ -78,6 +78,8 @@ flowchart TD
 
 **Deadline Paket Program Internasional terpisah dari deadline Conference Abstract Submission**; penutupan salah satu tidak otomatis menutup yang lain. **Full Paper dibuka ketika ACCEPT diumumkan**, bukan karena admin mengubah tanggal program pendamping.
 
+**Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
 ## 4. Batas kewenangan agar CRUD tidak merusak catatan
 
 | Boleh dikelola dengan Admin CRUD | Tetap dilindungi dari overwrite/hapus biasa |

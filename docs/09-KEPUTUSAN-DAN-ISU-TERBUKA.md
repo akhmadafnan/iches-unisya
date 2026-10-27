@@ -137,6 +137,20 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 **Hasil dokumentasi**: [Role, Permission, Navigation](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) · [Operasional dan 25 rencana UAT](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md).
 
+## A8. Rekomendasi Tahap 18B — QR Android, Offline, Server, Security
+
+| ID | Rumusan | Status |
+|---|---|---|
+| PROP-020 | Scanner **Android native minimal** memakai Laravel Scanner API yang satu sumber data dengan web ICHES | **USULAN**, pilihan native/PWA belum final |
+| PROP-021 | Scan online Confirmed oleh server; offline ditandai **Pending Sync** lalu dikirim/reconcile saat online | **REKOMENDASI integritas**, jika mode offline disetujui |
+| PROP-022 | CRUD Admin untuk **Devices, Operator Assignments, Sync Monitoring, Conflict Reconciliation dan Offline Policies** | **USULAN detail** |
+| PROP-023 | Jaringan venue khusus+cadangan, server load test, queue/caching, backup-restore dan monitoring | **REKOMENDASI operasional** |
+| PROP-024 | Security berlapis: API scoped auth, rate limit/WAF, enkripsi cache, MFA staf, verifikasi input, testing dan audit sensitif | **REKOMENDASI teknis** |
+
+**Batas offline:** dua HP terputus tidak dapat menjamin anti-double-fulfillment; `Pending` bukan `Confirmed`. Detail SOP menyerahkan konsumsi/kit offline, kebutuhan HP, provider hosting, dan anggaran perlu diputuskan.
+
+[18B-00 Arsitektur Offline/Keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [18B-01 Field CRUD](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

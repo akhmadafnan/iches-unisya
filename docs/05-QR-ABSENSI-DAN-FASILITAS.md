@@ -13,6 +13,8 @@
 
 Mempunyai QR bukan berarti sudah check-in; check-in umum bukan bukti hadir di MoU, ICD atau telah mempresentasikan paper; berhak Lunch bukan berarti sudah menerima makanan.
 
+**Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
 ## Model C: pos tetap, scanner fleksibel
 
 ```mermaid
@@ -130,7 +132,7 @@ Data transaksi minimum: penerima, layanan/slot, petugas, pos, timestamp, status 
 - **FNB-06JAN-LUNCH:** slot makan siang hari 2.
 - **DEST-06JAN:** kehadiran kegiatan destinasi apabila disyaratkan.
 
-Semua kode di atas **usulan teknis**, bukan nama pos fisik final. Tambahkan pemeriksaan benturan waktu: peserta yang ikut dua agenda pada 5 Januari tidak boleh otomatis dianggap hadir pada keduanya.
+Semua kode di atas **usulan teknis**, bukan nama pos fisik final. Agenda paralel 5 Januari boleh terjadi tanpa fitur pengaturan benturan kompleks; kehadiran tiap kegiatan tetap dicatat secara faktual, bukan otomatis disamakan.
 
 ## Hal yang belum dipilih
 

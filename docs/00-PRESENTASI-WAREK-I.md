@@ -7,6 +7,24 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAHAP 18B — SCANNER ANDROID, JARINGAN & KEAMANAN (USULAN)
+
+**Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
+
+```mermaid
+flowchart TD
+  A["Admin CRUD pos, operator, devices"] --> S["Laravel Server & Scanner API"]
+  B["Android QR Scanner"] --> C{"Online?"}
+  C -->|Ya| S
+  C -->|Tidak| D["Encrypted cache + Pending queue"]
+  D -->|Koneksi pulih| S
+  S --> E["Authoritative Attendance/Fulfillment"]
+  S --> F["Monitor konflik & pelaporan Admin"]
+```
+
+---
+
 ## TAHAP 18A — Role, Permission, dan Navigasi (rancangan untuk validasi)
 
 **Sudah didokumentasikan:** siapa mengelola data dari Admin, siapa memutuskan ACCEPT, siapa memverifikasi pembayaran, siapa mengonfirmasi Presented, dan siapa hanya boleh scan QR pada pos yang ditugaskan. **Role/template menu terperinci adalah USULAN 18A**, sementara keputusan bisnis yang mendasarinya sudah tercatat sebagai ketetapan sebelumnya.

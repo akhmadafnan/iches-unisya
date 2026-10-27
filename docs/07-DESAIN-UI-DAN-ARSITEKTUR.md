@@ -86,6 +86,8 @@ flowchart TD
 
 Menu tidak perlu terlihat bila tidak relevan dengan akun. Satu orang boleh memegang beberapa peran tanpa berpindah akun; setiap tindakan tetap dibatasi scope server-side. Koordinator Konsumsi tidak menjadi Koordinator Kit hanya karena memakai perangkat scanner yang sama.
 
+**Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
 ## Rencana batas modul (konseptual, belum struktur folder final)
 
 - Accounts / Profiles / Role authority

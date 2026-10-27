@@ -247,6 +247,8 @@ flowchart TD
 
 **Server-side authorization wajib pada setiap aksi**. Menyembunyikan tombol bukan kontrol keamanan. Tautan undangan dan QR harus punya token aman tanpa membawa data sensitif. **Pemulihan/penugasan role staf** hanya oleh pihak berwenang; akun operasional bernilai tinggi dianjurkan verifikasi lebih kuat dibanding akun peserta, tetapi metode final masih perlu dipilih.
 
+**Rancangan Tahap 18B (belum disetujui final):** Android scanner khusus dapat bekerja offline menggunakan cache terenkripsi, mencatat **Pending Sync**, lalu mengirim catatan ke Laravel ketika internet pulih. **Pending bukan transaksi CONFIRMED oleh server**; dua HP terputus tidak bisa menjamin pencegahan penerimaan layanan ganda. Admin mengelola perangkat, operator, pos, sync dan konflik; server memerlukan load test, cadangan jaringan, backup, monitoring, kontrol API dan keamanan berlapis. [Arsitektur offline/keamanan](18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md) · [CRUD Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).
+
 ## 9. Yang dianggap FINAL vs yang masih membutuhkan persetujuan
 
 | Jenis | Isi |
