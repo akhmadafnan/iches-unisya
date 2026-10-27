@@ -35,6 +35,16 @@ Satu antrean Finance cukup untuk menangani **bukti salah, transfer kurang, lebih
 
 ---
 
+## TAHAP 18B — PENUNTASAN FINANCE: PELUNASAN, INVOICE & NOTIFIKASI
+
+**Tahap 18B-07A (draft kebijakan):** rekomendasi sederhana untuk pembayaran kurang (opsi bayar selisih di invoice yang sama), lebih/ganda (surplus dicatat, jangan dobel hak), refund (permohonan manual, belum ada kelayakan final) dan tenggat (Admin editable, belum ada tanggal resmi). **Keempat opsi ini belum diputuskan sebagai kebijakan panitia.**
+
+**Tahap 18B-08 (rancangan aplikasi):** bedakan **Invoice/tagihan**, **Upload Bukti Transfer**, dan **Bukti Lunas yang hanya muncul setelah Finance VERIFIED**. Notifikasi Dashboard sebagai rancangan utama, email transaksional opsional; tidak membuat payment gateway. Perubahan pembayaran tidak membatalkan keputusan akademik, dan Co-Host tetap satu tagihan institusi.
+
+[Draft kebijakan & 16 UAT](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Invoice, Receipt, Notifikasi & 32 UAT](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
+
+---
+
 ## TAHAP 18B — CRUD INTERNATIONAL CONFERENCE (RANCANGAN HALAMAN)
 
 Seluruh alur akademik telah diturunkan ke **spesifikasi layar dan field**, bukan lagi diagram konseptual saja: **Conference Settings, delapan Tracks, Abstract Submission Settings, All Submissions, Paper Detail, Reviewer Index + Claim, Academic Decisions + Publish Result, Full Paper, Sessions, Moderator, dan Reports**. Admin CRUD mengatur tanggal/ketentuan, sementara **Reviewer self-claim langsung setelah Submit valid tanpa screening**, Komite memutuskan, serta **Full Paper terbuka ketika ACCEPT diumumkan**.

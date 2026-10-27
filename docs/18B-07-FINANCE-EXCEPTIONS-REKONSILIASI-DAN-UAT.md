@@ -180,6 +180,9 @@ flowchart LR
 
 ## J. Hasil Tahap 18B-07 dan handoff
 
+**Tahap lanjutan tersedia:** [18B-07A Draft Kebijakan Pelunasan/Refund/Tenggat](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) memuat pilihan operasional sederhana **untuk disetujui**, bukan kebijakan final. [18B-08 Invoice PDF, Bukti Lunas & Notifikasi](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md) melanjutkan desain dokumen pembayar, *receipt setelah Finance VERIFIED*, dan 32 UAT tambahan. **Tidak ada auto-refund atau deadline fiktif.**
+
+
 **Selesai didokumentasikan:** matriks exception, diagram alur koreksi dan rekonsiliasi, form/inbox yang sederhana, field konseptual bank-credit dan proof history, pemisahan laporan IDR/USD serta 28 skenario UAT. **Belum diimplementasikan.**
 
 **DISETUJUI sebelumnya, bukan hasil keputusan baru:** mekanisme Finance dari 18B-06 dan gate hak Co-Host/Paket yang telah dipilih pemilik produk.

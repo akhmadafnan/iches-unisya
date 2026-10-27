@@ -113,6 +113,9 @@ flowchart TD
 
 ## 6. Register
 
+> **18B-07A/08 — lanjutan rancangan Finance:** opsi transfer susulan pada invoice sama, pencatatan surplus/duplikasi, permohonan refund manual, dan due date editable **masih draft dan belum keputusan final**. **Invoice PDF** adalah tagihan, **bukti transfer** belum berarti lunas, dan **Payment Receipt** hanya boleh terbit setelah Finance VERIFIED; notifikasi in-app/email masih **usulan UI**. [Kebijakan draf](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Invoice/Receipt/Notifikasi](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
+
+
 > **Usulan tahap 18B-07:** Finance dapat memakai **inbox Payment Verification yang sama** untuk pembayaran kurang, lebih, transfer ganda, bukti salah dan rekonsiliasi bank manual. Tidak ada gateway atau approval berlapis. Refund/top-up/tenggat pelunasan **belum disepakati**; jangan dijadikan aturan otomatis. [Rancangan 18B-07](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
 
 

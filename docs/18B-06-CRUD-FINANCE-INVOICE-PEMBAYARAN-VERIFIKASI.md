@@ -189,6 +189,9 @@ PIC **tidak** melihat pembelian Paket Rp1 juta, bukti bayar, atau invoice presen
 
 ## 10. Register keputusan dan hal yang masih terbuka
 
+**Pembaruan Tahap 18B-07A/08:** rancangan kekurangan/kelebihan, refund dan tenggat ada di [draft kebijakan 18B-07A](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md), sedangkan format [Invoice PDF, Bukti Lunas & Notifikasi ada di 18B-08](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md). **Bukti Lunas hanya boleh tersedia setelah Finance VERIFIED.** Kebijakan refund/top-up/due date tetap **BELUM FINAL**, tidak boleh dibuat otomatis pada kode.
+
+
 **FINAL 27 Oktober 2026:** satu bank resmi dikelola langsung Superadmin; transfer manual dan upload JPG/JPEG/PNG/PDF; Finance memverifikasi rekening; invoice IDR/WNI nasional dan USD/WNA internasional kategori TOR; seluruh biaya transfer asing oleh peserta; Co-Host **pembayaran terverifikasi lebih dulu, baru fitur 5 paper**, tanpa tagihan Conference personal ulang; paket Rp1 juta personal **Verified baru 4 akses**; presenter reguler baru bayar setelah ACCEPT diumumkan, Full Paper tetap independen.
 
 **HANDOFF TAHAP LANJUTAN:** [18B-07 — Penanganan Pembayaran Bermasalah & Rekonsiliasi Manual](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md) berisi **usulan**, diagram operasional dan 28 skenario UAT. **Tidak** menetapkan refund, top-up, tenggat bayar atau izin tampil pada jadwal sebagai keputusan baru.

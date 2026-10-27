@@ -218,6 +218,25 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 [Lihat spesifikasi 18B-07 — Payment Exceptions dan 28 UAT](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
 
+## A13. Tahap 18B-07A/08 — Draf Kebijakan dan Dokumen Pembayaran (BELUM DIKUNCI untuk usulan baru)
+
+Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau tenggat bayar. Ia menurunkan keputusan Finance FINAL NEW-050..055 menjadi opsi operasional yang **siap diperiksa dan disetujui**.
+
+| ID | Rincian | Status |
+|---|---|---|
+| PROP-044 | **Underpayment:** transfer susulan ditautkan ke invoice yang sama, total harus memenuhi kewajiban sebelum Verified; tidak membuat order kedua | **DRAFT KEBIJAKAN, BELUM DISETUJUI** |
+| PROP-045 | **Surplus/transfer ganda:** catat surplus, invoice lunas dihitung satu kali, pengembalian melalui bank dilakukan manual jika panitia menyetujuinya | **DRAFT KEBIJAKAN, BELUM DISETUJUI** |
+| PROP-046 | **Refund pembatalan:** pemeriksaan *case-by-case*; tanpa refund otomatis; kelayakan dan penanggung jawab keputusan menunggu kebijakan | **DRAFT KEBIJAKAN, BELUM DISETUJUI** |
+| PROP-047 | **Payment Due Date:** Admin-editable per kewajiban, kosong bila tidak diatur; Past Due informatif saja, tanpa auto-cancel paper/Full Paper | **DRAFT KEBIJAKAN, BELUM DISETUJUI** |
+| PROP-048 | **Invoice PDF, Payment Receipt (hanya setelah Finance VERIFIED), Dashboard & email notifikasi opsional, tab FIN-06/07, dan idempotency** | **USULAN IMPLEMENTASI 18B-08** |
+| PROP-049 | **16 UAT draft kebijakan + 32 UAT Invoice/Receipt/Notifications** | **RENCANA UAT, BELUM DIJALANKAN** |
+
+**Tetap FINAL:** satu rekening oleh Superadmin, tanpa gateway, bukti JPG/PNG/PDF, Finance verifikasi mutasi, Co-Host baru aktif setelah Verified dan kelima paper tidak ditagih lagi, Paket empat akses setelah Verified, tarif internasional TOR USD+biaya pada pengirim, dan presenter reguler invoice sesudah ACCEPT diumumkan dengan Full Paper independen.
+
+**MASIH TERBUKA:** keputusan refund, top-up, overpayment, tenggat riil/akibatnya; bank resmi/SWIFT/rekonsiliasi incoming USD; bukti lunas pajak/kwitansi formal; daftar tarif di luar TOR; pembayaran presenter dengan multi-paper dan syarat jadwal presentasi.
+
+[Draft 18B-07A](18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Rancangan 18B-08](18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

@@ -18,7 +18,9 @@
 **➡️ [Tahap 18B: Co-Host Institutions, 5 Seats & 5 Papers](docs/18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md)**  
 **➡️ [Tahap 18B: Paket Program Internasional — Personal Dashboard](docs/18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md)**  
 **➡️ [Tahap 18B: Finance Manual, Invoice, Verifikasi & 30 UAT](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md)**  
-**➡️ [Tahap 18B: Kasus Pembayaran & Rekonsiliasi Manual — 28 UAT](docs/18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md)**
+**➡️ [Tahap 18B: Kasus Pembayaran & Rekonsiliasi Manual — 28 UAT](docs/18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md)**  
+**➡️ [18B-07A: Draft Kebijakan Pelunasan, Refund & Tenggat — 16 UAT](docs/18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md)**  
+**➡️ [18B-08: Invoice PDF, Bukti Lunas & Notifikasi — 32 UAT](docs/18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md)**
 
 Diagram di dalam dokumen menggunakan**KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -117,6 +119,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**Tahap 18B-07A/08 (27 Okt 2026):** tersedia **draft rekomendasi kebijakan pembayaran kurang/lebih/ganda, refund dan due date** (belum final) serta **spesifikasi invoice PDF, bukti lunas hanya setelah Finance VERIFIED, dan notifikasi**. Total tambahan **16 + 32 skenario UAT rencana**, belum dieksekusi. [Draft kebijakan](docs/18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md) · [Invoice/Receipt/Notifikasi](docs/18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md).
+
 
 **Tahap 18B-07:** alur pembayaran kurang/lebih/ganda, bukti salah, refund request, keterlambatan dan rekonsiliasi mutasi **telah disusun sebagai USULAN sederhana**, bukan keputusan final refund/top-up/tenggat. [Dokumen 18B-07](docs/18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
 
