@@ -24,7 +24,8 @@
 **➡️ [18C-01: DRAFT Arsitektur Database & 4 ERD — Menunggu Review](docs/18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md)**  
 **➡️ [18C-01A: DRAFT Kamus Data, Constraints, Migration & 36 UAT](docs/18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md)**  
 **➡️ [18B-09: DRAFT Full Paper ala OJS, Revisi Pascapresentasi, Handoff](docs/18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md)**  
-**➡️ [18C-01B: DRAFT ERD Extension Metadata & Publication OJS](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md)**
+**➡️ [18C-01B: DRAFT ERD Extension Metadata & Publication OJS](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md)**  
+**➡️ [18C-02: DRAFT Laravel Backend Architecture, Business Actions & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -123,6 +124,8 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**TAHAP TERBARU — 18C-02 (27 Oktober 2026):** pengguna menilai arah 18C-01 dan Full Paper/OJS-like sudah **OKE UNTUK DILANJUTKAN**; pola bisnis inti diterima, tetapi **desain tabel final dan detail teknis masih DRAFT untuk direview**, bukan keputusan migrasi. [18C-02 Backend Architecture & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md) berisi arsitektur modular monolith Laravel, Action/Policy/FormRequest, transaksi idempotent untuk invoice+entitlements, penilaian Full Paper pascapresentasi, publication OJS profile, queue afterCommit dan boundary akses. **Belum coding/test/deploy.**
 
 **PEMBARUAN REVIEW 18C-01 (27 Okt 2026, BELUM FINAL):** pengguna menambahkan **Full Paper input menyerupai OJS**, penilaian reviewer pascapresentasi dengan **revisi bersyarat/tanpa revisi**, pemilihan jalur Proceedings atau jurnal, dan kebutuhan **ekspor metadata+naskah ke OJS**. Abstract Submission **tetap alur ICHES lama tanpa screening**. Repo lama telah dikaji: reusable canonical metadata, paper file versions, Final ACC, outlet/handoff; namun tidak boleh menyalin obsolete admin screening atau menjanjikan Native XML universal. TOR menyebut artikel terpilih di jurnal, **bukan daftar 10 jurnal**; 10 outlet adalah permintaan konfigurasi pengguna, belum daftar yang diverifikasi panitia. **38 kandidat tabel awal + 15 kandidat ekstensi publication = 53 untuk diskusi**, belum final dan boleh disederhanakan. [Workflow DRAFT 18B-09](docs/18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [Data model DRAFT 18C-01B](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md).
 

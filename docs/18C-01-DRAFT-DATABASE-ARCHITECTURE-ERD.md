@@ -310,6 +310,8 @@ flowchart LR
 
 **Jangan salah baca:** yang “menunggu review” adalah **cara menyimpan dan menghubungkan data**, bukan mengulang negosiasi biaya/Co-Host/paket yang sudah disetujui.
 
+> **STATUS REVIEW BERIKUTNYA (27 Okt 2026):** Pengguna menyatakan **arah desain ini “sudah oke” untuk dilanjutkan** dan mengizinkan tahap 18C-02. **ERD dan 38+15 kandidat tabel masih DRAFT, tidak otomatis final**. Handoff rancangan backend: [18C-02 Laravel Business Logic](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md).
+
 ## 10. Ringkasan status
 
 **Catatan supersession DRAFT:** inventory 38 dan diagram di sini belum memodelkan penuh `paper_translations`, `paper_keywords`, `author_affiliations`, `paper_references`, version snapshots, `presentation_assessments`, revision request dan publication/outlet export. **Jangan menggunakan 38 tabel ini saja untuk membuat migration final.** Baca [18C-01B Publication Extension](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md) sebelum mereview skema gabungan. Abstract Submission tidak berubah; Full Paper OJS-like/Pascapresentasi/Outlet hanya tambahan rancangan.

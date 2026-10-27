@@ -277,6 +277,23 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [18B-09 Full Paper Workflow DRAFT](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [18C-01B Publication ERD DRAFT](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md).
 
+## A16. Persetujuan Arah 18C-01 dan DRAFT Tahap 18C-02 — Laravel Backend Architecture
+
+**KONFIRMASI PENGGUNA 27 OKTOBER 2026:** “Menurut saya sih sudah oke ... Kalau sudah oke mari kita lanjutkan ke tahap berikutnya”. **Diartikan sebagai menerima arah desain 18C-01 (termasuk Full Paper OJS-like, revisi pascapresentasi dan publication handoff) untuk maju ke perancangan backend**. **Bukan** GO implementasi source code, penetapan semua tabel/tipe PK, atau persetujuan otomatis untuk kebijakan Finance yang sebelumnya terbuka.
+
+| ID | Lingkup | Status |
+|---|---|---|
+| NEW-059 | **Arah arsitektur produk/data untuk dilanjutkan:** abstract tetap ICHES tanpa screening; Full Paper seperti OJS; assessment → revisi jika diminta atau tanpa revisi; Proceedings/journal handoff; Co-Host, Paket & Finance tetap kesepakatan lama | **ARAH DITERIMA UNTUK LANJUT TAHAP TEKNIS; bukan final migration** |
+| PROP-061 | **Modular monolith Laravel 13**: `Route → Controller → FormRequest → Policy/Gate → Action → Model/DB → Event/Job afterCommit` | **DRAFT 18C-02, MENUNGGU REVIEW** |
+| PROP-062 | Domain Actions terpisah untuk Academic, Full Paper, Presentation, Publication, Co-Host, Finance, Package, QR, Certificates; menjaga idempotency, scoped permissions, histories | **DRAFT 18C-02** |
+| PROP-063 | OJS export: freeze canonical scholarly snapshot, per-target OJS adapter + validation, metadata-pack fallback; `SELECTED_FOR_JOURNAL != ACCEPTED_BY_JOURNAL` | **DRAFT 18C-02; detail profil target belum ada** |
+| PROP-064 | **40 skenario UAT rencana** Finance, Abstract, Full Paper, Revision, Publication, QR, Certificate dan role boundary | **BELUM DIEKSEKUSI** |
+| PROP-065 | Urutan implementation vertical slices S0–S6; pemilihan database/PK dan penyederhanaan 38+15 tabel dilakukan sebelum real migration | **USULAN, BELUM GO CODING** |
+
+**TERBUKA tidak berubah:** Refund/top-up/surplus/deadlines, aturan pembayaran presenter multi-paper, bank/SWIFT USD aktual, daftar nyata 10 kandidat jurnal dan target OJS version, reviewer/assessor count serta putaran revisi, file Full Paper wajib, offline scanner, DB engine dan PK. Jangan mengunci topik tersebut hanya karena tahap backend terdokumentasi.
+
+[18C-02 — DRAFT Laravel Backend Architecture & Business Logic](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

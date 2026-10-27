@@ -15,6 +15,14 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## TAHAP 18C-02 — DRAFT BACKEND LARAVEL (MENUNGGU REVIEW)
+
+Setelah pemilik produk menilai **arah 18C-01 + OJS-like Full Paper sudah oke untuk dilanjutkan**, tahap desain teknis berikutnya menyusun **Laravel modular monolith** (thin Controller → FormRequest → server Policy/Gate → business Action → DB transaction → afterCommit queued events). Domain akademik, Co-Host, Finance, Program, QR, Certificate dan Publication saling terhubung **tanpa membuat modul bayar/akun ganda**. Semua keputusan yang belum ada (termasuk 10 jurnal konkret, OJS version, refund dan DB engine) **tidak dikunci**.
+
+[DRAFT Backend 18C-02 + 40 UAT](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md).
+
+---
+
 ## TAHAP 18C-01 — DRAFT ARSITEKTUR DATABASE (MENUNGGU REVIEW)
 
 **Hanya rekomendasi arsitektur; tidak final dan belum dibuat database/migration.** Saya mengusulkan **satu database relasional** dengan **38 kandidat tabel** di delapan domain dan **empat ERD**. Keputusan bisnis telah dipertahankan: Co-Host VERIFIED sebelum lima seat/paper aktif dan tanpa tagihan Conference kedua; Paket pribadi Rp1 juta VERIFIED untuk empat hak; Published ACCEPT membuka Full Paper; seluruh listed author paper Presented eligible sertifikat setelah batch panitia.
