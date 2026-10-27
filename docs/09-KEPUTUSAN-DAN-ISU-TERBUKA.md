@@ -185,7 +185,7 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 
 
-## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang## A11. KEPUTUSAN FINANCE 27 Oktober 2026 — Transfer Manual dan Aktivasi
+## A11. KEPUTUSAN FINANCE 27 Oktober 2026 — Transfer Manual dan Aktivasi
 
 | ID | Kebijakan | Status |
 |---|---|---|
@@ -202,7 +202,7 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 [18B-06 — CRUD Finance & 30 UAT](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
-
+## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |
 |---|---|---|---|
