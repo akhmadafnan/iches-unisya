@@ -27,6 +27,9 @@ flowchart TD
 
 **Turunan field-level khusus International Conference** telah dirancang pada [18B-02 — Submission Settings, Tracks, All Papers & Author Wizard](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) serta [18B-03 — Reviewer, Keputusan, Full Paper, Sessions, Moderator & UAT](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md). Ini memperinci matriks CRUD umum di bawah tanpa mengubah keputusan final maupun memulai coding.
 
+> **Turunan spesifikasi tahap 18B-04/05 (USULAN FORM/TEKNIS):** aturan produk yang sudah dikunci tetap **Co-Host Rp3 juta/INSTITUSI = maksimal 5 orang/5 paper (1 paper per orang)** dan **Paket Program Internasional Rp1 juta/ORANG = satu pembelian empat akses secara mandiri melalui Dashboard pribadi**. Field halaman, invitation Magic Link, metode penggantian anggota/paper, status dan waktu publikasi logo, payment activation serta detail refund **belum final**. Admin memiliki CRUD pengaturan, PIC hanya institusinya, Finance memverifikasi uang, peserta membeli sendiri. [18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+
 ## 2. Matriks modul CRUD Backoffice
 
 | Menu Admin | Pengaturan dan aksi utama |

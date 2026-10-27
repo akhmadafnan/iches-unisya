@@ -229,6 +229,9 @@ Membership: Regular / Co-Host [Universitas A, Seat 2/5]
 - **U-04 LoA & Full Paper:** jika ACCEPT telah diumumkan → tampil LoA dan form Full Paper. File yang boleh diunggah, ukuran, template serta closing deadline **masih parameter untuk ditetapkan panitia**. Tidak menunggu Finance VERIFIED untuk **unlock**.
 - **U-05 Presentation/Certificates:** author melihat sesi/venue/link daring bila dipublikasikan, status moderator Presented serta sertifikat sesuai status publish panitia; **seluruh co-author** berhak atas sertifikat individual jika Paper Presented dan panitia menerbitkan secara massal.
 
+> **Turunan spesifikasi tahap 18B-04/05 (USULAN FORM/TEKNIS):** aturan produk yang sudah dikunci tetap **Co-Host Rp3 juta/INSTITUSI = maksimal 5 orang/5 paper (1 paper per orang)** dan **Paket Program Internasional Rp1 juta/ORANG = satu pembelian empat akses secara mandiri melalui Dashboard pribadi**. Field halaman, invitation Magic Link, metode penggantian anggota/paper, status dan waktu publikasi logo, payment activation serta detail refund **belum final**. Admin memiliki CRUD pengaturan, PIC hanya institusinya, Finance memverifikasi uang, peserta membeli sendiri. [18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+
 ## 10. Kontrak metadata akademik minimum (konseptual, bukan database migration)
 
 | Entitas konseptual | Data pokok |

@@ -7,6 +7,29 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAHAP 18B — CRUD CO-HOST DAN PAKET INTERNASIONAL (RANCANGAN HALAMAN)
+
+**Co-Host dan Paket Internasional adalah dua domain pembayaran berbeda, meskipun satu orang bisa berada pada keduanya.** Co-Host Rp3.000.000 **per institusi** mencakup 5 perwakilan/5 paper; paket internasional Rp1.000.000 **per orang** dibeli sendiri di Dashboard dan mencakup 4 program. **Admin dapat mengubah deadline paket melalui CRUD**. PIC tidak mengurus tagihan personal anggota.
+
+```mermaid
+flowchart TD
+  A["Admin: Co-Host Registry + Package Settings/Deadline"] --> I["PIC Co-Host → roster 5 members + 5 paper"]
+  I --> CI["SATU Institutional Invoice Rp3.000.000"]
+  A --> D["Dashboard Peserta"]
+  D --> U{"User ingin Paket Internasional?"}
+  U -->|Ya| PI["SATU Personal Invoice Rp1.000.000"]
+  U -->|Tidak| NO["Tanpa invoice paket pribadi"]
+  PI --> F["Finance cek pembayaran pribadi"]
+  F --> H["Empat hak: MoU + Upgrading + PKM + Destinasi"]
+  CI --> IF["Finance cek pembayaran institusi"]
+```
+
+**Pembelian Paket Rp1 juta tidak mengubah total tagihan Co-Host institusi.** Detail cara undang anggota, proses konfirmasi logo, dan aktivasi hak berdasarkan status pembayaran adalah **rancangan yang belum dikunci**. [Detail Co-Host](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [Detail Paket Mandiri](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+---
+
+
+
 ## TAHAP 18B — CRUD INTERNATIONAL CONFERENCE (RANCANGAN HALAMAN)
 
 Seluruh alur akademik telah diturunkan ke **spesifikasi layar dan field**, bukan lagi diagram konseptual saja: **Conference Settings, delapan Tracks, Abstract Submission Settings, All Submissions, Paper Detail, Reviewer Index + Claim, Academic Decisions + Publish Result, Full Paper, Sessions, Moderator, dan Reports**. Admin CRUD mengatur tanggal/ketentuan, sementara **Reviewer self-claim langsung setelah Submit valid tanpa screening**, Komite memutuskan, serta **Full Paper terbuka ketika ACCEPT diumumkan**.

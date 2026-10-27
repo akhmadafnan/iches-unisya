@@ -26,6 +26,9 @@ flowchart TD
 
 Undangan belum aktif tetap mencadangkan slot. PIC tidak memakai slot kecuali ikut sebagai peserta. Setiap anggota dapat ikut kegiatan lain dengan akun/QR sama. Penggantian setelah layanan dipakai perlu Admin agar fakta kehadiran tidak dihapus. **Cakupan finansial SUDAH FINAL hanya untuk paper International Conference**; **lima paper (satu per perwakilan) sudah final**; fasilitas lainnya belum diputuskan. Paket pendamping Rp1 juta/orang terpisah. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+> **Turunan spesifikasi tahap 18B-04/05 (USULAN FORM/TEKNIS):** aturan produk yang sudah dikunci tetap **Co-Host Rp3 juta/INSTITUSI = maksimal 5 orang/5 paper (1 paper per orang)** dan **Paket Program Internasional Rp1 juta/ORANG = satu pembelian empat akses secara mandiri melalui Dashboard pribadi**. Field halaman, invitation Magic Link, metode penggantian anggota/paper, status dan waktu publikasi logo, payment activation serta detail refund **belum final**. Admin memiliki CRUD pengaturan, PIC hanya institusinya, Finance memverifikasi uang, peserta membeli sendiri. [18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+
 ## 1. Keputusan yang sudah final
 
 | Aturan | Ketetapan |

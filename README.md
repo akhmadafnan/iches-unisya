@@ -14,7 +14,9 @@
 **➡️ [Tahap 18A: Role, Permission, Navigasi Admin](docs/18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md)**  
 **➡️ [Tahap 18B: Android Scanner Offline dan Keamanan](docs/18B-00-ANDROID-OFFLINE-QR-RELIABILITY-DAN-KEAMANAN.md)**  
 **➡️ [Tahap 18B: International Conference — Detail CRUD](docs/18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md)**  
-**➡️ [Tahap 18B: Review, Decision, Full Paper & Session UAT](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md)**
+**➡️ [Tahap 18B: Review, Decision, Full Paper & Session UAT](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md)**  
+**➡️ [Tahap 18B: Co-Host Institutions, 5 Seats & 5 Papers](docs/18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md)**  
+**➡️ [Tahap 18B: Paket Program Internasional — Personal Dashboard](docs/18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md)**
 
 Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
@@ -76,6 +78,8 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [18B-01 — CRUD Scanner & Sync](docs/18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md) | Field/table Admin device, assignment, monitoring, conflict reconciliation, UAT |
 | [18B-02 — Conference Settings, Tracks & Abstract](docs/18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) | Spesifikasi field Admin dan Author: pengaturan, 8 track, form Text+PDF, paper, Co-Host 5 paper, validasi |
 | [18B-03 — Reviewer hingga Presentasi](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md) | Reviewer Index/Claim, Academic Decision/Publish, LoA, Full Paper, Sessions, Moderator, 28 UAT |
+| [18B-04 — Co-Host 5 Anggota & 5 Paper](docs/18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) | Field-level Admin/PIC: institusi, 5 slot, 5 paper, invoice Rp3 juta, pengakuan institusi, 18 UAT |
+| [18B-05 — Paket Personal Rp1 Juta / 4 Program](docs/18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) | Field-level Admin/Dashboard: satu order pribadi, CRUD deadline, empat akses, Finance handoff, 24 UAT |
 
 ## Ringkasan alur terpadu
 

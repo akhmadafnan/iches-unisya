@@ -166,6 +166,25 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 [18B-02 Settings, Tracks, Author Form](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) · [18B-03 Reviewer, Decision, Full Paper & UAT](18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md).
 
+## A10. Tahap 18B — Field-Level Co-Host dan Paket Internasional (usulan teknis)
+
+| ID | Ruang lingkup yang sudah dirancang | Status |
+|---|---|---|
+| PROP-031 | **CH-01..CH-05:** Registry Co-Host, formulir institusi, PIC+undangan, roster 5, alokasi 5 paper, invoice institusi, public recognition | **DESAIN 18B**, keputusan kuota/biaya sebelumnya FINAL |
+| PROP-032 | **PIC-01..PIC-05:** Workspace PIC terbatas own institution; tanpa tagihan personal anggota, tanpa akses review privat | **USULAN UX/permission**, batas pemisahan data dari keputusan sebelumnya |
+| PROP-033 | **PK-01..PK-06:** satu master Paket Rp1 juta (empat benefit), CRUD deadline/status, daftar enrollment, personal invoice, rights dan rekap | **DESAIN 18B**, satu harga/empat program & deadline editable Admin FINAL |
+| PROP-034 | **U-PK-01..U-PK-05:** peserta sendiri daftar/bayar, melihat status, invoice, empat akses, jadwal masing-masing | **USULAN UI**, kewenangan pembelian pribadi FINAL |
+| PROP-035 | Unique/idempotent 1 invoice Co-Host per institusi/event, 1 personal order paket per user/event; status/histori aman | **USULAN INTEGRITAS**, perlu spesifikasi teknis saat coding |
+| PROP-036 | **18 + 24 = 42 skenario UAT** Co-Host dan Paket personal | **RENCANA UAT**, belum diuji |
+
+**Tidak sedang membuka kembali keputusan final:** Co-Host Rp3.000.000/institusi untuk 5 anggota/5 paper (1 perwakilan/1 paper); institusi diakui sebagai Co-Host; Paket Program Internasional Rp1.000.000/orang dibeli dari Dashboard peserta untuk **MoU + Upgrading Kasubdit Penelitian-PKM Kemenag RI + PKM Internasional + Tumpak Sewu–Teras Semeru**; bukan empat tarif; PIC tidak mengelola transaksi personal; deadline paket diubah Admin.
+
+**Yang masih terbuka:** kapan invoice Co-Host issued, penggantian paper/anggota sesudah Submitted atau Rejected, izin dan media logo, aturan refund, masa aktivasi hak paket setelah verifikasi Finance, rincian fasilitas nonakademik.
+
+[18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |
