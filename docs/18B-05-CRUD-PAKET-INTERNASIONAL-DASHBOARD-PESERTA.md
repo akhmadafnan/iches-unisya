@@ -1,9 +1,11 @@
 # 18B-05 — Field-Level CRUD Paket Program Internasional Rp1 Juta: Admin & Personal Dashboard
 
+> **KEPUTUSAN FINANCE 27 OKTOBER — menggantikan label lama:** paket Rp1 juta/orang dibayar pribadi melalui transfer manual + bukti JPG/PNG/PDF; **4 hak AKTIF hanya setelah Finance VERIFIED.** Belum Verified hanya Pending/Correction, bukan akses sementara. [18B-06 Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **Tahap 18B · 27 Oktober 2026 · SPESIFIKASI LAYAR, BUKAN IMPLEMENTASI.**  
 > **FINAL:** **Satu pembelian Rp1.000.000 per orang** melalui **Dashboard Peserta sendiri** memberi **empat akses sekaligus**: (1) International MoU, (2) Upgrading Kasubdit Penelitian-PKM Kemenag RI, (3) PKM Internasional, dan (4) Destinasi Internasional **Tumpak Sewu–Teras Semeru**. **Bukan empat biaya Rp1 juta, bukan add-on Co-Host Rp3 juta, dan bukan produk dalam panel PIC Co-Host.**  
 > **FINAL:** **Admin dapat CRUD tanggal/jam batas akhir pendaftaran paket kapan diperlukan** tanpa coding/redeploy.  
-> **TERBUKA:** waktu aktivasi hak terhadap status Finance VERIFIED, refund, tenggat pembayaran, kapasitas lapangan, detail hak transport/akomodasi/fasilitas, dan sertifikat program.  
+> **FINAL:** empat hak aktif **setelah Finance VERIFIED**. **TERBUKA:** refund, tenggat pembayaran, kapasitas lapangan, detail hak transport/akomodasi/fasilitas, dan sertifikat program.  
 > Konteks: [produk paket yang sudah disetujui](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) · [TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md) · [Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md) · [Co-Host 5 paper](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md).
 
 ## 1. Diagram pemisahan pembayaran yang harus jelas pada UI
@@ -254,14 +256,14 @@ Setelah spesifikasi 18B-04/05, modul Finance perlu menjawab dengan tegas:
 2. **Satu invoice program PERSONAL Rp1 juta** yang dikelola user; berisi empat benefit tanpa empat pembayaran.
 3. **Biaya presenter reguler** menurut mode/kategori TOR dan aturan **hanya sesudah ACCEPT**; jangan terbitkan tagihan presenter sebelum final ACCEPT announced.
 4. Format nomor invoice, rekening penerima, metode transfer/proof, expiry payment (jika ada), penolakan bukti, refund, koreksi harga, dan rekap tidak double count.
-5. Kapan satu atau empat entitlement aktif dan kaitan pembayaran dengan hak/QR, tanpa mencampur attendance dan MoU Signed.
+5. **FINAL:** keempat hak aktif sesudah Finance VERIFIED; QR/check-in dan MoU Signed tetap peristiwa terpisah.
 
-**USULAN nama tahap berikutnya:** `18B-06 — Finance, Billing, Payment Proof & Verification`. Belum membangun payment gateway, rekening bank, aplikasi mobile, atau database.
+**TAHAP 18B-06 SUDAH DIDOKUMENTASIKAN:** [Finance, Billing, Payment Proof & Verification](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md). Belum membangun payment gateway, rekening bank, aplikasi mobile, atau database.
 
 ## 13. Register status
 
 - **DISETUJUI:** Rp1 juta/akun = satu paket empat program; user membeli sendiri dari Dashboard; Co-Host tidak menanggung paket; Admin CRUD deadline.
-- **USULAN:** label menu PK/U-PK, satu SKU, status Open/Closed manual, batas satu enrollment aktif, struktur entitlement, idempotency, tampilan history, activation setelah Finance Verified.
-- **TERBUKA:** batas pendaftaran yang sebenarnya, tenggat pembayaran, kapasitas/transport/akomodasi dan pelayanan lapangan, refund, sertifikat program, metode aktivasi hak.
+- **USULAN:** label menu PK/U-PK, satu SKU, status Open/Closed manual, batas satu enrollment aktif, struktur entitlement, idempotency, tampilan history. **Activation setelah Finance VERIFIED telah FINAL.**
+- **TERBUKA:** batas pendaftaran yang sebenarnya, tenggat pembayaran, kapasitas/transport/akomodasi dan pelayanan lapangan, refund, sertifikat program. **Metode aktivasi setelah VERIFIED telah FINAL.**
 
 [Co-Host field-level](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [Paket dasar](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) · [Register](09-KEPUTUSAN-DAN-ISU-TERBUKA.md) · [Presentasi Warek I](00-PRESENTASI-WAREK-I.md).

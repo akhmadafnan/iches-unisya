@@ -17,8 +17,11 @@
 **➡️ [Tahap 18B: Review, Decision, Full Paper & Session UAT](docs/18B-03-CRUD-REVIEW-DECISION-FULLPAPER-SESSION-DAN-UAT.md)**  
 **➡️ [Tahap 18B: Co-Host Institutions, 5 Seats & 5 Papers](docs/18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md)**  
 **➡️ [Tahap 18B: Paket Program Internasional — Personal Dashboard](docs/18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md)**
+**➡️ [Tahap 18B: Finance Manual, Invoice, Verifikasi & 30 UAT](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md)**
 
-Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
+Diagram di dalam dokumen menggunakan**KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
+ **Mermaid** sehingga muncul langsung sebagai bagan pada tampilan GitHub; tidak perlu perangkat lunak diagram tambahan.
 
 **Keputusan akademik terbaru:** tidak ada lagi *administrative screening* pasca-Submit. Form + server memvalidasi naskah wajib (termasuk teks abstrak dan PDF), lalu submission valid **langsung** tampil di Reviewer Index untuk self-claim. **Co-Host** tetap satu tagihan **Rp3.000.000/institusi** (maks. lima orang); disarankan PIC menghubungkan anggota melalui undangan email/Magic Link. **Detail mekanisme undangan masih usulan.** [Buka diagram](docs/13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 

@@ -7,28 +7,27 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
-## TAHAP 18B — CRUD CO-HOST DAN PAKET INTERNASIONAL (RANCANGAN HALAMAN)
+## TAHAP 18B — FINANCE, CO-HOST & PAKET INTERNASIONAL (KEPUTUSAN 27 OKTOBER)
 
-**Co-Host dan Paket Internasional adalah dua domain pembayaran berbeda, meskipun satu orang bisa berada pada keduanya.** Co-Host Rp3.000.000 **per institusi** mencakup 5 perwakilan/5 paper; paket internasional Rp1.000.000 **per orang** dibeli sendiri di Dashboard dan mencakup 4 program. **Admin dapat mengubah deadline paket melalui CRUD**. PIC tidak mengurus tagihan personal anggota.
+**Satu rekening resmi, transfer manual, bukti JPG/PNG/PDF, Finance Verified; tanpa payment gateway.** Bank aktual masih akan dipilih (BRI/BNI/Mandiri/BCA/BSI); **Superadmin** mengubah nomor rekening langsung tanpa approval kedua. Invoice kategori WNA internasional memakai USD sesuai TOR, biaya transfer internasional seluruhnya pada peserta.
+
+**Co-Host:** registrasi institusi → **satu invoice Rp3 juta** → Finance VERIFIED → **aktif 5 anggota/5 paper Conference**. Sebelum VERIFIED, fitur Co-Host belum aktif. **Tidak ada lagi invoice presenter personal** untuk kelima paper sponsor, termasuk setelah ACCEPT. **Paket Program Internasional:** pembelian pribadi **satu Rp1 juta** → Finance VERIFIED → **empat akses aktif**. Anggota Co-Host hanya membayar paket bila secara pribadi ikut paket.
 
 ```mermaid
 flowchart TD
-  A["Admin: Co-Host Registry + Package Settings/Deadline"] --> I["PIC Co-Host → roster 5 members + 5 paper"]
-  I --> CI["SATU Institutional Invoice Rp3.000.000"]
-  A --> D["Dashboard Peserta"]
-  D --> U{"User ingin Paket Internasional?"}
-  U -->|Ya| PI["SATU Personal Invoice Rp1.000.000"]
-  U -->|Tidak| NO["Tanpa invoice paket pribadi"]
-  PI --> F["Finance cek pembayaran pribadi"]
-  F --> H["Empat hak: MoU + Upgrading + PKM + Destinasi"]
-  CI --> IF["Finance cek pembayaran institusi"]
+  I["Co-Host institusi"] --> CI["1 invoice Rp3 juta"]
+  CI --> CF["Finance Verified"]
+  CF --> CH["Fitur aktif: 5 anggota dan 5 paper tanpa invoice kedua"]
+  U["User pesan 1 Paket Internasional"] --> PI["1 invoice pribadi Rp1 juta"]
+  PI --> PF["Finance Verified"]
+  PF --> PK["4 akses aktif"]
+  A["Presenter reguler ACCEPT diumumkan"] --> FP["Full Paper terbuka"]
+  A --> PR["Invoice presenter baru terbit"]
 ```
 
-**Pembelian Paket Rp1 juta tidak mengubah total tagihan Co-Host institusi.** Detail cara undang anggota, proses konfirmasi logo, dan aktivasi hak berdasarkan status pembayaran adalah **rancangan yang belum dikunci**. [Detail Co-Host](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [Detail Paket Mandiri](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+**Detail field/UI dan 30 UAT rencana:** [18B-06 Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md) · [Co-Host 18B-04](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [Paket 18B-05](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md). Bank, refund, selisih transfer, dan kategori belum ada di TOR **masih TERBUKA**.
 
 ---
-
-
 
 ## TAHAP 18B — CRUD INTERNATIONAL CONFERENCE (RANCANGAN HALAMAN)
 

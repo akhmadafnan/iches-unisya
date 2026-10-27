@@ -1,5 +1,7 @@
 # 15 — Paket Program Internasional Rp1 Juta pada Dashboard Peserta
 
+> **KEPUTUSAN FINANCE 27 OKTOBER 2026:** Satu Paket Program Internasional Rp1 juta/orang memberi empat hak **HANYA SETELAH Finance VERIFIED**. Upload bukti bukan aktivasi hak. Ini menggantikan catatan lama yang menandai syarat VERIFIED sebagai usulan. Transfer manual ke satu rekening resmi, bukti JPG/PNG/PDF. [18B-06 Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
 
 
@@ -91,7 +93,7 @@ Jika peserta Co-Host tidak membeli paket, **tidak ada tagihan Rp1 juta**. Jika d
 5. Satu user tidak membuat dua kewajiban aktif yang sama hanya karena double-click (usulan integritas).
 6. Status **entitled/terdaftar**, **hadir**, dan **signatory MoU** terpisah.
 7. QR personal tetap sama; kehadiran masing-masing program tidak otomatis hanya karena pembayaran.
-8. Aktivasi hak setelah Finance Verified merupakan **rekomendasi**, belum tanggal atau syarat final yang disahkan.
+8. **FINAL:** aktivasi keempat hak **baru setelah Finance VERIFIED**. Upload bukti saja tidak cukup.
 
 ## Register keputusan
 
@@ -101,8 +103,8 @@ Jika peserta Co-Host tidak membeli paket, **tidak ada tagihan Rp1 juta**. Jika d
 | NEW-043 | Menu Co-Host tidak mencakup pembelian/tagihan Paket Rp1 juta anggota | **DISETUJUI** |
 | NEW-044 | **Satu paket Rp1 juta untuk keempat program**, tidak Rp1 juta masing-masing | **DISETUJUI** |
 | NEW-045 | Co-Host dan non-Co-Host bisa membeli paket pribadi dengan alur sama | **DISETUJUI** |
-| PROP-014 | Pembatasan satu pendaftaran aktif per user, teknis aktivasi hak setelah Finance Verified | **USULAN** |
+| PROP-014 | Pembatasan satu pendaftaran aktif per user | **USULAN TEKNIS**; syarat aktivasi hak VERIFIED telah FINAL pada NEW-054 |
 
-**METODE DEADLINE SUDAH FINAL:** Admin dapat menetapkan/mengubah tanggal-jam batas akhir pendaftaran paket kapan diperlukan melalui CRUD Backoffice; **angka tanggal akhirnya belum ditetapkan**. Masih terbuka: refund, teknis aktivasi hak, kuota peserta lapangan, fasilitas tambahan dan sertifikat tiap kegiatan. **Sudah final:** unit satu harga Rp1 juta/orang untuk satu paket empat akses dan pemisahan penuh dari fitur Co-Host.
+**METODE DEADLINE SUDAH FINAL:** Admin dapat menetapkan/mengubah tanggal-jam batas akhir pendaftaran paket kapan diperlukan melalui CRUD Backoffice; **angka tanggal akhirnya belum ditetapkan**. Masih terbuka: refund, kuota peserta lapangan, fasilitas tambahan dan sertifikat tiap kegiatan. **Empat hak setelah Finance VERIFIED telah FINAL.** **Sudah final:** unit satu harga Rp1 juta/orang untuk satu paket empat akses dan pemisahan penuh dari fitur Co-Host.
 
 [Rancangan Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md) · [Presentasi Warek I](00-PRESENTASI-WAREK-I.md) · [Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).

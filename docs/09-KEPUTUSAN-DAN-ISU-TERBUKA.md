@@ -107,7 +107,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | NEW-043 | **Menu/PIC Co-Host tidak memuat paket Rp1 juta, tagihan individu, atau tambah harga institusi** | **DISETUJUI** |
 | NEW-044 | **SATU paket Rp1 juta/orang** mencakup **International MoU + Upgrading Kasubdit Penelitian-PKM Kemenag RI + PKM Internasional + Destinasi Tumpak Sewu–Teras Semeru** | **DISETUJUI** |
 | NEW-045 | Peserta Co-Host dan non-Co-Host dapat membeli paket yang sama di Dashboard masing-masing | **DISETUJUI** |
-| PROP-014 | Satu pendaftaran aktif/user dan aktivasi hak setelah pembayaran diverifikasi | **USULAN** |
+| PROP-014 | Pembatasan satu pendaftaran aktif/user masih usulan teknis; **aktivasi empat hak setelah Finance VERIFIED telah FINAL (NEW-054)** | **USULAN idempotency saja** |
 
 Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang disahkan panitia. [Spesifikasi lengkap](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
@@ -179,13 +179,30 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 **Tidak sedang membuka kembali keputusan final:** Co-Host Rp3.000.000/institusi untuk 5 anggota/5 paper (1 perwakilan/1 paper); institusi diakui sebagai Co-Host; Paket Program Internasional Rp1.000.000/orang dibeli dari Dashboard peserta untuk **MoU + Upgrading Kasubdit Penelitian-PKM Kemenag RI + PKM Internasional + Tumpak Sewu–Teras Semeru**; bukan empat tarif; PIC tidak mengelola transaksi personal; deadline paket diubah Admin.
 
-**Yang masih terbuka:** kapan invoice Co-Host issued, penggantian paper/anggota sesudah Submitted atau Rejected, izin dan media logo, aturan refund, masa aktivasi hak paket setelah verifikasi Finance, rincian fasilitas nonakademik.
+**Yang masih terbuka:** penggantian paper/anggota sesudah Submitted atau Rejected, izin/media logo, aturan refund, rincian fasilitas nonakademik. **Status invoice Co-Host saat registrasi dan aktivasi Co-Host/Paket setelah VERIFIED telah DIPUTUSKAN pada A11.**
 
 [18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
 
 
-## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
+## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang## A11. KEPUTUSAN FINANCE 27 Oktober 2026 — Transfer Manual dan Aktivasi
+
+| ID | Kebijakan | Status |
+|---|---|---|
+| NEW-050 | **SATU rekening resmi** ICHES (bank masih pilihan BRI/BNI/Mandiri/BCA/BSI); **Superadmin dapat mengubah langsung**, tanpa approval dua tingkat. | **DISETUJUI** |
+| NEW-051 | Pembayaran **transfer manual tanpa payment gateway**, salin nomor rekening, upload bukti JPG/JPEG/PNG/PDF; **Finance mencocokkan mutasi** sebelum VERIFIED. | **DISETUJUI** |
+| NEW-052 | WNI kategori nasional **IDR**; WNA kategori internasional TOR **USD** dengan transfer USD; **semua biaya transfer internasional dibayar peserta**. Tarif Co-Host/Paket yang ditetapkan IDR tetap IDR. | **DISETUJUI**; operasional bank & regulasi perlu dikonfirmasi |
+| NEW-053 | **Co-Host registrasi → satu invoice Rp3 juta/institusi → Finance VERIFIED → fitur 5 anggota/5 paper Conference aktif**, tanpa invoice presenter Conference tambahan untuk kelima paper, termasuk setelah ACCEPT. **Tidak ada jalur Co-Host submit sebelum VERIFIED.** | **DISETUJUI FINAL, supersedes usulan terdahulu** |
+| NEW-054 | **Paket Program Internasional satu invoice pribadi Rp1 juta**; **keempat hak baru aktif setelah Finance VERIFIED**, bukan setelah bukti diunggah. | **DISETUJUI FINAL, supersedes status PROP-014 terdahulu** |
+| NEW-055 | **Presenter reguler** baru ditagih setelah final ACCEPT diumumkan; Full Paper tetap terbuka setelah diumumkan tanpa gate Finance. Participant membayar sesuai kategori TOR. | **DISETUJUI**, penegasan NEW-019/031/032 |
+| PROP-037 | FIN-01..FIN-05: Overview, Invoices, Payment Verification, Reports, Bank Settings; status, field, file privat dan idempotency | **USULAN UI/TEKNIS** |
+| PROP-038 | 30 acceptance scenarios Finance | **UAT TERENCANA — belum dijalankan** |
+
+**TERBUKA:** bank/rekening/SWIFT final; bagaimana USD diterima pada rekening terpilih dan kesesuaian ketentuan; tenggat pelunasan; selisih/lebih bayar, transfer ganda, refund; harga kombinasi tidak tercantum TOR; pembayar presenter multi-paper; aturan scheduling presenter; rincian format PDF invoice. Tidak perlu mempersulit aplikasi dengan approval rekening berlapis.
+
+[18B-06 — CRUD Finance & 30 UAT](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
+
 
 | ID | Area | Referensi dan implikasi | Status |
 |---|---|---|---|

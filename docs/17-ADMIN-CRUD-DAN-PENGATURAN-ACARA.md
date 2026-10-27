@@ -1,5 +1,7 @@
 # 17 — Admin-Centered CRUD dan Pengaturan Seluruh ICHES 2027
 
+> **UPDATE FINANCE 27 OKTOBER:** Superadmin mengelola **satu rekening langsung tanpa dual approval**; satu antrean Finance untuk transfer manual/bukti JPG/PNG/PDF. **Co-Host Verified dulu baru fitur 5 paper aktif; Paket personal Verified dulu baru 4 akses aktif.** [Tahap 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **Keputusan final, 27 Oktober 2026:** semua aspek **International Conference** dan rangkaian kegiatan lain dikelola melalui Backoffice **Admin** yang menyediakan CRUD sesuai kebutuhan, supaya panitia dapat mengubah pengaturan tanpa meminta developer atau deploy kode. **Batas akhir pendaftaran Paket Program Internasional harus dapat ditentukan dan diubah Admin kapan diperlukan.** Dokumentasi spesifikasi, belum implementasi.
 
 ## 1. Prinsip arsitektur pengelolaan
@@ -79,7 +81,7 @@ flowchart TD
 | Registered Users | Daftar peserta dan status pembayaran pribadi |
 | Save Changes | Menerapkan perubahan untuk pendaftaran berikutnya, tanpa perubahan source code |
 
-**Rekomendasi minimal:** tanggal deadline yang diubah langsung memengaruhi apakah peserta *baru* masih dapat mendaftar. Jangan hanya disable tombol Vue: backend memverifikasi status & deadline pada saat request. Peserta yang sudah mendaftar tetap dapat melihat tagihan dan riwayatnya meski pendaftaran ditutup. Admin bisa memperpanjang atau menutup sesuai ketentuan acara tanpa deploy. **Status pembayaran Finance VERIFIED** sebagai syarat aktivasi empat akses masih rekomendasi operasional yang perlu diputuskan.
+**Rekomendasi minimal:** tanggal deadline yang diubah langsung memengaruhi apakah peserta *baru* masih dapat mendaftar. Jangan hanya disable tombol Vue: backend memverifikasi status & deadline pada saat request. Peserta yang sudah mendaftar tetap dapat melihat tagihan dan riwayatnya meski pendaftaran ditutup. Admin bisa memperpanjang atau menutup sesuai ketentuan acara tanpa deploy. **Status Finance VERIFIED** sebagai syarat aktivasi keempat akses adalah **KEPUTUSAN FINAL 27 Oktober 2026**.
 
 **Deadline Paket Program Internasional terpisah dari deadline Conference Abstract Submission**; penutupan salah satu tidak otomatis menutup yang lain. **Full Paper dibuka ketika ACCEPT diumumkan**, bukan karena admin mengubah tanggal program pendamping.
 
@@ -119,6 +121,6 @@ flowchart TD
 | NEW-049 | Sistem membaca pengaturan Admin, sedangkan reviewer/finance/moderator/user tetap menjalankan perannya | **KONSEKUENSI DISETUJUI** |
 | PROP-015 | Struktur menu, sakelar Open/Closed, visibility, pencadangan jatah paper pada Draft | **USULAN TEKNIS** |
 
-Yang masih perlu didetailkan: aturan paper Rejected ditarik/ganti, ketentuan refund, hak paket sesudah verifikasi Finance, dan daftar hak CRUD tiap role. **Rancangan Admin sudah menjelaskan arah operasional tanpa menulis kode fitur.**
+Yang masih perlu didetailkan: aturan paper Rejected ditarik/ganti, ketentuan refund, dan daftar hak CRUD tiap role. **Empat hak paket dan fitur Co-Host setelah VERIFIED telah FINAL.** **Rancangan Admin sudah menjelaskan arah operasional tanpa menulis kode fitur.**
 
 [Lihat kuota paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Paket user](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) · [Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).

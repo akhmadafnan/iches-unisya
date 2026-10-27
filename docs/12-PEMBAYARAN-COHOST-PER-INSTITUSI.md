@@ -1,5 +1,7 @@
 # 12 — Kebijakan Pembayaran Co-Host (Per Institusi)
 
+> **KEPUTUSAN FINANCE 27 OKTOBER 2026 (menggantikan diskusi sebelumnya):** Co-Host **mendaftar institusi → satu invoice Rp3.000.000 → transfer + upload JPG/PNG/PDF → Finance VERIFIED → baru fitur PIC untuk maksimal 5 anggota/5 paper Conference aktif**. Setelah VERIFIED, paper sponsor **tidak ditagih lagi setelah ACCEPT**. Program internasional di luar Conference adalah pembelian pribadi terpisah. Rekening hanya diatur langsung Superadmin tanpa approval kedua. [Detail 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
 
 

@@ -1,5 +1,7 @@
 # 18B-04 — Field-Level CRUD Co-Host Institutions, PIC, Lima Perwakilan & Lima Paper
 
+> **SUPERSEDES USULAN AKTIVASI LAMA · 27 OKTOBER 2026:** Registrasi Co-Host melahirkan **SATU invoice Rp3 juta/institusi; PIC wajib membayar dan menunggu Finance VERIFIED sebelum mengakses fitur roster/submit 5 paper sponsor.** Setelah aktif, lima paper sponsor **tidak memiliki invoice Conference/presenter pribadi tambahan**, bahkan setelah ACCEPT. Aturan lama yang menyebut gate pembayaran belum disepakati telah diganti keputusan ini. [18B-06 Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **Tahap 18B · 27 Oktober 2026 · SPESIFIKASI UI & BISNIS (BELUM CODING).**  
 > **FINAL dari pemilik produk:** **Rp3.000.000 / institusi / event** untuk jalur **paper International Conference**; **maksimal lima perwakilan dan lima paper**, masing-masing perwakilan mengelola **SATU** paper Co-Host melalui akunnya; institusi mendapatkan **pengakuan sebagai Co-Host ICHES 2027**.  
 > **Paket Program Internasional Rp1.000.000/orang** untuk empat kegiatan bukan menu/add-on/tagihan Co-Host. Pembelian dilakukan tiap peserta melalui Dashboard pribadi.  
@@ -165,7 +167,7 @@ flowchart TD
 | Status | Due / Proof Submitted / Verification / Verified / Correction Required (contoh) |
 | Auditor | Finance actor, waktu, histori keputusan/verifikasi |
 
-**Waktu invoice diterbitkan dan apakah pembayaran institusi mengunci submit paper** belum disepakati. **Jangan membuat lima tagihan untuk lima paper atau meminta pembayaran presenter Co-Host secara personal per paper secara otomatis**. Jika panitia mengubah harga nanti, invoice lama **tidak ditulis ulang**.
+**Keputusan FINAL 27 Oktober:** invoice Co-Host dibuat pada registrasi institusi; **Finance VERIFIED wajib sebelum roster/submit jalur Co-Host aktif**. **Jangan membuat lima tagihan untuk lima paper atau meminta pembayaran presenter Co-Host secara personal per paper secara otomatis**. Jika panitia mengubah harga nanti, invoice lama **tidak ditulis ulang**.
 
 **Batas lintas domain:** pembelian paket Rp1 juta salah satu anggota muncul pada **Personal Dashboard anggota** dan **Finance Personal Transactions**, **tidak** pada PIC-04 / Invoice Institusi. **Jangan menampilkan total gabungan Rp6 juta sebagai utang institusi**.
 
@@ -248,6 +250,6 @@ NO personal Rp1m package purchase/invoice in this workspace.
 
 ## L. Hal yang masih perlu diputuskan
 
-**KEPUTUSAN FINAL tidak dibuka lagi:** 5 member, 5 paper (1/anggota), Rp3 juta per institusi, nama institusi Co-Host, akademik normal, paket Rp1 juta dibeli individu secara terpisah. **TERBUKA:** penggantian paper Rejected/Withdrawn, mengganti anggota pasca-Submitted, kapan invoice institusi diterbitkan, bukti status Co-Host resmi dan waktu/logo publikasi, fasilitas Co-Host di luar paper, paper reguler tambahan di luar kuota. **USULAN DESAIN:** Magic Link invite roster, kode institusi, tab/chip status, pencadangan slot Draft, otorisasi granular dan audit koreksi.
+**KEPUTUSAN FINAL tidak dibuka lagi:** 5 member, 5 paper (1/anggota), Rp3 juta per institusi, nama institusi Co-Host, akademik normal, paket Rp1 juta dibeli individu secara terpisah. **TERBUKA:** penggantian paper Rejected/Withdrawn, mengganti anggota pasca-Submitted, bukti status Co-Host resmi dan waktu/logo publikasi, fasilitas Co-Host di luar paper, paper reguler tambahan di luar kuota. **SUDAH FINAL:** invoice saat registrasi, VERIFIED sebelum fitur aktif. **USULAN DESAIN:** Magic Link invite roster, kode institusi, tab/chip status, pencadangan slot Draft, otorisasi granular dan audit koreksi.
 
 [Lihat 18B-05 — Paket pribadi/empat program](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) · [18B-02 — Submission akademik](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md) · [Peta Admin](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
