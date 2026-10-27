@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## TAHAP 18C-03 — AUTHENTICATION, ROLES & SECURITY (DRAFT)
+
+**Satu akun, beberapa peran, tiga ruang kerja utama:** Personal Dashboard, Institution Workspace, dan Backoffice/Reviewer/Moderator scoped. **Bank Settings Superadmin-only** tanpa approval ganda; Finance memverifikasi dana berdasarkan mutasi; PIC Co-Host hanya akses invoice institusi dan lima seat sesudah VERIFIED; paket pribadi anggota tidak terlihat PIC. Reviewer review own claim, Komite publish ACCEPT/Final ACC, Moderator Presented, tim publikasi menyerahkan metadata+naskah ke outlet OJS yang benar. File bank/manuskrip/reviewer confidential **privat** dan semua endpoint diperiksa lewat Policy di backend. **Login/MFA/offline scanner teknis belum final, belum coding.** [Security DRAFT 18C-03](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [Matrix & 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
+
+---
+
 ## TAHAP 18C-02 — DRAFT BACKEND LARAVEL (MENUNGGU REVIEW)
 
 Setelah pemilik produk menilai **arah 18C-01 + OJS-like Full Paper sudah oke untuk dilanjutkan**, tahap desain teknis berikutnya menyusun **Laravel modular monolith** (thin Controller → FormRequest → server Policy/Gate → business Action → DB transaction → afterCommit queued events). Domain akademik, Co-Host, Finance, Program, QR, Certificate dan Publication saling terhubung **tanpa membuat modul bayar/akun ganda**. Semua keputusan yang belum ada (termasuk 10 jurnal konkret, OJS version, refund dan DB engine) **tidak dikunci**.

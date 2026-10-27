@@ -294,6 +294,25 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [18C-02 — DRAFT Laravel Backend Architecture & Business Logic](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md).
 
+## A17. Tahap 18C-03 — Authentication, Scoped RBAC & Security (DRAFT)
+
+**Permintaan pengguna:** lanjut ke tahap berikutnya setelah 18C-02. Dokumentasi keamanan disusun **sebagai usulan**, tidak mengesahkan pilihan auth atau implementasi. Fondasi bisnis tetap FINAL sebagaimana keputusan sebelumnya.
+
+| ID | Rancangan keamanan | Status |
+|---|---|---|
+| PROP-066 | **Satu akun User banyak role**, personal dashboard, Institution Workspace, Reviewer/Moderator/Finance/Publication/Scanner sesuai permission dan scope | **DRAFT TEKNIS, MENUNGGU REVIEW** |
+| PROP-067 | **Laravel session authentication** dengan email/password, email verification, reset, CSRF, secure cookies dan throttling; invitation via email bila dipilih | **DRAFT; passwordless/Magic Link alternatif TERBUKA** |
+| PROP-068 | **Policy/Gate** wajib pada setiap resource/event/institution/paper/session/outlet; Inertia menu visibility **bukan authorization**; file tersimpan privat | **DRAFT SECURITY CONTRACT** |
+| PROP-069 | Superadmin-only Bank Settings (**KEPUTUSAN FINAL**), Finance-only Verify secara izin, Academic Committee Publish ACCEPT, Moderator Presented, Publication Committee Final ACC, Certificate Officer manual issue | **OTORITAS BISNIS FINAL; detail role/template DRAFT** |
+| PROP-070 | Private reviewer notes, finance proofs, exports OJS, QR tokens dan secret storage; minimal audit, backup, restore drill, COI reviewer, tenant-safe route guards | **DRAFT PENERAPAN** |
+| PROP-071 | 52 skenario Security UAT termasuk IDOR, unauthorized role crossover, invoice pribadi/institusi, double scan dan private file | **RENCANA UAT — BELUM DIEKSEKUSI** |
+
+**TERBUKA / bukan keputusan otomatis:** login email/password versus Magic Link, MFA staff sensitive, cookie/session TTL, apakah memakai Spatie teams dan versi, PK BIGINT vs UUIDv7, PostgreSQL vs MySQL, detail reviewer anonymization, offline device credentials, backup retention, journal/OJS credentials. Repo lama memiliki Laravel+MySQL+UUIDv7+Spatie foundations **di repository lama**, bukan implementasi repo baru. Tidak ada GO coding.
+
+**Supersession eksplisit:** usulan role 18A tentang satu template Admin **tidak menggantikan** keputusan Finance yang kemudian menetapkan **hanya Superadmin dapat mengubah rekening resmi**. Tidak perlu dual approval atau akun Finance kedua untuk itu.
+
+[DRAFT 18C-03 Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [DRAFT 18C-03A Matrix & 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

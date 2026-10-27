@@ -1,5 +1,7 @@
 # 18C-02 — DRAFT Laravel Backend Architecture & Business Logic ICHES UNISYA 2027
 
+> **HANDOFF LANJUTAN 27 OKTOBER 2026 (DRAFT):** [18C-03 Security Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) dan [18C-03A Permission Matrix + 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md) merinci session login, resource policies, event/institution/paper/finance scope, private file/download dan publication export. **Tidak mengubah 18C-02 menjadi final dan tidak mengotorisasi coding.**
+
 > **27 Oktober 2026 · REKOMENDASI UNTUK REVIEW · BELUM FINAL · BELUM CODING.**
 >
 > **Latar keputusan:** pengguna menyatakan rancangan 18C-01 dan tambahan Full Paper/OJS secara garis besar sudah **OKE dan layak dilanjutkan**. Ini **persetujuan arah**, bukan penetapan 53 tabel fisik, MySQL/PostgreSQL, UUIDv7/BIGINT, jumlah reviewer, profil OJS maupun ketentuan refund sebagai FINAL.

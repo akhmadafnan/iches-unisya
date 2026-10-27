@@ -25,7 +25,9 @@
 **➡️ [18C-01A: DRAFT Kamus Data, Constraints, Migration & 36 UAT](docs/18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md)**  
 **➡️ [18B-09: DRAFT Full Paper ala OJS, Revisi Pascapresentasi, Handoff](docs/18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md)**  
 **➡️ [18C-01B: DRAFT ERD Extension Metadata & Publication OJS](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md)**  
-**➡️ [18C-02: DRAFT Laravel Backend Architecture, Business Actions & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md)**
+**➡️ [18C-02: DRAFT Laravel Backend Architecture, Business Actions & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md)**  
+**➡️ [18C-03: DRAFT Authentication, Scoped Roles & Security Architecture](docs/18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md)**  
+**➡️ [18C-03A: DRAFT Permission Matrix, Route Guards & 52 Security UAT](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -124,6 +126,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**TAHAP TERBARU — 18C-03 DRAFT (27 Oktober 2026):** Authentication/Authorization/Security untuk satu akun banyak peran, multi-scope Event/Institution/Paper/Session/Outlet, Finance dan Co-Host terisolasi, reviewer COI, private file, scanner scope, publication export, audit & privasi. **52 Security UAT** sudah DIRANCANG, **bukan dieksekusi**. **Bank Settings Superadmin-only, tanpa dual approval** tetap keputusan yang diikuti. Login email/password vs Magic Link, MFA staf, retensi dan scanner offline masih untuk review. Tidak ada coding/deploy. [Dokumen 18C-03](docs/18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [Lampiran 18C-03A](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
+
 
 **TAHAP TERBARU — 18C-02 (27 Oktober 2026):** pengguna menilai arah 18C-01 dan Full Paper/OJS-like sudah **OKE UNTUK DILANJUTKAN**; pola bisnis inti diterima, tetapi **desain tabel final dan detail teknis masih DRAFT untuk direview**, bukan keputusan migrasi. [18C-02 Backend Architecture & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md) berisi arsitektur modular monolith Laravel, Action/Policy/FormRequest, transaksi idempotent untuk invoice+entitlements, penilaian Full Paper pascapresentasi, publication OJS profile, queue afterCommit dan boundary akses. **Belum coding/test/deploy.**
 
