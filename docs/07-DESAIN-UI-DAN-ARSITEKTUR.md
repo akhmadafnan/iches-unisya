@@ -1,5 +1,8 @@
 # 07 — Arah UI/UX, Backoffice, dan Arsitektur Teknis
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Status:** kesepakatan arah stack dan gaya, belum coding. Referensi visual: Shadcn Vue Admin; preset user `b3G0JXXL04` dari shadcn/ui Next.js **hanya inspirasi visual**, bukan kode Vue siap instalasi.
 
 ## Prinsip visual disepakati

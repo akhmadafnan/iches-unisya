@@ -20,6 +20,10 @@ Diagram di dalam dokumen menggunakan **Mermaid** sehingga muncul langsung sebaga
 
 **FINAL:** Paket Program Internasional **Rp1 juta/orang merupakan SATU paket empat program**, dibeli sendiri di **Dashboard Peserta**, terpisah sepenuhnya dari menu PIC/invoice Co-Host Rp3 juta. [Alur dan diagram](docs/15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](docs/16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](docs/17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
+
 ## Apa yang akan dibangun?
 
 **Keputusan produk terbaru:** Co-Host **Rp3.000.000** (mengganti Rp450.000 pada TOR tertulis) dan maksimal **5 peserta per institusi**; review melalui **filter topik + claim mandiri**, dimulai setelah setiap abstrak valid disubmit; Full Paper berdasarkan **ACCEPT yang diumumkan**, bukan tanggal kaku. **Biaya ini satu kali per institusi, mencakup maksimal lima peserta.**
@@ -60,6 +64,8 @@ Satu aplikasi terpadu, satu profil, dan satu QR pribadi untuk berbagai jalur keg
 | [13 — Linking peserta dan tanpa screening](docs/13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md) | Skema undangan lima peserta Co-Host; validasi form; reviewer langsung claim |
 | [14 — Cakupan Co-Host dan Program Pendamping](docs/14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md) | Co-Host Rp3 juta khusus paper konferensi; paket pendamping Rp1 juta/orang; pengakuan institusi Co-Host |
 | [15 — Paket Program Internasional mandiri](docs/15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md) | Dashboard peserta: beli sendiri satu paket Rp1 juta untuk empat akses; tidak melalui Co-Host |
+| [16 — Lima perwakilan/lima paper](docs/16-COHOST-LIMA-PAPER-PERWAKILAN.md) | Co-Host 5 wakil, masing-masing satu paper di akun sendiri |
+| [17 — Admin CRUD seluruh ICHES](docs/17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md) | Admin bisa mengatur deadline dan seluruh modul konferensi, program dan website |
 
 ## Ringkasan alur terpadu
 

@@ -1,5 +1,8 @@
 # 03 — Submission Akademik, Review, LoA, dan Full Paper
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **STATUS CAMPURAN:** 'Disepakati' bersumber diskusi ICHES baru. 'Baseline lama' dari [repository referensi](https://github.com/akhmadafnan/international-conference-platform/tree/develop), **belum otomatis berarti implementasi tersedia**.
 
 > **Koreksi terbaru pemilik produk (26 Oktober 2026):** Tarif Co-Host **Rp3.000.000** menggantikan Rp450.000 yang tertulis di TOR; kapasitas **maksimal lima peserta per institusi**; agenda MoU/Pembinaan dan panel boleh paralel **tanpa modul anti-benturan**; reviewer melakukan **self-claim** dari daftar abstrak yang valid disubmit dengan pencarian/filter topik (tidak perlu dibatasi topik pada akun reviewer); Full Paper dibuka **ketika ACCEPT resmi diumumkan kepada submitting author**, bukan dari tanggal tetap. **KEPUTUSAN FINAL Co-Host:** tarif Rp3.000.000 **per institusi**, satu kali tagihan untuk maksimal **lima peserta**. Satuan pembayaran tidak lagi terbuka. Detail cakupan layanan/paper dalam paket Co-Host masih perlu diputuskan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md). Rincian: [Keputusan operasional terbaru](11-KEPUTUSAN-OPERASIONAL-26-OKT-2026.md).
@@ -23,7 +26,7 @@
 
 ## Kaitan paket akademik dengan institusi Co-Host
 
-Paket Co-Host **Rp3 juta/institusi untuk maksimal lima peserta** memiliki cakupan finansial **khusus paper International Conference**. Jumlah paper yang masuk paket ini **belum ditentukan** dan tidak otomatis identik dengan jumlah peserta. **Usulan:** daftar submission dapat dihubungkan secara eksplisit dengan institusi Co-Host melalui pemilik submission/anggota terverifikasi; validasi hak paket dilakukan saat kewajiban pembayaran diperiksa, bukan saat reviewer memilih topic. Proses reviewer, final ACCEPT, LoA dan Full Paper tetap sama untuk paper reguler maupun Co-Host.
+Paket Co-Host **Rp3 juta/institusi untuk maksimal lima peserta** memiliki cakupan finansial **khusus paper International Conference**. **Jumlah paper yang tercakup FINAL = 5 paper untuk 5 perwakilan, satu paper Co-Host yang dikelola masing-masing perwakilan**. **Rancangan relasi:** setiap submission yang menggunakan kuota Co-Host harus terkait satu dari lima perwakilan/akun institusi yang berhak; setiap anggota satu paper dan total institusi lima, validasi hak paket dilakukan saat kewajiban pembayaran diperiksa, bukan saat reviewer memilih topic. Proses reviewer, final ACCEPT, LoA dan Full Paper tetap sama untuk paper reguler maupun Co-Host.
 
 Paket program pendamping (MoU, Pembinaan, PKM, Destinasi) **Rp1.000.000 per orang** tidak termasuk Rp3 juta Co-Host. [Baca keputusan](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 

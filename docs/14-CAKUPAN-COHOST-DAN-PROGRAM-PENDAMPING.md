@@ -1,8 +1,11 @@
 # 14 — Cakupan Biaya Co-Host, Paket Program Pendamping, dan Pengakuan Institusi
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Kebijakan produk ICHES 2027 · 26 Oktober 2026.** Sumber: klarifikasi langsung pemilik produk; tabel kegiatan dan paket program dalam TOR Warek I menjadi konteks.  
 > **FINAL DALAM RANCANGAN:** Co-Host **Rp3.000.000 per institusi** (maks. 5 peserta) **khusus untuk paper International Conference**; program pendamping dalam paket TOR **Rp1.000.000 per peserta** (bukan per institusi); institusi Co-Host diakui sebagai kolaborator penyelenggara ICHES 2027.  
-> **BELUM FINAL:** jumlah paper yang dicakup Rp3 juta; daftar media publikasi pengakuan, ketentuan izin logo, masa/aktivasi status resmi; harga jika memilih satu kegiatan pendamping saja di luar paket.  
+> **FINAL kuota:** 5 perwakilan dan 5 paper (satu paper tiap perwakilan) termasuk Rp3 juta. **TERBUKA:** media pengakuan institusi, izin logo, masa/aktivasi status resmi, dan kebijakan paper Conference di luar kuota. Satu Paket Program Internasional Rp1 juta tetap mencakup keempat akses.  
 > **Tidak ada coding atau transaksi yang telah dijalankan.**
 
 **KEPUTUSAN FINAL BARU (26 Oktober 2026):** **Paket Program Internasional Rp1.000.000/orang adalah SATU produk mandiri yang dipesan dan dibayar lewat Dashboard Peserta sendiri**, bukan di menu Co-Host/PIC. **Satu pembayaran Rp1 juta memberikan empat akses sekaligus**: International MoU; Upgrading Kasubdit Penelitian-PKM Kemenag RI; PKM Internasional; Destinasi Internasional Tumpak Sewu–Teras Semeru. **Bukan Rp1 juta per program.** Co-Host tetap satu invoice Rp3 juta per institusi (maks. 5 orang), tidak bertambah karena anggota mengambil paket sendiri. Akses kegiatan MoU **bukan** otomatis status PIC/delegasi/penandatangan resmi. [Alur dan aturan](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
@@ -37,7 +40,7 @@ flowchart TD
 
 Contoh: **tagihan Co-Host institusi tetap Rp3 juta**. Tiga anggota secara mandiri membeli **satu paket pribadi Rp1 juta untuk empat akses** di Dashboard masing-masing. Tagihan pribadi mereka **tidak masuk invoice Co-Host**; jangan tampilkan Rp6 juta sebagai kewajiban pembayaran institusi.
 
-Nominal Rp3 juta **bukan berarti lima paper**, dan bukan berarti setiap lima author sebuah paper berhak masuk roster Co-Host. **Kuota peserta institusi berbeda dari jumlah author maupun jumlah submission**. Jumlah paper yang ditanggung paket Conference masih butuh keputusan panitia.
+**Keputusan FINAL:** Rp3 juta mencakup **lima paper dan lima perwakilan**, satu perwakilan mempunyai hak mengirim **satu paper**. Co-author dalam satu paper tidak otomatis memperoleh slot Co-Host; kuota paper dihitung berdasarkan paper yang terhubung dengan masing-masing perwakilan.
 
 ## C. Solusi hubungan lima akun Co-Host
 
@@ -95,7 +98,7 @@ Daftar co-host publik dan kaitan roster tidak perlu menjadi CRM sponsorship yang
 | NEW-041 | Keikutsertaan MoU, Pembinaan, PKM, Destinasi tidak otomatis dari status Co-Host; bayar terpisah per orang yang berpartisipasi | **KONSEKUENSI DISETUJUI** |
 | PROP-013 | Daftar nama/logo publik, status konfirmasi, materi promosi, surat kerja sama Co-Host opsional | **USULAN RINCIAN IMPLEMENTASI** |
 
-**Masih terbuka:** kuota paper Co-Host, biaya paper tambahan, tenggat/refund dan aktivasi paket Rp1 juta, media nama/logo institusi. **Sudah final:** Rp1 juta SATU paket empat akses, dibeli sendiri dari Dashboard Peserta, tidak di menu Co-Host.
+**Sudah final: 5 paper Co-Host (satu per perwakilan)**. Terbuka: aturan paper tambahan/penggantian, refund/aktivasi Paket Rp1 juta, media nama/logo. **Batas akhir daftar Paket Rp1 juta dikelola CRUD Admin.** **Sudah final:** Rp1 juta SATU paket empat akses, dibeli sendiri dari Dashboard Peserta, tidak di menu Co-Host.
 
 > **Penting bagi presentasi:** bedakan **manfaat administratif/biaya khusus paper konferensi** dari **manfaat reputasi dan atribusi institusi sebagai Co-Host acara ICHES 2027**.
 

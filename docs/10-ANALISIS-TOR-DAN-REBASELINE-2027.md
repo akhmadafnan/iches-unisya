@@ -1,5 +1,8 @@
 # 10 — Analisis TOR Warek I & Rebaseline Aplikasi ICHES UNISYA 2027
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **SUMBER PRIMER:** Dokumen yang diunggah pemilik proyek: `TOR ICHES 6 UNISYA 2027.docx`, 9 halaman, bagian A–O. Tanggal audit: **26 Oktober 2026**.  
 > **PENTING:** dokumen ini merupakan analisis kebutuhan aplikasi **berdasarkan TOR**, bukan keputusan seluruh rincian biaya/fitur yang sudah disahkan untuk implementasi. TOR sumber belum diunggah ke repo publik; hanya kebutuhan relevan yang diringkas. **Tidak ada pengembangan fitur** dalam pembaruan ini.
 >
@@ -194,7 +197,7 @@ TOR bagian G, hal. 3–4 menargetkan:
 
 ## IX. Keputusan krusial yang perlu dibawa ke Warek I
 
-1. **Co-Host FINAL:** Rp3.000.000 **per institusi, maks. lima orang, khusus paper Conference**. **Paket pendamping Rp1.000.000/orang** terpisah. **Yang terbuka:** jumlah paper Co-Host, dan biaya jika hanya sebagian paket pendamping.
+1. **Co-Host FINAL:** Rp3.000.000 **per institusi, maks. lima orang, khusus paper Conference**. **Paket pendamping Rp1.000.000/orang** terpisah. **Kuota paper sudah FINAL: 5 paper, 1 per perwakilan**; paket Rp1 juta tetap satu pembelian empat akses melalui dashboard. Tenggat paket dikelola Admin.
 2. **Co-Host maksimal 5:** **TERJAWAB — per institusi**.
 3. **Agenda paralel 5 Januari:** **TERJAWAB — boleh bersamaan, tak perlu fitur anti-benturan khusus**.
 4. **Reviewer/timeline:** **Alur TERJAWAB — reviewer self-claim dari index filter topic setelah validasi Submit**. Jumlah reviewer dan aturan revisi detail tetap terbuka.

@@ -1,5 +1,8 @@
 # 02 — Akun, Registrasi, dan Multi-Keikutsertaan
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Status:** sebagian besar prinsip disepakati; detail form serta model staf masih perlu validasi.
 
 > **Rebaseline TOR:** ICHES 2027 memiliki **lima rangkaian acara**. Konsep multi-keikutsertaan tetap berlaku, tetapi **kategori biaya/bundle bukan sinonim kegiatan**. TOR memiliki paket gabungan MoU + Pembinaan + PKM + Destinasi senilai **IDR 1.000.000**, dan kategori Co-Host **IDR 3.000.000** (**koreksi terbaru**; TOR masih mencetak IDR 450.000). Kuota Co-Host **maks. lima peserta per institusi** sudah disepakati. **Biaya Co-Host berlaku sekali PER INSTITUSI untuk maksimal lima peserta (sudah final)**; detail benefit dan eligibility lainnya masih memerlukan keputusan. Lihat [Audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
@@ -82,7 +85,7 @@ PIC Co-Host tetap mengurus institusi, lima anggota Conference, pembayaran Rp3 ju
 - Satu **tagihan Co-Host Rp3.000.000** melekat pada pendaftaran **institusi**, bukan akun masing-masing delegasi.
 - Pengelola institusi/PIC dapat mengurus bukti pembayaran atas nama institusi; panitia Finance memverifikasi secara manual.
 - Peserta tetap mempunyai satu akun/QR pribadi; harga paket tidak mengubah identitas atau membuktikan kehadiran secara otomatis.
-- **Sudah final:** Co-Host hanya untuk jalur paper International Conference; **tidak termasuk paket MoU/Pembinaan/International PKM/Studi Destinasi Rp1 juta per orang**. Pengakuan institusi sebagai Co-Host berlaku pada branding ICHES 2027. **Masih terbuka:** jumlah paper yang tercakup oleh Rp3 juta, fasilitas lain, serta prosedur pergantian anggota.
+- **Sudah final:** Co-Host hanya untuk jalur paper International Conference; **tidak termasuk paket MoU/Pembinaan/International PKM/Studi Destinasi Rp1 juta per orang**. Pengakuan institusi sebagai Co-Host berlaku pada branding ICHES 2027. **SUDAH FINAL:** lima paper Co-Host, satu paper oleh setiap perwakilan. Yang masih terbuka: fasilitas lainnya dan pergantian paper/anggota sesudah submit.
 
 [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 

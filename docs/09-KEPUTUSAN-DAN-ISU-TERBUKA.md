@@ -69,7 +69,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | NEW-033 | Satuan tarif Co-Host Rp3.000.000 adalah **per institusi**, mencakup maksimal lima peserta dalam **satu tagihan**, bukan tarif per orang | **DISETUJUI FINAL** — memperjelas NEW-026 |
 | NEW-034 | Identitas tagihan mengikuti **pendaftaran Co-Host institusi**, sehingga lima akun personal tidak menimbulkan lima tagihan Co-Host | Turunan rancangan dari NEW-033; implementasi belum dibuat |
 
-**KEPUTUSAN TERBARU mengisi celah ini:** Co-Host Rp3 juta **hanya untuk paper International Conference**, **tidak** mencakup paket MoU/Pembinaan/International PKM/Destinasi. Paket program tersebut **Rp1 juta per orang**. Institusi Co-Host diakui sebagai kolaborator penyelenggaraan ICHES 2027. **Masih terbuka:** jumlah paper yang tercakup, refund, pergantian anggota, serta detail atribut pengakuan publik.
+**KEPUTUSAN TERBARU mengisi celah ini:** Co-Host Rp3 juta **hanya untuk paper International Conference**, **tidak** mencakup paket MoU/Pembinaan/International PKM/Destinasi. Paket program tersebut **Rp1 juta per orang**. Institusi Co-Host diakui sebagai kolaborator penyelenggaraan ICHES 2027. **SUDAH FINAL:** 5 paper, satu per perwakilan. Masih terbuka: refund, pergantian anggota/paper setelah Submit, detail atribusi publik.
 
 [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
@@ -95,7 +95,7 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | NEW-041 | Co-Host tidak otomatis membayar/mendaftarkan anggota ke program pendamping; anggota yang memilih paket pendamping memiliki **kewajiban sendiri Rp1 juta/orang** | **KONSEKUENSI DISETUJUI** |
 | PROP-013 | Nama/logo institusi pada website, materi resmi, buku program, dokumen konfirmasi Co-Host opsional; tampil publik setelah dikonfirmasi panitia | **USULAN IMPLEMENTASI** |
 
-**TERBUKA:** Jumlah paper tercakup paket Rp3 juta, biaya paper tambahan, tenggat/refund/aktivasi hak Paket Rp1 juta dan media pengakuan institusi. **SUDAH FINAL:** Rp1 juta **satu paket empat akses**, dipesan secara mandiri user, bukan empat pembayaran atau menu Co-Host.
+**FINAL jumlah Co-Host = 5 paper (1 per perwakilan).** Terbuka: aturan paper reguler di luar lima, refund/aktivasi hak Paket Rp1 juta, media pengakuan institusi. **Deadline paket diatur dan bisa diubah melalui CRUD Admin.** **SUDAH FINAL:** Rp1 juta **satu paket empat akses**, dipesan secara mandiri user, bukan empat pembayaran atau menu Co-Host.
 
 [Lihat dokumen keputusan Co-Host dan program pendamping](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
@@ -110,6 +110,19 @@ Aturan teknis usulan: claim atomik, blokir claim paper sendiri, slot maksimal me
 | PROP-014 | Satu pendaftaran aktif/user dan aktivasi hak setelah pembayaran diverifikasi | **USULAN** |
 
 Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang disahkan panitia. [Spesifikasi lengkap](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
+
+## A6. Keputusan FINAL 27 Oktober — lima paper dan Admin CRUD
+
+| ID | Kebijakan | Status |
+|---|---|---|
+| NEW-046 | Institusi Co-Host Rp3 juta mendapat **5 perwakilan dan 5 jatah paper**, **setiap perwakilan mengirim 1 paper sendiri** menggunakan alur Conference biasa | **DISETUJUI, menutup isu kuota paper** |
+| NEW-047 | Semua modul ICHES (International Conference dan program lainnya) **bermuara pada Backoffice Admin dengan CRUD** | **DISETUJUI prinsip** |
+| NEW-048 | **Batas akhir pendaftaran Paket Program Internasional Rp1 juta adalah setting yang dapat diedit Admin kapan diperlukan** | **DISETUJUI** |
+| NEW-049 | Admin mengatur kebijakan, tetapi reviewer tetap claim sendiri, Komite memutuskan, Finance verifikasi, Moderator konfirmasi presentasi | **KONSEKUENSI DISPEKATI** |
+| PROP-015 | Slot satu paper dicadangkan sejak draft, Open/Closed, visibilitas serta koreksi roster | **USULAN TEKNIS** |
+
+**Supersedes:** kalimat di dokumen historis yang menganggap jumlah paper Co-Host masih terbuka atau menganggap kuota lima orang tidak terkait jatah lima paper. **Deadline aktual paket masih dipilih Admin**, bukan angka tanggal final di dokumen TOR. [Lima paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
 
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
@@ -163,7 +176,7 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 |---|---|---|
 | Tinggi | Batas kata, keywords, PDF size, bahasa submission, template abstrak | Komite Akademik |
 | Tinggi | Jumlah reviewer per paper, claim macet, rubrik, dan batas revisi | Komite Akademik |
-| Tinggi | **Jumlah paper** yang ditanggung paket Co-Host Rp3 juta; rincian tagihan paper tambahan dan harga paket pendamping jika hanya sebagian kegiatan; pengakuan nama/logo institusi | Panitia & Keuangan |
+| Sedang | **Kuota Co-Host SUDAH FINAL 5 paper**; rincian paper reguler tambahan/penggantian setelah submit dan pengakuan nama/logo institusi | Panitia & Keuangan |
 | Tinggi | Rincian hari/sesi; agenda paralel sudah diperbolehkan | Panitia Program |
 | Tinggi | Full-paper requirement & penilaian pascapresentasi; publikasi prosiding/jurnal | Komite Akademik |
 | Sedang | Kuota delegasi MoU, bukti keabsahan delegasi/signatory | Koordinator MoU |

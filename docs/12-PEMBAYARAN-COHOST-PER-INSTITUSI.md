@@ -1,5 +1,8 @@
 # 12 — Kebijakan Pembayaran Co-Host (Per Institusi)
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **KEPUTUSAN PEMILIK PRODUK — 26 Oktober 2026**  
 > Tarif **Co-Host Rp3.000.000 PER INSTITUSI**, mencakup maksimal **LIMA PESERTA** pada ICHES UNISYA 2027. Ini mengoreksi **Rp450.000** dalam tabel biaya TOR (hal. 5). **Bukan** Rp3 juta per peserta.  
 > **Status:** spesifikasi bisnis/dokumen presentasi; **belum coding, belum invoice nyata**.  
@@ -21,7 +24,7 @@ flowchart TD
   F --> G["Finance verifikasi satu pembayaran"]
 ```
 
-Undangan belum aktif tetap mencadangkan slot. PIC tidak memakai slot kecuali ikut sebagai peserta. Setiap anggota dapat ikut kegiatan lain dengan akun/QR sama. Penggantian setelah layanan dipakai perlu Admin agar fakta kehadiran tidak dihapus. **Cakupan finansial SUDAH FINAL hanya untuk paper International Conference**; jumlah paper dan fasilitas detail belum diputuskan. Paket pendamping Rp1 juta/orang terpisah. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
+Undangan belum aktif tetap mencadangkan slot. PIC tidak memakai slot kecuali ikut sebagai peserta. Setiap anggota dapat ikut kegiatan lain dengan akun/QR sama. Penggantian setelah layanan dipakai perlu Admin agar fakta kehadiran tidak dihapus. **Cakupan finansial SUDAH FINAL hanya untuk paper International Conference**; **lima paper (satu per perwakilan) sudah final**; fasilitas lainnya belum diputuskan. Paket pendamping Rp1 juta/orang terpisah. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
 ## 1. Keputusan yang sudah final
 
@@ -101,7 +104,7 @@ Pendaftaran Co-Host **berbeda konsep** dari MoU. Satu master institusi dapat ter
 
 Contoh: Institusi A mempunyai invoice Co-Host **Rp3 juta tetap**. Budi, Siti, dan Ani memilih secara mandiri satu Paket Program Internasional **Rp1 juta per akun**. Tiga invoice pribadi tersebut **tidak muncul sebagai tambahan biaya di menu Co-Host/PIC**, dan **institusi tidak ditagih Rp6 juta**. Satu paket Rp1 juta sudah meliputi empat akses.
 
-**Jumlah paper yang dapat didaftarkan/dibiayai dari satu paket Co-Host Rp3 juta BELUM DIPUTUSKAN**. Jangan menyimpulkan otomatis lima paper atau bebas submit tanpa batas. Status Co-Host tidak menjamin abstrak ACCEPT, paper Presented, maupun MoU Signed. Full Paper tetap setelah ACCEPT diumumkan; reviewer tetap self-claim tanpa administrative screening.
+**Jumlah paper FINAL: satu institusi Co-Host Rp3 juta = 5 jatah paper untuk 5 perwakilan; masing-masing perwakilan mengirim satu paper sendiri.** Tidak ada paper Co-Host keenam atau jatah bebas tanpa batas. Status Co-Host tidak menjamin abstrak ACCEPT, paper Presented, maupun MoU Signed. Full Paper tetap setelah ACCEPT diumumkan; reviewer tetap self-claim tanpa administrative screening.
 
 ## 7. Pengakuan institusi — benefit nonfinansial
 
@@ -111,11 +114,11 @@ Contoh: Institusi A mempunyai invoice Co-Host **Rp3 juta tetap**. Budi, Siti, da
 
 ## 8. Hal yang masih perlu diputuskan
 
-1. **Jumlah paper** dalam satu paket Rp3 juta dan aturan jika anggota institusi submit lebih banyak paper.
+1. **FINAL kuota 5 paper, satu per perwakilan**. Masih terbuka: apakah paper di luar kuota dapat didaftarkan sebagai paper Conference reguler; aturan penggantian paper Rejected.
 2. Paket Rp1 juta **SUDAH FINAL sebagai satu pembelian empat akses**; waktu pembayaran, aktivasi hak, dan refund masih terbuka.
 3. Kapan status Co-Host resmi dan kapan nama/logo diumumkan; media resmi/izin logo serta bentuk bukti status.
 4. Mekanisme penggantian anggota roster, refund, batas pembayaran, dan kewenangan PIC jika perlu.
-5. Batasan apakah tagihan Conference reguler lain timbul di luar jatah paper Co-Host yang nantinya diputuskan.
+5. Paper tambahan di luar **jatah lima paper Co-Host** bila memang diizinkan akan mengikuti kebijakan Conference reguler yang harus ditentukan panitia.
 
 **Bukan isu terbuka lagi:** satuan paket pendamping **Rp1 juta per orang**, cakupan Co-Host **hanya paper International Conference**, dan pengakuan institusi sebagai Co-Host ICHES 2027.
 

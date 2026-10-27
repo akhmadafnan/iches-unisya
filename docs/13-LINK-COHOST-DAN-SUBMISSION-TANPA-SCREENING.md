@@ -1,11 +1,14 @@
 # 13 — Linking Co-Host Members & Abstract Submission Tanpa Screening
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Keputusan Produk ICHES 2027 — 26 Oktober 2026.**  
 > **DISETUJUI:** Co-Host **Rp3.000.000 per institusi**, mencakup **maksimal lima peserta**; tidak ada *Administrative Screening* setelah abstract Submit; validasi wajib dilakukan pada formulir dan server saat Submit; paper yang valid langsung masuk **Reviewer Abstract Index** untuk pencarian/filter topik dan *self-claim*.  
 > **USULAN DESAIN (belum dikunci):** cara menghubungkan lima orang memakai undangan email/Magic Link dan lima slot anggota institusi.  
 > **Status:** dokumentasi perancangan saja; tidak ada kode aplikasi.
 
-> **Cakupan terbaru:** satu tagihan Co-Host **Rp3 juta/institusi khusus paper International Conference**, dengan pengakuan institusi sebagai **Co-Host ICHES 2027**. Anggota yang mendaftar paket MoU/Pembinaan/International PKM/Destinasi membayar **Rp1 juta/orang secara terpisah**; tidak otomatis masuk paket Co-Host. **Jumlah paper Co-Host masih terbuka**. [Dokumen 14](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
+> **Cakupan terbaru:** satu tagihan Co-Host **Rp3 juta/institusi khusus paper International Conference**, dengan pengakuan institusi sebagai **Co-Host ICHES 2027**. Anggota yang mendaftar paket MoU/Pembinaan/International PKM/Destinasi membayar **Rp1 juta/orang secara terpisah**; tidak otomatis masuk paket Co-Host. **Jumlah paper Co-Host FINAL: 5, satu tiap perwakilan**. [Dokumen 14](14-CAKUPAN-COHOST-DAN-PROGRAM-PENDAMPING.md).
 
 > **KEPUTUSAN TERBARU:** pada fitur Co-Host, PIC **hanya** mengurus institusi/roster Conference/invoice Rp3 juta. Pembelian **satu Paket Program Internasional Rp1 juta untuk empat akses** dilakukan sendiri oleh anggota dari **Dashboard pribadi**. [Dokumen 15](15-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).
 
@@ -53,7 +56,7 @@ Members: 3 / 5                             Status: Under Verification
 - Email sama tidak boleh mengisi dua slot dalam institusi yang sama. Jika pengguna terkait institusi Co-Host lain, panitia dapat menyelesaikannya tanpa menggandakan identitas atau hak.
 - Sebelum peserta melakukan check-in/mengambil hak layanan, PIC boleh meminta pergantian slot secara sederhana. Setelah ada catatan kehadiran/penyerahan, Admin menangani koreksi tanpa menghapus fakta lama.
 - Tidak ada biaya Co-Host tambahan untuk anggota kedua hingga kelima; satu tagihan **Rp3 juta per institusi** tetap berlaku meskipun peserta yang datang kurang dari lima.
-- **SUDAH DIPUTUSKAN:** biaya Co-Host mencakup **jalur paper International Conference**, bukan program pendamping. Paket program pendamping **Rp1 juta per peserta** jika dipilih terpisah. **Masih terbuka:** jumlah paper dan rincian hak layanan konferensi; jangan otomatis membebaskan tagihan paper di luar jatah yang kelak ditentukan.
+- **SUDAH DIPUTUSKAN:** biaya Co-Host mencakup **jalur paper International Conference**, bukan program pendamping. Paket program pendamping **Rp1 juta per peserta** jika dipilih terpisah. **Sudah final: lima paper Co-Host, satu tiap perwakilan**; masih terbuka rincian hak layanan konferensi; jangan otomatis membebaskan tagihan paper di luar jatah yang kelak ditentukan.
 
 ## B. Abstract langsung ke Reviewer Index, tanpa screening
 
@@ -128,7 +131,8 @@ Jika PDF ternyata berbeda substansinya dari teks online, reviewer bisa melaporka
 | PIC invite anggota Co-Host via Magic Link | **USULAN SOLUSI** |
 | Slot undangan dihitung kuota, PIC bila hadir memakai slot | **USULAN OPERASIONAL** |
 | Cakupan Co-Host **hanya paper International Conference**, tidak termasuk paket program pendamping Rp1 juta/orang | **DISETUJUI** |
-| Jumlah paper yang termasuk paket institusi Rp3 juta dan detail fasilitas | **BELUM DIPUTUSKAN** |
+| **5 paper** (1 paper oleh tiap perwakilan Co-Host) | **DISETUJUI** |
+| Detail fasilitas selain hak paper | **BELUM DIPUTUSKAN** |
 | Pengakuan institusi sebagai Co-Host penyelenggaraan ICHES 2027 | **DISETUJUI**; rincian media nama/logo masih usulan |
 | Batas kata, PDF size, jumlah reviewer | **BELUM DIPUTUSKAN** |
 

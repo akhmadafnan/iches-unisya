@@ -1,5 +1,8 @@
 # 11 — Keputusan Terbaru: Co-Host, Reviewer Self-Claim, Full Paper
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Untuk penjelasan kepada Warek I · 26 Oktober 2026**  
 > **Status:** kebijakan produk yang baru dipilih langsung oleh pemilik produk; sumber acara: TOR ICHES 6 UNISYA 2027. Belum menjadi aplikasi operasional, belum dilakukan coding.
 >
@@ -21,7 +24,7 @@
 | 4 | Reviewer | Reviewer berwenang dapat **mencari/filter abstract berdasarkan track** dan **Claim** sendiri tanpa menjadi anggota wajib track tertentu |
 | 5 | Full Paper | Terbuka **bila keputusan final ACCEPT sudah DIUMUMKAN kepada Submitting Author**; tidak memakai tanggal sebagai gate upload |
 
-**KEPUTUSAN FINAL TAMBAHAN:** biaya Co-Host **Rp3.000.000 dibayar sekali per institusi**, mencakup maksimal **lima peserta**, bukan tarif per orang. Perhitungan Co-Host pada sistem harus menghasilkan **satu tagihan institusi**. **Cakupan paket sudah dipersempit: khusus paper International Conference.** Kewajiban Rp1 juta/orang untuk paket program pendamping terpisah, sedangkan **jumlah paper** yang termasuk Co-Host masih perlu keputusan.
+**KEPUTUSAN FINAL TAMBAHAN:** biaya Co-Host **Rp3.000.000 dibayar sekali per institusi**, mencakup maksimal **lima peserta**, bukan tarif per orang. Perhitungan Co-Host pada sistem harus menghasilkan **satu tagihan institusi**. **Cakupan paket sudah dipersempit: khusus paper International Conference.** Kewajiban Rp1 juta/orang untuk paket program pendamping terpisah, sedangkan **jumlah paper sudah ditetapkan lima, satu per perwakilan**.
 
 ## 2. Visual: alur reviewer aktif, bukan menunggu akhir submission
 
@@ -128,6 +131,6 @@ MoU/Pembinaan dan Parallel Panel memang berjalan pada jam beririsan di TOR. **Ti
 
 ## 7. Satu pertanyaan yang belum perlu menghambat pembahasan
 
-**Keputusan sudah dijawab dan ditutup:** Rp3.000.000 **ditagihkan satu kali kepada tiap institusi Co-Host**, mencakup maksimal lima peserta. **Sudah diputuskan paket Rp3 juta hanya untuk paper International Conference** dan **paket pendamping Rp1 juta/orang terpisah**. Yang belum diputuskan adalah jumlah paper dan detail pengakuan institusi. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
+**Keputusan sudah dijawab dan ditutup:** Rp3.000.000 **ditagihkan satu kali kepada tiap institusi Co-Host**, mencakup maksimal lima peserta. **Sudah diputuskan paket Rp3 juta hanya untuk paper International Conference** dan **paket pendamping Rp1 juta/orang terpisah**. **Lima paper Co-Host sudah final**; detail media pengakuan institusi masih perlu ditetapkan. Lihat [Rancangan pembayaran Co-Host](12-PEMBAYARAN-COHOST-PER-INSTITUSI.md).
 
 **Status:** perancangan produk saja; dokumen/diagram GitHub dapat dipresentasikan. Belum coding, belum deployment dan belum ada migrasi database.

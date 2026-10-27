@@ -1,5 +1,8 @@
 # 04 — International MoU dan International Community Development
 
+> **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
+
+
 > **Status:** alur institusional MoU dan undangan delegasi telah dipilih sebagai konsep produk; beberapa rincian operasional masih terbuka.
 
 > **TOR 2027, bagian N:** Pada **5 Januari**, rangkaian MoU + Pembinaan Kemenag tercatat **13.00–17.15**; pada waktu yang sama, Panel Session berlangsung **13.15–16.30+**. Agenda paralel telah disepakati tanpa fitur pengaturan benturan yang kompleks. Pada **6 Januari**, Pengabdian dilaksanakan secara luring bersama perjalanan Teras Semeru → Desa Sidomulyo → Tumpak Sewu. Lihat [audit TOR](10-ANALISIS-TOR-DAN-REBASELINE-2027.md).
