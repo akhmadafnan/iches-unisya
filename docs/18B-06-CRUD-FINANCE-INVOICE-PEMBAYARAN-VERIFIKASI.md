@@ -191,6 +191,8 @@ PIC **tidak** melihat pembelian Paket Rp1 juta, bukti bayar, atau invoice presen
 
 **FINAL 27 Oktober 2026:** satu bank resmi dikelola langsung Superadmin; transfer manual dan upload JPG/JPEG/PNG/PDF; Finance memverifikasi rekening; invoice IDR/WNI nasional dan USD/WNA internasional kategori TOR; seluruh biaya transfer asing oleh peserta; Co-Host **pembayaran terverifikasi lebih dulu, baru fitur 5 paper**, tanpa tagihan Conference personal ulang; paket Rp1 juta personal **Verified baru 4 akses**; presenter reguler baru bayar setelah ACCEPT diumumkan, Full Paper tetap independen.
 
+**HANDOFF TAHAP LANJUTAN:** [18B-07 — Penanganan Pembayaran Bermasalah & Rekonsiliasi Manual](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md) berisi **usulan**, diagram operasional dan 28 skenario UAT. **Tidak** menetapkan refund, top-up, tenggat bayar atau izin tampil pada jadwal sebagai keputusan baru.
+
 **BELUM FINAL:** bank/rek nomor/SWIFT, aturan penerimaan USD bila rekening IDR dan verifikasi kepatuhan, deadline bayar, tarif kombinasi di luar TOR, kebijakan kekurangan/kelebihan/duplikat/refund, aturan pembayaran satu presenter multi-paper, prasyarat jadwal presentasi reguler, format invoice/kuitansi final, maksimum ukuran file, dan beberapa detail UI. Jangan menciptakan approval berlapis/pembayaran ganda sebagai solusi default.
 
 **PERLU DIBANGUN NANTI:** API invoice, penyimpanan bukti privat, role/policy server, idempotency, trigger hak VERIFIED, PDF invoice, laporan, test/UAT. **Dokumen ini sendiri tidak menjalankan fungsi tersebut.**

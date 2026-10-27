@@ -202,6 +202,22 @@ Akses kegiatan International MoU **bukan** bukti delegasi/signatory MoU yang dis
 
 [18B-06 — CRUD Finance & 30 UAT](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
+## A12. Tahap 18B-07 — Payment Exceptions & Rekonsiliasi (USULAN, belum dikunci)
+
+**Bukan keputusan kebijakan baru:** mempertahankan NEW-050..055 (rekening tunggal, transfer manual, biaya WNA, gate Co-Host/paket, presenter setelah ACCEPT). Tahap ini menyediakan desain penanganan transfer bermasalah **tanpa menambah approval rekening atau payment gateway**.
+
+| ID | Usulan/pekerjaan | Status |
+|---|---|---|
+| PROP-039 | **Satu inbox Finance** dengan issue tag internal untuk bukti rusak, mutasi belum ditemukan, pembayaran kurang/lebih/ganda, refund request dan keterlambatan | **USULAN UX; bukan workflow baru yang sudah disetujui** |
+| PROP-040 | Rekonsiliasi manual mutasi bank, bank-credit matching, referensi pembayaran unik, pengamanan agar transfer sama tidak membenarkan dua invoice | **USULAN integritas data** |
+| PROP-041 | Pelunasan kekurangan dengan tambahan transfer yang ditautkan ke invoice asli; **refund** ditangani manual/offline jika kebijakan nanti mengizinkan | **USULAN, kebijakan top-up/refund TERBUKA** |
+| PROP-042 | Tenggat pelunasan dan akibat terlambat, bila diaktifkan, dikelola Admin dan dipisah dari deadline Abstract/Full Paper/Paket | **USULAN, tanggal/konsekuensi TERBUKA** |
+| PROP-043 | **28 skenario UAT** exception dan rekonsiliasi | **RENCANA UAT, belum dieksekusi** |
+
+**BELUM DISETUJUI:** apakah refund sama sekali boleh, kebijakan surplus/transfer ganda, cara menutup underpayment, apakah presenter Unpaid boleh tampil dalam jadwal/presentasi, dan tenggat pembayaran. Jangan menggunakan tabel opsi dokumen 18B-07 sebagai peraturan panitia sampai pemilik produk memilih.
+
+[Lihat spesifikasi 18B-07 — Payment Exceptions dan 28 UAT](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

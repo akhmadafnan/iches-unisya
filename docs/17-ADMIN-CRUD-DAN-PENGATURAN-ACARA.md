@@ -113,6 +113,9 @@ flowchart TD
 
 ## 6. Register
 
+> **Usulan tahap 18B-07:** Finance dapat memakai **inbox Payment Verification yang sama** untuk pembayaran kurang, lebih, transfer ganda, bukti salah dan rekonsiliasi bank manual. Tidak ada gateway atau approval berlapis. Refund/top-up/tenggat pelunasan **belum disepakati**; jangan dijadikan aturan otomatis. [Rancangan 18B-07](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
+
+
 | ID | Ketentuan | Status |
 |---|---|---|
 | NEW-046 | Satu institusi Co-Host: **lima perwakilan, lima paper, masing-masing satu paper** | **DISETUJUI** |

@@ -29,6 +29,12 @@ flowchart TD
 
 ---
 
+## TAHAP 18B — KASUS PEMBAYARAN & REKONSILIASI (USULAN)
+
+Satu antrean Finance cukup untuk menangani **bukti salah, transfer kurang, lebih, ganda, dan mutasi bank belum cocok**. PIC/peserta memperbaiki bukti pada **invoice yang sama**; Finance hanya menandai **VERIFIED** setelah nilai dan mutasi cocok. **Refund, transfer susulan, tenggat pembayaran dan akibat keterlambatan belum diputuskan.** Tidak ada fitur auto-refund atau payment gateway. [Blueprint 18B-07 + 28 UAT](18B-07-FINANCE-EXCEPTIONS-REKONSILIASI-DAN-UAT.md).
+
+---
+
 ## TAHAP 18B — CRUD INTERNATIONAL CONFERENCE (RANCANGAN HALAMAN)
 
 Seluruh alur akademik telah diturunkan ke **spesifikasi layar dan field**, bukan lagi diagram konseptual saja: **Conference Settings, delapan Tracks, Abstract Submission Settings, All Submissions, Paper Detail, Reviewer Index + Claim, Academic Decisions + Publish Result, Full Paper, Sessions, Moderator, dan Reports**. Admin CRUD mengatur tanggal/ketentuan, sementara **Reviewer self-claim langsung setelah Submit valid tanpa screening**, Komite memutuskan, serta **Full Paper terbuka ketika ACCEPT diumumkan**.
