@@ -1,5 +1,7 @@
 # 13 — Linking Co-Host Members & Abstract Submission Tanpa Screening
 
+> **UPDATE 27 OKTOBER 2026:** Co-Host **membayar satu invoice Rp3 juta/institusi dulu → Finance VERIFIED → fitur 5 anggota dan 5 paper baru aktif**. Magic Link/undangan hanya usulan UX sesudah VERIFIED; jangan perbolehkan roster/submit sponsor saat invoice belum terverifikasi. Kelima paper **tidak dikenai presenter invoice kedua** setelah ACCEPT. [Finance 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
 
 
@@ -20,18 +22,15 @@
 
 ```mermaid
 flowchart TD
-  A["PIC mendaftarkan institusi Co-Host"] --> B["Co-Host Registration ICHES 2027"]
-  B --> C["Satu tagihan institusi Rp3.000.000"]
-  B --> D["Roster maksimal 5 peserta"]
-  D --> E["PIC input nama + email anggota"]
-  E --> F["Undangan email / Magic Link"]
-  F --> G{"Sudah punya akun ICHES?"}
-  G -->|Ya| H["Tautkan akun personal yang sudah ada"]
-  G -->|Belum| I["Aktivasi akun baru + lengkapi profil"]
-  H --> J["Anggota Co-Host institusi"]
-  I --> J
-  J --> K["Masing-masing memakai personal QR"]
-  C --> L["Finance memverifikasi satu pembayaran"]
+ I["PIC mendaftarkan institusi Co-Host"] --> C["Satu invoice institusi Rp3.000.000"]
+ C --> P["Transfer bank dan upload JPG/PNG/PDF"]
+ P --> F["Finance VERIFIES bank receipt"]
+ F --> A["Fitur Co-Host AKTIF"]
+ A --> R["Roster maksimal 5 peserta"]
+ R --> E["PIC input email & invite via Magic Link (USULAN)"]
+ E --> M["Tautkan akun ICHES pribadi"]
+ M --> S["Masing-masing punya 1 paper International Conference; tidak ada charge kedua"]
+ S --> RV["Submit valid langsung Reviewer Index"]
 ```
 
 **Jangan membuat lima tagihan, lima institusi, atau lima QR institusi.** PIC mengelola satu pendaftaran institusi. Anggota tetap individu dengan akun terverifikasi dan QR pribadi yang sama untuk kegiatan ICHES lainnya. Data induk institusi dapat dipakai bersama administrasi MoU, tetapi **keikutsertaan Co-Host tidak otomatis berarti MoU ditandatangani**.
@@ -40,7 +39,7 @@ flowchart TD
 
 ```
 Co-Host: Universitas Mitra A              Payment: Rp3.000.000
-Members: 3 / 5                             Status: Under Verification
+Members: 3 / 5                             Status: Verified (features active)
 
 1. Anggota A   ● Activated
 2. Anggota B   ◌ Invited

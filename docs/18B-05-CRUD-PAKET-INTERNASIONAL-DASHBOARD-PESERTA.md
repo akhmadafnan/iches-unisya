@@ -12,19 +12,19 @@
 
 ```mermaid
 flowchart TD
-  A["Peserta login ke satu akun pribadi"] --> D["Dashboard Peserta"]
-  D --> P["Paket Program Internasional: 1 produk, Rp1.000.000"]
-  P --> O{"Pendaftaran paket Open menurut Admin?"}
-  O -->|Tidak| X["Tampilkan tutup / belum buka"]
-  O -->|Ya| R["Peserta pilih & pesan SENDIRI"]
-  R --> I["SATU personal invoice Rp1.000.000"]
-  I --> F["Bukti pembayaran → Finance"]
-  F --> E["Empat akses kegiatan menurut aturan aktivasi"]
-  E --> M["International MoU"]
-  E --> U["Upgrading Kemenag RI"]
-  E --> K["PKM Internasional"]
-  E --> T["Tumpak Sewu–Teras Semeru"]
-  C["PIC Co-Host"] --> CI["Satu invoice INSTITUSI Rp3.000.000"]
+ A["Personal Dashboard"] --> P["SATU Paket Internasional Rp1.000.000"]
+ P --> O{"Open menurut Admin?"}
+ O -->|Tidak| X["Pendaftaran baru tutup"]
+ O -->|Ya| R["Peserta pesan sendiri"]
+ R --> I["SATU invoice pribadi"]
+ I --> F["Transfer + upload bukti → Finance"]
+ F --> V["FINANCE VERIFIED"]
+ V --> E["EMPAT hak AKTIF"]
+ E --> M["International MoU"]
+ E --> U["Upgrading Kemenag RI"]
+ E --> K["International PKM"]
+ E --> T["Tumpak Sewu & Teras Semeru"]
+ C["PIC Co-Host"] --> CI["HANYA invoice institusi Rp3.000.000"]
 ```
 
 **Tidak ada jalur dari paket pribadi menuju invoice Co-Host.** Jika anggota Co-Host ikut paket, akun pribadinya mendapat tagihan pribadi; PIC institusi tetap hanya melihat tagihan institusi Rp3 juta. Data keuangan dua domain boleh masuk rekap Finance global, tetapi **tidak** digabung menjadi kewajiban institusi.
@@ -156,7 +156,7 @@ Tidak menampilkan `5 anggota Co-Host → lima paket Rp1 juta` secara otomatis. B
 
 **Satu produk dibayar sekali** tetapi status **entitled (hak ikut)**, **registered**, **attended/served** dan **signed (khusus institusi MoU)** harus terpisah. Semua program dapat memakai **personal QR yang sama**, sedangkan scan/absensi tetap per program/slot.
 
-**Aktivasi:** secara operasional disarankan hak empat program menjadi `Active` **setelah Finance VERIFIED**, tetapi detail aktivasi resmi belum diputuskan. **Jangan mewarnai semua hak sebagai “Aktif” hanya karena user klik order**. Dashboard harus membedakan `Paket Dipilih`, `Pembayaran Dalam Pemeriksaan`, `Hak Program Aktif`, dan `Kehadiran`.
+**Aktivasi (FINAL 27 Oktober):** empat hak program menjadi `Active` **hanya setelah Finance VERIFIED**. **Jangan mewarnai semua hak sebagai “Aktif” hanya karena user klik order**. Dashboard harus membedakan `Paket Dipilih`, `Pembayaran Dalam Pemeriksaan`, `Hak Program Aktif`, dan `Kehadiran`.
 
 **Hak dari package tidak otomatis membuat registrasi institusional MoU.** PIC MoU, daftar delegasi terverifikasi, dan bukti penandatanganan tetap domain lain.
 

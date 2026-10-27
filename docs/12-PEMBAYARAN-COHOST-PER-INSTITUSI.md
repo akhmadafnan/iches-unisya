@@ -18,12 +18,13 @@
 
 ```mermaid
 flowchart TD
-  A["PIC institusi Co-Host"] --> B["Roster maksimal lima email"]
-  B --> C["Email Invitation / Magic Link"]
-  C --> D["Tautkan akun lama atau aktivasi akun baru"]
-  D --> E["Personal QR tiap anggota"]
-  A --> F["Satu tagihan institusi Rp3.000.000"]
-  F --> G["Finance verifikasi satu pembayaran"]
+ I["Institusi mendaftar Co-Host"] --> P["Satu invoice institusi Rp3.000.000"]
+ P --> UP["PIC transfer & upload bukti"]
+ UP --> F["Finance memeriksa mutasi bank"]
+ F --> V["VERIFIED"]
+ V --> R["Fitur roster maksimal 5 anggota AKTIF"]
+ R --> L["Undang/tautkan personal account (mekanisme undangan: USULAN)"]
+ L --> S["Setiap anggota dapat submit 1 paper sponsor tanpa biaya Conference tambahan"]
 ```
 
 Undangan belum aktif tetap mencadangkan slot. PIC tidak memakai slot kecuali ikut sebagai peserta. Setiap anggota dapat ikut kegiatan lain dengan akun/QR sama. Penggantian setelah layanan dipakai perlu Admin agar fakta kehadiran tidak dihapus. **Cakupan finansial SUDAH FINAL hanya untuk paper International Conference**; **lima paper (satu per perwakilan) sudah final**; fasilitas lainnya belum diputuskan. Paket pendamping Rp1 juta/orang terpisah. [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).

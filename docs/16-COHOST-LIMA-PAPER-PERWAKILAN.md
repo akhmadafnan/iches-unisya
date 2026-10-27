@@ -1,24 +1,28 @@
 # 16 — Co-Host: Lima Perwakilan, Lima Paper International Conference
 
+> **UPDATE FINANCE 27 OKTOBER 2026:** fitur roster/paper sponsor pada Co-Host **hanya aktif setelah invoice Rp3 juta/institusi Finance VERIFIED**. Tiap anggota berhak mengirim satu paper Conference setelah aktivasi **tanpa biaya Conference tambahan meskipun ACCEPT**. Jika membeli Paket Program Internasional, bayar sendiri di Personal Dashboard. [Finance 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **Keputusan final, 27 Oktober 2026.** **Co-Host membayar Rp3.000.000 per institusi** untuk **lima perwakilan dan lima paper**. **Masing-masing perwakilan mengirim satu paper melalui akun pribadi** dan seluruh paper mengikuti alur akademik ICHES yang sama. Dokumentasi saja, belum ada coding aplikasi.
 
 ## Diagram untuk Warek I
 
 ```mermaid
 flowchart TD
-  I["Institusi Co-Host A"] --> F["Satu invoice institusi Rp3.000.000"]
-  I --> PIC["PIC mengelola lima perwakilan"]
-  PIC --> A["Akun perwakilan 1 → Paper 1"]
-  PIC --> B["Akun perwakilan 2 → Paper 2"]
-  PIC --> C["Akun perwakilan 3 → Paper 3"]
-  PIC --> D["Akun perwakilan 4 → Paper 4"]
-  PIC --> E["Akun perwakilan 5 → Paper 5"]
-  A --> R["Reviewer Index"]
-  B --> R
-  C --> R
-  D --> R
-  E --> R
-  R --> K["Review → Keputusan Komite Akademik per paper"]
+ I["Institusi Co-Host mendaftar"] --> F["SATU invoice Rp3.000.000/institusi"]
+ F --> P["Transfer + upload bukti"]
+ P --> FV["Finance VERIFIED"]
+ FV --> PIC["PIC mengelola maksimal 5 perwakilan"]
+ PIC --> A["Akun 1 → Paper 1"]
+ PIC --> B["Akun 2 → Paper 2"]
+ PIC --> C["Akun 3 → Paper 3"]
+ PIC --> D["Akun 4 → Paper 4"]
+ PIC --> E["Akun 5 → Paper 5"]
+ A --> R["Reviewer Index tanpa charge personal"]
+ B --> R
+ C --> R
+ D --> R
+ E --> R
+ R --> K["Review + keputusan akademik; tidak ada invoice Conference kedua"]
 ```
 
 > **Turunan spesifikasi tahap 18B-04/05 (USULAN FORM/TEKNIS):** aturan produk yang sudah dikunci tetap **Co-Host Rp3 juta/INSTITUSI = maksimal 5 orang/5 paper (1 paper per orang)** dan **Paket Program Internasional Rp1 juta/ORANG = satu pembelian empat akses secara mandiri melalui Dashboard pribadi**. Field halaman, invitation Magic Link, metode penggantian anggota/paper, status dan waktu publikasi logo, payment activation serta detail refund **belum final**. Admin memiliki CRUD pengaturan, PIC hanya institusinya, Finance memverifikasi uang, peserta membeli sendiri. [18B-04 — CRUD Co-Host, 5 Seats & 5 Papers](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [18B-05 — CRUD Paket Rp1 Juta / 4 Akses](18B-05-CRUD-PAKET-INTERNASIONAL-DASHBOARD-PESERTA.md).

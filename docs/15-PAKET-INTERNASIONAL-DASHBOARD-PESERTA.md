@@ -36,22 +36,18 @@ Keempatnya **satu produk bundling** yang menawarkan empat akses; peserta **tidak
 
 ```mermaid
 flowchart TD
-  A["User login ke ICHES"] --> B["Dashboard Peserta"]
-  B --> C["Conference / Paper jika diikuti"]
-  B --> D["Paket Program Internasional: Rp1.000.000"]
-  D --> E["User sendiri memilih dan mendaftar"]
-  E --> F["SATU registrasi + SATU tagihan pribadi"]
-  F --> G["Bukti bayar + Finance Verification"]
-  G --> H["Aktivasi empat akses sesuai aturan"]
-  H --> I["International MoU"]
-  H --> J["Upgrading Kasubdit Penelitian-PKM"]
-  H --> K["PKM Internasional"]
-  H --> L["Tumpak Sewu / Teras Semeru"]
-  I --> Z["QR / kehadiran masing-masing kegiatan"]
-  J --> Z
-  K --> Z
-  L --> Z
-  P["PIC Co-Host"] --> Q["HANYA roster Conference + satu tagihan institusi Rp3 juta"]
+ A["User login ke ICHES"] --> D["Dashboard Peserta"]
+ D --> P["Pilih SATU Paket Internasional Rp1 juta"]
+ P --> I["SATU invoice pribadi"]
+ I --> B["Transfer manual + upload JPG/PNG/PDF"]
+ B --> FV["Finance VERIFIED"]
+ FV --> E["EMPAT akses program AKTIF"]
+ E --> M["International MoU: hadir sesi saja"]
+ E --> U["Upgrading Kemenag RI"]
+ E --> K["PKM Internasional"]
+ E --> T["Tumpak Sewu & Teras Semeru"]
+ E --> QR["Kehadiran via QR tetap terpisah"]
+ C["PIC Co-Host"] --> CI["SATU invoice institusi Rp3 juta, bukan biaya paket pribadi"]
 ```
 
 ### Tampilan konseptual Dashboard Peserta

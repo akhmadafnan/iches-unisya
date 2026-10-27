@@ -1,5 +1,7 @@
 # 14 — Cakupan Biaya Co-Host, Paket Program Pendamping, dan Pengakuan Institusi
 
+> **UPDATE FINANCE 27 OKTOBER:** sebelum **Finance VERIFIED pada invoice Rp3 juta**, fitur Co-Host/roster lima paper **belum aktif**. Setelah VERIFIED kelima paper sponsor tidak mendapat tagihan Conference lagi. Paket Rp1 juta dibeli pribadi dan empat aksesnya aktif **setelah Finance VERIFIED**. [Detail Finance 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
+
 > **KEPUTUSAN FINAL 27 OKTOBER 2026:** Co-Host **Rp3.000.000/institusi = lima perwakilan + lima paper International Conference**, masing-masing perwakilan submit **satu paper sendiri melalui akun masing-masing**. **Deadline Paket Program Internasional Rp1 juta dibuat CRUD pada Admin**, sehingga tanggal/jam dapat diubah sewaktu diperlukan. **International Conference, MoU, Upgrading, PKM, Destinasi, serta seluruh pengaturan operasional dan website dikelola lewat Backoffice Admin**; bukan tanggal/nilai hardcoded. Reviewer/Finance/Moderator tetap melaksanakan perannya. [Paper Co-Host](16-COHOST-LIMA-PAPER-PERWAKILAN.md) · [Matriks Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md).
 
 
@@ -27,18 +29,18 @@
 
 ```mermaid
 flowchart TD
-  I["PIC Institusi Co-Host"] --> A["Satu invoice institusi Rp3.000.000"]
-  I --> R["Roster Conference maksimal lima anggota"]
-  I --> BR["Pengakuan publik Co-Host ICHES 2027"]
-  R --> P["Jalur paper International Conference"]
-  U["User Co-Host maupun non-Co-Host"] --> X["Dashboard Peserta PRIBADI"]
-  X --> Y{"Peserta memilih Paket Program Internasional?"}
-  Y -->|Tidak| N["Tidak ada tagihan paket"]
-  Y -->|Ya| B["SATU invoice pribadi Rp1.000.000"]
-  B --> E["Empat akses: MoU + Upgrading + PKM + Destinasi"]
-  P --> RV["Review → ACCEPT → Full Paper → Presentasi"]
-  E --> QR["Personal QR, absensi tiap kegiatan"]
-  RV --> QR
+ I["Institusi Co-Host"] --> A["SATU invoice Rp3.000.000/institusi"]
+ A --> FV["Finance VERIFIED"]
+ FV --> R["Fitur aktif: roster 5 anggota dan 5 paper Conference"]
+ R --> P["Submit paper sponsor TANPA presenter invoice kedua"]
+ P --> RV["Academic Review → ACCEPT/REJECT normal"]
+ U["Co-Host member atau non-member"] --> X["Dashboard PRIBADI"]
+ X --> Y{"Beli Paket Internasional?"}
+ Y -->|Tidak| N["Tanpa invoice paket"]
+ Y -->|Ya| B["SATU invoice pribadi Rp1.000.000"]
+ B --> VF["Finance VERIFIED"]
+ VF --> E["EMPAT hak aktif: MoU + Upgrading + PKM + Destinasi"]
+ E --> Q["QR dan kehadiran program dicatat terpisah"]
 ```
 
 Contoh: **tagihan Co-Host institusi tetap Rp3 juta**. Tiga anggota secara mandiri membeli **satu paket pribadi Rp1 juta untuk empat akses** di Dashboard masing-masing. Tagihan pribadi mereka **tidak masuk invoice Co-Host**; jangan tampilkan Rp6 juta sebagai kewajiban pembayaran institusi.

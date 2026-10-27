@@ -11,22 +11,22 @@
 
 ```mermaid
 flowchart TD
-  I["Institusi Co-Host ICHES 2027"] --> P["Satu PIC institusi"]
-  I --> PAY["Satu kewajiban institusi Rp3.000.000"]
-  I --> B["Pengakuan institusi sebagai Co-Host"]
-  P --> R["Roster maksimal 5 perwakilan"]
-  R --> A1["Akun 1 → Paper 1"]
-  R --> A2["Akun 2 → Paper 2"]
-  R --> A3["Akun 3 → Paper 3"]
-  R --> A4["Akun 4 → Paper 4"]
-  R --> A5["Akun 5 → Paper 5"]
-  A1 --> RV["Submit valid → Reviewer Index"]
-  A2 --> RV
-  A3 --> RV
-  A4 --> RV
-  A5 --> RV
-  RV --> DEC["Review & keputusan Komite per paper"]
-  PAY --> FIN["Finance verify tagihan institusi"]
+ I["Institusi mendaftar Co-Host"] --> PAY["SATU invoice institusi Rp3.000.000"]
+ PAY --> P["Transfer & upload bukti"]
+ P --> FIN["Finance VERIFIED"]
+ FIN --> R["PIC mengelola roster maksimal 5 anggota"]
+ R --> A1["Akun 1 → Paper 1"]
+ R --> A2["Akun 2 → Paper 2"]
+ R --> A3["Akun 3 → Paper 3"]
+ R --> A4["Akun 4 → Paper 4"]
+ R --> A5["Akun 5 → Paper 5"]
+ A1 --> RV["Submit valid → Reviewer Index tanpa invoice lain"]
+ A2 --> RV
+ A3 --> RV
+ A4 --> RV
+ A5 --> RV
+ RV --> DEC["Review & keputusan Komite per paper"]
+ FIN --> B["Institusi Co-Host memperoleh hak pengakuan; publikasi logo menunggu ketentuan"]
 ```
 
 **PIC bukan otomatis peserta kelima**: ia menggunakan salah satu slot hanya jika memang masuk roster perwakilan. **Status Co-Host/Finance tidak menyamakan lima paper dengan lima ACCEPT**. Reviewer, Komite, Moderator, dan penerbit sertifikat tetap menjalankan alur akademik normal. Jumlah co-author pada tiap paper tidak menambah/mengurangi jatah lima perwakilan.
