@@ -1,5 +1,7 @@
 # 18B-03 — Field-Level CRUD Review, Academic Decision, Full Paper, Session & UAT
 
+> **UPDATE 27 OKTOBER — DRAFT TAMBAHAN:** Abstract Review/ACCEPT/Full Paper unlock tetap seperti keputusan sebelumnya. Untuk **Full Paper Submission OJS-like, penilaian artikel saat/pascapresentasi, revisi bersyarat atau tanpa revisi, Final ACC, dan export ke OJS Proceedings/Journal**, baca [18B-09 Workflow DRAFT](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) dan [18C-01B Database Extension](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md). **Jangan** mengartikan penilaian baru sebagai administrative screening abstrak atau mengubah aturan Finance/Co-Host.
+
 > **Tahap 18B · tanggal 27 Oktober 2026 · USULAN FIELD-LEVEL, BUKAN IMPLEMENTASI.**  
 > **Prinsip final:** reviewer self-claim dari paper valid-Submitted (tanpa screening), Komite Akademik final decision, Full Paper unlocked **saat ACCEPT diumumkan**, Finance terpisah, Moderator memastikan Paper Presented, dan penerbitan sertifikat individual untuk seluruh author setelah persetujuan publikasi massal panitia.  
 > Dokumen ini pendamping [18B-02 — Settings/Tracks/Submission](18B-02-CRUD-INTERNATIONAL-CONFERENCE-SUBMISSION.md), [03 Academic](03-SUBMISSION-REVIEW-AKADEMIK.md), [06 Certificate](06-SERTIFIKAT-PUBLIK.md), [18A Role](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) dan [09 Register](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).

@@ -254,6 +254,29 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [18C-01 DRAFT ERD](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) · [18C-01A DRAFT Data Dictionary & UAT](18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md).
 
+## A15. Rekomendasi terbaru untuk REVIEW — Full Paper OJS-like, Revision, Proceedings & 10 Journal Choices
+
+**PERMINTAAN USER:** alur **Abstract tetap seperti ICHES sekarang**, Full Paper dibuat **menyerupai OJS pada form metadata/file**, dan **setelah presentasi penilai dapat meminta revisi, atau tanpa revisi**. Dibutuhkan ekspor yang disiapkan agar dapat diimpor ke OJS Proceedings dan publikasi artikel terpilih melalui **daftar 10 calon jurnal pilihan**. **Ini persetujuan arah kebutuhan fitur, BUKAN penerimaan schema/implementasi final.**
+
+**SUMBER:** [Repository lama: V1 Academic Review](https://github.com/akhmadafnan/international-conference-platform/blob/develop/docs/requirements/v1/V1_ACADEMIC_REVIEW_BASELINE.md), [Metadata canonical](https://github.com/akhmadafnan/international-conference-platform/blob/develop/docs/metadata/SUBMISSION_SCHOLARLY_METADATA_CONTRACT_V1.md), [V1 Publication](https://github.com/akhmadafnan/international-conference-platform/blob/develop/docs/requirements/v1/V1_PUBLICATION_BASELINE.md), dan [OJS Adapter Contract](https://github.com/akhmadafnan/international-conference-platform/blob/develop/docs/metadata/OJS_CROSSREF_ADAPTER_CONTRACT_V1.md). Model lama yang mengharuskan administrative screening **tidak berlaku** bagi ICHES baru.
+
+| ID | Tambahan / rekomendasi | Status |
+|---|---|---|
+| NEW-056 | **Kebutuhan produk:** Abstract Submission tetap alur ICHES yang telah disepakati; **Full Paper ingin input menyerupai OJS** | **ARAH KEBUTUHAN DITERIMA sebagai permintaan user; detail UI DRAFT** |
+| NEW-057 | **Kebutuhan produk:** Setelah presentasi ada penilaian dan **revisi jika diminta, atau tanpa revisi jika tidak diminta**, untuk menyiapkan naskah final | **ARAH KEBUTUHAN DIMINTA user; alur otoritas dan jumlah review masih DRAFT** |
+| NEW-058 | **Kebutuhan produk:** data Full Paper/final metadata harus memfasilitasi ekspor/impor OJS Proceedings serta jalur artikel terpilih menuju jurnal | **ARAH KEBUTUHAN user; kompatibilitas OJS baru dapat diklaim setelah uji import** |
+| PROP-056 | UI wizard OJS-like (prefill abstract), immutable file versions, metadata canonical/references/affiliations/keywords, No/Minor/Major revision, Final ACC oleh committee | **DRAFT REKOMENDASI 18B-09** |
+| PROP-057 | Proceedings default vs Selected Journal; **10 kandidat jurnal** sebagai data Admin CRUD, bukan hasil daftar TOR; selection bukan journal acceptance | **DRAFT, perlu daftar resmi panitia** |
+| PROP-058 | **OJS version-aware Native XML profile** dengan XSD/staging import UAT dan fallback export metadata pack; tidak menjamin XML universal | **DRAFT, target OJS belum diidentifikasi** |
+| PROP-059 | **15 kandidat tabel tambahan** untuk metadata, assessment, revision, publication record/snapshot, export batch/handoff; dari 38 menjadi **hingga 53 kandidat untuk review** | **DRAFT SCHEMA, BUKAN 53 tabel final** |
+| PROP-060 | 30 UAT workflow Full Paper/OJS dan 24 UAT extension database | **RENCANA UAT, BELUM DIEKSEKUSI** |
+
+**KOREKSI SUMBER TOR:** TOR ICHES 2027 menyatakan output berupa **prosiding ISBN/ISSN** dan **makalah terpilih di jurnal nasional/internasional**, tetapi **tidak menyebut angka 10 atau nama sepuluh jurnal**. Angka 10 adalah keinginan/konfigurasi pengguna untuk pilihan outlet, yang harus dilengkapi panitia.
+
+**Batas:** Published Abstract ACCEPT = dapat presentasi/unggah Full Paper; **tidak otomatis Accepted for Publication**. **Postpresentation reviewer feedback ≠ final committee decision ≠ keputusan editor jurnal**. DOI/Crossref/publikasi final berada pada publisher/OJS downstream. Urutan revisi, batas ronde, format wajib, tujuan journal/proceedings aktual dan OJS version masih harus direview.
+
+[18B-09 Full Paper Workflow DRAFT](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [18C-01B Publication ERD DRAFT](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

@@ -7,6 +7,14 @@
 
 > **KEPUTUSAN TERBARU:** *Administrative Screening* setelah Submit dihapus. Author wajib lolos validasi form **dan** server; naskah yang resmi Submitted langsung tersedia di Reviewer Abstract Index untuk self-claim. **Co-Host Rp3 juta per institusi/maksimal 5 peserta sudah final**. Mekanisme menghubungkan anggota via PIC + undangan email/Magic Link adalah **rekomendasi desain**, belum keputusan final. Lihat [rancangan 13 — linking Co-Host dan submission tanpa screening](13-LINK-COHOST-DAN-SUBMISSION-TANPA-SCREENING.md).
 
+## TAMBAHAN DRAFT — FULL PAPER ALA OJS & PUBLIKASI
+
+Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyerupai input OJS dan **assessment pascapresentasi** menghasilkan jalur `No Revision` (langsung pemeriksaan final) atau `Revision Required` (author unggah berkas versi baru + response). Sesudah **Final ACC**, tim penerbitan memilih jalur Proceedings atau Selected Journal, lalu menyiapkan **metadata snapshot dan file final** untuk ekspor OJS sesuai profile/version target. **SEPULUH calon jurnal** perlu diisi Admin; TOR tidak memuat nama/angka jurnal tersebut. Keputusan editor jurnal tetap terpisah dari seleksi ICHES. **Hanya DRAFT, belum final.**
+
+[18B-09 Full Paper/OJS Workflow](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [18C-01B Metadata/Publication ERD](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md).
+
+---
+
 ## TAHAP 18C-01 — DRAFT ARSITEKTUR DATABASE (MENUNGGU REVIEW)
 
 **Hanya rekomendasi arsitektur; tidak final dan belum dibuat database/migration.** Saya mengusulkan **satu database relasional** dengan **38 kandidat tabel** di delapan domain dan **empat ERD**. Keputusan bisnis telah dipertahankan: Co-Host VERIFIED sebelum lima seat/paper aktif dan tanpa tagihan Conference kedua; Paket pribadi Rp1 juta VERIFIED untuk empat hak; Published ACCEPT membuka Full Paper; seluruh listed author paper Presented eligible sertifikat setelah batch panitia.

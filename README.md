@@ -22,7 +22,9 @@
 **➡️ [18B-07A: Draft Kebijakan Pelunasan, Refund & Tenggat — 16 UAT](docs/18B-07A-DRAFT-KEBIJAKAN-PELUNASAN-REFUND-DAN-TENGGAT.md)**  
 **➡️ [18B-08: Invoice PDF, Bukti Lunas & Notifikasi — 32 UAT](docs/18B-08-CRUD-INVOICE-BUKTI-LUNAS-NOTIFIKASI-DAN-UAT.md)**  
 **➡️ [18C-01: DRAFT Arsitektur Database & 4 ERD — Menunggu Review](docs/18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md)**  
-**➡️ [18C-01A: DRAFT Kamus Data, Constraints, Migration & 36 UAT](docs/18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md)**
+**➡️ [18C-01A: DRAFT Kamus Data, Constraints, Migration & 36 UAT](docs/18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md)**  
+**➡️ [18B-09: DRAFT Full Paper ala OJS, Revisi Pascapresentasi, Handoff](docs/18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md)**  
+**➡️ [18C-01B: DRAFT ERD Extension Metadata & Publication OJS](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -121,6 +123,8 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**PEMBARUAN REVIEW 18C-01 (27 Okt 2026, BELUM FINAL):** pengguna menambahkan **Full Paper input menyerupai OJS**, penilaian reviewer pascapresentasi dengan **revisi bersyarat/tanpa revisi**, pemilihan jalur Proceedings atau jurnal, dan kebutuhan **ekspor metadata+naskah ke OJS**. Abstract Submission **tetap alur ICHES lama tanpa screening**. Repo lama telah dikaji: reusable canonical metadata, paper file versions, Final ACC, outlet/handoff; namun tidak boleh menyalin obsolete admin screening atau menjanjikan Native XML universal. TOR menyebut artikel terpilih di jurnal, **bukan daftar 10 jurnal**; 10 outlet adalah permintaan konfigurasi pengguna, belum daftar yang diverifikasi panitia. **38 kandidat tabel awal + 15 kandidat ekstensi publication = 53 untuk diskusi**, belum final dan boleh disederhanakan. [Workflow DRAFT 18B-09](docs/18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [Data model DRAFT 18C-01B](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md).
 
 **TAHAP SAAT INI — 18C-01 DRAFT, BELUM FINAL (27 Okt 2026):** rekomendasi **satu database relasional, 38 kandidat tabel, 4 ERD, kamus data, rancangan constraint & migration, dan 36 skenario UAT** sudah didokumentasikan. Ini **MENUNGGU REVIEW DAN REVISI PENGGUNA**; tidak ada skema yang dikunci, coding Laravel, migration, database nyata atau UAT yang dijalankan. [Buka ERD](docs/18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) · [Kamus data](docs/18C-01A-DRAFT-DATA-DICTIONARY-CONSTRAINTS-MIGRATIONS-UAT.md).
 

@@ -1,5 +1,7 @@
 # 18C-01A — DRAFT Kamus Data, Constraints, Migration Order & UAT
 
+> **ADDENDUM DRAFT 27 OKTOBER:** 38 tabel pada kamus ini adalah **baseline sebelum permintaan baru Full Paper ala OJS & revisi pascapresentasi**. Tambahan **15 kandidat (hingga 53 total untuk diskusi)** dan constraints/export berada pada [18C-01B](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md). Schema ini **BELUM FINAL** dan jumlahnya dapat dipangkas setelah review. Jangan membuat migration dari dokumen 18C-01A secara terpisah.
+
 > **27 Oktober 2026 · LAMPIRAN TEKNIS UNTUK REVIEW, BUKAN FINAL/BUKAN CODING.** Semua nama tabel, struktur, tipe field, primary key, DB engine, index dan urutan migration di bawah merupakan **REKOMENDASI** dan boleh direvisi oleh pengguna. Kebijakan bisnis yang sudah disetujui tetap dipertahankan. Tidak ada database, migration, SQL DDL, seeder atau test yang dijalankan.
 >
 > [DRAFT ERD utama 18C-01](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) · [Decision Register](09-KEPUTUSAN-DAN-ISU-TERBUKA.md) · [Admin CRUD](17-ADMIN-CRUD-DAN-PENGATURAN-ACARA.md) · [Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md) · [QR](05-QR-ABSENSI-DAN-FASILITAS.md).

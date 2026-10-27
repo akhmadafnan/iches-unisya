@@ -1,5 +1,7 @@
 # 18C-01 — DRAFT Database Architecture & ERD ICHES UNISYA 2027
 
+> **UPDATE REVIEW 27 OKTOBER 2026 — PENTING (TETAP DRAFT):** Pengguna menerima arah awal database, lalu menambahkan **Full Paper submission ala OJS** serta **penilaian pascapresentasi dengan revisi jika diperlukan**, Final ACC, ekspor OJS Proceedings dan jalur artikel terpilih ke **10 calon jurnal pilihan**. Ini membuat **38 kandidat tabel di dokumen ini sebagai BASELINE DRAFT**, **bukan daftar final yang sudah cukup**. Tambahan **15 kandidat tabel (total sementara hingga 53 untuk review)** dirinci pada [18C-01B](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md). Workflow pada [18B-09](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) merupakan usulan. **Tidak ada schema yang dikunci.**
+
 > **STATUS: DRAFT REKOMENDASI · MENUNGGU REVIEW PENGGUNA · BELUM FINAL / BELUM CODING.**  
 > **Tanggal:** 27 Oktober 2026. Desain tabel, relasi, index dan pilihan database di bawah adalah **usulan arsitektur**, bukan keputusan yang sudah dikunci. Ketentuan bisnis berlabel **DISETUJUI** berasal dari diskusi ICHES sebelumnya; aturan berlabel **TERBUKA** tidak boleh diberi default terselubung. Tidak ada migration, database, seeder, atau API yang dibuat.
 >
@@ -309,6 +311,9 @@ flowchart LR
 **Jangan salah baca:** yang “menunggu review” adalah **cara menyimpan dan menghubungkan data**, bukan mengulang negosiasi biaya/Co-Host/paket yang sudah disetujui.
 
 ## 10. Ringkasan status
+
+**Catatan supersession DRAFT:** inventory 38 dan diagram di sini belum memodelkan penuh `paper_translations`, `paper_keywords`, `author_affiliations`, `paper_references`, version snapshots, `presentation_assessments`, revision request dan publication/outlet export. **Jangan menggunakan 38 tabel ini saja untuk membuat migration final.** Baca [18C-01B Publication Extension](18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md) sebelum mereview skema gabungan. Abstract Submission tidak berubah; Full Paper OJS-like/Pascapresentasi/Outlet hanya tambahan rancangan.
+
 
 **DRAFT 18C-01** telah memetakan 38 kandidat tabel domain, empat ERD, invariants dan arah migration. **Belum ada finalisasi schema, SQL DDL, Laravel migration, database aktif, kode aplikasi atau UAT yang dijalankan.** Saran revisi pengguna akan menjadi dasar perubahan sebelum persetujuan implementasi.
 
