@@ -1,0 +1,157 @@
+ICH-S0-03 final verification — 28 October 2026
+Local Windows / PHP 8.4.24. Auth HTTP integration and Foundation DB tests use transactions on exact owned local schema, never database resets.
+
+$ php vendor/bin/pint --dirty; php vendor/bin/pint --test
+Exit: 0
+{"tool":"pint","result":"passed"}{"tool":"pint","result":"passed"}
+$ php artisan test --display-warnings
+Exit: 0
+
+   PASS  Tests\Feature\AuthenticationSmokeTest
+  ✓ login and confirmation are public but dashboard is protected                                                 0.16s
+  ✓ demo is denied by default and outside local even with flag                                                   0.03s
+  ✓ csrf rejects all auth mutations without token                                                                0.01s
+  ✓ invalid email and input types do not touch database                                                          0.02s
+  ✓ production cannot seed demo or log auth secrets                                                              0.01s
+  ✓ endpoint limits are independent and inertia receives a readable error                                        0.03s
+
+   PASS  Tests\Feature\FoundationSmokeTest
+  ✓ home returns the inertia foundation page                                                                     0.02s
+  ✓ inertia navigation returns the page payload                                                                  0.01s
+  ✓ unknown route returns not found                                                                              0.01s
+  ✓ missing inertia component is rejected                                                                        0.01s
+
+  Tests:    10 passed (120 assertions)
+  Duration: 0.54s
+
+
+$ ICHES_DB_TESTS=1 php artisan test tests/Database --display-warnings
+Exit: 0
+
+   PASS  Tests\Database\AuthenticationTest
+  ✓ otp creates verified uuid user once regenerates session and logout                                           0.24s
+  ✓ wrong codes lock both methods after five attempts                                                            0.05s
+  ✓ expiry and tampered magic are rejected                                                                       0.04s
+  ✓ magic get is non consuming post consumes once and does not leak token                                        0.04s
+  ✓ resend cooldown and invalidation of previous challenge                                                       0.02s
+  ✓ generic responses for existing and new users and email throttle                                              0.04s
+  ✓ existing user name and roles are preserved                                                                   0.02s
+  ✓ challenge row lock rejects a competing connection                                                            0.05s
+  ✓ consumption and user creation roll back together on error                                                    0.04s
+  ✓ demo seed is idempotent preserves revoked grants and demo login is gated                                     3.32s
+
+   PASS  Tests\Database\DatabaseFoundationTest
+  ✓ main entity ids are uuid v7 and relationship ids match                                                       0.04s
+  ✓ normalized email is unique including direct sql writes                                                       0.02s
+  ✓ event slug and eventwide or institution role scopes are unique                                               0.02s
+  ✓ foreign keys reject missing references and parent deletion                                                   0.02s
+  ✓ regrant keeps revocation history and rejects duplicate active scopes                                         0.05s
+  ✓ policies isolate users events institutions and revoked memberships                                           0.02s
+  ✓ eventwide membership does not grant institution scope                                                        0.02s
+  ✓ transaction rollback removes only its synthetic changes                                                      0.01s
+
+  Tests:    18 passed (308 assertions)
+  Duration: 4.25s
+
+
+$ composer validate --strict; npm.cmd run typecheck; npm.cmd run build
+Exit: 0
+./composer.json is valid
+
+> typecheck
+> vue-tsc --noEmit
+
+
+> build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 774 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                    1.92 kB │ gzip:  0.41 kB
+public/build/assets/app-mCZWu51Z.css         11.87 kB │ gzip:  3.22 kB
+public/build/assets/AuthShell-iPys4TP9.js     0.52 kB │ gzip:  0.39 kB
+public/build/assets/Index-OVDZWG1-.js         0.81 kB │ gzip:  0.53 kB
+public/build/assets/Magic-BE5Triwe.js         0.94 kB │ gzip:  0.59 kB
+public/build/assets/Foundation-Dq8qD4pd.js    1.06 kB │ gzip:  0.62 kB
+public/build/assets/Demo-vCq0Ciy2.js          1.38 kB │ gzip:  0.74 kB
+public/build/assets/Login-BxkDb6k2.js         2.69 kB │ gzip:  1.12 kB
+public/build/assets/app-BUqVnh7u.js         277.82 kB │ gzip: 97.36 kB
+✓ built in 1.34s
+
+$ php artisan migrate:status; php artisan route:list; git diff --check; git rev-parse HEAD; git status --short
+Exit: 0
+
+  Migration name ...................................................................................... Batch / Status
+  2026_10_28_000001_create_identity_and_event_foundation ..................................................... [1] Ran
+  2026_10_28_000002_make_role_assignment_uniqueness_active_only .............................................. [2] Ran
+  2026_10_28_000003_add_authentication_foundation ............................................................ [3] Ran
+
+
+  GET|HEAD   / ................................................................ home › Inertia\Controller › Controller
+  GET|HEAD   auth/magic ............................................................................ routes/web.php:15
+  POST       auth/magic ................................................................. Auth\SessionController@magic
+  GET|HEAD   auth/magic/{token} ....................................................... Auth\SessionController@capture
+  POST       auth/request ............................................................. Auth\SessionController@request
+  POST       auth/verify-code .......................................................... Auth\SessionController@verify
+  GET|HEAD   dashboard .................................................. dashboard › Auth\SessionController@dashboard
+  GET|HEAD   dev/login ............................................................... Inertia\Controller › Controller
+  POST       dev/login ................................................................... Auth\SessionController@demo
+  GET|HEAD   login ......................................................................... login › routes/web.php:12
+  POST       logout .................................................................... Auth\SessionController@logout
+  GET|HEAD   up .................................................................. Illuminate\Foundation › HealthCheck
+
+                                                                                                   Showing [12] routes
+
+warning: in the working copy of 'app/Models/Event.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Models/Institution.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Models/RoleAssignment.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Models/User.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Policies/EventPolicy.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Policies/InstitutionPolicy.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Policies/UserPolicy.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/Providers/AppServiceProvider.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'config/database.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'config/session.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'database/migrations/2026_10_28_000001_create_identity_and_event_foundation.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'database/migrations/2026_10_28_000002_make_role_assignment_uniqueness_active_only.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'routes/web.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/Database/DatabaseFoundationTest.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/Support/FoundationFixtures.php', LF will be replaced by CRLF the next time Git touches it
+a05fc046df96fbea4b231f68c6301d6f13be9e0b
+ M .env.example
+ M app/Models/Event.php
+ M app/Models/Institution.php
+ M app/Models/RoleAssignment.php
+ M app/Models/User.php
+ M app/Policies/EventPolicy.php
+ M app/Policies/InstitutionPolicy.php
+ M app/Policies/UserPolicy.php
+ M app/Providers/AppServiceProvider.php
+ M composer.json
+ M config/database.php
+ M config/session.php
+ M database/migrations/2026_10_28_000001_create_identity_and_event_foundation.php
+ M database/migrations/2026_10_28_000002_make_role_assignment_uniqueness_active_only.php
+ M resources/css/app.css
+ M routes/web.php
+ M tests/Database/DatabaseFoundationTest.php
+ M tests/Support/FoundationFixtures.php
+?? app/Http/Controllers/
+?? app/Http/Middleware/AuthPrivacy.php
+?? app/Http/Middleware/LocalDemoOnly.php
+?? app/Http/Requests/
+?? app/Models/AuthChallenge.php
+?? app/Services/
+?? config/auth.php
+?? config/iches-auth.php
+?? database/migrations/2026_10_28_000003_add_authentication_foundation.php
+?? database/seeders/
+?? harness/evidence/ich-s0-03/
+?? resources/js/components/
+?? resources/js/pages/auth/
+?? resources/js/pages/dashboard/
+?? tests/Database/AuthenticationTest.php
+?? tests/Feature/AuthenticationSmokeTest.php
