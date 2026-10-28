@@ -1,5 +1,7 @@
 # 20E-02 — Herd Free & phpMyAdmin: ICHES Local Workflow
 
+> **POLICY UPDATE / ARCHIVAL WARNING (28 Oct 2026):** The phpMyAdmin *method* is still preferred, but this document's `iches_unisya_test` / `iches_test` provisioning recipe has been **SUPERSEDED**. Use only [21J-01 primary development database decision](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md); do not create the obsolete test schema/account. Primary `iches_unisya` schema setup is not yet authorized or verified.
+
 > **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
 
 > **28 October 2026 · DEFAULT LOCAL WORKFLOW · NO GO CODING.** Replaces the earlier temporary MySQL CLI login-path proposal as the normal administration route. No test database/user has been created or authenticated yet.

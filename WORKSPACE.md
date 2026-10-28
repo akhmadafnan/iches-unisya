@@ -18,6 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21J-01 — OWNER-LOCKED: one primary development database (CURRENT)
+
+- [21J-01 definitive owner decision](docs/21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md): **RD-03B** replaces former compulsory isolated `iches_unisya_test` database. One dedicated local ICHES `iches_unisya` schema will serve development/manual synthetic trials, with local scoped credentials and no impact on any other application database.
+- **Not provisioned/verified:** schema existence, authenticated login, MySQL InnoDB/FK, account privileges, Laravel DB configuration still pending. The merged scaffold has `DB_CONNECTION=disabled`; CI remains DB-free. No database creation, migration, coding, destructive reset or deployment authorized.
+- Normal development migrations only after `ICH-S0-02` named GO; never automatically drop data using `migrate:fresh` against the primary dev schema. A later production cleanup/reset is a separately approved, backed-up cutover decision. Existing 20E test DB instructions are archived historical policy.
+- S0-01 & S0-07 remain COMPLETE. PR #3 design Skills still separately OPEN.
+
 ## 21I-11 — ICH-S0-07 MERGED and COMPLETE (CURRENT)
 
 - Owner-authorized ordinary merge of [PR #5](https://github.com/akhmadafnan/iches-unisya/pull/5) succeeded with feature HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7`, merge `f6d5bed4518e40e3b6d9da44a27661147571b478`; three reviewed files only, no bypass, migration, deployment or new code.

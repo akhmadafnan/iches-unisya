@@ -1,5 +1,7 @@
 # 21I-11 — ICH-S0-07 MERGED / COMPLETE and Next Task Gate
 
+> **LATER OWNER DECISION 21J-01:** the S0-02 prerequisite below regarding a dedicated `iches_unisya_test` schema is **historical and superseded**. New rule: one dedicated `iches_unisya` primary development DB, setup still unverified and S0-02 NO_GO. [21J-01](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md).
+
 > **28 October 2026 · ICH-S0-07 COMPLETE / PR #5 MERGED / NO NEW GO CODING.** Status verified directly via GitHub API, after owner explicitly approved merge. No migration, new code task or deployment.
 
 ## Final PR merge evidence

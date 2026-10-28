@@ -1,5 +1,7 @@
 # 20E — MySQL Isolated Test Database Readiness
 
+> **SUPERSEDED BY OWNER 21J-01 ON 28 OCT 2026:** This is a historical diagnostic/runbook for a proposed `iches_unisya_test` schema; **do not provision it by following this file**. Current decision is one dedicated local `iches_unisya` primary development application database, with verified ownership and scoped permissions, no automatic destructive reset. [21J-01 RD-03B](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md). No database write authorization granted.
+
 > **28 October 2026 · G0 PARTIAL · READ-ONLY PRE-FLIGHT COMPLETED · NO GO CODING.** This is the database readiness runbook for the owner's approved ICHES Laravel 13 / PHP 8.4 / MySQL/InnoDB / UUIDv7 baseline (RD-01–RD-06, [Decision Register](09-KEPUTUSAN-DAN-ISU-TERBUKA.md)). **Never treat TCP availability as authenticated test database readiness.**
 
 ## Owner clarification: Herd Free + phpMyAdmin is the DEFAULT

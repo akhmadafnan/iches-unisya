@@ -536,10 +536,19 @@ Setiap keputusan baru dicatat dengan: ID, tanggal, pemutus, keputusan, alasan ri
 |---|---|---|
 | **RD-01** | Canonical source repository `akhmadafnan/iches-unisya`; legacy `international-conference-platform` only for selective audited technical reuse | Do not import legacy payment/screening business rules or secrets |
 | **RD-02** | Laravel 13, PHP 8.4 target; Node 26 currently available for compatibility testing, with actually compatible exact dependencies to be locked after GO | Production hosting version remains a separate release gate |
-| **RD-03** | MySQL/InnoDB with foreign keys, transactions and JSON; **disposable isolated test database only** for first sprint | Local server handshake 9.7.1 verified without auth; **authenticated test DB, SQL engine checks and permissions still unverified** |
+| **RD-03 (superseded on DB environment by RD-03B)** | MySQL/InnoDB with foreign keys, transactions and JSON **RETAINED**. Historical clause ‘disposable isolated test database only’ **SUPERSEDED** for development by [RD-03B](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md). | MySQL reachability verified, authenticated primary app schema `iches_unisya` and permissions NOT VERIFIED. No SQL/coding GO. |
 | **RD-04** | UUIDv7 canonical entity primary keys, consistent FK representation | Migration/test schema must preserve consistent key typing; no incidental BIGINT substitution |
 | **RD-05** | Laravel Policies/Gates with role, event, institution, resource/owner scoping; same-user multi-role workspace switching | UI visibility is not access control; Superadmin support view read-only and audited |
 | **RD-06** | Laravel **session-backed**, **participant login by passwordless email OTP / Magic Link**, in line with already approved **NEW-003** | Do **not** implement required participant passwords. Staff login/MFA and OTP provider/expiry/rate-limit details require separate explicit implementation decisions |
 
 **Verification record:** owner acceptance was received in this conversation on 28 October 2026. PRE-03 Codex read-only Skills handshake already PASSED; an unauthenticated MySQL server greeting returned protocol 10 / version 9.7.1 over TCP 127.0.0.1:3306, **no credential accessed, SQL executed, schema modified, or database login attempted**. Next required gate is isolated test-DB authentication and approved PR/branch baseline. **ICH-SPRINT-01 remains NO_GO until separately and explicitly authorized after READY**.
+
+
+## A21J. RD-03B — Final owner decision: one primary ICHES development database (28 October 2026)
+
+**EXPLICIT OWNER DIRECTION:** “untuk DATABASE kita kunci menggunakan database utama ... ketika akan production kita drop isinya ... agar kita tidak ribet ... TRIAL/ERROR ... DEVELOP”. **DECIDED**: one dedicated **`iches_unisya` development application schema** on local MySQL for ICHES, no mandatory second persistent `iches_unisya_test` schema. **SUPERSEDES only RD-03 test-DB separation**, retaining MySQL/InnoDB, UUIDv7 and other RD-01–RD-06 decisions. This is the current source of truth: [21J-01 decision and guardrails](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md).
+
+**Scope guard:** This is a policy choice, **not** proof of database existence/privileges, SQL creation, data reset, migration GO, schema authoring, or deployment. App DB name must be checked for collisions and exclusive ICHES ownership. Use scoped local credentials in untracked .env. Development trial records may be cleaned at a separately approved future production cutover, after audited backup and data classification; **never blindly drop a production/shared database or automate destructive resets on the one development schema**. If the same schema is ever proposed for production, that specific high-risk cutover needs its own decision; fresh production DB is preferable.
+
+**Status:** `RD-03B APPROVED/LOCKED`; `DB_PRIMARY_DEV_NOT_VERIFIED`; `ICH-S0-02 NO_GO`.
 
