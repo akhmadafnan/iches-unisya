@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-02 — S0-02 REV-03 local review PASS, owner push approval needed (CURRENT)
+## 21K-03 — S0-02 accepted, exact Codex feature push authorized (CURRENT)
+
+- Owner formally **ACCEPTED REV-03** and authorized Codex VS Code's normal non-force push of EXACT `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb` on `feat/ich-s0-02-db-foundation`. [21K-03 handoff](docs/21K-03-S0-02-OWNER-ACCEPT-CODEX-PUSH-HANDOFF.md). On successful push verification, ChatGPT may create PR and inspect Ubuntu PHP8.4/Node22 Actions, not merge.
+- Independent local preflight still HEAD `f4eb25c`, parent `78bc6d9`, worktree clean; new feature branch **not yet present** on GitHub. Do not incorporate newer governance-only `main` commits into feature before exact-SHA push; no rebase, merge, amend or reset.
+- No DB writes or changes allowed by publication authorization, no reset, source changes, merge, new coding task or deploy.
+
+## 21K-02 — S0-02 REV-03 local review PASS, owner push approval needed (HISTORICAL)
 
 - [21K-02 full review](docs/21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md): exact local `feat/ich-s0-02-db-foundation` HEAD `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`, parent `78bc6d9`, clean; REV-03 3 scoped paths +97/-0, untouched original migration.
 - Independently reran **8 DB tests/134 assertions** and **4 DB-free tests/36 assertions**, Pint 29 files, Composer, TS and Vite PASS; DB batch 1+2 Ran and generated active-only uniqueness/actual empty domain tables verified in MySQL `iches_unisya`. REV-03 issue resolved, but `down()` intentionally disallows unsafe rollback.

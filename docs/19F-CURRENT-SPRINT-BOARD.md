@@ -268,8 +268,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Independently reran** MySQL DB integration **8 PASS / 134 assertions**, existing DB-free PHP smoke **4 PASS / 36 assertions**, Pint **29 files PASS**, Composer, TS typecheck, Vite build all PASS; migration status **batch 1+2 Ran**. Read-only post-test SQL proves all four domain tables **zero rows**, migrations=2, actual stored generated column/index correct.
 - **REV-03 REVIEW_PASS / LOCALLY CLOSED**, with deliberate non-reversible corrective `down()` safety limitation documented. No new Linux CI on S0-02 feature SHA; feature not pushed. Owner must separately approve **Codex-only normal push exact SHA `f4eb25c...`**, after which ChatGPT may open PR and audit GitHub Actions. **No merge/deploy/DB wipe/new code task authorized**.
 
+## 21K-03 — Owner accepts REV-03 and authorizes exact Codex push (28 Oct 2026)
+
+- **OWNER_EXPLICIT_ACCEPT:** `ICH-S0-02 REV-03` independently passed [21K-02 review](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md). Owner explicitly authorized **Codex VS Code ONLY** to perform **normal non-force push** of branch `feat/ich-s0-02-db-foundation`, **exact SHA `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`**. ChatGPT may subsequently create PR and inspect actual Ubuntu PHP8.4/Node22 GitHub Actions. **No MERGE / DB reset / coding additional tasks / deployment.**
+- [21K-03 exact publish handoff](21K-03-S0-02-OWNER-ACCEPT-CODEX-PUSH-HANDOFF.md) documents preflight/stop. Local verified `feat/ich-s0-02-db-foundation` HEAD exact `f4eb25c`, parent `78bc6d9`, clean, canonical origin; GitHub remote feature ref **NOT FOUND** before push. Original 13 S0-02 file paths plus one corrective migration = **14 scoped paths** in final feature diff from approved foundation baseline, no secrets.
+- **Critical SHA preservation:** `main` now contains docs-only governance commits after feature baseline `3ad72cf...`. **Do not merge/rebase/fast-forward feature branch against main before push**, since changing feature HEAD would void exact-SHA permission. Normal push publishes current history as-is, PR will compare against latest main.
+- Owner's subsequent authorization permits **ChatGPT to open PR** after confirming exact GitHub remote SHA, and inspect new CI. The published SHA has **no Linux CI result until an actual workflow run**. Merge requires separate approval.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 REV-03 LOCAL_REVIEW_PASS / OWNER_PUSH_APPROVAL_PENDING.** Codex commit f4eb25c independently audited: 8 DB tests/134 assertions, 4 smoke/36, Pint, Composer, TS/Vite PASS; local schema indexed correctly and clean after rollback. No push, PR, merge or deploy authorized.
+**NOW: ICH-S0-02 OWNER_ACCEPTED / CODEX_EXACT_SHA_PUSH_AUTHORIZED / PUSH_PENDING.** Owner approved normal, non-force Codex VS Code push of exact f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb on feat/ich-s0-02-db-foundation, then ChatGPT may open PR and verify new Linux CI. No merge, DB reset, new coding or deploy.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
