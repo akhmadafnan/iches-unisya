@@ -206,8 +206,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - [21I-09 Codex push handoff](21I-09-S0-07-REV02-PUSH-AUTHORIZATION.md) scopes this push to the approved commit; **no force push, rebase, amend, extra app code, merge, migrations, DB or deployment**.
 - PR #5 remains OPEN / UNMERGED / prior checks failed until an actual corrected SHA run completes. Separate Owner authorization required for PR merge.
 
+## 21I-10 — Real GitHub Actions PASS on corrected PR #5 (28 Oct 2026)
+
+- [21I-10 actual workflow verification](21I-10-S0-07-LIVE-CI-PASS-AND-MERGE-GATE.md): GitHub feature ref and PR #5 exact owner-approved SHA `294a54b223676df3b6e9124480e271ee3a50bdc7`. PR remains OPEN/UNMERGED, **3 scoped changed files**, zero deletions, no conflict.
+- [PR #5 GitHub Actions 40678863079](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678863079) **SUCCESS**: clean Ubuntu PHP 8.4.27, Composer install/validate, 4 PHPUnit tests/36 assertions, Pint 18 files, Node22 setup/npm ci/TS typecheck/Vite build. **REV-02 CLOSED**, real CI PASS.
+- Duplicate [push run 40678855656](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678855656) CANCELLED, while PR run SUCCESS. GitHub `mergeable=true` but `mergeable_state=unstable`; review required check rules before merge. **Owner merge permission not granted**, no auto-merge, DB or deployment.
+- After explicit owner authorization, independently re-check head SHA, 3-file diff and checks before PR #5 merge. Design Skills PR #3 remains separately OPEN/UNMERGED.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 REV-02 OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / LIVE_CI_RECHECK_PENDING.** The owner authorized a normal push of exactly `294a54b223676df3b6e9124480e271ee3a50bdc7` to the existing PR #5 branch; the push has NOT yet happened. No merge, DB, other coding or deployment.
+**NOW: ICH-S0-07 LIVE_CI_PASS / REVIEW_PASS / PR5_OWNER_MERGE_PENDING.** PR #5 HEAD `294a54b` pushed; exact 3-file scope; Ubuntu 24.04 job 40678863079 SUCCESS (4 tests/36 assertions, Pint, Node22/npm/TS/Vite). Duplicate push run cancelled; GitHub mergeable=true but mergeable_state=unstable. No merge or deployment.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-10 — S0-07 PR #5 CI runtime PASS, pending owner merge (CURRENT)
+
+- Owner-approved corrected `feat/ich-s0-07-ci` SHA `294a54b223676df3b6e9124480e271ee3a50bdc7` pushed and GitHub remote/PR verified identical. Exactly 3 scoped changed files; PR #5 OPEN and unmerged.
+- [21I-10 live CI evidence](docs/21I-10-S0-07-LIVE-CI-PASS-AND-MERGE-GATE.md): [PR workflow success](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678863079), PHP 8.4.27, 4/36 PHPUnit, Pint 18 files, Node22/npm/TS/Vite all SUCCESS. [Duplicate push workflow](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678855656) CANCELLED, not PASS, due to concurrency policy. GitHub `mergeable=true`, `mergeable_state=unstable` despite successful PR job; branch required check rules must be respected.
+- **REV-02 CLOSED / LOCAL and LINUX CI REVIEW_PASS / OWNER_MERGE_APPROVAL_PENDING.** No other code, DB, migration, deployment or PR #3 merge authorized.
+
 ## 21I-09 — REV-02 accepted and exact Codex push authorized (CURRENT)
 
 - Owner has explicitly authorized Codex VS Code to push **only** `feat/ich-s0-07-ci` at `294a54b223676df3b6e9124480e271ee3a50bdc7` with ordinary no-force push. [21I-09 publication handoff](docs/21I-09-S0-07-REV02-PUSH-AUTHORIZATION.md).

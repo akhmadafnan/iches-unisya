@@ -1,6 +1,6 @@
 # 21I-09 — Owner ACCEPT REV-02 and Codex-only corrected SHA push
 
-> **28 Oct 2026 · OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / PUSH_NOT_YET_EXECUTED.** The owner expressly authorized Codex VS Code to push `294a54b223676df3b6e9124480e271ee3a50bdc7` normally on `feat/ich-s0-07-ci`. ChatGPT may inspect PR #5 and GitHub Actions after verified push. **No PR merge, migration, database, other coding task or deployment permission.**
+> **28 Oct 2026 · HISTORICAL OWNER PUSH AUTHORIZATION — NOW COMPLETED.** Exact corrected SHA was pushed; PR #5 live CI run succeeded. See [21I-10 verified CI and current merge gate](21I-10-S0-07-LIVE-CI-PASS-AND-MERGE-GATE.md). The remainder preserves pre-push instructions as a handoff snapshot. The owner expressly authorized Codex VS Code to push `294a54b223676df3b6e9124480e271ee3a50bdc7` normally on `feat/ich-s0-07-ci`. ChatGPT may inspect PR #5 and GitHub Actions after verified push. **No PR merge, migration, database, other coding task or deployment permission.**
 
 ## Verified state before handoff
 
