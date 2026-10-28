@@ -11,6 +11,10 @@ metadata:
 
 **Scope:** You are the **source-code implementer** in **Codex VS Code**. The owner uses **ChatGPT** for analysis, requirements, architecture, documentation, planning, review and decisions; **GitHub** is the shared record; terminal is used for authorized tests/inspection. This skill **does not authorize coding** merely because it exists.
 
+## 21G optional specialized methodology Skills
+
+Supplemental pinned skills `ponytail`, `ponytail-review`, `ponytail-audit`, `diagnosing-bugs`, `tdd` may be consulted **only when task-relevant** and never supersede ICHES native instructions, owner-approved Work Order, or named GO. Consult [21G routing](../../../docs/21G-01-SKILLS-ROUTING-POLICY.md). They do not authorize self-starting coding, global persistence, script execution, DB migrations or merge/deployment. Reviews/audits are read-only, and any third-party `Ship` is not owner acceptance. For TDD, seams already specified in an approved Work Order need no repeated user confirmation.
+
 ## Preflight — REQUIRED every coding task
 
 1. Confirm owner explicit **GO CODING Task ID or GO SPRINT for finite named ordered Task IDs including this task**, with complete Work Order. Consent to governance or “continue” is NOT GO. If no named GO: do not edit code or journal. See `docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md`.

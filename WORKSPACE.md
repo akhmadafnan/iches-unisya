@@ -18,6 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21G — External Skills curation, separate unmerged docs branch
+
+- Owner approved selective external Skills integration. Initial static W1 copies are staged on remote **`docs/21g-skills-integration`**, not on local unpushed Laravel feature branch. Five skills: Ponytail, Ponytail Review/Audit, Matt diagnosing-bugs, Matt TDD; source SHAs and MIT licenses retained.
+- [21G routing](docs/21G-01-SKILLS-ROUTING-POLICY.md), [source provenance](docs/21G-02-SKILLS-PROVENANCE-AND-LICENSES.md), [activation & future waves](docs/21G-03-ACTIVATION-AND-WAVE-PLAN.md). No automatic installation, scripts, project source edits or owner PR merge approval. W2/W3 pending review.
+- Accepted `ICH-S0-01` feature branch push remains blocked by local GitHub authentication; do not conflate the 21G docs PR with the accepted application PR.
+
+
 ## 21F — ICH-S0-01 owner accepted; Codex push/PR only
 
 - Owner explicitly accepted independent 21E review of local feature commit `8eba7cb5b9da0577910beb919844165869591e05` and authorized **Codex VS Code** to push only `feat/ich-s0-01-foundation` and create PR against `main`.
