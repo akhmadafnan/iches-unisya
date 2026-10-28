@@ -52,3 +52,7 @@
 **Required next owner decision:** approve acceptance and authorize Codex to **push `feat/ich-s0-01-foundation` and open a scoped feature PR against `main`**, keeping its existing local source commit intact. ChatGPT then reviews PR diff/status; **merge requires separate owner authorization**. Never push credentials or generated assets.
 
 **Current GitHub/main contains only documentation governance; local app works through Herd from unpushed feature branch.**
+
+## Owner acceptance update — 28 October 2026
+
+**OWNER_ACCEPTED:** the owner explicitly accepted this review and authorized Codex VS Code to push the already-reviewed local `feat/ich-s0-01-foundation` commit `8eba7cb5b9da0577910beb919844165869591e05` and create a scoped PR targeting `main`. This overrides the earlier `OWNER_ACCEPTANCE_PENDING` historical status above. **No auto-merge or further implementation authorization.** See [21F push/PR instructions](21F-ICH-S0-01-OWNER-ACCEPT-PUSH-PR-HANDOFF.md). No push or PR was performed by ChatGPT while recording this update.

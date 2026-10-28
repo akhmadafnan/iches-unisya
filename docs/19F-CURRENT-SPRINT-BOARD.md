@@ -112,8 +112,16 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Minor, not blocking:** `public/favicon.ico` empty (0 bytes), replace in public visual task; database config intentionally disabled until separately authorized S0-02.
 - **No push/PR/merge/deploy** has occurred. **Next:** owner accepts S0-01 and permits **Codex** to push the feature branch and open a PR (not auto merge). S0-02/07 and full Sprint still lack GO.
 
+## 21F — ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED (28 October 2026)
+
+- **Owner explicit acceptance:** “SETUJU ACCEPT ICH-S0-01. Saya menerima hasil review 21E dan mengizinkan Codex VS Code melakukan push branch feat/ich-s0-01-foundation serta membuat Pull Request ke main. Tidak ada izin auto-merge, migrasi database, atau deployment. Siapkan instruksi Codex berikutnya.”
+- [21E independent review](21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md): **REVIEW_PASS** on local clean feature HEAD `8eba7cb5b9da0577910beb919844165869591e05`. Owner now **ACCEPTED** that exact implementation.
+- [21F Codex push/PR handoff](21F-ICH-S0-01-OWNER-ACCEPT-PUSH-PR-HANDOFF.md): Codex must preserve existing feature branch and commit, verify `git diff origin/main...HEAD`, push **only** `feat/ich-s0-01-foundation` without force, open feature PR into `main` and stop. Windows `gh` CLI was not found; use authenticated GitHub UI or return compare URL for ChatGPT connector fallback.
+- **No push, feature PR or merge has been verified yet.** Current GitHub `main` remains docs/governance only; local Laravel implementation lives only on feature branch pending Codex push.
+- **No next-task GO:** S0-02, S0-07, schema/migration, auth, CMS and deployment remain unauthorized.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-01 REVIEW_PASS / OWNER_ACCEPTANCE_PENDING.** Local feature commit validated; no push or PR yet. Owner decides acceptance and whether Codex may push/open feature PR. No merge/DB/migration authorization.
+**NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -122,7 +130,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** DB-free Laravel/Vue Foundation | **REVIEW_PASS / OWNER_ACCEPTANCE_PENDING** | ChatGPT reviewed local commit `8eba7cb`; real tests, scope and screenshots PASS; [21E audit](21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md) | Owner acceptance + consent for Codex feature push/PR; separate merge |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED** | Review PASS + owner's explicit ACCEPT, local commit `8eba7cb`; [21F](21F-ICH-S0-01-OWNER-ACCEPT-PUSH-PR-HANDOFF.md) | Codex push feature branch and open PR; separate merge authorization later |
 
 **Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
 

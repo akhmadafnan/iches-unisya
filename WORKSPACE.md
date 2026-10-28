@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21F — ICH-S0-01 owner accepted; Codex push/PR only
+
+- Owner explicitly accepted independent 21E review of local feature commit `8eba7cb5b9da0577910beb919844165869591e05` and authorized **Codex VS Code** to push only `feat/ich-s0-01-foundation` and create PR against `main`.
+- [21F execution handoff](docs/21F-ICH-S0-01-OWNER-ACCEPT-PUSH-PR-HANDOFF.md): do not reset/rebase/change accepted code; verify clean branch and diff, push without force and open PR (via authenticated GitHub UI; `gh` not found in PATH). **No merge, DB/migration, CMS, auth, deployment or new-task GO.**
+- Feature branch remains local/unpushed at last verification; 19F is the single current status board.
+
 ## 21E — ICH-S0-01 code review completed; owner acceptance pending
 
 - [21E independent code review](docs/21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md): **REVIEW_PASS**, local-only feature commit `8eba7cb5b9da0577910beb919844165869591e05`. PHP, Composer, Vite, TS, Pint, Herd HTTP, negative URL/scope checks independently passed. Minor empty favicon not blocking.
