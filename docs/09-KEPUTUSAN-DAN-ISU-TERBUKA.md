@@ -330,6 +330,25 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [18C-03B — Switch Workspace / Admin View as User](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
 
+## A19. Persetujuan arah Switch Workspace dan Tahap 18C-04 — Frontend/Dashboard (DRAFT)
+
+**MASUKAN PENGGUNA 28 OKTOBER 2026:** “Oke siap saya setujui. Mari lanjutkan ke pekerjaan berikutnya.” Ini menerima **usulan inti 18C-03B** untuk beralih antar-workspace sendiri melalui satu akun dan **View as User bagi Superadmin untuk bantuan read-only**, lalu meminta dilanjutkan ke **18C-04**. **Tidak** menyalakan login sebagai orang lain dengan akses mutasi, dan tidak memberi izin Superadmin/Finance baru pada seluruh Admin. Detail menu, jumlah layar, exact route, waktu kedaluwarsa support view, dan plugin Auth tetap DRAFT.
+
+| ID | Keputusan/kandidat desain | Status |
+|---|---|---|
+| NEW-061 | **Switch Workspace** antar role/context user sendiri tanpa logout/login, `user_id` tetap sama | **ARAH FITUR DISETUJUI** |
+| NEW-062 | **View as User** untuk **Superadmin support READ-ONLY** dengan real actor/target terpisah, banner Exit dan audit, tanpa mutasi dan private file access | **ARAH FITUR DISETUJUI**, detail scope/session DRAFT |
+| PROP-077 | **6 layout dasar + 1 Support View overlay**; satu desain sistem untuk Public, Auth, Personal, Institution, Backoffice, Scanner | **DRAFT 18C-04** |
+| PROP-078 | **R02 Public CMS-driven**: COMING SOON/CFP configurable, EN/ID/AR RTL, Inter/Sora, ivory/forest/gold, no carousel | **DRAFT UI menurunkan baseline visual sebelumnya** |
+| PROP-079 | **Dashboard personal dan PIC**: My Papers/Payments/Package/QR/Certificates; PIC satu invoice institusi/5 seats setelah Verified, tanpa melihat invoice personal member | **DRAFT UI atas dasar bisnis FINAL** |
+| PROP-080 | **Backoffice role-scoped** bagi Conference/Academic/Moderator/Publication/Finance/Programs/Scanner/Certificate/Admin; Full Paper wizard OJS-like, no revision/revision required | **DRAFT UI atas dasar bisnis yang diterima** |
+| PROP-081 | **55 layar kandidat** (boleh digabung tab) serta **60 skenario UAT frontend** | **RENCANA UAT, BELUM DIEKSEKUSI** |
+| PROP-082 | **RTL Arabic & accessibility QA**, server-provided safe allowed workspace props, private data filtering; desktop/tablet/mobile layout | **DRAFT IMPLEMENTASI** |
+
+**Tidak final:** refund/top-up/overdue, database/PK, metode login/MFA, jumlah reviewer, file Full Paper wajib, 10 jurnal nyata, target OJS actual profiles, scanner offline, role delegation untuk Support View, jumlah tabel, dan deployment. “Setuju” berarti arah fitur Switch diterima; **rancangan 18C-04 masih untuk diperiksa sebelum coding**.
+
+[18C-04 Frontend UX DRAFT](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) · [18C-04A Screen Inventory & 60 UAT](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md) · [18C-03B Switch Workspace](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

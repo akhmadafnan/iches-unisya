@@ -1,5 +1,7 @@
 # 18C-03B — DRAFT Switch Role / Workspace & Switch User (Admin Support)
 
+> **STATUS PEMBARUAN 28 OKTOBER 2026:** pemilik produk menjawab **“saya setujui”** terhadap ringkasan usulan 18C-03B. **Arah Switch Workspace/Role (akun sendiri) dan Superadmin View as User read-only diterima untuk rancangan**. **Belum ada izin full impersonation/mutation**, delegasi ke Admin biasa, pemilihan TTL support mode, atau implementasi aplikasi. Frontend terinci di [18C-04](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) dan [18C-04A](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md).
+
 > **28 Oktober 2026 — TAMBAHAN PERMINTAAN PEMILIK PRODUK · DRAFT UNTUK REVIEW · BUKAN CODING.**
 >
 > **Masukan user:** “Kan setiap user bisa memiliki role berbagai macam, nanti tolong dibantu pada tampilan backend admin ada fitur switch akun. sehingga mempermudah nantinya.”
@@ -215,6 +217,9 @@ Cukup satu tabel, bukan role baru per user dan bukan tabel untuk setiap workspac
 Seluruh UAT bersifat **rencana** dan tidak menyatakan implementasi sudah aman. Posisi terkait support preview harus ditinjau kebijakan privasi institusi sebelum go-live.
 
 ## 10. Pilihan untuk review user — BELUM FINAL
+
+**KOREKSI STATUS:** SW-D01 (Switch Workspace) dan **arah default** SW-D02 (Superadmin View as User **read-only**) telah **diterima oleh user** pada 28 Oktober 2026. **Rincian teknis** tentang form reason, TTL, audit table, role delegasi dan exact UX/permission masih DRAFT. SW-D03 (full Act As User) **TIDAK** diterima. Tahap 18C-04 telah mengakomodasi kedua fitur dalam frontend draft. [Frontend 18C-04](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md).
+
 
 | Pilihan | Rekomendasi saya | Status |
 |---|---|---|

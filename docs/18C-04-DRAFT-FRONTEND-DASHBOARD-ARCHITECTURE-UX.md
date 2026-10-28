@@ -45,7 +45,7 @@
 
 **Usulan token CSS untuk desain teknis** adalah penurunan warna di atas, bukan hardcoded 70 komponen berbeda. Warna tambahan (error/success/border/muted) berasal dari semantic tokens shadcn-vue yang perlu diuji kontras. Dashboard **tidak harus serba hijau**; forest terutama untuk identitas, navigasi dan CTA penting.
 
-## 3. Arsitektur halaman: enam Shell / Layout, satu aplikasi
+## 3. Arsitektur halaman: enam layout dasar + satu Support View overlay, satu aplikasi
 
 ```mermaid
 flowchart TD
@@ -73,7 +73,7 @@ flowchart TD
 | `ScannerLayout` | operator layanan mobilitas tinggi | scanner-first, assigned service, hasil check-in, sync state, tanpa menu kompleks |
 | `SupportViewLayout` | Superadmin troubleshooting (setelah diberi izin) | persistent banner target + actor, **read-only**, Exit; tidak punya route mutasi |
 
-**Layout bukan hak akses**: backend tetap memvalidasi Resource Policy dan Business Gate. “Beralih Workspace” hanya preferensi konteks UI, `user_id` tetap sama. Dalam “Lihat Sebagai User”, admin asli tetap actor, target hanya proyeksi data aman; **bukan Auth::login(target)**.
+**Catatan hitungan:** enam layout dasar adalah Public/Auth/Personal/Institution/Backoffice/Scanner; SupportView adalah **overlay/lapisan ketujuh khusus read-only**, bukan aplikasi mandiri. **Layout bukan hak akses**: backend tetap memvalidasi Resource Policy dan Business Gate. “Beralih Workspace” hanya preferensi konteks UI, `user_id` tetap sama. Dalam “Lihat Sebagai User”, admin asli tetap actor, target hanya proyeksi data aman; **bukan Auth::login(target)**.
 
 ## 4. Sitemap publik — R02 dipertahankan, CMS mengendalikan status
 

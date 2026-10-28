@@ -1,5 +1,7 @@
 # 18C-02 — DRAFT Laravel Backend Architecture & Business Logic ICHES UNISYA 2027
 
+> **FRONTEND HANDOFF 28 OKTOBER (DRAFT):** struktur Public/Personal/PIC/Backoffice/Scanner, Account Switcher dan Superadmin support preview READ-ONLY di [18C-04](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md); inventory 55 layar, data contract dan 60 UAT di [18C-04A](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md). Hanya arah fitur Switch yang diterima pengguna; **backend resource Policies tetap sumber kebenaran**.
+
 > **HANDOFF TAMBAHAN 28 OKTOBER (DRAFT):** [18C-03B Switch Workspace & Admin Support View](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md) mengusulkan session preference untuk role/workspace dalam **satu User ID**, serta opsi **Superadmin-only View as User yang read-only, with real_actor + target metadata, reason, audit, expiry**. Business Action tetap mengevaluasi **real actor**; tidak ada mutasi Finance/Academic/Publication/QR selama support view. Belum coding dan belum memutuskan mode impersonation full.
 
 > **HANDOFF LANJUTAN 27 OKTOBER 2026 (DRAFT):** [18C-03 Security Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) dan [18C-03A Permission Matrix + 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md) merinci session login, resource policies, event/institution/paper/finance scope, private file/download dan publication export. **Tidak mengubah 18C-02 menjadi final dan tidak mengotorisasi coding.**

@@ -1,5 +1,7 @@
 # 18C-03 — DRAFT Authentication, RBAC & Security Architecture ICHES 2027
 
+> **PERKEMBANGAN 28 OKTOBER:** user telah menerima **arah fitur Switch Workspace dan Superadmin View as User READ-ONLY**. Spesifikasi UX lanjutan ada pada [18C-04](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) dan [18C-04A](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md). **Tidak ada full impersonation/admin mutasi atas nama target**; keputusan teknis login/MFA dan expiry masih DRAFT.
+
 > **ADDENDUM REQUEST 28 OKTOBER 2026 (BELUM FINAL):** satu user banyak peran harus memiliki **Switch Workspace/Role** melalui dropdown header/topbar tanpa login ulang; **Switch User / View as User untuk bantuan Superadmin** adalah **opsi berbeda** dan direkomendasikan **READ-ONLY** dengan alasan, dua identitas/audit, expiry, banner dan tanpa aksi sensitif. Seluruh detail di [18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md) dan harus dimasukkan ke rancangan frontend 18C-04. **Jangan menyamakan active_workspace session dengan security/role grant, dan jangan melakukan `Auth::login(target)` sebagai default.**
 
 > **27 Oktober 2026 — DRAFT REKOMENDASI / MENUNGGU REVIEW / BELUM CODING.**

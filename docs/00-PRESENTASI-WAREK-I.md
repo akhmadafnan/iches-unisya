@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## TAHAP 18C-04 — FRONTEND & DASHBOARD ARCHITECTURE (DRAFT)
+
+Setelah pengguna menyetujui arah **Switch Workspace satu akun** dan **Superadmin View as User untuk support READ-ONLY**, rancangan frontend dibuat untuk **6 layout inti (Public/Auth/Personal/Institution/Backoffice/Scanner) + 1 Support View overlay**. Tersedia **55 layar konseptual dan 60 skenario UAT rencana**, dalam satu desain premium ICHES: **Inter/Sora, ivory/forest/gold, EN/ID/AR RTL, tanpa carousel**. Personal/My Papers/Payments, Co-Host satu invoice/five seats after Verified, Full Paper ala OJS, Finance queue, Reviewer/Moderator, Publication/10 kandidat jurnal, QR dan Certificates dipetakan ke UI yang sesuai role. **Masih DRAFT, belum coding, belum pengujian.** [18C-04 Frontend UX](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) · [18C-04A Inventory/60 UAT](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md).
+
+---
+
 ## TAMBAHAN 18C-03B — SWITCH AKUN / ROLE DALAM BACKEND ADMIN (DRAFT)
 
 Untuk satu pengguna yang memiliki beberapa penugasan, sediakan **Switch Workspace** pada topbar/akun: Personal Dashboard, Admin, Reviewer, Moderator, Finance, Publication, atau PIC Institusi **sesuai assignment**. Semua tetap **satu user_id, tanpa login ulang**, dan backend tetap memeriksa permission yang sebenarnya. Admin dapat diberikan **opsi tambahan View as User untuk bantuan/simulasi**, tetapi rekomendasi awal ialah **Superadmin-only, read-only, dengan alasan, audit dan tombol Return**; tidak boleh Verified Finance, ACCEPT/Final ACC, Presented, issue sertifikat atau mengunduh dokumen privat. **Menu ini belum implementasi dan opsi View as User belum final.** [DRAFT 18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
