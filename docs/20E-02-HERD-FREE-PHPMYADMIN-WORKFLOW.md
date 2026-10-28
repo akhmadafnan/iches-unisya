@@ -1,15 +1,17 @@
 # 20E-02 — Herd Free & phpMyAdmin: ICHES Local Workflow
 
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
 > **28 October 2026 · DEFAULT LOCAL WORKFLOW · NO GO CODING.** Replaces the earlier temporary MySQL CLI login-path proposal as the normal administration route. No test database/user has been created or authenticated yet.
 
 ## Verified local setup
 
 | Item | Verified result |
 |---|---|
-| Project directory | `D:\PINJAM-AFNAN\iches-unisya` — canonical Git checkout |
+| **CURRENT project directory** | `D:\PINJAM-AFNAN\Herd\iches-unisya` — canonical Git checkout, relocated per owner request |
 | Herd edition & CLI | Herd Free, CLI v1.29.0 |
 | Herd link executed | `herd link iches-unisya` succeeded, with no app source changes |
-| Herd site mapping | `http://iches-unisya.test/` → `D:\PINJAM-AFNAN\iches-unisya`, PHP 8.4 |
+| **CURRENT Herd site mapping** | `http://iches-unisya.test/` → `D:\PINJAM-AFNAN\Herd\iches-unisya`, PHP 8.4 |
 | ICHES HTTP response | HTTP **404** until Laravel app is implemented; `artisan` and `public/` are not present |
 | phpMyAdmin directory | `D:\PINJAM-AFNAN\Herd\phpMyAdmin`, `index.php` present |
 | phpMyAdmin URL | `https://phpmyadmin.test/index.php` returns HTTP **200**, but an authenticated phpMyAdmin session has **not** been verified |
@@ -31,7 +33,7 @@ This manual GUI setup is distinct from **GO CODING**. After confirmation, ChatGP
 
 ## Codex foundation implementation contract (later)
 
-- Source stays **only** at `D:\PINJAM-AFNAN\iches-unisya`; don't scaffold a duplicate project under `D:\PINJAM-AFNAN\Herd`.
+- Source stays **only** at `D:\PINJAM-AFNAN\Herd\iches-unisya`; this is already the owner-selected folder inside Herd. **Do not scaffold a second copy** anywhere else.
 - When Sprint 01 is authorized, Codex adds Laravel and correct `public/index.php`, and Herd serves via `http://iches-unisya.test/` without `php artisan serve`.
 - DB account details belong to untracked local test configuration, **not** GitHub, documentation, command-line arguments or Codex prompts.
 - **Current status:** Herd link PASS; phpMyAdmin endpoint PASS; dedicated authenticated test DB/user BLOCKED; ICHES HTTP Laravel app NOT_READY; NO_GO Coding.

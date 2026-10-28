@@ -1,5 +1,7 @@
 # 20C-02 — Codex Read-Only Handshake (No Coding)
 
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
 > Status: **READY TO TEST** once owner has an open Codex pane in the correct VS Code workspace. This is a **read-only environment verification**, not an ICHES code work order and not a coding GO.
 
 ## Goal
@@ -12,7 +14,7 @@ ICHES-2027 / PRE-03 — READ-ONLY HANDSHAKE (BUKAN GO CODING)
 
 Anda sedang berada pada workspace ICHES. Tugas ini hanya AUDIT BACA-SAJA.
 
-1. Verifikasi current working folder, git remote (jangan tampilkan credential), branch, HEAD, dan git status. Target folder: D:\PINJAM-AFNAN\iches-unisya.
+1. Verifikasi current working folder, git remote (jangan tampilkan credential), branch, HEAD, dan git status. **Current target folder (post-relocation): D:\PINJAM-AFNAN\Herd\iches-unisya.** The original PRE-03 handshake was executed before relocation.
 2. Baca AGENTS.md, PLANS.md, WORKSPACE.md, dan docs/19F-CURRENT-SPRINT-BOARD.md hanya untuk menemukan aturan current task dan larangan coding.
 3. Temukan dan baca file SKILL.md dari:
    - .agents/skills/iches-codex-engineering/

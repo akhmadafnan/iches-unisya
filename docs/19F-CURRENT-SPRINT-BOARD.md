@@ -1,5 +1,7 @@
 # 19F — Current Sprint Board & Handoff Ledger
 
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
 > **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
 
 > **Snapshot 28 Oktober 2026 · DRAFT · BELUM GO CODING.** Ini **satu sumber status operasional jangka pendek**, bukan pengganti [19B backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [19C Work Orders](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md), atau [09 Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md). Update oleh **ChatGPT** setelah verifikasi bukti GitHub/operator.
@@ -71,6 +73,10 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - [20E-02 GUI workflow](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md) supersedes temporary CLI login prompt as default. Owner still needs to create **only** `iches_unisya_test` and `iches_test` via normal authenticated phpMyAdmin GUI (unless collision); **not created yet**.
 - G0-DB-02/03 **BLOCKED**; PR #1 still Draft, **NO_GO Coding**.
 
+
+## 20F — Owner-directed ICHES folder relocation COMPLETED
+
+**CURRENT WORKSPACE:** `D:\PINJAM-AFNAN\Herd\iches-unisya` (moved intact from `D:\PINJAM-AFNAN\iches-unisya`). Verified old folder absent, new folder present, `git status` clean, expected Git HEAD, and `herd links` resolving `http://iches-unisya.test/` to new folder using PHP 8.4. Existing `sip-hibah-v2` Herd link remained intact. Chosen VS Code `new_Code.exe` launched again with the **new** folder. **Database not touched**; user's existing Herd Free + phpMyAdmin workflow is accepted as the operating pattern. App remains documentation-only so HTTP 404 is expected until separately authorized Laravel implementation. **No GO Coding**. Historical path references above are not active instructions.
 
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-PRE-03 G0 isolated test DB (20E)**. PRE-02 RD-01..06 FINAL, Codex Skills READABLE PASS, MySQL server/CLI PASS, **test DB authentication/permissions BLOCKED**. Next: owner-authorized **test-only** database/user setup; then authenticated read-only checks. Draft PR review/merge, Sprint readiness and named GO are still separate. **NO_GO CODING.**

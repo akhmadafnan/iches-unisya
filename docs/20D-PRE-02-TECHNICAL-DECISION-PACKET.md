@@ -1,5 +1,7 @@
 # 20D — PRE-02 Technical Decision Packet / Sprint 01
 
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
 > **28 October 2026 · OWNER APPROVED RD-01–RD-06.** User explicitly said **“Setuju paket 20D.”** These six technical decisions are now FINAL in [Decision Register 09](09-KEPUTUSAN-DAN-ISU-TERBUKA.md). **No Task/Sprint GO, PR merge, database modification or application code authorization.**
 
 ## Verified readiness (PRE-03)
