@@ -5,6 +5,10 @@
 > Disusun untuk diskusi dan pemaparan kepada pimpinan, termasuk Warek I.  
 > **Tanggal baseline:** 26 Oktober 2026. **Bukan** proposal pengadaan yang telah disahkan pimpinan.
 
+## 🧭 Lingkungan kerja ChatGPT × Codex VS Code
+
+**[WORKSPACE.md — MULAI DI SINI](WORKSPACE.md)** untuk alur kerja agent, status aktif, target 48 jam, dan jalur work order. **Tidak ada GO CODING**; repository masih blueprint. Codex khusus perubahan source code setelah GO per task, ChatGPT mengurus dokumen/keputusan/review.
+
 ## 📍 Mulai dari sini
 
 **➡️ [Buka presentasi visual untuk Warek I](docs/00-PRESENTASI-WAREK-I.md)**  

@@ -1,0 +1,89 @@
+# 20C-01 — ICH-SPRINT-01: Foundation Bootstrap & Verification (DRAFT)
+
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
+> **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
+
+> **STATUS: BLOCKED_TEST_DB_AND_DOC_MERGE / NO GO CODING FOR THREE-TASK SPRINT.** This is a proposed finite **Sprint Work Order**, not a prompt that may yet execute. Owner consent to plan/workflow does not authorize changing source or installing packages. Use [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md).
+
+**21B carveout:** do not treat this three-task Sprint as the first automatic coding authorization. One DB-free `ICH-S0-01` is separately scoped in [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md), pending doc PR merge, frozen `main` baseline and explicit Task GO; `ICH-S0-02` still requires isolated authenticated MySQL test DB.
+
+## Authorized scope proposal
+
+| Field | Required value |
+|---|---|
+| Sprint ID | `ICH-SPRINT-01` |
+| Ordered task IDs | `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07` (**three only**) |
+| Business goal | Minimal, bootable Laravel/Inertia/Vue foundation with canonical identity/event schema and repeatable test pipeline |
+| Repository | Proposed `akhmadafnan/iches-unisya`; owner must confirm RD-01 before READY |
+| **Current local workspace path** | `D:\PINJAM-AFNAN\Herd\iches-unisya` (**owner-directed move completed**, clean docs branch tracking origin) |
+| **Owner's VS Code** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (version **1.143.1**, with space). Separate 1.128.0 install under hyphen path is **not the chosen default**; Codex extension/sign-in on chosen install not verified |
+| Start baseline | Approved merge of governance PR and verified `main` commit; **not frozen yet** |
+| Branch | `feat/ich-sprint-01-foundation` (to be created by Codex **after** named GO) |
+| PR | One tightly scoped foundation PR may include three ordered tasks; individual per-task commits and evidence entries; **no auto merge** |
+| Authorization | **NONE**. Owner must issue separate explicit `GO SPRINT ICH-SPRINT-01` after READY |
+| Test environment | Disposable local/test MySQL DB only, not yet verified |
+| Scope outside | No website CMS, countdown, Abstract, Finance, Co-Host, real users, bank/OJS, production deploy |
+| Logging | Codex append-only `harness/build-log.md` and sanitized `harness/evidence/**` **after GO** |
+
+## Source reading and Skills
+Always read `AGENTS.md`, the brief `PLANS.md` roadmap and the single current board 19F. Task ID details stay in 19B; use 19C template + 19D traceability. Load `iches-codex-engineering` + `iches-code-verification`; public/frontend and Admin Skills are **not needed** for foundation work unless implementation's scoped change requires them. Read 18C-05A selective reuse audit, 18C-05 readiness decisions, 18C-01/01A data dictionary (for S0-02), and 18C-05B tests **selectively** (2–4 relevant sources per active task).
+
+## Gate per task (no shortcuts)
+
+### ICH-S0-01 — selective foundation
+- IN: Laravel 13/Inertia Vue3/TS/Tailwind4 bootstrapping, locked compatible dependencies, verified audited technical foundation reuse only, base app entry/config/tests. Only relevant source/manifest files.
+- OUT: old payment verification, registration business domain, production data and .env, business-specific migrations.
+- ACCEPT: local app boots, actual Composer/npm install and frontend build evidence; provenance documented in handoff; no secrets and no unrelated files.
+- NEXT: only if tests PASS and task evidence appended; proceed to S0-02 if database is approved/test-ready.
+
+### ICH-S0-02 — identity/event schema
+- IN: canonical approved identity/event models and migrations with UUIDv7 (only **if RD-04 approved**), safe test fixtures and constraints.
+- OUT: implementing 53 ERD candidates, premature Finance/CMS/Academic tables, destructive production data changes.
+- ACCEPT: isolated test-DB migrate/rollback, FK/unique/UUID negative checks, event hour remains nullable until official; no fabricated event start hour.
+- NEXT: only after PASS evidence; then S0-07.
+
+### ICH-S0-07 — repeatable quality pipeline
+- IN: task-scoped PHP feature smoke tests, typecheck/build/lint commands, reproducible CI on branch/PR where allowed.
+- OUT: CI with production credentials, claiming UAT or finance/security suites not run.
+- ACCEPT: actual command exit codes, failures and limitations documented; negative test case from schema/authorization where applicable; no "green" without a run.
+
+## Allowed file boundaries (after GO)
+
+`app/**`, `bootstrap/**`, `config/**`, `database/**`, `routes/**`, `resources/js/**`, `resources/css/**`, `tests/**`, `composer.json`, `composer.lock`, `package.json`, npm lockfile, build/typecheck/test configuration and `.github/workflows/**` **only as needed for listed tasks**. Allowed evidence path `harness/build-log.md` **append-only** and sanitized `harness/evidence/**`.
+
+Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.agents/skills/**`, owner decisions, secrets or production data. No branch force rewrite, automatic merge or deployment.
+
+## PRE-03 evidence and decision packet
+
+Codex read-only handshake **PASS**: correct repo, clean branch, `AGENTS.md`, `PLANS.md`, current board and four Skills read in full, no edits. Automatic Skill triggering untested. MySQL97 service Running and TCP port 3306 reachable; **authenticated isolated test DB not verified**. [20D technical decision packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) proposes one approval bundle RD-01..RD-06 and protects approved passwordless participant login. Sprint status remains **BLOCKED_DECISION / NO_GO**.
+
+
+## PRE-02 participant auth decision — RESOLVED IN 20D
+
+Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Owner approved 20D: Laravel sessions **with participant OTP/Magic Link without password**. Draft email/password suggestion is **superseded for participants**. Staff credential policy remains a later decision. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
+
+## 20E DB readiness gate — G0 not yet passed
+
+[20E Test DB Runbook](20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): native MySQL CLI version 9.7.1 located by full path; server Running and loopback reachable. **No authenticated test account/schema, SQL grants, InnoDB/FK or migration/rollback verification**. Do **not** treat this as READY; test-only provisioning requires separate approval and must avoid production data.
+
+## Herd Free local serving is configured (20E-02)
+
+Herd Free linked `D:\PINJAM-AFNAN\Herd\iches-unisya` → `http://iches-unisya.test/` (PHP 8.4) after owner-requested relocation; phpMyAdmin available at `https://phpmyadmin.test/index.php` via user's normal GUI. Current HTTP 404 is expected until Codex creates Laravel `public/index.php` **after Sprint GO**. Do not run `php artisan serve`, create another source directory under Herd, or require Herd Pro. Test DB remains NOT_AUTHENTICATED/NO_GO. See [20E-02](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md).
+
+## READY blockers (all must be cleared)
+- [ ] [Governance PR #1](https://github.com/akhmadafnan/iches-unisya/pull/1) owner-reviewed/merged, local clone synced.
+- [x] RD-01 canonical repo and selective legacy reuse approved (20D).
+- [x] RD-02 Laravel 13/PHP 8.4 and local Node 26 evaluation approved (20D); exact dependency compatibility to be tested after GO.
+- [x] RD-03 MySQL/InnoDB and RD-04 UUIDv7 policy approved (20D).
+- [ ] **Separate G0:** authenticated disposable test DB, InnoDB and FK/migration permissions not verified.
+- [x] RD-05 scoped Laravel Policies/Gates and RD-06 session-backed participant OTP/Magic Link (passwordless) approved (20D); staff login details later.
+- [x] Codex agent verified actual cloned target `D:\PINJAM-AFNAN\iches-unisya` and all four Skills readable with clean Git status. No code changes.
+- [x] Owner approved RD-01..06 (20D), including passwordless participant baseline.
+- [ ] Authenticated isolated test DB still required; MySQL server handshake 9.7.1 is **not** a DB account check.
+- [ ] ChatGPT provides final Work Order base commit + applicable scripts/test cases.
+- [ ] Owner sends explicit GO SPRINT **after** READY.
+
+**Cut line for two-day aspiration:** do not expand this sprint to S1 or S2 implicitly. Prioritize reproducible S0 PASS; schedule a separate bounded ICH-SPRINT-02 for Auth/Backoffice/CMS after this sprint is reviewed.
+
+**STOP** on any unapproved DB/PK/auth assumption, unmet test, out-of-scope feature, real bank/participant data, risky migration, credentials or production operation. Report BLOCKED truthfully.

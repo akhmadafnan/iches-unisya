@@ -13,8 +13,8 @@ metadata:
 
 ## Preflight — REQUIRED every coding task
 
-1. Confirm current conversation contains **explicit owner GO CODING for the specific task/slice**. “Prepare technical plan”, “continue”, or “ready for Codex” does **not** mean authorization. If no GO: **do not write code**; say waiting for GO.
-2. Verify `git remote -v`, branch, `git status --short`, current HEAD, actual source paths. **Canonical target recommendation is `akhmadafnan/iches-unisya`**, but final target/DB/PK/runtime still need owner approval. **Never work inside old `international-conference-platform` as if it were target**.
+1. Confirm owner explicit **GO CODING Task ID or GO SPRINT for finite named ordered Task IDs including this task**, with complete Work Order. Consent to governance or “continue” is NOT GO. If no named GO: do not edit code or journal. See `docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md`.
+2. Verify `git remote -v`, branch, `git status --short`, current HEAD, actual source paths. **Owner-approved RD-01..06:** canonical `akhmadafnan/iches-unisya`, Laravel 13/PHP 8.4, MySQL/InnoDB, UUIDv7, scoped Policies and participant OTP/Magic Link without password. Actual Windows repo is `D:\PINJAM-AFNAN\Herd\iches-unisya`. `ICH-S0-01` DB-free foundation uses [21B](../../../docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md); schema changes still require isolated test DB and separate GO. **Never work inside old `international-conference-platform` as if it were target**.
 3. Read root `AGENTS.md`, only the pertinent owner decisions from `docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md`, and the exact Work Order from `docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md`/approved prompt. Consult `docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md` and `docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md` as needed.
 4. If task involves public frontend/Website CMS/countdown, **also read** `.agents/skills/iches-public-frontend/SKILL.md` and focused references. Component layouts **are not locked**; Academic Editorial, clean modern, no AI slop, no carousel, EN/ID/AR RTL.
 5. If the work order lacks a crucial owner-approved DB/PK/business decision, **stop and report exactly which decision blocks coding**; do not invent it.
@@ -23,7 +23,7 @@ metadata:
 
 **You MAY edit only application CODE files** explicitly needed for the current Work Order: Laravel PHP app/route/config/bootstrap, database migrations/seeders, Vue/TypeScript/CSS source, `tests/`, scripts, dependency manifests/lockfiles and automation/CI configuration necessary for the task. Create code files in a dedicated feature branch, **never directly main**.
 
-**You MUST NOT edit** `README.md`, `docs/**`, `AGENTS.md`, `.agents/skills/**`, governance/design decisions, policy documents or user instructions. When docs appear stale or a new rule is needed, report the discrepancy to **ChatGPT**, which is responsible for changing documentation in GitHub. Do not rewrite rules to make your code “pass”.
+**You MUST NOT edit** `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `AGENTS.md`, `.agents/skills/**`, governance/design decisions or policy documents. **Only named-GO Markdown exception:** append to `harness/build-log.md` preserving previous entries, and sanitized evidence under `harness/evidence/**`. Report doc changes to ChatGPT, never change rules to make tests pass.
 
 Never copy or commit `.env`, secrets, personal participant records, payment proofs, bank credentials, production database, official unapproved logos, or email/password tokens. Never run production migrations, release/deploy, force-push, delete/rewrite branches, or merge PRs unless separately authorized for that action.
 
@@ -31,7 +31,7 @@ Never copy or commit `.env`, secrets, personal participant records, payment proo
 
 ## Engineering method
 
-- One **Work Order/task ID = one business objective**. Do not implement adjacent slices automatically.
+- **One Task ID = one business objective.** Advance to next task only if explicitly listed in owner-approved Sprint Work Order, dependencies are ready, tests actually PASS and evidence is logged. Otherwise STOP.
 - Use reviewed selective reuse from legacy Laravel repository only after examining actual source and compatibility. **Never port legacy payment verification** unchanged: ICHES Finance requires actual bank mutation match, not proof upload alone. Do not port old administrative abstract screening.
 - Backend: Laravel FormRequest + Policies/Gates + focused Actions for state-changing transactions; immutable finance/academic history; concurrency/idempotency checks; afterCommit for notifications.
 - Frontend: Inertia + Vue 3 + TypeScript + Tailwind 4 + shadcn-vue (Backoffice), accessible responsive semantic UI. Avoid one giant page, fake content, unsafe arbitrary HTML or CSS from CMS.
@@ -53,7 +53,7 @@ Use test fixture data, not user accounts or money. **If a test cannot run, repor
 
 ## Hand back to ChatGPT & owner
 
-Return concise **Task ID; branch; source files added/changed; what actually works; exact test commands/results; screenshots/preview if UI; open risks/decisions; git status; commit/PR if made**. Identify documentation changes needed **in your message**, but don't edit them. ChatGPT handles documentation and PR review; owner authorizes merge/production separately.
+Return concise **Task ID; branch; source files added/changed; what actually works; exact test commands/results; screenshots/preview if UI; open risks/decisions; git status; commit/PR if made**. Append sanitized execution evidence to `harness/build-log.md` only on authorized branch under named GO. Identify documentation changes needed **in your message**, but don't edit governance docs. ChatGPT handles review; owner authorizes merge/production separately.
 
 **Task is not “DONE” merely because source compiles.** Acceptance includes negative tests, approved scope and review.
 

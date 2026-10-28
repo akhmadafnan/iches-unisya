@@ -1,0 +1,87 @@
+# ICHES 2027 — AI Agent Workspace
+
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
+> **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
+
+> **Mulai di sini.** Repository ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Setelah GO Task ID atau bounded Sprint GO eksplisit, Codex VS Code mengubah kode serta mencatat evidence terbatas; ChatGPT mengelola keputusan, spesifikasi, dokumentasi, review, dan GitHub.
+
+## Stage 21 — current next action
+
+- [21A audit / merge gate](docs/21A-PR1-GOVERNANCE-REVIEW.md): docs-only PR reviewed, 263 local Markdown links checked, zero broken. **No owner merge approval yet**.
+- [21B single-task Codex Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md): `ICH-S0-01` database-independent Laravel/Inertia/Vue/TS/Tailwind4 inside `D:\PINJAM-AFNAN\Herd\iches-unisya`, pending PR merge + explicit named GO.
+- [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
+
+
+## One Master Plan (DRAFT — no GO)
+
+- [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.
+- [20A](docs/20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) and [20B Governance](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) — bounded sprint model, 4 Skills, controlled evidence; NO named GO.
+- [20C Local Readiness](docs/20C-LOCAL-PREFLIGHT-AND-GATES.md) — verified Windows versions and open toolchain gaps; [Sprint-01 draft](docs/20C-01-DRAFT-SPRINT-01-WORK-ORDER.md) — three bounded foundation tasks, **not authorized yet**.
+- [harness/README.md](harness/README.md) — Codex append-only evidence **only after named GO CODING**.
+
+## Empat berkas kerja harian (bukan 50+ blueprint)
+1. **[WORKSPACE.md](WORKSPACE.md)** — pintu masuk dan urutan baca (berkas ini).
+2. **[docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md)** — **satu** status tugas aktif, blocker, dan next action; jangan menciptakan status tandingan di chat.
+3. **[docs/19E-AGENT-WORKSPACE-RUNBOOK.md](docs/19E-AGENT-WORKSPACE-RUNBOOK.md)** — kontrak operasional, stop conditions, handoff, dan timebox.
+4. **[AGENTS.md](AGENTS.md)** — instruksi lintas tugas untuk Codex VS Code, termasuk larangan edit dokumentasi.
+
+## Sumber otoritatif menurut kegunaan
+| Kebutuhan | Buka |
+|---|---|
+| Keputusan produk yang disetujui, masih draft, atau open | [Register keputusan](docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md) |
+| Siapa mengerjakan apa / aturan Git | [19A protokol](docs/19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) |
+| Seluruh daftar task dan dependensi | [19B backlog](docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) |
+| Format work order satu task untuk Codex | [19C template dan contoh](docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md) |
+| Peta blueprint → perubahan kode → bukti test | [19D traceability](docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) |
+| Aturan implementation agent | [.agents/skills/iches-codex-engineering/SKILL.md](.agents/skills/iches-codex-engineering/SKILL.md) |
+| Aturan frontend / CMS (hanya task yang relevan) | [.agents/skills/iches-public-frontend/SKILL.md](.agents/skills/iches-public-frontend/SKILL.md) |
+
+## Prosedur singkat
+**Sebelum GO:** owner dan ChatGPT menutup decision gate, menguji kesiapan lingkungan secara read-only, dan mengisi satu work order. **Jangan menjalankan coding hanya dari roadmap**.
+
+**Setelah named GO Task/Sprint:** owner membuka repo target di VS Code → Codex membaca `AGENTS.md`, board, work order dan 2–4 blueprint relevan per task → kerja di `feat/...` (bukan `main`) → tes dan append-only log → lanjut hanya ke task sprint yang tercantum dan lulus gate → ChatGPT review → owner putuskan merge. **Berhenti** bila muncul keputusan yang belum disetujui, data/secrets nyata, atau scope melebar.
+
+**Prioritas paling dekat:** foundation minimal → website publik + CMS + countdown → Abstract Text+PDF. Modul lain tetap ada di backlog, tetapi **tidak boleh ditarik ke task aktif hanya agar terlihat 'selesai'**.
+
+**Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
+
+## Herd Free + phpMyAdmin preferred workflow
+
+- [20E-02 Herd Free + phpMyAdmin](docs/20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md) is now the default: `http://iches-unisya.test/` linked to repo via Herd Free, PHP 8.4; `https://phpmyadmin.test/index.php` HTTP 200. Project currently docs-only so returns 404 until GO Coding.
+- Test-only DB/user **not created or authenticated**; use the phpMyAdmin GUI, not a temporary CLI administrator login-path unless separately requested. No GO Coding.
+
+## 20E temporary administrator login required
+
+- User approved provisioning isolated `iches_unisya_test` + `iches_test` only; **admin login blocked (MySQL 1045)** in two read-only checks, no DDL executed.
+- [20E-01 local login setup](docs/20E-01-TEMPORARY-MYSQL-ADMIN-LOGIN.md): one user-entered password prompt in VS Code, never send credentials to chat. **NO GO Coding.**
+
+## 20E isolated MySQL test database readiness
+
+- [20E Readiness Runbook](docs/20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): MySQL 9.7.1 native client found, Running server, localhost handshake verified. **Test-only account/schema authentication not verified; no SQL or DB writes.**
+- RD-01..06 remain FINAL. **No GO CODING**; next is separately authorized test-only DB provisioning and authenticated read-only check.
+
+## PRE-03 VERIFIED / PRE-02 OWNER APPROVED
+
+- Codex read-only handshake **PASS**: four Skills directly readable, canonical remote, docs branch, clean worktree. Automatic Skill invocation not tested.
+- MySQL97 Windows service **9.7.1** running; TCP port 3306 reachable, but authenticated isolated test DB **not verified**.
+- [20D technical decision packet](docs/20D-PRE-02-TECHNICAL-DECISION-PACKET.md): **RD-01–RD-06 FINAL owner-approved**, including participant passwordless OTP/Magic Link. Authenticated isolated MySQL test DB still needed; **NO GO Coding**.
+
+
+## Codex readiness check
+
+- Owner screenshot confirms visible VS Code **Codex panel and chat history** in the ICHES workspace.
+- [20C-02 READ-ONLY handshake](docs/20C-02-CODEX-READ-ONLY-HANDSHAKE.md) is the next action: verify all four Skills can be read by the running agent; **NO GO CODING**.
+
+## Lokasi kerja lokal disepakati
+
+- **Windows CURRENT:** `D:\PINJAM-AFNAN\Herd\iches-unisya` — **sudah dipindahkan**, branch `docs/19e-agent-workspace`, bersih; GitHub remote dan 4 Skills tetap tersedia. Lokasi lama `D:\PINJAM-AFNAN\iches-unisya` sudah tidak ada.
+- **VS Code utama pilihan owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**spasi**, v1.143.1), GUI sudah membuka ICHES. OpenAI Codex extension terpasang di profil pengguna; login/Skills invocation belum diverifikasi.
+
+## Status verifikasi awal (28 Oktober 2026)
+- Target: `akhmadafnan/iches-unisya`, `main`; source aplikasi target **belum ada** saat audit.
+- Repo lama `akhmadafnan/international-conference-platform` adalah referensi **selective reuse**, bukan kode yang boleh langsung disalin.
+- Scope menulis code: **Codex VS Code** setelah GO; perubahan dokumen: **ChatGPT**.
+- Branch docs ini adalah usulan tata kelola; **tidak memberikan GO CODING**.
+
+> Saat chat baru: baca `WORKSPACE.md` + 19F; saat Codex: berikan **work order Task/Sprint bernama yang sudah mendapat GO aktual**, bukan semua blueprint.

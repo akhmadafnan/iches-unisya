@@ -1,0 +1,61 @@
+# 20C-02 — Codex Read-Only Handshake (No Coding)
+
+> **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
+
+> Status: **READY TO TEST** once owner has an open Codex pane in the correct VS Code workspace. This is a **read-only environment verification**, not an ICHES code work order and not a coding GO.
+
+## Goal
+Confirm the **running Codex VS Code session** can see the correct repository, observe active Git branch, and read all four repository Skills. Nothing may be installed, created, modified, committed, merged, migrated or deployed.
+
+## Paste exactly this in Codex chat
+
+```text
+ICHES-2027 / PRE-03 — READ-ONLY HANDSHAKE (BUKAN GO CODING)
+
+Anda sedang berada pada workspace ICHES. Tugas ini hanya AUDIT BACA-SAJA.
+
+1. Verifikasi current working folder, git remote (jangan tampilkan credential), branch, HEAD, dan git status. **Current target folder (post-relocation): D:\PINJAM-AFNAN\Herd\iches-unisya.** The original PRE-03 handshake was executed before relocation.
+2. Baca AGENTS.md, PLANS.md, WORKSPACE.md, dan docs/19F-CURRENT-SPRINT-BOARD.md hanya untuk menemukan aturan current task dan larangan coding.
+3. Temukan dan baca file SKILL.md dari:
+   - .agents/skills/iches-codex-engineering/
+   - .agents/skills/iches-public-frontend/
+   - .agents/skills/iches-backoffice-ui/
+   - .agents/skills/iches-code-verification/
+   Tampilkan nama keempat Skill dan satu kalimat fungsi masing-masing. Jelaskan apakah file berhasil terbaca; jangan mengklaim auto-trigger Skill telah teruji bila belum.
+4. Konfirmasikan bahwa Sprint ICH-SPRINT-01 masih NO_GO. Jangan membuat branch, file, log atau kode. Jangan install package, jalankan migration, fetch credential, atau menjalankan tes yang menulis database.
+
+FORMAT BALASAN SINGKAT:
+WORKSPACE:
+REMOTE (nama repository, tanpa token):
+BRANCH / HEAD / WORKTREE:
+AGENTS / PLANS / BOARD: READABLE atau BLOCKED
+SKILLS (4): READABLE atau BLOCKED + nama
+CODEX SIGNED IN / EXECUTION: VERIFIED (jika terbukti) atau NOT_VERIFIED
+GO CODING: NO
+ISSUES / NEXT ACTION:
+```
+
+## PRE-03 Codex handshake — VERIFIED (28 October 2026)
+
+**Evidence:** owner copied the Codex VS Code agent's complete read-only response, not just a screenshot.
+
+- **Workspace:** `D:\PINJAM-AFNAN\iches-unisya`; canonical remote `https://github.com/akhmadafnan/iches-unisya.git`.
+- **Branch:** `docs/19e-agent-workspace`; handshake HEAD `c9df6d0b30d6f3fdb88d94e086555f1a5af365f8`; worktree clean, local tracking ahead/behind `0/0` (agent did not fetch).
+- **Read in full:** `AGENTS.md`, `PLANS.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, `WORKSPACE.md`, `docs/19E-AGENT-WORKSPACE-RUNBOOK.md`.
+- **All 4 Skills directly read by Codex:** `iches-codex-engineering`, `iches-public-frontend`, `iches-backoffice-ui`, `iches-code-verification`. Direct readability **PASS**; **automatic Skill triggering not tested**.
+- **Agent behavior:** no source/docs/file changes, no install, test, commit, fetch, migration or named GO. Thus **PRE-03 Codex access/readiness PASSED**; full **G0 runtime readiness still PARTIAL** due to DB test account and owner decision gates.
+- **Later SHA may differ** because ChatGPT maintains the documentation branch; snapshot SHA is intentional and historical.
+
+**Separate non-writing database connectivity evidence:** Windows service `MySQL97` reports **Running**; executable metadata product version **9.7.1.0**; TCP connect to `127.0.0.1:3306` **succeeded**. This does **not** verify MySQL credentials, server SQL response, storage engine, migrations, or an isolated test DB. No credentials read or stored.
+
+**Next active gate:** [20D PRE-02 Technical Decision Packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) owner approval, then isolated test DB and final Sprint 01 readiness. **NO GO CODING.**
+
+
+## Human verification
+Codex shows 4 Skills readable, checks correct branch and does not edit anything. User shares **its textual result** with ChatGPT (without credential). ChatGPT updates 19F board after reviewing actual evidence, not from a screenshot of a chat input alone.
+
+## Known pre-coding product conflict for PRE-02
+
+Decision Register ~docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md~ marks **NEW-003: Email OTP / Magic Link without a participant password — DISETUJUI**, whereas later **PROP-067 / RD-06** proposes Laravel email/password/session login as a technical draft. **Do not silently overwrite the approved passwordless participant decision.** The chosen Laravel auth mechanism can still be session-based, but implementation mode for participants must honor the approved OTP/Magic Link feature unless owner explicitly revises it; staff account and MFA details remain separate. This is an **open implementation reconciliation**, not a new policy decision. Record in the technical owner decision package before GO.
+
+**Status after this document is created:** local clone and VS Code Codex UI already observed; **Skills accessibility through Codex itself remains untested** until actual handshake output is provided.

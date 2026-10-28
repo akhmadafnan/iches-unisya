@@ -4,11 +4,17 @@
 >
 > [19A Protocol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) · [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19D Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [Codex Engineering Skill](../.agents/skills/iches-codex-engineering/SKILL.md).
 
+## Opsi 20B — Sprint Work Order (workflow disetujui, belum GO)
+
+Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task IDs terbatas yang sudah disetujui, berurutan, dengan scope, branch, test dan stop conditions eksplisit. Lanjut antar-task hanya setelah PASS+evidence; task di luar daftar tetap terlarang. Gunakan [template Sprint](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Tidak ada GO Coding saat ini.
+
+**Current first Codex task:** [21B ICH-S0-01 Foundation Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) supersedes the old generic foundation example below. Owner approval of Stage 21 documentation is not implementation GO; use the current `D:\PINJAM-AFNAN\Herd\iches-unisya` path and wait for separate `GO CODING ICH-S0-01`.
+
 ## 1. Cara bekerja dari VS Code tanpa kebingungan
 
 **Saat belum GO:** cukup simpan dokumen ini di GitHub dan, bila ingin, lakukan inspeksi lingkungan via terminal read-only. **Tidak ada instruksi kepada Codex untuk membangun sesuatu.**
 
-**Setelah GO pada task tertentu:**
+**Setelah GO Task ID atau named Sprint GO yang secara eksplisit mencantumkan tugas:**
 1. Buka VS Code pada **local clone `akhmadafnan/iches-unisya`**, **bukan folder repo lama**. Pastikan remote, branch, clean worktree. Dokumen dan AI Skills berada pada repo ini.
 2. Buka ekstensi **Codex** di VS Code. AI membaca root `AGENTS.md` dan skill yang diminta. Jangan hanya paste ribuan halaman konteks; cukup Work Order berisi **Task ID** + referensi.
 3. Berikan satu Work Order **spesifik**. Codex memeriksa source dan branch, mengedit **kode saja**, menambahkan/memperbaiki tes yang terkait, menjalankan perintah yang benar-benar tersedia.
@@ -40,7 +46,8 @@ TASK GOAL (one business objective):
 SCOPE IN:
 - [Kode aplikasi/migration/test tepat yang boleh diubah]
 SCOPE OUT:
-- docs/**, README.md, AGENTS.md, .agents/skills/**
+- docs/**, PLANS.md, WORKSPACE.md, README.md, AGENTS.md, .agents/skills/**
+- Exception with named GO: harness/build-log.md append-only and sanitized harness/evidence/**
 - .env, secrets, production data, unrelated features, unrelated refactors
 - [Modul spesifik yang belum boleh disentuh]
 
@@ -67,7 +74,7 @@ OUTPUT BACK TO CHATGPT:
 - Diff summary and why
 - Tests actually run, pass/fail, environment limitations
 - Known risks/open decisions and screenshots for UI
-- Do not modify governance/spec documents; ChatGPT updates them
+- Do not modify governance/spec documents; only append to authorized harness/build-log.md and sanitized evidence under named GO; ChatGPT updates policies
 STOP CONDITIONS:
 - Invalid repo/branch/dirty unrelated changes
 - Need undecided schema/finance policy/credentials

@@ -4,20 +4,24 @@
 >
 > Navigasi: [19B Technical Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19C Codex Task Packets](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md) · [19D Traceability & Gates](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [18C-05 Readiness](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [Keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).
 
+## Aturan 20B (disetujui, tetapi NO GO Coding)
+
+[20B Sprint Contract](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) memungkinkan GO per Task ID **atau** satu Sprint GO yang memuat daftar Task IDs terbatas; Codex dapat melanjutkan task berurutan hanya setelah tests PASS dan bukti dicatat. **Belum ada Task/Sprint GO aktual**. Perbedaan izin yang tertulis pada protokol lama tunduk pada 20B.
+
 ## 1. Tanggung jawab (role clarity)
 
 | Pekerjaan | Pelaksana utama | Batas praktis |
 |---|---|---|
 | Menafsirkan kebutuhan, menetapkan acceptance criteria, mengelola issues/open decisions | **ChatGPT + pemilik produk** | ChatGPT **mengusulkan**, pemilik produk menyetujui keputusan yang berdampak |
 | Analisis TOR, audit repo lama, arsitektur, konsolidasi DB, backlog dan prioritas | **ChatGPT**, dapat membaca GitHub | Usulan tidak berubah otomatis menjadi keputusan final |
-| Markdown/blueprint, keputusan, SKILL.md, AGENTS.md, review report, issue/PR description | **ChatGPT → GitHub docs** | **Codex tidak mengubah dokumen tata kelola** kecuali user secara terpisah mengubah pembagian kerja |
-| Membuat/ubah/hapus **application code** Laravel/PHP, Vue/TS, migrations, unit/feature/browser tests, build configuration | **Codex di VS Code** setelah task + GO | Dalam **branch fitur**, hanya scope task; tidak mengubah dokumen kebijakan, menyentuh data produksi, atau merge main otomatis |
+| Markdown/blueprint, keputusan, SKILL.md, AGENTS.md, review report, issue/PR description | **ChatGPT → GitHub docs** | **Codex hanya boleh append-only `harness/build-log.md` dan sanitized `harness/evidence/**` setelah named GO; tidak boleh mengubah tata kelola** |
+| Membuat/ubah/hapus **application code** Laravel/PHP, Vue/TS, migrations, unit/feature/browser tests, build configuration | **Codex di VS Code** setelah named Task/Sprint GO | Dalam branch fitur, hanya Task IDs dan scope disetujui; lanjut antartask terdaftar setelah PASS+evidence, tanpa mengubah kebijakan/produksi atau merge main |
 | Menjalankan terminal setup, install, lint, typecheck, migrate test database, test E2E | **Codex VS Code dan/atau terminal pemilik produk** | Perintah test/dependency boleh dijalankan ketika diotorisasi, tidak sama dengan hak deploy/ubah produksi |
 | Code review dari diff/PR, menilai kepatuhan spesifikasi, keputusan revisi | **ChatGPT** membaca GitHub; **pemilik produk** sign-off | Bila kode salah, **ChatGPT membuat instruksi perbaikan untuk Codex**, tidak menulis patch kode di belakang peran Codex |
 | Branch/commit/push/PR | **GitHub sebagai sumber kebenaran**; Codex dapat menyiapkan commit pada branch **jika task mengizinkan**, user/ChatGPT review | Jangan push/merge otomatis ke `main`; pemilik produk tetap penentu GO/accept |
 | Deployment, bank credential, email domain, OJS staging, production DB | **Pemilik produk/operator yang diberi izin** | Selalu memerlukan gate operasional dan persetujuan terpisah |
 
-**Definisi “kode”** pada kebijakan ini: `app/`, `bootstrap/`, `config/`, `database/`, `resources/js/`, `resources/css/`, `routes/`, `tests/`, `composer.json`, `package.json`, lockfiles, Vite/TS/Pest/test runner config, dan build/deploy script/CI yang memang termasuk task. **Dokumen `docs/`, `README.md`, `AGENTS.md`, `.agents/skills/` diurus ChatGPT.** File `.env` dan secrets **tidak boleh pernah di-commit**.
+**Definisi “kode”** pada kebijakan ini: `app/`, `bootstrap/`, `config/`, `database/`, `resources/js/`, `resources/css/`, `routes/`, `tests/`, `composer.json`, `package.json`, lockfiles, Vite/TS/Pest/test runner config, dan build/deploy script/CI yang memang termasuk task. **Dokumen `docs/`, `README.md`, `WORKSPACE.md`, `PLANS.md`, `AGENTS.md`, `.agents/skills/` diurus ChatGPT; pengecualian Codex hanya `harness/build-log.md` append-only dan `harness/evidence/**` sanitized setelah named GO.** File `.env` dan secrets **tidak boleh pernah di-commit**.
 
 ## 2. Single source of truth dan repository
 
@@ -30,7 +34,7 @@
 **Aturan Git:**
 - Dokumen perencanaan saat ini diperbarui oleh ChatGPT di repository; implementasi belum dibuka.
 - Setelah GO coding, gunakan branch per task/slice misalnya `feat/s0-foundation`, `feat/s1-cms-countdown`, `feat/s2-abstract-intake`, bukan edit langsung `main`.
-- **Satu task/PR = satu tujuan bisnis**; jangan gabung unrelated refactor, perbaikan UI, Finance dan schema dalam satu PR.
+- **Default satu task/PR = satu tujuan bisnis**; beberapa task terkait boleh satu PR hanya jika Sprint Work Order secara eksplisit mengizinkan. Jangan gabung unrelated refactor/Finance dan UI.
 - PR mencantumkan Task ID, referensi dokumen, scope file, bukti tes yang **dijalankan**, potensi breaking migrations, dan open issues.
 - Untuk branch commit/push, jalankan `git status`, `git diff --check`, cek secrets dan file yang tidak disengaja. Hindari `push --force`, `reset --hard` atau branch rewrite tanpa instruksi jelas.
 - ChatGPT dapat meninjau diff dari PR dan meminta Codex revisi, tetapi **tidak mengedit kode lewat GitHub langsung** mengikuti peran yang diminta.
