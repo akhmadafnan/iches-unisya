@@ -253,8 +253,16 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Old MySQL 1045 status is **resolved**; [21J-05 current Codex GO](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) updated to `DB_AUTH_VERIFIED / CODEX_RESUME_READY`. Owner's existing GO applies; **no second GO or credential sharing needed**.
 - Codex should verify clean `feat/ich-s0-02-db-foundation`, fetch/ff-only latest `main` safely, then implement scoped UUIDv7 identity/event foundation and normal additive migrations. No destructive DB reset, push/PR/merge/deploy. Identity IDs selective per RD-04 (not blanket UUIDs).
 
+## 21K-01 — S0-02 independent audit / REV-03 (28 October 2026)
+
+- [21K-01 full audit](21K-01-S0-02-INDEPENDENT-REVIEW-REV03.md): Codex local `feat/ich-s0-02-db-foundation` HEAD `78bc6d9a904c86b334c28f645d908452295ba26e`, direct parent `3ad72cfb`, clean, **13 scoped file changes**, no secrets in tracked `.env`.
+- Independently reran **composer validate (0)**, **PHP smoke 4/36 (0)**, **Pint 28 files (0)**, **npm typecheck (0)**, **Vite build (0)**, and patch check (0). Codex reports opted-in DB tests **7/95 PASS**; reviewer did not rerun tests that temporarily write DB data.
+- Independently authenticated read-only `iches_unisya`: MySQL 9.7.1/InnoDB/FK on, `users`/`institutions`/`events`/`role_assignments` all 0 rows, `migrations` 1 row; UUID PK + matching FKs PASS.
+- **REV-03 BLOCKING:** real unique key `(user_id,event_id,role_key,institution_scope)` does not consider `revoked_at`. Revoked grant blocks a future **new** grant with identical scope. Correct via a bounded **new forward migration** with active-only uniqueness plus regression tests; no schema wipe, no deletion or original migration rewrite.
+- Existing `GO CODING ICH-S0-02` covers this limited correction by Codex VS Code. **STOP before push/PR/merge/deploy**; owner publication consent comes only after follow-up independent review. No new S0-03/S0-04 implementation.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 DB_AUTH_VERIFIED / CODEX_RESUME_READY / GO_AUTHORIZED.** Owner corrected ignored local .env; independent read-only PDO connection verified iches_unisya (MySQL 9.7.1/InnoDB/FK enabled, zero tables). Codex may continue existing S0-02 GO with additive migrations after current-branch preflight; no reset/push/merge/deploy.
+**NOW: ICH-S0-02 LOCAL_IMPLEMENTATION_AUDITED / REV-03_REQUIRED / NO_PUBLICATION.** Codex committed 78bc6d9a (13 files), independent local tests and live read-only DB state PASS; unique role_assignment scope currently prevents regrant after revocation. Bounded Codex-only forward migration + regression test required; no push/PR/merge/deploy.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

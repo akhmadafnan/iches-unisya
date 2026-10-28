@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21J-07 — MySQL authenticated and Codex S0-02 READY TO RESUME (CURRENT)
+## 21K-01 — S0-02 audited, bounded REV-03 required (CURRENT)
+
+- [21K-01 independent audit report](docs/21K-01-S0-02-INDEPENDENT-REVIEW-REV03.md): local commit `78bc6d9a904c86b334c28f645d908452295ba26e`, 13 scoped files, clean. Re-run PHP 4/36 PASS, Pint 28 PASS, Composer PASS, npm typecheck/Vite build PASS. Read-only MySQL confirms correct `iches_unisya`, InnoDB, FKs, empty domain tables after Codex synthetic test rollback.
+- **REV-03 REQUIRED:** `role_assignments_scope_unique` still applies to revoked rows, preventing later new grant of same role/scope. Codex-only same S0-02 scope: a **new forward-only correction migration** implementing uniqueness of active grants, regression test revoke→regrant and preserved revocation history, rerun evidence, append log, new local commit. No old migration rewriting, destructive reset, push/PR/merge/deploy.
+- Existing S0-02 owner GO remains sufficient for this correction. Linux CI for new commit still NOT_RUN; do not mark S0-02 accepted until verified.
+
+## 21J-07 — MySQL authenticated and Codex S0-02 READY TO RESUME (HISTORICAL)
 
 - Owner edited local ignored `.env`; independent read-only PDO probe connected to **`iches_unisya`**, MySQL 9.7.1, InnoDB, FK checks on, **0 tables**, exit 0. No credential printed, no DB writes, Git clean. Old 1045 blocker resolved.
 - **GO CODING ICH-S0-02 remains active**; [21J-05 execution contract](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) includes verified SQL evidence and selective UUIDv7 policy. Resume Codex on clean `feat/ich-s0-02-db-foundation`; safely fast-forward current docs-only `origin/main` when possible, do scoped Laravel MySQL config, UUIDv7 entity foundation and additive `migrate`, non-destructive tests, then local commit. No extra GO needed.
