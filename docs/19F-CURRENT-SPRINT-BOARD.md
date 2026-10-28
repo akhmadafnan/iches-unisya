@@ -17,6 +17,10 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 - [20C device audit](20C-LOCAL-PREFLIGHT-AND-GATES.md) and [Sprint-01 DRAFT](20C-01-DRAFT-SPRINT-01-WORK-ORDER.md): `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07`; status **BLOCKED_DECISION / NO_GO**.
 - Next one action: locate intended VS Code/project folder and finish PRE-02 technical approvals. No coding.
 
+## Owner local workspace decision — 28 Oct 2026
+
+**Lokasi lokal disepakati:** `D:\PINJAM-AFNAN\iches-unisya`. Pemeriksaan read-only: D:\ dan folder induk ada; folder proyek **belum ada**. VS Code **1.128.0 x64** ditemukan pada `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`, ekstensi `openai.chatgpt` terdaftar; login/Skill belum diuji. Tidak ada clone/create/merge/coding. [Detail 20C](20C-LOCAL-PREFLIGHT-AND-GATES.md). **Next:** izin setup clone terpisah lalu inspeksi remote dan kesiapan environment.
+
 ## NOW — satu prioritas yang boleh aktif
 **ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk task/sprint mana pun.**
 

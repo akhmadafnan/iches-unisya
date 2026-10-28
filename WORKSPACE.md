@@ -35,6 +35,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
+## Lokasi kerja lokal disepakati
+
+- **Windows:** `D:\PINJAM-AFNAN\iches-unisya` — folder belum ada pada pemeriksaan 28 Oktober 2026; **jangan clone/buat otomatis tanpa izin setup**.
+- **VS Code:** `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (1.128.0 x64); ekstensi OpenAI terdaftar, login/skills belum diverifikasi.
+
 ## Status verifikasi awal (28 Oktober 2026)
 - Target: `akhmadafnan/iches-unisya`, `main`; source aplikasi target **belum ada** saat audit.
 - Repo lama `akhmadafnan/international-conference-platform` adalah referensi **selective reuse**, bukan kode yang boleh langsung disalin.

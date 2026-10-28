@@ -14,9 +14,9 @@
 | npm | `11.17.0` via `npm.cmd --version` | PASS via .cmd; `npm --version` failed through PowerShell invocation |
 | PHP extensions | `pdo_mysql`, `mysqli`, `openssl`, `mbstring`, `fileinfo`, `intl` detected | PASS (module presence only) |
 | MySQL CLI | `mysql` not found in PATH | NOT_VERIFIED, not proof server unavailable |
-| VS Code command | `code` not found in PATH; common Code.exe installation paths not found | NOT_VERIFIED (portable/custom install possible) |
-| Codex extension | Not inspected in VS Code | NOT_VERIFIED |
-| Local `iches-unisya` clone | Not found in checked common home folders | NOT_VERIFIED; may live elsewhere |
+| VS Code command | Full path `D:\PINJAM-AFNAN\Microsoft VS Code\bin\code.cmd` works; VS Code **1.128.0 x64** | PASS via explicit path; not on generic PATH |
+| Codex extension | `openai.chatgpt@26.51021.22027` and `openai.codex-audio@26.1021.22027` listed | DETECTED; sign-in/skills loading NOT_VERIFIED |
+| Local `iches-unisya` clone | Owner chose `D:\PINJAM-AFNAN\iches-unisya`, checked explicitly: **folder absent** | NOT_CREATED, pending setup authorization |
 | Local test database | No connection attempted | NOT_VERIFIED |
 | Git remote, local branch/status | No project clone path established | NOT_VERIFIED |
 | Runtime test/migration | No Composer install, npm build, Laravel tests, migration or database write performed | NOT_RUN |
@@ -27,8 +27,10 @@
 
 - [x] Git/PHP/Composer/Node/npm are present and versions recorded.
 - [x] PHP MySQL driver + basic extensions available.
-- [ ] Identify target VS Code installation and confirm Codex extension is installed, signed in and can read repository Skills.
-- [ ] Identify **actual folder** for local `akhmadafnan/iches-unisya` clone (or prepare owner-approved clone step later), confirm remote, branch, Git clean status.
+- [x] Identify VS Code 1.128.0 path and detect OpenAI extension IDs.
+- [ ] Confirm Codex VS Code sign-in and that repository Skills load in an actual workspace.
+- [x] Owner-selected target path `D:\PINJAM-AFNAN\iches-unisya` and verified destination does not exist.
+- [ ] With separate setup authorization, clone there; then verify remote, branch and clean Git status.
 - [ ] Determine MySQL server/test DB availability; ensure a disposable isolated DB (not production) can be used.
 - [ ] Approve RD-01 canonical target; RD-02 PHP/Node version range; RD-03 DB engine/version; RD-04 UUIDv7; RD-05 roles/scoping; RD-06 auth baseline in Decision Register.
 - [ ] Verify composer/npm install/build/test scripts **only after coding authorization**. Never mark tests PASS based on available CLI versions.
@@ -39,6 +41,20 @@
 **Allowed (read-only):** `git --version`, `php -v`, `composer --version`, `node --version`, `npm.cmd --version`, `git status`, `git branch --show-current`, `git remote -v` on **identified** clone, `code --list-extensions` or VS Code UI Extensions inspection if available, check MySQL service/executable presence without connecting to production.
 
 **Not authorized:** npm/composer installs, cloning/overwriting local folders, new project scaffolding, package upgrades, DB schema changes, local config modifications, production credentials, source code, merging PR or deployment. Explicit owner GO Coding is separate.
+
+
+## 20C addendum — Local project root confirmed by owner (28 Oct 2026)
+
+**Owner-selected absolute workspace path:** `D:\PINJAM-AFNAN\iches-unisya` on the connected Windows desktop.
+
+Read-only check:
+- Drive `D:\`: **EXISTS**; parent `D:\PINJAM-AFNAN`: **EXISTS**.
+- Target project folder `D:\PINJAM-AFNAN\iches-unisya`: **DOES NOT YET EXIST**. No clone/create/install attempted.
+- VS Code: installed at `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`; verified CLI `D:\PINJAM-AFNAN\Microsoft VS Code\bin\code.cmd`; version **1.128.0 (x64)**.
+- VS Code extension list, default profile: `openai.chatgpt@26.51021.22027` and `openai.codex-audio@26.1021.22027`. **Extensions listed is not proof that Codex is signed in or that Skills are discoverable**.
+- `code` absent from generic PATH but full `code.cmd` path worked. `npm.cmd` worked. Avoid changing PATH/PowerShell execution policy during preflight.
+
+**Next action (separately authorized):** initialize/clone canonical GitHub repo into **exactly this target path** after owner authorizes repository setup and the destination remains unoccupied. Never clone into existing `D:\PINJAM-AFNAN\ICHES` or `iches-2027-prototype` by mistake. Checkout documentation branch only as instructed; PR #1 is still Draft and not merged. After cloning inspect `git remote -v`, branch, worktree, `AGENTS.md` and `PLANS.md` before any GO Coding.
 
 ## 4. Next concrete step
 

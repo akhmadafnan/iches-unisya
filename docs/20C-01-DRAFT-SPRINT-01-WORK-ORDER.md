@@ -10,6 +10,8 @@
 | Ordered task IDs | `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07` (**three only**) |
 | Business goal | Minimal, bootable Laravel/Inertia/Vue foundation with canonical identity/event schema and repeatable test pipeline |
 | Repository | Proposed `akhmadafnan/iches-unisya`; owner must confirm RD-01 before READY |
+| Owner-selected local workspace path | `D:\PINJAM-AFNAN\iches-unisya` (**folder currently absent; do not create/clone before setup authorization**) |
+| VS Code detected | `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`, version 1.128.0; OpenAI extension IDs detected; sign-in/skill discovery not verified |
 | Start baseline | Approved merge of governance PR and verified `main` commit; **not frozen yet** |
 | Branch | `feat/ich-sprint-01-foundation` (to be created by Codex **after** named GO) |
 | PR | One tightly scoped foundation PR may include three ordered tasks; individual per-task commits and evidence entries; **no auto merge** |
@@ -52,7 +54,7 @@ Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.ag
 - [ ] RD-02 PHP + Node/dependency compatibility approved, backed by actual environment check.
 - [ ] RD-03 MySQL test DB verified; RD-04 UUIDv7 FK policy approved.
 - [ ] RD-05 RBAC identity model and RD-06 baseline auth approved as needed for schema.
-- [ ] Confirm VS Code/Codex and target local clone; clean branch/remote/state.
+- [ ] VS Code executable and OpenAI extension IDs detected, but Codex sign-in/Skills still unverified; **target `D:\PINJAM-AFNAN\iches-unisya` currently absent**, await separate authorization to clone and verify remote/branch/worktree.
 - [ ] ChatGPT provides final Work Order base commit + applicable scripts/test cases.
 - [ ] Owner sends explicit GO SPRINT **after** READY.
 
