@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-03 — S0-02 accepted, exact Codex feature push authorized (CURRENT)
+## 21K-04 — S0-02 PR #6 CI PASS, owner merge authorization pending (CURRENT)
+
+- [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6) **OPEN / UNMERGED**, branch `feat/ich-s0-02-db-foundation` published at exact Owner-approved SHA `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`, 2 commits, 14 scoped files; GitHub `mergeable=true`, `mergeable_state=clean`.
+- [21K-04 live Actions evidence](docs/21K-04-S0-02-PR6-LINUX-CI-PASS-AND-MERGE-GATE.md): push run 40695877645 **SUCCESS**, PR run 40696398403 **SUCCESS**, real PHP8.4.27/Composer/Laravel4 tests-36 assertions/Pint29/Node22/npm/TS/Vite all green. Local MySQL 8 tests/134 assertions independently rerun in [21K-02](docs/21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md), NOT run in Linux DB-free CI.
+- **REVIEW_PASS / CI_RUNTIME_PASS / OWNER_MERGE_APPROVAL_PENDING.** Only after separate explicit owner merge GO may PR #6 be merged following fresh SHA/files/required-check verification. No DB writes/reset, new coding or deployment; PR #3 unaffected.
+
+## 21K-03 — S0-02 accepted, exact Codex feature push authorized (HISTORICAL)
 
 - Owner formally **ACCEPTED REV-03** and authorized Codex VS Code's normal non-force push of EXACT `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb` on `feat/ich-s0-02-db-foundation`. [21K-03 handoff](docs/21K-03-S0-02-OWNER-ACCEPT-CODEX-PUSH-HANDOFF.md). On successful push verification, ChatGPT may create PR and inspect Ubuntu PHP8.4/Node22 Actions, not merge.
 - Independent local preflight still HEAD `f4eb25c`, parent `78bc6d9`, worktree clean; new feature branch **not yet present** on GitHub. Do not incorporate newer governance-only `main` commits into feature before exact-SHA push; no rebase, merge, amend or reset.

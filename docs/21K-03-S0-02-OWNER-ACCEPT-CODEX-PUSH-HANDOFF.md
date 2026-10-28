@@ -1,6 +1,6 @@
 # 21K-03 — Owner ACCEPT S0-02 REV-03 / Codex-only Exact-SHA Push Handoff
 
-> **28 October 2026 · OWNER_ACCEPTED / PUSH_AUTHORIZED / NOT YET PUSHED.** Owner explicitly authorized Codex VS Code normal, non-force push of feature **`feat/ich-s0-02-db-foundation` at exact `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`**, after accepting [21K-02 independent review](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md). Once remote SHA is independently verified, ChatGPT is authorized to open a PR and check the actual GitHub Actions PHP 8.4 / Node22 execution. **No merge, DB reset, app-code changes, other task or deployment authorized.**
+> **28 October 2026 · HISTORICAL OWNER PUSH APPROVAL — PUSH COMPLETED.** Exact feature SHA was pushed by Codex, GitHub PR #6 opened and both push/PR GitHub Actions checks passed. Latest [21K-04 verified CI and merge gate](21K-04-S0-02-PR6-LINUX-CI-PASS-AND-MERGE-GATE.md); old push-only procedure below preserved for traceability. Owner explicitly authorized Codex VS Code normal, non-force push of feature **`feat/ich-s0-02-db-foundation` at exact `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`**, after accepting [21K-02 independent review](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md). Once remote SHA is independently verified, ChatGPT is authorized to open a PR and check the actual GitHub Actions PHP 8.4 / Node22 execution. **No merge, DB reset, app-code changes, other task or deployment authorized.**
 
 ## Independent preflight before Codex push
 

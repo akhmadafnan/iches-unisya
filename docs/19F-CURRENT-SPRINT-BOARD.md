@@ -275,8 +275,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Critical SHA preservation:** `main` now contains docs-only governance commits after feature baseline `3ad72cf...`. **Do not merge/rebase/fast-forward feature branch against main before push**, since changing feature HEAD would void exact-SHA permission. Normal push publishes current history as-is, PR will compare against latest main.
 - Owner's subsequent authorization permits **ChatGPT to open PR** after confirming exact GitHub remote SHA, and inspect new CI. The published SHA has **no Linux CI result until an actual workflow run**. Merge requires separate approval.
 
+## 21K-04 — S0-02 published; PR #6 two real CI runs PASS (28 October 2026)
+
+- **OWNER APPROVED PUSH ONLY** of `feat/ich-s0-02-db-foundation` at exact `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`. Codex completed normal push, GitHub remote independently verified identical. [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6) created by ChatGPT under Owner's explicit prior permission: **OPEN / UNMERGED**, 2 feature commits, **14 reviewed paths**, no credentials or unrelated CI change, `mergeable_state=clean`.
+- Actual CI **both SUCCESS** on exact SHA: [push run 40695877645](https://github.com/akhmadafnan/iches-unisya/actions/runs/40695877645), [PR run 40696398403](https://github.com/akhmadafnan/iches-unisya/actions/runs/40696398403). Steps PHP **8.4.27**, Laravel **13.39.0**, Composer validation and locked install, **4 DB-free tests/36 assertions**, Pint **29 files**, Node22/npm ci/TS typecheck/Vite **7.3.7** build all passed.
+- Local authenticated MySQL checks from previous [21K-02](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md) independently PASS **8 DB integration tests/134 assertions** with transaction rollback and real generated-column/index inspection in owner-only `iches_unisya`. **Do not claim MySQL tests were run by GitHub CI** (CI remains DB-free).
+- Full [21K-04 PR/CI gate report](21K-04-S0-02-PR6-LINUX-CI-PASS-AND-MERGE-GATE.md). **Owner merge approval NOT granted**; no merge, migrations/DB reset, other coding or deployment. Design Skills PR #3 remains separate.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 OWNER_ACCEPTED / CODEX_EXACT_SHA_PUSH_AUTHORIZED / PUSH_PENDING.** Owner approved normal, non-force Codex VS Code push of exact f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb on feat/ich-s0-02-db-foundation, then ChatGPT may open PR and verify new Linux CI. No merge, DB reset, new coding or deploy.
+**NOW: ICH-S0-02 PR6_CI_PASS / REVIEW_PASS / OWNER_MERGE_APPROVAL_PENDING.** Owner-approved SHA f4eb25c pushed and PR #6 OPEN, UNMERGED; exact 14-file scope. Both GitHub Actions push 40695877645 and PR 40696398403 SUCCESS (PHP8.4/Node22). Mergeable clean. No merge, DB action, extra coding or deploy authorized.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
