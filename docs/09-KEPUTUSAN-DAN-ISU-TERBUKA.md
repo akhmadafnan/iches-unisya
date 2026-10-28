@@ -404,6 +404,30 @@ Dua referensi pengguna: [AICIS](https://aicis.uinssc.ac.id/) dan [Multaqa Dawli]
 
 [18C-04E — Feature Scope, Countdown, CMS, Agent Skill](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [SKILL.md](../.agents/skills/iches-public-frontend/SKILL.md) · [AI Agent Instructions](../AGENTS.md).
 
+## A23. Tahap 18C-05 Implementation Readiness — Audit Reuse, Pilihan Teknis dan MVP Plan (28 Oktober 2026)
+
+**PERMINTAAN USER:** “Okey saya menyetujui. silahkan lanjut ke pekerjaan berikutnya.” Ini berarti **GO MELANJUTKAN TAHAP 18C-05** setelah AICIS/Countdown/CMS/Skill terdokumentasi, **BUKAN** otorisasi coding/migrasi/menyambungkan host/merilis aplikasi, dan bukan persetujuan memilih MySQL/UUIDv7 secara final.
+
+**TEMUAN REMOTE GITHUB:** repository target **`akhmadafnan/iches-unisya` masih dokumentasi/skill**; repository lama **`akhmadafnan/international-conference-platform/develop` sudah memuat code Laravel 13, Inertia Vue, UUIDv7, scoped Spatie Permission, private files, Registration+Payment Phase 02**. README lama menyebut Phase 02 IN PROGRESS, tetapi `docs/ai-context/CURRENT_STATE.md` mengklaim CLOSED_GREEN/INTEGRATED. **Belum ada pengujian ulang source lama atau port kode ke repo baru.**
+
+| ID | Usulan/penemuan readiness | Status |
+|---|---|---|
+| NEW-070 | Tahap **18C-05 Implementation Readiness diminta/dilanjutkan** sebelum coding | **DIPROSES SEBAGAI DOKUMENTASI, BUKAN GO CODING** |
+| PROP-094 | **Target repo canonical `akhmadafnan/iches-unisya`** dan **selective port** fondasi dari repo lama via reviewed feature branch; tanpa meng-copy workflow/secret/member data lama | **REKOMENDASI, BELUM FINAL** |
+| PROP-095 | **MySQL + UUIDv7**, Laravel 13 PHP 8.4 target (min PHP 8.3 official), Vue/Inertia/Spatie tested reuse | **REKOMENDASI TEKNIS, BELUM DISETUJUI** |
+| PROP-096 | **Legacy VerifyPaymentAction tidak boleh dipakai apa adanya** karena source hanya memastikan uploaded proof ada, lalu VERIFIED; requirement ICHES **wajib matched bank mutation** sebelum Finance Verified | **GAP KRITIS / HARUS DIPERBAIKI SAAT CODING** |
+| PROP-097 | Model registrasi lama single registration per member/edition perlu revisi agar satu user dapat punya personal Paket sekaligus Co-Host/Presenter; institutional invoice tak menjadi lima individual invoice | **GAP BISNIS / RENCANA REWORK** |
+| PROP-098 | **S0 Foundation → S1 Public Academic Editorial + CMS + Countdown → S2 Abstract Text+PDF** sebagai prioritas awal, baru Reviewer/Finance/Co-Host/Full Paper/Session/QR/Publication | **REKOMENDASI MVP SLICE, BUKAN JADWAL TERJAMIN** |
+| PROP-099 | **10 vertical slices S0–S9** dengan per-slice exit gate, lima jenis release, staging/privacy/backup/SEO/RTL checkpoints | **DRAFT PLANNING** |
+| PROP-100 | **45 skenario RDY-01..RDY-45** kesiapan fondasi, countdown, CMS, abstract, finance, publication, QR, security | **RENCANA UAT, BELUM DIEKSEKUSI** |
+| PROP-101 | **GO/NO-GO Gate**: pilih repo+DB+PK+runtime dan user GO eksplisit sebelum coding; production hanya setelah UAT dan infrastruktur terverifikasi | **REKOMENDASI KEAMANAN / BELUM GO** |
+
+**Open item masih tetap open:** pilihan DB/PK final, hosting/Node/PHP/SMTP, jam mulai resmi 5 Januari untuk countdown, rekening/Bank mutation procedure, tarif presenter multi-paper/refund, OJS destination & 10 jurnal nyata, Full Paper file/assessor rule, scanner offline. **Scope 38+15 kandidat tabel tidak otomatis menjadi migration final**; CMS juga tidak otomatis menambah 7 tabel.
+
+**Prioritas tanggal TOR:** Abstract window **1–20 Desember 2026**, main conference **5 Januari 2027**, associated activities **6 Januari 2027**. Tidak ada deadline coding/delivery dijanjikan; rilis hanya setelah tests benar-benar PASS.
+
+[18C-05 Readiness & Technical Decisions](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A Selective Reuse Audit](18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B MVP Slices & 45 UAT](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

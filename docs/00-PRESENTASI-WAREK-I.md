@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## TAHAP 18C-05 — IMPLEMENTATION READINESS & MVP PLAN (DRAFT 28 OKT 2026)
+
+Audit remote GitHub menunjukkan **repo baru ICHES masih dokumentasi/Agent Skill**, sedangkan **repo lama** mempunyai fondasi **Laravel 13/Vue, auth, UUIDv7, scoped roles, private files, registration/payment** yang dapat dipakai **secara selektif setelah audit**, bukan salin penuh. **Payment Verify lama tidak mencocokkan mutasi bank secara eksplisit, tidak boleh dipakai tanpa perbaikan.** Rekomendasi teknis **repo baru sebagai target, MySQL+UUIDv7, Laravel modular monolith** masih menunggu persetujuan. **10 implementation slices** disusun, prioritas **S0 Foundation → S1 Website CMS/Public Frontend/Countdown → S2 Abstract intake** mengingat TOR Abstract window **1–20 Des 2026**. **45 UAT baru hanya rencana**. Tidak ada coding, deployment, infrastruktur maupun jam mulai event yang diklaim siap. [18C-05](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A](18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md).
+
+---
+
 ## KEBUTUHAN LENGKAP PUBLIC FRONTEND — AICIS/COUNTDOWN/CMS/AI SKILL (28 OKT 2026)
 
 Pengguna menetapkan **AICIS sebagai referensi fitur**, bukan template, dan **countdown konferensi hari/jam/menit/detik WAJIB** pada frontend. Admin mengelola melalui **Website CMS**: halaman, section, menu/footer, foto/logo/media, teks multibahasa EN/ID/AR, SEO, preview/draft/publish, serta pengaturan tampilan countdown yang membaca **tanggal dan jam resmi Event Master**. **Konferensi utama 5 Januari 2027; jam mulai belum ditentukan sehingga jangan mengarang countdown.** Arah visual Academic Editorial tetap, **semua komponennya dapat direvisi tanpa diskusi 1-1**. Untuk mempercepat tahap coding selanjutnya telah dibuat **Agent Skill portabel** dengan design brief, CMS/data contract, dan QA acceptance gates. **Tidak ada frontend/CMS/timer yang sudah berjalan**. [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [AI Skill](../.agents/skills/iches-public-frontend/SKILL.md).

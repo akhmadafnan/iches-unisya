@@ -1,5 +1,7 @@
 # 18C-04 — DRAFT Frontend, Dashboard Architecture & UX ICHES 2027
 
+> **UPDATE READINESS 28 OKT 2026:** kebutuhan AICIS-inspired CMS dan countdown sudah dirumuskan, sehingga **18C-05 planning** telah dilanjutkan pada [18C-05](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md), [18C-05B](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md). Kalimat historis yang menyebut 18C-05 “ditunda” merujuk keadaan saat desain publik masih didiskusikan; kini yang tetap tertunda adalah **GO CODING**, bukan penyusunan readiness. Frontend tetap desain Academic Editorial, seluruh komponennya revisable.
+
 > **PENEGASAN 28 OKTOBER:** Public Frontend wajib **countdown D/H/M/S**, inspirasi fitur AICIS, pengelolaan konten melalui **menu Website CMS Backoffice**, dan agent dapat memilih komposisi awal sendiri tanpa diskusi section satu per satu. Komponen tidak dikunci. Untuk kontrak lengkap serta skill AI coding agent, lihat [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) dan [SKILL](../.agents/skills/iches-public-frontend/SKILL.md). Tidak ada coding/deployment.
 
 > **UPDATE 28 OKT 2026:** [18C-04C Wireframe Homepage Desktop/Mobile](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) dan [18C-04D Flexible CMS Contracts](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md) adalah **eksplorasi yang belum dikunci**; pengguna secara tegas meminta semua komponen Frontend dapat direvisi sesuai seleranya. Daftar section sebelumnya bukan layout yang wajib diikuti dan fase coding 18C-05 tetap menunggu review visual.

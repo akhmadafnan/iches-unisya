@@ -35,6 +35,9 @@
 **➡️ [18C-04C: DRAFT Homepage Wireframe Desktop/Mobile — semua komponen bebas direvisi](docs/18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md)**  
 **➡️ [18C-04D: DRAFT Flexible Visual CMS / 12 calon blok & 28 UAT](docs/18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md)**  
 **➡️ [18C-04E: AICIS Features, Countdown WAJIB, Full Website CMS & 25 UAT](docs/18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md)**  
+**➡️ [18C-05: DRAFT Implementation Readiness & Decision Gates](docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md)**  
+**➡️ [18C-05A: DRAFT Audit Reuse Repository Lama & Migration Plan](docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md)**  
+**➡️ [18C-05B: DRAFT MVP Slices, Exit Gates, 45 Planned UAT](docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md)**  
 **➡️ [AI Agent Skill: iches-public-frontend](.agents/skills/iches-public-frontend/SKILL.md)**  
 **➡️ [AI Agent Instructions](AGENTS.md)**
 
@@ -135,6 +138,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**TAHAP TERBARU — 18C-05 IMPLEMENTATION READINESS (28 OKT 2026):** pengguna menyetujui untuk **melanjutkan perencanaan kesiapan implementasi**, bukan GO CODING. Audit remote GitHub memastikan **`akhmadafnan/iches-unisya/main` masih repository dokumentasi** (belum terdapat source Laravel/Vue), sedangkan **`akhmadafnan/international-conference-platform/develop`** berisi source Laravel 13, Inertia Vue, UUIDv7, MySQL, scoped roles, private files, Phase 02 Registration/Payment. **Selective reuse lebih aman daripada copy seluruh sistem**, khususnya **VerifyPaymentAction lama mengecek bukti, tidak mensyaratkan kecocokan mutasi bank nyata** sebagaimana kebutuhan baru. Rekomendasi teknis **target repo baru + MySQL/UUIDv7 + Laravel 13 auth/roles** masih DRAFT. **S0 foundation → S1 Public/CMS/Countdown → S2 Abstract** diprioritaskan karena jendela TOR 1–20 Des 2026. **10 slices/5 kelompok rilis dan 45 UAT readiness** sudah dirancang, **belum diuji**. [18C-05](docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A](docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B](docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md). Tidak ada coding, deployment atau akses hosting/bank/OJS staging yang diverifikasi.
+
 
 **UPDATE PRODUK 28 OKTOBER 2026 — PUBLIC FRONTEND FITUR JELAS, KOMPONEN TETAP FLEKSIBEL:** pengguna menjadikan **AICIS referensi CAKUPAN FITUR**, menyetujui **COUNTDOWN WAJIB** (hari/jam/menit/detik) dengan target Event Master yang editable di Admin, serta **Website CMS Backoffice** untuk membuat/mengubah halaman, media, section, menu/footer, terjemahan, SEO, draft/preview/publish. **Tidak perlu lagi diskusi satu per satu komponen sebelum AI menghasilkan desain lengkap**; visual tetap Academic Editorial tetapi semua komposisi revisable. Agent Skill `.agents/skills/iches-public-frontend/SKILL.md` + 3 referensi dan `AGENTS.md` telah disediakan agar AI developer dapat mengimplementasikan dengan kualitas konsisten **setelah GO coding eksplisit**. Jam mulai konferensi belum dinyatakan dalam TOR, sehingga tidak boleh membuat timer fiktif. [18C-04E](docs/18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [Agent Skill](.agents/skills/iches-public-frontend/SKILL.md). **Belum ada frontend/CMS/countdown yang benar-benar dibangun atau dites.**
 

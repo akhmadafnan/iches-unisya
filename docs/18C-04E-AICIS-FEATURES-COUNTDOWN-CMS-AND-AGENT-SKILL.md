@@ -1,5 +1,7 @@
 # 18C-04E — ICHES Public Frontend: AICIS Feature Inspiration, Mandatory Countdown, CMS & Agent Skill
 
+> **STATUS LANJUTAN 28 OKT 2026:** Tahap **18C-05 Implementation Readiness** telah **ditulis sebagai DRAFT** di [18C-05](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md), [18C-05A](18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md), [18C-05B](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md). Prioritas jika GO coding diberikan nanti adalah **S0 foundation, S1 public CMS/countdown, S2 abstract**. Agent Skill tersedia tetapi **tidak membuktikan code sudah dibangun**.
+
 > **28 Oktober 2026 · ARAH PRODUK DITERIMA / DESAIN KOMPONEN TETAP TERBUKA / BELUM CODING.**
 >
 > **Instruksi terbaru pengguna:** Public website ICHES boleh mengikuti **cakupan fitur** AICIS, **WAJIB memiliki countdown menuju acara**, dan **pengelolaan seluruh konten website publik harus tersedia di Backoffice lewat Website CMS** sehingga panitia bisa menambah/mengubah halaman, section dan materi tanpa perlu meminta developer untuk perubahan rutin. Pemilik produk **tidak ingin diskusi komponen per komponen** sebelum AI membuat desain; di masa implementasi, AI developer harus menggunakan **SKILL** khusus UI/UX/website yang powerful, lalu pemilik produk tetap dapat mengoreksi hasil visual kapan pun.

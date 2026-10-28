@@ -18,7 +18,8 @@ Create a premium, accessible, responsive **Academic Editorial** public website f
 
 1. Repository `README.md`, `docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md`, and `docs/10-ANALISIS-TOR-DAN-REBASELINE-2027.md`.
 2. Public design & CMS: `docs/18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md`, `docs/18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md`, `docs/18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md`, `docs/18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md`.
-3. Auth, role/security & integration: `docs/18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md`, `docs/18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md`, `docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md`.
+3. **New implementation readiness gate**: `docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md`, `docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md`, `docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md`. Public/CMS/countdown is a **first build slice**, not a last-minute decoration. The repo currently has no Laravel source; do not claim it is implemented.
+4. Auth, role/security & integration: `docs/18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md`, `docs/18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md`, `docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md`.
 4. On-demand references here: [DESIGN-DIRECTION](references/DESIGN-DIRECTION.md), [CMS-AND-DATA-CONTRACT](references/CMS-AND-DATA-CONTRACT.md), [QUALITY-GATES](references/QUALITY-GATES.md).
 
 Resolve conflicts using the **latest explicit owner decisions in the register**. Prior wireframes are **examples only**. Do not silently replace them with invented business rules.
