@@ -8,6 +8,8 @@
 
 Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task IDs terbatas yang sudah disetujui, berurutan, dengan scope, branch, test dan stop conditions eksplisit. Lanjut antar-task hanya setelah PASS+evidence; task di luar daftar tetap terlarang. Gunakan [template Sprint](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Tidak ada GO Coding saat ini.
 
+**Current first Codex task:** [21B ICH-S0-01 Foundation Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) supersedes the old generic foundation example below. Owner approval of Stage 21 documentation is not implementation GO; use the current `D:\PINJAM-AFNAN\Herd\iches-unisya` path and wait for separate `GO CODING ICH-S0-01`.
+
 ## 1. Cara bekerja dari VS Code tanpa kebingungan
 
 **Saat belum GO:** cukup simpan dokumen ini di GitHub dan, bila ingin, lakukan inspeksi lingkungan via terminal read-only. **Tidak ada instruksi kepada Codex untuk membangun sesuatu.**

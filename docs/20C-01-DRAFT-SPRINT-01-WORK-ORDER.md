@@ -4,7 +4,9 @@
 
 > **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
 
-> **STATUS: BLOCKED_DECISION / NO GO CODING.** This is a proposed finite **Sprint Work Order**, not a prompt that may yet execute. Owner consent to plan/workflow does not authorize changing source or installing packages. Use [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md).
+> **STATUS: BLOCKED_TEST_DB_AND_DOC_MERGE / NO GO CODING FOR THREE-TASK SPRINT.** This is a proposed finite **Sprint Work Order**, not a prompt that may yet execute. Owner consent to plan/workflow does not authorize changing source or installing packages. Use [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md).
+
+**21B carveout:** do not treat this three-task Sprint as the first automatic coding authorization. One DB-free `ICH-S0-01` is separately scoped in [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md), pending doc PR merge, frozen `main` baseline and explicit Task GO; `ICH-S0-02` still requires isolated authenticated MySQL test DB.
 
 ## Authorized scope proposal
 

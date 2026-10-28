@@ -16,7 +16,7 @@ This repository currently contains an **ICHES 2027 product blueprint**, not a fi
    `.agents/skills/iches-public-frontend/SKILL.md`
    and read its `references/` selectively.
 4. For finance, Co-Host, Academic, Role, OJS or QR behavior, review the matching blueprint docs; do not use AICIS workflows to override ICHES decisions.
-5. **Implementation readiness (28 Oct 2026)**: read `docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md`, `docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md` and `docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md`. The canonical target repository and MySQL/UUIDv7 are **recommended, not owner-approved decisions**. Only port reviewed foundation code from `akhmadafnan/international-conference-platform/develop`. Old Finance verification must be redesigned to match real bank mutation evidence. **S0/S1/S2 first** after explicit GO.
+5. **Implementation readiness (28 Oct 2026)**: read `docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md`, `docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md` and `docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md`. The canonical target repository, Laravel 13/PHP 8.4, MySQL/InnoDB, UUIDv7, scoped Policies and passwordless participant OTP/Magic Link are **OWNER-APPROVED RD-01–RD-06** in Decision Register 09/20D. `ICH-S0-01` is a separate DB-independent foundation task; DB migrations remain gated under `ICH-S0-02`. Current Windows repo: `D:\PINJAM-AFNAN\Herd\iches-unisya`. Only port reviewed foundation code from `akhmadafnan/international-conference-platform/develop`. Old Finance verification must be redesigned to match real bank mutation evidence. **S0/S1/S2 first** after explicit GO.
 
 ## ChatGPT × Codex VS Code task ownership (28 Oct 2026)
 

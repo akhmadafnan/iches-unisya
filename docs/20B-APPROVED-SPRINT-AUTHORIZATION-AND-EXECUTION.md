@@ -58,11 +58,14 @@ NO AUTO MERGE / DEPLOY / PRODUCTION ACTIONS
 
 Do not load all Skills on every task. Admin uses **shadcn-vue + Tailwind CSS 4 + Vue/Inertia**; public site uses original Academic Editorial Tailwind/Vue; **no Bootstrap**. Lyra visual preset is a reference pending exact Vue-compatible token verification. No React/Next.js preset installer.
 
+**21B first-task exception to Sprint-01 DB gate:** owner may explicitly authorize **one Task `ICH-S0-01`** after governance PR merge and [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) marked READY. No database, auth, migrations or subsequent task authorization is implied. The three-task `ICH-SPRINT-01` stays blocked for authenticated test DB.
+
 ## 6. Still blocked before first GO
 
 - [ ] Draft PR #1 reviewed and merged to the working branch.
-- [ ] Owner approves repo/DB/PK/PHP/auth choices required by the first slice.
-- [ ] VS Code Codex, PHP/Composer/Node/Git/test DB verified locally.
+- [x] Owner approved RD-01–RD-06 in 20D / Decision Register 09, including passwordless participant login.
+- [x] Codex Skills readable, PHP/Composer/Node/Git/Herd verified locally.
+- [ ] Isolated authenticated test DB remains a gate for schema/migrations `ICH-S0-02`, **not** for DB-free `ICH-S0-01`.
 - [ ] Actual named Sprint Work Order prepared and marked READY.
 - [ ] Owner issues **separate explicit GO SPRINT** or GO CODING for a Task ID.
 

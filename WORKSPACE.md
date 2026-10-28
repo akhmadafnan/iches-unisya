@@ -6,6 +6,13 @@
 
 > **Mulai di sini.** Repository ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Setelah GO Task ID atau bounded Sprint GO eksplisit, Codex VS Code mengubah kode serta mencatat evidence terbatas; ChatGPT mengelola keputusan, spesifikasi, dokumentasi, review, dan GitHub.
 
+## Stage 21 — current next action
+
+- [21A audit / merge gate](docs/21A-PR1-GOVERNANCE-REVIEW.md): docs-only PR reviewed, 263 local Markdown links checked, zero broken. **No owner merge approval yet**.
+- [21B single-task Codex Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md): `ICH-S0-01` database-independent Laravel/Inertia/Vue/TS/Tailwind4 inside `D:\PINJAM-AFNAN\Herd\iches-unisya`, pending PR merge + explicit named GO.
+- [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
+
+
 ## One Master Plan (DRAFT — no GO)
 
 - [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.

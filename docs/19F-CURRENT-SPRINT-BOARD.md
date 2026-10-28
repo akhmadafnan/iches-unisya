@@ -78,8 +78,17 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 
 **CURRENT WORKSPACE:** `D:\PINJAM-AFNAN\Herd\iches-unisya` (moved intact from `D:\PINJAM-AFNAN\iches-unisya`). Verified old folder absent, new folder present, `git status` clean, expected Git HEAD, and `herd links` resolving `http://iches-unisya.test/` to new folder using PHP 8.4. Existing `sip-hibah-v2` Herd link remained intact. Chosen VS Code `new_Code.exe` launched again with the **new** folder. **Database not touched**; user's existing Herd Free + phpMyAdmin workflow is accepted as the operating pattern. App remains documentation-only so HTTP 404 is expected until separately authorized Laravel implementation. **No GO Coding**. Historical path references above are not active instructions.
 
+## 21A/21B — PR audited and first foundation task prepared
+
+- [21A review](21A-PR1-GOVERNANCE-REVIEW.md): 24 docs/Skills changed at audit snapshot, GitHub PR mergeable, 263 relative documentation links checked, 0 broken, 0 application source changes; **owner merge approval pending**.
+- [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md): **ONLY `ICH-S0-01`**, Laravel 13/Inertia/Vue3/TS/Tailwind4 **DB-INDEPENDENT** boot at `D:\PINJAM-AFNAN\Herd\iches-unisya` (Herd Free). No migrations, user schema, password auth or CMS. Pending merged docs baseline and named `GO CODING ICH-S0-01`.
+- [21C acceptance](21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Composer/PHP/npm build/typecheck/GET/404 checks and HTTP **200** at Herd URL must be verified after implementation. **Not run.**
+- Runtime minimum Laravel 13 PHP extensions checked present. MySQL test-DB readiness remains open for S0-02, **not needed for S0-01**.
+- **Next one action:** owner reviews and authorizes governance PR merge. **No GO Coding, no merge, no DB writes.**
+
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-PRE-03 G0 isolated test DB (20E)**. PRE-02 RD-01..06 FINAL, Codex Skills READABLE PASS, MySQL server/CLI PASS, **test DB authentication/permissions BLOCKED**. Next: owner-authorized **test-only** database/user setup; then authenticated read-only checks. Draft PR review/merge, Sprint readiness and named GO are still separate. **NO_GO CODING.**
+**NOW: Stage 21A governance PR owner merge decision** then separate `ICH-S0-01` first-task GO only after a ready 21B Work Order. Test DB remains G0 blocked for **ICH-S0-02 migrations**, not for S0-01. **NO_GO CODING.**
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -88,7 +97,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** Laravel/Vue Foundation | **PLANNED / BLOCKED** | Work Order draf di 19C; target masih docs-only | Buka Task ID hanya setelah gate; Codex code-only |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **WORK_ORDER_PREPARED / NO_GO** | [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md); current Herd repo verified, isolated from DB | Owner approves PR #1 merge; freeze main SHA; separate named Task GO |
 
 **Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
 
