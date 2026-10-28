@@ -261,8 +261,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **REV-03 BLOCKING:** real unique key `(user_id,event_id,role_key,institution_scope)` does not consider `revoked_at`. Revoked grant blocks a future **new** grant with identical scope. Correct via a bounded **new forward migration** with active-only uniqueness plus regression tests; no schema wipe, no deletion or original migration rewrite.
 - Existing `GO CODING ICH-S0-02` covers this limited correction by Codex VS Code. **STOP before push/PR/merge/deploy**; owner publication consent comes only after follow-up independent review. No new S0-03/S0-04 implementation.
 
+## 21K-02 — REV-03 independently revalidated and CLOSED locally (28 October 2026)
+
+- [21K-02 independent final local review](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md): Codex feature branch `feat/ich-s0-02-db-foundation` exact HEAD **`f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`**, parent `78bc6d9`, clean. REV-03 changes **3 files (+97/-0)**; original first migration preserved, test +41 and append-only log +33.
+- New forward migration changes generated active-only `institution_scope` to nullable `CASE WHEN revoked_at IS NULL THEN COALESCE(institution_id,'') ELSE NULL END` and keeps current four-column unique index; regression checks revoke/regrant twice, old revoked history, duplicate active denial and cross-scope isolation.
+- **Independently reran** MySQL DB integration **8 PASS / 134 assertions**, existing DB-free PHP smoke **4 PASS / 36 assertions**, Pint **29 files PASS**, Composer, TS typecheck, Vite build all PASS; migration status **batch 1+2 Ran**. Read-only post-test SQL proves all four domain tables **zero rows**, migrations=2, actual stored generated column/index correct.
+- **REV-03 REVIEW_PASS / LOCALLY CLOSED**, with deliberate non-reversible corrective `down()` safety limitation documented. No new Linux CI on S0-02 feature SHA; feature not pushed. Owner must separately approve **Codex-only normal push exact SHA `f4eb25c...`**, after which ChatGPT may open PR and audit GitHub Actions. **No merge/deploy/DB wipe/new code task authorized**.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 LOCAL_IMPLEMENTATION_AUDITED / REV-03_REQUIRED / NO_PUBLICATION.** Codex committed 78bc6d9a (13 files), independent local tests and live read-only DB state PASS; unique role_assignment scope currently prevents regrant after revocation. Bounded Codex-only forward migration + regression test required; no push/PR/merge/deploy.
+**NOW: ICH-S0-02 REV-03 LOCAL_REVIEW_PASS / OWNER_PUSH_APPROVAL_PENDING.** Codex commit f4eb25c independently audited: 8 DB tests/134 assertions, 4 smoke/36, Pint, Composer, TS/Vite PASS; local schema indexed correctly and clean after rollback. No push, PR, merge or deploy authorized.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

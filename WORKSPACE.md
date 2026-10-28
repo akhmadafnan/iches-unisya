@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-01 — S0-02 audited, bounded REV-03 required (CURRENT)
+## 21K-02 — S0-02 REV-03 local review PASS, owner push approval needed (CURRENT)
+
+- [21K-02 full review](docs/21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md): exact local `feat/ich-s0-02-db-foundation` HEAD `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`, parent `78bc6d9`, clean; REV-03 3 scoped paths +97/-0, untouched original migration.
+- Independently reran **8 DB tests/134 assertions** and **4 DB-free tests/36 assertions**, Pint 29 files, Composer, TS and Vite PASS; DB batch 1+2 Ran and generated active-only uniqueness/actual empty domain tables verified in MySQL `iches_unisya`. REV-03 issue resolved, but `down()` intentionally disallows unsafe rollback.
+- **REVIEW_PASS locally / owner publication permission pending**. No feature push/PR/CI Linux, merge, production DB action, wipe, deployment or new coding GO. Owner may authorize Codex normal push of exact `f4eb25c...`; ChatGPT verifies remote/PR/CI only after published.
+
+## 21K-01 — S0-02 audited, bounded REV-03 required (HISTORICAL)
 
 - [21K-01 independent audit report](docs/21K-01-S0-02-INDEPENDENT-REVIEW-REV03.md): local commit `78bc6d9a904c86b334c28f645d908452295ba26e`, 13 scoped files, clean. Re-run PHP 4/36 PASS, Pint 28 PASS, Composer PASS, npm typecheck/Vite build PASS. Read-only MySQL confirms correct `iches_unisya`, InnoDB, FKs, empty domain tables after Codex synthetic test rollback.
 - **REV-03 REQUIRED:** `role_assignments_scope_unique` still applies to revoked rows, preventing later new grant of same role/scope. Codex-only same S0-02 scope: a **new forward-only correction migration** implementing uniqueness of active grants, regression test revoke→regrant and preserved revocation history, rerun evidence, append log, new local commit. No old migration rewriting, destructive reset, push/PR/merge/deploy.

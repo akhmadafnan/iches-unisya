@@ -1,6 +1,6 @@
 # 21K-01 — ICH-S0-02 Independent Local Code & MySQL Review: REV-03
 
-> **28 Oct 2026 · AUDIT_SCOPE_PASS / DB_STATE_PASS / LOCAL_CHECKS_PASS / REV-03 REQUIRED BEFORE PUBLICATION.** Owner GO for ICH-S0-02 was already granted. This review is **not a new task GO** and does **not authorize pushing a feature, creating a PR, merging, database reset or deployment**. One bounded integrity correction is needed on the same local feature branch; Codex VS Code remains sole source-code writer.
+> **28 Oct 2026 · HISTORICAL REV-03 FINDING — RESOLVED LOCALLY.** Codex corrected the defect and ChatGPT independently reviewed commit `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb` with DB tests 8/134 and SQL metadata verification PASS. Current local status is **REVIEW_PASS / owner push approval pending**. See [21K-02](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md). Owner GO for ICH-S0-02 was already granted. This review is **not a new task GO** and does **not authorize pushing a feature, creating a PR, merging, database reset or deployment**. One bounded integrity correction is needed on the same local feature branch; Codex VS Code remains sole source-code writer.
 
 ## Verified Git status and scope
 
