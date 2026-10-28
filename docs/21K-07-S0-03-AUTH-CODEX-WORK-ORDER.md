@@ -1,5 +1,7 @@
 # 21K-07 — ICH-S0-03 Authentication Foundation: Codex Work Order
 
+> **PRECEDENCE UPDATE (28 October 2026):** This earlier draft Work Order is preserved for historical traceability. The **current authoritative** S0-03 implementation contract is [21K-07 Authentication MVP Spec](21K-07-S0-03-AUTHENTICATION-MVP-SPEC.md) together with [21K-08 exact Codex Work Order](21K-08-S0-03-CODEX-WORK-ORDER.md). If this draft suggests only one of OTP/Magic Link, different tables/seeds, or a different authorization status, follow 21K-07/08. Per 20B, named **`GO CODING ICH-S0-03`** is still required. No source implementation was authorized by this earlier draft.
+
 > 28 October 2026 · READY_FOR_CODEX / NO NAMED GO YET. Planning and acceptance criteria only. Owner's request to continue planning does not itself authorize application code, DB migrations, deployment, push, PR merge or changes to PR #3.
 
 ## Baseline verified
