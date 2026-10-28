@@ -104,8 +104,16 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 **Expected handoff:** Codex creates `feat/ich-s0-01-foundation`, builds DB-free Laravel 13/Inertia/Vue 3/TS/Tailwind4 with actual tests, returns changes/exit codes/Herd HTTP, no auto merge or deploy. **ICH-S0-02, ICH-S0-07 and full ICH-SPRINT-01 remain NOT_AUTHORIZED.** Test DB G0 gate still open, irrelevant to this DB-free first task.
 
 
+## 21E — Independent code audit `ICH-S0-01` complete (28 October 2026)
+
+- **ChatGPT reviewer decision: `REVIEW_PASS / OWNER_ACCEPTANCE_PENDING`**; see [21E review report](21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md).
+- Inspected Codex's **local, unpushed commit `8eba7cb5b9da0577910beb919844165869591e05`** on `feat/ich-s0-01-foundation`; baseline `4137dce48e85fab5c25c89b7f3a1fde1d0fa3b89`. Git clean; **55 changed files** all within code/test/lockfile/allowed harness boundaries; no governance/docs/Skills edits, migrations, authentication or tracked `.env`.
+- Re-ran `composer validate --strict`, `php artisan --version`, filtered and full PHP smoke suite (3 PASS, 22 assertions), Pint, npm TypeScript check/build, Composer platform, Herd root HTTP 200/unknown 404, HTTP requests to private/config paths (404) and Git scope checks. All listed checks **PASS**. Inspected actual desktop/mobile screenshots.
+- **Minor, not blocking:** `public/favicon.ico` empty (0 bytes), replace in public visual task; database config intentionally disabled until separately authorized S0-02.
+- **No push/PR/merge/deploy** has occurred. **Next:** owner accepts S0-01 and permits **Codex** to push the feature branch and open a PR (not auto merge). S0-02/07 and full Sprint still lack GO.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-01 GO_AUTHORIZED / PENDING_CODEX_EXECUTION.** Owner issued explicit named GO; send 21D prompt to Codex VS Code and collect actual test evidence. No code has been written by ChatGPT. DB/schema/full Sprint remain excluded.
+**NOW: ICH-S0-01 REVIEW_PASS / OWNER_ACCEPTANCE_PENDING.** Local feature commit validated; no push or PR yet. Owner decides acceptance and whether Codex may push/open feature PR. No merge/DB/migration authorization.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -114,7 +122,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** DB-free Laravel/Vue Foundation | **GO_AUTHORIZED / PENDING_CODEX_EXECUTION** | Owner named GO received 28 Oct; [21D](21D-ICH-S0-01-GO-CODEX-EXECUTION.md) contains executable prompt | Codex feature branch + actual Composer/npm/HTTP tests; ChatGPT review |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **REVIEW_PASS / OWNER_ACCEPTANCE_PENDING** | ChatGPT reviewed local commit `8eba7cb`; real tests, scope and screenshots PASS; [21E audit](21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md) | Owner acceptance + consent for Codex feature push/PR; separate merge |
 
 **Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
 

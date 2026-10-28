@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21E — ICH-S0-01 code review completed; owner acceptance pending
+
+- [21E independent code review](docs/21E-ICH-S0-01-INDEPENDENT-CODE-REVIEW.md): **REVIEW_PASS**, local-only feature commit `8eba7cb5b9da0577910beb919844165869591e05`. PHP, Composer, Vite, TS, Pint, Herd HTTP, negative URL/scope checks independently passed. Minor empty favicon not blocking.
+- **No push, feature PR, owner acceptance, merge, DB migration or deployment**. Owner decides whether to accept and authorize Codex to push/open PR. 19F remains the sole current operational board.
+
 ## 21D — CURRENT AUTHORIZATION (overrides older historical NO_GO snapshots)
 
 **Owner explicitly authorized only `GO CODING ICH-S0-01` on 28 October 2026.** [21D Codex GO prompt](docs/21D-ICH-S0-01-GO-CODEX-EXECUTION.md), [21B Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md), and [19F current board](docs/19F-CURRENT-SPRINT-BOARD.md) are authoritative for this specific Task. Codex VS Code is the **only application code writer**. Current local repo `D:\PINJAM-AFNAN\Herd\iches-unisya` must be synced to clean current `main` before Codex branches. **No GO** for S0-02/07, MySQL migrations, auth, CMS, PR auto merge or deployment. Historic “no named GO” statements in old snapshots predate the owner's new explicit GO.
