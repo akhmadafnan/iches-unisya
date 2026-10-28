@@ -144,3 +144,36 @@ Database tests verify UUIDv7, matching FK types, relationship resolution, normal
 The previous temporary actionlint executable was no longer present; that initial command could not run (its stale shell LASTEXITCODE was not treated as a valid lint PASS). Re-downloaded the official 1.7.12 archive to a unique OS temp directory and verified SHA256 6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9 before successful lint execution. No global tools, other Herd sites or database accounts were changed.
 
 DB integration tests reside outside phpunit.xml's default Feature suite and additionally require process-only ICHES_DB_TESTS=1, exact localhost/port/schema checks, and active foreign-key verification before fixtures. They never migrate/reset the schema themselves. Existing DB-disabled phpunit.xml and GitHub workflow are unchanged. No new GitHub run is claimed: local Windows/PHP 8.4.24/Node 26.4.0 checks PASS; Linux/Node 22 S0-02 CI awaits separate publication. No implementation blocker remains; owner review/publication/merge are separate gates.
+
+## 2026-10-28 — ICH-S0-02 REV-03 — Active-only role assignment uniqueness
+
+Authorization: owner requested the bounded REV-03 integrity correction under existing S0-02 GO. Read origin/main:docs/21K-01-S0-02-INDEPENDENT-REVIEW-REV03.md. Kept branch feat/ich-s0-02-db-foundation at reviewed parent 78bc6d9a904c86b334c28f645d908452295ba26e; no merge/rebase/amend or change to the first migration.
+
+Before any migration: authenticated using the ignored local .env and verified SELECT DATABASE()=iches_unisya, MySQL 9.7.1, foreign_key_checks=1, exactly the original migration recorded, expected scope unique-index columns, and zero rows in users/institutions/events/role_assignments. Only the authorized schema was read; credentials were not printed.
+
+Reproduced the defect before changing schema: newly added revoke/regrant regression test failed at creation of the new grant after revoke, MySQL 1062 from role_assignments_scope_unique (test exit 2). Its synthetic rows were rolled back, confirmed by a second pre-migration target/count guard.
+
+Correction: new forward-only migration 2026_10_28_000002_make_role_assignment_uniqueness_active_only modifies only the existing stored generated institution_scope expression to CASE WHEN revoked_at IS NULL THEN COALESCE(institution_id, '') ELSE NULL END. Retains the existing unique index (user_id,event_id,role_key,institution_scope), existing rows, UUID FKs, numeric assignment key, models and policies. Active event-wide grants use non-NULL empty scope, active institutional grants use institution UUID, and revoked grants use NULL, so only historic rows can repeat the scope. No new column/index or destructive table/reset operation is necessary. down() refuses reversal because restoring the former uniqueness rule can conflict with preserved revoked history; no schema rollback was executed.
+
+Regression covers both NULL institution and specific institution: active duplicate rejection, two revoke/new-grant cycles, distinct retained records, unchanged revocation timestamps, exactly one active row and two revoked rows per scope, duplicate active insert rejection, rejection of reactivating an old row while another grant is active, and cross-user/event/institution denial. Existing uniqueness/FK/UUID/policy/revocation/transaction tests remain intact.
+
+| Actual command/check | Exit | Result |
+|---|---:|---|
+| Read-only PDO/Laravel DB target, original migration/index and row-count preflight | 0 | PASS, authorized schema and expected original state |
+| ICHES_DB_TESTS=1 php artisan test tests/Database --filter=test_regrant_keeps_revocation_history_and_rejects_duplicate_active_scopes (before correction) | 2 expected | RED, reproduced MySQL 1062 at regrant |
+| Pre-migration target/FK/row-count guard after failed regression | 0 | PASS, no persistent fixture rows |
+| php artisan migrate --pretend | 0 | Exactly one ALTER TABLE MODIFY generated-column expression, no reset/drop or DML |
+| php artisan migrate | 0 | New correction applied as batch 2 |
+| php artisan migrate:status | 0 | Original migration Ran batch 1; new correction Ran batch 2 |
+| ICHES_DB_TESTS=1 php artisan test tests/Database --display-warnings | 0 | GREEN, 8 tests / 134 assertions, none skipped |
+| php artisan test --display-warnings | 0 | Existing DB-free smoke 4 tests / 36 assertions |
+| php vendor/bin/pint --test | 0 | PASS |
+| composer validate --strict | 0 | PASS |
+| npm.cmd run typecheck | 0 | PASS |
+| npm.cmd run build | 0 | PASS, Vite 7.3.7 |
+| Final selected-schema generated-column/index/FK/row-count audit | 0 | PASS: nullable STORED GENERATED active-only expression, same four-column unique index, FK checks on, four domain tables empty, migrations=2 |
+| git diff --check and original migration/protected app/CI/governance/dependency audit | 0 | PASS |
+
+Schema mechanism cross-checked against MySQL's official generated-column ALTER documentation: https://dev.mysql.com/doc/refman/8.4/en/alter-table-generated-columns.html ; actual compatibility proved by migration and tests on local MySQL 9.7.1. No other database, production account/data, credentials, runtime application behavior, routes, dependency/lockfile, CI workflow or governance file changed. Previous build-log evidence preserved append-only.
+
+Local Windows/PHP 8.4.24/Node 26.4.0 verification only; corrected feature SHA has no GitHub/Linux/Node22 CI run yet. No remaining local integrity failure. Stop after a new local correction commit, without push, PR, merge, database reset or deployment.

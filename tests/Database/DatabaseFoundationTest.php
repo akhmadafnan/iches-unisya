@@ -136,6 +136,47 @@ class DatabaseFoundationTest extends TestCase
         }
     }
 
+    public function test_regrant_keeps_revocation_history_and_rejects_duplicate_active_scopes(): void
+    {
+        $user = $this->fixtures['user'];
+        $event = $this->fixtures['event'];
+
+        foreach ([null, $this->fixtures['institution']] as $institution) {
+            $first = FoundationFixtures::assign($user, $event, $institution);
+            $firstRevocation = now()->subMinutes(2)->startOfSecond();
+            $first->revoked_at = $firstRevocation;
+            $first->save();
+
+            $second = FoundationFixtures::assign($user, $event, $institution);
+            $this->assertNotSame($first->id, $second->id);
+            $this->assertMysqlConstraintViolation(fn () => FoundationFixtures::assign($user, $event, $institution), 1062);
+
+            $secondRevocation = now()->subMinute()->startOfSecond();
+            $second->revoked_at = $secondRevocation;
+            $second->save();
+            $third = FoundationFixtures::assign($user, $event, $institution);
+
+            $scope = fn () => RoleAssignment::query()->forUser($user)->forEvent($event)
+                ->where('role_key', 'participant')->where('institution_id', $institution?->id);
+            $this->assertSame(3, $scope()->count());
+            $this->assertSame(2, $scope()->whereNotNull('revoked_at')->count());
+            $this->assertSame(1, $scope()->active()->count());
+            $this->assertSame($third->id, $scope()->active()->sole()->id);
+            $this->assertNull($first->fresh()->institution_scope);
+            $this->assertNull($second->fresh()->institution_scope);
+            $this->assertSame($institution?->id ?? '', $third->fresh()->institution_scope);
+            $this->assertSame($firstRevocation->toDateTimeString(), $first->fresh()->revoked_at->toDateTimeString());
+            $this->assertSame($secondRevocation->toDateTimeString(), $second->fresh()->revoked_at->toDateTimeString());
+
+            $this->assertMysqlConstraintViolation(fn () => FoundationFixtures::assign($user, $event, $institution), 1062);
+            $this->assertMysqlConstraintViolation(fn () => DB::table('role_assignments')->where('id', $first->id)->update(['revoked_at' => null]), 1062);
+            $this->assertSame($firstRevocation->toDateTimeString(), $first->fresh()->revoked_at->toDateTimeString());
+            $this->assertFalse(Gate::forUser($user)->allows('view', $this->fixtures['otherEvent']));
+            $this->assertFalse(Gate::forUser($user)->allows('view', [$this->fixtures['otherInstitution'], $event]));
+            $this->assertFalse(Gate::forUser($this->fixtures['otherUser'])->allows('view', $event));
+        }
+    }
+
     public function test_policies_isolate_users_events_institutions_and_revoked_memberships(): void
     {
         ['user' => $user, 'otherUser' => $otherUser, 'event' => $event, 'otherEvent' => $otherEvent, 'institution' => $institution, 'otherInstitution' => $otherInstitution] = $this->fixtures;
