@@ -1,6 +1,6 @@
 # 21A — Governance PR #1 Review and Approval Gate
 
-**28 October 2026 · AUDITED / PENDING OWNER MERGE DECISION · NO GO CODING.**
+**28 October 2026 · OWNER-APPROVED & MERGED (PR #1).** GitHub merge commit `275cfbfd0e431033eb05d2c519eda19282465962`; no GO CODING.
 
 ## Verified findings
 
@@ -23,9 +23,9 @@
 
 - [x] Documentation-only diff and relative link audit; no source modification.
 - [x] Decisions and first task scope reconciled.
-- [ ] Owner explicitly authorizes **`MERGE PR #1`**; check fresh diff and mergeability again before merge.
-- [ ] After merge, safely sync local `main`, freeze actual base SHA in 21B, and mark `ICH-S0-01` READY.
+- [x] Owner explicitly authorized **`MERGE PR #1`**; fresh diff/mergeability rechecked and GitHub completed merge successfully.
+- [x] Local `main` synced to governance merge SHA, worktree clean. [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) records approved merge anchor and is **READY_FOR_OWNER_GO**. Codex will capture actual clean main branch-point SHA on named GO.
 - [ ] Owner separately issues **`GO CODING ICH-S0-01`**. Codex changes code ONLY then on feature branch.
 - [ ] Future DB/schema tasks `ICH-S0-02` require verified isolated test DB; cannot be automatically authorized with first task.
 
-**No merge, release, deployment, database mutation or coding authorization is contained in this document.**
+**Governance merge now complete**, but this document still provides **NO coding, release, deployment or database authorization**. Such actions need separate explicit GO.

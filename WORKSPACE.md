@@ -6,6 +6,11 @@
 
 > **Mulai di sini.** Repository ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Setelah GO Task ID atau bounded Sprint GO eksplisit, Codex VS Code mengubah kode serta mencatat evidence terbatas; ChatGPT mengelola keputusan, spesifikasi, dokumentasi, review, dan GitHub.
 
+## Governance PR merged — first task ready, NO GO CODING
+
+- PR #1 merged after explicit owner authorization: approved governance SHA `275cfbfd0e431033eb05d2c519eda19282465962`. Local folder `D:\PINJAM-AFNAN\Herd\iches-unisya` has synced `main`, Git clean.
+- [21B first Task Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) now **READY_FOR_OWNER_GO** for DB-independent Laravel 13/Inertia/Vue3/TS/Tailwind4. Owner must separately say `GO CODING ICH-S0-01` to permit Codex coding; no Sprint/DB/auth authorization implied.
+
 ## Stage 21 — current next action
 
 - [21A audit / merge gate](docs/21A-PR1-GOVERNANCE-REVIEW.md): docs-only PR reviewed, 263 local Markdown links checked, zero broken. **No owner merge approval yet**.

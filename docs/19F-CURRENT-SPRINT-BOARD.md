@@ -87,8 +87,16 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Next one action:** owner reviews and authorizes governance PR merge. **No GO Coding, no merge, no DB writes.**
 
 
+## 21A — PR #1 MERGED; ICH-S0-01 ready for owner GO (28 Oct 2026)
+
+- **Owner explicitly authorized** `MERGE PR #1`, no application coding GO.
+- GitHub recheck: 27 Markdown/Skills changes, zero app source, clean mergeability. Merge completed successfully to `main` at **`275cfbfd0e431033eb05d2c519eda19282465962`**. [Merged PR](https://github.com/akhmadafnan/iches-unisya/pull/1).
+- Local repo `D:\PINJAM-AFNAN\Herd\iches-unisya` switched from docs branch to **`main`**, fast-forward synchronized to merge SHA and Git working tree clean; docs branch retained.
+- [21B Task Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) is **READY_FOR_OWNER_GO** for **DB-INDEPENDENT ICH-S0-01 only**, with approved governance merge baseline recorded. **No GO Coding has been issued**, feature branch not created, no app install/build/DB work occurred.
+- **Next action:** owner sends `GO CODING ICH-S0-01` if ready. Codex checks latest clean `origin/main` SHA, approved merge ancestry and exact Work Order before any code modifications. S0-02 test DB gate remains separate.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: Stage 21A governance PR owner merge decision** then separate `ICH-S0-01` first-task GO only after a ready 21B Work Order. Test DB remains G0 blocked for **ICH-S0-02 migrations**, not for S0-01. **NO_GO CODING.**
+**NOW: ICH-S0-01 READY_FOR_OWNER_GO** on merged governance `main`. Only explicit owner **`GO CODING ICH-S0-01`** permits Codex app source work. S0-02 test DB remains separately blocked. **NO_GO CODING so far.**
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -97,7 +105,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** DB-free Laravel/Vue Foundation | **WORK_ORDER_PREPARED / NO_GO** | [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md); current Herd repo verified, isolated from DB | Owner approves PR #1 merge; freeze main SHA; separate named Task GO |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **READY_FOR_OWNER_GO / NO_GO** | PR #1 merged to main, local synced; [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) records merge anchor | Explicit owner GO CODING ICH-S0-01; Codex verifies current main SHA |
 
 **Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
 

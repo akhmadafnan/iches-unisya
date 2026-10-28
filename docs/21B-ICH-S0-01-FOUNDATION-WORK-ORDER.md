@@ -1,6 +1,6 @@
 # 21B — ICH-S0-01 Laravel 13 Foundation: Codex VS Code Work Order
 
-> **PREPARED / NOT EXECUTABLE.** Separate owner message **GO CODING ICH-S0-01** required *after* governance PR #1 is approved/merged and current `main` SHA frozen. This is **ONE Task ID**, not `ICH-SPRINT-01`, `ICH-S0-02`, or authorization for other modules.
+> **READY_FOR_OWNER_GO — NO GO CODING ISSUED.** Governance PR #1 was owner-authorized and merged into `main` on 28 Oct 2026, merge SHA `275cfbfd0e431033eb05d2c519eda19282465962`. Local `main` synced and clean. Owner must still separately issue **`GO CODING ICH-S0-01`** before Codex changes any source; **ONE Task ID only**, not the full Sprint 01.
 
 ## 1. Scope, branch and ownership
 
@@ -12,7 +12,7 @@
 | Correct Windows folder | `D:\PINJAM-AFNAN\Herd\iches-unisya` |
 | Test URL | `http://iches-unisya.test/` (currently 404; no Laravel source yet) |
 | PHP / tooling | PHP **8.4.24**, Composer **2.10.1**, Node **26.4.0**, npm.cmd **11.17.0**, Herd **1.29.0** |
-| Coding base | `main` **AFTER governance PR #1 merge**; base SHA **NOT YET FROZEN** |
+| Approved governance base | `main`, **PR #1 merge commit `275cfbfd0e431033eb05d2c519eda19282465962`** (immutable reference). Actual coding feature branch starts from latest clean `origin/main` once explicit GO is received; report exact branch-point SHA and STOP if main diverged unexpectedly |
 | Feature branch | `feat/ich-s0-01-foundation`, only after named GO |
 | Builder | **Codex VS Code**, code-only; ChatGPT owns docs, GitHub review and board |
 | Data / DB | **No database dependency, credentials, SQL, migrations, seed or auth** in this task |
@@ -20,7 +20,7 @@
 
 ## 2. Mandatory preflight after GO
 
-1. Verify absolute folder is the Herd path above, correct remote, clean Git state, **approved `main` HEAD** and explicit owner message `GO CODING ICH-S0-01`. **STOP** if any mismatch.
+1. Verify absolute folder is the Herd path above, correct remote, clean Git state, original approved governance merge SHA `275cfbfd0e431033eb05d2c519eda19282465962` in `main` ancestry, capture actual current `main` branch-point SHA, and explicit owner message `GO CODING ICH-S0-01`. **STOP** if any mismatch/unreviewed remote changes.
 2. Read `AGENTS.md`, `WORKSPACE.md`, `PLANS.md`, current `docs/19F-CURRENT-SPRINT-BOARD.md`, this 21B order and approved RD-01..06 at `docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md`. Consult 18C-05 and 18C-05A reuse audit selectively.
 3. Read skills `iches-codex-engineering` and `iches-code-verification`; no need to execute CMS/Admin Skills for this scaffold.
 4. Only after preflight, create `feat/ich-s0-01-foundation` **from clean, approved `main`**, not from the old documentation branch.
@@ -65,7 +65,7 @@ Report **Task ID, GO evidence, base SHA, feature branch, changed code files, ins
 ## Short prompt to paste into Codex — ONLY AFTER NAMED GO
 
 ```text
-ICHES GO CODING ICH-S0-01: First verify the owner issued this exact GO, governance PR #1 has been merged, and the main base SHA is frozen in docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md. Work ONLY in D:\PINJAM-AFNAN\Herd\iches-unisya. Read and obey that full 21B Work Order, AGENTS.md, current board, and engineering + verification Skills. From clean approved main create feat/ich-s0-01-foundation, bootstrap DB-independent Laravel 13/Inertia/Vue 3/TS/Tailwind4/Vite, and prove the Herd URL returns HTTP 200. Do not modify docs/governance or use password auth, migrations, real DB credentials, old payment logic or other sites. Report real exit codes, branch, code diff, sanitized evidence, failures. No auto-merge or deploy; STOP if blocked.
+ICHES GO CODING ICH-S0-01: First verify the owner issued this exact GO, PR #1 merge SHA 275cfbfd0e431033eb05d2c519eda19282465962 is in current main ancestry, capture exact current main branch-point SHA and verify clean remote. Work ONLY in D:\PINJAM-AFNAN\Herd\iches-unisya. Read and obey that full 21B Work Order, AGENTS.md, current board, and engineering + verification Skills. From clean approved main create feat/ich-s0-01-foundation, bootstrap DB-independent Laravel 13/Inertia/Vue 3/TS/Tailwind4/Vite, and prove the Herd URL returns HTTP 200. Do not modify docs/governance or use password auth, migrations, real DB credentials, old payment logic or other sites. Report real exit codes, branch, code diff, sanitized evidence, failures. No auto-merge or deploy; STOP if blocked.
 ```
 
-**Status remains PREPARED/NO_GO until PR merge + baseline SHA + explicit owner GO.** This first DB-free task does not imply Sprint 01 or database readiness.
+**Status: READY_FOR_OWNER_GO / NO_GO until explicit `GO CODING ICH-S0-01`.** PR #1 was merged. Use actual verified latest main SHA as Codex branch-point on GO; governance merge anchor is recorded above. No authority for other tasks or DB migrations.

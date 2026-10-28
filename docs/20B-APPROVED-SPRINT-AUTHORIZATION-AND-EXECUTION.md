@@ -62,7 +62,7 @@ Do not load all Skills on every task. Admin uses **shadcn-vue + Tailwind CSS 4 +
 
 ## 6. Still blocked before first GO
 
-- [ ] Draft PR #1 reviewed and merged to the working branch.
+- [x] Draft PR #1 reviewed and owner-approved, merged to `main` (governance merge SHA `275cfbfd0e431033eb05d2c519eda19282465962`), local `main` synced clean.
 - [x] Owner approved RD-01–RD-06 in 20D / Decision Register 09, including passwordless participant login.
 - [x] Codex Skills readable, PHP/Composer/Node/Git/Herd verified locally.
 - [ ] Isolated authenticated test DB remains a gate for schema/migrations `ICH-S0-02`, **not** for DB-free `ICH-S0-01`.

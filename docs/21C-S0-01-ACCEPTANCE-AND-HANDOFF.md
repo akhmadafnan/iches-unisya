@@ -4,8 +4,8 @@
 
 ## Sequence
 
-1. Owner separately authorizes **`MERGE PR #1`** only after [21A review](21A-PR1-GOVERNANCE-REVIEW.md); ChatGPT rechecks GitHub mergeability and diff, merges, syncs local main.
-2. ChatGPT freezes post-merge `main` SHA in [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md). A separate message **`GO CODING ICH-S0-01`** is required.
+1. **COMPLETED:** owner authorized `MERGE PR #1`; ChatGPT checked final diff/mergeability, GitHub merged at `275cfbfd0e431033eb05d2c519eda19282465962`, and local `main` synced clean.
+2. [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) now records approved governance merge SHA. Codex will confirm exact current `main` HEAD and branch-point SHA at start. A separate owner message **`GO CODING ICH-S0-01`** remains required.
 3. Codex works code-only on `feat/ich-s0-01-foundation`, within Herd repo, without DB/schema/auth.
 4. Codex builds/runs/verifies and sends exact command outputs + sanitized evidence.
 5. ChatGPT reviews diff and quality; owner separately authorizes implementation PR merge, never automatic.
