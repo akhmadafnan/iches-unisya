@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I — ICH-S0-01 MERGED and next bounded Work Order (CURRENT)
+
+- [PR #4](https://github.com/akhmadafnan/iches-unisya/pull/4) merged with explicit owner approval: accepted feature commit `8eba7cb5b9da0577910beb919844165869591e05`, merge `561baf322d459d898f5f96d280f5a5f02634c59f`. **No GitHub Actions CI yet**; local audit 21E PASS.
+- [21I-01 postmerge execution path](docs/21I-01-ICH-S0-01-MERGE-AND-48H-NEXT-PATH.md); [21I-02 task packet](docs/21I-02-ICH-S0-07-CI-WORK-ORDER.md) `READY_FOR_OWNER_GO / NO_GO`. S0-02 isolated MySQL test database not verified; other code tasks, migrations and deployment not authorized.
+- `main` remote advanced; local feature branch must be preserved. Next authorized Codex task must inspect and fast-forward local `main` safely before creating a **new** feature branch. 21H Skills [PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) still separate/unmerged.
+
 ## 21G-06 — ACTUAL CODEX READ-ONLY REPORT VALIDATED (current)
 
 - [21G-06 review](docs/21G-06-CODEX-READONLY-VALIDATION-REVIEW.md): explicit Codex reading 5/5 PASS; five routing simulations and three permission-denial simulations PASS; ICHES native precedence upheld. Reviewer independently rechecked detached QA HEAD `80b888e`, clean staged/unstaged diff, five valid Skill names and untouched Laravel feature HEAD `8eba7cb`.

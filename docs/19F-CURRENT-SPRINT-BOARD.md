@@ -152,8 +152,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Next parallel documentation task:** `21H` selective, read-only evaluation of Taste Skill + Anti-Slop Design + Vercel UI Guidelines; no install/coding without separate scope. Operational app blocker remains GitHub local HTTPS authentication for accepted ICH-S0-01 push/PR.
 
 
+## 21I — Foundation PR #4 merged / next 48h gates (28 October 2026)
+
+- **Owner authorized and GitHub confirmed MERGE PR #4** with exact feature head `8eba7cb5b9da0577910beb919844165869591e05`; merge SHA `561baf322d459d898f5f96d280f5a5f02634c59f`. Exactly 55 reviewed changed files, no conflict, **no CI runs configured**. This overrides older historical `PENDING` status.
+- [21I-01 post-merge critical path](21I-01-ICH-S0-01-MERGE-AND-48H-NEXT-PATH.md) and [21I-02 CI Work Order](21I-02-ICH-S0-07-CI-WORK-ORDER.md). **`ICH-S0-07` is READY_FOR_OWNER_GO, NOT_AUTHORIZED**; DB test gate `ICH-S0-02` remains blocked/unverified.
+- [PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) design Skills stays open/unmerged, separate approval. No deployment, schema/auth/CMS code task or additional PR merge authorized.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
+**NOW: ICH-S0-01 MERGED / COMPLETE; NEXT: ICH-S0-07 READY_FOR_OWNER_GO / NOT AUTHORIZED.** PR #4 contains the accepted DB-free foundation. MySQL test DB for S0-02 still unverified; no new coding/merge/deploy GO.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -162,9 +168,9 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** DB-free Laravel/Vue Foundation | **OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED** | Review PASS + owner's explicit ACCEPT, local commit `8eba7cb`; [21F](21F-ICH-S0-01-OWNER-ACCEPT-PUSH-PR-HANDOFF.md) | Codex push feature branch and open PR; separate merge authorization later |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **MERGED / COMPLETE** | [PR #4](https://github.com/akhmadafnan/iches-unisya/pull/4), accepted `8eba7cb5` merged at `561baf322d`; local audit 21E PASS, CI not configured | Preserve source; next task needs named GO |
 
-**Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
+**Override terbaru (21I):** `ICH-S0-01` sudah independen PASS dan MERGED/COMPLETE; catatan NO_GO/PENDING sebelumnya adalah snapshot historis.
 
 ## NEXT — antrean, bukan izin mengerjakan
 1. **ICH-S0-01** bootable foundation + actual test evidence; setelah mendapat GO sendiri.
