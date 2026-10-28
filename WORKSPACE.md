@@ -37,6 +37,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
+## Herd Free + phpMyAdmin preferred workflow
+
+- [20E-02 Herd Free + phpMyAdmin](docs/20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md) is now the default: `http://iches-unisya.test/` linked to repo via Herd Free, PHP 8.4; `https://phpmyadmin.test/index.php` HTTP 200. Project currently docs-only so returns 404 until GO Coding.
+- Test-only DB/user **not created or authenticated**; use the phpMyAdmin GUI, not a temporary CLI administrator login-path unless separately requested. No GO Coding.
+
 ## 20E temporary administrator login required
 
 - User approved provisioning isolated `iches_unisya_test` + `iches_test` only; **admin login blocked (MySQL 1045)** in two read-only checks, no DDL executed.

@@ -2,6 +2,10 @@
 
 > **28 October 2026 · G0 PARTIAL · READ-ONLY PRE-FLIGHT COMPLETED · NO GO CODING.** This is the database readiness runbook for the owner's approved ICHES Laravel 13 / PHP 8.4 / MySQL/InnoDB / UUIDv7 baseline (RD-01–RD-06, [Decision Register](09-KEPUTUSAN-DAN-ISU-TERBUKA.md)). **Never treat TCP availability as authenticated test database readiness.**
 
+## Owner clarification: Herd Free + phpMyAdmin is the DEFAULT
+
+Use [20E-02 Herd Free / phpMyAdmin workflow](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md), not CLI administrator login-path, for local database provisioning. phpMyAdmin returns HTTP 200 at `https://phpmyadmin.test/index.php`, but authentication remains unverified. Herd has linked `http://iches-unisya.test/` to the canonical repo; current HTTP 404 is expected until app scaffold is authorized. G0-DB-02/03 still blocked.
+
 ## 1. Verified directly on user-selected Windows desktop
 
 | Probe | Actual evidence | State |

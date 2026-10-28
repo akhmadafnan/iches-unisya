@@ -63,6 +63,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 
 **Next action:** the owner must type administrator password locally once into a **temporary MySQL login path**, without posting it into ChatGPT or Codex. Full instructions: [20E-01 Privileged Login Setup](20E-01-TEMPORARY-MYSQL-ADMIN-LOGIN.md). After owner reports setup complete, ChatGPT can test admin account and provision only authorized test DB/user. Remove temporary administrator login path once done. **No GO Coding or PR merge.**
 
+## 20E-02 — Owner Herd Free/phpMyAdmin local environment CONFIRMED
+
+- Owner clarified database management via phpMyAdmin in `D:\PINJAM-AFNAN\Herd\phpMyAdmin`; `https://phpmyadmin.test/index.php` HTTP **200** on 127.0.0.1; authenticated session not verified.
+- **Herd Free 1.29.0** used: `herd link iches-unisya` SUCCESS; `herd links` lists `http://iches-unisya.test` mapped to the exact GitHub checkout folder, **PHP 8.4**. Existing other link unchanged.
+- `http://iches-unisya.test/` HTTP **404** because repo is **docs-only** (`public/` and `artisan` absent); site registration is verified, not app readiness.
+- [20E-02 GUI workflow](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md) supersedes temporary CLI login prompt as default. Owner still needs to create **only** `iches_unisya_test` and `iches_test` via normal authenticated phpMyAdmin GUI (unless collision); **not created yet**.
+- G0-DB-02/03 **BLOCKED**; PR #1 still Draft, **NO_GO Coding**.
+
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-PRE-03 G0 isolated test DB (20E)**. PRE-02 RD-01..06 FINAL, Codex Skills READABLE PASS, MySQL server/CLI PASS, **test DB authentication/permissions BLOCKED**. Next: owner-authorized **test-only** database/user setup; then authenticated read-only checks. Draft PR review/merge, Sprint readiness and named GO are still separate. **NO_GO CODING.**
 

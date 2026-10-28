@@ -63,6 +63,10 @@ Decision Register NEW-003 approved participant **Email OTP/Magic Link without pa
 
 [20E Test DB Runbook](20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): native MySQL CLI version 9.7.1 located by full path; server Running and loopback reachable. **No authenticated test account/schema, SQL grants, InnoDB/FK or migration/rollback verification**. Do **not** treat this as READY; test-only provisioning requires separate approval and must avoid production data.
 
+## Herd Free local serving is configured (20E-02)
+
+Herd Free linked `D:\PINJAM-AFNAN\iches-unisya` → `http://iches-unisya.test/` (PHP 8.4); phpMyAdmin available at `https://phpmyadmin.test/index.php` via user's normal GUI. Current HTTP 404 is expected until Codex creates Laravel `public/index.php` **after Sprint GO**. Do not run `php artisan serve`, create another source directory under Herd, or require Herd Pro. Test DB remains NOT_AUTHENTICATED/NO_GO. See [20E-02](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md).
+
 ## READY blockers (all must be cleared)
 - [ ] [Governance PR #1](https://github.com/akhmadafnan/iches-unisya/pull/1) owner-reviewed/merged, local clone synced.
 - [x] RD-01 canonical repo and selective legacy reuse approved (20D).

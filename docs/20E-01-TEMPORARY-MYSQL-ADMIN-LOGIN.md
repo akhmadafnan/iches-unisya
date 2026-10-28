@@ -2,6 +2,8 @@
 
 > 28 October 2026 · BLOCKED: administrator credentials required. **The owner has explicitly authorized creation of only** `iches_unisya_test` and `iches_test` **on the local MySQL server.** This step does not authorize accessing, altering or enumerating any other database. No application coding GO.
 
+> **OPTIONAL FALLBACK ONLY:** superseded as the default by [20E-02 Herd Free + phpMyAdmin](20E-02-HERD-FREE-PHPMYADMIN-WORKFLOW.md). The owner normally administers MySQL via phpMyAdmin. **Do not require `mysql_config_editor` or temporary admin login-path** if phpMyAdmin works. This historical CLI procedure may be used only if explicitly requested.
+
 ## Why this one local action is needed
 
 - MySQL Server **9.7.1** runs at `127.0.0.1:3306`. Installed client: `C:\Program Files\MySQL\MySQL Server 9.7\bin\mysql.exe`.
