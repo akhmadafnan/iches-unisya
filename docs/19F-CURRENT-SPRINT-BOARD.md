@@ -31,7 +31,7 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 | **ICH-PRE-01** Audit blueprint dan repo lama | **REVIEWED_DOCS** | 18C-05A & 19A–D tersedia; tes runtime legacy belum diulang | Revalidate reuse per task, ChatGPT |
 | **Workspace governance 19E/19F** | **DRAFT_REVIEW** | Dokumentasi operasi dan papan kerja diajukan di branch docs | Owner review; ChatGPT perbaiki bila perlu |
 | **ICH-PRE-02** Keputusan teknis awal | **BLOCKED_DECISION** | Repo canonical, MySQL, UUIDv7, PHP target, auth belum diberikan persetujuan final eksplisit | Owner approves/revises recommended bundle, ChatGPT update register |
-| **ICH-PRE-03** Environment VS Code/Codex + toolchain | **PARTIAL_VERIFIED** | Git/PHP/Composer/Node/npm, repo clone, chosen VS Code open, Codex extension installed; sign-in and test DB still unverified | Verify in-app Codex and isolated test DB |
+| **ICH-PRE-03** Environment VS Code/Codex + toolchain | **PARTIAL_VERIFIED** | Git/PHP/Composer/Node/npm, repo clone, chosen VS Code open, Codex extension installed; MySQL97 service Running. Sign-in and disposable test DB unverified | Verify in-app Codex and isolated test DB |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
 | **ICH-S0-01** Laravel/Vue Foundation | **PLANNED / BLOCKED** | Work Order draf di 19C; target masih docs-only | Buka Task ID hanya setelah gate; Codex code-only |
 

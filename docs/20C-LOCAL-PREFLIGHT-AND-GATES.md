@@ -15,7 +15,7 @@
 | Node.js | `v26.4.0` | PASS (CLI detected); project compatibility NOT TESTED |
 | npm | `11.17.0` via `npm.cmd --version` | PASS via .cmd; `npm --version` failed through PowerShell invocation |
 | PHP extensions | `pdo_mysql`, `mysqli`, `openssl`, `mbstring`, `fileinfo`, `intl` detected | PASS (module presence only) |
-| MySQL CLI | `mysql` not found in PATH | NOT_VERIFIED, not proof server unavailable |
+| MySQL service | Windows service `MySQL97` **Running** (and `HerdHelper` Running); neither `mysql` nor `mariadb` CLI in PATH. No DB connection or disposable test DB checked | SERVICE VERIFIED; TEST_DB NOT_VERIFIED |
 | **Owner's VS Code installation** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (v1.143.1) opened workspace, visible window `Welcome - iches-unisya` | GUI VERIFIED; Codex sign-in NOT TESTED |
 | VS Code extensions / Codex | On **other** VS Code installation `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (1.128.0), `openai.chatgpt` and `openai.codex-audio` were listed. Owner's **space-path** installation has `bin\new_code.cmd`, but that wrapper references missing `Code.exe`; its extension list was **not verified** | OWNER INSTALL EXTENSIONS/SIGN-IN **NOT_VERIFIED** |
 | Local `iches-unisya` clone | `D:\PINJAM-AFNAN\iches-unisya` cloned from GitHub; docs branch tracking origin; clean, four skills | VERIFIED / READY FOR DOC REVIEW |
@@ -33,7 +33,8 @@
 - [x] Open ICHES project using owner-selected VS Code and detect Codex extension in Windows user profile.
 - [ ] Verify Codex signed-in/activated in UI and Skills recognized (NOT verified by installation alone).
 - [x] Authorized clone into owner-selected `D:\PINJAM-AFNAN\iches-unisya`; checked remote, branch, clean worktree, AGENTS, PLANS, four Skills.
-- [ ] Determine MySQL server/test DB availability; ensure a disposable isolated DB (not production) can be used.
+- [x] Windows service `MySQL97` detected **Running** (read-only); no client CLI in PATH.
+- [ ] Confirm MySQL server connection/engine compatibility and a disposable isolated test DB (not production) before schema work.
 - [ ] Approve RD-01 canonical target; RD-02 PHP/Node version range; RD-03 DB engine/version; RD-04 UUIDv7; RD-05 roles/scoping; RD-06 auth baseline in Decision Register.
 - [ ] Verify composer/npm install/build/test scripts **only after coding authorization**. Never mark tests PASS based on available CLI versions.
 - [ ] Confirm shadcn-vue Lyra-compatible preset/tokens before changing UI dependencies (not needed to preflight G0).
