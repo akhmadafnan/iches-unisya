@@ -19,19 +19,19 @@ One Task GO or finite named Sprint GO can authorize Codex code changes; append-o
 |---|---|---|
 | Owner | Memutuskan, memberi GO per Task ID, menerima output & merge | Persetujuan menyusun rencana dianggap GO coding otomatis |
 | ChatGPT | Audit repo/PR, merancang work order, menulis dokumen, update board dan keputusan | Mengedit source aplikasi yang telah dialokasikan ke Codex |
-| Codex VS Code | Setelah GO: kode Laravel/Vue, migration/test, build dan lint yang in-scope pada branch fitur | Menulis `README.md`, `docs/**`, `AGENTS.md`, `.agents/skills/**`, secrets/data nyata, mengerjakan task lain |
+| Codex VS Code | Setelah named Task/Sprint GO: kode Laravel/Vue, migration/test, build/lint dan append-only sanitized execution evidence | Mengubah `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `AGENTS.md`, `.agents/skills/**`, secrets/data nyata, atau tugas di luar izin |
 | GitHub | Versi resmi blueprint, branch, PR, diff, hasil review | "Green" tanpa evidence tes aktual |
 | Terminal | Inspeksi dan test yang diberi izin | Production migration, dump data, deploy tanpa otorisasi terpisah |
 
 ## 3. Start-of-session protocol
 1. **ChatGPT:** periksa `main` terbaru, `WORKSPACE.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, lalu task/keputusan yang relevan. Jangan me-replan 19A–19D bila tidak ada perubahan requirement.
-2. **Owner sebelum Codex:** pastikan remote repo target, `git status --short` bersih/masalah diketahui, branch bukan `main`, dan Work Order berisi `AUTHORIZATION: GO` yang diberikan secara eksplisit oleh owner untuk **ID tugas yang sama**.
+2. **Owner sebelum Codex:** pastikan remote repo target, `git status --short` bersih/masalah diketahui, branch bukan `main`, dan Work Order berisi owner GO eksplisit untuk **Task ID atau Sprint ID dengan daftar Task IDs terbatas yang mencakup tugas aktif**.
 3. **Codex:** baca `AGENTS.md`, `.agents/skills/iches-codex-engineering/SKILL.md`, satu Work Order dan **maksimal 2–4** sumber domain. Frontend/CMS wajib baca skill khusus. Baca source nyata sebelum edit.
 4. **Codex:** tuliskan scope in/out, file yang benar-benar akan disentuh, dan test plan. Bila ambigu → `BLOCKED_DECISION`, jangan mengarang.
 5. **Finish:** Codex mengembalikan ID, branch, commit/PR, changed paths, implemented/not implemented, exact test command + status, evidence screenshot bila UI, risiko. ChatGPT menilai spec/security; owner mengizinkan merge atau revisi.
 
 ## 4. Stop conditions (anti-scope-creep)
-**STOP dan minta keputusan** bila: GO task belum ada; repository/branch tidak cocok; kerja tidak terkait work order; konflik dengan Register keputusan; DB/PK/hosting belum disetujui untuk migration; kode memakai verifikasi pembayaran lama berbasis screenshot; ada permintaan perubahan dokumen oleh Codex; butuh akses rahasia/akun produksi; perubahan memerlukan penghapusan data nyata; test penting gagal dan agent hendak mengklaim PASS.
+**STOP dan minta keputusan** bila: GO Task/Sprint yang mencakup pekerjaan aktif belum ada; repository/branch tidak cocok; kerja tidak terkait work order; konflik dengan Register keputusan; DB/PK/hosting belum disetujui untuk migration; kode memakai verifikasi pembayaran lama berbasis screenshot; ada permintaan perubahan dokumen oleh Codex; butuh akses rahasia/akun produksi; perubahan memerlukan penghapusan data nyata; test penting gagal dan agent hendak mengklaim PASS.
 
 **Batas perubahan:** satu PR menjawab satu tujuan bisnis. Perbaikan adjacent ditempatkan dalam queue/issue, bukan diselipkan diam-diam. Jika test gagal, Codex memperbaiki hanya kegagalan yang disebabkan task-nya, atau lapor blocker terpisah.
 
@@ -41,7 +41,7 @@ One Task GO or finite named Sprint GO can authorize Codex code changes; append-o
 - [ ] Accept criteria meliputi hasil nyata + minimal satu negative/security case.
 - [ ] Sumber keputusan valid dan tidak bertentangan; data fixture bukan data asli.
 - [ ] Git branch, toolchain dan test environment layak atau blocker tercatat.
-- [ ] Ada GO CODING eksplisit untuk **task ini**. Jika belum, status tidak boleh `IN_CODEX`.
+- [ ] Ada GO CODING untuk Task ID ini atau GO SPRINT dengan daftar terbatas mencakup Task ID. Jika belum, status tidak boleh `IN_CODEX`.
 
 ## 6. Definition of Done (bukan sekadar 'sudah coding')
 - [ ] Diff sesuai scope; tidak ada perubahan dokumen atau secrets oleh Codex.

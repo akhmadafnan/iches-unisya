@@ -12,7 +12,7 @@ Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task 
 
 **Saat belum GO:** cukup simpan dokumen ini di GitHub dan, bila ingin, lakukan inspeksi lingkungan via terminal read-only. **Tidak ada instruksi kepada Codex untuk membangun sesuatu.**
 
-**Setelah GO pada task tertentu:**
+**Setelah GO Task ID atau named Sprint GO yang secara eksplisit mencantumkan tugas:**
 1. Buka VS Code pada **local clone `akhmadafnan/iches-unisya`**, **bukan folder repo lama**. Pastikan remote, branch, clean worktree. Dokumen dan AI Skills berada pada repo ini.
 2. Buka ekstensi **Codex** di VS Code. AI membaca root `AGENTS.md` dan skill yang diminta. Jangan hanya paste ribuan halaman konteks; cukup Work Order berisi **Task ID** + referensi.
 3. Berikan satu Work Order **spesifik**. Codex memeriksa source dan branch, mengedit **kode saja**, menambahkan/memperbaiki tes yang terkait, menjalankan perintah yang benar-benar tersedia.
@@ -72,7 +72,7 @@ OUTPUT BACK TO CHATGPT:
 - Diff summary and why
 - Tests actually run, pass/fail, environment limitations
 - Known risks/open decisions and screenshots for UI
-- Do not modify governance/spec documents; ChatGPT updates them
+- Do not modify governance/spec documents; only append to authorized harness/build-log.md and sanitized evidence under named GO; ChatGPT updates policies
 STOP CONDITIONS:
 - Invalid repo/branch/dirty unrelated changes
 - Need undecided schema/finance policy/credentials

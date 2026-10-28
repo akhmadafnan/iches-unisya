@@ -1,6 +1,6 @@
 # ICHES 2027 — AI Agent Workspace
 
-> **Mulai di sini.** Repository ini adalah satu ruang kerja ICHES UNISYA; saat ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Codex VS Code hanya untuk perubahan **CODE setelah GO eksplisit per tugas**; ChatGPT menangani keputusan, spesifikasi, docs, review, dan tata kelola GitHub.
+> **Mulai di sini.** Repository ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Setelah GO Task ID atau bounded Sprint GO eksplisit, Codex VS Code mengubah kode serta mencatat evidence terbatas; ChatGPT mengelola keputusan, spesifikasi, dokumentasi, review, dan GitHub.
 
 ## One Master Plan (DRAFT — no GO)
 
@@ -28,7 +28,7 @@
 ## Prosedur singkat
 **Sebelum GO:** owner dan ChatGPT menutup decision gate, menguji kesiapan lingkungan secara read-only, dan mengisi satu work order. **Jangan menjalankan coding hanya dari roadmap**.
 
-**Setelah GO satu task:** owner membuka repo target di VS Code → Codex membaca `AGENTS.md`, board, work order dan paling banyak 2–4 blueprint relevan → kerja di `feat/...` (bukan `main`) → jalankan test yang tersedia → laporkan diff/test/blocker → ChatGPT review → owner putuskan merge. **Berhenti** bila muncul keputusan yang belum disetujui, data/secrets nyata, atau scope melebar.
+**Setelah named GO Task/Sprint:** owner membuka repo target di VS Code → Codex membaca `AGENTS.md`, board, work order dan 2–4 blueprint relevan per task → kerja di `feat/...` (bukan `main`) → tes dan append-only log → lanjut hanya ke task sprint yang tercantum dan lulus gate → ChatGPT review → owner putuskan merge. **Berhenti** bila muncul keputusan yang belum disetujui, data/secrets nyata, atau scope melebar.
 
 **Prioritas paling dekat:** foundation minimal → website publik + CMS + countdown → Abstract Text+PDF. Modul lain tetap ada di backlog, tetapi **tidak boleh ditarik ke task aktif hanya agar terlihat 'selesai'**.
 
@@ -40,4 +40,4 @@
 - Scope menulis code: **Codex VS Code** setelah GO; perubahan dokumen: **ChatGPT**.
 - Branch docs ini adalah usulan tata kelola; **tidak memberikan GO CODING**.
 
-> Saat memulai obrolan baru: minta ChatGPT membaca `WORKSPACE.md` + `19F board`; saat memulai Codex: berikan **satu work order yang sudah diberi GO**, bukan semua spesifikasi.
+> Saat chat baru: baca `WORKSPACE.md` + 19F; saat Codex: berikan **work order Task/Sprint bernama yang sudah mendapat GO aktual**, bukan semua blueprint.
