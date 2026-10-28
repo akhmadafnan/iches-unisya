@@ -43,14 +43,20 @@ Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code
 **Next active gate:** [20D PRE-02 Technical Decision Packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) owner approval, then isolated test DB and final Sprint 01 readiness. **NO GO CODING.**
 
 
+## 20D — RD-01–RD-06 FINAL (28 October 2026)
+
+**Owner explicitly approved:** “Setuju paket 20D”. Technical decision register [09](09-KEPUTUSAN-DAN-ISU-TERBUKA.md) updated for **RD-01..06**; participant **OTP/Magic Link without password** retained. [20D packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) now marked approved. **ICH-PRE-02 decision bundle COMPLETE**; no need to ask those six choices again.
+
+**Database preflight, nonwriting:** Windows `MySQL97` Running; TCP `127.0.0.1:3306` handshake protocol `10`, server version **9.7.1**, **no login/SQL/schema action**. Still **BLOCKED_G0**: authenticate isolated *test* database and verify InnoDB/FKs/migration permissions before any database task. Governance PR #1 still Draft and unmerged; Sprint Work Order still **NO_GO**. **Next one action:** verify safe isolated test DB environment, then review/merge documentation PR through separate approval.
+
 ## NOW — satu prioritas yang boleh aktif
-**ICH-PRE-02** — Owner review consolidated [20D technical packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md); PRE-03 Codex Skills read-only handshake PASSED. Test DB G0 still open. **Belum GO untuk task/sprint mana pun.**
+**ICH-PRE-02 COMPLETE** (RD-01..06 approved in 20D); **ICH-PRE-03 Skills PASS**. Remaining: G0 isolated test DB, review/merge docs PR, ready Sprint Work Order, separate named GO. **Belum GO untuk task/sprint mana pun.**
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
 | **ICH-PRE-01** Audit blueprint dan repo lama | **REVIEWED_DOCS** | 18C-05A & 19A–D tersedia; tes runtime legacy belum diulang | Revalidate reuse per task, ChatGPT |
 | **Workspace governance 19E/19F** | **DRAFT_REVIEW** | Dokumentasi operasi dan papan kerja diajukan di branch docs | Owner review; ChatGPT perbaiki bila perlu |
-| **ICH-PRE-02** Keputusan teknis awal | **BLOCKED_DECISION** | Repo canonical, MySQL, UUIDv7, PHP target, auth belum diberikan persetujuan final eksplisit | Owner approves/revises recommended bundle, ChatGPT update register |
+| **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
 | **ICH-S0-01** Laravel/Vue Foundation | **PLANNED / BLOCKED** | Work Order draf di 19C; target masih docs-only | Buka Task ID hanya setelah gate; Codex code-only |
@@ -65,19 +71,19 @@ Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code
 
 **Not now:** S3–S9, full bank verification, QR offline, OJS handoff, bank credential, real participant migration, deployment. Keputusan produknya tetap ada di blueprint, bukan dibatalkan.
 
-## Default decision bundle untuk owner (USULAN; TIDAK OTOMATIS APPROVED)
+## Decision bundle RD-01–RD-06 — APPROVED FINAL; RD-07–RD-08 technical detail pending
 | Kode | Rekomendasi | Status |
 |---|---|---|
-| RD-01 | `akhmadafnan/iches-unisya` canonical, selective reuse old repo | **PROPOSED** |
-| RD-02 | Laravel 13; PHP 8.4 target **jika supported oleh host** | **PROPOSED / HOST UNKNOWN** |
-| RD-03 | MySQL InnoDB versi yang kompatibel | **PROPOSED** |
-| RD-04 | UUIDv7 konsisten | **PROPOSED** |
-| RD-05 | Laravel Policies + scoped roles | **PROPOSED** |
-| RD-06 | Session login/email/password/verification/reset | **PROPOSED** |
+| RD-01 | `akhmadafnan/iches-unisya` canonical, selective reuse old repo | **APPROVED FINAL 20D** |
+| RD-02 | Laravel 13, PHP 8.4 target; host verified later | **APPROVED FINAL 20D / HOST UNKNOWN** |
+| RD-03 | MySQL/InnoDB; isolated test DB before migrations | **APPROVED FINAL 20D / TEST_DB G0 OPEN** |
+| RD-04 | UUIDv7 IDs and consistent FKs | **APPROVED FINAL 20D** |
+| RD-05 | Laravel Policies/Gates + role/event/institution/resource scopes | **APPROVED FINAL 20D** |
+| RD-06 | Session-backed participant OTP/Magic Link **passwordless**; staff mode later | **APPROVED FINAL 20D** |
 | RD-07 | One-user Switch Workspace, audited read-only Support View | **FUNCTION APPROVED / TECH PROPOSED** |
 | RD-08 | Laravel typed-block versioned CMS | **FUNCTION APPROVED / TECH PROPOSED** |
 
-Sumber detail: [18C-05 decision gates](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md). **No forced approval:** keputusan owner harus tercatat di 09 dan/atau board sebelum dipakai Codex. Jam resmi acara belum ada; countdown tidak boleh mengarang 00:00.
+Sumber detail: [18C-05 decision gates](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md). **RD-01–RD-06 recorded APPROVED in 09 and board; RD-07/RD-08 technical details remain separate.** Jam resmi acara belum ada; countdown tidak boleh mengarang 00:00.
 
 ## Template update board (ChatGPT only)
 - **Date/time, branch/HEAD, task**:

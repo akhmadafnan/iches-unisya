@@ -37,11 +37,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
-## PRE-03 verified / PRE-02 current gate
+## PRE-03 VERIFIED / PRE-02 OWNER APPROVED
 
 - Codex read-only handshake **PASS**: four Skills directly readable, canonical remote, docs branch, clean worktree. Automatic Skill invocation not tested.
 - MySQL97 Windows service **9.7.1** running; TCP port 3306 reachable, but authenticated isolated test DB **not verified**.
-- [20D technical decision packet](docs/20D-PRE-02-TECHNICAL-DECISION-PACKET.md) consolidates RD-01..06 with approved participant passwordless OTP/Magic Link. **Still NO GO Coding.**
+- [20D technical decision packet](docs/20D-PRE-02-TECHNICAL-DECISION-PACKET.md): **RD-01–RD-06 FINAL owner-approved**, including participant passwordless OTP/Magic Link. Authenticated isolated MySQL test DB still needed; **NO GO Coding**.
 
 
 ## Codex readiness check

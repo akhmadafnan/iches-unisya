@@ -56,8 +56,9 @@ The owner shared a screenshot of the actual VS Code window: `iches-unisya` works
 - [x] Authorized clone into owner-selected `D:\PINJAM-AFNAN\iches-unisya`; checked remote, branch, clean worktree, AGENTS, PLANS, four Skills.
 - [x] Windows service `MySQL97` detected **Running** (read-only); no client CLI in PATH.
 - [x] Check running MySQL97 service, executable metadata **9.7.1.0**, and local TCP **127.0.0.1:3306 reachable** (read-only).
+- [x] Read-only unauthenticated MySQL protocol handshake at `127.0.0.1:3306`: protocol `10`, server version **9.7.1**, no SQL/auth/changes.
 - [ ] Still verify **authenticated** SQL version, InnoDB and an isolated disposable test DB with safe credentials before schema work.
-- [ ] Approve RD-01 canonical target; RD-02 PHP/Node version range; RD-03 DB engine/version; RD-04 UUIDv7; RD-05 roles/scoping; RD-06 auth baseline in Decision Register.
+- [x] Owner approved RD-01..06 as a single 20D bundle and Decision Register 09 was updated (28 October 2026).
 - [ ] Verify composer/npm install/build/test scripts **only after coding authorization**. Never mark tests PASS based on available CLI versions.
 - [ ] Confirm shadcn-vue Lyra-compatible preset/tokens before changing UI dependencies (not needed to preflight G0).
 

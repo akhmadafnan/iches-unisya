@@ -55,18 +55,20 @@ Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.ag
 Codex read-only handshake **PASS**: correct repo, clean branch, `AGENTS.md`, `PLANS.md`, current board and four Skills read in full, no edits. Automatic Skill triggering untested. MySQL97 service Running and TCP port 3306 reachable; **authenticated isolated test DB not verified**. [20D technical decision packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) proposes one approval bundle RD-01..RD-06 and protects approved passwordless participant login. Sprint status remains **BLOCKED_DECISION / NO_GO**.
 
 
-## PRE-02 auth decision conflict (do not default to password)
+## PRE-02 participant auth decision — RESOLVED IN 20D
 
-Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Resolve this inconsistency with the owner **before** generating auth/schema code; session cookie auth can support a passwordless flow. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
+Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Owner approved 20D: Laravel sessions **with participant OTP/Magic Link without password**. Draft email/password suggestion is **superseded for participants**. Staff credential policy remains a later decision. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
 
 ## READY blockers (all must be cleared)
 - [ ] [Governance PR #1](https://github.com/akhmadafnan/iches-unisya/pull/1) owner-reviewed/merged, local clone synced.
-- [ ] RD-01 canonical repo and legacy reuse selection approved.
-- [ ] RD-02 PHP + Node/dependency compatibility approved, backed by actual environment check.
-- [ ] RD-03 MySQL test DB verified; RD-04 UUIDv7 FK policy approved.
-- [ ] RD-05 RBAC identity model and RD-06 baseline auth approved as needed for schema.
+- [x] RD-01 canonical repo and selective legacy reuse approved (20D).
+- [x] RD-02 Laravel 13/PHP 8.4 and local Node 26 evaluation approved (20D); exact dependency compatibility to be tested after GO.
+- [x] RD-03 MySQL/InnoDB and RD-04 UUIDv7 policy approved (20D).
+- [ ] **Separate G0:** authenticated disposable test DB, InnoDB and FK/migration permissions not verified.
+- [x] RD-05 scoped Laravel Policies/Gates and RD-06 session-backed participant OTP/Magic Link (passwordless) approved (20D); staff login details later.
 - [x] Codex agent verified actual cloned target `D:\PINJAM-AFNAN\iches-unisya` and all four Skills readable with clean Git status. No code changes.
-- [ ] Authenticated isolated test DB and the owner decision package RD-01..06 still required.
+- [x] Owner approved RD-01..06 (20D), including passwordless participant baseline.
+- [ ] Authenticated isolated test DB still required; MySQL server handshake 9.7.1 is **not** a DB account check.
 - [ ] ChatGPT provides final Work Order base commit + applicable scripts/test cases.
 - [ ] Owner sends explicit GO SPRINT **after** READY.
 

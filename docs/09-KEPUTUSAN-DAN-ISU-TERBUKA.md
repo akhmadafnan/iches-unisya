@@ -526,3 +526,20 @@ Setiap keputusan baru dicatat dengan: ID, tanggal, pemutus, keputusan, alasan ri
 3. Finalkan hak fasilitas, batas kit, souvenir dan kuota.
 4. Tinjau wireframe pengguna dan Backoffice berdasarkan keputusan pimpinan.
 5. Kunci PRD, arsitektur final dan *acceptance criteria* sebelum coding.
+
+
+## A20D. Final PRE-02 technical decision bundle — owner approved 28 October 2026
+
+**EXPLICIT OWNER APPROVAL:** “Setuju paket 20D.” This approves **RD-01 through RD-06** as defined in [20D technical packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md), **not** the still-open RD-07/RD-08 technical refinements, and **NOT GO CODING, PR merge, application migrations or deployment**. Earlier draft propositions in A17/18C-05 (e.g. PROP-067 password-based participant login, PROP-054 open DB/PK) are historical and **superseded specifically for RD-01..06 by this signed decision bundle**.
+
+| Approved ID | Final implementation baseline | Verification / boundaries still required |
+|---|---|---|
+| **RD-01** | Canonical source repository `akhmadafnan/iches-unisya`; legacy `international-conference-platform` only for selective audited technical reuse | Do not import legacy payment/screening business rules or secrets |
+| **RD-02** | Laravel 13, PHP 8.4 target; Node 26 currently available for compatibility testing, with actually compatible exact dependencies to be locked after GO | Production hosting version remains a separate release gate |
+| **RD-03** | MySQL/InnoDB with foreign keys, transactions and JSON; **disposable isolated test database only** for first sprint | Local server handshake 9.7.1 verified without auth; **authenticated test DB, SQL engine checks and permissions still unverified** |
+| **RD-04** | UUIDv7 canonical entity primary keys, consistent FK representation | Migration/test schema must preserve consistent key typing; no incidental BIGINT substitution |
+| **RD-05** | Laravel Policies/Gates with role, event, institution, resource/owner scoping; same-user multi-role workspace switching | UI visibility is not access control; Superadmin support view read-only and audited |
+| **RD-06** | Laravel **session-backed**, **participant login by passwordless email OTP / Magic Link**, in line with already approved **NEW-003** | Do **not** implement required participant passwords. Staff login/MFA and OTP provider/expiry/rate-limit details require separate explicit implementation decisions |
+
+**Verification record:** owner acceptance was received in this conversation on 28 October 2026. PRE-03 Codex read-only Skills handshake already PASSED; an unauthenticated MySQL server greeting returned protocol 10 / version 9.7.1 over TCP 127.0.0.1:3306, **no credential accessed, SQL executed, schema modified, or database login attempted**. Next required gate is isolated test-DB authentication and approved PR/branch baseline. **ICH-SPRINT-01 remains NO_GO until separately and explicitly authorized after READY**.
+
