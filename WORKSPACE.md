@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-08 — REV-02 local review PASS, corrected SHA awaits owner push approval (CURRENT)
+
+- `ICH-S0-07` branch `feat/ich-s0-07-ci` local HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7` (parent old remote `c420d951`), clean. Scoped revision: test-only Inertia page path aligned to lowercase `js/pages` with negative missing-page test; temporary `.env.example` copied only on CI runner; build log append-only +28. [21I-08 independently rerun checks](docs/21I-08-S0-07-REV02-FINAL-LOCAL-REVIEW.md): 4 PHP tests/36 assertions, Pint, Composer and diff PASS.
+- **REV-02 local REVIEW_PASS**. PR #5 remote still at old failed `c420d951`. **Owner has not approved pushing new SHA**, so Linux PHP8.4/Node22 checks remain NOT_RUN after fix; no merge, DB or deployment.
+
 ## 21I-07 — PR #5 Linux CI FAILED; REV-02 (CURRENT)
 
 - [PR #5](https://github.com/akhmadafnan/iches-unisya/pull/5) open, exact 2-file diff, head `c420d951...`, **no merge**. Two actual Ubuntu CI runs (push + PR) FAILED at PHPUnit after PHP/Composer PASS; Node22/Pint/npm/TS/build steps **SKIPPED**, not green.

@@ -13,6 +13,10 @@
 - Two additional truncated `file_get_contents` warnings occurred prior to frontend `npm ci/build`; likely asset manifest lookup before build. Inspect their actual cause; address minimally/test-only, don't hide warnings blindly.
 - A top-level [PR review diagnosis comment](https://github.com/akhmadafnan/iches-unisya/pull/5) records the failure and proposed bounded remedy.
 
+## Post-correction local review checkpoint (28 October 2026)
+
+The Codex REV-02 correction is now present as separate local commit `294a54b223676df3b6e9124480e271ee3a50bdc7`, and its code/tests were independently checked. **Local REV-02 verdict is REVIEW_PASS**, while the **old remote PR #5 GitHub CI remains FAILED** until this corrected commit is owner-authorized, pushed, and tested on Linux. See [21I-08](21I-08-S0-07-REV02-FINAL-LOCAL-REVIEW.md). This checkpoint supersedes historical local `REVISIONS_REQUIRED` below without erasing real CI failure history.
+
 ## Safe remediation path — same ICH-S0-07 task
 
 The existing owner GO authorizes S0-07 CI-specific testing fixes under [21I-02](21I-02-ICH-S0-07-CI-WORK-ORDER.md), **not a new unrelated coding task**. Only Codex VS Code writes source, and only after preflight on the same feature branch.

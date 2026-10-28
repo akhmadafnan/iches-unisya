@@ -192,8 +192,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Both real GitHub Actions runs FAILED:** [push 40668248799](https://github.com/akhmadafnan/iches-unisya/actions/runs/40668248799), [PR 40669157978](https://github.com/akhmadafnan/iches-unisya/actions/runs/40669157978). PHP setup/Composer PASS; `php artisan test` failed due to `resources/js/Pages` default Inertia testing path vs actual lowercase `resources/js/pages` on Linux; 1 test failure, 2 warnings. Pint/Node22/npm/build skipped.
 - **Status REV-02 / REVISIONS_REQUIRED.** Same S0-07 work scope allows bounded Codex-only CI testing fix, preserving assertions and prior commits, but **new corrected SHA must not be pushed without separate owner approval**. PR merge, DB, new coding task and deployment remain NO_GO.
 
+## 21I-08 — REV-02 corrected and independently reviewed (28 October 2026)
+
+- [21I-08 full local review](21I-08-S0-07-REV02-FINAL-LOCAL-REVIEW.md): **REVIEW_PASS / REV-02 CLOSED locally**. Branch `feat/ich-s0-07-ci`, new local HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7`, parent `c420d951`, clean; 3 scoped files, all additive; `.env` ignored.
+- Independently reran **`php artisan test --display-warnings` (4 PASS / 36 assertions / no warnings)**, Pint --test (18 files PASS), Composer strict validation (PASS), patch check PASS. Negative missing Inertia component test remains meaningful; case-sensitivity and temporary example env repair reviewed.
+- **PR #5 remains OPEN/UNMERGED at old remote `c420d951` and both previous GitHub Actions runs FAILED.** Ubuntu/PHP8.4/Node22 after fix **NOT_RUN**. Owner must separately approve pushing new SHA; Codex-only normal push, ChatGPT checks live CI after, merge independently owner-gated.
+- No unrelated new code task, migration, database or deployment authorized. [21H PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) remains separate.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 PR #5 OPEN / LIVE_CI_FAILED / REV-02 REVISIONS_REQUIRED.** Two real Ubuntu workflows failed PHPUnit due to Inertia testing path capitalization mismatch. No merge. Scoped Codex-only fix under existing task; new push requires owner approval.
+**NOW: ICH-S0-07 REV-02 LOCAL REVIEW_PASS / OWNER_PUSH_APPROVAL_PENDING.** Fix at local `294a54b` independently verified (4 tests/36 assertions), PR #5 remote still at old failed `c420d951`; new commit not yet pushed. No merge/deploy.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
