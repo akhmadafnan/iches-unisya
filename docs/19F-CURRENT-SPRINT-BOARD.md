@@ -240,8 +240,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Status GO_AUTHORIZED / CODEX_EXECUTION_PENDING / AUTH_CHECK_REQUIRED**. Last known local clean checkout on `feat/ich-s0-07-ci`, main tracking stale; Codex safely syncs main and creates `feat/ich-s0-02-db-foundation`. No reset/wipe, push, merge, deployment or S0-03 auth logic.
 - S0-01 + S0-07 COMPLETE, [PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) remains open/unmerged.
 
+## 21J-06 — MySQL 1045 checkpoint and selective UUIDv7 clarification (28 Oct 2026)
+
+- Codex reports main synchronized to `19ab3e52921a9a51817e8424ec6daadfd00c1e79`, clean feature branch `feat/ich-s0-02-db-foundation` created; MySQL root connection to `127.0.0.1:3306/iches_unisya` **1045 / exit 1**. Per approved 21J-05 Codex stopped **before source edits, migrations or new commit**.
+- Owner should enter the correct local DB credential into Git-ignored `.env` and report only `kredensial lokal siap`. No password in chat, public GitHub or logs. No password guessing/reset by Codex. Same existing S0-02 GO authorizes continuation after credential fix.
+- **RD-04 clarified:** UUIDv7 for **standalone domain entity primary keys** (`users`, `institutions`, `events`), and compatible UUID foreign keys; **not** all IDs. Pure pivots may use composite primary/unique keys with no `id`. Role/status/reference keys are short codes, ordering and counters integers, Laravel internal tables their required formats. [21J-05 scoped engineering instructions](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md).
+- No DB or code changes by ChatGPT. No push/PR/merge/deploy. Only resume Codex after local credential readiness.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 GO_AUTHORIZED / CODEX_EXECUTION_PENDING / DB_AUTH_CHECK_REQUIRED.** Owner reports `iches_unisya` (UNDERSCORE) manually created and granted named GO; Codex will verify authentication before migrations, implement local DB foundation and commit locally. No destructive reset, push, PR, merge or deploy.
+**NOW: ICH-S0-02 GO_AUTHORIZED / CODEX_BLOCKED_MYSQL_1045 / OWNER_LOCAL_ENV_REQUIRED.** Codex created clean feat/ich-s0-02-db-foundation from current main but root login to iches_unisya returned MySQL 1045; no code, migration or commit. User must set correct credential in ignored local .env, then Codex resumes. UUIDv7 only canonical entities, not every ID.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

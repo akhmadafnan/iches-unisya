@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21J-06 — S0-02 temporarily blocked by MySQL 1045 (CURRENT)
+
+- Codex safely created `feat/ich-s0-02-db-foundation` (clean) from synced main `19ab3e5`; attempted read-only MySQL auth on `iches_unisya` with local root, **1045 / exit 1**. NO source changes, migrations or local commit. Owner must configure correct credentials directly in ignored local `.env`; report readiness without password. GO S0-02 remains valid.
+- [21J-05 GO contract](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) now clarifies **UUIDv7 only for primary keys of independent canonical domain entities**, matching UUID FKs; plain pivot composites, codes, counters, framework IDs are not blanket UUIDv7. Codex resumes same feature branch after auth and verifies selected schema before migrations.
+
 ## 21J-04/05 — ICH-S0-02 OWNER GO / CODEX EXECUTION (CURRENT)
 
 - Owner reports local schema `iches_unisya` (underscore) exists and explicitly grants `GO CODING ICH-S0-02`. [Latest correction 21J-04](docs/21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md); [bounded Codex handoff 21J-05](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md). Earlier `iches-unisya` spelling is superseded.

@@ -2,6 +2,28 @@
 
 > **28 Oct 2026 · EXPLICIT OWNER GO RECEIVED / CODING AUTHORIZED.** Owner-created DB reported as **`iches_unisya` (underscore)**. This task is authorized; do not demand another GO to code S0-02 or run normal additive migrations after safe database verification. Only Codex VS Code edits application code. Stop before push/PR/merge/deployment.
 
+## RD-04 implementation precision: UUIDv7 is selective, not every ID field
+
+The owner clarified the scope on 28 Oct 2026: **NOT every identifier or every database table receives its own UUIDv7 primary key.** Interpret already-approved RD-04 as **UUIDv7 for canonical standalone application/domain entities, with matching FK types**.
+
+| Identifier class | S0-02 guidance |
+|---|---|
+| Main durable domain entities with an independent lifecycle | `users.id`, `institutions.id`, `events.id`: **UUIDv7**. Future `papers`, `submissions`, `stored_files`, etc. should use UUIDv7 when their own tasks authorize creation. |
+| References to those entities | `user_id`, `institution_id`, `event_id`: **UUID columns matching the target PK's storage type**, not auto-increment BIGINT and not freshly generated independent UUIDs. |
+| Pure many-to-many junction tables | May have **NO `id`**; use a properly scoped composite PK/unique key over referenced UUID FKs if their lifecycle and audit requirements allow. For `role_assignments` with grant/revoke history or direct resource identity, choose UUIDv7 `id` **only if justified by audit/lifecycle**; document rationale in code/handoff. |
+| Role codes, status, country, canonical reference values | `role_key`, `status`, `country_code` etc. use **short strings/enums or approved lookup keys**, not auto-generated UUIDv7. |
+| Ordering, position, year, counters, small fixed lists | `sort_order`, `seat_number`, `year`, counters: normal integer types. |
+| Laravel/framework/third-party tables | `migrations`, `sessions`, `jobs`, framework internal keys follow **their own compatible conventions**, not a blanket UUID rewrite. |
+| Identifiers defined by external systems | ORCID/DOI/registration or human-readable codes keep their own specified format, separate from internal PK. |
+
+**Critical:** UUIDv7 applies only to **newly created canonical PKs**, not every column with `id` in its name. Ensure Laravel models generate **version 7**, not v4; verify through actual tests. Do not invent generic BIGINT FKs pointing to UUID PKs or mix UUID storage representations. Prefer a minimal S0-02 schema, not speculative future tables. Do **not** make design refinements a reason to restart unrelated tasks.
+
+## Codex STOP checkpoint: root MySQL 1045 (owner local credentials required)
+
+Codex reports: `feat/ich-s0-02-db-foundation` created from current main `19ab3e52921a9a51817e8424ec6daadfd00c1e79`, Git clean, but the authenticated root connection to **`127.0.0.1:3306/iches_unisya`** returned **MySQL 1045 / exit 1**. No source, migration, table, test, or commit changes were made. **This is a credential-authentication gate, not a revoked GO.** The owner's local `.env` does not yet contain DB credentials.
+
+Owner enters the correct root credential **directly into the ignored local `.env`** and says “kredensial lokal siap” without providing it to chat or GitHub. Codex resumes **on the same feature branch** with a read-only authenticated `SELECT DATABASE()` check of exactly `iches_unisya`; if 1045 persists, verify username/host account and phpMyAdmin's actual MySQL instance without guessing secrets or resetting root. **Never bypass auth, read other databases, print secret values, or run migrations on an unverified connection.** The existing named GO ICH-S0-02 remains active and needs no reconfirmation for this narrow continuation.
+
 ## Execute on the canonical project
 
 1. Work only in `D:\PINJAM-AFNAN\Herd\iches-unisya`, GitHub origin `akhmadafnan/iches-unisya`. Read `AGENTS.md`, `WORKSPACE.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, [21J-04 latest decision](21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md), [21J-03 work order](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md), `.agents/skills/iches-codex-engineering/SKILL.md` and `.agents/skills/iches-code-verification/SKILL.md`. Last local checkout was clean on old `feat/ich-s0-07-ci`, local `origin/main` stale. Check clean Git status and remote; `git fetch origin main`; switch to main and `git pull --ff-only origin main` only if clean. **Never reset/rebase/force push/amend accepted work.** New branch `feat/ich-s0-02-db-foundation` from current main.
