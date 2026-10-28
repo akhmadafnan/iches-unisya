@@ -1,5 +1,7 @@
 # 21L-01 — ICH-S0-04 Scoped Authorization & Switch Workspace (Codex Work Order, PREPARED)
 
+> **DEPENDENCY UPDATE — 28 October 2026:** ICH-S0-03 PR [#8](https://github.com/akhmadafnan/iches-unisya/pull/8) has now been **MERGED (normal merge)** to main with merge commit `3df38cf4229e3aec011a2d20fee54984d6560ccc`; code milestone COMPLETE, see [21K-11](21K-11-S0-03-MERGED-COMPLETE.md). **This resolves the S0-03 merge dependency ONLY.** ICH-S0-04 remains **PREPARED / NO GO CODING** until named owner authorization; this update does not permit coding, DB migrations, push or deployment.
+
 > 28 October 2026 — **PREPARED / NO_GO_CODING**. ChatGPT documentation only. **Dependency:** ICH-S0-03 PR [#8](https://github.com/akhmadafnan/iches-unisya/pull/8) has a successful PHP 8.4/Node 22 check on head `6b32e7580fb04fb789908a5f486d11d1bfa24adb`, but remains **OPEN and NOT merged**. Owner must separately authorize merge and then **GO CODING ICH-S0-04**. This document is not authorization for Codex, migrations, seeding, push, merge or deployment.
 
 ## Owner-locked design and product invariants
