@@ -5,8 +5,8 @@ This repository currently contains an **ICHES 2027 product blueprint**, not a fi
 ## Active AI agent workspace (read first)
 
 - Start at [WORKSPACE.md](WORKSPACE.md); [docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md) is the sole current-task status and [docs/19E-AGENT-WORKSPACE-RUNBOOK.md](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) defines the short operational handoff. Do not treat the sprint timebox or backlog as GO CODING.
-- Work on **one owner-authorized Task ID at a time**; do not pull in adjacent modules. Follow docs/19C for task-specific Work Order; one feature branch per task, never directly main.
-- ChatGPT owns governance docs and board updates; Codex in VS Code implements code only after explicit owner GO for that task. No automatic merge, deploy, or production changes.
+- Work only on explicitly approved **Task IDs**: individual Task GO, or a bounded Sprint GO that names finite ordered Task IDs; never pull in unlisted modules and never work on main. See `docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md`.
+- ChatGPT owns governance docs and current 19F board. Codex implements authorized code after named Task/Sprint GO and may append sanitized evidence to `harness/build-log.md` and `harness/evidence/**` only under that GO. No automatic merge/deploy.
 
 ## Read the project before changing code
 
@@ -20,11 +20,11 @@ This repository currently contains an **ICHES 2027 product blueprint**, not a fi
 
 ## ChatGPT × Codex VS Code task ownership (28 Oct 2026)
 
-- **Codex VS Code = CODE-ONLY implementer**, only after **explicit owner GO CODING for the relevant task**. Codex can read docs, run appropriate test commands, and write in-scope code: `app/`, `resources/`, `routes/`, `database/`, `tests/`, build/config/dependency files. It **must not edit** `README.md`, `docs/**`, this `AGENTS.md`, or `.agents/skills/**`.
+- **Codex VS Code = code implementer**, only after owner GO CODING for a Task ID or GO SPRINT for finite named Task IDs. It may edit work-order code paths and **append-only** `harness/build-log.md` / sanitized `harness/evidence/**`; it **must not edit** `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `AGENTS.md`, `.agents/skills/**` or product policies.
 - **ChatGPT = non-code planning, specification, documentation, code review and GitHub coordination**. ChatGPT does not patch source code directly. If review finds a code defect, issue a change request back to Codex. Owner authorizes merge, deploy and scope changes.
 - **Workflow docs**: `docs/19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md` (protocol), `docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md` (task IDs), `docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md` (Codex work orders), `docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md` (decision-to-code traceability).
-- **Codex implementation skill**: `.agents/skills/iches-codex-engineering/SKILL.md`. If implementing public UI/CMS/countdown also use `.agents/skills/iches-public-frontend/SKILL.md`.
-- **No GO coding has been granted in the present documentation stage**. READY_FOR_CODEX is not GO. Do not start on `main`, change secrets, import live data or deploy. Work in approved feature branches after explicit GO.
+- **Skills:** `iches-codex-engineering` always; `iches-public-frontend` for public/CMS/countdown; `iches-backoffice-ui` for Admin; `iches-code-verification` for test evidence. Read only relevant Skills.
+- **Governance 20B has been approved, but no named Task GO or Sprint GO has been granted.** READY_FOR_CODEX and consent to documentation are not coding authorization. No code on main, secrets, live data, auto merge or deploy.
 
 ## Non-negotiable product guidance
 

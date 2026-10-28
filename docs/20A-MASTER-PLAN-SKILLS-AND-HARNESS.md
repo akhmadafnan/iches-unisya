@@ -2,6 +2,10 @@
 
 > DRAFT FOR OWNER REVIEW · 28 Oct 2026 · DOCUMENTATION ONLY · NO GO CODING. Adds operational detail to 19A–19F, not new business policies.
 
+## 20B status update
+
+Workflow for finite Sprint GO and Codex append-only execution evidence has been accepted **as governance**, not as an implementation GO. Two new task-focused Skills now exist on Draft PR #1. See [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). If draft suggestions below conflict, 20B governs after merge.
+
 ## 1. One plan, no duplicate statuses
 
 | Artifact | Single responsibility | Maintainer |

@@ -2,6 +2,10 @@
 
 > **28 Oktober 2026 · DRAFT REVIEW · NO GO CODING.** Melengkapi, **bukan menggantikan**, 19A–19D dan AGENTS.md. Tujuannya mengubah repo dokumentasi menjadi lingkungan kerja Codex VS Code yang tidak melebar, dapat diulang setiap sesi, dan mudah diaudit.
 
+## 20B superseding authorization note
+
+One Task GO or finite named Sprint GO can authorize Codex code changes; append-only evidence journal allowed **only after actual named GO**. This revises earlier no-Markdown and per-task-only descriptions; see [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). 19F remains single status board. No GO Coding has been given.
+
 ## 1. Desain lingkungan kerja (minim konteks, maksimum bukti)
 - **Single repository:** `akhmadafnan/iches-unisya` (rekomendasi canonical, butuh approval RD-01). Repo lama hanya sumber perbandingan selective reuse.
 - **Single task in progress per operator Codex:** ID stabil dari 19B, ditulis pada 19F. Jika ada dua prioritas, antrekan; jangan buat agent paralel yang mengubah domain atau branch sama.

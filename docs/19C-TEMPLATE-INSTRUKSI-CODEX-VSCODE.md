@@ -4,6 +4,10 @@
 >
 > [19A Protocol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) · [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19D Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [Codex Engineering Skill](../.agents/skills/iches-codex-engineering/SKILL.md).
 
+## Opsi 20B — Sprint Work Order (workflow disetujui, belum GO)
+
+Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task IDs terbatas yang sudah disetujui, berurutan, dengan scope, branch, test dan stop conditions eksplisit. Lanjut antar-task hanya setelah PASS+evidence; task di luar daftar tetap terlarang. Gunakan [template Sprint](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Tidak ada GO Coding saat ini.
+
 ## 1. Cara bekerja dari VS Code tanpa kebingungan
 
 **Saat belum GO:** cukup simpan dokumen ini di GitHub dan, bila ingin, lakukan inspeksi lingkungan via terminal read-only. **Tidak ada instruksi kepada Codex untuk membangun sesuatu.**
@@ -40,7 +44,8 @@ TASK GOAL (one business objective):
 SCOPE IN:
 - [Kode aplikasi/migration/test tepat yang boleh diubah]
 SCOPE OUT:
-- docs/**, README.md, AGENTS.md, .agents/skills/**
+- docs/**, PLANS.md, WORKSPACE.md, README.md, AGENTS.md, .agents/skills/**
+- Exception with named GO: harness/build-log.md append-only and sanitized harness/evidence/**
 - .env, secrets, production data, unrelated features, unrelated refactors
 - [Modul spesifik yang belum boleh disentuh]
 

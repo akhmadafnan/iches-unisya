@@ -32,7 +32,7 @@ Event date from TOR: 5 January 2027 (main), 6 January 2027 (associated); abstrac
 ## Execution gates
 
 - G0 Ready: owner-approved repo/DB/PK/auth/runtime decisions; verified local toolchain and safe test DB.
-- G1 Authorized: explicit owner GO for the exact task ID **under current rules**; a sprint-level authorization is merely a proposed future model and does not apply yet.
+- G1 Authorized: separate owner **GO CODING Task ID or GO SPRINT finite ordered task list** per [20B](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Approving workflow is NOT GO coding.
 - G2 Scoped: feature branch, in-scope diff only; no source changes on main, no secrets/data.
 - G3 Verified: actual test commands and exit status; negative/security cases; screenshots for UI. Failed/unrun tests are not PASS.
 - G4 Reviewed: ChatGPT reviews diff and evidence; owner decides acceptance/merge. Deployment separately authorized.
@@ -41,6 +41,6 @@ Stop on ambiguous decisions, tests failing, scope creep, production credentials 
 
 ## Status and evidence ownership
 
-**Only [19F](docs/19F-CURRENT-SPRINT-BOARD.md) is the live status board, updated by ChatGPT.** [harness/build-log.md](harness/build-log.md) is a future evidence journal (currently ChatGPT-owned). Codex cannot edit Markdown under the current code-only policy. No coding GO has been issued.
+**Only [19F](docs/19F-CURRENT-SPRINT-BOARD.md) is the live status board, updated by ChatGPT.** [harness/build-log.md](harness/build-log.md) is a future evidence journal (currently ChatGPT-owned). Codex can append sanitized evidence Markdown **only after actual named Task/Sprint GO**, not governance docs. No coding GO has been issued.
 
 This plan becomes binding only when owner approves the governance proposal in Draft PR #1. Even after approval, plan existence does not authorize implementation.

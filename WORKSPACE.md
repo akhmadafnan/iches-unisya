@@ -5,8 +5,8 @@
 ## One Master Plan (DRAFT — no GO)
 
 - [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.
-- [20A Agent Execution Contract](docs/20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) — skills registry, bounded authorization proposal, harness evidence ownership.
-- [harness/README.md](harness/README.md) — evidence journal format. **Codex Markdown write permission is not active**.
+- [20A](docs/20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) and [20B Governance](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) — bounded sprint model, 4 Skills, controlled evidence; NO named GO.
+- [harness/README.md](harness/README.md) — Codex append-only evidence **only after named GO CODING**.
 
 ## Empat berkas kerja harian (bukan 50+ blueprint)
 1. **[WORKSPACE.md](WORKSPACE.md)** — pintu masuk dan urutan baca (berkas ini).
