@@ -18,6 +18,19 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## GitHub push-auth gate update (28 October 2026)
+
+- Repo-local `credential.helper=manager` configured and verified with Git Credential Manager 2.8.0; original accepted Laravel feature HEAD unchanged and clean.
+- Interactive GitHub browser OAuth approval by the owner is **still pending**; no push/PR yet. Codex's previously owner-approved push task can resume safely after login. **No merge/deploy/migration GO inferred.**
+
+
+## 21H — 48h prioritization and design Skills W2 (current)
+
+- User requested continue **in existing `akhmadafnan/iches-unisya` repository only**, two-workday timebox. [21H-02 critical path](docs/21H-02-48H-CRITICAL-PATH.md) prioritizes fixing Git HTTPS auth, publishing/PR for already accepted ICH-S0-01 and safe DB test readiness before further app tasks.
+- [21H-01 design Skills](docs/21H-01-DESIGN-SKILLS-AND-SECURITY.md) in docs-only proposal `docs/21h-design-skills`: safe static Taste-inspired editorial direction + Anti-Slop critique + Vercel pinned UI/a11y audit. **Not the full upstream runners**; original 21G native/engineering precedence remains authoritative.
+- No code task GO, auto-merge, DB migration, global installation or deployment authority is inferred from a target timebox. Owner must approve the 21H PR merge separately.
+
+
 ## 21G-06 — ACTUAL CODEX READ-ONLY REPORT VALIDATED (current)
 
 - [21G-06 review](docs/21G-06-CODEX-READONLY-VALIDATION-REVIEW.md): explicit Codex reading 5/5 PASS; five routing simulations and three permission-denial simulations PASS; ICHES native precedence upheld. Reviewer independently rechecked detached QA HEAD `80b888e`, clean staged/unstaged diff, five valid Skill names and untouched Laravel feature HEAD `8eba7cb`.

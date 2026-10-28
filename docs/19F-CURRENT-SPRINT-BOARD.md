@@ -152,6 +152,27 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Next parallel documentation task:** `21H` selective, read-only evaluation of Taste Skill + Anti-Slop Design + Vercel UI Guidelines; no install/coding without separate scope. Operational app blocker remains GitHub local HTTPS authentication for accepted ICH-S0-01 push/PR.
 
 
+## 21H — Design Skills Wave 2 & 48h delivery focus (28 October 2026)
+
+- Internal 21H package link audit found four cross-file Anti-Slop references outside the curated subset; the four links were rewritten to pinned upstream URLs. Original source remains attributed and only source content links changed.
+
+- Owner requested to **continue within canonical repo `akhmadafnan/iches-unisya`** with a two-working-day target; no application coding/DB/merge GO in that message. Separate docs-only branch `docs/21h-design-skills` stages three static ICHES-specific design Skills derived from pinned Taste, Anti-Slop and Vercel methods, reference files, exact MIT notices and explicit brand/owner precedence.
+- See [21H design/security contract](21H-01-DESIGN-SKILLS-AND-SECURITY.md) and [two-day critical-path plan](21H-02-48H-CRITICAL-PATH.md). No installer, automatic media download, Vue/PHP code edit, new website, database activity, or unrelated repository.
+- **First operational unblocker:** accepted `ICH-S0-01` branch push remains blocked by HTTPS Git credential helper; separate owner-local OAuth configuration, then authorized Codex feature push/PR. PR merge separately owner-approved.
+- New Skills need read-only Codex test **after** separately approved docs merge; automatic triggering cannot be assumed. Timebox does not authorize protected work or fake fully complete project claims.
+
+
+## 21H — Wave 2 static audit finished; draft PR pending (28 October 2026)
+
+- [21H-03 static review](21H-03-DESIGN-SKILLS-STATIC-AUDIT.md): **W2-SOURCE/SCOPE/LINKS PASS**, three static project-adapted design Skills, 16 original docs-only files changed plus this report, 89 local Markdown links checked 0 broken, source licenses exact. **Codex read/auto-trigger NOT_TESTED** until owner PR merge and read-only QA.
+- Original accepted `feat/ich-s0-01-foundation` remains exact `8eba7cb5b9da0577910beb919844165869591e05`, clean, no app code pushed; Git HTTPS authentication blocker remains the critical operational path.
+- Proposed Draft PR `docs/21h-design-skills` → `main` requires explicit owner merge decision; no GO for Laravel schema/auth/CMS/finance/deployment was issued by this 48h timebox.
+
+## 21H credential preparation — Git repo-local only (28 October 2026)
+
+- `git credential-manager --version` **2.8.0**, local `credential.helper=manager` set successfully on canonical repo; verified feature HEAD still `8eba7cb5b9da0577910beb919844165869591e05`, working tree clean. This updates earlier **helper-missing** status.
+- **Owner's browser OAuth sign-in + Codex feature push still required.** No credentials were captured or used, no push/PR/merge occurred, no source edited. See [21H-02](21H-02-48H-CRITICAL-PATH.md).
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
 
