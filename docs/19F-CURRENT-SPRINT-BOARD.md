@@ -180,8 +180,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Local PHP/Pint/Vue/Vite/actionlint checks recorded PASS by Codex; **Linux/Node22 GitHub CI remains NOT_RUN / PENDING_PUBLICATION**. No feature push/PR/merge yet. Next permission: owner ACCEPT S0-07 and authorize Codex feature push + ChatGPT PR creation, **NO MERGE**.
 - All additional product code/DB/production work remains separately authorized. Design Skills PR #3 remains open.
 
+## 21I-06 — Owner accepted CI and authorized Codex publication (28 October 2026)
+
+- Owner explicitly **ACCEPTED ICH-S0-07** after [21I-05](21I-05-ICH-S0-07-FINAL-REVIEW.md), and authorized **Codex VS Code push** of exact local `feat/ich-s0-07-ci` HEAD `c420d95175d7d25cd9fee6719180acaf0b684903`. After verified remote push, ChatGPT may create PR to main and inspect Actions.
+- [21I-06 publication handoff](21I-06-S0-07-OWNER-ACCEPT-PUSH-PR-HANDOFF.md) contains verified local preflight and bounded Codex instructions. Latest check: local SHA correct, clean, GCM helper active; remote feature ref **not yet present**.
+- **No** merge, migration, DB, next coding task or deployment authorization. Ubuntu 24.04 PHP 8.4/Node 22 CI remains **NOT_RUN** until actual Actions.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 REVIEW_PASS / OWNER_ACCEPTANCE_PENDING / CI_NOT_RUN.** REV-01 fixed in follow-up local commit `c420d951`; ChatGPT verified SHA target commit, exactly one workflow line changed, build log append-only. No push/PR/merge authorization yet.
+**NOW: ICH-S0-07 OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / CI_NOT_RUN.** Local exact commit `c420d951` accepted, Codex may push existing branch only. After remote verification ChatGPT may create PR and inspect Actions; no merge, migrations, other coding or deployment.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

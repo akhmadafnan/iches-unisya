@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-06 — Owner accepted S0-07; exact Codex push authorized (CURRENT)
+
+- Explicit owner acceptance and bounded publication approval for `feat/ich-s0-07-ci` HEAD `c420d95175d7d25cd9fee6719180acaf0b684903`. Codex VS Code performs push; ChatGPT GitHub Connector creates PR **only after verified remote push** and checks Ubuntu CI; merge still owner-gated.
+- [21I-06 push handoff](docs/21I-06-S0-07-OWNER-ACCEPT-PUSH-PR-HANDOFF.md). Latest preflight local clean/GCM active, remote feature branch not present. No extra coding GO, DB/migration or deployment.
+
+
 ## 21I-05 — CI review correction closed (CURRENT)
 
 - Local `feat/ich-s0-07-ci` final SHA `c420d95175d7d25cd9fee6719180acaf0b684903` (parent `17e3350`), clean; exact workflow one-line pin corrected, append-only log +21 lines. [21I-05 independent final review](docs/21I-05-ICH-S0-07-FINAL-REVIEW.md) marks **REVIEW_PASS / OWNER_ACCEPTANCE_PENDING** and REV-01 closed.

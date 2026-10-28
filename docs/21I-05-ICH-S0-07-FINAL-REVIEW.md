@@ -1,6 +1,6 @@
 # 21I-05 — ICH-S0-07 REV-01 Closure & Independent Final Review
 
-> **28 October 2026 · REVIEW_PASS / OWNER_ACCEPTANCE_PENDING / CI_NOT_RUN.** This assessment closes REV-01 from [21I-04](21I-04-ICH-S0-07-INDEPENDENT-CODE-REVIEW.md), without claiming Linux GitHub Actions PASS. No source code was modified by ChatGPT, and no feature push, PR, merge, MySQL migration or deployment occurred during this audit.
+> **28 October 2026 · REVIEW_PASS / OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / CI_NOT_RUN.** This assessment closes REV-01 from [21I-04](21I-04-ICH-S0-07-INDEPENDENT-CODE-REVIEW.md), without claiming Linux GitHub Actions PASS. No source code was modified by ChatGPT, and no feature push, PR, merge, MySQL migration or deployment occurred during this audit.
 
 ## Verified identity and scope
 
@@ -33,6 +33,11 @@
 The owner supplied the Codex handoff and append-only local build log with actual exit code 0 for `git ls-remote`, `actionlint -shellcheck= -pyflakes=`, `composer validate --strict`, `php artisan test` (3 tests/22 assertions), `php vendor/bin/pint --test`, `npm.cmd run typecheck` and `npm.cmd run build`. ChatGPT independently checked the exact workflow content, patch scope, commit ancestry, clean Git status, and GitHub SHA object types. **ChatGPT did not independently rerun the entire PHP/npm suite** in this review; local PASS is reported by Codex with log evidence, not invented as an independent rerun.
 
 Local Node version **26.4.0**; configured GitHub runner Node **22** remains untested. Initial Composer network trouble was recovered from cached/locked dependencies locally; clean GitHub runner dependency download remains a genuine runtime validation dependency. Workflow `actionlint` had optional ShellCheck/Pyflakes integrations disabled; not described as those lint tools passing.
+
+## Owner acceptance and next permission update (28 October 2026)
+
+Owner explicitly accepted `ICH-S0-07` and authorized **Codex VS Code push** of exact local commit `c420d95175d7d25cd9fee6719180acaf0b684903`; after verified push ChatGPT may open a PR and inspect real GitHub Actions. [21I-06 publication handoff](21I-06-S0-07-OWNER-ACCEPT-PUSH-PR-HANDOFF.md). **No PR merge, DB, new coding or deployment authorization.** Historical owner acceptance PENDING text below is an older pre-approval snapshot.
+
 
 ## Final disposition
 
