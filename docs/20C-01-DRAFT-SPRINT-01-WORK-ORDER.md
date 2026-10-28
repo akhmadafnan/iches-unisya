@@ -50,6 +50,11 @@ Always read `AGENTS.md`, the brief `PLANS.md` roadmap and the single current boa
 
 Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.agents/skills/**`, owner decisions, secrets or production data. No branch force rewrite, automatic merge or deployment.
 
+## PRE-03 evidence and decision packet
+
+Codex read-only handshake **PASS**: correct repo, clean branch, `AGENTS.md`, `PLANS.md`, current board and four Skills read in full, no edits. Automatic Skill triggering untested. MySQL97 service Running and TCP port 3306 reachable; **authenticated isolated test DB not verified**. [20D technical decision packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) proposes one approval bundle RD-01..RD-06 and protects approved passwordless participant login. Sprint status remains **BLOCKED_DECISION / NO_GO**.
+
+
 ## PRE-02 auth decision conflict (do not default to password)
 
 Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Resolve this inconsistency with the owner **before** generating auth/schema code; session cookie auth can support a passwordless flow. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
@@ -60,7 +65,8 @@ Decision Register NEW-003 approved participant **Email OTP/Magic Link without pa
 - [ ] RD-02 PHP + Node/dependency compatibility approved, backed by actual environment check.
 - [ ] RD-03 MySQL test DB verified; RD-04 UUIDv7 FK policy approved.
 - [ ] RD-05 RBAC identity model and RD-06 baseline auth approved as needed for schema.
-- [ ] Owner's VS Code 1.143.1 executable located (space path), but CLI `new_code.cmd` wrapper failed and Codex sign-in/Skills remain unverified. **Target `D:\PINJAM-AFNAN\iches-unisya` (hyphen path) is absent**; await setup authorization before clone/remote checks.
+- [x] Codex agent verified actual cloned target `D:\PINJAM-AFNAN\iches-unisya` and all four Skills readable with clean Git status. No code changes.
+- [ ] Authenticated isolated test DB and the owner decision package RD-01..06 still required.
 - [ ] ChatGPT provides final Work Order base commit + applicable scripts/test cases.
 - [ ] Owner sends explicit GO SPRINT **after** READY.
 

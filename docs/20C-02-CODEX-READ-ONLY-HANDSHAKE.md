@@ -33,6 +33,22 @@ GO CODING: NO
 ISSUES / NEXT ACTION:
 ```
 
+## PRE-03 Codex handshake — VERIFIED (28 October 2026)
+
+**Evidence:** owner copied the Codex VS Code agent's complete read-only response, not just a screenshot.
+
+- **Workspace:** `D:\PINJAM-AFNAN\iches-unisya`; canonical remote `https://github.com/akhmadafnan/iches-unisya.git`.
+- **Branch:** `docs/19e-agent-workspace`; handshake HEAD `c9df6d0b30d6f3fdb88d94e086555f1a5af365f8`; worktree clean, local tracking ahead/behind `0/0` (agent did not fetch).
+- **Read in full:** `AGENTS.md`, `PLANS.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, `WORKSPACE.md`, `docs/19E-AGENT-WORKSPACE-RUNBOOK.md`.
+- **All 4 Skills directly read by Codex:** `iches-codex-engineering`, `iches-public-frontend`, `iches-backoffice-ui`, `iches-code-verification`. Direct readability **PASS**; **automatic Skill triggering not tested**.
+- **Agent behavior:** no source/docs/file changes, no install, test, commit, fetch, migration or named GO. Thus **PRE-03 Codex access/readiness PASSED**; full **G0 runtime readiness still PARTIAL** due to DB test account and owner decision gates.
+- **Later SHA may differ** because ChatGPT maintains the documentation branch; snapshot SHA is intentional and historical.
+
+**Separate non-writing database connectivity evidence:** Windows service `MySQL97` reports **Running**; executable metadata product version **9.7.1.0**; TCP connect to `127.0.0.1:3306` **succeeded**. This does **not** verify MySQL credentials, server SQL response, storage engine, migrations, or an isolated test DB. No credentials read or stored.
+
+**Next active gate:** [20D PRE-02 Technical Decision Packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) owner approval, then isolated test DB and final Sprint 01 readiness. **NO GO CODING.**
+
+
 ## Human verification
 Codex shows 4 Skills readable, checks correct branch and does not edit anything. User shares **its textual result** with ChatGPT (without credential). ChatGPT updates 19F board after reviewing actual evidence, not from a screenshot of a chat input alone.
 

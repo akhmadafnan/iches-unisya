@@ -8,6 +8,22 @@
 
 The owner shared a screenshot of the actual VS Code window: `iches-unisya` workspace, `docs/19e-agent-workspace` branch indicator, **Codex side panel and conversation history visible**, `AGENTS.md`, `PLANS.md` and `.agents` Explorer entries. **UI presence is verified; agent's ability to read/invoke all 4 Skills is not yet verified.** Use [20C-02 read-only handshake](20C-02-CODEX-READ-ONLY-HANDSHAKE.md); report actual Codex response before marking the PRE-03 gate complete. Never infer GO Coding.
 
+## PRE-03 Codex handshake — VERIFIED (28 October 2026)
+
+**Evidence:** owner copied the Codex VS Code agent's complete read-only response, not just a screenshot.
+
+- **Workspace:** `D:\PINJAM-AFNAN\iches-unisya`; canonical remote `https://github.com/akhmadafnan/iches-unisya.git`.
+- **Branch:** `docs/19e-agent-workspace`; handshake HEAD `c9df6d0b30d6f3fdb88d94e086555f1a5af365f8`; worktree clean, local tracking ahead/behind `0/0` (agent did not fetch).
+- **Read in full:** `AGENTS.md`, `PLANS.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, `WORKSPACE.md`, `docs/19E-AGENT-WORKSPACE-RUNBOOK.md`.
+- **All 4 Skills directly read by Codex:** `iches-codex-engineering`, `iches-public-frontend`, `iches-backoffice-ui`, `iches-code-verification`. Direct readability **PASS**; **automatic Skill triggering not tested**.
+- **Agent behavior:** no source/docs/file changes, no install, test, commit, fetch, migration or named GO. Thus **PRE-03 Codex access/readiness PASSED**; full **G0 runtime readiness still PARTIAL** due to DB test account and owner decision gates.
+- **Later SHA may differ** because ChatGPT maintains the documentation branch; snapshot SHA is intentional and historical.
+
+**Separate non-writing database connectivity evidence:** Windows service `MySQL97` reports **Running**; executable metadata product version **9.7.1.0**; TCP connect to `127.0.0.1:3306` **succeeded**. This does **not** verify MySQL credentials, server SQL response, storage engine, migrations, or an isolated test DB. No credentials read or stored.
+
+**Next active gate:** [20D PRE-02 Technical Decision Packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) owner approval, then isolated test DB and final Sprint 01 readiness. **NO GO CODING.**
+
+
 ## 1. Evidence from connected Windows desktop (read-only)
 
 | Item | Actual result | Gate |
@@ -35,10 +51,12 @@ The owner shared a screenshot of the actual VS Code window: `iches-unisya` works
 - [x] PHP MySQL driver + basic extensions available.
 - [x] Identify **owner-designated** VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (1.143.1). Separate 1.128.0 install found under hyphen path; do NOT select that by default.
 - [x] Open ICHES project using owner-selected VS Code and detect Codex extension in Windows user profile.
-- [ ] Verify Codex signed-in/activated in UI and Skills recognized (NOT verified by installation alone).
+- [x] Codex read-only agent handshake verifies workspace access and all four Skills **readable**, with no file changes.
+- [ ] Automatic Skill routing and actual authorized coding usage remain untested (not needed for PRE-03 direct reading).
 - [x] Authorized clone into owner-selected `D:\PINJAM-AFNAN\iches-unisya`; checked remote, branch, clean worktree, AGENTS, PLANS, four Skills.
 - [x] Windows service `MySQL97` detected **Running** (read-only); no client CLI in PATH.
-- [ ] Confirm MySQL server connection/engine compatibility and a disposable isolated test DB (not production) before schema work.
+- [x] Check running MySQL97 service, executable metadata **9.7.1.0**, and local TCP **127.0.0.1:3306 reachable** (read-only).
+- [ ] Still verify **authenticated** SQL version, InnoDB and an isolated disposable test DB with safe credentials before schema work.
 - [ ] Approve RD-01 canonical target; RD-02 PHP/Node version range; RD-03 DB engine/version; RD-04 UUIDv7; RD-05 roles/scoping; RD-06 auth baseline in Decision Register.
 - [ ] Verify composer/npm install/build/test scripts **only after coding authorization**. Never mark tests PASS based on available CLI versions.
 - [ ] Confirm shadcn-vue Lyra-compatible preset/tokens before changing UI dependencies (not needed to preflight G0).

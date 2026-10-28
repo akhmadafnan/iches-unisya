@@ -27,15 +27,31 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 
 Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code status bar, Codex sidebar and prior chats visible, plus `AGENTS.md` / `PLANS.md` / `.agents`. This confirms **visible Codex UI session**, but **does NOT prove all 4 Skills can be read by the agent**. Next action: run the no-code [20C-02 Read-only Codex Handshake](20C-02-CODEX-READ-ONLY-HANDSHAKE.md) in Codex chat and review its textual output. No code/DB/install/merge/GO. PRE-02 note: NEW-003 approved participant Magic Link/OTP vs draft RD-06 password login must be reconciled before authorizing code.
 
+## PRE-03 Codex handshake — VERIFIED (28 October 2026)
+
+**Evidence:** owner copied the Codex VS Code agent's complete read-only response, not just a screenshot.
+
+- **Workspace:** `D:\PINJAM-AFNAN\iches-unisya`; canonical remote `https://github.com/akhmadafnan/iches-unisya.git`.
+- **Branch:** `docs/19e-agent-workspace`; handshake HEAD `c9df6d0b30d6f3fdb88d94e086555f1a5af365f8`; worktree clean, local tracking ahead/behind `0/0` (agent did not fetch).
+- **Read in full:** `AGENTS.md`, `PLANS.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, `WORKSPACE.md`, `docs/19E-AGENT-WORKSPACE-RUNBOOK.md`.
+- **All 4 Skills directly read by Codex:** `iches-codex-engineering`, `iches-public-frontend`, `iches-backoffice-ui`, `iches-code-verification`. Direct readability **PASS**; **automatic Skill triggering not tested**.
+- **Agent behavior:** no source/docs/file changes, no install, test, commit, fetch, migration or named GO. Thus **PRE-03 Codex access/readiness PASSED**; full **G0 runtime readiness still PARTIAL** due to DB test account and owner decision gates.
+- **Later SHA may differ** because ChatGPT maintains the documentation branch; snapshot SHA is intentional and historical.
+
+**Separate non-writing database connectivity evidence:** Windows service `MySQL97` reports **Running**; executable metadata product version **9.7.1.0**; TCP connect to `127.0.0.1:3306` **succeeded**. This does **not** verify MySQL credentials, server SQL response, storage engine, migrations, or an isolated test DB. No credentials read or stored.
+
+**Next active gate:** [20D PRE-02 Technical Decision Packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md) owner approval, then isolated test DB and final Sprint 01 readiness. **NO GO CODING.**
+
+
 ## NOW — satu prioritas yang boleh aktif
-**ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk task/sprint mana pun.**
+**ICH-PRE-02** — Owner review consolidated [20D technical packet](20D-PRE-02-TECHNICAL-DECISION-PACKET.md); PRE-03 Codex Skills read-only handshake PASSED. Test DB G0 still open. **Belum GO untuk task/sprint mana pun.**
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
 | **ICH-PRE-01** Audit blueprint dan repo lama | **REVIEWED_DOCS** | 18C-05A & 19A–D tersedia; tes runtime legacy belum diulang | Revalidate reuse per task, ChatGPT |
 | **Workspace governance 19E/19F** | **DRAFT_REVIEW** | Dokumentasi operasi dan papan kerja diajukan di branch docs | Owner review; ChatGPT perbaiki bila perlu |
 | **ICH-PRE-02** Keputusan teknis awal | **BLOCKED_DECISION** | Repo canonical, MySQL, UUIDv7, PHP target, auth belum diberikan persetujuan final eksplisit | Owner approves/revises recommended bundle, ChatGPT update register |
-| **ICH-PRE-03** Environment VS Code/Codex + toolchain | **PARTIAL_VERIFIED** | Git/PHP/Composer/Node/npm, repo clone, chosen VS Code open, Codex extension installed; MySQL97 service Running. Sign-in and disposable test DB unverified | Verify in-app Codex and isolated test DB |
+| **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
 | **ICH-S0-01** Laravel/Vue Foundation | **PLANNED / BLOCKED** | Work Order draf di 19C; target masih docs-only | Buka Task ID hanya setelah gate; Codex code-only |
 
