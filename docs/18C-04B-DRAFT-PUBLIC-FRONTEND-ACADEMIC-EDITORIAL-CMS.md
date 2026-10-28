@@ -1,5 +1,7 @@
 # 18C-04B — Arah Visual Public Frontend & CMS ICHES 2027
 
+> **KEPUTUSAN PRODUK LANJUTAN 28 OKTOBER:** fitur public website mengikuti **cakupan AICIS**, **countdown WAJIB dan dikelola via Event Master/Website CMS**, seluruh konten publik dikelola menu CMS Backoffice, dan **AI agent boleh mendesain layout secara menyeluruh tanpa diskusi komponen satu-satu**. Semua komponen tetap **bisa direvisi oleh user**. [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [SKILL AI](../.agents/skills/iches-public-frontend/SKILL.md). Jam event yang belum resmi **tidak diada-adakan**.
+
 > **ADENDUM 28 OKT 2026 — USER MELARANG PENGUNCIAN KOMPONEN:** **Academic Editorial adalah ARAH**, sementara semua **hero, header, section, komposisi mobile/desktop, foto, varian CMS, dan urutan** harus **bisa diubah sesuai keinginan user**. [18C-04C eksplorasi homepage](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) dan [18C-04D rancangan CMS fleksibel](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md) berstatus **DRAFT, belum ada opsi komponen final**.
 
 > **28 Oktober 2026 · STATUS: ARAH VISUAL DIPILIH, DETAIL HOMEPAGE DAN CMS MASIH DRAFT · BELUM CODING.**

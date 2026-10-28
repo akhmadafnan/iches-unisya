@@ -33,7 +33,10 @@
 **➡️ [18C-04A: DRAFT 55 Screen Inventory, Components & 60 Frontend UAT](docs/18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md)**  
 **➡️ [18C-04B: Academic Editorial DIPILIH — Public Frontend & CMS masih Draft](docs/18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md)**  
 **➡️ [18C-04C: DRAFT Homepage Wireframe Desktop/Mobile — semua komponen bebas direvisi](docs/18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md)**  
-**➡️ [18C-04D: DRAFT Flexible Visual CMS / 12 calon blok & 28 UAT](docs/18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md)**
+**➡️ [18C-04D: DRAFT Flexible Visual CMS / 12 calon blok & 28 UAT](docs/18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md)**  
+**➡️ [18C-04E: AICIS Features, Countdown WAJIB, Full Website CMS & 25 UAT](docs/18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md)**  
+**➡️ [AI Agent Skill: iches-public-frontend](.agents/skills/iches-public-frontend/SKILL.md)**  
+**➡️ [AI Agent Instructions](AGENTS.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -132,6 +135,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**UPDATE PRODUK 28 OKTOBER 2026 — PUBLIC FRONTEND FITUR JELAS, KOMPONEN TETAP FLEKSIBEL:** pengguna menjadikan **AICIS referensi CAKUPAN FITUR**, menyetujui **COUNTDOWN WAJIB** (hari/jam/menit/detik) dengan target Event Master yang editable di Admin, serta **Website CMS Backoffice** untuk membuat/mengubah halaman, media, section, menu/footer, terjemahan, SEO, draft/preview/publish. **Tidak perlu lagi diskusi satu per satu komponen sebelum AI menghasilkan desain lengkap**; visual tetap Academic Editorial tetapi semua komposisi revisable. Agent Skill `.agents/skills/iches-public-frontend/SKILL.md` + 3 referensi dan `AGENTS.md` telah disediakan agar AI developer dapat mengimplementasikan dengan kualitas konsisten **setelah GO coding eksplisit**. Jam mulai konferensi belum dinyatakan dalam TOR, sehingga tidak boleh membuat timer fiktif. [18C-04E](docs/18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [Agent Skill](.agents/skills/iches-public-frontend/SKILL.md). **Belum ada frontend/CMS/countdown yang benar-benar dibangun atau dites.**
+
 
 **UPDATE 28 OKTOBER 2026 — TIDAK ADA KOMPONEN YANG DIKUNCI:** pengguna secara eksplisit meminta “komponen-komponen frontend sesuai keinginan saya, jangan mengunci”. Karena itu, **18C-04C** menyusun tiga alternatif hero, desktop/mobile wireframe, menu dan varian section **semuanya opsional**. **18C-04D** menyusun **12 kandidat blok CMS** yang boleh diganti/digabung/ditambah, draft→preview→publish, revisi dan 28 UAT **belum dijalankan**. **Satu-satunya keputusan visual yang telah dipilih adalah arah Academic Editorial; tidak ada hero/layout/foto/navigasi/urutan/section yang difinalkan.** [18C-04C](docs/18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) · [18C-04D](docs/18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md). Tidak ada implementasi atau deploy.
 

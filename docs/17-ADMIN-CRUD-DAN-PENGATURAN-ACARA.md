@@ -1,5 +1,7 @@
 # 17 — Admin-Centered CRUD dan Pengaturan Seluruh ICHES 2027
 
+> **NEW REQUIREMENT 28 OKTOBER — WEBSITE CMS:** selain CRUD operasional, Backoffice wajib menyediakan **menu Website CMS** untuk membuat/mengubah **halaman publik, section, navigation/footer, media, EN/ID/AR, SEO, preview/publish/rollback dan Countdown**. Target countdown mengambil **Event Master starts_at dalam Asia/Jakarta**, bukan teks statis. Komponen bisa ditambah/direvisi, dan Admin tidak otomatis mendapat izin Finance/Academic. [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [AI Skill](../.agents/skills/iches-public-frontend/SKILL.md). Bentuk editor/schema masih DRAFT.
+
 > **UPDATE FINANCE 27 OKTOBER:** Superadmin mengelola **satu rekening langsung tanpa dual approval**; satu antrean Finance untuk transfer manual/bukti JPG/PNG/PDF. **Co-Host Verified dulu baru fitur 5 paper aktif; Paket personal Verified dulu baru 4 akses aktif.** [Tahap 18B-06](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
 > **Keputusan final, 27 Oktober 2026:** semua aspek **International Conference** dan rangkaian kegiatan lain dikelola melalui Backoffice **Admin** yang menyediakan CRUD sesuai kebutuhan, supaya panitia dapat mengubah pengaturan tanpa meminta developer atau deploy kode. **Batas akhir pendaftaran Paket Program Internasional harus dapat ditentukan dan diubah Admin kapan diperlukan.** Dokumentasi spesifikasi, belum implementasi.

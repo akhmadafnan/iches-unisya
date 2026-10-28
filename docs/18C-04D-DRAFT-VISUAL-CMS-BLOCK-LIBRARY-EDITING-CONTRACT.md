@@ -1,5 +1,7 @@
 # 18C-04D — DRAFT Visual CMS, Flexible Component Library & Editing Contracts
 
+> **KEBUTUHAN CMS DITERIMA 28 OKTOBER:** user meminta **Backoffice → Website CMS** untuk mengelola **seluruh konten frontend** termasuk menambah halaman, sections, media, menus/footer, SEO, bahasa, preview/publish tanpa rutinitas edit kode. **Countdown wajib editable melalui CMS dan Event Master**. 12 blok pada dokumen ini **bukan batas atas**; library harus extensible, namun komponen teknis benar-benar baru masih perlu pengembangan sekali. [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [Skill AI](../.agents/skills/iches-public-frontend/SKILL.md). Bentuk editor tetap DRAFT.
+
 > **28 Oktober 2026 · REKOMENDASI FLEKSIBEL · TIDAK FINAL · BELUM CODING.**  
 > Pemilik produk menetapkan **arah Academic Editorial** untuk public frontend tetapi secara eksplisit meminta **komponen frontend jangan dikunci**; pengguna menginginkan kemampuan mengedit website publik melalui **Admin Backoffice**, tidak perlu developer untuk perubahan konten dan komposisi rutin.
 >

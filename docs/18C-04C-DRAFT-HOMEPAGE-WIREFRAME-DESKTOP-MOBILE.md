@@ -1,5 +1,7 @@
 # 18C-04C — DRAFT Homepage Visual Wireframe: Desktop, Mobile & Variasi Komponen
 
+> **SUPERSESSION WORKFLOW 28 OKTOBER:** User tidak mewajibkan pemilihan satu per satu varian H-01/H-02/H-03, N-01/N-02/N-03 atau susunan section sebelum AI membuat homepage. **AI menggunakan [18C-04E feature contract](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) dan [Skill](../.agents/skills/iches-public-frontend/SKILL.md) untuk membuat initial design koheren**, termasuk **countdown wajib**, lalu user bebas merevisi semua komponen. Semua sketsa dalam dokumen ini tetap referensi, bukan gate pilihan.
+
 > **28 Oktober 2026 · EKSPLORASI, BUKAN FINAL.** Pemilik produk menyetujui **arah Academic Editorial**, namun secara eksplisit meminta **“komponen-komponen frontend sesuai keinginan saya, jangan mengunci.”** Dokumen ini mengusulkan *beberapa alternatif* komposisi yang dapat dikritik, diganti, dihapus, atau digabung. **Tidak ada hero, section, urutan, bentuk card, foto, typography scale, CTA, breakpoint, atau layout preset yang dikunci.**
 >
 > **Bukan source frontend / bukan aplikasi / bukan mockup yang telah disetujui.** Semua wireframe teks dalam dokumen ini adalah referensi untuk review visual sebelum prototyping dan coding.

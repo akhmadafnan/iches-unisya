@@ -380,6 +380,30 @@ Dua referensi pengguna: [AICIS](https://aicis.uinssc.ac.id/) dan [Multaqa Dawli]
 
 [Wireframe DRAFT 18C-04C](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) · [Visual CMS DRAFT 18C-04D](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md).
 
+## A22. Keputusan Fitur Public Frontend, Countdown & Website CMS, Agent Skill (28 Oktober 2026)
+
+**PESAN PENGGUNA:** “mungkin secara fitur frontend kita bisa meniru [AICIS] ... dia memiliki countdown ... itu harus kita terima ... pengelolaan isi dari frontend harus ada di backoffice dengan menu CMS ... agar bisa menambah segalanya ... tidak perlu diskusi 1-1 ... butuh bantuan AI ... dengan SKILLS membuat frontend/UI/UX/website yang powerful.”
+
+**INTERPRETASI RESMI:** pengguna **menerima countdown dan CMS sebagai REQUIREMENT**, AICIS sebagai **referensi fitur** bukan desain, serta mengubah proses kerja menjadi **AI-led initial design + owner review/revision**, bukan voting per komponen. **Academic Editorial tetap arah visual yang dipilih, tidak membekukan struktur hero/section.** AICIS mempunyai Administrative Check yang **tidak disalin** karena bertentangan dengan keputusan alur Abstract ICHES.
+
+| ID | Kebutuhan / implementasi spesifikasi | Status |
+|---|---|---|
+| NEW-065 | **COUNTDOWN acara ICHES WAJIB** pada frontend publik, Days/Hours/Minutes/Seconds, otomatis berhenti saat mulai | **KEBUTUHAN DITERIMA; penempatan/visual bebas direvisi** |
+| NEW-066 | **Countdown terikat Event Master/Backoffice** (target tanggal+jam resmi, timezone `Asia/Jakarta`, label/visibility/layout CMS editable) — **bukan hardcoded** | **KEBUTUHAN DITERIMA; konfigurasi teknis DRAFT** |
+| NEW-067 | **Backoffice → Website CMS** harus mengelola seluruh **konten frontend** dan pembuatan halaman/section/menu/media/terjemahan/SEO/preview/publish, bukan sekadar home text | **KEBUTUHAN DITERIMA; editor/schema DRAFT** |
+| NEW-068 | **AICIS sebagai inspirasi CAKUPAN FITUR**, termasuk homepage/tema, countdown, timeline, submission process, track, FAQ, downloads, program, speaker, partners, statistik hanya jika data sah | **ARAH FITUR DITERIMA; TIDAK CLONE UI/WORKFLOW** |
+| NEW-069 | **Tidak wajib diskusi komponen satu per satu**; AI menyiapkan frontend modern/clean/Academic Editorial secara koheren, user memberi feedback sesudah melihat hasil; komponen tetap revisable | **ARAH PROSES DITERIMA** |
+| PROP-090 | Skill portabel `.agents/skills/iches-public-frontend/SKILL.md` + 3 referensi & `AGENTS.md` untuk AI coding agent | **BERKAS SKILL SUDAH DIBUAT DI REPO; belum digunakan untuk coding** |
+| PROP-091 | Countdown contract mencakup jam resmi **belum ditetapkan**, tanpa angka/timestamp asumsi; timestamp offset, boundary, RTL dan a11y test | **DRAFT TEKNIS, FAKTA TOR DIJAGA** |
+| PROP-092 | CMS memakai reusable extendable component registry; Admin bisa tambah pages/sections tanpa deploy rutin, **tipe visual baru memang perlu kode sekali** | **DRAFT DESAIN CMS; bukan janji HTML/JS builder tanpa batas** |
+| PROP-093 | **25 skenario AIC-T01..AIC-T25** acceptance criteria fitur/countdown/CMS/AI handoff | **RENCANA UAT, BELUM DIEKSEKUSI** |
+
+**FAKTA TOR:** hari utama konferensi **5 Januari 2027**, kegiatan terkait **6 Januari 2027**. **Jam mulai belum ditetapkan**, sehingga jika belum ada `starts_at` resmi CMS menampilkan tanggal dan pesan waktu belum dikonfirmasi, tidak membuat timer menuju tengah malam. Target aktual diisi melalui pengaturan resmi.
+
+**SUPERCESSION ATAS PROSES DISKUSI 18C-04C:** daftar opsi H-01/H-02/H-03 dan N-01/N-02/N-03 tidak menjadi gate pilihan wajib sebelum coding. AI boleh mengambil keputusan desain awal sendiri berdasar Skill, pengguna dapat merevisi. **No new coding GO** tersirat.
+
+[18C-04E — Feature Scope, Countdown, CMS, Agent Skill](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [SKILL.md](../.agents/skills/iches-public-frontend/SKILL.md) · [AI Agent Instructions](../AGENTS.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

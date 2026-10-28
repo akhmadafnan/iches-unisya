@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## KEBUTUHAN LENGKAP PUBLIC FRONTEND — AICIS/COUNTDOWN/CMS/AI SKILL (28 OKT 2026)
+
+Pengguna menetapkan **AICIS sebagai referensi fitur**, bukan template, dan **countdown konferensi hari/jam/menit/detik WAJIB** pada frontend. Admin mengelola melalui **Website CMS**: halaman, section, menu/footer, foto/logo/media, teks multibahasa EN/ID/AR, SEO, preview/draft/publish, serta pengaturan tampilan countdown yang membaca **tanggal dan jam resmi Event Master**. **Konferensi utama 5 Januari 2027; jam mulai belum ditentukan sehingga jangan mengarang countdown.** Arah visual Academic Editorial tetap, **semua komponennya dapat direvisi tanpa diskusi 1-1**. Untuk mempercepat tahap coding selanjutnya telah dibuat **Agent Skill portabel** dengan design brief, CMS/data contract, dan QA acceptance gates. **Tidak ada frontend/CMS/timer yang sudah berjalan**. [18C-04E](18C-04E-AICIS-FEATURES-COUNTDOWN-CMS-AND-AGENT-SKILL.md) · [AI Skill](../.agents/skills/iches-public-frontend/SKILL.md).
+
+---
+
 ## PENDALAMAN 18C-04C/D — PUBLIC FRONTEND SEMUA KOMPONEN TERBUKA (DRAFT)
 
 Pemilik produk memilih **Academic Editorial** sebagai arah visual, lalu secara eksplisit meminta **jangan mengunci komponen frontend**. Maka dibuat opsi hero H-01/H-02/H-03, header N-01/N-02/N-03, wireframe homepage desktop/mobile dan pilihan layout section yang **semua dapat dipilih/direvisi/dihapus**. CMS Backoffice direkomendasikan mengatur teks/foto/CTA/urutan/visibility/varian/EN-ID-AR/SEO dan Draft→Preview→Publish tanpa kode untuk pembaruan rutin, namun jenis komponen baru tetap memerlukan pengembangan. **12 candidate blocks dan 28 CMS UAT masih DRAFT; belum coding, belum approval komponen.** [18C-04C Wireframes](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) · [18C-04D Flexible CMS](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md).
