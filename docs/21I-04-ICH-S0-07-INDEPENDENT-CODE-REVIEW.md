@@ -64,6 +64,10 @@ The owner already authorized implementation of `ICH-S0-07`; a minimal review cor
 5. Make a **new follow-up local commit** on the same branch; do not amend `17e335...`. **STOP before push or PR**; approval for publication/merge is still a separate owner decision.
 6. ChatGPT re-audits the corrected local commit. Actual CI Linux/Node22 remains `NOT_RUN` until the branch is published and a real GitHub Actions run exists.
 
+## Superseding post-fix checkpoint (28 October 2026)
+
+REV-01 has been **CLOSED** by follow-up local commit `c420d95175d7d25cd9fee6719180acaf0b684903`; the corrected source action uses actual `v2` target commit `eb7c497e18156a6bbabfef1d3a82760b9eda3962`, and the review found a one-line-only workflow change plus append-only log. **Current verdict is REVIEW_PASS / OWNER_ACCEPTANCE_PENDING**, not the pre-fix `REVISIONS_REQUIRED` documented below. Actual GitHub CI remains **NOT_RUN**. Full evidence: [21I-05 final review](21I-05-ICH-S0-07-FINAL-REVIEW.md).
+
 ## Review decision
 
 **REVISIONS_REQUIRED / REV-01 HIGH.** Structural/scope checks PASS; reported local checks PASS; reproducible pinned action is incorrect; CI runtime untested. This is one small actionable correction, not a full rewrite or separate feature task. After fix, review may advance to `REVIEW_PASS / OWNER_ACCEPTANCE_PENDING`. Never mark GitHub CI PASS before an actual workflow check.

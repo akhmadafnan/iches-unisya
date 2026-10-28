@@ -173,8 +173,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Existing named `ICH-S0-07` GO covers this narrow code review correction; **Codex only**, append-only correction evidence and new local commit. **No push/PR/merge/deployment permission** yet; owner acceptance pending, Linux CI not run.
 - Local accepted `ICH-S0-01` source is preserved. `21H` design Skills PR #3 remains independently open/unmerged.
 
+## 21I-05 — ICH-S0-07 REV-01 closed / independent review PASS (28 October 2026)
+
+- [21I-05 final review](21I-05-ICH-S0-07-FINAL-REVIEW.md) **REVIEW_PASS**: local branch `feat/ich-s0-07-ci`, original CI commit `17e335049f209110e76a03dc99bc588cc7cee925`, follow-up fix `c420d95175d7d25cd9fee6719180acaf0b684903`. Exact ancestry and Git clean independently verified.
+- REV-01 `shivammathur/setup-php` commit pin is now `eb7c497e18156a6bbabfef1d3a82760b9eda3962`, dereferenced from official annotated `v2` tag; workflow diff only one line. Append-only log added 21 lines, no deletions.
+- Local PHP/Pint/Vue/Vite/actionlint checks recorded PASS by Codex; **Linux/Node22 GitHub CI remains NOT_RUN / PENDING_PUBLICATION**. No feature push/PR/merge yet. Next permission: owner ACCEPT S0-07 and authorize Codex feature push + ChatGPT PR creation, **NO MERGE**.
+- All additional product code/DB/production work remains separately authorized. Design Skills PR #3 remains open.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 REVISIONS_REQUIRED / CODEX_REVIEW_FIX_PENDING.** Initial local implementation complete but independent audit found wrong Git object type in setup-php SHA. Only narrow fix under existing named GO; no publish or merge authorization.
+**NOW: ICH-S0-07 REVIEW_PASS / OWNER_ACCEPTANCE_PENDING / CI_NOT_RUN.** REV-01 fixed in follow-up local commit `c420d951`; ChatGPT verified SHA target commit, exactly one workflow line changed, build log append-only. No push/PR/merge authorization yet.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-05 — CI review correction closed (CURRENT)
+
+- Local `feat/ich-s0-07-ci` final SHA `c420d95175d7d25cd9fee6719180acaf0b684903` (parent `17e3350`), clean; exact workflow one-line pin corrected, append-only log +21 lines. [21I-05 independent final review](docs/21I-05-ICH-S0-07-FINAL-REVIEW.md) marks **REVIEW_PASS / OWNER_ACCEPTANCE_PENDING** and REV-01 closed.
+- Existing owner GO is sufficient for implemented CI code and narrow fix. **No publication authorization yet**. No remote CI runs, so Linux/Node22 status remains `NOT_RUN`. Await owner ACCEPT and Codex push permission, then GitHub connector PR, run actual checks before separate merge authorization.
+
 ## 21I-04 — Local CI implementation independently reviewed (CURRENT)
 
 - `ICH-S0-07` local commit `17e335049f209110e76a03dc99bc588cc7cee925` (branch `feat/ich-s0-07-ci`, base `42a8633`) independently verified clean, 2 changed files only. Local tests reported PASS, **GitHub CI / Node 22 NOT_RUN**.
