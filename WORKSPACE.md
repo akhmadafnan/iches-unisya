@@ -1,5 +1,7 @@
 # ICHES 2027 — AI Agent Workspace
 
+> **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
+
 > **Mulai di sini.** Repository ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Setelah GO Task ID atau bounded Sprint GO eksplisit, Codex VS Code mengubah kode serta mencatat evidence terbatas; ChatGPT mengelola keputusan, spesifikasi, dokumentasi, review, dan GitHub.
 
 ## One Master Plan (DRAFT — no GO)
@@ -37,8 +39,8 @@
 
 ## Lokasi kerja lokal disepakati
 
-- **Windows:** `D:\PINJAM-AFNAN\iches-unisya` — folder belum ada pada pemeriksaan 28 Oktober 2026; **jangan clone/buat otomatis tanpa izin setup**.
-- **VS Code utama pilihan owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**spasi**, versi 1.143.1 dari metadata). Instalasi v1.128.0 di direktori bertanda hubung berbeda dan bukan default. Login/Skills Codex pada VS Code utama belum diverifikasi.
+- **Windows:** `D:\PINJAM-AFNAN\iches-unisya` — **berhasil di-clone**, branch `docs/19e-agent-workspace`, clean, 4 Skills dan PLANS tersedia.
+- **VS Code utama pilihan owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**spasi**, v1.143.1), GUI sudah membuka ICHES. OpenAI Codex extension terpasang di profil pengguna; login/Skills invocation belum diverifikasi.
 
 ## Status verifikasi awal (28 Oktober 2026)
 - Target: `akhmadafnan/iches-unisya`, `main`; source aplikasi target **belum ada** saat audit.

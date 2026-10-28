@@ -1,5 +1,7 @@
 # 20C — Codex VS Code Readiness: Verified Local Preflight
 
+> **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
+
 > **28 October 2026 (Asia/Jakarta) · READ-ONLY INSPECTION COMPLETED, NO CODE GO.** This document records what was **actually checked** on one connected Windows Desktop Commander device. It does not prove the device is the final development machine, that the target repository is cloned, or that production hosting is ready.
 
 ## 1. Evidence from connected Windows desktop (read-only)
@@ -14,11 +16,11 @@
 | npm | `11.17.0` via `npm.cmd --version` | PASS via .cmd; `npm --version` failed through PowerShell invocation |
 | PHP extensions | `pdo_mysql`, `mysqli`, `openssl`, `mbstring`, `fileinfo`, `intl` detected | PASS (module presence only) |
 | MySQL CLI | `mysql` not found in PATH | NOT_VERIFIED, not proof server unavailable |
-| **Owner's VS Code installation** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe`, version **1.143.1** (verified Windows file metadata) | PATH VERIFIED; launch/sign-in NOT TESTED |
+| **Owner's VS Code installation** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (v1.143.1) opened workspace, visible window `Welcome - iches-unisya` | GUI VERIFIED; Codex sign-in NOT TESTED |
 | VS Code extensions / Codex | On **other** VS Code installation `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (1.128.0), `openai.chatgpt` and `openai.codex-audio` were listed. Owner's **space-path** installation has `bin\new_code.cmd`, but that wrapper references missing `Code.exe`; its extension list was **not verified** | OWNER INSTALL EXTENSIONS/SIGN-IN **NOT_VERIFIED** |
-| Local `iches-unisya` clone | Owner chose `D:\PINJAM-AFNAN\iches-unisya`, checked explicitly: **folder absent** | NOT_CREATED, pending setup authorization |
+| Local `iches-unisya` clone | `D:\PINJAM-AFNAN\iches-unisya` cloned from GitHub; docs branch tracking origin; clean, four skills | VERIFIED / READY FOR DOC REVIEW |
 | Local test database | No connection attempted | NOT_VERIFIED |
-| Git remote, local branch/status | No project clone path established | NOT_VERIFIED |
+| Git remote, local branch/status | Verified origin `https://github.com/akhmadafnan/iches-unisya.git`, branch `docs/19e-agent-workspace`, clean | PASS |
 | Runtime test/migration | No Composer install, npm build, Laravel tests, migration or database write performed | NOT_RUN |
 
 **Inspection scope:** read-only CLI version/extension checks, a small set of standard VS Code paths and common repository-folder candidates. The audit did **not** search all drives or inspect credentials/private files. On Windows PowerShell prefer `npm.cmd` if `npm` resolves to a blocked `npm.ps1`; do **not** change execution policy just to run npm. Node 26 is detected, but final target should follow verified framework/dependency and hosting compatibility instead of assuming newest = best.
@@ -28,9 +30,9 @@
 - [x] Git/PHP/Composer/Node/npm are present and versions recorded.
 - [x] PHP MySQL driver + basic extensions available.
 - [x] Identify **owner-designated** VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (1.143.1). Separate 1.128.0 install found under hyphen path; do NOT select that by default.
-- [ ] Confirm Codex VS Code sign-in and that repository Skills load in an actual workspace.
-- [x] Owner-selected target path `D:\PINJAM-AFNAN\iches-unisya` and verified destination does not exist.
-- [ ] With separate setup authorization, clone there; then verify remote, branch and clean Git status.
+- [x] Open ICHES project using owner-selected VS Code and detect Codex extension in Windows user profile.
+- [ ] Verify Codex signed-in/activated in UI and Skills recognized (NOT verified by installation alone).
+- [x] Authorized clone into owner-selected `D:\PINJAM-AFNAN\iches-unisya`; checked remote, branch, clean worktree, AGENTS, PLANS, four Skills.
 - [ ] Determine MySQL server/test DB availability; ensure a disposable isolated DB (not production) can be used.
 - [ ] Approve RD-01 canonical target; RD-02 PHP/Node version range; RD-03 DB engine/version; RD-04 UUIDv7; RD-05 roles/scoping; RD-06 auth baseline in Decision Register.
 - [ ] Verify composer/npm install/build/test scripts **only after coding authorization**. Never mark tests PASS based on available CLI versions.

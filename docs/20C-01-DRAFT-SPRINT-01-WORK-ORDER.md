@@ -1,5 +1,7 @@
 # 20C-01 — ICH-SPRINT-01: Foundation Bootstrap & Verification (DRAFT)
 
+> **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
+
 > **STATUS: BLOCKED_DECISION / NO GO CODING.** This is a proposed finite **Sprint Work Order**, not a prompt that may yet execute. Owner consent to plan/workflow does not authorize changing source or installing packages. Use [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md).
 
 ## Authorized scope proposal
@@ -10,7 +12,7 @@
 | Ordered task IDs | `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07` (**three only**) |
 | Business goal | Minimal, bootable Laravel/Inertia/Vue foundation with canonical identity/event schema and repeatable test pipeline |
 | Repository | Proposed `akhmadafnan/iches-unisya`; owner must confirm RD-01 before READY |
-| Owner-selected local workspace path | `D:\PINJAM-AFNAN\iches-unisya` (**folder currently absent; do not create/clone before setup authorization**) |
+| Owner-selected local workspace path | `D:\PINJAM-AFNAN\iches-unisya` (**clone completed**, clean docs branch tracking origin) |
 | **Owner's VS Code** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (version **1.143.1**, with space). Separate 1.128.0 install under hyphen path is **not the chosen default**; Codex extension/sign-in on chosen install not verified |
 | Start baseline | Approved merge of governance PR and verified `main` commit; **not frozen yet** |
 | Branch | `feat/ich-sprint-01-foundation` (to be created by Codex **after** named GO) |
