@@ -135,6 +135,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **G21G-04..08 NOT_RUN / PENDING:** actual Codex discovery/activation, negative safety tests and owner-approved merge. [Detailed W1 audit](21G-04-W1-GITHUB-QUALITY-AUDIT.md).
 - Draft PR to be created from `docs/21g-skills-integration` (not yet merged); no new application coding GO issued.
 
+## 21G — PR #2 merged and isolated read-only Skills QA prepared (28 October 2026)
+
+- **Owner explicitly approved `MERGE PR #2`** and read-only Codex testing. [PR #2](https://github.com/akhmadafnan/iches-unisya/pull/2) **MERGED** at `e5362f919fbd7ce23fdd50761b5dc99fa9410e18`. Final GitHub check: 18 Markdown/agent assets only, no app code and no conflicts.
+- Windows `origin/main` fetched. Five third-party Skills are readable and frontmatter checks **5/5 PASS** on isolated detached QA worktree `D:\PINJAM-AFNAN\ICHES-SKILLS-READONLY`, HEAD PR #2 merge SHA; nine total Skills including four native ICHES; QA Git clean.
+- Opened separate VS Code window for the isolated worktree and [21G-03](21G-03-ACTIVATION-AND-WAVE-PLAN.md). **Real Codex invocation/auto-selection has NOT occurred**, so G21G-05/06/07 remain **NOT_TESTED**. Use [21G-05 Codex read-only handoff](21G-05-POST-MERGE-CODEX-READONLY-TEST.md).
+- Main Laravel worktree `feat/ich-s0-01-foundation` remains at `8eba7cb5b9da0577910beb919844165869591e05`, clean and unchanged. The accepted feature branch still cannot be pushed because Windows Git HTTPS credentials are unconfigured.
+- **Next:** user runs the copy/paste read-only prompt in the separate Codex VS Code window and returns actual results. **No coding GO, application merge, DB migration or deployment**.
+
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
 

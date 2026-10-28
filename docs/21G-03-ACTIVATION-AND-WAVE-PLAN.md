@@ -2,6 +2,13 @@
 
 > **PILOT PENDING MERGE / NO CODE GO.** This is a verification plan for five vendored, commit-pinned W1 Skills. Do not call installation or Codex auto-discovery PASS until actually tested on the user's chosen device and agent.
 
+## Post-merge checkpoint (28 October 2026)
+
+- PR #2 was explicitly authorized and merged, SHA `e5362f919fbd7ce23fdd50761b5dc99fa9410e18`.
+- Separate detached QA worktree for a real read-only Codex test is available at `D:\PINJAM-AFNAN\ICHES-SKILLS-READONLY`. Five third-party Skill YAML names verified there; nine total Skill folders (four native + five external). Original Laravel feature remains untouched.
+- See [21G-05 actual Codex handoff](21G-05-POST-MERGE-CODEX-READONLY-TEST.md). Codex invocation and automatic activation remain **NOT_TESTED**, requiring actual response from VS Code. Do not conflate terminal file-read PASS with Codex activation PASS.
+
+
 ## 21G Wave 1 acceptance gates
 
 | Gate | Evidence required | Initial state |

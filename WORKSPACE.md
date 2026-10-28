@@ -18,6 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21G — PR #2 merged, static QA PASS; Codex test response pending (latest)
+
+- Owner explicitly authorized merge of docs/Skills-only PR #2, merged SHA `e5362f919fbd7ce23fdd50761b5dc99fa9410e18`. Five third-party Skills (Ponytail general/review/audit; Matt diagnosing-bugs/TDD) now on `main`.
+- Safe detached worktree `D:\PINJAM-AFNAN\ICHES-SKILLS-READONLY` was created for **read-only Codex test**; original local Laravel feature branch `feat/ich-s0-01-foundation` and HEAD `8eba7cb5b9da0577910beb919844165869591e05` unchanged and clean.
+- [21G-05 post-merge test handoff](docs/21G-05-POST-MERGE-CODEX-READONLY-TEST.md): static verification of all 5 Skill YAML names PASS; model invocation and auto-trigger **NOT_TESTED** until Codex returns its actual output. No new GO Coding.
+
+
 ## 21G — External Skills curation, separate unmerged docs branch
 
 - Owner approved selective external Skills integration. Initial static W1 copies are staged on remote **`docs/21g-skills-integration`**, not on local unpushed Laravel feature branch. Five skills: Ponytail, Ponytail Review/Audit, Matt diagnosing-bugs, Matt TDD; source SHAs and MIT licenses retained.
