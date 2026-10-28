@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-05 — ICH-S0-02 MERGED / COMPLETE (CURRENT)
+## 21K-06 — Dev-only demo seeder convention locked (CURRENT)
+
+- Owner simplified local development: all synthetic seeded user emails end in `@iches.test`; where a local-only demo password login is supported, every demo credential is the literal `password`, hashed at rest. See [21K-06 final fixtures policy](docs/21K-06-DEV-DEMO-USER-SEED-POLICY.md).
+- The merged S0-02 users schema has **no password column**, and real participant login remains passwordless OTP/Magic Link. Do not add participant password requirements or seed weak accounts to production. Demo paths/seeding require local-only opt-in and never run in production. Use non-destructive idempotent seeding.
+- This is a decisions/docs-only update, **not GO CODING ICH-S0-03** or permission for schema changes, DB writes/reset, push, PR, merge or deploy.
+
+## 21K-05 — ICH-S0-02 MERGED / COMPLETE (HISTORICAL)
 
 - Owner expressly approved SHA-pinned standard merge of [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6), feature `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`; GitHub returned `merged=true`, merge commit `3eb1be7b23a2fd08fdcbd84e5fd1ba0819f90201` verified as `main` HEAD. Exactly **14** reviewed paths, two feature commits.
 - [21K-05 postmerge evidence](docs/21K-05-S0-02-MERGED-COMPLETE.md): real push and PR GitHub Actions PHP 8.4/Node22 both SUCCESS, local MySQL S0-02 8/134 PASS, no CI MySQL service. Main branch unprotected/no required checks or active rulesets; normal merge without bypass.

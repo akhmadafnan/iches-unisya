@@ -289,8 +289,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Final checks before merge: `mergeable=true`, `mergeable_state=clean`, `main` unprotected, required check list empty, no applicable active rulesets; normal GitHub merge without bypass. Detailed branch protection endpoint 403 (integration lacks admin), but readable branch summary/rulesets showed no required rule.
 - [21K-05 merge closure report](21K-05-S0-02-MERGED-COMPLETE.md). **ICH-S0-01, ICH-S0-07 and ICH-S0-02 COMPLETE**, no additional coding GO, migration, database reset, or deployment. **ICH-S0-03 passwordless OTP remains NO_GO**; Design Skills PR #3 stays OPEN/UNMERGED. No automatic production cutover.
 
+## 21K-06 — Dev demo accounts simplified by Owner (28 October 2026)
+
+- **DEVELOPMENT FIXTURE POLICY FINAL:** [21K-06](21K-06-DEV-DEMO-USER-SEED-POLICY.md). All synthetic seeded user emails use **`@iches.test`**; when password-based local demo login exists, shared demo credential is **`password`**, stored as a hash, **never plaintext in the DB**. Predictable values only in local/test environments; no production demo login or weak accounts.
+- **Existing S0-02 users table has NO password column**, and **participant login stays email OTP / Magic Link (NEW-003, RD-06)**. Do not silently implement participant password login. If Codex later needs demo password login, do it as local-only opt-in within a newly authorized S0-03 slice; otherwise use local mail logs/inbox for OTP. Idempotent non-destructive seeder only; no schema wipe.
+- **S0-03 still NOT GO CODING.** This decision removes repeated fixture design discussions; add to next auth Work Order, no immediate code, DB migrations, data insertion, PR, merge or deployment. S0-01/S0-07/S0-02 remain COMPLETE; PR #3 still separate.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 MERGED / COMPLETE; NEXT ICH-S0-03 NOT_AUTHORIZED / NO_GO.** Owner-authorized normal PR #6 merge completed at 3eb1be7, 14 reviewed paths, both GitHub CI events SUCCESS. S0-01/S0-07/S0-02 merged. No DB changes, coding task or deployment authorized.
+**NOW: S0-01/S0-07/S0-02 MERGED / COMPLETE; DEV_DEMO_FIXTURES_LOCKED; NEXT ICH-S0-03 NO_GO.** Owner chose @iches.test seed emails and shared hashed 'password' for local demo accounts that support password login, while participant production auth remains OTP/Magic Link. No source edits, migrations or deployments authorized.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
