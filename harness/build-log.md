@@ -177,3 +177,17 @@ Regression covers both NULL institution and specific institution: active duplica
 Schema mechanism cross-checked against MySQL's official generated-column ALTER documentation: https://dev.mysql.com/doc/refman/8.4/en/alter-table-generated-columns.html ; actual compatibility proved by migration and tests on local MySQL 9.7.1. No other database, production account/data, credentials, runtime application behavior, routes, dependency/lockfile, CI workflow or governance file changed. Previous build-log evidence preserved append-only.
 
 Local Windows/PHP 8.4.24/Node 26.4.0 verification only; corrected feature SHA has no GitHub/Linux/Node22 CI run yet. No remaining local integrity failure. Stop after a new local correction commit, without push, PR, merge, database reset or deployment.
+
+## 2026-10-28 — ICH-S0-03 authentication foundation (owner GO, local commit only)
+
+Branch: feat/ich-s0-03-passwordless-auth, parent a05fc046df96fbea4b231f68c6301d6f13be9e0b. Implemented session authentication, passwordless Email OTP/Magic Link, minimal login/dashboard/logout, guarded local demo login and explicit idempotent synthetic seeder. UUIDv7, scoped Policies, previous migrations and DB-free CI preserved. No dependency added.
+
+Verified exact owned local iches_unisya / 127.0.0.1:3306 / InnoDB / FK on / batches 1-2 and empty initial domain tables before writes. Additive migration 000003 applied as batch 3 after pretend review. Explicit local demo seeder executed twice with opt-in; final persistent inventory users=4, events=1, institutions=0, role_assignments=2, consumed auth_challenges=2, migrations=3. All temporary test fixtures rolled back; no resets or other database writes.
+
+Final executed checks: composer validate --strict PASS (exit 0); php artisan test --display-warnings PASS 10 tests/120 assertions (exit 0); ICHES_DB_TESTS=1 php artisan test tests/Database --display-warnings PASS 18 tests/308 assertions (exit 0); php vendor/bin/pint --test PASS (exit 0); npm.cmd run typecheck/build PASS (exit 0); migration status/routes PASS (exit 0). Herd Chromium browser smoke PASS (exit 0): local mail-log OTP, one-use Magic Link, demo validation/login, regenerated session/logout and rejected old cookie, desktop/mobile/keyboard, no runtime JS errors. Baseline Windows CRLF normalized locally without canonical source changes; prior migrations remain outside diff.
+
+Sanitized command output, security coverage, screenshots, browser script and limits: harness/evidence/ich-s0-03/. Local only; no real SMTP/production UAT or remote CI claimed. Separate named endpoint quotas fixed a browser-discovered limiter collision. No local blocker. Stop after local commit before push, PR, merge, deployment or next task. S0-04/PR #3 untouched.
+
+## 2026-10-28 — ICH-S0-03 REV-01: isolate limiter test IP
+
+Owner-authorized test-only fix on feat/ich-s0-03-passwordless-auth, preserving parent 6f7f9beb. Added REMOTE_ADDR=192.0.2.77 only within the limiter test; kept 10 requests, 429 and readable Inertia response assertions. No production auth/CI/config/migration/database changes. Standard DB-free suite PASS 10/120, targeted limiter PASS 1/29, actual isolated file-cache/session CI-like suite PASS 10/120 with no warnings (all exit 0); Pint and diff checks PASS (exit 0). Temporary PHPUnit configuration/storage used because repository test XML forces array and existing local file counters persisted; existing cache untouched. Evidence: harness/evidence/ich-s0-03/rev01.md. Local follow-up commit only; remote CI pending, stop before push/PR update/merge/deploy.
