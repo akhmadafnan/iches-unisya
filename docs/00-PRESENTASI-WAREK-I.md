@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## OPERASIONAL KERJA AI — CHATGPT × CODEX VS CODE × GITHUB (28 OKT 2026)
+
+Owner meminta pengolahan seluruh blueprint menjadi **pekerjaan teknis nyata**, menggunakan **Codex di VS Code secara eksklusif untuk membuat/memperbaiki/menambah CODE**, sedangkan **ChatGPT menangani analisis, dokumentasi, keputusan, review dan koordinasi GitHub**; terminal digunakan seperlunya. Dibuat **protokol 19A**, **backlog 19B dengan Task ID per slice**, **19C prompt Work Order untuk Codex**, **19D traceability keputusan/dokumen→kode/tes** serta **AI Skill engineering**. **Belum ada GO coding, app, UAT runtime ataupun deployment**. Rekomendasi ICH-S0-01 selective Laravel foundation setelah repo/DB/PK/hosting dipilih owner. [Protokol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) · [Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [Work Orders](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md) · [Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [Engineering Skill](../.agents/skills/iches-codex-engineering/SKILL.md).
+
+---
+
 ## TAHAP 18C-05 — IMPLEMENTATION READINESS & MVP PLAN (DRAFT 28 OKT 2026)
 
 Audit remote GitHub menunjukkan **repo baru ICHES masih dokumentasi/Agent Skill**, sedangkan **repo lama** mempunyai fondasi **Laravel 13/Vue, auth, UUIDv7, scoped roles, private files, registration/payment** yang dapat dipakai **secara selektif setelah audit**, bukan salin penuh. **Payment Verify lama tidak mencocokkan mutasi bank secara eksplisit, tidak boleh dipakai tanpa perbaikan.** Rekomendasi teknis **repo baru sebagai target, MySQL+UUIDv7, Laravel modular monolith** masih menunggu persetujuan. **10 implementation slices** disusun, prioritas **S0 Foundation → S1 Website CMS/Public Frontend/Countdown → S2 Abstract intake** mengingat TOR Abstract window **1–20 Des 2026**. **45 UAT baru hanya rencana**. Tidak ada coding, deployment, infrastruktur maupun jam mulai event yang diklaim siap. [18C-05](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A](18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md).

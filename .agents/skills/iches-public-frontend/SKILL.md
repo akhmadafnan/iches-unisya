@@ -24,6 +24,10 @@ Create a premium, accessible, responsive **Academic Editorial** public website f
 
 Resolve conflicts using the **latest explicit owner decisions in the register**. Prior wireframes are **examples only**. Do not silently replace them with invented business rules.
 
+## Coding workflow ownership
+
+For authorized VS Code Codex coding tasks, **also read `.agents/skills/iches-codex-engineering/SKILL.md`** and task-specific work order. Codex edits **application code only**; ChatGPT handles docs, prompt preparation and review. This public frontend skill describes design and functionality; **it is not GO coding** and **does not freeze any layout**.
+
 ## Product guardrails (do not break)
 
 - Conference main day **5 January 2027**; related activities **6 January 2027**, according to TOR. **Exact start time for the countdown is not yet approved**; read an Admin-configurable `countdown_target_at` with `Asia/Jakarta` timezone/offset. Do not assume midnight or create a fictional date/hour.

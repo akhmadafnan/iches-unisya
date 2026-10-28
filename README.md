@@ -38,6 +38,11 @@
 **➡️ [18C-05: DRAFT Implementation Readiness & Decision Gates](docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md)**  
 **➡️ [18C-05A: DRAFT Audit Reuse Repository Lama & Migration Plan](docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md)**  
 **➡️ [18C-05B: DRAFT MVP Slices, Exit Gates, 45 Planned UAT](docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md)**  
+**➡️ [19A: ChatGPT × Codex VS Code × GitHub — Protokol Kerja](docs/19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md)**  
+**➡️ [19B: Backlog Teknis dengan ID Task untuk Codex](docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md)**  
+**➡️ [19C: Template Work Order & Prompt Codex VS Code](docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md)**  
+**➡️ [19D: Traceability Keputusan → Dokumen → Code → Tests](docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md)**  
+**➡️ [Codex Engineering Skill (Code Only)](.agents/skills/iches-codex-engineering/SKILL.md)**  
 **➡️ [AI Agent Skill: iches-public-frontend](.agents/skills/iches-public-frontend/SKILL.md)**  
 **➡️ [AI Agent Instructions](AGENTS.md)**
 
@@ -138,6 +143,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**PEMBAGIAN KERJA TERBARU — 28 OKTOBER 2026:** user meminta **CODEX di VS Code eksklusif untuk membuat/memperbaiki/menambah CODE**. **CHATGPT** mengerjakan *selain kode*: analisis, pemecahan blueprint menjadi Work Order, dokumentasi, register keputusan, review diff, koordinasi GitHub dan penggunaan terminal jika diperlukan. Sudah disediakan [19A protokol](docs/19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md), [19B backlog ber-ID](docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [19C prompt siap ditempel ke Codex](docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md), [19D matriks traceability](docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md), dan [Engineering Skill](.agents/skills/iches-codex-engineering/SKILL.md). Tugas coding pertama yang **direkomendasikan** adalah `ICH-S0-01` selective foundation port, setelah DB/PK/runtime/repo **ditetapkan owner** dan ada **GO CODING eksplisit**. Belum ada Laravel source, migrate, test atau deploy pada repo target; semua Code Work Orders **PLANNED/NOT AUTHORIZED**.
+
 
 **TAHAP TERBARU — 18C-05 IMPLEMENTATION READINESS (28 OKT 2026):** pengguna menyetujui untuk **melanjutkan perencanaan kesiapan implementasi**, bukan GO CODING. Audit remote GitHub memastikan **`akhmadafnan/iches-unisya/main` masih repository dokumentasi** (belum terdapat source Laravel/Vue), sedangkan **`akhmadafnan/international-conference-platform/develop`** berisi source Laravel 13, Inertia Vue, UUIDv7, MySQL, scoped roles, private files, Phase 02 Registration/Payment. **Selective reuse lebih aman daripada copy seluruh sistem**, khususnya **VerifyPaymentAction lama mengecek bukti, tidak mensyaratkan kecocokan mutasi bank nyata** sebagaimana kebutuhan baru. Rekomendasi teknis **target repo baru + MySQL/UUIDv7 + Laravel 13 auth/roles** masih DRAFT. **S0 foundation → S1 Public/CMS/Countdown → S2 Abstract** diprioritaskan karena jendela TOR 1–20 Des 2026. **10 slices/5 kelompok rilis dan 45 UAT readiness** sudah dirancang, **belum diuji**. [18C-05](docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A](docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B](docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md). Tidak ada coding, deployment atau akses hosting/bank/OJS staging yang diverifikasi.
 

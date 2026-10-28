@@ -1,5 +1,7 @@
 # 18C-05 — DRAFT Implementation Readiness, Architecture Decisions & GO/NO-GO Gates
 
+> **HANDOFF TEKNIS TAMBAHAN 28 OKTOBER 2026:** sesuai instruksi owner, perubahan kode nantinya **hanya oleh Codex VS Code setelah GO per task**; ChatGPT mengelola dokumen/Work Orders/review GitHub. Konversi tahap readiness menjadi task ber-ID sudah ditulis pada [19A Protocol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md), [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [19C Task Packets](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md), [19D Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md). **Belum ada coding/GO**.
+
 > **28 Oktober 2026 · DRAFT REKOMENDASI UNTUK REVIEW · BELUM FINAL · BELUM ADA GO CODING.**
 >
 > **Persetujuan user terbaru:** “Okey saya menyetujui. silahkan lanjut ke pekerjaan berikutnya.” Diartikan sebagai **GO melanjutkan audit/rencana 18C-05**, **bukan** persetujuan menulis source aplikasi, memilih database secara final, menerbitkan publik, atau migrasi data. **Tidak membuat kode Laravel/Vue, migrasi, container, akun, payment, CMS, countdown, atau deploy.**

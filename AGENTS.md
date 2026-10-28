@@ -12,6 +12,14 @@ This repository currently contains an **ICHES 2027 product blueprint**, not a fi
 4. For finance, Co-Host, Academic, Role, OJS or QR behavior, review the matching blueprint docs; do not use AICIS workflows to override ICHES decisions.
 5. **Implementation readiness (28 Oct 2026)**: read `docs/18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md`, `docs/18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md` and `docs/18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md`. The canonical target repository and MySQL/UUIDv7 are **recommended, not owner-approved decisions**. Only port reviewed foundation code from `akhmadafnan/international-conference-platform/develop`. Old Finance verification must be redesigned to match real bank mutation evidence. **S0/S1/S2 first** after explicit GO.
 
+## ChatGPT × Codex VS Code task ownership (28 Oct 2026)
+
+- **Codex VS Code = CODE-ONLY implementer**, only after **explicit owner GO CODING for the relevant task**. Codex can read docs, run appropriate test commands, and write in-scope code: `app/`, `resources/`, `routes/`, `database/`, `tests/`, build/config/dependency files. It **must not edit** `README.md`, `docs/**`, this `AGENTS.md`, or `.agents/skills/**`.
+- **ChatGPT = non-code planning, specification, documentation, code review and GitHub coordination**. ChatGPT does not patch source code directly. If review finds a code defect, issue a change request back to Codex. Owner authorizes merge, deploy and scope changes.
+- **Workflow docs**: `docs/19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md` (protocol), `docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md` (task IDs), `docs/19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md` (Codex work orders), `docs/19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md` (decision-to-code traceability).
+- **Codex implementation skill**: `.agents/skills/iches-codex-engineering/SKILL.md`. If implementing public UI/CMS/countdown also use `.agents/skills/iches-public-frontend/SKILL.md`.
+- **No GO coding has been granted in the present documentation stage**. READY_FOR_CODEX is not GO. Do not start on `main`, change secrets, import live data or deploy. Work in approved feature branches after explicit GO.
+
 ## Non-negotiable product guidance
 
 - **Academic Editorial** is the chosen *visual direction*; **individual frontend components/layouts are not locked**. The owner expects AI to propose cohesive design, not request approval for each section. Accept visual revisions.

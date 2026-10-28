@@ -428,6 +428,29 @@ Dua referensi pengguna: [AICIS](https://aicis.uinssc.ac.id/) dan [Multaqa Dawli]
 
 [18C-05 Readiness & Technical Decisions](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [18C-05A Selective Reuse Audit](18C-05A-DRAFT-REUSE-AUDIT-AND-MIGRATION-PLAN.md) · [18C-05B MVP Slices & 45 UAT](18C-05B-DRAFT-MVP-SLICES-EXIT-GATES-AND-UAT.md).
 
+## A24. Pembagian Peran ChatGPT–Codex VS Code dan Konversi Blueprint ke Work Order (28 Oktober 2026)
+
+**PERNYATAAN OWNER:** “Sebelum ke GO Coding, saya ingin hasil pekerjaan kita yang ada di Repo GitHub kita olah kembali menjadi teknis pekerjaan dengan dibantu AI. Saya ingin pekerjaan ini dibantu CODEX VSCode dalam melakukan Perubahan/Perbaikan/Penambahan CODE saja. Selain code kita gunakan CHATGPT, REPO dan terminal jika diperlukan.”
+
+**INTERPRETASI yang tepat:** owner **menyetujui pelaksanaan konversi blueprint → backlog teknis dan protokol AI**; **BELUM memberi GO CODING**, memilih DB/PK final, cloning old source, membuat branch coding, merge atau deploy. **Codex VS Code adalah satu-satunya pelaksana edit kode** setelah GO per task. **ChatGPT bertanggung jawab untuk perubahan dokumen, analisis, spesifikasi, review/koordinasi GitHub**. Terminal dapat digunakan untuk inspeksi dan pengujian yang diotorisasi. Pemilik produk memutuskan penerimaan dan rilis.
+
+| ID | Komitmen proses & hasil kerja | Status |
+|---|---|---|
+| NEW-071 | **Pembagian kerja: Codex VS Code CODE ONLY; ChatGPT non-code + GitHub docs/review; terminal sesuai kebutuhan** | **ARAH PENGGUNA DITERIMA** |
+| NEW-072 | **Blueprint → Work Orders** ber-ID, scope terbatas, acceptance tests dan review dari GitHub | **ARAH PROSES DITERIMA** |
+| PROP-102 | **19A Protokol** repo, peran, workflow, branch/PR, status kerja, data/private safety | **DRAFT OPERASIONAL UNTUK REVIEW** |
+| PROP-103 | **19B Backlog teknis** ICH-PRE/S0..S9, prioritas S0 Foundation → S1 Public/CMS/Countdown → S2 Abstract | **DRAFT BACKLOG, BUKAN CODING** |
+| PROP-104 | **19C Prompt Work Orders**: template Codex + contoh S0-01/S1-03/S1-06/S2-02, CODE-only | **INSTRUKSI DISIAPKAN, BELUM DIKIRIM UNTUK EKSEKUSI** |
+| PROP-105 | **19D Traceability** keputusan dan dokumen → kode yang akan ada → acceptance/negative test | **DRAFT MAPPING** |
+| PROP-106 | **Skill khusus `iches-codex-engineering`** bersama existing skill public frontend; Code Only, per-task scope, test evidence, larangan edit docs/secrets/produksi | **SKILL DIBUAT DI REPO, BUKAN IMPLEMENTASI** |
+| OPEN-008 | Target repo baru, MySQL/UUIDv7, target runtime/hosting, pola auth, izin opening coding S0 | **MENUNGGU PERSETUJUAN USER/ENVIRONMENT** |
+
+**Boundary code yang disarankan:** Codex membuat/mengubah `app/`, `resources/`, `routes/`, `database/`, `tests/`, serta build/config yang terkait task; **ChatGPT mengelola `docs/`, `README.md`, `AGENTS.md`, `.agents/skills/`**. Jangan mengubah file kebijakan dalam proses debugging code. Dokumen awal repo memang belum merupakan aplikasi yang bisa dijalankan.
+
+**STATUS:** TIDAK ADA GO CODING. **Konversi dokumen ke paket kerja bukan dasar izin otomatis bagi Codex menjalankan perubahan source.**
+
+[19A Protokol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) · [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19C Codex Work Orders](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md) · [19D Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [Engineering SKILL](../.agents/skills/iches-codex-engineering/SKILL.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

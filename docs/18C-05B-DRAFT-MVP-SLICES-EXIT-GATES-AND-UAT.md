@@ -1,5 +1,7 @@
 # 18C-05B — DRAFT MVP Implementation Slices, Exit Gates, Risks & UAT
 
+> **KONVERSI KE TUGAS CODEX 28 OKT 2026:** Slice S0–S9 kini memiliki paket Work Order ber-ID dalam [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), contoh prompt yang dapat ditempel setelah GO pada [19C](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md), dan pemetaan keputusan→kode→UAT pada [19D](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md). **Codex code only**, ChatGPT docs/review. Status tes RDY masih **PLANNED, NOT RUN**.
+
 > **28 Oktober 2026 · RENCANA UNTUK REVIEW · BELUM GO CODING, TEST ATAU DEPLOY.**
 >
 > Tujuan: setiap slice kelak mempunyai dependency, hasil kerja yang bisa diverifikasi, acceptance criteria, pemilik keputusan, dan bukti tes nyata. **Website CMS, countdown dan Abstract intake adalah prioritas awal**, bukan fase dekorasi terakhir.
