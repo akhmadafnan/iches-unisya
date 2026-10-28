@@ -1,0 +1,52 @@
+﻿[
+    {
+        "command":  "composer validate --strict",
+        "exit_code":  0,
+        "output":  "./composer.json is valid"
+    },
+    {
+        "command":  "php artisan --version",
+        "exit_code":  0,
+        "output":  "Laravel Framework 13.39.0"
+    },
+    {
+        "command":  "php artisan route:list",
+        "exit_code":  0,
+        "output":  "GET|HEAD       / ............................................................ home › Inertia\\Controller › Controller\r\n  GET|HEAD       up .............................................................. Illuminate\\Foundation › HealthCheck\r\n\r\n                                                                                                    Showing [2] routes"
+    },
+    {
+        "command":  "php artisan test --filter=FoundationSmokeTest",
+        "exit_code":  1,
+        "output":  "FAIL  Tests\\Feature\\FoundationSmokeTest\r\n  ✓ home returns the inertia foundation page                                                                     0.14s  \r\n  ⨯ inertia navigation returns the page payload                                                                  0.01s  \r\n  ✓ unknown route returns not found                                                                              0.01s  \r\n  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  \r\n   FAILED  Tests\\Feature\\FoundationSmokeTest \u003e inertia navigation returns the page payload                              \r\n  Expected response status code [200] but received 409.\r\nFailed asserting that 409 is identical to 200.\r\n\r\n  at tests\\Feature\\FoundationSmokeTest.php:33\r\n     29▕ \r\n     30▕     public function test_inertia_navigation_returns_the_page_payload(): void\r\n     31▕     {\r\n     32▕         $this-\u003eget(\u0027/\u0027, [\u0027X-Inertia\u0027 =\u003e \u0027true\u0027, \u0027X-Requested-With\u0027 =\u003e \u0027XMLHttpRequest\u0027])\r\n  ➜  33▕             -\u003eassertOk()\r\n     34▕             -\u003eassertHeader(\u0027X-Inertia\u0027, \u0027true\u0027)\r\n     35▕             -\u003eassertJsonPath(\u0027component\u0027, \u0027Foundation\u0027)\r\n     36▕             -\u003eassertJsonPath(\u0027props.task\u0027, \u0027ICH-S0-01\u0027);\r\n     37▕     }\r\n\r\n\r\n  Tests:    1 failed, 2 passed (18 assertions)\r\n  Duration: 0.37s"
+    },
+    {
+        "command":  "php vendor/bin/pint --test",
+        "exit_code":  0,
+        "output":  "{\"tool\":\"pint\",\"result\":\"passed\"}"
+    },
+    {
+        "command":  "npm.cmd run build",
+        "exit_code":  0,
+        "output":  "\u003e build\r\n\u003e vite build\r\n\r\nvite v7.3.7 building client environment for production...\r\ntransforming...\r\n✓ 764 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\npublic/build/manifest.json                    0.51 kB │ gzip:  0.22 kB\r\npublic/build/assets/app-OWg1MeBv.css          9.59 kB │ gzip:  2.78 kB\r\npublic/build/assets/Foundation-BqfLR4j-.js    1.06 kB │ gzip:  0.62 kB\r\npublic/build/assets/app-DbeD6Wjx.js         270.14 kB │ gzip: 94.67 kB\r\n✓ built in 1.40s"
+    },
+    {
+        "command":  "npm.cmd run typecheck",
+        "exit_code":  0,
+        "output":  "\u003e typecheck\r\n\u003e vue-tsc --noEmit"
+    },
+    {
+        "command":  "curl.exe -sS -o NUL -w %{http_code} http://iches-unisya.test/",
+        "exit_code":  0,
+        "output":  "200"
+    },
+    {
+        "command":  "curl.exe -sS -o NUL -w %{http_code} http://iches-unisya.test/foundation-route-that-does-not-exist",
+        "exit_code":  0,
+        "output":  "404"
+    },
+    {
+        "command":  "git diff --cached --check",
+        "exit_code":  0,
+        "output":  ""
+    }
+]

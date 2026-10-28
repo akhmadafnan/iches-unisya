@@ -1,0 +1,52 @@
+﻿[
+    {
+        "command":  "composer validate --strict",
+        "exit_code":  0,
+        "output":  "./composer.json is valid"
+    },
+    {
+        "command":  "php artisan --version",
+        "exit_code":  0,
+        "output":  "Laravel Framework 13.39.0"
+    },
+    {
+        "command":  "php artisan route:list",
+        "exit_code":  0,
+        "output":  "GET|HEAD       / ............................................................ home › Inertia\\Controller › Controller\r\n  GET|HEAD       up .............................................................. Illuminate\\Foundation › HealthCheck\r\n\r\n                                                                                                    Showing [2] routes"
+    },
+    {
+        "command":  "php artisan test --filter=FoundationSmokeTest",
+        "exit_code":  0,
+        "output":  "PASS  Tests\\Feature\\FoundationSmokeTest\r\n  ✓ home returns the inertia foundation page                                                                     0.13s  \r\n  ✓ inertia navigation returns the page payload                                                                  0.01s  \r\n  ✓ unknown route returns not found                                                                              0.01s  \r\n\r\n  Tests:    3 passed (22 assertions)\r\n  Duration: 0.33s"
+    },
+    {
+        "command":  "php vendor/bin/pint --test",
+        "exit_code":  0,
+        "output":  "{\"tool\":\"pint\",\"result\":\"passed\"}"
+    },
+    {
+        "command":  "npm.cmd run build",
+        "exit_code":  0,
+        "output":  "\u003e build\r\n\u003e vite build\r\n\r\nvite v7.3.7 building client environment for production...\r\ntransforming...\r\n✓ 764 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\npublic/build/manifest.json                    0.51 kB │ gzip:  0.22 kB\r\npublic/build/assets/app-OWg1MeBv.css          9.59 kB │ gzip:  2.78 kB\r\npublic/build/assets/Foundation-BqfLR4j-.js    1.06 kB │ gzip:  0.62 kB\r\npublic/build/assets/app-DbeD6Wjx.js         270.14 kB │ gzip: 94.67 kB\r\n✓ built in 1.40s"
+    },
+    {
+        "command":  "npm.cmd run typecheck",
+        "exit_code":  0,
+        "output":  "\u003e typecheck\r\n\u003e vue-tsc --noEmit"
+    },
+    {
+        "command":  "curl.exe -sS -o NUL -w %{http_code} http://iches-unisya.test/",
+        "exit_code":  0,
+        "output":  "200"
+    },
+    {
+        "command":  "curl.exe -sS -o NUL -w %{http_code} http://iches-unisya.test/foundation-route-that-does-not-exist",
+        "exit_code":  0,
+        "output":  "404"
+    },
+    {
+        "command":  "git diff --cached --check",
+        "exit_code":  0,
+        "output":  ""
+    }
+]

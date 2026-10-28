@@ -1,0 +1,17 @@
+/vendor/
+/node_modules/
+/public/build/
+/public/hot
+/public/storage
+/.env
+/.env.*
+!/.env.example
+/.phpunit.cache/
+/.phpunit.result.cache
+/auth.json
+/npm-debug.log*
+/storage/**
+!/storage/**/
+!/storage/**/.gitignore
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
