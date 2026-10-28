@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21D — CURRENT AUTHORIZATION (overrides older historical NO_GO snapshots)
+
+**Owner explicitly authorized only `GO CODING ICH-S0-01` on 28 October 2026.** [21D Codex GO prompt](docs/21D-ICH-S0-01-GO-CODEX-EXECUTION.md), [21B Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md), and [19F current board](docs/19F-CURRENT-SPRINT-BOARD.md) are authoritative for this specific Task. Codex VS Code is the **only application code writer**. Current local repo `D:\PINJAM-AFNAN\Herd\iches-unisya` must be synced to clean current `main` before Codex branches. **No GO** for S0-02/07, MySQL migrations, auth, CMS, PR auto merge or deployment. Historic “no named GO” statements in old snapshots predate the owner's new explicit GO.
+
+
 ## One Master Plan (DRAFT — no GO)
 
 - [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.

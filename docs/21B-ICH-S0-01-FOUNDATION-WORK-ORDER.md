@@ -1,6 +1,6 @@
 # 21B — ICH-S0-01 Laravel 13 Foundation: Codex VS Code Work Order
 
-> **READY_FOR_OWNER_GO — NO GO CODING ISSUED.** Governance PR #1 was owner-authorized and merged into `main` on 28 Oct 2026, merge SHA `275cfbfd0e431033eb05d2c519eda19282465962`. Local `main` synced and clean. Owner must still separately issue **`GO CODING ICH-S0-01`** before Codex changes any source; **ONE Task ID only**, not the full Sprint 01.
+> **GO_AUTHORIZED FOR ICH-S0-01 ONLY — 28 OCTOBER 2026.** Owner explicitly issued `GO CODING ICH-S0-01` in the project conversation, with code changes **only by Codex VS Code** on a feature branch and explicit exclusions of DB migration, authentication, CMS, automatic merge and deployment. [21D GO execution handoff](21D-ICH-S0-01-GO-CODEX-EXECUTION.md) contains the full executable prompt. PR #1 merged earlier. **No coding has yet been executed by ChatGPT; Codex must verify clean current main before starting.**
 
 ## 1. Scope, branch and ownership
 
@@ -62,10 +62,10 @@ Commands are a **test plan**, not results; Codex inspects actual scripts before 
 
 Report **Task ID, GO evidence, base SHA, feature branch, changed code files, installed dependency versions, exact commands/exit codes, HTTP result/screenshot, scoped diff, unresolved blockers, sanitized log and feature PR if created**. ChatGPT reviews results and maintains the single 19F board; **only owner authorizes acceptance/merge/deployment**.
 
-## Short prompt to paste into Codex — ONLY AFTER NAMED GO
+## Short legacy prompt — use the full [21D authorized execution prompt](21D-ICH-S0-01-GO-CODEX-EXECUTION.md)
 
 ```text
 ICHES GO CODING ICH-S0-01: First verify the owner issued this exact GO, PR #1 merge SHA 275cfbfd0e431033eb05d2c519eda19282465962 is in current main ancestry, capture exact current main branch-point SHA and verify clean remote. Work ONLY in D:\PINJAM-AFNAN\Herd\iches-unisya. Read and obey that full 21B Work Order, AGENTS.md, current board, and engineering + verification Skills. From clean approved main create feat/ich-s0-01-foundation, bootstrap DB-independent Laravel 13/Inertia/Vue 3/TS/Tailwind4/Vite, and prove the Herd URL returns HTTP 200. Do not modify docs/governance or use password auth, migrations, real DB credentials, old payment logic or other sites. Report real exit codes, branch, code diff, sanitized evidence, failures. No auto-merge or deploy; STOP if blocked.
 ```
 
-**Status: READY_FOR_OWNER_GO / NO_GO until explicit `GO CODING ICH-S0-01`.** PR #1 was merged. Use actual verified latest main SHA as Codex branch-point on GO; governance merge anchor is recorded above. No authority for other tasks or DB migrations.
+**Status: GO_AUTHORIZED FOR ICH-S0-01 ONLY.** The explicit owner GO is recorded in [21D](21D-ICH-S0-01-GO-CODEX-EXECUTION.md). Codex now takes over application code on a dedicated feature branch after preflight; no authorization for other tasks, DB migrations, auth or auto-merge.

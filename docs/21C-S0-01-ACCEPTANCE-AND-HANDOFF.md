@@ -2,6 +2,9 @@
 
 > **Verification contract only; NO GO CODING.** First bootable website is NOT a finished conference system.
 
+**GO received:** owner issued named `GO CODING ICH-S0-01` on 28 October 2026. See [21D](21D-ICH-S0-01-GO-CODEX-EXECUTION.md). Execution/verification has **not yet** happened; acceptance remains pending actual Codex output, not inferred from the GO.
+
+
 ## Sequence
 
 1. **COMPLETED:** owner authorized `MERGE PR #1`; ChatGPT checked final diff/mergeability, GitHub merged at `275cfbfd0e431033eb05d2c519eda19282465962`, and local `main` synced clean.

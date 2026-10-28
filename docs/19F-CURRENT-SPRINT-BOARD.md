@@ -95,8 +95,17 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - [21B Task Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) is **READY_FOR_OWNER_GO** for **DB-INDEPENDENT ICH-S0-01 only**, with approved governance merge baseline recorded. **No GO Coding has been issued**, feature branch not created, no app install/build/DB work occurred.
 - **Next action:** owner sends `GO CODING ICH-S0-01` if ready. Codex checks latest clean `origin/main` SHA, approved merge ancestry and exact Work Order before any code modifications. S0-02 test DB gate remains separate.
 
+## 21D — Owner GO CODING ICH-S0-01 received (28 October 2026)
+
+**Verbatim explicit owner instruction:** “GO CODING ICH-S0-01. Saya memberikan izin eksplisit untuk Task ICH-S0-01 sesuai Work Order 21B yang sudah READY. Implementasi kode hanya oleh Codex VS Code pada feature branch; tanpa migrasi database, autentikasi, CMS, auto-merge, atau deployment. Siapkan instruksi eksekusi final Codex.”
+
+**State:** ICH-S0-01 is now **GO_AUTHORIZED / PENDING_CODEX_EXECUTION**. Only Codex VS Code may modify source under [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) and [21D execution prompt](21D-ICH-S0-01-GO-CODEX-EXECUTION.md). ChatGPT has **not** written Laravel source or created the feature branch. Last verified clean local `main` before this documentation update: `3371ac1532a7856a2bd7d248f79d563a541dac4a`, on `D:\PINJAM-AFNAN\Herd\iches-unisya`; actual coding branch-point SHA must be rechecked after GO documentation sync.
+
+**Expected handoff:** Codex creates `feat/ich-s0-01-foundation`, builds DB-free Laravel 13/Inertia/Vue 3/TS/Tailwind4 with actual tests, returns changes/exit codes/Herd HTTP, no auto merge or deploy. **ICH-S0-02, ICH-S0-07 and full ICH-SPRINT-01 remain NOT_AUTHORIZED.** Test DB G0 gate still open, irrelevant to this DB-free first task.
+
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-01 READY_FOR_OWNER_GO** on merged governance `main`. Only explicit owner **`GO CODING ICH-S0-01`** permits Codex app source work. S0-02 test DB remains separately blocked. **NO_GO CODING so far.**
+**NOW: ICH-S0-01 GO_AUTHORIZED / PENDING_CODEX_EXECUTION.** Owner issued explicit named GO; send 21D prompt to Codex VS Code and collect actual test evidence. No code has been written by ChatGPT. DB/schema/full Sprint remain excluded.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -105,7 +114,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 | **ICH-PRE-02** Keputusan teknis RD-01..06 | **APPROVED_FINAL** | Owner: “Setuju paket 20D”; tercatat di Register 09, termasuk OTP/Magic Link | No remaining RD-01..06 decision blocker; verify test DB G0 |
 | **ICH-PRE-03** Codex workspace/Skills | **READ_ONLY_HANDSHAKE_PASS** | Codex confirmed canonical remote, clean docs branch, full reading of AGENTS/PLANS/board and 4 Skills; MySQL97 Running / 3306 TCP reachable | PRE-03 Codex check complete; test DB validation remains G0 gate |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
-| **ICH-S0-01** DB-free Laravel/Vue Foundation | **READY_FOR_OWNER_GO / NO_GO** | PR #1 merged to main, local synced; [21B](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) records merge anchor | Explicit owner GO CODING ICH-S0-01; Codex verifies current main SHA |
+| **ICH-S0-01** DB-free Laravel/Vue Foundation | **GO_AUTHORIZED / PENDING_CODEX_EXECUTION** | Owner named GO received 28 Oct; [21D](21D-ICH-S0-01-GO-CODEX-EXECUTION.md) contains executable prompt | Codex feature branch + actual Composer/npm/HTTP tests; ChatGPT review |
 
 **Tidak ada task berstatus IN_CODEX, REVIEW_PASS, ACCEPTED atau hasil PASS runtime.**
 

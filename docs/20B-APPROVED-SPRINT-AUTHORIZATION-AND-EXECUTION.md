@@ -60,6 +60,9 @@ Do not load all Skills on every task. Admin uses **shadcn-vue + Tailwind CSS 4 +
 
 **21B first-task exception to Sprint-01 DB gate:** owner may explicitly authorize **one Task `ICH-S0-01`** after governance PR merge and [21B Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) marked READY. No database, auth, migrations or subsequent task authorization is implied. The three-task `ICH-SPRINT-01` stays blocked for authenticated test DB.
 
+**Owner GO update (28 October 2026):** the owner has now explicitly issued **`GO CODING ICH-S0-01`**, documented in [21D](21D-ICH-S0-01-GO-CODEX-EXECUTION.md). This satisfies the named-Task authorization rule **only for ICH-S0-01**. The checklist below was the historical pre-GO gate; any items about issuing a first named GO must be read in light of this update. The **three-task Sprint-01, DB migrations and other tasks are NOT authorized**.
+
+
 ## 6. Still blocked before first GO
 
 - [x] Draft PR #1 reviewed and owner-approved, merged to `main` (governance merge SHA `275cfbfd0e431033eb05d2c519eda19282465962`), local `main` synced clean.
