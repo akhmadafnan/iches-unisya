@@ -59,6 +59,10 @@ Codex read-only handshake **PASS**: correct repo, clean branch, `AGENTS.md`, `PL
 
 Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Owner approved 20D: Laravel sessions **with participant OTP/Magic Link without password**. Draft email/password suggestion is **superseded for participants**. Staff credential policy remains a later decision. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
 
+## 20E DB readiness gate — G0 not yet passed
+
+[20E Test DB Runbook](20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): native MySQL CLI version 9.7.1 located by full path; server Running and loopback reachable. **No authenticated test account/schema, SQL grants, InnoDB/FK or migration/rollback verification**. Do **not** treat this as READY; test-only provisioning requires separate approval and must avoid production data.
+
 ## READY blockers (all must be cleared)
 - [ ] [Governance PR #1](https://github.com/akhmadafnan/iches-unisya/pull/1) owner-reviewed/merged, local clone synced.
 - [x] RD-01 canonical repo and selective legacy reuse approved (20D).

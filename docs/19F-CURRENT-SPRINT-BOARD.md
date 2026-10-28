@@ -49,8 +49,16 @@ Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code
 
 **Database preflight, nonwriting:** Windows `MySQL97` Running; TCP `127.0.0.1:3306` handshake protocol `10`, server version **9.7.1**, **no login/SQL/schema action**. Still **BLOCKED_G0**: authenticate isolated *test* database and verify InnoDB/FKs/migration permissions before any database task. Governance PR #1 still Draft and unmerged; Sprint Work Order still **NO_GO**. **Next one action:** verify safe isolated test DB environment, then review/merge documentation PR through separate approval.
 
+## 20E — Database environment preflight (read-only)
+
+**Actual Windows evidence 28 October 2026:**
+- MySQL97 service Running; native protocol handshake version **9.7.1** and TCP localhost:3306 reachable.
+- Found **native MySQL 9.7.1 command-line client** at `C:\Program Files\MySQL\MySQL Server 9.7\bin\mysql.exe`. It isn't on PATH; absolute executable works. No reinstall necessary.
+- **No DB login/password, SQL, schema or data changes** were attempted. **G0-DB-01 PASS**; G0-DB-02 (test-only login) and G0-DB-03 (InnoDB/FK/scoped grants) **BLOCKED**. G0-DB-04 migration/rollback is NOT_RUN and needs named coding GO.
+- [20E Test DB Readiness Runbook](20E-MYSQL-ISOLATED-TEST-DB-READINESS.md). No test schema/user assumed to exist and no provisioning authorization received. **No GO coding.**
+
 ## NOW — satu prioritas yang boleh aktif
-**ICH-PRE-02 COMPLETE** (RD-01..06 approved in 20D); **ICH-PRE-03 Skills PASS**. Remaining: G0 isolated test DB, review/merge docs PR, ready Sprint Work Order, separate named GO. **Belum GO untuk task/sprint mana pun.**
+**NOW: ICH-PRE-03 G0 isolated test DB (20E)**. PRE-02 RD-01..06 FINAL, Codex Skills READABLE PASS, MySQL server/CLI PASS, **test DB authentication/permissions BLOCKED**. Next: owner-authorized **test-only** database/user setup; then authenticated read-only checks. Draft PR review/merge, Sprint readiness and named GO are still separate. **NO_GO CODING.**
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

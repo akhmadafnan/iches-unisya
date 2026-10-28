@@ -37,6 +37,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
+## 20E isolated MySQL test database readiness
+
+- [20E Readiness Runbook](docs/20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): MySQL 9.7.1 native client found, Running server, localhost handshake verified. **Test-only account/schema authentication not verified; no SQL or DB writes.**
+- RD-01..06 remain FINAL. **No GO CODING**; next is separately authorized test-only DB provisioning and authenticated read-only check.
+
 ## PRE-03 VERIFIED / PRE-02 OWNER APPROVED
 
 - Codex read-only handshake **PASS**: four Skills directly readable, canonical remote, docs branch, clean worktree. Automatic Skill invocation not tested.
