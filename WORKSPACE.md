@@ -38,7 +38,7 @@
 ## Lokasi kerja lokal disepakati
 
 - **Windows:** `D:\PINJAM-AFNAN\iches-unisya` — folder belum ada pada pemeriksaan 28 Oktober 2026; **jangan clone/buat otomatis tanpa izin setup**.
-- **VS Code:** `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (1.128.0 x64); ekstensi OpenAI terdaftar, login/skills belum diverifikasi.
+- **VS Code utama pilihan owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**spasi**, versi 1.143.1 dari metadata). Instalasi v1.128.0 di direktori bertanda hubung berbeda dan bukan default. Login/Skills Codex pada VS Code utama belum diverifikasi.
 
 ## Status verifikasi awal (28 Oktober 2026)
 - Target: `akhmadafnan/iches-unisya`, `main`; source aplikasi target **belum ada** saat audit.

@@ -13,13 +13,13 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 ## 20C — Read-only local preflight (28 Oct 2026)
 
 - Connected Windows device verified: **Git 2.55.0, PHP 8.4.24, Composer 2.10.1, Node 26.4.0, npm.cmd 11.17.0**, PHP pdo_mysql available. No install or application test executed.
-- **NOT_VERIFIED**: VS Code/Codex extension, local ICHES clone, MySQL executable/server and isolated test DB. `npm` PowerShell alias failed but `npm.cmd` worked.
+- **PARTIAL**: VS Code utama v1.143.1 terdeteksi lewat metadata; Codex extension/sign-in **pada instalasi utama** belum diverifikasi, clone ICHES belum ada, MySQL server/test DB belum diuji. `npm.cmd` berjalan.
 - [20C device audit](20C-LOCAL-PREFLIGHT-AND-GATES.md) and [Sprint-01 DRAFT](20C-01-DRAFT-SPRINT-01-WORK-ORDER.md): `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07`; status **BLOCKED_DECISION / NO_GO**.
-- Next one action: locate intended VS Code/project folder and finish PRE-02 technical approvals. No coding.
+- Next action: verify Codex sign-in on owner's v1.143.1 installation, then obtain separate setup permission for project folder/clone and close PRE-02 decisions. No coding.
 
 ## Owner local workspace decision — 28 Oct 2026
 
-**Lokasi lokal disepakati:** `D:\PINJAM-AFNAN\iches-unisya`. Pemeriksaan read-only: D:\ dan folder induk ada; folder proyek **belum ada**. VS Code **1.128.0 x64** ditemukan pada `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`, ekstensi `openai.chatgpt` terdaftar; login/Skill belum diuji. Tidak ada clone/create/merge/coding. [Detail 20C](20C-LOCAL-PREFLIGHT-AND-GATES.md). **Next:** izin setup clone terpisah lalu inspeksi remote dan kesiapan environment.
+**Lokasi proyek disepakati:** `D:\PINJAM-AFNAN\iches-unisya` (**pakai tanda hubung**); folder belum ada. **VS Code utama yang dipilih owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**pakai spasi**), v**1.143.1** terverifikasi dari metadata. Ada instalasi lain v1.128.0 pada direktori bertanda hubung, tetapi **bukan default yang dipilih**. Ekstensi/login Codex pada v1.143.1 belum diverifikasi; `new_code.cmd` wrapper gagal karena merujuk `Code.exe` yang tidak ada. Tidak ada clone/create/merge/coding. [Detail 20C](20C-LOCAL-PREFLIGHT-AND-GATES.md). **Next:** izin setup clone terpisah lalu inspeksi remote dan kesiapan environment.
 
 ## NOW — satu prioritas yang boleh aktif
 **ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk task/sprint mana pun.**
@@ -29,7 +29,7 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 | **ICH-PRE-01** Audit blueprint dan repo lama | **REVIEWED_DOCS** | 18C-05A & 19A–D tersedia; tes runtime legacy belum diulang | Revalidate reuse per task, ChatGPT |
 | **Workspace governance 19E/19F** | **DRAFT_REVIEW** | Dokumentasi operasi dan papan kerja diajukan di branch docs | Owner review; ChatGPT perbaiki bila perlu |
 | **ICH-PRE-02** Keputusan teknis awal | **BLOCKED_DECISION** | Repo canonical, MySQL, UUIDv7, PHP target, auth belum diberikan persetujuan final eksplisit | Owner approves/revises recommended bundle, ChatGPT update register |
-| **ICH-PRE-03** Environment VS Code/Codex + toolchain | **NOT_VERIFIED** | Tidak ada bukti lokal PHP, Composer, Node, MySQL, Git, extension Codex | Inspeksi read-only melalui terminal/VS Code, owner |
+| **ICH-PRE-03** Environment VS Code/Codex + toolchain | **PARTIAL_VERIFIED** | Git/PHP/Composer/Node/npm and preferred VS Code binary detected; Codex sign-in and isolated test DB NOT verified; folder clone absent | Verify chosen VS Code GUI/Codex, prepare owner-authorized clone and test DB |
 | **ICH-PRE-04** GO CODING task atau sprint pertama | **NO_GO** | Tidak ada otorisasi implementasi | Setelah PRE-02/03 green, owner memberi GO Task ID atau named Sprint ID sesuai Work Order |
 | **ICH-S0-01** Laravel/Vue Foundation | **PLANNED / BLOCKED** | Work Order draf di 19C; target masih docs-only | Buka Task ID hanya setelah gate; Codex code-only |
 

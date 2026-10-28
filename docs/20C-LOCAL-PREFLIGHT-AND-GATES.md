@@ -14,8 +14,8 @@
 | npm | `11.17.0` via `npm.cmd --version` | PASS via .cmd; `npm --version` failed through PowerShell invocation |
 | PHP extensions | `pdo_mysql`, `mysqli`, `openssl`, `mbstring`, `fileinfo`, `intl` detected | PASS (module presence only) |
 | MySQL CLI | `mysql` not found in PATH | NOT_VERIFIED, not proof server unavailable |
-| VS Code command | Full path `D:\PINJAM-AFNAN\Microsoft VS Code\bin\code.cmd` works; VS Code **1.128.0 x64** | PASS via explicit path; not on generic PATH |
-| Codex extension | `openai.chatgpt@26.51021.22027` and `openai.codex-audio@26.1021.22027` listed | DETECTED; sign-in/skills loading NOT_VERIFIED |
+| **Owner's VS Code installation** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe`, version **1.143.1** (verified Windows file metadata) | PATH VERIFIED; launch/sign-in NOT TESTED |
+| VS Code extensions / Codex | On **other** VS Code installation `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (1.128.0), `openai.chatgpt` and `openai.codex-audio` were listed. Owner's **space-path** installation has `bin\new_code.cmd`, but that wrapper references missing `Code.exe`; its extension list was **not verified** | OWNER INSTALL EXTENSIONS/SIGN-IN **NOT_VERIFIED** |
 | Local `iches-unisya` clone | Owner chose `D:\PINJAM-AFNAN\iches-unisya`, checked explicitly: **folder absent** | NOT_CREATED, pending setup authorization |
 | Local test database | No connection attempted | NOT_VERIFIED |
 | Git remote, local branch/status | No project clone path established | NOT_VERIFIED |
@@ -27,7 +27,7 @@
 
 - [x] Git/PHP/Composer/Node/npm are present and versions recorded.
 - [x] PHP MySQL driver + basic extensions available.
-- [x] Identify VS Code 1.128.0 path and detect OpenAI extension IDs.
+- [x] Identify **owner-designated** VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (1.143.1). Separate 1.128.0 install found under hyphen path; do NOT select that by default.
 - [ ] Confirm Codex VS Code sign-in and that repository Skills load in an actual workspace.
 - [x] Owner-selected target path `D:\PINJAM-AFNAN\iches-unisya` and verified destination does not exist.
 - [ ] With separate setup authorization, clone there; then verify remote, branch and clean Git status.
@@ -50,15 +50,15 @@
 Read-only check:
 - Drive `D:\`: **EXISTS**; parent `D:\PINJAM-AFNAN`: **EXISTS**.
 - Target project folder `D:\PINJAM-AFNAN\iches-unisya`: **DOES NOT YET EXIST**. No clone/create/install attempted.
-- VS Code: installed at `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`; verified CLI `D:\PINJAM-AFNAN\Microsoft VS Code\bin\code.cmd`; version **1.128.0 (x64)**.
-- VS Code extension list, default profile: `openai.chatgpt@26.51021.22027` and `openai.codex-audio@26.1021.22027`. **Extensions listed is not proof that Codex is signed in or that Skills are discoverable**.
-- `code` absent from generic PATH but full `code.cmd` path worked. `npm.cmd` worked. Avoid changing PATH/PowerShell execution policy during preflight.
+- **CORRECTED OWNER DESIGNATION:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (with a space in `PINJAM AFNAN`), **version 1.143.1** from Windows executable metadata. Do not confuse with another `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe` (hyphen, v1.128.0).
+- OpenAI extension listing was obtained only from the **other v1.128.0** VS Code installation. For the owner's **v1.143.1** installation, `bin\new_code.cmd` exists but points to missing `Code.exe`, so its extensions, Codex sign-in and Skills discovery remain **UNVERIFIED**.
+- `code` absent from generic PATH. Owner install's `new_code.cmd --version` failed because its wrapper targets `Code.exe` rather than `new_Code.exe`; this **does not prove GUI broken**, only CLI wrapper requires verification. `npm.cmd` worked. Do not rename executables or change PATH/execution policy without separate permission.
 
 **Next action (separately authorized):** initialize/clone canonical GitHub repo into **exactly this target path** after owner authorizes repository setup and the destination remains unoccupied. Never clone into existing `D:\PINJAM-AFNAN\ICHES` or `iches-2027-prototype` by mistake. Checkout documentation branch only as instructed; PR #1 is still Draft and not merged. After cloning inspect `git remote -v`, branch, worktree, `AGENTS.md` and `PLANS.md` before any GO Coding.
 
 ## 4. Next concrete step
 
-1. Owner identifies which VS Code installation/folder is intended for ICHES (if this connected desktop is not the development machine, use the correct device).
+1. Owner's preferred VS Code folder is confirmed. Verify the **v1.143.1 GUI** and Codex extension state safely without modifying the installation.
 2. ChatGPT verifies the clone and Codex extension **read-only** and records facts here.
 3. Owner approves minimum RD decisions; ChatGPT moves [20C-01 Sprint-01 Work Order](20C-01-DRAFT-SPRINT-01-WORK-ORDER.md) from `BLOCKED_DECISION` to `READY` only when inputs actually exist.
 4. **No GO coding yet**. A separate `GO SPRINT ICH-SPRINT-01` is needed before Codex can write any source code or execution log.

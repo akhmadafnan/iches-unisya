@@ -11,7 +11,7 @@
 | Business goal | Minimal, bootable Laravel/Inertia/Vue foundation with canonical identity/event schema and repeatable test pipeline |
 | Repository | Proposed `akhmadafnan/iches-unisya`; owner must confirm RD-01 before READY |
 | Owner-selected local workspace path | `D:\PINJAM-AFNAN\iches-unisya` (**folder currently absent; do not create/clone before setup authorization**) |
-| VS Code detected | `D:\PINJAM-AFNAN\Microsoft VS Code\Code.exe`, version 1.128.0; OpenAI extension IDs detected; sign-in/skill discovery not verified |
+| **Owner's VS Code** | `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (version **1.143.1**, with space). Separate 1.128.0 install under hyphen path is **not the chosen default**; Codex extension/sign-in on chosen install not verified |
 | Start baseline | Approved merge of governance PR and verified `main` commit; **not frozen yet** |
 | Branch | `feat/ich-sprint-01-foundation` (to be created by Codex **after** named GO) |
 | PR | One tightly scoped foundation PR may include three ordered tasks; individual per-task commits and evidence entries; **no auto merge** |
@@ -54,7 +54,7 @@ Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.ag
 - [ ] RD-02 PHP + Node/dependency compatibility approved, backed by actual environment check.
 - [ ] RD-03 MySQL test DB verified; RD-04 UUIDv7 FK policy approved.
 - [ ] RD-05 RBAC identity model and RD-06 baseline auth approved as needed for schema.
-- [ ] VS Code executable and OpenAI extension IDs detected, but Codex sign-in/Skills still unverified; **target `D:\PINJAM-AFNAN\iches-unisya` currently absent**, await separate authorization to clone and verify remote/branch/worktree.
+- [ ] Owner's VS Code 1.143.1 executable located (space path), but CLI `new_code.cmd` wrapper failed and Codex sign-in/Skills remain unverified. **Target `D:\PINJAM-AFNAN\iches-unisya` (hyphen path) is absent**; await setup authorization before clone/remote checks.
 - [ ] ChatGPT provides final Work Order base commit + applicable scripts/test cases.
 - [ ] Owner sends explicit GO SPRINT **after** READY.
 
