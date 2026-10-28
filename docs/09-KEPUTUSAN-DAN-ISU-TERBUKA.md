@@ -349,6 +349,21 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [18C-04 Frontend UX DRAFT](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) · [18C-04A Screen Inventory & 60 UAT](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md) · [18C-03B Switch Workspace](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
 
+## A20. Keputusan Visual Public Frontend — Opsi A Academic Editorial (28 Oktober 2026)
+
+**KEPUTUSAN EKSPLISIT USER:** “Oke saya memilih OPSI A saja ya.” Artinya **arah visual Public Frontend ICHES 2027 = Academic Editorial**; clean, modern, elegan, tipografi kuat, ruang kosong proporsional, foto autentik, warna identitas ICHES dan tanpa carousel. **Bukan** menyetujui rancangan homepage atau CMS final.
+
+| ID | Keputusan / rekomendasi | Status |
+|---|---|---|
+| NEW-063 | **Opsi A — Academic Editorial** untuk visual Public Frontend, dengan sentuhan formal institusional secukupnya | **DIPILIH USER / ARAH VISUAL DISETUJUI** |
+| PROP-083 | **Structured Visual CMS** di Laravel Backoffice (edit konten/section/urutan/foto/EN-ID-AR/SEO/preview/publish) tanpa page builder CSS/HTML bebas | **DRAFT; masih perlu review batas fleksibilitas & publishing** |
+| PROP-084 | Homepage editorial: hero, event essentials, about, submission journey, program, tracks, speakers, publication, partners/footer | **DRAFT urutan/komposisi; belum final wireframe** |
+| PROP-085 | **18C-04B** sebagai tahap penggodokan desain: desktop/mobile wireframe, curated section library, CMS Admin UX, data contracts, responsive RTL/SEO acceptance; **18C-05 ditunda** | **REKOMENDASI TAHAP, UNTUK REVIEW** |
+
+Dua referensi pengguna: [AICIS](https://aicis.uinssc.ac.id/) dan [Multaqa Dawli](https://multaqadawli2026.mahadalylirboyo.ac.id/index.html). Keduanya **bahan telaah**, bukan untuk clone design. **Tidak ada gambar/mockup final, source code, CMS atau aplikasi yang dibuat saat keputusan ini dicatat.**
+
+[18C-04B — Public Frontend Academic Editorial & CMS DRAFT](18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

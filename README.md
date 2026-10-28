@@ -30,7 +30,8 @@
 **➡️ [18C-03A: DRAFT Permission Matrix, Route Guards & 52 Security UAT](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md)**  
 **➡️ [18C-03B: Switch Workspace & Admin View as User — 22 UAT](docs/18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md)**  
 **➡️ [18C-04: DRAFT Frontend & Dashboard Architecture (Public/Personal/PIC/Backoffice)](docs/18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md)**  
-**➡️ [18C-04A: DRAFT 55 Screen Inventory, Components & 60 Frontend UAT](docs/18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md)**
+**➡️ [18C-04A: DRAFT 55 Screen Inventory, Components & 60 Frontend UAT](docs/18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md)**  
+**➡️ [18C-04B: Academic Editorial DIPILIH — Public Frontend & CMS masih Draft](docs/18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -129,6 +130,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**KEPUTUSAN VISUAL PUBLIK 28 OKT 2026:** pengguna **MEMILIH OPSI A — Academic Editorial** sebagai **arah visual** Public Frontend. Homepage, section layouts, gambar dan model Structured Visual CMS **masih perlu diperdalam dan direview**, bukan final. [DRAFT 18C-04B Public Frontend/CMS](docs/18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md). Tahap 18C-05 Implementation Readiness **ditunda** sampai kualitas desain publik dan pengelolaan kontennya cukup jelas. Belum coding.
+
 
 **TAHAP TERBARU — 18C-04 DRAFT (28 OKTOBER 2026):** pemilik produk **menyetujui usulan Switch Workspace dan View as User** sebelumnya lalu meminta melanjutkan. [Frontend & Dashboard Architecture](docs/18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) berisi **6 layout dasar + 1 overlay Support View**, navigasi publik/Personal/Institution/Backoffice/Scanner, identitas visual ICHES, EN/ID/AR RTL, form Abstract yang tetap ringan, Full Paper ala OJS, Finance dan perbedaan hak akses. [Screen Inventory & Interaction UAT](docs/18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md) berisi **55 layar kandidat, komponen/state dan 60 UAT dirancang**. Fitur Switch Workspace (satu akun) dan Superadmin support **read-only** masuk desain; **delegasi ke Admin lain dan full impersonation TIDAK otomatis disetujui**. **Dokumen desain masih untuk review, belum coding / UAT dieksekusi**.
 

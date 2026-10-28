@@ -1,5 +1,7 @@
 # 18C-04 — DRAFT Frontend, Dashboard Architecture & UX ICHES 2027
 
+> **PEMBARUAN 28 OKT 2026:** pengguna sudah **MEMILIH OPSI A — Academic Editorial** sebagai arah visual untuk public frontend. Arah ini **tidak** berarti homepage atau CMS telah final. Pengembangan arah visual, homepage desktop/mobile dan CMS terstruktur dibahas dalam [18C-04B](18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md). Tahap 18C-05 menunggu penggodokan public frontend; belum ada coding.
+
 > **28 Oktober 2026 · DRAFT REKOMENDASI · MENUNGGU REVIEW PENGGUNA · BELUM CODING / BELUM FINAL.**
 >
 > **Landasan:** pengguna telah menerima kelanjutan [18C-03B — Switch Role/Workspace & Admin Support View](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md); kita lanjut ke UI ICHES dengan **satu user multi-role**, *role switching* tanpa logout, dan **opsi View as User hanya READ-ONLY untuk dukungan Superadmin**. Detail layar, route, desain, aturan interaksi dan permission UI tetap **DRAFT implementasi**, dapat direvisi. Tidak membuat frontend code atau deploy.
