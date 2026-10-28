@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-06 — Dev-only demo seeder convention locked (CURRENT)
+## 21K-07/08 — ICH-S0-03 auth vertical Work Order READY / NAMED GO PENDING (CURRENT)
+
+- Owner requested practical comprehensive continuation; ChatGPT inspected merged Laravel 13 app and prepared [21K-07 auth architecture, UAT and seed contract](docs/21K-07-S0-03-AUTHENTICATION-MVP-SPEC.md) + [21K-08 exact Codex VS Code execution work order](docs/21K-08-S0-03-CODEX-WORK-ORDER.md).
+- Passwordless participant **OTP/Magic Link**, local Mail Log, secure web sessions, one-time challenges, expiring/throttled codes, minimal dashboard/logout, plus demo-only `@iches.test` seed/logins with hashed `password` double-gated by `APP_ENV=local` and `ICHES_DEMO_MODE=true`. Existing users table has **no password column**, so new nullable column needs additive migration only under GO.
+- Per locked [20B](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md), **generic “lanjut” is not named coding GO**. `ICH-S0-03` **PREPARED / NO_GO** pending explicit `GO CODING ICH-S0-03`. No code, migration, data seed, push, merge or deploy performed. Local desktop last clean on old S0-02 branch; Codex syncs main and creates fresh S0-03 branch after GO.
+
+## 21K-06 — Dev-only demo seeder convention locked (HISTORICAL)
 
 - Owner simplified local development: all synthetic seeded user emails end in `@iches.test`; where a local-only demo password login is supported, every demo credential is the literal `password`, hashed at rest. See [21K-06 final fixtures policy](docs/21K-06-DEV-DEMO-USER-SEED-POLICY.md).
 - The merged S0-02 users schema has **no password column**, and real participant login remains passwordless OTP/Magic Link. Do not add participant password requirements or seed weak accounts to production. Demo paths/seeding require local-only opt-in and never run in production. Use non-destructive idempotent seeding.

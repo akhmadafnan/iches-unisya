@@ -295,8 +295,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Existing S0-02 users table has NO password column**, and **participant login stays email OTP / Magic Link (NEW-003, RD-06)**. Do not silently implement participant password login. If Codex later needs demo password login, do it as local-only opt-in within a newly authorized S0-03 slice; otherwise use local mail logs/inbox for OTP. Idempotent non-destructive seeder only; no schema wipe.
 - **S0-03 still NOT GO CODING.** This decision removes repeated fixture design discussions; add to next auth Work Order, no immediate code, DB migrations, data insertion, PR, merge or deployment. S0-01/S0-07/S0-02 remain COMPLETE; PR #3 still separate.
 
+## 21K-07 / 21K-08 — S0-03 Authentication MVP implementation-ready (28 Oct 2026)
+
+- Owner asked to continue concretely and comprehensively. [21K-07 full auth & demo UAT](21K-07-S0-03-AUTHENTICATION-MVP-SPEC.md) + [21K-08 bounded executable Codex Work Order](21K-08-S0-03-CODEX-WORK-ORDER.md) are **PREPARED**. Per [20B explicit authorization rule](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md), generic “lanjut” **does not equal named GO**; next valid Owner authorization is **`GO CODING ICH-S0-03`**. No code, migration, seeding, push, PR, merge or deploy was performed by ChatGPT.
+- Vertical MVP: participant **OTP / Magic Link passwordless** (10m, 5 attempts, one use, hashed tokens, throttling, generic responses), Laravel session guard and CSRF, email log local, minimal login/dashboard/logout. Dev-only `@iches.test` accounts with **`password` stored hashed**, nullable password via new additive migration, explicit repeat-safe synthetic seeder; **local environment + demo flag double gate**. Preserve real policies and UUIDv7.
+- Concrete existing-source finding: `config/auth.php` not yet present, no auth routes, `users.password` absent; `config/session.php` and mail config exist, Foundation landing at `/`. Read-only desktop preflight found **clean stale S0-02 feature** and stale local `origin/main`; Codex should safely sync merged main before new `feat/ich-s0-03-passwordless-auth` branch.
+- No S0-04 RBAC broad implementation or PR#3 change; after named S0-03 GO Codex can implement the entire bounded slice without repeated per-step approvals, commit local, then stop before publishing.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: S0-01/S0-07/S0-02 MERGED / COMPLETE; DEV_DEMO_FIXTURES_LOCKED; NEXT ICH-S0-03 NO_GO.** Owner chose @iches.test seed emails and shared hashed 'password' for local demo accounts that support password login, while participant production auth remains OTP/Magic Link. No source edits, migrations or deployments authorized.
+**NOW: ICH-S0-03 AUTH_VERTICAL_SLICE_SPEC_READY / NAMED_GO_PENDING / NO_CODE.** 21K-07 architecture/UAT and 21K-08 executable Codex Work Order complete; dev @iches.test + hashed password opt-in, attendee OTP/Magic Link unchanged. S0-01/S0-07/S0-02 MERGED; no source/DB changes until exact GO CODING ICH-S0-03.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
