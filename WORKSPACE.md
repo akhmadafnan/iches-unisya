@@ -18,6 +18,11 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-09 — REV-02 accepted and exact Codex push authorized (CURRENT)
+
+- Owner has explicitly authorized Codex VS Code to push **only** `feat/ich-s0-07-ci` at `294a54b223676df3b6e9124480e271ee3a50bdc7` with ordinary no-force push. [21I-09 publication handoff](docs/21I-09-S0-07-REV02-PUSH-AUTHORIZATION.md).
+- Local branch and clean status independently verified; remote `origin/feat/ich-s0-07-ci` remains `c420d951...` until push succeeds. ChatGPT did **not** perform the push and does not claim a new CI run. After Codex confirmation, verify remote SHA and actual PR #5 Ubuntu/PHP8.4/Node22 checks. Merge separately owner-approved.
+
 ## 21I-08 — REV-02 local review PASS, corrected SHA awaits owner push approval (CURRENT)
 
 - `ICH-S0-07` branch `feat/ich-s0-07-ci` local HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7` (parent old remote `c420d951`), clean. Scoped revision: test-only Inertia page path aligned to lowercase `js/pages` with negative missing-page test; temporary `.env.example` copied only on CI runner; build log append-only +28. [21I-08 independently rerun checks](docs/21I-08-S0-07-REV02-FINAL-LOCAL-REVIEW.md): 4 PHP tests/36 assertions, Pint, Composer and diff PASS.

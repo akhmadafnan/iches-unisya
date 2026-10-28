@@ -199,8 +199,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **PR #5 remains OPEN/UNMERGED at old remote `c420d951` and both previous GitHub Actions runs FAILED.** Ubuntu/PHP8.4/Node22 after fix **NOT_RUN**. Owner must separately approve pushing new SHA; Codex-only normal push, ChatGPT checks live CI after, merge independently owner-gated.
 - No unrelated new code task, migration, database or deployment authorized. [21H PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) remains separate.
 
+## 21I-09 — Owner authorized REV-02 corrected commit push (28 October 2026)
+
+- Owner explicitly **ACCEPTED REV-02** after [21I-08](21I-08-S0-07-REV02-FINAL-LOCAL-REVIEW.md) and authorized **Codex VS Code** to push the existing `feat/ich-s0-07-ci` branch at exact local HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7`, normal non-force push. After verified remote update, ChatGPT may inspect PR #5 and real Ubuntu 24.04 / PHP 8.4 / Node 22 CI.
+- Local read-only preflight: branch `feat/ich-s0-07-ci`, exact HEAD `294a54b`, upstream `origin/feat/ich-s0-07-ci` still `c420d95175d7d25cd9fee6719180acaf0b684903`, worktree clean, canonical origin, Git Credential Manager active. GitHub API independently confirmed remote still at old SHA. **Push not executed during this ChatGPT turn.**
+- [21I-09 Codex push handoff](21I-09-S0-07-REV02-PUSH-AUTHORIZATION.md) scopes this push to the approved commit; **no force push, rebase, amend, extra app code, merge, migrations, DB or deployment**.
+- PR #5 remains OPEN / UNMERGED / prior checks failed until an actual corrected SHA run completes. Separate Owner authorization required for PR merge.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 REV-02 LOCAL REVIEW_PASS / OWNER_PUSH_APPROVAL_PENDING.** Fix at local `294a54b` independently verified (4 tests/36 assertions), PR #5 remote still at old failed `c420d951`; new commit not yet pushed. No merge/deploy.
+**NOW: ICH-S0-07 REV-02 OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / LIVE_CI_RECHECK_PENDING.** The owner authorized a normal push of exactly `294a54b223676df3b6e9124480e271ee3a50bdc7` to the existing PR #5 branch; the push has NOT yet happened. No merge, DB, other coding or deployment.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
