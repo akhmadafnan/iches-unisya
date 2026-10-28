@@ -52,3 +52,24 @@ Actual local environment: Windows, PHP 8.4.24, Composer 2.10.1, Node 26.4.0, npm
 Validation tool was downloaded to a unique OS temporary directory from the official rhysd/actionlint v1.7.12 release, SHA256 verified against the release checksum list (6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9). No global installation or project dependency was added. Python YAML parser probe was unavailable (ModuleNotFoundError, exit 1); actionlint supplied the successful workflow validation instead. npm repeated its non-blocking esbuild postinstall approval warning; no approval settings changed, and actual build passed.
 
 CI_NOT_RUN / PENDING_PUBLICATION: no GitHub Actions execution, check URL or Linux/Node 22 runtime PASS is claimed. Owner requested stop after local commit; no push, PR, merge, database operation or deployment performed. Review and publication require separate owner authorization. Transient local Packagist DNS was bypassed using already installed/cache dependencies; clean remote dependency download remains for the first authorized GitHub run.
+
+## 2026-10-28 — ICH-S0-07 REV-01 — annotated tag pin correction
+
+Owner authorized this bounded review fix on feat/ich-s0-07-ci. Review read from origin/main:docs/21I-04-ICH-S0-07-INDEPENDENT-CODE-REVIEW.md without merge/rebase. Existing commit 17e335049f209110e76a03dc99bc588cc7cee925 is preserved; this correction is a new follow-up commit.
+
+Correction: only the setup-php action SHA changed, from d52fc211a0436f8839a587b3b5b8efddab4744ea (annotated tag object) to eb7c497e18156a6bbabfef1d3a82760b9eda3962 (official v2 target commit). The earlier assertion that all three pins were verified against upstream tags was incomplete: tag equality did not prove commit object type. Historical evidence above is retained unchanged. All other workflow configuration remains identical.
+
+Independent object validation: GitHub Git API /git/ref/tags/v2 returned type tag and d52fc211a0436f8839a587b3b5b8efddab4744ea; /git/tags/d52fc211a0436f8839a587b3b5b8efddab4744ea returned type commit and eb7c497e18156a6bbabfef1d3a82760b9eda3962; /git/commits/eb7c497e18156a6bbabfef1d3a82760b9eda3962 confirmed that commit and its tree. The actions/checkout and actions/setup-node v6 refs were also checked through GitHub Git API: both remain type commit at their existing pinned SHAs. Assertion script exit 0.
+
+| Actual verification command | Exit | Result |
+|---|---:|---|
+| git ls-remote https://github.com/shivammathur/setup-php.git refs/tags/v2 'refs/tags/v2^{}' | 0 | Tag object d52fc211...; peeled commit eb7c497e... |
+| actionlint -shellcheck= -pyflakes= .github/workflows/ci.yml | 0 | PASS, existing temporary actionlint 1.7.12; optional external linters disabled |
+| git diff --check | 0 | PASS |
+| composer validate --strict | 0 | PASS |
+| php artisan test | 0 | PASS, 3 tests / 22 assertions |
+| php vendor/bin/pint --test | 0 | PASS |
+| npm.cmd run typecheck | 0 | PASS |
+| npm.cmd run build | 0 | PASS, Vite 7.3.7 |
+
+Local runtime remains PHP 8.4.24 / Node 26.4.0. No dependencies reinstalled or upgraded. Scope limited to the one workflow line and this append-only correction; no app, lockfile, governance, Skills, database, deployment or secret changes. CI_NOT_RUN / PENDING_PUBLICATION: Linux/Node 22 and action execution still require a separately authorized publication and real GitHub run. No push, PR, merge, amend or rebase performed.
