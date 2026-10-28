@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-07 — PR #5 Linux CI FAILED; REV-02 (CURRENT)
+
+- [PR #5](https://github.com/akhmadafnan/iches-unisya/pull/5) open, exact 2-file diff, head `c420d951...`, **no merge**. Two actual Ubuntu CI runs (push + PR) FAILED at PHPUnit after PHP/Composer PASS; Node22/Pint/npm/TS/build steps **SKIPPED**, not green.
+- Cause: Inertia testing default `resource_path('js/Pages')` but app component actually `resources/js/pages/Foundation.vue`; Linux case-sensitive. Keep file existence assertions, align test path, diagnose pre-build Vite manifest warnings. [21I-07 evidence and REV-02 scope](docs/21I-07-S0-07-LINUX-CI-FAILURE-REV02.md), comment attached to PR.
+- Existing S0-07 owner GO covers bounded CI-specific correction by Codex only; **no automatic push of new SHA** (prior authorization pinned old `c420d951`), no merge, DB, other task or deployment.
+
 ## 21I-06 — Owner accepted S0-07; exact Codex push authorized (CURRENT)
 
 - Explicit owner acceptance and bounded publication approval for `feat/ich-s0-07-ci` HEAD `c420d95175d7d25cd9fee6719180acaf0b684903`. Codex VS Code performs push; ChatGPT GitHub Connector creates PR **only after verified remote push** and checks Ubuntu CI; merge still owner-gated.

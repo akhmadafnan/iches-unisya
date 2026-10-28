@@ -186,8 +186,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - [21I-06 publication handoff](21I-06-S0-07-OWNER-ACCEPT-PUSH-PR-HANDOFF.md) contains verified local preflight and bounded Codex instructions. Latest check: local SHA correct, clean, GCM helper active; remote feature ref **not yet present**.
 - **No** merge, migration, DB, next coding task or deployment authorization. Ubuntu 24.04 PHP 8.4/Node 22 CI remains **NOT_RUN** until actual Actions.
 
+## 21I-07 — PR #5 created, actual GitHub CI failed (28 October 2026)
+
+- **PR #5 OPEN / UNMERGED**, head `c420d95175d7d25cd9fee6719180acaf0b684903`; exact two-file scope PASS. [Full live CI failure analysis](21I-07-S0-07-LINUX-CI-FAILURE-REV02.md).
+- **Both real GitHub Actions runs FAILED:** [push 40668248799](https://github.com/akhmadafnan/iches-unisya/actions/runs/40668248799), [PR 40669157978](https://github.com/akhmadafnan/iches-unisya/actions/runs/40669157978). PHP setup/Composer PASS; `php artisan test` failed due to `resources/js/Pages` default Inertia testing path vs actual lowercase `resources/js/pages` on Linux; 1 test failure, 2 warnings. Pint/Node22/npm/build skipped.
+- **Status REV-02 / REVISIONS_REQUIRED.** Same S0-07 work scope allows bounded Codex-only CI testing fix, preserving assertions and prior commits, but **new corrected SHA must not be pushed without separate owner approval**. PR merge, DB, new coding task and deployment remain NO_GO.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 OWNER_ACCEPTED / CODEX_PUSH_AUTHORIZED / CI_NOT_RUN.** Local exact commit `c420d951` accepted, Codex may push existing branch only. After remote verification ChatGPT may create PR and inspect Actions; no merge, migrations, other coding or deployment.
+**NOW: ICH-S0-07 PR #5 OPEN / LIVE_CI_FAILED / REV-02 REVISIONS_REQUIRED.** Two real Ubuntu workflows failed PHPUnit due to Inertia testing path capitalization mismatch. No merge. Scoped Codex-only fix under existing task; new push requires owner approval.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
