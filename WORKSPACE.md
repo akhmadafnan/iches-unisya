@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-04 — S0-02 PR #6 CI PASS, owner merge authorization pending (CURRENT)
+## 21K-05 — ICH-S0-02 MERGED / COMPLETE (CURRENT)
+
+- Owner expressly approved SHA-pinned standard merge of [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6), feature `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`; GitHub returned `merged=true`, merge commit `3eb1be7b23a2fd08fdcbd84e5fd1ba0819f90201` verified as `main` HEAD. Exactly **14** reviewed paths, two feature commits.
+- [21K-05 postmerge evidence](docs/21K-05-S0-02-MERGED-COMPLETE.md): real push and PR GitHub Actions PHP 8.4/Node22 both SUCCESS, local MySQL S0-02 8/134 PASS, no CI MySQL service. Main branch unprotected/no required checks or active rulesets; normal merge without bypass.
+- S0-01, S0-07 and S0-02 now COMPLETE. Next ICH-S0-03 passwordless OTP and S0-04 RBAC **NOT AUTHORIZED**; no DB migration/reset, other coding or deployment. Independent Skills PR #3 open and unmerged.
+
+## 21K-04 — S0-02 PR #6 CI PASS, owner merge authorization pending (HISTORICAL)
 
 - [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6) **OPEN / UNMERGED**, branch `feat/ich-s0-02-db-foundation` published at exact Owner-approved SHA `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`, 2 commits, 14 scoped files; GitHub `mergeable=true`, `mergeable_state=clean`.
 - [21K-04 live Actions evidence](docs/21K-04-S0-02-PR6-LINUX-CI-PASS-AND-MERGE-GATE.md): push run 40695877645 **SUCCESS**, PR run 40696398403 **SUCCESS**, real PHP8.4.27/Composer/Laravel4 tests-36 assertions/Pint29/Node22/npm/TS/Vite all green. Local MySQL 8 tests/134 assertions independently rerun in [21K-02](docs/21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md), NOT run in Linux DB-free CI.

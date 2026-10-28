@@ -282,8 +282,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Local authenticated MySQL checks from previous [21K-02](21K-02-S0-02-REV03-FINAL-LOCAL-REVIEW.md) independently PASS **8 DB integration tests/134 assertions** with transaction rollback and real generated-column/index inspection in owner-only `iches_unisya`. **Do not claim MySQL tests were run by GitHub CI** (CI remains DB-free).
 - Full [21K-04 PR/CI gate report](21K-04-S0-02-PR6-LINUX-CI-PASS-AND-MERGE-GATE.md). **Owner merge approval NOT granted**; no merge, migrations/DB reset, other coding or deployment. Design Skills PR #3 remains separate.
 
+## 21K-05 — ICH-S0-02 PR #6 merged and COMPLETE (28 October 2026)
+
+- **OWNER EXPLICIT MERGE GO** for [PR #6](https://github.com/akhmadafnan/iches-unisya/pull/6), exact accepted feature HEAD `f4eb25c31763da1e9bf2526e5a1440d5cb33f4eb`. Standard SHA-pinned GitHub merge returned `merged=true`, merge commit **`3eb1be7b23a2fd08fdcbd84e5fd1ba0819f90201`**. Independently verified PR **CLOSED/MERGED** and merge commit as `main` HEAD before docs-only postmerge recording, with parents `12512bb35c6e647488f7b9345cc9c74a2cb130aa` and exact `f4eb25c...`.
+- **Exactly 14 approved changed paths**, two feature commits. Both real [push CI 40695877645](https://github.com/akhmadafnan/iches-unisya/actions/runs/40695877645) and [PR CI 40696398403](https://github.com/akhmadafnan/iches-unisya/actions/runs/40696398403) completed **SUCCESS**, PHP 8.4.27, locked Composer, DB-free Laravel 4 tests/36 assertions, Pint29, Node22/npm/TS/Vite. Owner local MySQL `iches_unisya` 8 tests/134 assertions separately validated; **not run in GitHub CI**.
+- Final checks before merge: `mergeable=true`, `mergeable_state=clean`, `main` unprotected, required check list empty, no applicable active rulesets; normal GitHub merge without bypass. Detailed branch protection endpoint 403 (integration lacks admin), but readable branch summary/rulesets showed no required rule.
+- [21K-05 merge closure report](21K-05-S0-02-MERGED-COMPLETE.md). **ICH-S0-01, ICH-S0-07 and ICH-S0-02 COMPLETE**, no additional coding GO, migration, database reset, or deployment. **ICH-S0-03 passwordless OTP remains NO_GO**; Design Skills PR #3 stays OPEN/UNMERGED. No automatic production cutover.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 PR6_CI_PASS / REVIEW_PASS / OWNER_MERGE_APPROVAL_PENDING.** Owner-approved SHA f4eb25c pushed and PR #6 OPEN, UNMERGED; exact 14-file scope. Both GitHub Actions push 40695877645 and PR 40696398403 SUCCESS (PHP8.4/Node22). Mergeable clean. No merge, DB action, extra coding or deploy authorized.
+**NOW: ICH-S0-02 MERGED / COMPLETE; NEXT ICH-S0-03 NOT_AUTHORIZED / NO_GO.** Owner-authorized normal PR #6 merge completed at 3eb1be7, 14 reviewed paths, both GitHub CI events SUCCESS. S0-01/S0-07/S0-02 merged. No DB changes, coding task or deployment authorized.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

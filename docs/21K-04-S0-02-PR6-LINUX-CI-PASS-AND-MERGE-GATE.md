@@ -1,6 +1,6 @@
 # 21K-04 — ICH-S0-02 PR #6: GitHub Linux CI PASS and Merge Approval Gate
 
-> **28 October 2026 · REVIEW_PASS / CI_RUNTIME_PASS / PR #6 OPEN_UNMERGED / OWNER_MERGE_APPROVAL_PENDING.** No repository merge, DB reset/migration or deployment authorized. Evidence gathered directly from GitHub remote refs, PR diff, Actions runs, jobs and logs.
+> **28 October 2026 · HISTORICAL PRE-MERGE REVIEW — PR #6 NOW MERGED.** Owner subsequently explicitly approved normal merge and GitHub completed it at `3eb1be7b23a2fd08fdcbd84e5fd1ba0819f90201`. See [21K-05 final merger evidence](21K-05-S0-02-MERGED-COMPLETE.md); below is preserved as the original pre-merge CI record. No repository merge, DB reset/migration or deployment authorized. Evidence gathered directly from GitHub remote refs, PR diff, Actions runs, jobs and logs.
 
 ## Current exact identity
 
