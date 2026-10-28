@@ -51,6 +51,9 @@ jobs:
       - name: Report Laravel version
         run: php artisan --version
 
+      - name: Prepare disposable test environment
+        run: cp .env.example .env
+
       - name: Run database-free PHP tests
         run: php artisan test
 

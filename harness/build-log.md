@@ -73,3 +73,31 @@ Independent object validation: GitHub Git API /git/ref/tags/v2 returned type tag
 | npm.cmd run build | 0 | PASS, Vite 7.3.7 |
 
 Local runtime remains PHP 8.4.24 / Node 26.4.0. No dependencies reinstalled or upgraded. Scope limited to the one workflow line and this append-only correction; no app, lockfile, governance, Skills, database, deployment or secret changes. CI_NOT_RUN / PENDING_PUBLICATION: Linux/Node 22 and action execution still require a separately authorized publication and real GitHub run. No push, PR, merge, amend or rebase performed.
+
+## 2026-10-28 — ICH-S0-07 REV-02 — Linux Inertia path and CI environment correction
+
+Authorization: owner requested the bounded REV-02 correction on feat/ich-s0-07-ci, preserving c420d95175d7d25cd9fee6719180acaf0b684903 and earlier commits. Read origin/main:docs/21I-07-S0-07-LINUX-CI-FAILURE-REV02.md without merge/rebase. Read actual PR #5 job 122751236997 logs through the GitHub connector: https://github.com/akhmadafnan/iches-unisya/actions/runs/40669157978 . Existing Linux run FAILED at php artisan test (Foundation component missing, two truncated file_get_contents warnings); Node 22/frontend steps were skipped, not passed.
+
+Root causes and bounded changes:
+- Installed Inertia defaults inertia.testing.page_paths to resources/js/Pages, but the tracked Vue directory is resources/js/pages. Set the test-only config in FoundationSmokeTest::setUp to [resource_path('js/pages')]. Kept component('Foundation') and default ensure_pages_exist validation intact. Added a negative test that renders a missing component and expects the precise Inertia existence assertion failure. No application config or page behavior changed.
+- Warning diagnosis disproved the manifest hypothesis. With the existing local env and the manifest temporarily unavailable, direct PHPUnit passed without warnings. With both .env and manifest unavailable, direct PHPUnit still passed, but php artisan test --display-warnings reproduced file_get_contents(.../.env) from vendor/vlucas/phpdotenv/src/Store/File/Reader.php:73. Artisan's reporting surfaced the suppressed missing-file warnings (on Windows all three original tests warned; the Linux failure masked the first test's warning). This was not a Vite manifest read.
+- Added one CI preparation step immediately before tests: cp .env.example .env, creating a disposable runner-local, non-secret environment from the committed example. No key generation, database connection, build reordering, production credentials or tracked env file. Tests still generate ephemeral in-memory keys. Existing owner .env and built manifest were temporarily renamed only for isolated checks and restored in finally blocks; no contents were printed.
+
+| Actual local command/check | Exit | Evidence |
+|---|---:|---|
+| php vendor/phpunit/phpunit/phpunit --display-warnings --fail-on-warning, before fix with manifest unavailable | 0 | 3 tests / 22 assertions; no warnings; disproves manifest-only explanation |
+| Same direct PHPUnit command with both local .env and manifest unavailable | 0 | 3 tests / 22 assertions; no warnings |
+| php artisan test --display-warnings --fail-on-warning, before fix without .env/manifest | 0 | Reported 3 file_get_contents(.env) warnings despite exit 0; not recorded as warning-free PASS |
+| Diagnostic missing-env warning detector around php artisan test --display-warnings | 1 expected | Negative control positively detected the known .env warning; temporary files restored |
+| php artisan test --display-warnings after fix, existing local env/assets | 0 | PASS, 4 tests / 36 assertions, including missing-component rejection |
+| php artisan test --display-warnings after fix, manifest absent and disposable env copied from example | 0 | PASS, 4 tests / 36 assertions; output explicitly checked for zero warnings |
+| php vendor/bin/pint --test | 0 | PASS |
+| composer validate --strict | 0 | PASS |
+| actionlint -shellcheck= -pyflakes= .github/workflows/ci.yml | 0 | PASS, existing temporary validator 1.7.12; optional external linters disabled |
+| npm.cmd run typecheck | 0 | PASS |
+| npm.cmd run build | 0 | PASS, Vite 7.3.7 |
+| git diff --check and protected application/governance/lockfile diff audit | 0 | PASS |
+
+Changed paths only: tests/Feature/FoundationSmokeTest.php, .github/workflows/ci.yml and this append-only build log. No source application, dependencies/lockfiles, auth, CMS, database/migration or governance changes. No vendor edits or warning suppression added. No dependencies reinstalled. No debug code remains.
+
+Local verification ran on Windows/PHP 8.4.24/Node 26.4.0; available WSL executable did not provide a runnable Linux distribution. Linux case-sensitive behavior is grounded in the real failed GitHub job and tracked directory names, not claimed as locally rerun. NEW_COMMIT_CI_NOT_RUN / PENDING_OWNER_PUBLICATION: the published old SHA's CI remains failed; no corrected Linux/Node 22 PASS or CI URL is claimed. Stop after a new local commit, with no push, PR mutation, merge, deployment or database action.
