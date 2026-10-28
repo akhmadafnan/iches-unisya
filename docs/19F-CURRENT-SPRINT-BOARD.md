@@ -23,6 +23,10 @@ Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build 
 
 **Lokasi proyek disepakati:** `D:\PINJAM-AFNAN\iches-unisya` (**pakai tanda hubung**); folder belum ada. **VS Code utama yang dipilih owner:** `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (**pakai spasi**), v**1.143.1** terverifikasi dari metadata. Ada instalasi lain v1.128.0 pada direktori bertanda hubung, tetapi **bukan default yang dipilih**. Ekstensi/login Codex pada v1.143.1 belum diverifikasi; `new_code.cmd` wrapper gagal karena merujuk `Code.exe` yang tidak ada. Tidak ada clone/create/merge/coding. [Detail 20C](20C-LOCAL-PREFLIGHT-AND-GATES.md). **Next:** izin setup clone terpisah lalu inspeksi remote dan kesiapan environment.
 
+## 20C — Codex VS Code UI confirmed by owner screenshot (28 Oct 2026)
+
+Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code status bar, Codex sidebar and prior chats visible, plus `AGENTS.md` / `PLANS.md` / `.agents`. This confirms **visible Codex UI session**, but **does NOT prove all 4 Skills can be read by the agent**. Next action: run the no-code [20C-02 Read-only Codex Handshake](20C-02-CODEX-READ-ONLY-HANDSHAKE.md) in Codex chat and review its textual output. No code/DB/install/merge/GO. PRE-02 note: NEW-003 approved participant Magic Link/OTP vs draft RD-06 password login must be reconciled before authorizing code.
+
 ## NOW — satu prioritas yang boleh aktif
 **ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk task/sprint mana pun.**
 

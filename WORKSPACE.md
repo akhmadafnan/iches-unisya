@@ -37,6 +37,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
+## Codex readiness check
+
+- Owner screenshot confirms visible VS Code **Codex panel and chat history** in the ICHES workspace.
+- [20C-02 READ-ONLY handshake](docs/20C-02-CODEX-READ-ONLY-HANDSHAKE.md) is the next action: verify all four Skills can be read by the running agent; **NO GO CODING**.
+
 ## Lokasi kerja lokal disepakati
 
 - **Windows:** `D:\PINJAM-AFNAN\iches-unisya` — **berhasil di-clone**, branch `docs/19e-agent-workspace`, clean, 4 Skills dan PLANS tersedia.

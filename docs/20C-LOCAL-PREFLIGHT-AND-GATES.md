@@ -4,6 +4,10 @@
 
 > **28 October 2026 (Asia/Jakarta) · READ-ONLY INSPECTION COMPLETED, NO CODE GO.** This document records what was **actually checked** on one connected Windows Desktop Commander device. It does not prove the device is the final development machine, that the target repository is cloned, or that production hosting is ready.
 
+## 20C UI screenshot verification (28 October 2026)
+
+The owner shared a screenshot of the actual VS Code window: `iches-unisya` workspace, `docs/19e-agent-workspace` branch indicator, **Codex side panel and conversation history visible**, `AGENTS.md`, `PLANS.md` and `.agents` Explorer entries. **UI presence is verified; agent's ability to read/invoke all 4 Skills is not yet verified.** Use [20C-02 read-only handshake](20C-02-CODEX-READ-ONLY-HANDSHAKE.md); report actual Codex response before marking the PRE-03 gate complete. Never infer GO Coding.
+
 ## 1. Evidence from connected Windows desktop (read-only)
 
 | Item | Actual result | Gate |

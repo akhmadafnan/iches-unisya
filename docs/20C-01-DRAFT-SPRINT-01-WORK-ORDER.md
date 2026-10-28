@@ -50,6 +50,10 @@ Always read `AGENTS.md`, the brief `PLANS.md` roadmap and the single current boa
 
 Never edit `AGENTS.md`, `PLANS.md`, `WORKSPACE.md`, `README.md`, `docs/**`, `.agents/skills/**`, owner decisions, secrets or production data. No branch force rewrite, automatic merge or deployment.
 
+## PRE-02 auth decision conflict (do not default to password)
+
+Decision Register NEW-003 approved participant **Email OTP/Magic Link without password**, while draft RD-06/PROP-067 calls for Laravel email/password sessions. Resolve this inconsistency with the owner **before** generating auth/schema code; session cookie auth can support a passwordless flow. Do not reinterpret older approved product intent silently. See [20C-02](20C-02-CODEX-READ-ONLY-HANDSHAKE.md).
+
 ## READY blockers (all must be cleared)
 - [ ] [Governance PR #1](https://github.com/akhmadafnan/iches-unisya/pull/1) owner-reviewed/merged, local clone synced.
 - [ ] RD-01 canonical repo and legacy reuse selection approved.
