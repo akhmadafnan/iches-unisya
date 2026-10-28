@@ -1,6 +1,6 @@
 # 21G-01 — ICHES Skills Routing, Precedence & Activation Policy
 
-> **28 October 2026 · OWNER-APPROVED SKILLS INTEGRATION · PILOT ON `docs/21g-skills-integration`.** This is a governance/agent-instruction change, **not GO CODING**, not a source edit, and not a merge request authorization. Current unpushed `ICH-S0-01` feature branch must remain untouched.
+> **28 October 2026 · W1 IN MAIN / CODEX READ-ONLY VALIDATED.** Owner approved and merged PR #2. Codex explicitly read all five W1 Skills and passed simulated routing and permission checks; **automatic triggering remains NOT_TESTED** ([21G-06](21G-06-CODEX-READONLY-VALIDATION-REVIEW.md)). This Skill policy is not an application GO and does not authorize source edits, database changes or further merges. The unpushed accepted `ICH-S0-01` feature branch remains protected.
 
 ## Source-of-truth priority (highest to lowest)
 

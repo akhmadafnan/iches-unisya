@@ -144,6 +144,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Next:** user runs the copy/paste read-only prompt in the separate Codex VS Code window and returns actual results. **No coding GO, application merge, DB migration or deployment**.
 
 
+## 21G-06 — W1 read-only Codex validation reviewed (28 October 2026)
+
+- **W1 accepted for task-bounded reference use** after owner-provided Codex report: 5 Skills explicitly readable PASS; 5 hypothetical routing scenarios PASS; 3 negative permission scenarios PASS; native ICHES precedence PASS. All routing/permission results are **simulations**, not proof of automatic invocation.
+- **AUTO-ACTIVATION = NOT_TESTED**. Do not claim Skills auto-trigger based on manual `Get-Content` or scenario answers. [Full review & independently verified Git state](21G-06-CODEX-READONLY-VALIDATION-REVIEW.md).
+- Independent Windows read-only recheck: detached QA HEAD `80b888e55a98dad241122518918168db1b5020da`, `git diff --exit-code` and `git diff --cached --exit-code` 0, 5 YAML frontmatters match and 4 native Skills present; accepted Laravel branch `feat/ich-s0-01-foundation` still at `8eba7cb5b9da0577910beb919844165869591e05`, clean.
+- **Next parallel documentation task:** `21H` selective, read-only evaluation of Taste Skill + Anti-Slop Design + Vercel UI Guidelines; no install/coding without separate scope. Operational app blocker remains GitHub local HTTPS authentication for accepted ICH-S0-01 push/PR.
+
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
 

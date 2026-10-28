@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21G-06 — ACTUAL CODEX READ-ONLY REPORT VALIDATED (current)
+
+- [21G-06 review](docs/21G-06-CODEX-READONLY-VALIDATION-REVIEW.md): explicit Codex reading 5/5 PASS; five routing simulations and three permission-denial simulations PASS; ICHES native precedence upheld. Reviewer independently rechecked detached QA HEAD `80b888e`, clean staged/unstaged diff, five valid Skill names and untouched Laravel feature HEAD `8eba7cb`.
+- **Automatic Skill activation remains NOT_TESTED**. W1 suitable for reference use under future named GO only; no further application code or merge authorization. Next is **21H design Skills read-only audit**, plus separate existing Git credential blocker.
+
+
 ## 21G — PR #2 merged, static QA PASS; Codex test response pending (latest)
 
 - Owner explicitly authorized merge of docs/Skills-only PR #2, merged SHA `e5362f919fbd7ce23fdd50761b5dc99fa9410e18`. Five third-party Skills (Ponytail general/review/audit; Matt diagnosing-bugs/TDD) now on `main`.

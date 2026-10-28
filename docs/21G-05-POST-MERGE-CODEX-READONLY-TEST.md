@@ -52,6 +52,11 @@ No GO CODING has been granted to this QA workspace.
 | G21G-07 native/external precedence conflict | **NOT_TESTED IN CODEX** | Explicit explanation with ICHES rules |
 | G21G-08 merge approval | **PASS** (explicit owner MERGE PR #2) | None |
 
+## Post-handoff outcome — actual Codex response reviewed (28 October 2026)
+
+**Results are no longer pending.** The owner supplied Codex's actual read-only result: five Skill reads PASS, matching frontmatter PASS, five simulated routing choices PASS, three simulated negative authorization cases PASS, native ICHES precedence PASS; **auto-activation NOT_TESTED** because each file was explicitly read via `Get-Content`. Clean Git state was independently rechecked by ChatGPT. The complete assessment and next-step status are recorded in [21G-06 independent review](21G-06-CODEX-READONLY-VALIDATION-REVIEW.md). Historical `NOT_TESTED` checklist entries above describe the pre-handoff phase.
+
+
 ## After Codex handoff
 
 User provides Codex's response. ChatGPT reviews actual evidence and records PASS/FAIL, not a predicted result. Do not change implementation `ICH-S0-01`, do not run auth migrations, do not auto-merge app PR. W2 design Skills (Taste/Anti-Slop/Vercel) remain a separate scoped review.
