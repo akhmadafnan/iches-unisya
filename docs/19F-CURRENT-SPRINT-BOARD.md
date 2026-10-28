@@ -128,6 +128,13 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Codex activation G21G-04..07 NOT RUN**, until PR owner merge + safe sync. PR must remain **DRAFT / UNMERGED** pending review and explicit owner merge approval. This work **must not switch or reset the local unpushed** `feat/ich-s0-01-foundation` branch.
 - **Operational blocker remains:** accepted `ICH-S0-01` feature push/PR failed due GitHub terminal credential helper, no remote feature branch/PR yet. No change to that status and no deployment.
 
+## 21G W1 audit evidence (28 October 2026)
+
+- **G21G-01/02/03 PASS:** 5 upstream Skills, 3 supporting files and 2 MIT license texts **all exact-copy** from pinned commits; 81 relative Markdown links checked with 0 broken; 17 changed paths all confined to docs/Skills/licenses, no app code.
+- Local `feat/ich-s0-01-foundation` HEAD `8eba7cb5b9da0577910beb919844165869591e05` independently verified untouched and clean. **No local checkout, push or PR for foundation performed.**
+- **G21G-04..08 NOT_RUN / PENDING:** actual Codex discovery/activation, negative safety tests and owner-approved merge. [Detailed W1 audit](21G-04-W1-GITHUB-QUALITY-AUDIT.md).
+- Draft PR to be created from `docs/21g-skills-integration` (not yet merged); no new application coding GO issued.
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-S0-01 OWNER_ACCEPTED / CODEX_PUSH_PR_AUTHORIZED.** Owner has accepted independently reviewed local commit. Only Codex push of existing feature branch and creating scoped PR into main are authorized; **no merge or next GO**.
 

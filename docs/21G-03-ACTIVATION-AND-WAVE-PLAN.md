@@ -6,9 +6,9 @@
 
 | Gate | Evidence required | Initial state |
 |---|---|---|
-| G21G-01 Source provenance | Every W1 `SKILL.md` matches exact pinned upstream SHA; reference files exist | CHECK IN GITHUB |
-| G21G-02 Licensing | Full MIT notices preserved for both upstream repos | CHECK IN GITHUB |
-| G21G-03 No app impact | Diff contains docs/Skills/license files only; no Laravel/TypeScript/package/app content; `ICH-S0-01` local feature untouched | CHECK GITHUB + LOCAL |
+| G21G-01 Source provenance | All 5 W1 `SKILL.md` exact-match their pinned upstream, with 3 additional reference/script files exact-match | **PASS / GitHub content audit** |
+| G21G-02 Licensing | Both full MIT license notices exact-match original source files | **PASS / GitHub content audit** |
+| G21G-03 No app impact | 17 changed paths, docs/Skills/license only, zero application code; local accepted feature `8eba7cb5...` clean and unchanged | **PASS / GitHub + local read-only** |
 | G21G-04 Agent can read | Codex VS Code identifies **all five** `.agents/skills/*/SKILL.md` after user-authorized documentation merge and safe local sync | **NOT RUN** |
 | G21G-05 Correct activation | In read-only dry run, choose `ponytail-review` for PR review; `ponytail-audit` for full repo; `diagnosing-bugs` for bug; `tdd` for preapproved task test seams; `ponytail` for scope-lean authorized implementation | **NOT RUN** |
 | G21G-06 Negative tests | No named GO → no source change; `Verdict: Ship` not merge; TDD no unauthorized database; no password/auth scope leak; no script auto-run | **NOT RUN** |
