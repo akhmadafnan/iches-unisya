@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21J-02 / 21J-03 — Database name fixed; S0-02 next FAST track (CURRENT)
+## 21J-04/05 — ICH-S0-02 OWNER GO / CODEX EXECUTION (CURRENT)
+
+- Owner reports local schema `iches_unisya` (underscore) exists and explicitly grants `GO CODING ICH-S0-02`. [Latest correction 21J-04](docs/21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md); [bounded Codex handoff 21J-05](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md). Earlier `iches-unisya` spelling is superseded.
+- Codex VS Code only: safely update main, create `feat/ich-s0-02-db-foundation`, verify actual MySQL connection selects exact `iches_unisya`, wire Laravel MySQL/ignored local credentials, implement UUIDv7 identity/event foundations and scoped nondestructive migrations/tests; preserve DB-free CI; stop after local commit.
+- Owner's creation report is **not** conclusive SQL authenticated proof; first Codex operation checks. No new GO needed for S0-02 source and additive migration; no reset, push/PR/merge/deploy.
+
+## 21J-02 / 21J-03 — Database name fixed; S0-02 next FAST track (HISTORICAL)
 
 - **RD-03C owner decision:** use exactly `iches-unisya` (hyphen), not `iches_unisya`; owner creates manually in phpMyAdmin. Temporary local MySQL root allowed for development with password only in ignored `.env`; never publish credentials or use root in production. [21J-02 decision](docs/21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md).
 - [21J-03 concise S0-02 Work Order](docs/21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md) prepared. The DB has not been verified or created by ChatGPT; existing Laravel DB connections still disabled. After owner confirms creation, a separate **GO CODING ICH-S0-02** is required. Codex-only coding, no automatic destructive reset, CI remains DB-free.

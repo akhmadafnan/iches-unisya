@@ -233,8 +233,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **NOW:** owner creates `iches-unisya` manually; **`ICH-S0-02` not started**. One named GO after creation can authorize the bounded Codex DB foundation task. Root must be local-only; no automatic destructive database reset or production deployment.
 - **S0-01 and S0-07 MERGED/COMPLETE**; [PR #3 Skills](https://github.com/akhmadafnan/iches-unisya/pull/3) OPEN/UNMERGED.
 
+## 21J-04/05 — Owner corrected DB name and granted S0-02 GO (28 Oct 2026)
+
+- Latest owner: `iches_unisya` **UNDERSCORE**, not prior `iches-unisya`; manually created in phpMyAdmin, explicitly `GO CODING ICH-S0-02`. [21J-04 decision](21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md), [21J-05 Codex execution](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md).
+- Scope: dedicated MySQL/InnoDB local DB, temporary root credentials only in ignored `.env`, minimal identity/events UUIDv7 schema, normal additive migrations after Codex authenticates and confirms database. DB-free CI preserved.
+- **Status GO_AUTHORIZED / CODEX_EXECUTION_PENDING / AUTH_CHECK_REQUIRED**. Last known local clean checkout on `feat/ich-s0-07-ci`, main tracking stale; Codex safely syncs main and creates `feat/ich-s0-02-db-foundation`. No reset/wipe, push, merge, deployment or S0-03 auth logic.
+- S0-01 + S0-07 COMPLETE, [PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) remains open/unmerged.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: RD-03C `iches-unisya` DB NAME LOCKED / OWNER_MANUAL_PHPMyADMIN / ICH-S0-02 NO_GO.** One dedicated local database with temporary owner-provided root login for development; no separate test DB. Await owner manual creation + explicit GO CODING S0-02. S0-01/S0-07 COMPLETE; no SQL, new code, merge or deployment authorized.
+**NOW: ICH-S0-02 GO_AUTHORIZED / CODEX_EXECUTION_PENDING / DB_AUTH_CHECK_REQUIRED.** Owner reports `iches_unisya` (UNDERSCORE) manually created and granted named GO; Codex will verify authentication before migrations, implement local DB foundation and commit locally. No destructive reset, push, PR, merge or deploy.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

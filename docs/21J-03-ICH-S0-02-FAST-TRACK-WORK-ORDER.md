@@ -1,5 +1,7 @@
 # 21J-03 — ICH-S0-02 Fast-track Identity/Event Database Foundation — Work Order
 
+> **LATEST RD-03D OWNER OVERRIDE:** Use `iches_unisya` (underscore), owner-created, and **GO CODING ICH-S0-02 is authorized**. Old hyphen spelling and pre-GO status below are historical. [21J-04](21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md), [21J-05](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md).
+
 > **28 October 2026 · READY FOR DATABASE CONFIRMATION / NOT GO CODING.** Source of truth: [21J-02 RD-03C](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md), [19B backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [20B execution governance](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Keep delivery fast and avoid repeated planning, but no automatic destructive SQL or code task without a named GO.
 
 ## One-step owner preparation

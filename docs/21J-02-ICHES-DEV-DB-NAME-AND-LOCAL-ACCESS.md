@@ -1,5 +1,7 @@
 # 21J-02 — LOCKED: ICHES Development Database Exact Name and Local Access
 
+> **LATEST OWNER GO 21J-04/05:** Database `iches_unisya` (UNDERSCORE) owner reports created and **GO CODING ICH-S0-02 granted**. Earlier hyphenated `iches-unisya`/NO_GO statements are historical. [21J-04](21J-04-ICHES-UNDERSCORE-DB-AND-S0-02-GO.md), [21J-05](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md).
+
 > **OWNER DECISION 28 October 2026 · RD-03C — SUPERSEDES RD-03B ON DATABASE NAME & TEMPORARY LOCAL ACCOUNT.** The owner will create the database **MANUALLY** in phpMyAdmin; its exact name is `iches-unisya` (**hyphen, not underscore**). Local development may temporarily use the existing MySQL `root` account and its owner-provided local password. To avoid disclosing credentials in this PUBLIC GitHub repository, **the password value must never be written here, in PRs, logs, code examples or GitHub Actions**. This is not production credential policy and not permission to create/drop/modify DB through ChatGPT.
 
 ## Locked practical decisions
