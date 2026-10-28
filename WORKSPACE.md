@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-04 — Local CI implementation independently reviewed (CURRENT)
+
+- `ICH-S0-07` local commit `17e335049f209110e76a03dc99bc588cc7cee925` (branch `feat/ich-s0-07-ci`, base `42a8633`) independently verified clean, 2 changed files only. Local tests reported PASS, **GitHub CI / Node 22 NOT_RUN**.
+- [21I-04 independent code review](docs/21I-04-ICH-S0-07-INDEPENDENT-CODE-REVIEW.md) **REVISIONS_REQUIRED**: fix `shivammathur/setup-php` annotated `v2` tag-object SHA to the actual commit SHA `eb7c497e18156a6bbabfef1d3a82760b9eda3962` (verified via GitHub Git API); other two pins are true commits.
+- Codex may make this **single task-bounded correction under existing S0-07 GO** on the same local branch, append corrected build-log evidence and a separate follow-up local commit. No push/PR/merge authority; no additional source tasks, DB, migrations, CMS or deploy authorized.
+
 ## 21I-03 — GO CODING ICH-S0-07 granted (CURRENT)
 
 - Owner explicitly authorized one task: **ICH-S0-07 GitHub Actions DB-free CI** on 28 Oct 2026. Scope set by [21I-02 Work Order](docs/21I-02-ICH-S0-07-CI-WORK-ORDER.md), [21I-03 Codex execution handoff](docs/21I-03-GO-ICH-S0-07-CODEX-EXECUTION.md). Status `GO_AUTHORIZED / AWAITING_CODEX_EXECUTION`, **not implemented yet**.

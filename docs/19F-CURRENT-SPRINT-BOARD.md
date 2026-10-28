@@ -166,8 +166,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **Hard stops:** S0-02 test DB/unapproved schema, passwordless auth, RBAC, frontend/CMS, finance, app PR merge, deploy all outside this authorization; PR #3 design Skills remains open and separately gated.
 - **Publication:** coding GO alone does not authorize push/PR/merge. Codex returns local evidence for independent review; owner then decides.
 
+## 21I-04 — Independent review of local ICH-S0-07 (28 October 2026)
+
+- Local Codex branch `feat/ich-s0-07-ci`, commit `17e335049f209110e76a03dc99bc588cc7cee925`, base `42a8633`, clean. **Exactly 2 changed files:** CI workflow (73 new lines), build-log append-only (+33, -0). No schema/secret/other code changes. Local Composer/PHP/Pint/npm/TS/Vite/actionlint checks **REPORTED PASS**, GitHub Actions/Node22 `NOT_RUN`.
+- [21I-04 independent audit](21I-04-ICH-S0-07-INDEPENDENT-CODE-REVIEW.md): **REVISIONS_REQUIRED (one HIGH)**: `shivammathur/setup-php` pinned to annotated `v2` tag-object SHA `d52fc...` instead of actual commit SHA `eb7c497e18156a6bbabfef1d3a82760b9eda3962`. Direct GitHub Git API confirmed different object types. Other two Action pins valid.
+- Existing named `ICH-S0-07` GO covers this narrow code review correction; **Codex only**, append-only correction evidence and new local commit. **No push/PR/merge/deployment permission** yet; owner acceptance pending, Linux CI not run.
+- Local accepted `ICH-S0-01` source is preserved. `21H` design Skills PR #3 remains independently open/unmerged.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 GO_AUTHORIZED / AWAITING_CODEX_EXECUTION.** Owner explicitly authorized this one DB-free CI implementation task. Only Codex VS Code may write source; no authorization for S0-02, migrations, auth, CMS, new PR merge or deployment.
+**NOW: ICH-S0-07 REVISIONS_REQUIRED / CODEX_REVIEW_FIX_PENDING.** Initial local implementation complete but independent audit found wrong Git object type in setup-php SHA. Only narrow fix under existing named GO; no publish or merge authorization.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
