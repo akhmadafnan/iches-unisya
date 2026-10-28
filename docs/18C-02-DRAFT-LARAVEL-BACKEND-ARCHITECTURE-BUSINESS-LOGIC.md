@@ -1,5 +1,7 @@
 # 18C-02 — DRAFT Laravel Backend Architecture & Business Logic ICHES UNISYA 2027
 
+> **HANDOFF TAMBAHAN 28 OKTOBER (DRAFT):** [18C-03B Switch Workspace & Admin Support View](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md) mengusulkan session preference untuk role/workspace dalam **satu User ID**, serta opsi **Superadmin-only View as User yang read-only, with real_actor + target metadata, reason, audit, expiry**. Business Action tetap mengevaluasi **real actor**; tidak ada mutasi Finance/Academic/Publication/QR selama support view. Belum coding dan belum memutuskan mode impersonation full.
+
 > **HANDOFF LANJUTAN 27 OKTOBER 2026 (DRAFT):** [18C-03 Security Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) dan [18C-03A Permission Matrix + 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md) merinci session login, resource policies, event/institution/paper/finance scope, private file/download dan publication export. **Tidak mengubah 18C-02 menjadi final dan tidak mengotorisasi coding.**
 
 > **27 Oktober 2026 · REKOMENDASI UNTUK REVIEW · BELUM FINAL · BELUM CODING.**

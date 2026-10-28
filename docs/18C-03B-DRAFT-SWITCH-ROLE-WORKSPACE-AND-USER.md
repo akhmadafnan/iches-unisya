@@ -79,7 +79,7 @@ PROTECTED:
 
 ## 3. Switch Role/Workspace — alur tanpa impersonation
 
-~~~mermaid
+```mermaid
 flowchart TD
   L["User login satu akun"] --> A["Server membaca role+scope assignments"]
   A --> D["Personal Dashboard"]
@@ -90,7 +90,7 @@ flowchart TD
   W --> O["Tampilkan UI scoped sesuai assignment"]
   O --> P["Setiap aksi tetap memakai Policy+Business Gate"]
   P -->|Izin dicabut| X
-~~~
+```
 
 **Implementasi DRAFT yang aman:**
 - \`users.id\` **tetap sama** untuk role switch. \`active_workspace\` hanyalah preferensi sesi/antarmuka, **bukan penyimpan hak**.

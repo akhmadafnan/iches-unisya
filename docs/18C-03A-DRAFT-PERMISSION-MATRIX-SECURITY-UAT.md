@@ -1,5 +1,7 @@
 # 18C-03A — DRAFT Permission Matrix, Route Guards & Security UAT ICHES 2027
 
+> **ADDENDUM 28 OKTOBER (MENUNGGU REVIEW):** peran multi-role perlu **Switch Workspace** tanpa ganti User ID dan opsional **Admin View as User (READ-ONLY)** dengan otorisasi khusus. Catatan 22 test SW-01..SW-22 dan guard per-route ada pada [18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md). **52 test SEC-T01..SEC-T52 di bawah tetap berlaku dan belum diuji**.
+
 > **27 Oktober 2026 — LAMPIRAN REVIEW 18C-03. TIDAK FINAL, TIDAK DIEKSEKUSI.** Matriks ini adalah usulan role-permission/backend guards, bukan daftar izin yang sudah di-seed ke database.
 >
 > [18C-03 Main Security Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [18A Role Blueprint](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md) · [18C-02 Backend](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md) · [Co-Host](18B-04-CRUD-COHOST-INSTITUSI-LIMA-PAPER.md) · [Finance](18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md) · [Publication](18B-09-DRAFT-FULLPAPER-OJS-LIKE-POSTPRESENTATION-PUBLICATION.md) · [Scanner](18B-01-CRUD-ADMIN-SCANNER-DAN-SINKRONISASI.md).

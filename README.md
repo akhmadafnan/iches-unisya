@@ -27,7 +27,8 @@
 **➡️ [18C-01B: DRAFT ERD Extension Metadata & Publication OJS](docs/18C-01B-DRAFT-FULLPAPER-PUBLICATION-ERD-DATA-DICTIONARY.md)**  
 **➡️ [18C-02: DRAFT Laravel Backend Architecture, Business Actions & 40 UAT](docs/18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md)**  
 **➡️ [18C-03: DRAFT Authentication, Scoped Roles & Security Architecture](docs/18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md)**  
-**➡️ [18C-03A: DRAFT Permission Matrix, Route Guards & 52 Security UAT](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md)**
+**➡️ [18C-03A: DRAFT Permission Matrix, Route Guards & 52 Security UAT](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md)**  
+**➡️ [18C-03B: DRAFT Switch Workspace & Admin View as User — 22 UAT](docs/18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md)**
 
 **KEPUTUSAN FINANCE 27 OKTOBER 2026:** satu rekening resmi ICHES (bank belum dipilih) dikelola langsung Superadmin; transfer manual tanpa gateway, upload JPG/PNG/PDF, Finance cocokkan mutasi. Co-Host **harus VERIFIED sebelum fitur 5 anggota/5 paper aktif**, tanpa lima tagihan Conference pribadi; Paket Internasional Rp1 juta **VERIFIED sebelum empat akses aktif**. WNA pada kategori internasional TOR membayar USD dan menanggung semua biaya transfer. Presenter reguler baru ditagih setelah ACCEPT diumumkan, Full Paper tidak menunggu pembayaran. [Finance 18B-06](docs/18B-06-CRUD-FINANCE-INVOICE-PEMBAYARAN-VERIFIKASI.md).
 
@@ -126,6 +127,9 @@ flowchart TD
 Repository rujukan: [akhmadafnan/international-conference-platform](https://github.com/akhmadafnan/international-conference-platform), terutama branch `develop`.
 
 ## Status pengerjaan
+
+**TAMBAHAN 28 OKTOBER 2026 — 18C-03B DRAFT:** pengguna meminta **fitur switch akun dalam backend Admin** karena satu orang dapat mempunyai banyak peran. [Rancangan Switch Workspace dan Switch User](docs/18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md) merekomendasikan **(A) pindah role/area dengan akun yang sama tanpa logout/login** dan **(B) opsi Superadmin melihat pengalaman akun lain secara read-only untuk dukungan** (bukan login penuh sebagai target). Mode B, izin delegasi Admin, audit dan batas simulasi **masih memerlukan review**. **22 UAT tambahan dirancang, belum dieksekusi.** Fitur akan dicakup pada 18C-04, belum coding/deploy.
+
 
 **TAHAP TERBARU — 18C-03 DRAFT (27 Oktober 2026):** Authentication/Authorization/Security untuk satu akun banyak peran, multi-scope Event/Institution/Paper/Session/Outlet, Finance dan Co-Host terisolasi, reviewer COI, private file, scanner scope, publication export, audit & privasi. **52 Security UAT** sudah DIRANCANG, **bukan dieksekusi**. **Bank Settings Superadmin-only, tanpa dual approval** tetap keputusan yang diikuti. Login email/password vs Magic Link, MFA staf, retensi dan scanner offline masih untuk review. Tidak ada coding/deploy. [Dokumen 18C-03](docs/18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [Lampiran 18C-03A](docs/18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
 

@@ -313,6 +313,23 @@ Bagian ini **bukan** persetujuan final untuk refund, pelunasan susulan, atau ten
 
 [DRAFT 18C-03 Architecture](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [DRAFT 18C-03A Matrix & 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
 
+## A18. Permintaan Tambahan 28 Oktober 2026 — Switch Akun dan Switch Role (DRAFT Sebelum 18C-04)
+
+**PERMINTAAN USER:** “Kan setiap user bisa memiliki role berbagai macam, nanti tolong dibantu pada tampilan backend admin ada fitur switch akun. sehingga mempermudah nantinya.” Ini **kebutuhan UI yang diterima** dan harus masuk rancangan 18C-04, tanpa menyimpulkan bahwa Admin mendapat izin bebas menjadi user lain atau memalsukan tindakan.
+
+| ID | Tafsir / rancangan | Status |
+|---|---|---|
+| NEW-060 | **Kebutuhan ‘switch akun’ pada backend Admin** untuk memudahkan satu user multi-role | **DIPERLUKAN USER, detail dibahas** |
+| PROP-072 | **Switch Role / Workspace** untuk own user; menu avatar/topbar berisi Personal, Admin, Reviewer, Moderator, Institution/Finance/Publication jika assigned, **tanpa logout atau ganti user_id** | **REKOMENDASI UTAMA, DRAFT UI/TEKNIS** |
+| PROP-073 | **Switch User / View as User** di User Management Admin: Superadmin secara default saja; optional delegated Admin setelah disetujui; **read-only support preview** | **OPSIONAL / BELUM DISETUJUI SCOPE USER LAIN** |
+| PROP-074 | Support View reason wajib, time-limited, real_actor + target_user terpisah, banner persistent Return, tanpa nested view, audit | **DRAFT SECURITY CONTRACT** |
+| PROP-075 | Support View **menolak semua mutasi** dan unduh file sensitif (bank, reviewer notes, fullpaper privat, OJS export, QR secret); tidak punya hak Verify/ACCEPT/Presented/Final ACC/certificate issue | **DRAFT BATASAN KETAT, BUKAN FITUR IMPERSONATE FULL** |
+| PROP-076 | **22 skenario SW-01..SW-22** tentang multi-role switch, role revoke, scoped PIC dan support-view restrictions | **RENCANA UAT, BELUM DIEKSEKUSI** |
+
+**Tidak ada duplikasi akun dan tidak ada role escalation.** Switch Workspace hanyalah pemilihan konteks UI. Switch User untuk membantu/simulasi **berbeda** dari “login sebagai pengguna lain” yang bebas melakukan transaksi. Jika user memaksudkan full impersonation, harus ditentukan batas terpisah **sebelum implementation**. Detail peran, akuntabilitas dan database opsional masih DRAFT.
+
+[18C-03B — Switch Workspace / Admin View as User](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |

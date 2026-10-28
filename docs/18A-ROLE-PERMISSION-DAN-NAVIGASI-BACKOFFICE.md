@@ -1,5 +1,7 @@
 # 18A — Blueprint Role, Permission, Scope, dan Navigasi ICHES 2027
 
+> **KEBUTUHAN UX 28 OKTOBER:** pada Admin header/account menu perlu **Switch Workspace** antar role milik User sendiri tanpa logout/login; **opsi View as User** untuk bantuan Admin harus dibatasi Superadmin/read-only dan dicatat, tidak boleh mengubah identitas utama. [Spesifikasi DRAFT 18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md). **Menambah menu bukan memberi izin Finance/Committee/Bank baru.**
+
 > **PEMBARUAN ACUAN 27 OKTOBER 2026:** spesifikasi keamanan lanjutan tersedia pada [18C-03 Authentication/RBAC](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) dan [18C-03A Permission Matrix](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md). **PENTING:** usulan 18A tentang menyederhanakan role Admin **telah disupersede secara khusus untuk Bank Settings** oleh keputusan terbaru Finance: **hanya Superadmin dapat mengedit satu rekening resmi, langsung tanpa approval dua tingkat.** Role lain tetap usulan; semua akses harus diperiksa backend sesuai owner/institution/event/assignment. **18C-03 masih DRAFT.**
 
 > **Tahap:** 18A · spesifikasi produk, **belum coding**.  

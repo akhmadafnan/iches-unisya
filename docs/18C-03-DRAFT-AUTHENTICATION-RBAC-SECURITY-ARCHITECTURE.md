@@ -1,5 +1,7 @@
 # 18C-03 — DRAFT Authentication, RBAC & Security Architecture ICHES 2027
 
+> **ADDENDUM REQUEST 28 OKTOBER 2026 (BELUM FINAL):** satu user banyak peran harus memiliki **Switch Workspace/Role** melalui dropdown header/topbar tanpa login ulang; **Switch User / View as User untuk bantuan Superadmin** adalah **opsi berbeda** dan direkomendasikan **READ-ONLY** dengan alasan, dua identitas/audit, expiry, banner dan tanpa aksi sensitif. Seluruh detail di [18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md) dan harus dimasukkan ke rancangan frontend 18C-04. **Jangan menyamakan active_workspace session dengan security/role grant, dan jangan melakukan `Auth::login(target)` sebagai default.**
+
 > **27 Oktober 2026 — DRAFT REKOMENDASI / MENUNGGU REVIEW / BELUM CODING.**
 >
 > Melanjutkan [18C-02 Backend](18C-02-DRAFT-LARAVEL-BACKEND-ARCHITECTURE-BUSINESS-LOGIC.md), [18A Role Blueprint](18A-ROLE-PERMISSION-DAN-NAVIGASI-BACKOFFICE.md), [18A Operasional](18A-ALUR-OPERASIONAL-DAN-UAT-PERAN.md), [18C-01 Database](18C-01-DRAFT-DATABASE-ARCHITECTURE-ERD.md) dan [Register Keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md). Matriks terperinci dan skenario uji ada di [18C-03A](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
@@ -201,6 +203,9 @@ SEC-S10 Negative security UAT including cross-role and cross-institution
 **Tidak disarankan sebagai syarat MVP:** SSO wajib, enterprise IAM, microservices, sistem KYC identitas nasional, payment gateway, barcode berisi data sensitif, blockchain certificate, automatic auto-refund, double sign-off rekening. MFA untuk staf sensitif **direkomendasikan**, namun tetap perlu keputusan; tidak boleh dipakai sebagai alasan menghapus keamanan dasar.
 
 ## 12. Review Gate — status rekomendasi, bukan final
+
+**Tambahan review SW-01/SW-02 (28 Okt):** fitur **Switch Role/Workspace** untuk own multi-role user dan opsi **Switch User untuk support Superadmin read-only** ada pada [18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md). User meminta “switch akun”, tetapi apakah benar memerlukan **melihat akun orang lain**, atau hanya **berganti peran sendiri**, masih perlu dipastikan dalam review UX. Mode full impersonation yang dapat mengubah data **tidak disetujui**; frontend tahap 18C-04 harus membedakan dua menu dengan jelas.
+
 
 | Kode | Rekomendasi yang perlu Anda tinjau | Status |
 |---|---|---|

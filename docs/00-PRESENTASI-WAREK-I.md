@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## TAMBAHAN 18C-03B — SWITCH AKUN / ROLE DALAM BACKEND ADMIN (DRAFT)
+
+Untuk satu pengguna yang memiliki beberapa penugasan, sediakan **Switch Workspace** pada topbar/akun: Personal Dashboard, Admin, Reviewer, Moderator, Finance, Publication, atau PIC Institusi **sesuai assignment**. Semua tetap **satu user_id, tanpa login ulang**, dan backend tetap memeriksa permission yang sebenarnya. Admin dapat diberikan **opsi tambahan View as User untuk bantuan/simulasi**, tetapi rekomendasi awal ialah **Superadmin-only, read-only, dengan alasan, audit dan tombol Return**; tidak boleh Verified Finance, ACCEPT/Final ACC, Presented, issue sertifikat atau mengunduh dokumen privat. **Menu ini belum implementasi dan opsi View as User belum final.** [DRAFT 18C-03B](18C-03B-DRAFT-SWITCH-ROLE-WORKSPACE-AND-USER.md).
+
+---
+
 ## TAHAP 18C-03 — AUTHENTICATION, ROLES & SECURITY (DRAFT)
 
 **Satu akun, beberapa peran, tiga ruang kerja utama:** Personal Dashboard, Institution Workspace, dan Backoffice/Reviewer/Moderator scoped. **Bank Settings Superadmin-only** tanpa approval ganda; Finance memverifikasi dana berdasarkan mutasi; PIC Co-Host hanya akses invoice institusi dan lima seat sesudah VERIFIED; paket pribadi anggota tidak terlihat PIC. Reviewer review own claim, Komite publish ACCEPT/Final ACC, Moderator Presented, tim publikasi menyerahkan metadata+naskah ke outlet OJS yang benar. File bank/manuskrip/reviewer confidential **privat** dan semua endpoint diperiksa lewat Policy di backend. **Login/MFA/offline scanner teknis belum final, belum coding.** [Security DRAFT 18C-03](18C-03-DRAFT-AUTHENTICATION-RBAC-SECURITY-ARCHITECTURE.md) · [Matrix & 52 UAT](18C-03A-DRAFT-PERMISSION-MATRIX-SECURITY-UAT.md).
