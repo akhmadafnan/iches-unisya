@@ -10,6 +10,13 @@
 
 Owner menyetujui **GO sprint terbatas**, pengecualian Codex **append-only build log**, serta dua Skills baru: Backoffice shadcn-vue dan QA. Berkas disiapkan pada Draft PR #1; **belum ada GO untuk Task ID/sprint nyata**. Pending: review/merge PR, keputusan teknis, inspeksi VS Code/toolchain, Sprint Work Order READY, GO terpisah.
 
+## 20C — Read-only local preflight (28 Oct 2026)
+
+- Connected Windows device verified: **Git 2.55.0, PHP 8.4.24, Composer 2.10.1, Node 26.4.0, npm.cmd 11.17.0**, PHP pdo_mysql available. No install or application test executed.
+- **NOT_VERIFIED**: VS Code/Codex extension, local ICHES clone, MySQL executable/server and isolated test DB. `npm` PowerShell alias failed but `npm.cmd` worked.
+- [20C device audit](20C-LOCAL-PREFLIGHT-AND-GATES.md) and [Sprint-01 DRAFT](20C-01-DRAFT-SPRINT-01-WORK-ORDER.md): `ICH-S0-01` → `ICH-S0-02` → `ICH-S0-07`; status **BLOCKED_DECISION / NO_GO**.
+- Next one action: locate intended VS Code/project folder and finish PRE-02 technical approvals. No coding.
+
 ## NOW — satu prioritas yang boleh aktif
 **ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk task/sprint mana pun.**
 

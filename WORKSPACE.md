@@ -6,6 +6,7 @@
 
 - [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.
 - [20A](docs/20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) and [20B Governance](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) — bounded sprint model, 4 Skills, controlled evidence; NO named GO.
+- [20C Local Readiness](docs/20C-LOCAL-PREFLIGHT-AND-GATES.md) — verified Windows versions and open toolchain gaps; [Sprint-01 draft](docs/20C-01-DRAFT-SPRINT-01-WORK-ORDER.md) — three bounded foundation tasks, **not authorized yet**.
 - [harness/README.md](harness/README.md) — Codex append-only evidence **only after named GO CODING**.
 
 ## Empat berkas kerja harian (bukan 50+ blueprint)
