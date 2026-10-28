@@ -8,6 +8,10 @@ metadata:
 
 # ICHES Public Frontend & CMS — Agent Skill
 
+## 21H design-quality supplements (no automatic GO)
+
+When the 21H docs PR is separately owner-approved and merged, consult `iches-editorial-art-direction` for public editorial art direction and, in separate audit phases, `iches-design-critique` or `iches-ui-accessibility-audit` as needed. The native ICHES product contract **wins** over Taste/Anti-Slop/Vercel heuristics; do not run third-party scripts or download any images. See [21H routing](../../../docs/21H-01-DESIGN-SKILLS-AND-SECURITY.md). No code unless named task GO.
+
 ## Your mission
 
 Create a premium, accessible, responsive **Academic Editorial** public website for **The 6th International Conference on Humanity, Education, and Society (ICHES) 2027**, with a capable **Website CMS inside its Laravel Admin Backoffice**. The owner wants AI assistance to implement the website from this skill, **without lengthy one-by-one approvals of individual components**. Take thoughtful design initiative; provide coherent previews and accept revisions. **No hero, layout, section order, component collection, photo, or navigation style is frozen.**

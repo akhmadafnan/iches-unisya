@@ -7,6 +7,10 @@ This repository currently contains an **ICHES 2027 product blueprint**, not a fi
 User approved selective ICHES skills curation. **Only a named owner coding GO permits changes to application source.** See [Skills routing](docs/21G-01-SKILLS-ROUTING-POLICY.md), [provenance/licenses](docs/21G-02-SKILLS-PROVENANCE-AND-LICENSES.md), and [activation tests](docs/21G-03-ACTIVATION-AND-WAVE-PLAN.md). Native ICHES Skills and owner decisions outrank external skills. W1 pilot copies: `ponytail`, `ponytail-review`, `ponytail-audit`, `diagnosing-bugs`, `tdd`. **Do not enable any external install scripts, agent proxy/cloud/hooks, production migrations, branch merge or automatic deployment.** Only task-appropriate read-only checks before separately authorized coding. Third-party `Verdict: Ship` is not an owner merge approval; an upstream persistent session mode does not override ICHES task boundaries. This 21G change is on a dedicated documentation branch and not yet active in `main`.
 
 
+## 21H — Static Design Skills (proposal branch only; NO CODE GO)
+
+When owner-authorized frontend work is opened, prefer native `iches-public-frontend` / `iches-backoffice-ui` and [21H design routing](docs/21H-01-DESIGN-SKILLS-AND-SECURITY.md). Candidate ICHES-specialist Skills on `docs/21h-design-skills`: `iches-editorial-art-direction`, `iches-design-critique`, `iches-ui-accessibility-audit`. They are static adaptations of pinned Taste, Anti-Slop and Vercel methods, **not** their executable package. Do not use until the dedicated PR is reviewed/merged. Never install scripts, scrape/download media or override approved brand. They do not change named GO, code ownership, Git push or merge rules.
+
 ## Active AI agent workspace (read first)
 
 - Start at [WORKSPACE.md](WORKSPACE.md); [docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md) is the sole current-task status and [docs/19E-AGENT-WORKSPACE-RUNBOOK.md](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) defines the short operational handoff. Do not treat the sprint timebox or backlog as GO CODING.
