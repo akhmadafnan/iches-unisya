@@ -57,6 +57,12 @@ Screenshot shows ICHES folder open, `docs/19e-agent-workspace` active on VS Code
 - **No DB login/password, SQL, schema or data changes** were attempted. **G0-DB-01 PASS**; G0-DB-02 (test-only login) and G0-DB-03 (InnoDB/FK/scoped grants) **BLOCKED**. G0-DB-04 migration/rollback is NOT_RUN and needs named coding GO.
 - [20E Test DB Readiness Runbook](20E-MYSQL-ISOLATED-TEST-DB-READINESS.md). No test schema/user assumed to exist and no provisioning authorization received. **No GO coding.**
 
+## 20E administrator-auth checkpoint — blocked safely (28 October 2026)
+
+Owner explicitly approved provisioning **only** a new isolated `iches_unisya_test` database and limited `iches_test` account. Attempts to confirm existing administrative access **failed safely**: a **single no-password** root read-only connection returned MySQL **1045 Access denied**; a **single default-profile** read-only connection also returned **1045**. There was **no password guessing, no inspection of existing saved passwords, no SQL DDL, no user/database created**, and no production data touched. MySQL 9.7.1 server and client remain operational.
+
+**Next action:** the owner must type administrator password locally once into a **temporary MySQL login path**, without posting it into ChatGPT or Codex. Full instructions: [20E-01 Privileged Login Setup](20E-01-TEMPORARY-MYSQL-ADMIN-LOGIN.md). After owner reports setup complete, ChatGPT can test admin account and provision only authorized test DB/user. Remove temporary administrator login path once done. **No GO Coding or PR merge.**
+
 ## NOW — satu prioritas yang boleh aktif
 **NOW: ICH-PRE-03 G0 isolated test DB (20E)**. PRE-02 RD-01..06 FINAL, Codex Skills READABLE PASS, MySQL server/CLI PASS, **test DB authentication/permissions BLOCKED**. Next: owner-authorized **test-only** database/user setup; then authenticated read-only checks. Draft PR review/merge, Sprint readiness and named GO are still separate. **NO_GO CODING.**
 

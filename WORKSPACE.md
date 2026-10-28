@@ -37,6 +37,11 @@
 
 **Tentang target dua hari:** [19E](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) memberi timebox 48 jam **setelah keputusan dan lingkungan siap**; keberhasilan berarti hasil yang dapat didemokan/dites, bukan klaim bahwa S0–S9 selesai.
 
+## 20E temporary administrator login required
+
+- User approved provisioning isolated `iches_unisya_test` + `iches_test` only; **admin login blocked (MySQL 1045)** in two read-only checks, no DDL executed.
+- [20E-01 local login setup](docs/20E-01-TEMPORARY-MYSQL-ADMIN-LOGIN.md): one user-entered password prompt in VS Code, never send credentials to chat. **NO GO Coding.**
+
 ## 20E isolated MySQL test database readiness
 
 - [20E Readiness Runbook](docs/20E-MYSQL-ISOLATED-TEST-DB-READINESS.md): MySQL 9.7.1 native client found, Running server, localhost handshake verified. **Test-only account/schema authentication not verified; no SQL or DB writes.**

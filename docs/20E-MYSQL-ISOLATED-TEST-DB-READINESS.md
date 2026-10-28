@@ -50,6 +50,10 @@ On the owner's Windows terminal, use the installed executable by absolute path. 
 
 **Sprint ICH-SPRINT-01 may not perform schema changes while G0-DB-02/03 remain blocked.** A scoped sprint might separately authorize foundation setup only, but the current [Sprint 01 Work Order](20C-01-DRAFT-SPRINT-01-WORK-ORDER.md) must remain **BLOCKED_G0 / NO_GO** until its listed prerequisites are met. Nothing here approves PR merge or source implementation.
 
+## 20E admin credential preflight result
+
+Admin access is **blocked** by MySQL 1045: a single no-password root connection and one default-profile read-only connection failed. This was **not** a DB schema or user creation attempt. Owner has approved provisioning the test DB/user, but **must authenticate locally without sharing password**. Follow [20E-01 Temporary Administrator Login](20E-01-TEMPORARY-MYSQL-ADMIN-LOGIN.md); do not guess or reset administrator credentials.
+
 ## 5. The only next operational decision
 
 Once the owner explicitly permits provisioning a **new test-only DB and user** (never reuse existing production/admin credentials), provision in a separate setup step, then run the read-only checks above and close G0-DB-02/03. If no valid local test account exists, ask for setup approval rather than attempting guessed passwords, inspecting secrets or brute-force authentication.
