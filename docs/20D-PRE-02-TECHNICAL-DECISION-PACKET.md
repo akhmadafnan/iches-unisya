@@ -1,5 +1,7 @@
 # 20D — PRE-02 Technical Decision Packet / Sprint 01
 
+> **OWNER UPDATE RD-03C (CURRENT 28 Oct 2026):** Exact single local development DB name is **`iches-unisya`**, manually provisioned in phpMyAdmin, temporary root account locally only. The earlier `iches_unisya`/`iches_dev` proposal is superseded. [21J-02](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md). No code, SQL or migration GO.
+
 > **CURRENT OWNER OVERRIDE 21J-01 (28 Oct 2026):** RD-03's separate test-only schema requirement has been replaced with ONE dedicated ICHES primary development DB. Old standalone test DB instructions in this file are HISTORICAL, not current. [Decision RD-03B](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md). No provisioning, DB writes, coding, migration or deployment authorized.
 
 > **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**

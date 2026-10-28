@@ -552,3 +552,9 @@ Setiap keputusan baru dicatat dengan: ID, tanggal, pemutus, keputusan, alasan ri
 
 **Status:** `RD-03B APPROVED/LOCKED`; `DB_PRIMARY_DEV_NOT_VERIFIED`; `ICH-S0-02 NO_GO`.
 
+
+## A21J-02. RD-03C — Owner fixes exact DB name and temporary local access (28 October 2026)
+
+**EXPLICIT OWNER DIRECTION:** ICHES development DB name is **`iches-unisya`**, to be created **manually in phpMyAdmin**; temporarily use the local MySQL **root account**, with the password defined only inside the owner's ignored local `.env`. The owner prioritizes fast development and robust pre-production security hardening over extensive development approval bureaucracy. **DECISION FINAL**; supersedes the `iches_unisya` schema name and `iches_dev` account suggestion in RD-03B, but retains the one-schema design, MySQL/InnoDB and UUIDv7. [Full RD-03C decision](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md).
+
+**Security/authorization boundary:** Never write the password itself in this public repo or CI. Root is only a local temporary shortcut, not production. `.env` untracked, DB limited to loopback, no accidental writes to other schemas. No `DROP`/`migrate:fresh`/data wipe without separate approval. Owner's manual creation intent is NOT confirmation that the schema exists; no MySQL code edits or SQL have been executed and **`ICH-S0-02` remains NO_GO** until explicit named coding authorization. [Fast S0-02 Work Order](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md).

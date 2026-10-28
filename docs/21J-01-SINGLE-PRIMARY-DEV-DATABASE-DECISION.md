@@ -1,5 +1,7 @@
 # 21J-01 — OWNER DECISION: Single Primary ICHES Development Database
 
+> **SUPERSEDED ON EXACT NAME/ACCOUNT BY OWNER RD-03C (28 Oct 2026):** Use **`iches-unisya`**, created manually through phpMyAdmin, and temporary local root credentials only; do NOT create old `iches_unisya` or rely on the `iches_dev` proposal. [21J-02 current final decision](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md). The remainder is archived history.
+
 > **DECIDED 28 October 2026 · RD-03B (supersedes ONLY the separate `iches_unisya_test` database requirement in RD-03) · DATABASE NOT YET PROVISIONED / NO GO CODING OR SQL.** Owner said: “untuk DATABASE kita kunci menggunakan database utama. urusan nanti ketika akan production kita drop isinya itu nanti ... agar kita tidak ribet ... TRIAL/ERROR ... DEVELOP”. The intent is to reduce repeated test-schema administration during development. This document is authoritative for current DB environment policy, replacing the earlier 20E test-only provision runbooks as the default. It does **not** alter MySQL/InnoDB, UUIDv7, Laravel authentication, or the established code/merge authorization boundaries.
 
 ## Locked decision: one ordinary development database

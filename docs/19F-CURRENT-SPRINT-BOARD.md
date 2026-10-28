@@ -226,8 +226,15 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **No automatic `migrate:fresh`/`db:wipe`/DROP/TRUNCATE** on the primary development DB. Future trial-data purge before production requires explicit per-operation approval and a restorable backup; preferred clean production database is a separate release decision.
 - **`ICH-S0-02` remains NO_GO** until an adapted work order and named GO; this change is governance-only and does not authorize database setup, migrations or deployment. **S0-01 and S0-07 remain MERGED/COMPLETE**, PR #3 remains open.
 
+## 21J-02 / 21J-03 — Fast development DB decision and next Codex task (28 October 2026)
+
+- Owner chose exact database name **`iches-unisya`** (hyphen), to create manually in phpMyAdmin; temporary local root account chosen for simple development. [RD-03C final](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md) **supersedes RD-03B** only for name/account suggestion. No separate test schema. No credential values stored publicly.
+- [21J-03 fast Work Order](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md) READY for owner manual DB confirmation; current Laravel `config/database.php` still has empty connections, so later Codex must wire MySQL. `.env` stays ignored. CI remains DB-disabled and passing.
+- **NOW:** owner creates `iches-unisya` manually; **`ICH-S0-02` not started**. One named GO after creation can authorize the bounded Codex DB foundation task. Root must be local-only; no automatic destructive database reset or production deployment.
+- **S0-01 and S0-07 MERGED/COMPLETE**; [PR #3 Skills](https://github.com/akhmadafnan/iches-unisya/pull/3) OPEN/UNMERGED.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: RD-03B SINGLE PRIMARY DEV DB LOCKED; ICH-S0-02 DB_PRIMARY_DEV_NOT_VERIFIED / NO_GO.** Owner replaced old mandatory `iches_unisya_test` setup with one dedicated local `iches_unisya` application schema. No authenticated DB connection verified, no creation/migration/coding authorization. S0-01 and S0-07 remain COMPLETE; design Skills PR #3 unmerged.
+**NOW: RD-03C `iches-unisya` DB NAME LOCKED / OWNER_MANUAL_PHPMyADMIN / ICH-S0-02 NO_GO.** One dedicated local database with temporary owner-provided root login for development; no separate test DB. Await owner manual creation + explicit GO CODING S0-02. S0-01/S0-07 COMPLETE; no SQL, new code, merge or deployment authorized.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
@@ -253,7 +260,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 |---|---|---|
 | RD-01 | `akhmadafnan/iches-unisya` canonical, selective reuse old repo | **APPROVED FINAL 20D** |
 | RD-02 | Laravel 13, PHP 8.4 target; host verified later | **APPROVED FINAL 20D / HOST UNKNOWN** |
-| RD-03 / RD-03B | MySQL/InnoDB retained; **one dedicated primary dev DB `iches_unisya`**, separate test DB requirement superseded | **OWNER LOCKED 21J-01 / PRIMARY DB NOT VERIFIED / S0-02 NO_GO** |
+| RD-03 / RD-03C | MySQL/InnoDB, single development DB **`iches-unisya`** manually created in phpMyAdmin; root local temporary; second test DB unnecessary | **OWNER LOCKED 21J-02 / DB EXISTENCE NOT VERIFIED / S0-02 NO_GO** |
 | RD-04 | UUIDv7 IDs and consistent FKs | **APPROVED FINAL 20D** |
 | RD-05 | Laravel Policies/Gates + role/event/institution/resource scopes | **APPROVED FINAL 20D** |
 | RD-06 | Session-backed participant OTP/Magic Link **passwordless**; staff mode later | **APPROVED FINAL 20D** |

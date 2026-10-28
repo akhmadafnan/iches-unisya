@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21J-02 / 21J-03 — Database name fixed; S0-02 next FAST track (CURRENT)
+
+- **RD-03C owner decision:** use exactly `iches-unisya` (hyphen), not `iches_unisya`; owner creates manually in phpMyAdmin. Temporary local MySQL root allowed for development with password only in ignored `.env`; never publish credentials or use root in production. [21J-02 decision](docs/21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md).
+- [21J-03 concise S0-02 Work Order](docs/21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md) prepared. The DB has not been verified or created by ChatGPT; existing Laravel DB connections still disabled. After owner confirms creation, a separate **GO CODING ICH-S0-02** is required. Codex-only coding, no automatic destructive reset, CI remains DB-free.
+- Accelerate practical development and defer detailed production hardening to a release gate; do not bypass basic secret safety, database isolation, or owner authorization for destructive SQL. S0-01/S0-07 complete.
+
 ## 21J-01 — OWNER-LOCKED: one primary development database (CURRENT)
 
 - [21J-01 definitive owner decision](docs/21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md): **RD-03B** replaces former compulsory isolated `iches_unisya_test` database. One dedicated local ICHES `iches_unisya` schema will serve development/manual synthetic trials, with local scoped credentials and no impact on any other application database.

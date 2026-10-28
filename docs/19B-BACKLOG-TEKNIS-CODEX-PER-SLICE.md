@@ -1,5 +1,7 @@
 # 19B — Backlog Teknis Siap Dipecah Menjadi Tugas Codex VS Code
 
+> **CURRENT OWNER OVERRIDE RD-03C (28 Oct 2026):** Exact database name **`iches-unisya`** (hyphen), manual phpMyAdmin creation, temporary local root connection, no separate test DB. This supersedes previous `iches_unisya` names. [21J-02](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md) and [21J-03](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md).
+
 > **OWNER DECISION 21J-01 (28 OCT 2026):** DB design for `ICH-S0-02` now uses **one dedicated ICHES primary development schema `iches_unisya`** instead of mandatory `iches_unisya_test`; do not run destructive reset as default. [RD-03B final](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md). Other backlog statuses below are historical/draft until their work orders are explicitly authorized.
 
 > **28 Oktober 2026 · BACKLOG DRAFT / CODE NOT AUTHORIZED.** Hasil mengubah dokumentasi **18B / 18C** menjadi pekerjaan teknis **ber-ID**, bukan menandai semua rekomendasi sebagai kebijakan final. **Codex VS Code satu-satunya pelaksana perubahan CODE**, ChatGPT mengelola dokumen/backlog, pemilik produk memberi GO per scope.
@@ -30,7 +32,7 @@
 | ID | Task untuk CODEX VS Code | Referensi khusus | Exit / acceptance |
 |---|---|---|---|
 | **ICH-S0-01** | **Port foundation secara selektif** dari repo lama ke branch repo baru: Laravel/Vue app skeleton, *tanpa* old payment business flow/secret/real participant data | 18C-05A; old `composer.json/package.json`; `AGENTS.md` | Project Laravel bootable, dependency locked, explicit provenance; `composer install`, `npm install`, `npm run build` berhasil setelah environment tersedia |
-| **ICH-S0-02** | **Schema identity/events + UUIDv7**, migrations and synthetic fixtures, official event date/time **tanpa mengarang start hour** | 18C-01/01A; 18C-05 RD-03B/04; [21J-01 single dev DB](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md) | Verify dedicated `iches_unisya` local DB ownership/privileges first; additive `migrate`, FK/unique/UUID + rollback/transaction tests; **no automatic `migrate:fresh` on primary dev DB**; separate named GO required |
+| **ICH-S0-02** | **Schema identity/events + UUIDv7**, migrations and synthetic fixtures, official event date/time **tanpa mengarang start hour** | 18C-01/01A; RD-03C/04; [21J-03 fast Work Order](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md) | Owner manually creates exactly **`iches-unisya`** in phpMyAdmin; temporary local root credentials untracked; verify selected DB then additive `migrate` / FK/unique/UUID/rollback checks; no auto destructive reset; named GO required |
 | **ICH-S0-03** | **Session Auth** register/login/logout, verification, reset, no shared superadmin credentials; email security | 18C-03; 18A; legacy Auth tests | Auth request tests, rate limiting, CSRF, secure cookie, no prod credentials |
 | **ICH-S0-04** | **Scoped RBAC/Policies** per Event/Institution/Paper/Session; Superadmin-only Bank Setting policy baseline; account multi-role & Switch Workspace | 18C-03, 18C-03A, 18C-03B | Test cross-event/institution denial; switch **same user_id**; role revoked denial |
 | **ICH-S0-05** | **File/storage foundation** private manuscript/payment proofs vs public CMS media; signed scoped download and media validation | 18C-03, 18C-05A | No IDOR/private URL leak; public media are explicitly published/approved |
