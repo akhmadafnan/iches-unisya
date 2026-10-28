@@ -158,8 +158,16 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - [21I-01 post-merge critical path](21I-01-ICH-S0-01-MERGE-AND-48H-NEXT-PATH.md) and [21I-02 CI Work Order](21I-02-ICH-S0-07-CI-WORK-ORDER.md). **`ICH-S0-07` is READY_FOR_OWNER_GO, NOT_AUTHORIZED**; DB test gate `ICH-S0-02` remains blocked/unverified.
 - [PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) design Skills stays open/unmerged, separate approval. No deployment, schema/auth/CMS code task or additional PR merge authorized.
 
+## 21I-03 — Owner authorized bounded Codex CI task (28 October 2026)
+
+- **Exact owner message:** “Wokkey sepakat. Silahkan execute `ICH-S0-07` sesuai dengan arah anda”. This is explicit **GO CODING ICH-S0-07** under [21I-02](21I-02-ICH-S0-07-CI-WORK-ORDER.md).
+- [21I-03 Codex VS Code execution handoff](21I-03-GO-ICH-S0-07-CODEX-EXECUTION.md) is ready, with safe local `main` fast-forward from historical feature branch and scope-limited GitHub Actions implementation. ChatGPT did **not** code/push the CI workflow.
+- **State:** GO_AUTHORIZED / CODEX_EXECUTION_PENDING. Owner's feature branch `feat/ich-s0-01-foundation` at accepted `8eba7cb5` was read-only verified clean. Local `main` was stale, so Codex must safely sync before creating `feat/ich-s0-07-ci`.
+- **Hard stops:** S0-02 test DB/unapproved schema, passwordless auth, RBAC, frontend/CMS, finance, app PR merge, deploy all outside this authorization; PR #3 design Skills remains open and separately gated.
+- **Publication:** coding GO alone does not authorize push/PR/merge. Codex returns local evidence for independent review; owner then decides.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-01 MERGED / COMPLETE; NEXT: ICH-S0-07 READY_FOR_OWNER_GO / NOT AUTHORIZED.** PR #4 contains the accepted DB-free foundation. MySQL test DB for S0-02 still unverified; no new coding/merge/deploy GO.
+**NOW: ICH-S0-07 GO_AUTHORIZED / AWAITING_CODEX_EXECUTION.** Owner explicitly authorized this one DB-free CI implementation task. Only Codex VS Code may write source; no authorization for S0-02, migrations, auth, CMS, new PR merge or deployment.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

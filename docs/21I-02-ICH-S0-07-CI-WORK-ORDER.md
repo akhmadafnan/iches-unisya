@@ -1,10 +1,10 @@
 # 21I-02 — ICH-S0-07 DB-Free GitHub CI Work Order
 
-> **READY_FOR_OWNER_GO / NOT AUTHORIZED — 28 Oct 2026.** This is a preparation artifact. Not permission to run Codex, edit code, alter database or deploy. Source contract: [19B](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [20B](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md), [21I-01](21I-01-ICH-S0-01-MERGE-AND-48H-NEXT-PATH.md).
+> **GO CODING ICH-S0-07 GRANTED — 28 Oct 2026; CODEX EXECUTION PENDING.** Owner explicitly said “Wokkey sepakat. Silahkan execute `ICH-S0-07` sesuai dengan arah anda”. This authorizes Codex VS Code to implement **only** this bounded CI task. [21I-03 execution handoff](21I-03-GO-ICH-S0-07-CODEX-EXECUTION.md) has actual preflight and next actions. No coding by ChatGPT, no database/migration, no automatic push/PR/merge/deploy.
 
 ## Authorization & boundary
 
-Only after owner's explicit **`GO CODING ICH-S0-07`** may Codex VS Code implement this single task. The two-day target and prior S0-01 merge **do not grant GO**. No S0-02 schema, S0-03 auth, CMS, payments, migrations, or deployment.
+**Owner explicitly issued the named GO** for `ICH-S0-07` in this conversation on 28 Oct 2026. This single task is now `GO_AUTHORIZED / CODEX_EXECUTION_PENDING`; the two-day target and prior S0-01 merge never authorize other tasks. No S0-02 schema, S0-03 auth, CMS, payments, migrations, or deployment. Use [21I-03 Codex execution prompt](21I-03-GO-ICH-S0-07-CODEX-EXECUTION.md).
 
 ## Branch, files and safety
 

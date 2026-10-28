@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-03 — GO CODING ICH-S0-07 granted (CURRENT)
+
+- Owner explicitly authorized one task: **ICH-S0-07 GitHub Actions DB-free CI** on 28 Oct 2026. Scope set by [21I-02 Work Order](docs/21I-02-ICH-S0-07-CI-WORK-ORDER.md), [21I-03 Codex execution handoff](docs/21I-03-GO-ICH-S0-07-CODEX-EXECUTION.md). Status `GO_AUTHORIZED / AWAITING_CODEX_EXECUTION`, **not implemented yet**.
+- Only Codex VS Code writes CI/test application files. Local accepted feature branch still clean at `8eba7cb5`; local main is old and must be fetched and safely fast-forwarded before a new task branch. ChatGPT governance/doc edits do not constitute CI implementation.
+- No other code GO, DB/migration, source branch push/PR/merge or deployment authorization implied.
+
 ## 21I — ICH-S0-01 MERGED and next bounded Work Order (CURRENT)
 
 - [PR #4](https://github.com/akhmadafnan/iches-unisya/pull/4) merged with explicit owner approval: accepted feature commit `8eba7cb5b9da0577910beb919844165869591e05`, merge `561baf322d459d898f5f96d280f5a5f02634c59f`. **No GitHub Actions CI yet**; local audit 21E PASS.
