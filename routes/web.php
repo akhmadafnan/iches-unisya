@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
 use App\Http\Middleware\LocalDemoOnly;
+use App\Http\Middleware\ValidateWorkspace;
 use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Foundation', ['task' => 'ICH-S0-01'])->name('home');
@@ -20,6 +22,12 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
             Route::post('/dev/login', [SessionController::class, 'demo'])->middleware('throttle:auth-demo');
         });
     });
-    Route::get('/dashboard', [SessionController::class, 'dashboard'])->middleware('auth')->name('dashboard');
-    Route::post('/logout', [SessionController::class, 'logout'])->middleware('auth');
+    Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');
+        Route::post('/logout', [SessionController::class, 'logout']);
+        Route::get('/me/workspaces', [WorkspaceController::class, 'index']);
+        Route::post('/me/workspace', [WorkspaceController::class, 'store']);
+        Route::get('/workspace/events/{event}', [WorkspaceController::class, 'event']);
+        Route::get('/workspace/events/{event}/institutions/{institution}', [WorkspaceController::class, 'institution']);
+    });
 });

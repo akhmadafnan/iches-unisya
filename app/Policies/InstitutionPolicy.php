@@ -5,12 +5,13 @@ namespace App\Policies;
 use App\Models\Event;
 use App\Models\Institution;
 use App\Models\User;
+use App\Services\Workspaces;
 
 class InstitutionPolicy
 {
-    public function view(User $user, Institution $institution, ?Event $event = null): bool
+    public function view(User $user, Institution $institution, ?Event $event = null, ?string $workspace = null): bool
     {
         return $event !== null
-            && $user->roleAssignments()->active()->forEvent($event)->forInstitution($institution)->exists();
+            && app(Workspaces::class)->selected($user, $workspace)->forEvent($event)->forInstitution($institution)->exists();
     }
 }

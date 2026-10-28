@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Requests\Auth\AccessRequest;
 use App\Models\User;
 use App\Services\Auth\PasswordlessAuth;
+use App\Services\Workspaces;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -67,9 +68,13 @@ class SessionController
         return $this->login($request, $user);
     }
 
-    public function dashboard(Request $request)
+    public function dashboard(Request $request, Workspaces $workspaces)
     {
-        return Inertia::render('dashboard/Index', ['account' => $request->user()->only('name', 'email')]);
+        return Inertia::render('dashboard/Index', [
+            'account' => $request->user()->only('name', 'email'),
+            'workspaces' => $workspaces->choices($request->user()),
+            'activeWorkspace' => $workspaces->current($request),
+        ]);
     }
 
     public function logout(Request $request)
