@@ -2,6 +2,11 @@
 
 This repository currently contains an **ICHES 2027 product blueprint**, not a finished Laravel application. Never claim an app, CMS, countdown, database, tests or deployments exist unless verified in the working tree and runtime.
 
+## 21G — External Skills pilot approval and precedence (28 October 2026)
+
+User approved selective ICHES skills curation. **Only a named owner coding GO permits changes to application source.** See [Skills routing](docs/21G-01-SKILLS-ROUTING-POLICY.md), [provenance/licenses](docs/21G-02-SKILLS-PROVENANCE-AND-LICENSES.md), and [activation tests](docs/21G-03-ACTIVATION-AND-WAVE-PLAN.md). Native ICHES Skills and owner decisions outrank external skills. W1 pilot copies: `ponytail`, `ponytail-review`, `ponytail-audit`, `diagnosing-bugs`, `tdd`. **Do not enable any external install scripts, agent proxy/cloud/hooks, production migrations, branch merge or automatic deployment.** Only task-appropriate read-only checks before separately authorized coding. Third-party `Verdict: Ship` is not an owner merge approval; an upstream persistent session mode does not override ICHES task boundaries. This 21G change is on a dedicated documentation branch and not yet active in `main`.
+
+
 ## Active AI agent workspace (read first)
 
 - Start at [WORKSPACE.md](WORKSPACE.md); [docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md) is the sole current-task status and [docs/19E-AGENT-WORKSPACE-RUNBOOK.md](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) defines the short operational handoff. Do not treat the sprint timebox or backlog as GO CODING.
