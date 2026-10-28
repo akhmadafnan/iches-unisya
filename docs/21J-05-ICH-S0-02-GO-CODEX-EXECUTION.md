@@ -18,6 +18,24 @@ The owner clarified the scope on 28 Oct 2026: **NOT every identifier or every da
 
 **Critical:** UUIDv7 applies only to **newly created canonical PKs**, not every column with `id` in its name. Ensure Laravel models generate **version 7**, not v4; verify through actual tests. Do not invent generic BIGINT FKs pointing to UUID PKs or mix UUID storage representations. Prefer a minimal S0-02 schema, not speculative future tables. Do **not** make design refinements a reason to restart unrelated tasks.
 
+## Latest authenticated MySQL checkpoint: PASS (28 Oct 2026)
+
+**OWNER UPDATED LOCAL .env**, followed by independent read-only connection verification on authorized desktop, without printing any password or other secret. A transient, read-only PHP PDO probe parsed the existing ignored `.env` in memory and ran SELECT queries only in `iches_unisya`; temporary probe file was removed after execution. **Result exit code 0**:
+
+| Verification | Actual result |
+|---|---|
+| `.env` exists and Git ignores it | PASS; all required `DB_*` settings are present and non-empty |
+| MySQL authentication | **PASS** using the already configured local credential |
+| `SELECT DATABASE()` | **`iches_unisya`** (exact) |
+| `VERSION()` | **9.7.1** |
+| `@@default_storage_engine` | **InnoDB** |
+| `@@foreign_key_checks` | **1 / enabled** |
+| Tables inside selected ICHES schema | **0** |
+| SQL used | SELECT only, no DDL/DML |
+| Git working tree at verification | Clean, branch `feat/ich-s0-02-db-foundation`, HEAD `19ab3e52921a9a51817e8424ec6daadfd00c1e79` |
+
+**Consequence: `DB_AUTH_VERIFIED / ICH-S0-02 CODEX_RESUME_READY`.** The older 1045 checkpoint below is historical and is now **resolved**. The existing Owner GO covers S0-02 implementation and normal additive migrations; no new GO. Codex should **not ask for password again** or print it. On the feature branch (currently clean and without new commits), safely fetch latest `origin/main`, and **fast-forward feature branch only if possible**; do not reset/rebase or force merge. Then proceed with scoped config/UUIDv7 identity/events migrations and tests. No destructive SQL, push/PR/merge/deployment.
+
 ## Codex STOP checkpoint: root MySQL 1045 (owner local credentials required)
 
 Codex reports: `feat/ich-s0-02-db-foundation` created from current main `19ab3e52921a9a51817e8424ec6daadfd00c1e79`, Git clean, but the authenticated root connection to **`127.0.0.1:3306/iches_unisya`** returned **MySQL 1045 / exit 1**. No source, migration, table, test, or commit changes were made. **This is a credential-authentication gate, not a revoked GO.** The owner's local `.env` does not yet contain DB credentials.

@@ -247,8 +247,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - **RD-04 clarified:** UUIDv7 for **standalone domain entity primary keys** (`users`, `institutions`, `events`), and compatible UUID foreign keys; **not** all IDs. Pure pivots may use composite primary/unique keys with no `id`. Role/status/reference keys are short codes, ordering and counters integers, Laravel internal tables their required formats. [21J-05 scoped engineering instructions](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md).
 - No DB or code changes by ChatGPT. No push/PR/merge/deploy. Only resume Codex after local credential readiness.
 
+## 21J-07 — MySQL 1045 resolved / Codex S0-02 unblock (28 Oct 2026)
+
+- Owner updated local `.env` credentials; independent PHP PDO probe authenticated **successfully** to `127.0.0.1:3306/iches_unisya`. `SELECT DATABASE()` = `iches_unisya`; MySQL **9.7.1**, default **InnoDB**, foreign-key checks **1**, **0 tables**; **READ_ONLY / EXIT 0**. `.env` remains ignored. No DB DDL/DML or app source edits performed.
+- Old MySQL 1045 status is **resolved**; [21J-05 current Codex GO](21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) updated to `DB_AUTH_VERIFIED / CODEX_RESUME_READY`. Owner's existing GO applies; **no second GO or credential sharing needed**.
+- Codex should verify clean `feat/ich-s0-02-db-foundation`, fetch/ff-only latest `main` safely, then implement scoped UUIDv7 identity/event foundation and normal additive migrations. No destructive DB reset, push/PR/merge/deploy. Identity IDs selective per RD-04 (not blanket UUIDs).
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-02 GO_AUTHORIZED / CODEX_BLOCKED_MYSQL_1045 / OWNER_LOCAL_ENV_REQUIRED.** Codex created clean feat/ich-s0-02-db-foundation from current main but root login to iches_unisya returned MySQL 1045; no code, migration or commit. User must set correct credential in ignored local .env, then Codex resumes. UUIDv7 only canonical entities, not every ID.
+**NOW: ICH-S0-02 DB_AUTH_VERIFIED / CODEX_RESUME_READY / GO_AUTHORIZED.** Owner corrected ignored local .env; independent read-only PDO connection verified iches_unisya (MySQL 9.7.1/InnoDB/FK enabled, zero tables). Codex may continue existing S0-02 GO with additive migrations after current-branch preflight; no reset/push/merge/deploy.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|

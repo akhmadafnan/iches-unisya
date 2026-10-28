@@ -18,7 +18,13 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21J-06 — S0-02 temporarily blocked by MySQL 1045 (CURRENT)
+## 21J-07 — MySQL authenticated and Codex S0-02 READY TO RESUME (CURRENT)
+
+- Owner edited local ignored `.env`; independent read-only PDO probe connected to **`iches_unisya`**, MySQL 9.7.1, InnoDB, FK checks on, **0 tables**, exit 0. No credential printed, no DB writes, Git clean. Old 1045 blocker resolved.
+- **GO CODING ICH-S0-02 remains active**; [21J-05 execution contract](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) includes verified SQL evidence and selective UUIDv7 policy. Resume Codex on clean `feat/ich-s0-02-db-foundation`; safely fast-forward current docs-only `origin/main` when possible, do scoped Laravel MySQL config, UUIDv7 entity foundation and additive `migrate`, non-destructive tests, then local commit. No extra GO needed.
+- Do not print or disclose `.env`, drop/reset tables, push, merge or deploy.
+
+## 21J-06 — S0-02 temporarily blocked by MySQL 1045 (HISTORICAL)
 
 - Codex safely created `feat/ich-s0-02-db-foundation` (clean) from synced main `19ab3e5`; attempted read-only MySQL auth on `iches_unisya` with local root, **1045 / exit 1**. NO source changes, migrations or local commit. Owner must configure correct credentials directly in ignored local `.env`; report readiness without password. GO S0-02 remains valid.
 - [21J-05 GO contract](docs/21J-05-ICH-S0-02-GO-CODEX-EXECUTION.md) now clarifies **UUIDv7 only for primary keys of independent canonical domain entities**, matching UUID FKs; plain pivot composites, codes, counters, framework IDs are not blanket UUIDv7. Codex resumes same feature branch after auth and verifies selected schema before migrations.
