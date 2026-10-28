@@ -1,6 +1,6 @@
 # 21I-10 — ICH-S0-07 Ubuntu GitHub Actions Verification & Owner Merge Gate
 
-> **28 Oct 2026 · ICH-S0-07 CI_RUNTIME_PASS / REV-02 CLOSED / PR #5 OPEN_UNMERGED / OWNER_MERGE_APPROVAL_PENDING.** This document reports the actually observed corrected GitHub Actions job, not a synthetic or local-only result. The owner approved push and PR review, **not merge, database migration, another code task or deployment**.
+> **28 Oct 2026 · HISTORICAL PRE-MERGE CI REPORT — MERGED since then.** The owner authorized normal merge of PR #5, and GitHub merged SHA `f6d5bed4518e40e3b6d9da44a27661147571b478`. See [21I-11 postmerge record](21I-11-S0-07-MERGED-AND-NEXT-GATE.md); the below is retained as historical evidence. This document reports the actually observed corrected GitHub Actions job, not a synthetic or local-only result. The owner approved push and PR review, **not merge, database migration, another code task or deployment**.
 
 ## Verified scope and refs
 

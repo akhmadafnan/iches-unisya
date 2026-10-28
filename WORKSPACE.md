@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## 21I-11 — ICH-S0-07 MERGED and COMPLETE (CURRENT)
+
+- Owner-authorized ordinary merge of [PR #5](https://github.com/akhmadafnan/iches-unisya/pull/5) succeeded with feature HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7`, merge `f6d5bed4518e40e3b6d9da44a27661147571b478`; three reviewed files only, no bypass, migration, deployment or new code.
+- [21I-11 merged/CI record](docs/21I-11-S0-07-MERGED-AND-NEXT-GATE.md): real GitHub Actions PR run PHP 8.4.27, 4/36 tests, Pint, Node 22/TS/Vite success. Duplicate push event cancelled; required checks off, active rulesets none.
+- S0-01 and S0-07 COMPLETE; S0-02 dedicated MySQL test DB remains unverified and NO_GO; future coding requires explicit new named authorization. PR #3 Skills still unmerged.
+
 ## 21I-10 — S0-07 PR #5 CI runtime PASS, pending owner merge (CURRENT)
 
 - Owner-approved corrected `feat/ich-s0-07-ci` SHA `294a54b223676df3b6e9124480e271ee3a50bdc7` pushed and GitHub remote/PR verified identical. Exactly 3 scoped changed files; PR #5 OPEN and unmerged.

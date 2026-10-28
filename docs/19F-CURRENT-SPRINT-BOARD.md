@@ -213,8 +213,14 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Duplicate [push run 40678855656](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678855656) CANCELLED, while PR run SUCCESS. GitHub `mergeable=true` but `mergeable_state=unstable`; review required check rules before merge. **Owner merge permission not granted**, no auto-merge, DB or deployment.
 - After explicit owner authorization, independently re-check head SHA, 3-file diff and checks before PR #5 merge. Design Skills PR #3 remains separately OPEN/UNMERGED.
 
+## 21I-11 — PR #5 merged; S0-07 complete (28 October 2026)
+
+- Owner explicitly authorized merge of [PR #5](https://github.com/akhmadafnan/iches-unisya/pull/5), with exact accepted HEAD `294a54b223676df3b6e9124480e271ee3a50bdc7`. GitHub standard merge returned **merged=true** and commit `f6d5bed4518e40e3b6d9da44a27661147571b478`, verified on `main`; **3 scoped files**.
+- [21I-11 post-merge evidence](21I-11-S0-07-MERGED-AND-NEXT-GATE.md). Successful [PR workflow 40678863079](https://github.com/akhmadafnan/iches-unisya/actions/runs/40678863079): Ubuntu PHP 8.4.27, Composer, Laravel 4 tests/36 assertions, Pint 18 files, Node 22/npm ci/TS/Vite all PASS. Duplicate push run cancelled. `main` protected=false, required checks off/empty; no rulesets, no bypass; ordinary merge succeeded.
+- **S0-01 + S0-07 are MERGED/COMPLETE.** Next S0-02 requires isolated DB proof and separate named GO, not granted. No new code, migration or deployment. [Design Skills PR #3](https://github.com/akhmadafnan/iches-unisya/pull/3) open/unmerged.
+
 ## NOW — satu prioritas yang boleh aktif
-**NOW: ICH-S0-07 LIVE_CI_PASS / REVIEW_PASS / PR5_OWNER_MERGE_PENDING.** PR #5 HEAD `294a54b` pushed; exact 3-file scope; Ubuntu 24.04 job 40678863079 SUCCESS (4 tests/36 assertions, Pint, Node22/npm/TS/Vite). Duplicate push run cancelled; GitHub mergeable=true but mergeable_state=unstable. No merge or deployment.
+**NOW: ICH-S0-07 MERGED / COMPLETE; NEXT: ICH-S0-02 TEST_DB_GATE_PENDING / NO_GO.** Owner-authorized normal merge PR #5 completed. No new coding task, migration or deployment authorized. PR #3 design Skills remains open/unmerged.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
 |---|---|---|---|
