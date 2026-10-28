@@ -1,5 +1,7 @@
 # 18C-04B — Arah Visual Public Frontend & CMS ICHES 2027
 
+> **ADENDUM 28 OKT 2026 — USER MELARANG PENGUNCIAN KOMPONEN:** **Academic Editorial adalah ARAH**, sementara semua **hero, header, section, komposisi mobile/desktop, foto, varian CMS, dan urutan** harus **bisa diubah sesuai keinginan user**. [18C-04C eksplorasi homepage](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) dan [18C-04D rancangan CMS fleksibel](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md) berstatus **DRAFT, belum ada opsi komponen final**.
+
 > **28 Oktober 2026 · STATUS: ARAH VISUAL DIPILIH, DETAIL HOMEPAGE DAN CMS MASIH DRAFT · BELUM CODING.**
 >
 > **Keputusan eksplisit pengguna:** “Oke saya memilih OPSI A saja ya.” Artinya **Opsi A — Academic Editorial** menjadi **arah visual resmi yang dipilih untuk rancangan Public Frontend ICHES 2027**. Ini **bukan** persetujuan atas layout tertentu, desain homepage final, pilihan fitur CMS final, atau perintah implementasi.

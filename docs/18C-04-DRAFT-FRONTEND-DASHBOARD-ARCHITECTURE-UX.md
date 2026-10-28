@@ -1,5 +1,7 @@
 # 18C-04 — DRAFT Frontend, Dashboard Architecture & UX ICHES 2027
 
+> **UPDATE 28 OKT 2026:** [18C-04C Wireframe Homepage Desktop/Mobile](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) dan [18C-04D Flexible CMS Contracts](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md) adalah **eksplorasi yang belum dikunci**; pengguna secara tegas meminta semua komponen Frontend dapat direvisi sesuai seleranya. Daftar section sebelumnya bukan layout yang wajib diikuti dan fase coding 18C-05 tetap menunggu review visual.
+
 > **PEMBARUAN 28 OKT 2026:** pengguna sudah **MEMILIH OPSI A — Academic Editorial** sebagai arah visual untuk public frontend. Arah ini **tidak** berarti homepage atau CMS telah final. Pengembangan arah visual, homepage desktop/mobile dan CMS terstruktur dibahas dalam [18C-04B](18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md). Tahap 18C-05 menunggu penggodokan public frontend; belum ada coding.
 
 > **28 Oktober 2026 · DRAFT REKOMENDASI · MENUNGGU REVIEW PENGGUNA · BELUM CODING / BELUM FINAL.**

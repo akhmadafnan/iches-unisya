@@ -15,6 +15,12 @@ Pengguna menegaskan **alur Abstract tetap seperti ICHES**; **Full Paper** menyer
 
 ---
 
+## PENDALAMAN 18C-04C/D — PUBLIC FRONTEND SEMUA KOMPONEN TERBUKA (DRAFT)
+
+Pemilik produk memilih **Academic Editorial** sebagai arah visual, lalu secara eksplisit meminta **jangan mengunci komponen frontend**. Maka dibuat opsi hero H-01/H-02/H-03, header N-01/N-02/N-03, wireframe homepage desktop/mobile dan pilihan layout section yang **semua dapat dipilih/direvisi/dihapus**. CMS Backoffice direkomendasikan mengatur teks/foto/CTA/urutan/visibility/varian/EN-ID-AR/SEO dan Draft→Preview→Publish tanpa kode untuk pembaruan rutin, namun jenis komponen baru tetap memerlukan pengembangan. **12 candidate blocks dan 28 CMS UAT masih DRAFT; belum coding, belum approval komponen.** [18C-04C Wireframes](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) · [18C-04D Flexible CMS](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md).
+
+---
+
 ## TAHAP 18C-04 — FRONTEND & DASHBOARD ARCHITECTURE (DRAFT)
 
 Setelah pengguna menyetujui arah **Switch Workspace satu akun** dan **Superadmin View as User untuk support READ-ONLY**, rancangan frontend dibuat untuk **6 layout inti (Public/Auth/Personal/Institution/Backoffice/Scanner) + 1 Support View overlay**. Tersedia **55 layar konseptual dan 60 skenario UAT rencana**, dalam satu desain premium ICHES: **Inter/Sora, ivory/forest/gold, EN/ID/AR RTL, tanpa carousel**. Personal/My Papers/Payments, Co-Host satu invoice/five seats after Verified, Full Paper ala OJS, Finance queue, Reviewer/Moderator, Publication/10 kandidat jurnal, QR dan Certificates dipetakan ke UI yang sesuai role. **Masih DRAFT, belum coding, belum pengujian.** [18C-04 Frontend UX](18C-04-DRAFT-FRONTEND-DASHBOARD-ARCHITECTURE-UX.md) · [18C-04A Inventory/60 UAT](18C-04A-DRAFT-SCREEN-INVENTORY-COMPONENTS-INTERACTION-UAT.md).

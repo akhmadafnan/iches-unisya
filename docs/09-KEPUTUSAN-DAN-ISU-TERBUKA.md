@@ -364,6 +364,22 @@ Dua referensi pengguna: [AICIS](https://aicis.uinssc.ac.id/) dan [Multaqa Dawli]
 
 [18C-04B — Public Frontend Academic Editorial & CMS DRAFT](18C-04B-DRAFT-PUBLIC-FRONTEND-ACADEMIC-EDITORIAL-CMS.md).
 
+## A21. Instruksi Pengguna — Komponen Frontend Jangan Dikunci (28 Oktober 2026)
+
+**PERINTAH EKSPLISIT:** “Okey sepakat. lanjut ke pekerjaan berikutnya. Intinya komponen2 frontend sesuai keinginan saya loh ya, anda jangan mengunci.” Ini berarti **pengguna menyetujui untuk lanjut eksplorasi**, **bukan** menyetujui atau membekukan setiap bentuk frontend. Sebelum 18C-05, desain halaman publik dan kebutuhan CMS dibahas sampai sesuai keinginan pengguna. **Dilarang mengubah rekomendasi hero, header, section, media, layout, dan editor CMS menjadi FINAL hanya karena tertulis dalam blueprint.**
+
+| ID | Poin | Status |
+|---|---|---|
+| NEW-064 | **Semua komponen/varian/urutan layout Public Frontend harus terbuka untuk review dan revisi pengguna**, meskipun Academic Editorial sudah dipilih sebagai arah visual | **INSTRUKSI PENGGUNA DITERIMA / TIDAK BOLEH DIKUNCI** |
+| PROP-086 | **18C-04C: tiga varian hero** H-01 Split Editorial/H-02 Typography First/H-03 Image-led, header N-01/N-02/N-03, desktop+mobile wireframes | **DRAFT ALTERNATIF, BELUM SATU PUN DIPILIH** |
+| PROP-087 | **18C-04D: Structured Visual CMS fleksibel**: add/hide/reorder/revariant sections, edit copy/media/CTA/locales/SEO, revision/preview/publish | **DRAFT KEBUTUHAN SISTEM, MASIH BISA DIUBAH** |
+| PROP-088 | **12 kandidat section blocks** dan skema pages/revisions/media yang mungkin digabung dengan schema existing, bukan daftar final maupun tambahan wajib tabel | **DRAFT TERBUKA / BUKAN KOMPONEN TERKUNCI** |
+| PROP-089 | **28 skenario CMS UAT** termasuk edit/hide/order/RTL/role data-binding/cache/rollback | **RENCANA UAT, BELUM DIEKSEKUSI** |
+
+**Catatan visual konsep:** jika sebuah mockup menampilkan nama tempat, tanggal, bangunan atau logo yang bersifat ilustratif, itu **bukan sumber fakta resmi**. Data live seperti tanggal acara, venue, biaya, status pendaftaran dan partner berasal dari master/asset yang terverifikasi dan tidak boleh mengarang dari mockup.
+
+[Wireframe DRAFT 18C-04C](18C-04C-DRAFT-HOMEPAGE-WIREFRAME-DESKTOP-MOBILE.md) · [Visual CMS DRAFT 18C-04D](18C-04D-DRAFT-VISUAL-CMS-BLOCK-LIBRARY-EDITING-CONTRACT.md).
+
 ## B. Baseline repo lama yang dapat dipakai, belum semuanya dikunci ulang
 
 | ID | Area | Referensi dan implikasi | Status |
