@@ -2,6 +2,12 @@
 
 This repository currently contains an **ICHES 2027 product blueprint**, not a finished Laravel application. Never claim an app, CMS, countdown, database, tests or deployments exist unless verified in the working tree and runtime.
 
+## Active AI agent workspace (read first)
+
+- Start at [WORKSPACE.md](WORKSPACE.md); [docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md) is the sole current-task status and [docs/19E-AGENT-WORKSPACE-RUNBOOK.md](docs/19E-AGENT-WORKSPACE-RUNBOOK.md) defines the short operational handoff. Do not treat the sprint timebox or backlog as GO CODING.
+- Work on **one owner-authorized Task ID at a time**; do not pull in adjacent modules. Follow docs/19C for task-specific Work Order; one feature branch per task, never directly main.
+- ChatGPT owns governance docs and board updates; Codex in VS Code implements code only after explicit owner GO for that task. No automatic merge, deploy, or production changes.
+
 ## Read the project before changing code
 
 1. `README.md` and `docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md` — latest owner decisions have precedence.
