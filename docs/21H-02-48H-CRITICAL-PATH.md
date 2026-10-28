@@ -2,6 +2,17 @@
 
 > **Owner's operational timebox: two working days.** This is an aggressive implementation target, **not a guarantee** that all academic/finance/CMS modules can be built, tested and released in 48h, nor an implicit GO CODING. Use canonical `akhmadafnan/iches-unisya` only; all source changes still exclusively by Codex VS Code under a named owner Work Order and feature branch.
 
+## Operational update — repo-local Git Credential Manager configured (28 Oct 2026)
+
+On the owner's connected Windows machine, ChatGPT performed the agreed **repository-local, non-secret Git credential-helper configuration** for `D:\PINJAM-AFNAN\Herd\iches-unisya`:
+
+- `git -C <canonical repo> config --local credential.helper manager` → **success**; `git config --local --get credential.helper` now reports `manager`; Git Credential Manager version **2.8.0**.
+- Exact accepted Laravel branch and commit unchanged: `feat/ich-s0-01-foundation`, `8eba7cb5b9da0577910beb919844165869591e05`; tracked Git working tree **clean**.
+- **GitHub browser sign-in NOT performed; push NOT attempted; remote feature branch and app PR still NOT created.** Configuring helper alone does not prove authentication. Owner must approve the GitHub browser OAuth prompt locally when the already authorized Codex push is attempted.
+- No username, token, password, Git remote URL, other repository, branch contents, migrations or app source files changed.
+
+This partially resolves the **missing-helper** blocker, not the **interactive sign-in/push** gate. Avoid issuing a new GO Coding for the already accepted commit merely to perform its authorized push.
+
 ## Current factual baseline
 
 1. Laravel 13/Inertia/Vue3/TS/Tailwind4 `ICH-S0-01`: **owner-accepted, independently tested** on local branch `feat/ich-s0-01-foundation`, commit `8eba7cb5b9da0577910beb919844165869591e05`, Herd 200. **Not yet pushed or merged**.

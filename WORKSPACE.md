@@ -18,6 +18,12 @@
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
+## GitHub push-auth gate update (28 October 2026)
+
+- Repo-local `credential.helper=manager` configured and verified with Git Credential Manager 2.8.0; original accepted Laravel feature HEAD unchanged and clean.
+- Interactive GitHub browser OAuth approval by the owner is **still pending**; no push/PR yet. Codex's previously owner-approved push task can resume safely after login. **No merge/deploy/migration GO inferred.**
+
+
 ## 21H — 48h prioritization and design Skills W2 (current)
 
 - User requested continue **in existing `akhmadafnan/iches-unisya` repository only**, two-workday timebox. [21H-02 critical path](docs/21H-02-48H-CRITICAL-PATH.md) prioritizes fixing Git HTTPS auth, publishing/PR for already accepted ICH-S0-01 and safe DB test readiness before further app tasks.
