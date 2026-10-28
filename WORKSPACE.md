@@ -2,6 +2,12 @@
 
 > **Mulai di sini.** Repository ini adalah satu ruang kerja ICHES UNISYA; saat ini masih **blueprint**, belum aplikasi Laravel yang berjalan. **Belum ada GO CODING.** Codex VS Code hanya untuk perubahan **CODE setelah GO eksplisit per tugas**; ChatGPT menangani keputusan, spesifikasi, docs, review, dan tata kelola GitHub.
 
+## One Master Plan (DRAFT — no GO)
+
+- [PLANS.md](PLANS.md) — one M0–M9 execution roadmap, NOT a second status board.
+- [20A Agent Execution Contract](docs/20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) — skills registry, bounded authorization proposal, harness evidence ownership.
+- [harness/README.md](harness/README.md) — evidence journal format. **Codex Markdown write permission is not active**.
+
 ## Empat berkas kerja harian (bukan 50+ blueprint)
 1. **[WORKSPACE.md](WORKSPACE.md)** — pintu masuk dan urutan baca (berkas ini).
 2. **[docs/19F-CURRENT-SPRINT-BOARD.md](docs/19F-CURRENT-SPRINT-BOARD.md)** — **satu** status tugas aktif, blocker, dan next action; jangan menciptakan status tandingan di chat.

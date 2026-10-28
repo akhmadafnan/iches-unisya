@@ -2,6 +2,10 @@
 
 > **Snapshot 28 Oktober 2026 · DRAFT · BELUM GO CODING.** Ini **satu sumber status operasional jangka pendek**, bukan pengganti [19B backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md), [19C Work Orders](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md), atau [09 Register keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md). Update oleh **ChatGPT** setelah verifikasi bukti GitHub/operator.
 
+## 20A Master Plan and Harness (DRAFT)
+
+[PLANS.md](../PLANS.md) now contains the single M0–M9 roadmap; [20A contract](20A-MASTER-PLAN-SKILLS-AND-HARNESS.md) proposes the Skill registry and evidence workflow. The live status remains ONLY this 19F board. Proposed sprint-wide GO and Codex append-only log permission are **NOT approved**. Existing per-task GO and code-only policy remain in force. No application tests have run.
+
 ## NOW — satu prioritas yang boleh aktif
 **ICH-PRE-02 / ICH-PRE-03** — Tutup pilihan teknis minimum dan inspeksi kesiapan komputer/VS Code/Codex (tanpa menulis kode). **Belum GO untuk ICH-S0-01.**
 
