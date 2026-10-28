@@ -29,7 +29,7 @@ Database tests enforce the owned **`iches_unisya`** localhost:3306 schema with F
 
 ## Review of Codex browser evidence (not independently browser-rerun)
 
-- [Local evidence file](../harness/evidence/ICH-S0-04/results.md) is on the feature branch only, not yet published on GitHub; it includes compiled dashboard fixture desktop 1440 × 1000, mobile 375 × 812, RTL, native select focus and keyboard POST. Browser interactions intercepted synthetic Inertia JSON. Codex clearly disclosed that ArrowDown did not perform native selection in its automation environment, and no real authenticated browser/backend session was exercised.
+- Local evidence file `harness/evidence/ICH-S0-04/results.md` is on the feature branch only, not yet published on GitHub; it includes compiled dashboard fixture desktop 1440 × 1000, mobile 375 × 812, RTL, native select focus and keyboard POST. Browser interactions intercepted synthetic Inertia JSON. Codex clearly disclosed that ArrowDown did not perform native selection in its automation environment, and no real authenticated browser/backend session was exercised.
 - HTTP backend isolation was separately verified by the actual MySQL transaction-based feature tests; **live end-to-end browser verification remains pending**, and no remote GitHub Actions run exists for the feature SHA.
 
 ## Decision and next gate
