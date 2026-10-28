@@ -1,0 +1,73 @@
+name: DB-free CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: ['feat/**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: PHP 8.4 and Node 22 checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      APP_ENV: testing
+      APP_DEBUG: 'false'
+      APP_MAINTENANCE_DRIVER: file
+      DB_CONNECTION: disabled
+      CACHE_STORE: file
+      SESSION_DRIVER: file
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@d52fc211a0436f8839a587b3b5b8efddab4744ea # v2
+        with:
+          php-version: '8.4'
+          extensions: ctype, dom, fileinfo, filter, hash, mbstring, openssl, session, tokenizer, xml, xmlwriter
+          coverage: none
+          tools: composer:v2
+
+      - name: Validate Composer manifest and lockfile
+        run: composer validate --strict
+
+      - name: Install locked PHP dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Report Laravel version
+        run: php artisan --version
+
+      - name: Run database-free PHP tests
+        run: php artisan test
+
+      - name: Check PHP formatting
+        run: php vendor/bin/pint --test
+
+      - name: Set up Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked frontend dependencies
+        run: npm ci
+
+      - name: Check TypeScript
+        run: npm run typecheck
+
+      - name: Build frontend assets
+        run: npm run build
