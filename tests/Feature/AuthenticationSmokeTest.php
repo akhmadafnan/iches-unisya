@@ -76,6 +76,8 @@ class AuthenticationSmokeTest extends TestCase
 
     public function test_endpoint_limits_are_independent_and_inertia_receives_a_readable_error(): void
     {
+        $this->withServerVariables(['REMOTE_ADDR' => '192.0.2.77']);
+
         for ($i = 0; $i < 10; $i++) {
             $this->from('/login')->post('/auth/request', ['email' => 'invalid'])->assertSessionHasErrors('email');
         }
