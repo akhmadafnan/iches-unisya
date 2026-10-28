@@ -12,7 +12,7 @@ Deliver three project-scoped, safe, static-methodology Skills in the **same repo
 | `iches-design-critique` | [Anti-Slop Design](https://github.com/Ferousco-dev/anti-slop-design/tree/484f99edef59020e564cf28fdf77aaca27b32c3f) | Visual/copy/interaction quality audit after art direction | Read-only |
 | `iches-ui-accessibility-audit` | [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md) | Vue/RTL/mobile/focus/forms/semantic audit | Read-only |
 
-These are **adaptations, not exact vendored copies of the original SKILL.md files**. All pinned reference docs and full source MIT license notices are unchanged copies. Relevant rules are specifically adapted to native ICHES policies and Vue; no claim that Taste's automated draw/inspect mode is installed.
+These are **adaptations, not exact vendored copies of the original SKILL.md files**. Pinned Taste and Vercel reference docs and full MIT license notices are unchanged copies. The Anti-Slop checklist preserves upstream content except an explanatory provenance line and four rewrites of out-of-bundle relative links to exact pinned upstream URLs. Relevant rules are specifically adapted to native ICHES policies and Vue; no claim that Taste's automated draw/inspect mode is installed.
 
 ### Rationale against full upstream install
 

@@ -1,5 +1,7 @@
 # 13 — Pre-Emit Self-Critique Checklist
 
+> ICHES vendored reference from pinned Anti-Slop source SHA `484f99edef59020e564cf28fdf77aaca27b32c3f`; four cross-reference links have been rewritten to pinned upstream URLs because the full reference library is intentionally not installed. Other guidance remains upstream content.
+
 > **Module:** 13 of N · **Status:** stable
 > **Read when:** you have produced output and are about to hand it over. Run this **before** emitting, not after.
 
@@ -72,11 +74,11 @@ Every one must have an answer. "It looked good" is not one.
 ## Gate 3 — Copy
 
 - [ ] The headline explains what the product does in ≤10 words
-- [ ] No banned buzzwords or forbidden phrases survive ([`08`](08-copywriting-patterns.md))
+- [ ] No banned buzzwords or forbidden phrases survive ([`08`](https://github.com/Ferousco-dev/anti-slop-design/blob/484f99edef59020e564cf28fdf77aaca27b32c3f/skills/anti-slop-design/references/08-copywriting-patterns.md))
 - [ ] No hedging — "designed to", "may help", "allows you to"
 - [ ] Active voice in at least 80% of sentences
 - [ ] Every claim contains a number, a name, or something checkable
-- [ ] Every proof element reduces the audience's *actual* anxiety ([`18`](18-trust-signals.md))
+- [ ] Every proof element reduces the audience's *actual* anxiety ([`18`](https://github.com/Ferousco-dev/anti-slop-design/blob/484f99edef59020e564cf28fdf77aaca27b32c3f/skills/anti-slop-design/references/18-trust-signals.md))
 - [ ] At least one thing on the page is checkable by a sceptic in under a minute
 - [ ] **Sentence length varies visibly** — not all in the 18–24 word band
 - [ ] **Paragraph length varies visibly** — not all 3–5 sentences
@@ -145,10 +147,10 @@ Decoration added to fill space is slop by definition. Delete it and check whethe
 Pick the three most arguable decisions. If you cannot argue them, they were not decisions.
 
 **4. Is there a visual idea here, or only an absence of bad ones?**
-Name the idea in one sentence, and make it something you could *see* rather than something you avoided. "No gradients, neutral palette, clean type" is not an idea — that is a list of removals. "The interface is built out of the product's own furniture" is an idea. If the honest answer is that the page is simply inoffensive, go to [`11-craft-list.md`](11-craft-list.md); you are half finished.
+Name the idea in one sentence, and make it something you could *see* rather than something you avoided. "No gradients, neutral palette, clean type" is not an idea — that is a list of removals. "The interface is built out of the product's own furniture" is an idea. If the honest answer is that the page is simply inoffensive, go to [`11-craft-list.md`](https://github.com/Ferousco-dev/anti-slop-design/blob/484f99edef59020e564cf28fdf77aaca27b32c3f/skills/anti-slop-design/references/11-craft-list.md); you are half finished.
 
 **5. Is this in the right register for the category?**
-Describe the design aloud without naming the product — "quiet, precise, monochrome, generous space" — and ask what it sells. If the honest answer is a different category, the register is wrong, and no amount of craft rescues it. See [`15-product-types.md`](15-product-types.md).
+Describe the design aloud without naming the product — "quiet, precise, monochrome, generous space" — and ask what it sells. If the honest answer is a different category, the register is wrong, and no amount of craft rescues it. See [`15-product-types.md`](https://github.com/Ferousco-dev/anti-slop-design/blob/484f99edef59020e564cf28fdf77aaca27b32c3f/skills/anti-slop-design/references/15-product-types.md).
 
 **6. Will this look dated in two years?**
 Separate what is durable — hierarchy, type, spacing, restraint — from what is trend. If the trend elements were removed, is anything left?

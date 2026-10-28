@@ -8,7 +8,7 @@ metadata:
 ---
 # ICHES Editorial Art Direction — Taste-inspired static adaptation
 
-**This is a project-authored adaptation, NOT the complete original Taste Skill v2 runtime.** Original work: [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill/tree/12af471f627f866411b4bd785b19646d3672784c), MIT notice in `../../third-party-licenses/taste-skill-MIT.txt` (actual root: `.agents/third-party-licenses/taste-skill-MIT.txt`). Original full script/library bundle is **NOT installed**; do not invoke `scripts/draw.mjs`, `inspect.mjs`, `assets.mjs` or any remote `npx` installer on this project.
+**This is a project-authored adaptation, NOT the complete original Taste Skill v2 runtime.** Original work: [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill/tree/12af471f627f866411b4bd785b19646d3672784c), MIT license notice in `.agents/third-party-licenses/taste-skill-MIT.txt`. Original full script/library bundle is **NOT installed**; do not invoke `scripts/draw.mjs`, `inspect.mjs`, `assets.mjs` or any remote `npx` installer on this project.
 
 ## Activation and source of truth
 

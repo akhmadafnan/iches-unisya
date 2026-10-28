@@ -154,6 +154,8 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 
 ## 21H — Design Skills Wave 2 & 48h delivery focus (28 October 2026)
 
+- Internal 21H package link audit found four cross-file Anti-Slop references outside the curated subset; the four links were rewritten to pinned upstream URLs. Original source remains attributed and only source content links changed.
+
 - Owner requested to **continue within canonical repo `akhmadafnan/iches-unisya`** with a two-working-day target; no application coding/DB/merge GO in that message. Separate docs-only branch `docs/21h-design-skills` stages three static ICHES-specific design Skills derived from pinned Taste, Anti-Slop and Vercel methods, reference files, exact MIT notices and explicit brand/owner precedence.
 - See [21H design/security contract](21H-01-DESIGN-SKILLS-AND-SECURITY.md) and [two-day critical-path plan](21H-02-48H-CRITICAL-PATH.md). No installer, automatic media download, Vue/PHP code edit, new website, database activity, or unrelated repository.
 - **First operational unblocker:** accepted `ICH-S0-01` branch push remains blocked by HTTPS Git credential helper; separate owner-local OAuth configuration, then authorized Codex feature push/PR. PR merge separately owner-approved.
