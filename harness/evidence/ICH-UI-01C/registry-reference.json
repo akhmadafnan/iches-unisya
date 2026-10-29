@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/unovue/shadcn-vue",
+  "sha": "4d6963aa8a482be7609cb05d3f8b7fe42082b634",
+  "style": "reka-lyra",
+  "license": "registry-LICENSE.txt",
+  "references": [
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/input.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/textarea.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/label.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/badge.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/native-select.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/dialog.json",
+    "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/apps/v4/public/r/styles/reka-lyra/table.json"
+  ],
+  "adaptations": [
+    "Vue defineModel uses native input/select/textarea directives without adding useVModel dependencies.",
+    "Native label and native select arrow retain platform semantics and RTL without an icon wrapper.",
+    "Badge variants stay in its single file; slots supply meaningful text.",
+    "Dialog portal/overlay/content stay in one file. No animation or built-in English-only close label; consumers supply Title/Description and a slotted Reka DialogClose.",
+    "Table forwards attrs to the semantic table and bounds overflow in its container.",
+    "Existing Button and Sheet remain unchanged in Git."
+  ]
+}
