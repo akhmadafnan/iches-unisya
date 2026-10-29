@@ -14,7 +14,8 @@ description: Implement and review owner-authorized ICHES Backoffice admin screen
 
 ## Design contract
 - Laravel + Inertia + Vue 3 + TypeScript, **shadcn-vue Admin components and Tailwind CSS 4**. **No Bootstrap; no React/Next.js runtime or template install.**
-- Preferred visual direction: Lyra V1-inspired compact Admin, but preset compatibility and final tokens require verification. Do not execute an unverified React preset command.
+- **OWNER FINAL (29 Oct 2026):** Backoffice/Admin uses official **shadcn-vue Lyra V1.1 preset `a33J5lFw`**, not merely Lyra-inspired: Reka + Lyra (`reka-lyra`), neutral/emerald theme, JetBrains Mono body/Geist Mono headings, Phosphor icons, default radius, subtle/default menu. Public/Auth remain **Academic Editorial ICHES** with existing Inter/Sora, ivory/forest/near-black/gold; keep EN/ID/AR RTL. Do not execute React/Next preset or blindly overwrite existing Vue components.
+- **Historical pre-audit direction (superseded):** Preferred visual direction: Lyra V1-inspired compact Admin, but preset compatibility and final tokens require verification. Do not execute an unverified React preset command.
 - Coherent reusable sidebar, breadcrumb, searchable/filterable tables, semantic forms, dialogs and status components. Keep accessible empty, loading, error, forbidden and validation states.
 - Mobile/tablet/desktop responsive; keyboard navigation, focus trapping, contrast and `dir=rtl` Arabic support. Test RTL portals, calendar, pagination and sidebar.
 - **Visible UI permissions are not authorization**: server Policies/Gates must reject cross-event, institution, role and owner access.
