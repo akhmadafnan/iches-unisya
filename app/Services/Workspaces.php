@@ -20,10 +20,13 @@ class Workspaces
     public function choices(User $user): array
     {
         return [
-            ['key' => 'personal', 'label' => 'Personal'],
+            ['key' => 'personal', 'label' => 'Personal', 'role' => null, 'event' => null, 'institution' => null],
             ...$this->grants($user)->with(['event', 'institution'])->orderBy('id')->get()->map(fn (RoleAssignment $grant) => [
                 'key' => 'assignment:'.$grant->id,
                 'label' => implode(' / ', array_filter([$grant->event->name, $grant->institution?->official_name, $grant->role_key])),
+                'role' => $grant->role_key,
+                'event' => $grant->event->name,
+                'institution' => $grant->institution?->official_name,
             ])->all(),
         ];
     }

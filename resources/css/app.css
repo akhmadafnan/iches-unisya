@@ -3,7 +3,30 @@
 @source '../views/**/*.blade.php';
 @source '../js/**/*.vue';
 
+@theme inline {
+    --color-background: #F7F6F1;
+    --color-foreground: #17211C;
+    --color-primary: #164734;
+    --color-primary-foreground: #FFFFFF;
+    --color-card: #FFFFFF;
+    --color-muted: #EEEFE9;
+    --color-muted-foreground: #59655D;
+    --color-border: #D9DED6;
+    --color-gold: #B79A5B;
+    --font-sans: 'Inter Variable', 'Noto Sans Arabic Variable', sans-serif;
+    --font-brand: 'Sora Variable', 'Noto Sans Arabic Variable', sans-serif;
+}
+
+@layer base {
+    body { @apply bg-background font-sans text-foreground antialiased; }
+    :where(button, a, input, select, [tabindex]):focus-visible { outline: 2px solid #B79A5B; outline-offset: 3px; }
+    button, select { cursor: pointer; }
+    html[dir='rtl'] { --font-sans: 'Noto Sans Arabic Variable', 'Inter Variable', sans-serif; --font-brand: 'Noto Sans Arabic Variable', 'Sora Variable', sans-serif; }
+}
+
 @layer components {
-    .auth-input { @apply mt-2 block w-full rounded border border-stone-400 bg-white p-3 focus:outline-2 focus:outline-offset-2 focus:outline-teal-800; }
-    .auth-button { @apply min-h-11 rounded bg-teal-800 px-5 py-3 font-semibold text-white focus:outline-2 focus:outline-offset-2 focus:outline-teal-800 disabled:opacity-50; }
+    .shell-select { @apply min-h-11 max-w-full rounded-lg border border-border bg-card px-3 py-2 text-foreground; }
+    .auth-input { @apply mt-2 block min-h-11 w-full rounded-lg border border-border bg-card p-3; }
+    .auth-button { @apply min-h-11 rounded-lg bg-primary px-5 py-3 font-semibold text-primary-foreground disabled:opacity-50; }
+    .skip-link { @apply fixed start-4 top-4 z-[100] -translate-y-32 rounded-lg bg-card px-4 py-3 text-primary shadow-lg focus:translate-y-0; }
 }

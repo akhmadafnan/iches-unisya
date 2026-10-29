@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Head, useForm } from '@inertiajs/vue3';
 import AuthShell from '../../components/AuthShell.vue';
+import { useI18n } from 'vue-i18n';
+import { authError } from '../../i18n';
+const { t } = useI18n();
 defineProps<{ status?: string }>();
 const access = useForm({ email: '', name: '' });
 const verification = useForm({ email: '', code: '' });
@@ -10,21 +13,21 @@ function requestCode() {
 </script>
 
 <template>
-    <Head title="Sign in" />
+    <Head :title="t('auth.signIn')" />
     <AuthShell>
-        <h1 class="font-serif text-4xl">Sign in or register</h1>
-        <p class="mt-4 text-stone-600">Use your email to receive a code and a sign-in link. No password needed.</p>
-        <p v-if="status" role="status" class="mt-4 rounded border border-teal-700 p-3">{{ status }}</p>
+        <h1 class="font-brand text-3xl font-semibold">{{ t('auth.register') }}</h1>
+        <p class="mt-4 text-muted-foreground">{{ t('auth.description') }}</p>
+        <p v-if="status" role="status" class="mt-4 rounded border border-primary p-3">{{ t('auth.sent') }}</p>
         <form class="mt-6 space-y-4" @submit.prevent="requestCode">
-            <div><label for="name">Name (optional for new accounts)</label><input id="name" v-model="access.name" autocomplete="name" maxlength="255" class="auth-input"><p v-if="access.errors.name" role="alert">{{ access.errors.name }}</p></div>
-            <div><label for="email">Email</label><input id="email" v-model="access.email" type="email" autocomplete="email" required maxlength="254" class="auth-input"><p v-if="access.errors.email" role="alert">{{ access.errors.email }}</p></div>
-            <button class="auth-button" :disabled="access.processing">Send / resend code</button>
+            <div><label for="name">{{ t('auth.name') }}</label><input id="name" v-model="access.name" autocomplete="name" maxlength="255" class="auth-input" :aria-invalid="!!access.errors.name"><p v-if="access.errors.name" role="alert">{{ authError(access.errors.name) }}</p></div>
+            <div><label for="email">{{ t('auth.email') }}</label><input id="email" v-model="access.email" type="email" dir="ltr" autocomplete="email" required maxlength="254" class="auth-input" :aria-invalid="!!access.errors.email"><p v-if="access.errors.email" role="alert">{{ authError(access.errors.email) }}</p></div>
+            <button class="auth-button" :disabled="access.processing">{{ t('auth.send') }}</button>
         </form>
         <form class="mt-8 space-y-4 border-t border-stone-300 pt-6" @submit.prevent="verification.post('/auth/verify-code')">
-            <h2 class="text-xl font-semibold">Have a code?</h2>
-            <div><label for="verify-email">Email receiving the code</label><input id="verify-email" v-model="verification.email" type="email" autocomplete="email" required class="auth-input"><p v-if="verification.errors.email" role="alert">{{ verification.errors.email }}</p></div>
-            <div><label for="code">Six-digit code</label><input id="code" v-model="verification.code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required class="auth-input"><p v-if="verification.errors.code" role="alert">{{ verification.errors.code }}</p></div>
-            <button class="auth-button" :disabled="verification.processing">Verify and sign in</button>
+            <h2 class="text-xl font-semibold">{{ t('auth.haveCode') }}</h2>
+            <div><label for="verify-email">{{ t('auth.receivingEmail') }}</label><input id="verify-email" v-model="verification.email" type="email" dir="ltr" autocomplete="email" required class="auth-input" :aria-invalid="!!verification.errors.email"><p v-if="verification.errors.email" role="alert">{{ authError(verification.errors.email) }}</p></div>
+            <div><label for="code">{{ t('auth.code') }}</label><input id="code" v-model="verification.code" dir="ltr" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required class="auth-input" :aria-invalid="!!verification.errors.code"><p v-if="verification.errors.code" role="alert">{{ authError(verification.errors.code) }}</p></div>
+            <button class="auth-button" :disabled="verification.processing">{{ t('auth.verify') }}</button>
         </form>
     </AuthShell>
 </template>

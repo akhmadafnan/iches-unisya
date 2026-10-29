@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::inertia('/', 'Foundation', ['task' => 'ICH-S0-01'])->name('home');
 
 Route::middleware(AuthPrivacy::class)->group(function (): void {
+    Route::post('/locale', LocaleController::class)->name('locale');
     Route::middleware('guest')->group(function (): void {
         Route::get('/login', fn () => Inertia\Inertia::render('auth/Login', ['status' => session('status')]))->name('login');
         Route::post('/auth/request', [SessionController::class, 'request'])->middleware('throttle:auth-request');
