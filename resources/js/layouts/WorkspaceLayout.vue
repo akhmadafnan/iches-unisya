@@ -18,13 +18,13 @@ const collapsed = ref(false);
     <ConfigProvider :dir="page.props.direction">
         <div class="iches-backoffice flex min-h-svh bg-background text-foreground">
             <a href="#main-content" class="skip-link">{{ t('skip') }}</a>
-            <aside class="sticky top-0 hidden h-svh shrink-0 flex-col gap-5 bg-primary px-4 py-7 text-primary-foreground lg:flex" :class="collapsed ? 'w-20' : 'w-64'">
+            <aside class="sticky top-0 hidden h-svh shrink-0 flex-col gap-5 border-e border-sidebar-border bg-sidebar px-4 py-7 text-sidebar-foreground lg:flex" :class="collapsed ? 'w-20' : 'w-64'">
                 <AppSidebar :collapsed="collapsed" />
                 <Button variant="ghost" class="w-full" :aria-label="collapsed ? t('expand') : t('collapse')" :aria-expanded="!collapsed" @click="collapsed = !collapsed"><component :is="collapsed ? PanelLeftOpen : PanelLeftClose" class="rtl:rotate-180" aria-hidden="true" /><span v-if="!collapsed">{{ t('collapse') }}</span></Button>
             </aside>
             <div class="min-w-0 flex-1">
                 <AppTopbar />
-                <main id="main-content" tabindex="-1" class="mx-auto w-full max-w-7xl px-4 py-9 sm:px-8 sm:py-12"><slot /></main>
+                <main id="main-content" tabindex="-1" class="w-full px-4 py-9 sm:px-8 sm:py-12"><slot /></main>
             </div>
         </div>
     </ConfigProvider>

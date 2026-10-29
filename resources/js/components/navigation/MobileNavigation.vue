@@ -18,12 +18,12 @@ onUnmounted(() => media?.removeEventListener('change', closeOnDesktop));
 <template>
     <DialogRoot v-model:open="open">
         <DialogTrigger as-child><Button variant="outline" class="lg:hidden" :aria-label="t('openNavigation')"><Menu aria-hidden="true" /></Button></DialogTrigger>
-        <SheetContent>
+        <SheetContent class="border-sidebar-border bg-sidebar text-sidebar-foreground">
             <div class="mb-6 flex items-start justify-between gap-4">
                 <div><DialogTitle class="font-brand font-semibold">{{ t('navigation') }}</DialogTitle><DialogDescription class="mt-1 text-xs text-muted-foreground">ICHES UNISYA 2027</DialogDescription></div>
                 <DialogClose as-child><Button variant="ghost" :aria-label="t('closeNavigation')"><X aria-hidden="true" /></Button></DialogClose>
             </div>
-            <div class="min-h-80 flex-1 rounded-xl bg-primary p-5 text-primary-foreground"><AppSidebar @navigate="open = false" /></div>
+            <div class="min-h-80 flex-1"><AppSidebar @navigate="open = false" /></div>
         </SheetContent>
     </DialogRoot>
 </template>
