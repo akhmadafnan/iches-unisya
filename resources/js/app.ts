@@ -10,6 +10,7 @@ import type { Locale } from './types';
 import { router } from '@inertiajs/vue3';
 
 router.on('navigate', (event) => syncLocale(event.detail.page.props.locale as Locale));
+router.on('success', (event) => syncLocale(event.detail.page.props.locale as Locale));
 
 void createInertiaApp({
     title: (title) => `${title} | ICHES UNISYA 2027`,

@@ -1,0 +1,187 @@
+{
+  "checks": 95,
+  "cases": [
+    {
+      "path": "/dashboard",
+      "lang": "id",
+      "dir": "ltr",
+      "heading": "Selamat datang, Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "Terapkan",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "مرحباً، Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "تطبيق",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "en",
+      "dir": "ltr",
+      "heading": "Welcome, Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "Apply",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "مرحباً، Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "تطبيق",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "مرحباً، Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "تطبيق"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "مرحباً، Synthetic Presenter",
+      "width": 768,
+      "scroll": 753,
+      "apply": "تطبيق"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "مرحباً، Synthetic Presenter",
+      "width": 1440,
+      "scroll": 1440,
+      "apply": "تطبيق"
+    },
+    {
+      "path": "/dashboard",
+      "lang": "en",
+      "dir": "ltr",
+      "heading": "Welcome, Synthetic Presenter",
+      "width": 390,
+      "scroll": 390,
+      "apply": "Apply",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/login",
+      "lang": "id",
+      "dir": "ltr",
+      "heading": "Masuk atau daftar",
+      "width": 390,
+      "scroll": 390,
+      "apply": "Terapkan",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/login",
+      "lang": "ar",
+      "dir": "rtl",
+      "heading": "تسجيل الدخول أو إنشاء حساب",
+      "width": 390,
+      "scroll": 390,
+      "apply": "تطبيق",
+      "sentinel": "same-document"
+    },
+    {
+      "path": "/login",
+      "lang": "en",
+      "dir": "ltr",
+      "heading": "Sign in or register",
+      "width": 390,
+      "scroll": 390,
+      "apply": "Apply",
+      "sentinel": "same-document"
+    }
+  ],
+  "network": [
+    {
+      "locale": "id",
+      "page": "/dashboard",
+      "elapsedMs": 123,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "ar",
+      "page": "/dashboard",
+      "elapsedMs": 78,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "en",
+      "page": "/dashboard",
+      "elapsedMs": 122,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "ar",
+      "page": "/dashboard",
+      "elapsedMs": 114,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "en",
+      "page": "/dashboard",
+      "elapsedMs": 120,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "id",
+      "page": "/login",
+      "elapsedMs": 62,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "ar",
+      "page": "/login",
+      "elapsedMs": 61,
+      "statuses": [
+        302,
+        200
+      ]
+    },
+    {
+      "locale": "en",
+      "page": "/login",
+      "elapsedMs": 57,
+      "statuses": [
+        302,
+        200
+      ]
+    }
+  ],
+  "result": "PASS"
+}
