@@ -1,27 +1,56 @@
 @import 'tailwindcss';
+@import './public-theme.css';
+@import './admin-theme.css';
 
 @source '../views/**/*.blade.php';
 @source '../js/**/*.vue';
 
 @theme inline {
-    --color-background: #F7F6F1;
-    --color-foreground: #17211C;
-    --color-primary: #164734;
-    --color-primary-foreground: #FFFFFF;
-    --color-card: #FFFFFF;
-    --color-muted: #EEEFE9;
-    --color-muted-foreground: #59655D;
-    --color-border: #D9DED6;
-    --color-gold: #B79A5B;
-    --font-sans: 'Inter Variable', 'Noto Sans Arabic Variable', sans-serif;
-    --font-brand: 'Sora Variable', 'Noto Sans Arabic Variable', sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-gold: var(--gold);
+    --font-sans: var(--app-font-sans);
+    --font-brand: var(--app-font-heading);
+    --font-heading: var(--app-font-heading);
+    --radius-sm: calc(var(--radius, 0.5rem) - 4px);
+    --radius-md: calc(var(--radius, 0.5rem) - 2px);
+    --radius-lg: var(--radius, 0.5rem);
+    --radius-xl: calc(var(--radius, 0.5rem) + 4px);
 }
 
 @layer base {
     body { @apply bg-background font-sans text-foreground antialiased; }
     :where(button, a, input, select, [tabindex]):focus-visible { outline: 2px solid #B79A5B; outline-offset: 3px; }
     button, select { cursor: pointer; }
-    html[dir='rtl'] { --font-sans: 'Noto Sans Arabic Variable', 'Inter Variable', sans-serif; --font-brand: 'Noto Sans Arabic Variable', 'Sora Variable', sans-serif; }
 }
 
 @layer components {

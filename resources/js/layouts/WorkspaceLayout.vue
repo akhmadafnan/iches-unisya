@@ -4,10 +4,10 @@ import { usePage } from '@inertiajs/vue3';
 import { ConfigProvider } from 'reka-ui';
 import { PanelLeftClose, PanelLeftOpen } from '@lucide/vue';
 import { useI18n } from 'vue-i18n';
-import type { DashboardProps } from '../types';
+import type { DashboardProps } from '@/types';
 import AppSidebar from '../components/navigation/AppSidebar.vue';
 import AppTopbar from '../components/navigation/AppTopbar.vue';
-import Button from '../components/ui/Button.vue';
+import Button from '@/components/ui/Button.vue';
 
 const page = usePage<DashboardProps>();
 const { t } = useI18n();
@@ -16,7 +16,7 @@ const collapsed = ref(false);
 
 <template>
     <ConfigProvider :dir="page.props.direction">
-        <div class="flex min-h-svh bg-background text-foreground">
+        <div class="iches-backoffice flex min-h-svh bg-background text-foreground">
             <a href="#main-content" class="skip-link">{{ t('skip') }}</a>
             <aside class="sticky top-0 hidden h-svh shrink-0 flex-col gap-5 bg-primary px-4 py-7 text-primary-foreground lg:flex" :class="collapsed ? 'w-20' : 'w-64'">
                 <AppSidebar :collapsed="collapsed" />

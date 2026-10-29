@@ -1,0 +1,401 @@
+{
+  "result": "PASS",
+  "baselineOrigin": "http://iches-unisya.test",
+  "afterOrigin": "http://127.0.0.1:8011",
+  "baselineStyles": {
+    "auth-before-login": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "public": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "oklch(0.985 0.001 106.423)",
+        "color": "oklch(0.216 0.006 56.043)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "oklch(0.216 0.006 56.043)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "oklch(0.216 0.006 56.043)",
+        "fontFamily": "ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+        "fontSize": "36px",
+        "borderRadius": "0px",
+        "borderColor": "oklch(0.216 0.006 56.043)"
+      },
+      "input": null,
+      "button": null
+    },
+    "auth-id": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "auth-ar": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "auth-en": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    }
+  },
+  "afterStyles": {
+    "auth-before-login": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "public": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "oklch(0.985 0.001 106.423)",
+        "color": "oklch(0.216 0.006 56.043)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "oklch(0.216 0.006 56.043)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "oklch(0.216 0.006 56.043)",
+        "fontFamily": "ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+        "fontSize": "36px",
+        "borderRadius": "0px",
+        "borderColor": "oklch(0.216 0.006 56.043)"
+      },
+      "input": null,
+      "button": null
+    },
+    "auth-id": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "auth-ar": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    },
+    "auth-en": {
+      "body": {
+        "backgroundColor": "rgb(247, 246, 241)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "main": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "h1": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "30px",
+        "borderRadius": "0px",
+        "borderColor": "rgb(23, 33, 28)"
+      },
+      "input": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "16px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      },
+      "button": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(23, 33, 28)",
+        "fontFamily": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+        "fontSize": "14px",
+        "borderRadius": "8px",
+        "borderColor": "rgb(217, 222, 214)"
+      }
+    }
+  }
+}
