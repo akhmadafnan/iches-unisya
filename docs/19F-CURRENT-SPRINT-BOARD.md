@@ -1,5 +1,14 @@
 # 19F — Current Sprint Board & Handoff Ledger
 
+## CURRENT STATUS — 29 October 2026 (latest owner-approved documentation checkpoint)
+
+- **Repository/workspace:** `akhmadafnan/iches-unisya`, Laptop 2 `DESKTOP-PE5D86C`, `D:\PINJAM-AFNAN\Herd\iches-unisya`. Last audited clean `main` before docs branch = `07124e0c915fe8d12cf9e33f7a5cbed4d5e4ad63`, same as local `origin/main` (not a fresh remote fetch).
+- **Completed:** ICH-S0-01..ICH-S0-07 all merged. S0-06 shell uses Vue/Inertia, EN/ID/AR RTL and real scoped workspace behavior; historical independent REV-01 browser 95 checks and PHP DB-free 30 tests/684 assertions PASS, **not rerun** for this documentation alignment. S0-08 deferred. No full public CMS or business modules claimed complete.
+- **Final owner decision:** Backoffice = official shadcn-vue **Lyra V1.1 `a33J5lFw`**, separate from Public/Auth **Academic Editorial ICHES**. ICH-UI-01A read-only audit complete.
+- **NEXT TASK:** `ICH-UI-01B` **PREPARED / NO GO CODING**. Local external handoff: `D:\PINJAM-AFNAN\ICHES\WORK-ORDERS\ICH-UI-01B-WORK-ORDER-PREPARED.md` (exact 11-file allowlist, AC-01..AC-12) and `ICH-UI-01B-CODEX-PROMPT-PENDING-GO.md` (short selective-read prompt). No authorization for UI-01C/UI-01D or next roadmap item.
+- **Current authorization:** owner **GO DOKUMENTASI only** for `AGENTS.md`, `WORKSPACE.md`, `docs/19F-CURRENT-SPRINT-BOARD.md`, `.agents/skills/iches-backoffice-ui/SKILL.md` on separate **local docs branch/commit**; not an application-coding GO. No push, PR, merge, migration, seeding, deployment, or post-merge sync.
+- **Gates:** AUDIT → PLAN → OWNER GO CODING → owner-operated CODEX VS CODE → ChatGPT independent SHA/parent/paths/diff/tests review → separate GO PUSH & PR → GitHub Actions PHP8.4/Node22 + required checks/rules/mergeability → separate GO MERGE → owner-authorized POST-MERGE SYNC. Historical records below, including previous `LATEST` and `NOW` headings, are intentionally preserved as **dated snapshots**, not current instructions.
+
 > **LATEST — 28 OCT 2026 / ICH-S0-04 PR #10 NORMAL MERGE SUCCESS / COMPLETE:** Owner separately approved normal merge only after final verification. Source `7edd837eb7285b3dbed0dbeacc2eb5546d76e960`, **exact 16 files**, 1 feature commit; [GitHub Actions #40716707863](https://github.com/akhmadafnan/iches-unisya/actions/runs/40716707863) **SUCCESS** (PHP8.4, DB-free tests, Pint, Node22 TypeScript/build), PR `mergeable=true` / `clean`, no active required checks or rulesets. Called GitHub `merge_method=merge` with `expected_head_sha` guard, **merged=true**, merge SHA **`1942db7def41a1c839d2bf86936880ad689ed178`**; GitHub postmerge confirms PR CLOSED/MERGED and main at same SHA before documentation commits; merge parents **`cfc12603850112a3c6e95e99518a3caf6a40e203`** and exact authorized source. [21L-03 final report](21L-03-S0-04-MERGED-COMPLETE.md). **No app code edits by ChatGPT, new migrations, DB reset, deployment, PR #3 merge or next coding task**. ICH-S0-04 **MERGED/COMPLETE**, Issue #9 completed. Separate future task requires fresh GO. Whole repo Windows Pint had 14 preexisting CRLF findings; Linux GitHub Pint PASS. Live authenticated browser E2E remains deferred.
 
 > **LATEST — 28 OCT 2026 / ICH-S0-04 PR #10 OPEN / REMOTE CI SUCCESS / MERGE BLOCKED UNTIL OWNER GO:** Owner explicitly gave GO PUSH & PR, not merge. Exact local reviewed SHA `7edd837eb7285b3dbed0dbeacc2eb5546d76e960`, parent `08753fa9dccdeef2a4c0fa4314f85d07b262d71e`, 16 changed paths and clean tree verified; push **normal/no force** exit 0 and remote SHA matched. [PR #10](https://github.com/akhmadafnan/iches-unisya/pull/10) created toward main: **OPEN / NOT MERGED, 1 commit, 16 files, mergeable=true, mergeable_state=clean**. [GitHub Actions #40716707863](https://github.com/akhmadafnan/iches-unisya/actions/runs/40716707863) **COMPLETED SUCCESS**, all PHP8.4/Node22 steps (DB-free tests, Pint, Composer/npm locks, TypeScript/build) PASS; whole-repo Pint old Windows 14-line-ending failures were not reproduced by Linux CI. Local transaction-based MySQL 21/408 and DB-free 12/131 were independently verified previously; **real authenticated browser E2E not yet tested**. Branch main currently no enforced required checks/rulesets; owner final merge authorization still mandatory. No source coding, database reset/migration, deployment or PR #3 merge was performed in this stage. Audit [21L-02](21L-02-S0-04-INDEPENDENT-LOCAL-AUDIT.md), publication note on PR #10 and Issue #9. Next gate: distinct GO MERGE PR #10 ICH-S0-04 with fresh SHA/CI/rules checks.
@@ -320,7 +329,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 - Concrete existing-source finding: `config/auth.php` not yet present, no auth routes, `users.password` absent; `config/session.php` and mail config exist, Foundation landing at `/`. Read-only desktop preflight found **clean stale S0-02 feature** and stale local `origin/main`; Codex should safely sync merged main before new `feat/ich-s0-03-passwordless-auth` branch.
 - No S0-04 RBAC broad implementation or PR#3 change; after named S0-03 GO Codex can implement the entire bounded slice without repeated per-step approvals, commit local, then stop before publishing.
 
-## NOW — satu prioritas yang boleh aktif
+## HISTORICAL SNAPSHOT — NOW — satu prioritas yang boleh aktif
 **NOW: ICH-S0-03 AUTH_VERTICAL_SLICE_SPEC_READY / NAMED_GO_PENDING / NO_CODE.** 21K-07 architecture/UAT and 21K-08 executable Codex Work Order complete; dev @iches.test + hashed password opt-in, attendee OTP/Magic Link unchanged. S0-01/S0-07/S0-02 MERGED; no source/DB changes until exact GO CODING ICH-S0-03.
 
 | Work item | Status | Bukti / blocker saat snapshot | Next action / penanggung jawab |
@@ -334,7 +343,7 @@ Owner explicitly approved provisioning **only** a new isolated `iches_unisya_tes
 
 **Override terbaru (21I):** `ICH-S0-01` sudah independen PASS dan MERGED/COMPLETE; catatan NO_GO/PENDING sebelumnya adalah snapshot historis.
 
-## NEXT — antrean, bukan izin mengerjakan
+## HISTORICAL SNAPSHOT — NEXT — antrean, bukan izin mengerjakan
 1. **ICH-S0-01** bootable foundation + actual test evidence; setelah mendapat GO sendiri.
 2. **ICH-S0-02/03/04/05/06/07** identity/role/storage/frontend/test foundation, dipilih berdasar dependency dan per-task GO.
 3. **ICH-S1-01..08** public website/CMS/countdown; aspek UI tidak perlu owner mengunci komponen satu per satu, tetapi publikasi dan data event harus benar.

@@ -1,5 +1,14 @@
 # ICHES 2027 — AI Agent Workspace
 
+## Current operational handoff — 29 October 2026 (supersedes historical snapshots below)
+
+- Official device **Laptop 2 `DESKTOP-PE5D86C`**, repository `akhmadafnan/iches-unisya`, path `D:\PINJAM-AFNAN\Herd\iches-unisya`. Before this docs-only branch: clean `main`, SHA `07124e0c915fe8d12cf9e33f7a5cbed4d5e4ad63` (matching local tracking `origin/main`; no fresh remote fetch claimed).
+- **Merged foundation:** ICH-S0-01 through ICH-S0-07, including passwordless/local-demo auth, scoped workspaces, private storage, CI, and S0-06 responsive EN/ID/AR RTL Backoffice shell. Public root remains Foundation placeholder; CMS/business features not yet implemented. Optional S0-08 remains deferred.
+- **Final visual split:** Backoffice/Admin = official shadcn-vue **Lyra V1.1 `a33J5lFw`**; Public/Auth = **Academic Editorial ICHES**. ICH-UI-01A read-only audit complete; **ICH-UI-01B PREPARED, no GO CODING**.
+- **Work Orders outside repo:** `D:\PINJAM-AFNAN\ICHES\WORK-ORDERS\ICH-UI-01B-WORK-ORDER-PREPARED.md` (full scope, exact 11-file allowlist, AC-01..12) and `ICH-UI-01B-CODEX-PROMPT-PENDING-GO.md` (short, selective-reading handoff). Follow the proven S0-05/S0-06 two-file pattern; do not rerun broad audit or bulk-read all historic docs.
+- **Mandatory execution gates:** ChatGPT AUDIT/PLAN → explicit OWNER GO CODING per Task ID → owner alone runs Codex VS Code → independent review of SHA/parent/diff/files/tests → distinct GO PUSH & PR → PHP8.4/Node22 CI/rules/mergeability → distinct GO MERGE → separately permitted POST-MERGE SYNC. This update is **documentation GO only**: exactly four governance/Skill files, local branch/commit, no app source/push/PR/merge/migration/deploy.
+- **Archive notice:** The dated `CURRENT`, `NOW`, `NO GO`, old branch/path/PR and blueprint-only references below are preserved for provenance, **not** authoritative current task state. Verify actual Git evidence and latest owner decision instead.
+
 > **CURRENT LOCAL PATH (owner-directed relocation, 28 Oct 2026):** `D:\PINJAM-AFNAN\Herd\iches-unisya`. The repository was moved intact from `D:\PINJAM-AFNAN\iches-unisya`; the old directory no longer exists. Herd Free `herd links` confirms `http://iches-unisya.test/` points to the **new** path using PHP 8.4. Git remote `akhmadafnan/iches-unisya`, branch `docs/19e-agent-workspace`, HEAD `1403178c38c131bd81ab8ee48a204b5bdec2d494`, clean after move. VS Code was opened again targeting the new directory. Older references to the old path in snapshot sections are **historical** and must not be used as the current workspace. No database, source code, migrations or other Herd links were altered. **NO GO CODING.**
 
 > **UPDATE 28 OCT 2026 — SETUP AUTHORIZED & COMPLETED; NO GO CODING.** On connected Windows desktop the owner-authorized canonical GitHub clone now exists at `D:\PINJAM-AFNAN\iches-unisya` (hyphen), remote `akhmadafnan/iches-unisya`, clean branch `docs/19e-agent-workspace` tracking origin, initial checkout SHA `432dcd012fa49b25019ad6464e7dc3759b99cd11`. The chosen VS Code at `D:\PINJAM AFNAN\Microsoft VS Code\new_Code.exe` (space), v1.143.1, **opened the ICHES workspace**. OpenAI Codex extension `openai.chatgpt@26.51021.22027` is installed in the shared Windows user profile; **in-app sign-in/Skills loading NOT VERIFIED**. Four repo Skills plus AGENTS/PLANS verified. Git clone and GUI launch were done with user setup approval, **not application coding GO**. PR #1 is still draft/unmerged, and disposable MySQL DB plus technical decisions are pending. Earlier lines describing the target folder as absent or GUI as unlaunched are pre-setup historical observations.
@@ -11,14 +20,14 @@
 - PR #1 merged after explicit owner authorization: approved governance SHA `275cfbfd0e431033eb05d2c519eda19282465962`. Local folder `D:\PINJAM-AFNAN\Herd\iches-unisya` has synced `main`, Git clean.
 - [21B first Task Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) now **READY_FOR_OWNER_GO** for DB-independent Laravel 13/Inertia/Vue3/TS/Tailwind4. Owner must separately say `GO CODING ICH-S0-01` to permit Codex coding; no Sprint/DB/auth authorization implied.
 
-## Stage 21 — current next action
+## Stage 21 — current next action (HISTORICAL snapshot, superseded by 29 Oct 2026 handoff)
 
 - [21A audit / merge gate](docs/21A-PR1-GOVERNANCE-REVIEW.md): docs-only PR reviewed, 263 local Markdown links checked, zero broken. **No owner merge approval yet**.
 - [21B single-task Codex Work Order](docs/21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md): `ICH-S0-01` database-independent Laravel/Inertia/Vue/TS/Tailwind4 inside `D:\PINJAM-AFNAN\Herd\iches-unisya`, pending PR merge + explicit named GO.
 - [21C acceptance](docs/21C-S0-01-ACCEPTANCE-AND-HANDOFF.md): actual Herd HTTP 200, PHP DB-free smoke, Vite build/typecheck and safe diff before acceptance.
 
 
-## 21K-07/08 — ICH-S0-03 auth vertical Work Order READY / NAMED GO PENDING (CURRENT)
+## 21K-07/08 — ICH-S0-03 auth vertical Work Order READY / NAMED GO PENDING (HISTORICAL; S0-03 since merged)
 
 - Owner requested practical comprehensive continuation; ChatGPT inspected merged Laravel 13 app and prepared [21K-07 auth architecture, UAT and seed contract](docs/21K-07-S0-03-AUTHENTICATION-MVP-SPEC.md) + [21K-08 exact Codex VS Code execution work order](docs/21K-08-S0-03-CODEX-WORK-ORDER.md).
 - Passwordless participant **OTP/Magic Link**, local Mail Log, secure web sessions, one-time challenges, expiring/throttled codes, minimal dashboard/logout, plus demo-only `@iches.test` seed/logins with hashed `password` double-gated by `APP_ENV=local` and `ICHES_DEMO_MODE=true`. Existing users table has **no password column**, so new nullable column needs additive migration only under GO.
