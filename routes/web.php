@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
 use App\Http\Middleware\LocalDemoOnly;
@@ -23,6 +24,8 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
         });
     });
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::get('/files/{storedFile}/download', StoredFileDownloadController::class)
+            ->middleware('signed')->name('files.download');
         Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');
         Route::post('/logout', [SessionController::class, 'logout']);
         Route::get('/me/workspaces', [WorkspaceController::class, 'index']);
