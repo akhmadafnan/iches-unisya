@@ -2,6 +2,8 @@ import '../css/app.css';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/sora';
 import '@fontsource-variable/noto-sans-arabic';
+import '@fontsource-variable/jetbrains-mono';
+import '@fontsource-variable/geist-mono';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h, type DefineComponent } from 'vue';

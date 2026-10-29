@@ -1,0 +1,15 @@
+@layer base {
+    :root {
+        --background: #F7F6F1;
+        --foreground: #17211C;
+        --primary: #164734;
+        --primary-foreground: #FFFFFF;
+        --card: #FFFFFF;
+        --muted: #EEEFE9;
+        --muted-foreground: #59655D;
+        --border: #D9DED6;
+        --gold: #B79A5B;
+        --app-font-sans: 'Inter Variable', 'Noto Sans Arabic Variable', sans-serif;
+        --app-font-heading: 'Sora Variable', 'Noto Sans Arabic Variable', sans-serif;
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "source": "https://raw.githubusercontent.com/unovue/shadcn-vue/4d6963aa8a482be7609cb05d3f8b7fe42082b634/packages/cli/src/registry/schema.ts",
+  "validator": "official rawConfigSchema via TypeScript transpile; temporary zod@3.25.76 outside repository",
+  "config": {
+    "$schema": "https://shadcn-vue.com/schema.json",
+    "style": "reka-lyra",
+    "typescript": true,
+    "font": "jetbrains-mono",
+    "fontHeading": "geist-mono",
+    "iconLibrary": "phosphor",
+    "rtl": true,
+    "menuColor": "default",
+    "menuAccent": "subtle",
+    "tailwind": {
+      "config": "",
+      "css": "resources/css/app.css",
+      "baseColor": "neutral",
+      "cssVariables": true
+    },
+    "aliases": {
+      "components": "@/components",
+      "ui": "@/components/ui",
+      "utils": "@/lib/utils",
+      "lib": "@/lib",
+      "composables": "@/composables"
+    }
+  }
+}
