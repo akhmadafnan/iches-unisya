@@ -19,16 +19,17 @@ class FoundationSmokeTest extends TestCase
         // Ephemeral test key; never use local credentials or connect to a database.
         config(['app.key' => 'base64:'.base64_encode(random_bytes(32))]);
         config(['inertia.testing.page_paths' => [resource_path('js/pages')]]);
+        config(['iches-public.event_slug' => null]);
         DB::shouldReceive('connection')->never();
     }
 
-    public function test_home_returns_the_inertia_foundation_page(): void
+    public function test_home_returns_the_public_preparation_page(): void
     {
         $this->withoutVite()->get('/')
             ->assertOk()
             ->assertInertia(fn (Assert $page) => $page
-                ->component('Foundation')
-                ->where('task', 'ICH-S0-01')
+                ->component('public/Home')
+                ->missing('cms')
                 ->missing('auth'));
     }
 
@@ -44,8 +45,8 @@ class FoundationSmokeTest extends TestCase
         $this->get('/', $headers)
             ->assertOk()
             ->assertHeader('X-Inertia', 'true')
-            ->assertJsonPath('component', 'Foundation')
-            ->assertJsonPath('props.task', 'ICH-S0-01');
+            ->assertJsonPath('component', 'public/Home')
+            ->assertJsonMissingPath('props.cms');
     }
 
     public function test_unknown_route_returns_not_found(): void

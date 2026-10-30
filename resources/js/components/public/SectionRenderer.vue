@@ -11,7 +11,7 @@ const renderer = computed<Component | null>(() => Object.hasOwn(sectionRegistry,
 </script>
 
 <template>
-    <section v-if="renderer" class="py-10 sm:py-14" :data-section="section.component_key" :data-variant="section.variant">
+    <section v-if="renderer" class="py-12 sm:py-20" :data-section="section.component_key" :data-variant="section.variant">
         <p v-if="section.fallback" class="mb-4 text-sm text-[#164734]">{{ t('publicCms.englishFallback') }}</p>
         <div :lang="section.locale" :dir="section.locale === 'ar' ? 'rtl' : 'ltr'">
             <component :is="renderer" :section="section" />

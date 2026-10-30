@@ -5,6 +5,7 @@ use App\Http\Controllers\CmsBackofficeController;
 use App\Http\Controllers\CmsLifecycleController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PublicCmsPageController;
+use App\Http\Controllers\PublicHomeController;
 use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
@@ -12,7 +13,7 @@ use App\Http\Middleware\LocalDemoOnly;
 use App\Http\Middleware\ValidateWorkspace;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'Foundation', ['task' => 'ICH-S0-01'])->name('home');
+Route::get('/', PublicHomeController::class)->name('home');
 
 Route::get('/events/{event:slug}/pages/{page:slug}', PublicCmsPageController::class)
     ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
