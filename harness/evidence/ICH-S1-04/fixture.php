@@ -5,6 +5,7 @@ require __DIR__.'/../../../vendor/autoload.php';
 
 use App\Services\Cms\PageSnapshotValidator;
 use App\Services\Cms\PublishedSectionPresenter;
+use Illuminate\Support\Str;
 use Tests\Unit\PublishedSectionPresenterTest as Fixtures;
 
 $snapshot = Fixtures::snapshot();
@@ -14,7 +15,7 @@ foreach (['en' => 'SYNTHETIC PUBLIC PAGE', 'id' => 'HALAMAN UJI SINTETIS', 'ar' 
 }
 $snapshot['sections'][4]['bindings'] = array_map(fn ($field) => ['source' => 'event', 'field' => $field], ['name', 'timezone', 'starts_at', 'ends_at']);
 $hidden = $snapshot['sections'][0];
-$hidden['id'] = (string) Illuminate\Support\Str::uuid7();
+$hidden['id'] = (string) Str::uuid7();
 $hidden['position'] = count($snapshot['sections']);
 $hidden['visible'] = false;
 $hidden['locales']['en']['content']['body'] = 'HIDDEN SECRET';
