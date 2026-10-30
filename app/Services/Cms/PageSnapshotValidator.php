@@ -65,7 +65,9 @@ class PageSnapshotValidator
                 $this->require($binding['source'] === 'event' && in_array($binding['field'], ['name', 'timezone', 'starts_at', 'ends_at'], true));
             }
             if ($section['component_key'] === 'countdown') {
-                $this->require($section['bindings'] === [['source' => 'event', 'field' => 'starts_at']]);
+                $this->require(count($section['bindings']) === 1
+                    && $section['bindings'][0]['source'] === 'event'
+                    && $section['bindings'][0]['field'] === 'starts_at');
             }
         }
 

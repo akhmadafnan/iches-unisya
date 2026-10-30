@@ -202,6 +202,80 @@ class CmsSnapshotContractTest extends TestCase
         (new PageSnapshotValidator)->validate($snapshot);
     }
 
+    public static function validCountdownBindings(): iterable
+    {
+        foreach ([
+            'source first' => ['source' => 'event', 'field' => 'starts_at'],
+            'field first' => ['field' => 'starts_at', 'source' => 'event'],
+        ] as $name => $binding) {
+            foreach ([false, true] as $json) {
+                yield $name.($json ? ' JSON' : ' array') => [[$binding], $json];
+            }
+        }
+    }
+
+    #[DataProvider('validCountdownBindings')]
+    public function test_countdown_accepts_either_object_key_order_without_changing_snapshot(array $bindings, bool $json): void
+    {
+        $snapshot = $this->snapshot();
+        $snapshot['sections'][0]['component_key'] = 'countdown';
+        $snapshot['sections'][0]['locales']['en']['content'] = ['heading' => 'Conference countdown'];
+        $snapshot['sections'][0]['bindings'] = $bindings;
+        $validated = (new PageSnapshotValidator)->validate($json ? json_encode($snapshot, JSON_THROW_ON_ERROR) : $snapshot);
+        $this->assertSame($snapshot, $validated);
+        $this->assertSame('event', $validated['sections'][0]['bindings'][0]['source']);
+        $this->assertSame('starts_at', $validated['sections'][0]['bindings'][0]['field']);
+    }
+
+    public static function invalidCountdownBindings(): iterable
+    {
+        $binding = ['source' => 'event', 'field' => 'starts_at'];
+        $cases = [
+            'no binding' => [],
+            'two bindings' => [$binding, $binding],
+            'wrong source' => [['source' => 'finance', 'field' => 'starts_at']],
+            'wrong field' => [['source' => 'event', 'field' => 'ends_at']],
+            'missing source' => [['field' => 'starts_at']],
+            'missing field' => [['source' => 'event']],
+            'positional binding' => [[$binding['source'], $binding['field']]],
+            'injected value' => [$binding + ['value' => '2027-01-05T00:00:00+07:00']],
+            'injected event ID' => [$binding + ['event_id' => 'other']],
+            'integer source' => [['source' => 1, 'field' => 'starts_at']],
+            'boolean source' => [['source' => true, 'field' => 'starts_at']],
+            'null source' => [['source' => null, 'field' => 'starts_at']],
+            'array source' => [['source' => ['event'], 'field' => 'starts_at']],
+            'integer field' => [['source' => 'event', 'field' => 1]],
+            'boolean field' => [['source' => 'event', 'field' => true]],
+            'null field' => [['source' => 'event', 'field' => null]],
+            'array field' => [['source' => 'event', 'field' => ['starts_at']]],
+            'scalar binding' => ['event.starts_at'],
+            'null binding' => [null],
+            'unwrapped binding' => $binding,
+            'non-list key' => ['binding' => $binding],
+            'nonzero list start' => [1 => $binding],
+            'empty object list' => (object) [],
+            'numeric object list' => (object) [$binding],
+            'null list' => null,
+            'string list' => 'event.starts_at',
+        ];
+        foreach ($cases as $name => $bindings) {
+            foreach ([false, true] as $json) {
+                yield $name.($json ? ' JSON' : ' array') => [$bindings, $json];
+            }
+        }
+    }
+
+    #[DataProvider('invalidCountdownBindings')]
+    public function test_countdown_rejects_invalid_values_and_ordered_list_structures(mixed $bindings, bool $json): void
+    {
+        $snapshot = $this->snapshot();
+        $snapshot['sections'][0]['component_key'] = 'countdown';
+        $snapshot['sections'][0]['locales']['en']['content'] = ['heading' => 'Conference countdown'];
+        $snapshot['sections'][0]['bindings'] = $bindings;
+        $this->expectException(ValidationException::class);
+        (new PageSnapshotValidator)->validate($json ? json_encode($snapshot, JSON_THROW_ON_ERROR) : $snapshot);
+    }
+
     public static function slugs(): iterable
     {
         foreach (['about', 'call-for-papers', 'page-2'] as $slug) {
