@@ -21,7 +21,7 @@ const selected = computed(() => props.workspaces.find(choice => choice.key === p
             <span class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-2 text-xs font-medium text-primary"><CircleCheck class="size-4" aria-hidden="true" />{{ t('ready') }}</span>
         </div>
         <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
-            <section class="rounded-2xl border border-border bg-card p-6 sm:p-8" aria-labelledby="context-title">
+            <section class="min-w-0 rounded-xl border border-border bg-card p-6" aria-labelledby="context-title">
                 <p class="text-xs text-muted-foreground">{{ t('current') }}</p><h2 id="context-title" class="mt-3 font-brand text-xl leading-relaxed font-semibold break-words" role="status">{{ selected ? workspaceLabel(selected) : t('personal') }}</h2>
                 <p class="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">{{ selected?.role ? t('contextHelp') : t('personalHelp') }}</p>
                 <dl class="mt-8 grid gap-6 border-t border-border pt-6 text-sm sm:grid-cols-2">
@@ -31,9 +31,9 @@ const selected = computed(() => props.workspaces.find(choice => choice.key === p
                     <div v-if="selected?.institution"><dt class="text-muted-foreground">{{ t('institution') }}</dt><dd class="mt-2 break-words">{{ selected.institution }}</dd></div>
                 </dl>
             </section>
-            <section class="rounded-2xl border border-border bg-card p-6 sm:p-8" aria-labelledby="workspace-title"><h2 id="workspace-title" class="mb-6 font-brand text-lg font-semibold">{{ t('workspace') }}</h2><WorkspaceSwitcher /></section>
+            <section class="min-w-0 rounded-xl border border-border bg-card p-6" aria-labelledby="workspace-title"><h2 id="workspace-title" class="mb-6 font-brand text-lg font-semibold">{{ t('workspace') }}</h2><WorkspaceSwitcher /></section>
         </div>
-        <section class="mt-6 flex gap-4 rounded-2xl border border-border border-s-4 border-s-gold p-6 sm:p-8" aria-labelledby="preparation-title">
+        <section class="mt-6 flex gap-4 rounded-xl border border-border bg-card p-6" aria-labelledby="preparation-title">
             <Sprout class="mt-1 size-6 shrink-0 text-primary" aria-hidden="true" /><div><h2 id="preparation-title" class="font-brand font-semibold">{{ t('preparation') }}</h2><p class="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">{{ t('preparationBody') }}</p></div>
         </section>
     </WorkspaceLayout>

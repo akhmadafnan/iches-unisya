@@ -1,0 +1,323 @@
+{
+  "result": "PASS",
+  "checks": [
+    "login en 390x900: no horizontal overflow",
+    "login en: scoped fonts",
+    "Auth en 390: compact horizontally centered",
+    "Auth en: vertically centered",
+    "login en 768x900: no horizontal overflow",
+    "login en: scoped fonts",
+    "Auth en 768: compact horizontally centered",
+    "Auth en: vertically centered",
+    "login en 1440x900: no horizontal overflow",
+    "login en: scoped fonts",
+    "Auth en 1440: compact horizontally centered",
+    "Auth en: vertically centered",
+    "login en 390x360: no horizontal overflow",
+    "login en: scoped fonts",
+    "Auth en 390: compact horizontally centered",
+    "Auth en: short viewport begins in scrollable area",
+    "OTP en: direct Verify and focus",
+    "OTP en: Request/back focus",
+    "Locale id direction",
+    "login id 390x900: no horizontal overflow",
+    "login id: scoped fonts",
+    "Auth id 390: compact horizontally centered",
+    "Auth id: vertically centered",
+    "login id 768x900: no horizontal overflow",
+    "login id: scoped fonts",
+    "Auth id 768: compact horizontally centered",
+    "Auth id: vertically centered",
+    "login id 1440x900: no horizontal overflow",
+    "login id: scoped fonts",
+    "Auth id 1440: compact horizontally centered",
+    "Auth id: vertically centered",
+    "login id 390x360: no horizontal overflow",
+    "login id: scoped fonts",
+    "Auth id 390: compact horizontally centered",
+    "Auth id: short viewport begins in scrollable area",
+    "OTP id: direct Verify and focus",
+    "OTP id: Request/back focus",
+    "Locale ar direction",
+    "login ar 390x900: no horizontal overflow",
+    "login ar: scoped fonts",
+    "Auth ar 390: compact horizontally centered",
+    "Auth ar: vertically centered",
+    "login ar 768x900: no horizontal overflow",
+    "login ar: scoped fonts",
+    "Auth ar 768: compact horizontally centered",
+    "Auth ar: vertically centered",
+    "login ar 1440x900: no horizontal overflow",
+    "login ar: scoped fonts",
+    "Auth ar 1440: compact horizontally centered",
+    "Auth ar: vertically centered",
+    "login ar 390x360: no horizontal overflow",
+    "login ar: scoped fonts",
+    "Auth ar 390: compact horizontally centered",
+    "Auth ar: short viewport begins in scrollable area",
+    "OTP ar: direct Verify and focus",
+    "OTP ar: Request/back focus",
+    "Locale en direction",
+    "Request throttle is readable and retry is enabled",
+    "OTP Verify form valid before native submit",
+    "OTP invalid response retains Verify, errors, enabled retry",
+    "Resend preserves email",
+    "Resend throttle retains Request error feedback",
+    "Magic invalid confirmation reports error with new-code link",
+    "No uncaught browser exceptions"
+  ],
+  "measurements": [
+    {
+      "kind": "login",
+      "lang": "en",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 183,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "en",
+      "width": 768,
+      "height": 900,
+      "scroll": 768,
+      "section": {
+        "x": 192,
+        "y": 183,
+        "width": 384,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "en",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440,
+      "section": {
+        "x": 528,
+        "y": 183,
+        "width": 384,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "en",
+      "width": 390,
+      "height": 360,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 32,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "id",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 183,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "id",
+      "width": 768,
+      "height": 900,
+      "scroll": 768,
+      "section": {
+        "x": 192,
+        "y": 183,
+        "width": 384,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "id",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440,
+      "section": {
+        "x": 528,
+        "y": 183,
+        "width": 384,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "id",
+      "width": 390,
+      "height": 360,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 32,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "ar",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 183,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "ar",
+      "width": 768,
+      "height": 900,
+      "scroll": 768,
+      "section": {
+        "x": 192,
+        "y": 193,
+        "width": 384,
+        "height": 514
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "ar",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440,
+      "section": {
+        "x": 528,
+        "y": 193,
+        "width": 384,
+        "height": 514
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    },
+    {
+      "kind": "login",
+      "lang": "ar",
+      "width": 390,
+      "height": 360,
+      "scroll": 390,
+      "section": {
+        "x": 24,
+        "y": 32,
+        "width": 342,
+        "height": 534
+      },
+      "bodyFont": "\"Inter Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "headingFont": "\"Sora Variable\", \"Noto Sans Arabic Variable\", sans-serif",
+      "sidebar": null,
+      "mainPadding": "24px",
+      "headerPadding": null
+    }
+  ],
+  "requests": [
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/request",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/verify-code",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/request",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/magic",
+      "method": "POST"
+    }
+  ],
+  "input": "Native CDP mouse, keyboard, and text; locale/workspace selects use synthetic change events.",
+  "limitations": [
+    "No screen-reader UAT.",
+    "Valid OTP/Magic redemption not exercised; browser checks request success and invalid redemption.",
+    "Request endpoint reached its existing 15-minute rate limit during repeated QA. Earlier attempts exercised successful request/resend; this run verifies the throttled state."
+  ]
+}

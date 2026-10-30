@@ -1,0 +1,392 @@
+{
+  "result": "PASS",
+  "checks": [
+    "dashboard en 390x900: no horizontal overflow",
+    "dashboard en: scoped fonts",
+    "Dashboard en 390: header padding alignment",
+    "dashboard en 768x900: no horizontal overflow",
+    "dashboard en: scoped fonts",
+    "Dashboard en 768: header padding alignment",
+    "dashboard en 1440x900: no horizontal overflow",
+    "dashboard en: scoped fonts",
+    "Dashboard en 1440: header padding alignment",
+    "dashboard en 1920x900: no horizontal overflow",
+    "dashboard en: scoped fonts",
+    "Dashboard en 1920: header padding alignment",
+    "en: desktop collapse",
+    "en: desktop expand",
+    "en: Sheet portal and initial focus",
+    "en: white Sheet without nested green panel",
+    "en: Sheet side matches direction",
+    "en: native Tab remains trapped 0",
+    "en: native Tab remains trapped 1",
+    "en: native Tab remains trapped 2",
+    "en: native Tab remains trapped 3",
+    "en: native Tab remains trapped 4",
+    "en: native Tab remains trapped 5",
+    "en: native Shift-Tab remains trapped",
+    "en: native Escape restores trigger focus",
+    "en: close button restores focus",
+    "en: native account menu keyboard navigation",
+    "Locale id direction",
+    "dashboard id 390x900: no horizontal overflow",
+    "dashboard id: scoped fonts",
+    "Dashboard id 390: header padding alignment",
+    "dashboard id 768x900: no horizontal overflow",
+    "dashboard id: scoped fonts",
+    "Dashboard id 768: header padding alignment",
+    "dashboard id 1440x900: no horizontal overflow",
+    "dashboard id: scoped fonts",
+    "Dashboard id 1440: header padding alignment",
+    "dashboard id 1920x900: no horizontal overflow",
+    "dashboard id: scoped fonts",
+    "Dashboard id 1920: header padding alignment",
+    "id: desktop collapse",
+    "id: desktop expand",
+    "id: Sheet portal and initial focus",
+    "id: white Sheet without nested green panel",
+    "id: Sheet side matches direction",
+    "id: native Tab remains trapped 0",
+    "id: native Tab remains trapped 1",
+    "id: native Tab remains trapped 2",
+    "id: native Tab remains trapped 3",
+    "id: native Tab remains trapped 4",
+    "id: native Tab remains trapped 5",
+    "id: native Shift-Tab remains trapped",
+    "id: native Escape restores trigger focus",
+    "id: close button restores focus",
+    "id: native account menu keyboard navigation",
+    "Locale ar direction",
+    "dashboard ar 390x900: no horizontal overflow",
+    "dashboard ar: scoped fonts",
+    "Dashboard ar 390: header padding alignment",
+    "dashboard ar 768x900: no horizontal overflow",
+    "dashboard ar: scoped fonts",
+    "Dashboard ar 768: header padding alignment",
+    "dashboard ar 1440x900: no horizontal overflow",
+    "dashboard ar: scoped fonts",
+    "Dashboard ar 1440: header padding alignment",
+    "dashboard ar 1920x900: no horizontal overflow",
+    "dashboard ar: scoped fonts",
+    "Dashboard ar 1920: header padding alignment",
+    "ar: desktop collapse",
+    "ar: desktop expand",
+    "ar: Sheet portal and initial focus",
+    "ar: white Sheet without nested green panel",
+    "ar: Sheet side matches direction",
+    "ar: native Tab remains trapped 0",
+    "ar: native Tab remains trapped 1",
+    "ar: native Tab remains trapped 2",
+    "ar: native Tab remains trapped 3",
+    "ar: native Tab remains trapped 4",
+    "ar: native Tab remains trapped 5",
+    "ar: native Shift-Tab remains trapped",
+    "ar: native Escape restores trigger focus",
+    "ar: close button restores focus",
+    "ar: native account menu keyboard navigation",
+    "Back restores Arabic dashboard",
+    "Locale en direction",
+    "Forward restores saved Arabic public locale",
+    "Existing role-scoped demo workspace available",
+    "Workspace selection persisted on server",
+    "Workspace preserves actor identity",
+    "Account logout and authenticated route protection",
+    "No uncaught browser exceptions"
+  ],
+  "measurements": [
+    {
+      "kind": "dashboard",
+      "lang": "en",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 16,
+        "y": 499.5,
+        "width": 358,
+        "height": 338.5
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "16px",
+      "headerPadding": "16px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "en",
+      "width": 768,
+      "height": 900,
+      "scroll": 753,
+      "section": {
+        "x": 32,
+        "y": 392.5,
+        "width": 689,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "en",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440,
+      "section": {
+        "x": 288,
+        "y": 342.5,
+        "width": 744,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "en",
+      "width": 1920,
+      "height": 900,
+      "scroll": 1920,
+      "section": {
+        "x": 288,
+        "y": 342.5,
+        "width": 1224,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "collapse-debug",
+      "width": 80,
+      "classes": "sticky top-0 hidden h-svh shrink-0 flex-col gap-5 border-e border-sidebar-border bg-sidebar px-4 py-7 text-sidebar-foreground lg:flex w-20",
+      "expanded": "false",
+      "active": "BUTTON"
+    },
+    {
+      "kind": "sheet",
+      "lang": "en",
+      "portal": true,
+      "focus": true,
+      "background": "oklch(1 0 0)",
+      "right": 320,
+      "left": 0,
+      "inner": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "id",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 16,
+        "y": 525.5,
+        "width": 358,
+        "height": 315.75
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "16px",
+      "headerPadding": "16px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "id",
+      "width": 768,
+      "height": 900,
+      "scroll": 753,
+      "section": {
+        "x": 32,
+        "y": 468,
+        "width": 689,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "id",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1425,
+      "section": {
+        "x": 288,
+        "y": 418,
+        "width": 729,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "id",
+      "width": 1920,
+      "height": 900,
+      "scroll": 1905,
+      "section": {
+        "x": 288,
+        "y": 418,
+        "width": 1209,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "collapse-debug",
+      "width": 80,
+      "classes": "sticky top-0 hidden h-svh shrink-0 flex-col gap-5 border-e border-sidebar-border bg-sidebar px-4 py-7 text-sidebar-foreground lg:flex w-20",
+      "expanded": "false",
+      "active": "BUTTON"
+    },
+    {
+      "kind": "sheet",
+      "lang": "id",
+      "portal": true,
+      "focus": true,
+      "background": "oklch(1 0 0)",
+      "right": 320,
+      "left": 0,
+      "inner": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "ar",
+      "width": 390,
+      "height": 900,
+      "scroll": 390,
+      "section": {
+        "x": 16,
+        "y": 473.5,
+        "width": 358,
+        "height": 293
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "16px",
+      "headerPadding": "16px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "ar",
+      "width": 768,
+      "height": 900,
+      "scroll": 753,
+      "section": {
+        "x": 32,
+        "y": 342.5,
+        "width": 689,
+        "height": 270.25
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "ar",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440,
+      "section": {
+        "x": 408,
+        "y": 342.5,
+        "width": 744,
+        "height": 270.25
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "dashboard",
+      "lang": "ar",
+      "width": 1920,
+      "height": 900,
+      "scroll": 1920,
+      "section": {
+        "x": 408,
+        "y": 342.5,
+        "width": 1224,
+        "height": 270.25
+      },
+      "bodyFont": "\"JetBrains Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "headingFont": "\"Geist Mono Variable\", \"Noto Sans Arabic Variable\", monospace",
+      "sidebar": "oklch(0.985 0 0)",
+      "mainPadding": "32px",
+      "headerPadding": "32px"
+    },
+    {
+      "kind": "collapse-debug",
+      "width": 80,
+      "classes": "sticky top-0 hidden h-svh shrink-0 flex-col gap-5 border-e border-sidebar-border bg-sidebar px-4 py-7 text-sidebar-foreground lg:flex w-20",
+      "expanded": "false",
+      "active": "BUTTON"
+    },
+    {
+      "kind": "sheet",
+      "lang": "ar",
+      "portal": true,
+      "focus": true,
+      "background": "oklch(1 0 0)",
+      "right": 390,
+      "left": 70,
+      "inner": "rgba(0, 0, 0, 0)"
+    }
+  ],
+  "requests": [
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/locale",
+      "method": "POST"
+    },
+    {
+      "path": "/me/workspace",
+      "method": "POST"
+    },
+    {
+      "path": "/logout",
+      "method": "POST"
+    }
+  ],
+  "input": "Native CDP mouse, keyboard, and text; locale/workspace selects use synthetic change events.",
+  "limitations": [
+    "No screen-reader UAT.",
+    "Valid OTP/Magic redemption not exercised; browser checks request success and invalid redemption."
+  ]
+}
