@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Event as Events;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 use RuntimeException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Tests\TestCase;
@@ -245,6 +246,11 @@ class CmsPublicationLifecycleTest extends TestCase
     public function test_failed_audit_insert_rolls_back_pointer_and_does_not_schedule_invalidation(): void
     {
         $revision = $this->draft();
+        $manager = app('db.transactions');
+        $committedBefore = $manager->getCommittedTransactions()->all();
+        $pendingBefore = $manager->getPendingTransactions()->all();
+        $callbacksBefore = $manager->getCommittedTransactions()->concat($manager->getPendingTransactions())
+            ->map->getCallbacks()->all();
         $eventName = 'eloquent.creating: '.CmsPublicationEvent::class;
         Events::listen($eventName, fn () => throw new RuntimeException('Synthetic audit failure.'));
         try {
@@ -259,8 +265,10 @@ class CmsPublicationLifecycleTest extends TestCase
         $this->assertSame(0, CmsPublicationEvent::count());
         $this->assertSame($revision->id, $this->page->fresh()->draft_revision_id);
         Cache::shouldNotHaveReceived('forget');
-        $manager = app('db.transactions');
-        $this->assertCount(0, $manager->getCommittedTransactions());
+        $this->assertSame($committedBefore, $manager->getCommittedTransactions()->all());
+        $this->assertSame($pendingBefore, $manager->getPendingTransactions()->all());
+        $this->assertSame($callbacksBefore, $manager->getCommittedTransactions()->concat($manager->getPendingTransactions())
+            ->map->getCallbacks()->all());
     }
 
     public function test_cache_callback_waits_for_outer_commit_and_is_discarded_on_rollback(): void
