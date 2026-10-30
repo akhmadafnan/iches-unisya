@@ -1,6 +1,11 @@
 import type en from './en';
 
 export default {
+    publicCms: {
+        englishFallback: 'يُعرض المحتوى باللغة الإنجليزية لأن هذه الترجمة ليست جاهزة.',
+        timeUnconfirmed: 'لم يتم تأكيد الوقت الرسمي بعد.',
+        name: 'المؤتمر', timezone: 'المنطقة الزمنية', starts_at: 'البداية الرسمية', ends_at: 'النهاية الرسمية',
+    },
     dashboard: 'لوحة التحكم', workspace: 'مساحة العمل', personal: 'شخصي', navigation: 'التنقل',
     openNavigation: 'فتح قائمة التنقل', closeNavigation: 'إغلاق قائمة التنقل', collapse: 'طي الشريط الجانبي', expand: 'توسيع الشريط الجانبي',
     skip: 'الانتقال إلى المحتوى', language: 'اللغة', apply: 'تطبيق', saving: 'جارٍ الحفظ…', failure: 'تعذر إكمال الطلب. يرجى المحاولة مرة أخرى.',

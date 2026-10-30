@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\SessionController;
 use App\Http\Controllers\CmsBackofficeController;
 use App\Http\Controllers\CmsLifecycleController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\PublicCmsPageController;
 use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
@@ -12,6 +13,10 @@ use App\Http\Middleware\ValidateWorkspace;
 use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Foundation', ['task' => 'ICH-S0-01'])->name('home');
+
+Route::get('/events/{event:slug}/pages/{page:slug}', PublicCmsPageController::class)
+    ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
+    ->name('public.cms.page');
 
 Route::middleware(AuthPrivacy::class)->group(function (): void {
     Route::post('/locale', LocaleController::class)->name('locale');
@@ -30,15 +35,16 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
         Route::get('/backoffice/website/pages', [CmsBackofficeController::class, 'index'])->name('cms.pages');
         Route::get('/backoffice/website/pages/{page}', [CmsBackofficeController::class, 'show'])->name('cms.editor');
-        Route::prefix('/workspace/events/{event}/cms/pages')->name('cms.')->group(function (): void {
-            Route::post('/', [CmsLifecycleController::class, 'create'])->name('create');
-            Route::post('/{page}/draft', [CmsLifecycleController::class, 'draft'])->name('draft');
-            Route::get('/{page}/preview', [CmsLifecycleController::class, 'preview'])->name('preview');
-            Route::post('/{page}/publish', [CmsLifecycleController::class, 'publish'])->name('publish');
-            Route::post('/{page}/restore', [CmsLifecycleController::class, 'restore'])->name('restore');
-        });
-        Route::get('/files/{storedFile}/download', StoredFileDownloadController::class)
-            ->middleware('signed')->name('files.download');
+        Route::prefix('/workspace/events/{event}/cms/pages')
+            ->name('cms.')
+            ->group(function (): void {
+                Route::post('/', [CmsLifecycleController::class, 'create'])->name('create');
+                Route::post('/{page}/draft', [CmsLifecycleController::class, 'draft'])->name('draft');
+                Route::get('/{page}/preview', [CmsLifecycleController::class, 'preview'])->name('preview');
+                Route::post('/{page}/publish', [CmsLifecycleController::class, 'publish'])->name('publish');
+                Route::post('/{page}/restore', [CmsLifecycleController::class, 'restore'])->name('restore');
+            });
+        Route::get('/files/{storedFile}/download', StoredFileDownloadController::class)->middleware('signed')->name('files.download');
         Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');
         Route::post('/logout', [SessionController::class, 'logout']);
         Route::get('/me/workspaces', [WorkspaceController::class, 'index']);

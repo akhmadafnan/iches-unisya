@@ -1,4 +1,9 @@
 export default {
+    publicCms: {
+        englishFallback: 'English content is shown because this translation is not ready.',
+        timeUnconfirmed: 'The official time has not been confirmed.',
+        name: 'Event', timezone: 'Time zone', starts_at: 'Official start', ends_at: 'Official end',
+    },
     dashboard: 'Dashboard', workspace: 'Workspace', personal: 'Personal', navigation: 'Navigation',
     openNavigation: 'Open navigation', closeNavigation: 'Close navigation', collapse: 'Collapse sidebar', expand: 'Expand sidebar',
     skip: 'Skip to content', language: 'Language', apply: 'Apply', saving: 'Saving…', failure: 'Unable to complete the request. Please try again.',

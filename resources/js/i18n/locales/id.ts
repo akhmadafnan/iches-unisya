@@ -1,6 +1,11 @@
 import type en from './en';
 
 export default {
+    publicCms: {
+        englishFallback: 'Konten bahasa Inggris ditampilkan karena terjemahan ini belum siap.',
+        timeUnconfirmed: 'Waktu resmi belum ditetapkan.',
+        name: 'Acara', timezone: 'Zona waktu', starts_at: 'Waktu mulai resmi', ends_at: 'Waktu selesai resmi',
+    },
     dashboard: 'Dasbor', workspace: 'Ruang kerja', personal: 'Pribadi', navigation: 'Navigasi',
     openNavigation: 'Buka navigasi', closeNavigation: 'Tutup navigasi', collapse: 'Ciutkan bilah sisi', expand: 'Perluas bilah sisi',
     skip: 'Langsung ke konten', language: 'Bahasa', apply: 'Terapkan', saving: 'Menyimpan…', failure: 'Permintaan gagal diselesaikan. Silakan coba lagi.',
