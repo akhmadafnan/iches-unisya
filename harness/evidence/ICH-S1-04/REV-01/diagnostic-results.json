@@ -1,0 +1,62 @@
+﻿{
+    "kind": "DB-FREE DIAGNOSIS; NO MYSQL OR PERSISTENCE TEST EXECUTION",
+    "checks": [
+        "Original fixture preparation validates: Published persisted title",
+        "Pre-persistence writer validation passes: Published persisted title",
+        "Ordinary Eloquent JSON cast/hydration round-trip passes: Published persisted title",
+        "All seven sections retained: Published persisted title",
+        "Original fixture preparation validates: First publication",
+        "Pre-persistence writer validation passes: First publication",
+        "Ordinary Eloquent JSON cast/hydration round-trip passes: First publication",
+        "All seven sections retained: First publication",
+        "Original fixture preparation validates: Second publication",
+        "Pre-persistence writer validation passes: Second publication",
+        "Ordinary Eloquent JSON cast/hydration round-trip passes: Second publication",
+        "All seven sections retained: Second publication",
+        "Original fixture preparation validates: PRIVATE unpublished title",
+        "Pre-persistence writer validation passes: PRIVATE unpublished title",
+        "Ordinary Eloquent JSON cast/hydration round-trip passes: PRIVATE unpublished title",
+        "All seven sections retained: PRIVATE unpublished title",
+        "Reordered binding has identical associative key/value semantics",
+        "Only associative member order differs under PHP strict identity",
+        "Eloquent hydration preserves reordered object keys",
+        "Exact reported exception reproduced at validator",
+        "Exact reported exception reproduced at writer revalidation",
+        "Same reordered allowed binding passes for event-essentials"
+    ],
+    "rejection": {
+        "validator": [
+            {
+                "function": "withMessages",
+                "line": 119
+            },
+            {
+                "function": "invalid",
+                "line": 113
+            },
+            {
+                "function": "require",
+                "line": 68
+            }
+        ],
+        "writer revalidation": [
+            {
+                "function": "withMessages",
+                "line": 119
+            },
+            {
+                "function": "invalid",
+                "line": 113
+            },
+            {
+                "function": "require",
+                "line": 68
+            }
+        ]
+    },
+    "limits": [
+        "Object-member reordering was simulated, not observed from MySQL in this authorization.",
+        "DB-free reproduction proves the production validator is order-sensitive; actual prior MySQL failure stage needs its full stack trace or separately authorized verification.",
+        "No validator, writer, lifecycle, reader, model, fixture test or security contract was changed."
+    ]
+}
