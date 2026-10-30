@@ -1,12 +1,24 @@
 # 19A — Protokol Kerja ChatGPT × Codex VS Code × GitHub × Terminal
 
+## CURRENT PROTOCOL OVERRIDE — 30 October 2026
+
+**Roles and gates:** ChatGPT = read-only audit, planning, architecture, Work Orders, independently verified review, separately authorized governance/documentation and GitHub actions; **owner alone launches and operates Codex VS Code** for application code after named `GO CODING [Task ID]`. Codex CLI/cloud/remote execution by ChatGPT is forbidden. Different actions need their own owner GO: DOKUMENTASI, CODING, TEST/DB, PUSH & PR, MERGE, POST-MERGE SYNC. Use **AUDIT → PLAN → OWNER GO CODING → CODEX VS CODE → INDEPENDENT REVIEW → GO TEST if necessary → GO PUSH & PR → CI REVIEW → GO MERGE → POST-MERGE SYNC**. No implied authorization across gates.
+
+**Current evidence:** ICH-S0-01..07, UI-01B/01C/01D and S1-01..04 **MERGED**; PR #22 `main` and post-merge local sync baseline `99aa3e83306f92b72c13c99c16b6099e583ebf26`. S1-05 = next **AUDIT/PLAN**, **no GO CODING**. Use real MySQL schemas `iches_unisya` (development), `iches_unisya_cms_test` (isolated CMS tests); no migrations or DB modification without explicit permission. Check actual Git on each task.
+
+**Permanent UAT override:** actual Laravel Herd `.test` website and development data in Local Browser; write text evidence: URL, scenario, expected, observed, PASS/FAIL/BLOCKED and findings. Do not generate screenshot, PNG/JPG/WebP or image evidence for new UAT. Keep all historical assets. A synthetic browser fixture is not real authenticated/browser/database UAT. Missing browser/DB = BLOCKED.
+
+**Authority:** latest owner decision + verifiable repository evidence → [AGENTS CURRENT](../AGENTS.md) and [19F CURRENT](19F-CURRENT-SPRINT-BOARD.md); historical content below explains the 28 October state and is not a current GO.
+
+## HISTORICAL PROTOCOL — 28 October 2026
+
 > **28 Oktober 2026 · DRAFT OPERASIONAL / BELUM GO CODING.** Pengguna meminta pekerjaan blueprint ICHES diubah menjadi **task teknis**, dengan **Codex VS Code eksklusif bertugas melakukan perubahan/penambahan/perbaikan kode**. Untuk hal **selain kode** (analisis, keputusan, spesifikasi, review, dokumentasi, GitHub, koordinasi, terminal bila perlu) pengguna ingin menggunakan **ChatGPT**. Ini **pembagian tanggung jawab yang diminta**, bukan izin menjalankan kode/migrasi/deploy.
 >
 > Navigasi: [19B Technical Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19C Codex Task Packets](19C-TEMPLATE-INSTRUKSI-CODEX-VSCODE.md) · [19D Traceability & Gates](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [18C-05 Readiness](18C-05-DRAFT-IMPLEMENTATION-READINESS-AND-DECISION-GATES.md) · [Keputusan](09-KEPUTUSAN-DAN-ISU-TERBUKA.md).
 
 ## Aturan 20B (disetujui, tetapi NO GO Coding)
 
-[20B Sprint Contract](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) memungkinkan GO per Task ID **atau** satu Sprint GO yang memuat daftar Task IDs terbatas; Codex dapat melanjutkan task berurutan hanya setelah tests PASS dan bukti dicatat. **Belum ada Task/Sprint GO aktual**. Perbedaan izin yang tertulis pada protokol lama tunduk pada 20B.
+[20B Sprint Contract](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md) memungkinkan GO per Task ID **atau** satu Sprint GO yang memuat daftar Task IDs terbatas; Codex dapat melanjutkan task berurutan hanya setelah tests PASS dan bukti dicatat. **HISTORICAL (28 Okt): belum ada GO saat snapshot ini dibuat; tugas S0-01..07, UI-01B/01C/01D, dan S1-01..04 kini sudah merged.** Perbedaan izin yang tertulis pada protokol lama tunduk pada 20B.
 
 ## 1. Tanggung jawab (role clarity)
 
@@ -70,7 +82,7 @@ flowchart TD
 
 **Pisahkan STATUS TASK dari AUTHORIZATION.** “READY_FOR_CODEX” bukan izin menulis kode. Status **PASS** hanya untuk hasil test yang benar-benar dijalankan dan dilaporkan.
 
-## 5. Apa yang boleh dilakukan SEKARANG, sebelum GO CODING
+## 5. HISTORICAL — aktivitas sebelum GO CODING pertama (28 Oktober 2026)
 
 - ChatGPT: merapikan mapping blueprint → backlog → Work Order; mengidentifikasi konflik (MySQL/UUIDv7 dan lainnya), review semantik dokumen, membangun skill/code review checklist dan menyimpan di GitHub.
 - Pemilik produk: dapat menyetujui pilihan teknis bundel atau meminta revisi scope.

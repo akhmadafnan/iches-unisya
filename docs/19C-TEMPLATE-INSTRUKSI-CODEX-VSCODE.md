@@ -1,5 +1,15 @@
 # 19C — Work Order Template & Prompt Siap Pakai untuk Codex di VS Code
 
+## CURRENT TEMPLATE RULES — 30 October 2026
+
+- A template or prepared Work Order **never grants authorization**. Require named task ID, current parent SHA, exact file allowlist, clear dependencies, branch, acceptance criteria, required test environment and stop conditions. Compare against [AGENTS CURRENT](../AGENTS.md), [19F CURRENT](19F-CURRENT-SPRINT-BOARD.md) and actual Git before use.
+- ChatGPT prepares work orders and governance documents only under scoped `GO DOKUMENTASI`; owner personally runs Codex VS Code for source changes only after `GO CODING [Task ID]`. Separate GO TEST/DB where needed, GO PUSH & PR, GO MERGE and POST-MERGE SYNC. Never interpret earlier example tasks as new authorizations.
+- **Current completed tasks:** S0-01..07, UI-01B/01C/01D, S1-01..04. **Next candidate:** S1-05 **PLAN ONLY**, no GO CODING. Development DB `iches_unisya`; isolated CMS test `iches_unisya_cms_test`; CMS primary migrations `000005`/`000006` still pending at last checkpoint.
+- **Visual UAT acceptance/handoff:** use real Herd `.test` Laravel app and development data in Local Browser. Record **URL | scenario | expected | observed | PASS/FAIL/BLOCKED | findings**; no new screenshots/PNG/JPG/WebP, rendered fixture evidence or image-evidence folders. Historical screenshots stay intact. Browser/DB unavailable = BLOCKED, not PASS.
+- Historical example packets below are explanatory only; the actively reusable template must follow these CURRENT rules. [19B backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) is not a GO.
+
+## HISTORICAL TEMPLATE CONTEXT — 28 October 2026
+
 > **28 Oktober 2026 · DOKUMEN INSTRUKSI, BUKAN OTORISASI CODING.** Pemilik produk ingin **Codex VS Code khusus mengubah kode**; ChatGPT mengelola backlog, dokumen, review dan koordinasi repo. Semua prompt di bawah **baru boleh digunakan untuk kode setelah GO CODING eksplisit** untuk task bersangkutan.
 >
 > [19A Protocol](19A-PROTOKOL-KERJA-CHATGPT-CODEX-VSCODE-GITHUB.md) · [19B Backlog](19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) · [19D Traceability](19D-MATRIKS-ACUAN-DOKUMEN-KE-KODE.md) · [Codex Engineering Skill](../.agents/skills/iches-codex-engineering/SKILL.md).
@@ -8,7 +18,7 @@
 
 Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task IDs terbatas yang sudah disetujui, berurutan, dengan scope, branch, test dan stop conditions eksplisit. Lanjut antar-task hanya setelah PASS+evidence; task di luar daftar tetap terlarang. Gunakan [template Sprint](20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Tidak ada GO Coding saat ini.
 
-**Current first Codex task:** [21B ICH-S0-01 Foundation Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) supersedes the old generic foundation example below. Owner approval of Stage 21 documentation is not implementation GO; use the current `D:\PINJAM-AFNAN\Herd\iches-unisya` path and wait for separate `GO CODING ICH-S0-01`.
+**HISTORICAL first Codex task (already merged):** [21B ICH-S0-01 Foundation Work Order](21B-ICH-S0-01-FOUNDATION-WORK-ORDER.md) supersedes the old generic foundation example below. Owner approval of Stage 21 documentation is not implementation GO; use the current `D:\PINJAM-AFNAN\Herd\iches-unisya` path and wait for separate `GO CODING ICH-S0-01`.
 
 ## 1. Cara bekerja dari VS Code tanpa kebingungan
 
@@ -20,7 +30,7 @@ Selain GO per Task ID, owner dapat memberi **GO SPRINT [ID]** untuk daftar Task 
 3. Berikan satu Work Order **spesifik**. Codex memeriksa source dan branch, mengedit **kode saja**, menambahkan/memperbaiki tes yang terkait, menjalankan perintah yang benar-benar tersedia.
 4. Tinjau `git diff` dan ringkasan hasil; jangan otomatis membiarkan Codex memodifikasi `docs/`, `README.md`, `AGENTS.md`, `.agents/skills/`, credential atau data produksi.
 5. Bagikan **branch/commit/PR dan output tes** ke ChatGPT. ChatGPT menilai kelayakan, menyusun instruksi revisi atau acceptance report; lalu owner memutuskan merge/lanjut.
-6. Jangan menandai task DONE atau GO production dari screenshot UI semata.
+6. Jangan membuat screenshot UAT baru atau menandai task DONE/GO production dari tampilan saja; gunakan hasil tes aktual dan laporan Local Browser berbasis teks.
 
 Codex dapat membaca dokumen yang relevan sebagai konteks. **Larangan mengedit docs** dalam pembagian ini **bukan larangan membaca docs**. Codex boleh menjalankan terminal untuk **test/build yang berkaitan langsung dengan kode yang dikerjakannya**, bukan deploy/produksi. Terminal manual juga dapat dipakai untuk meninjau `git status`/test output.
 
@@ -65,7 +75,7 @@ ACCEPTANCE:
 VALIDATION:
 - Inspect actual scripts in composer.json/package.json before choosing commands.
 - Run relevant automated tests, typecheck, lint, build if environment supports.
-- Run only on local/test DB; never migrate production.
+- Database mutation, migration and rollback require separate explicit owner GO TEST/DB for the exact schema; never migrate production or infer DB permission from GO CODING.
 - Report exact commands, exit codes and failed/blocked tests.
 
 OUTPUT BACK TO CHATGPT:
@@ -73,7 +83,7 @@ OUTPUT BACK TO CHATGPT:
 - Implemented vs not implemented
 - Diff summary and why
 - Tests actually run, pass/fail, environment limitations
-- Known risks/open decisions and screenshots for UI
+- Known risks/open decisions and real browser UAT text (URL, scenario, expected, observed, PASS/FAIL/BLOCKED, findings) for UI; no new screenshots
 - Do not modify governance/spec documents; only append to authorized harness/build-log.md and sanitized evidence under named GO; ChatGPT updates policies
 STOP CONDITIONS:
 - Invalid repo/branch/dirty unrelated changes
@@ -157,7 +167,7 @@ ACCEPT: staff creates a page and sections without code edit,
 unpublished draft not visible publicly, publish/rollback
 updates live pages, unauthorized Editor cannot publish,
 EN/ID/AR and mobile admin usable.
-VALIDATE: actual backend/frontend tests and browser screenshots.
+VALIDATE: actual backend/frontend tests and real Herd `.test` Local Browser UAT with text-only URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings.
 OUTPUT: exact diff, test results, risks and what remains.
 ~~~
 
@@ -187,7 +197,7 @@ in CMS rich-text, no additional payment/signup bypass, no docs edits.
 ACCEPT: future positive count decreases; exact boundary 0;
 never negative; changing Event Master time propagates after publish;
 timezone viewer-independent; AR RTL & reduced-motion/accessibility.
-REPORT: actual tests, browser screenshots, incomplete runtime support.
+REPORT: actual tests, text-only real browser UAT (URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings), incomplete runtime support.
 ~~~
 
 ## 6. Contoh prompt S2 — Submission tanpa Administrative Screening
@@ -228,7 +238,7 @@ NOT IMPLEMENTED / BLOCKERS: ...
 TEST COMMANDS AND EXIT CODES: ...
 MIGRATIONS / DB USED: local-test or none
 SECURITY NEGATIVE CASES: ...
-VISUAL SCREENSHOTS (if UI): ...
+REAL BROWSER UAT TEXT (if UI): URL | scenario | expected | observed | PASS/FAIL/BLOCKED | findings
 REQUEST FOR CHATGPT REVIEW: ...
 ~~~
 

@@ -1,5 +1,15 @@
 # PLANS.md — ICHES 2027 Master Execution Plan
 
+## CURRENT ROADMAP CONTEXT — 30 October 2026
+
+- This file is the **long-term roadmap**, not an execution authorization or the live status ledger. [19F CURRENT board](docs/19F-CURRENT-SPRINT-BOARD.md) records actual completions; [AGENTS CURRENT contract](AGENTS.md) governs permissions and UAT.
+- **MERGED:** S0-01..07, UI-01B/01C/01D and S1-01..04. Optional S0-08 deferred. **Next candidate:** S1-05 homepage **PLAN ONLY**, followed (after separate gates) by S1-06 functional countdown, S1-07 media/localization/SEO, S1-08 real-browser UAT, then S2.
+- Development DB = `iches_unisya`; isolated CMS test = `iches_unisya_cms_test`. Last checkpoint: primary CMS migrations `000005`/`000006` unapplied, so no live DB-backed CMS UAT PASS. No DB action may be inferred from roadmap status.
+- Owner-operated Codex VS Code is the sole application code executor under named GO CODING; ChatGPT handles documentation under separate GO DOKUMENTASI. Every push/PR, merge, sync, or extra DB/test action is gated separately.
+- **Permanent visual UAT rule:** Local Browser + real Laravel Herd `.test` app/data; record URL, scenario, expected, observed, PASS/FAIL/BLOCKED and findings in **text only**, never generate new screenshots or image evidence. Keep historical evidence.
+
+## HISTORICAL PLAN OPENING — 28 October 2026 (retained; superseded where inconsistent)
+
 > DRAFT · 28 October 2026 · NO GO CODING. This is the ONE permanent roadmap, not a second status board. See [19F Board](docs/19F-CURRENT-SPRINT-BOARD.md) for current status, [19B Backlog](docs/19B-BACKLOG-TEKNIS-CODEX-PER-SLICE.md) for task IDs, and [09 Decision Register](docs/09-KEPUTUSAN-DAN-ISU-TERBUKA.md) for product authority.
 
 ## Mission and fixed boundaries
@@ -34,13 +44,13 @@ Event date from TOR: 5 January 2027 (main), 6 January 2027 (associated); abstrac
 - G0 Ready: owner-approved repo/DB/PK/auth/runtime decisions; verified local toolchain and safe test DB.
 - G1 Authorized: separate owner **GO CODING Task ID or GO SPRINT finite ordered task list** per [20B](docs/20B-APPROVED-SPRINT-AUTHORIZATION-AND-EXECUTION.md). Approving workflow is NOT GO coding.
 - G2 Scoped: feature branch, in-scope diff only; no source changes on main, no secrets/data.
-- G3 Verified: actual test commands and exit status; negative/security cases; screenshots for UI. Failed/unrun tests are not PASS.
+- G3 Verified: actual test commands and exit status, negative/security cases, and text-only real Local Browser UAT (URL, scenario, expected, observed, PASS/FAIL/BLOCKED, findings). New UI screenshots/image evidence are forbidden; failed or unrun tests are not PASS.
 - G4 Reviewed: ChatGPT reviews diff and evidence; owner decides acceptance/merge. Deployment separately authorized.
 
 Stop on ambiguous decisions, tests failing, scope creep, production credentials or risky operations. **48-hour aspiration**: M1 and a limited demonstrable M2 if dependencies permit; M3 stretch/next wave. Never present M4–M9 as completed just to meet a timebox.
 
 ## Status and evidence ownership
 
-**Only [19F](docs/19F-CURRENT-SPRINT-BOARD.md) is the live status board, updated by ChatGPT.** [harness/build-log.md](harness/build-log.md) is a future evidence journal (currently ChatGPT-owned). Codex can append sanitized evidence Markdown **only after actual named Task/Sprint GO**, not governance docs. No coding GO has been issued.
+**Only [19F](docs/19F-CURRENT-SPRINT-BOARD.md) is the live status board, updated by ChatGPT.** [harness/build-log.md](harness/build-log.md) is an existing evidence journal. Codex may append sanitized evidence Markdown **only after actual named Task/Sprint GO**, never governance docs; no new GO CODING has been issued for S1-05.
 
-This plan becomes binding only when owner approves the governance proposal in Draft PR #1. Even after approval, plan existence does not authorize implementation.
+**Historical 28 October note:** the original plan awaited governance PR #1 approval (since merged). This roadmap does not authorize implementation; each new task still needs separate owner GO.

@@ -1,5 +1,15 @@
 # 19E — AI Agent Workspace: Operating Runbook & 48h Timebox
 
+## CURRENT RUNBOOK — 30 October 2026
+
+1. **Session start:** verify actual GitHub `main`, local branch/HEAD/`origin/main`/working tree/remote and latest owner decision. Consult [AGENTS CURRENT](../AGENTS.md), [19F CURRENT](19F-CURRENT-SPRINT-BOARD.md), exact Work Order and only relevant sources; do not relitigate merged slices.
+2. **Authority:** AUDIT → PLAN → named OWNER GO CODING → owner-operated Codex VS Code → independent ChatGPT REVIEW → separate GO TEST/DB if necessary → separate GO PUSH & PR → CI REVIEW → separate GO MERGE → separately authorized POST-MERGE SYNC. ChatGPT directly edits governance only with scoped GO DOKUMENTASI. No automatic new task, migration, deletion, rebase, force or deployment.
+3. **Current checkpoint:** S0-01..07, UI-01B/01C/01D and S1-01..04 merged; post-merge `main` baseline `99aa3e83306f92b72c13c99c16b6099e583ebf26`. S1-05 next **AUDIT/PLAN**, not coding. Dev DB `iches_unisya` and isolated CMS test DB `iches_unisya_cms_test`; primary CMS migrations `000005`/`000006` still gated.
+4. **Real browser UAT:** only Local Browser on actual Laravel Herd `.test` URL with live development application/data, record text URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings. Never generate new screenshot/image evidence; retain historical captures. Synthetic fixtures cannot substitute live UAT; report BLOCKED if DB/browser unavailable.
+5. **Archive:** dated sections below are historical workflow guidance; any claims of `CURRENT`, unfinished UI-01B/S0 tasks or screenshot requirements are superseded by this rule.
+
+## HISTORICAL RUNBOOK — 28 October 2026
+
 > **28 Oktober 2026 · DRAFT REVIEW · NO GO CODING.** Melengkapi, **bukan menggantikan**, 19A–19D dan AGENTS.md. Tujuannya mengubah repo dokumentasi menjadi lingkungan kerja Codex VS Code yang tidak melebar, dapat diulang setiap sesi, dan mudah diaudit.
 
 ## 20B superseding authorization note
@@ -28,7 +38,7 @@ One Task GO or finite named Sprint GO can authorize Codex code changes; append-o
 2. **Owner sebelum Codex:** pastikan remote repo target, `git status --short` bersih/masalah diketahui, branch bukan `main`, dan Work Order berisi owner GO eksplisit untuk **Task ID atau Sprint ID dengan daftar Task IDs terbatas yang mencakup tugas aktif**.
 3. **Codex:** baca `AGENTS.md`, `.agents/skills/iches-codex-engineering/SKILL.md`, satu Work Order dan **maksimal 2–4** sumber domain. Frontend/CMS wajib baca skill khusus. Baca source nyata sebelum edit.
 4. **Codex:** tuliskan scope in/out, file yang benar-benar akan disentuh, dan test plan. Bila ambigu → `BLOCKED_DECISION`, jangan mengarang.
-5. **Finish:** Codex mengembalikan ID, branch, commit/PR, changed paths, implemented/not implemented, exact test command + status, evidence screenshot bila UI, risiko. ChatGPT menilai spec/security; owner mengizinkan merge atau revisi.
+5. **Finish:** Codex mengembalikan ID, branch, commit/PR, changed paths, implemented/not implemented, exact test command + status, laporan UAT teks (URL/skenario/expected/observed/PASS-FAIL-BLOCKED/temuan) bila UI, risiko. ChatGPT menilai spec/security; owner mengizinkan merge atau revisi.
 
 ## 4. Stop conditions (anti-scope-creep)
 **STOP dan minta keputusan** bila: GO Task/Sprint yang mencakup pekerjaan aktif belum ada; repository/branch tidak cocok; kerja tidak terkait work order; konflik dengan Register keputusan; DB/PK/hosting belum disetujui untuk migration; kode memakai verifikasi pembayaran lama berbasis screenshot; ada permintaan perubahan dokumen oleh Codex; butuh akses rahasia/akun produksi; perubahan memerlukan penghapusan data nyata; test penting gagal dan agent hendak mengklaim PASS.
@@ -45,7 +55,7 @@ One Task GO or finite named Sprint GO can authorize Codex code changes; append-o
 
 ## 6. Definition of Done (bukan sekadar 'sudah coding')
 - [ ] Diff sesuai scope; tidak ada perubahan dokumen atau secrets oleh Codex.
-- [ ] Fitur bisa didemokan dengan data sintetis; tidak ada tombol palsu/dummy tanpa label.
+- [ ] Fitur diuji pada aplikasi development yang nyata; fixture sintetis boleh untuk automated tests tetapi tidak menggantikan real Herd `.test` Local Browser UAT. Tidak ada tombol palsu/dummy tanpa label.
 - [ ] Automated test/build/typecheck/lint relevan **dijalankan** dan dilaporkan; tidak tersedia = `BLOCKED`, bukan PASS.
 - [ ] Error/authorization/negative cases teruji sesuai tipe fitur.
 - [ ] Reviewer ChatGPT memeriksa diff dan requirement, mencatat `REVIEW_PASS` atau `NEEDS_FIX`; owner menerima.

@@ -1,9 +1,26 @@
 # 19B — Backlog Teknis Siap Dipecah Menjadi Tugas Codex VS Code
 
+## CURRENT TASK STATUS — 30 October 2026 (supersedes dated backlog rows)
+
+| Slice | Current verified state |
+| --- | --- |
+| ICH-S0-01..07 | MERGED / COMPLETE |
+| ICH-UI-01B / UI-01C / UI-01D | MERGED / COMPLETE |
+| ICH-S1-01..04 | MERGED / COMPLETE (PR #22 closes S1-04) |
+| ICH-S0-08 | OPTIONAL / DEFERRED |
+| ICH-S1-05 | NEXT AUDIT & PLAN CANDIDATE; **NO GO CODING** |
+| ICH-S1-06 / S1-07 / S1-08 / S2 | PENDING; require separate owner GO for each slice |
+
+Current primary development schema: `iches_unisya`; isolated CMS test schema: `iches_unisya_cms_test`. Last verified checkpoint: CMS migrations `000005` and `000006` not applied to primary schema. No migration, seeding, rollback or reset GO. Academic Editorial homepage reuses **merged** CMS S1-01..04; countdown must bind real official Event Master start without invented time. UAT uses Local Browser + real Herd `.test` application/data, with text evidence only (URL, scenario, expected, observed, PASS/FAIL/BLOCKED, findings); **never create new screenshots/images**.
+
+See [19F CURRENT board](19F-CURRENT-SPRINT-BOARD.md) and [AGENTS CURRENT contract](../AGENTS.md). The rows and conflicting `LATEST`, `CURRENT OWNER OVERRIDE RD-03C`, old hyphenated database `iches-unisya`, and status/authorization statements **below are 28 October historical snapshots**, not live policy or coding permission.
+
+## HISTORICAL BACKLOG SNAPSHOT — 28 October 2026 (reference only)
+
 > **LATEST 28 OCT 2026:** `ICH-S0-03` auth **implementation specs ready**, **NOT GO CODING**. [21K-07 full auth contract](21K-07-S0-03-AUTHENTICATION-MVP-SPEC.md) / [21K-08 Codex Work Order](21K-08-S0-03-CODEX-WORK-ORDER.md) override historical proposal for password login; production attendees remain passwordless. Local demo `@iches.test` and hashed `password` only under double local gate. Earlier RD-03C hyphenated database notes below are historical; current DB is `iches_unisya`, S0-02 merged.
 
 
-> **CURRENT OWNER OVERRIDE RD-03C (28 Oct 2026):** Exact database name **`iches-unisya`** (hyphen), manual phpMyAdmin creation, temporary local root connection, no separate test DB. This supersedes previous `iches_unisya` names. [21J-02](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md) and [21J-03](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md).
+> **HISTORICAL / SUPERSEDED RD-03C (28 Oct 2026):** Exact database name **`iches-unisya`** (hyphen), manual phpMyAdmin creation, temporary local root connection, no separate test DB. This was superseded by the later verified schema name `iches_unisya` (and isolated CMS test `iches_unisya_cms_test`); this sentence is retained to document the former decision. [21J-02](21J-02-ICHES-DEV-DB-NAME-AND-LOCAL-ACCESS.md) and [21J-03](21J-03-ICH-S0-02-FAST-TRACK-WORK-ORDER.md).
 
 > **OWNER DECISION 21J-01 (28 OCT 2026):** DB design for `ICH-S0-02` now uses **one dedicated ICHES primary development schema `iches_unisya`** instead of mandatory `iches_unisya_test`; do not run destructive reset as default. [RD-03B final](21J-01-SINGLE-PRIMARY-DEV-DATABASE-DECISION.md). Other backlog statuses below are historical/draft until their work orders are explicitly authorized.
 
@@ -100,7 +117,7 @@
 
 ## 7. Reporting standards for each task
 
-Each completed Codex task must report **Task ID; branch; changed code paths; actual commands and pass/fail; screenshots for UI; migrations and risks; out-of-scope untouched; known blockers**. ChatGPT reviews code via diff/PR and updates backlog status. Owner decides accept/merge; only then proceed. No task gets `DONE` merely because Codex said “implemented”; evidence and authorization matter.
+Each completed Codex task must report **Task ID; branch; changed code paths; actual commands and pass/fail; real Herd `.test` Local Browser UAT text (URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings), not new screenshots; migrations and risks; out-of-scope untouched; known blockers**. ChatGPT reviews code via diff/PR and updates backlog status. Owner decides accept/merge; only then proceed. No task gets `DONE` merely because Codex said “implemented”; evidence and authorization matter.
 
 ---
 

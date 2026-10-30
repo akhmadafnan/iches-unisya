@@ -1,6 +1,18 @@
 # 19F — Current Sprint Board & Handoff Ledger
 
-## CURRENT STATUS — 29 October 2026 (latest owner-approved documentation checkpoint)
+## CURRENT STATUS — 30 October 2026 (ICH-GOV-01 verified baseline)
+
+- **Repository / machine:** `akhmadafnan/iches-unisya`; Laptop 2 `DESKTOP-PE5D86C`; `D:\PINJAM-AFNAN\Herd\iches-unisya`.
+- **Verified Git baseline:** S1-04 [PR #22](https://github.com/akhmadafnan/iches-unisya/pull/22) normal merge **MERGED**, three feature commits / 40 paths, Linux GitHub Actions PHP 8.4/Node 22 (push + PR) **SUCCESS**. Post-merge sync local `main`/`origin/main`/GitHub `main` = `99aa3e83306f92b72c13c99c16b6099e583ebf26`, working tree clean at sync completion. ICH-GOV-01 is docs-only branch work based on that commit; read fresh Git before any new task.
+- **MERGED / COMPLETE:** ICH-S0-01..07; ICH-UI-01B/01C/01D; ICH-S1-01 CMS persistence; S1-02 publication lifecycle; S1-03 backoffice UI; S1-04 published-only public page rendering. ICH-S0-08 optional / deferred.
+- **NEXT CANDIDATE:** ICH-S1-05 original Academic Editorial public homepage, **AUDIT/PLAN only, NO GO CODING**. S1-06 functional countdown, S1-07 media/i18n/SEO, S1-08 actual browser UAT/polish, then S2 abstract submission are not started/authorized through this document.
+- **Database:** primary `iches_unisya`, isolated CMS test `iches_unisya_cms_test`; last S1-04 independent isolated persistence test 25 PASS / 671 assertions, six isolated migrations, no leftover synthetic rows. Primary CMS migrations `000005`/`000006` unapplied at last audited checkpoint. Not runtime-retested for ICH-GOV-01; no GO for DB changes.
+- **Design/stack:** Laravel 13/Inertia 2/Vue 3/TypeScript/Tailwind 4, scoped authorization/private storage, EN/ID/AR RTL. Admin stock shadcn-vue Lyra V1.1 `a33J5lFw`, public separate Academic Editorial (Inter/Sora, ivory/forest/near-black/restrained gold), CMS-driven, no fake features or invented event start hour.
+- **Authorization:** owner personally operates Codex VS Code only after named GO CODING. ChatGPT independently audits/reviews and edits governance only after scoped GO DOKUMENTASI. Separate permission gates for TEST/DB, PUSH & PR, MERGE and POST-MERGE SYNC. **ICH-GOV-01: GO DOKUMENTASI applies only to the ten allowlisted docs and one local docs commit; STOP, no push/PR/merge/source/DB/deploy.**
+- **Permanent UAT override:** Local Browser verification with real development Laravel Herd `.test` URLs and data; TEXT only **URL, scenario, expected, observed, PASS/FAIL/BLOCKED, findings**. No newly generated screenshots, image files or rendered fixtures for UAT; preserve all old evidence. If DB/browser unready, UAT is BLOCKED.
+- **Historical ledger preservation:** all dated sections below, even if labeled `CURRENT`, `LATEST`, `NOW`, old NO GO/task/permission or earlier screenshot policy, are **archived observations only**. This CURRENT status and latest verified repository/owner decision take precedence.
+
+## HISTORICAL STATUS — 29 October 2026 (archived; superseded by 30 October CURRENT status)
 
 - **Repository/workspace:** `akhmadafnan/iches-unisya`, Laptop 2 `DESKTOP-PE5D86C`, `D:\PINJAM-AFNAN\Herd\iches-unisya`. Last audited clean `main` before docs branch = `07124e0c915fe8d12cf9e33f7a5cbed4d5e4ad63`, same as local `origin/main` (not a fresh remote fetch).
 - **Completed:** ICH-S0-01..ICH-S0-07 all merged. S0-06 shell uses Vue/Inertia, EN/ID/AR RTL and real scoped workspace behavior; historical independent REV-01 browser 95 checks and PHP DB-free 30 tests/684 assertions PASS, **not rerun** for this documentation alignment. S0-08 deferred. No full public CMS or business modules claimed complete.
