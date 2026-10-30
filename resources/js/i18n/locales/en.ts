@@ -1,4 +1,11 @@
 export default {
+    publicHome: {
+        home: 'ICHES homepage', kicker: 'ICHES UNISYA 2027',
+        title: 'Humanity, Education, and Society',
+        preparing: 'Conference information is being prepared.',
+        body: 'Published conference information will appear here when it is available. Please return for updates.',
+        footer: 'International Conference on Humanity, Education, and Society',
+    },
     publicCms: {
         englishFallback: 'English content is shown because this translation is not ready.',
         timeUnconfirmed: 'The official time has not been confirmed.',

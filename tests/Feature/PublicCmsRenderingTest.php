@@ -187,10 +187,11 @@ class PublicCmsRenderingTest extends TestCase
         $this->assertSame($original['page'], $reader->read('synthetic-event', 'about', 'en')['page']);
     }
 
-    public function test_foundation_root_and_noindex_remain_unchanged_and_invalid_slugs_fail_closed(): void
+    public function test_homepage_fallback_preserves_noindex_and_invalid_slugs_fail_closed(): void
     {
+        config(['iches-public.event_slug' => null]);
         Schema::shouldReceive('hasTable')->never();
-        $this->get('/')->assertOk()->assertInertia(fn (Assert $page) => $page->component('Foundation')->where('task', 'ICH-S0-01'));
+        $this->get('/')->assertOk()->assertInertia(fn (Assert $page) => $page->component('public/Home')->missing('cms'));
         $this->assertStringContainsString('noindex, nofollow', file_get_contents(resource_path('views/app.blade.php')));
         foreach (['Bad', 'bad--slug', 'bad_slug'] as $slug) {
             $this->get('/events/'.$slug.'/pages/about')->assertNotFound();

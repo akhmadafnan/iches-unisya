@@ -1,6 +1,13 @@
 import type en from './en';
 
 export default {
+    publicHome: {
+        home: 'Beranda ICHES', kicker: 'ICHES UNISYA 2027',
+        title: 'Kemanusiaan, Pendidikan, dan Masyarakat',
+        preparing: 'Informasi konferensi sedang disiapkan.',
+        body: 'Informasi konferensi yang telah dipublikasikan akan ditampilkan di sini saat tersedia. Silakan kembali untuk melihat pembaruan.',
+        footer: 'Konferensi Internasional tentang Kemanusiaan, Pendidikan, dan Masyarakat',
+    },
     publicCms: {
         englishFallback: 'Konten bahasa Inggris ditampilkan karena terjemahan ini belum siap.',
         timeUnconfirmed: 'Waktu resmi belum ditetapkan.',
