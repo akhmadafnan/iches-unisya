@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\CmsLifecycleController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
@@ -26,6 +27,13 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
         });
     });
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::prefix('/workspace/events/{event}/cms/pages')->name('cms.')->group(function (): void {
+            Route::post('/', [CmsLifecycleController::class, 'create'])->name('create');
+            Route::post('/{page}/draft', [CmsLifecycleController::class, 'draft'])->name('draft');
+            Route::get('/{page}/preview', [CmsLifecycleController::class, 'preview'])->name('preview');
+            Route::post('/{page}/publish', [CmsLifecycleController::class, 'publish'])->name('publish');
+            Route::post('/{page}/restore', [CmsLifecycleController::class, 'restore'])->name('restore');
+        });
         Route::get('/files/{storedFile}/download', StoredFileDownloadController::class)
             ->middleware('signed')->name('files.download');
         Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');

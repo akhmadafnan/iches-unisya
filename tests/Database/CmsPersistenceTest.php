@@ -5,6 +5,7 @@ namespace Tests\Database;
 use App\Models\CmsPage;
 use App\Models\CmsPageRevision;
 use App\Models\Event;
+use App\Models\RoleAssignment;
 use App\Models\StoredFile;
 use App\Models\User;
 use App\Services\Cms\PageRevisionWriter;
@@ -27,6 +28,8 @@ class CmsPersistenceTest extends TestCase
     private Event $event;
 
     private CmsPage $page;
+
+    private string $workspace;
 
     protected function setUp(): void
     {
@@ -52,6 +55,8 @@ class CmsPersistenceTest extends TestCase
         $this->connection->beginTransaction();
         $this->actor = User::create(['name' => 'Synthetic CMS editor', 'email' => Str::uuid7().'@iches.test']);
         $this->event = $this->event();
+        $grant = RoleAssignment::forceCreate(['user_id' => $this->actor->id, 'event_id' => $this->event->id, 'role_key' => 'superadmin', 'assigned_by' => $this->actor->id]);
+        $this->workspace = 'assignment:'.$grant->id;
         $this->page = CmsPage::create(['event_id' => $this->event->id, 'slug' => 'about']);
     }
 
@@ -80,7 +85,7 @@ class CmsPersistenceTest extends TestCase
 
     private function draft(?array $snapshot = null): CmsPageRevision
     {
-        return app(PageRevisionWriter::class)->saveDraft($this->actor, $this->event, $this->page, $snapshot ?? $this->snapshot());
+        return app(PageRevisionWriter::class)->saveDraft($this->actor, $this->event, $this->page, $snapshot ?? $this->snapshot(), $this->workspace);
     }
 
     private function constraint(callable $action): void
@@ -153,7 +158,7 @@ class CmsPersistenceTest extends TestCase
     public function test_unpersisted_actor_and_unsafe_snapshot_leave_no_revision(): void
     {
         try {
-            app(PageRevisionWriter::class)->saveDraft(new User, $this->event, $this->page, $this->snapshot());
+            app(PageRevisionWriter::class)->saveDraft(new User, $this->event, $this->page, $this->snapshot(), $this->workspace);
             $this->fail('Unpersisted actor accepted.');
         } catch (ValidationException) {
             $this->assertSame(0, $this->page->revisions()->count());
@@ -175,7 +180,7 @@ class CmsPersistenceTest extends TestCase
         $this->page->event_id = $other->id;
         $this->expectException(ValidationException::class);
         try {
-            app(PageRevisionWriter::class)->saveDraft($this->actor, $other, $this->page, $this->snapshot());
+            app(PageRevisionWriter::class)->saveDraft($this->actor, $other, $this->page, $this->snapshot(), $this->workspace);
         } finally {
             $this->assertSame(0, $this->page->revisions()->count());
         }
