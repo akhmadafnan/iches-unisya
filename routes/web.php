@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\CmsBackofficeController;
 use App\Http\Controllers\CmsLifecycleController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\StoredFileDownloadController;
@@ -27,6 +28,8 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
         });
     });
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::get('/backoffice/website/pages', [CmsBackofficeController::class, 'index'])->name('cms.pages');
+        Route::get('/backoffice/website/pages/{page}', [CmsBackofficeController::class, 'show'])->name('cms.editor');
         Route::prefix('/workspace/events/{event}/cms/pages')->name('cms.')->group(function (): void {
             Route::post('/', [CmsLifecycleController::class, 'create'])->name('create');
             Route::post('/{page}/draft', [CmsLifecycleController::class, 'draft'])->name('draft');

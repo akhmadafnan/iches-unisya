@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useForm, usePage } from '@inertiajs/vue3';
+import { Link, useForm, usePage } from '@inertiajs/vue3';
 import { useI18n } from 'vue-i18n';
 import { DropdownMenuRoot, DropdownMenuTrigger, DropdownMenuPortal, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from 'reka-ui';
 import { ChevronDown, ChevronRight, LogOut, UserRound } from '@lucide/vue';
@@ -14,6 +14,8 @@ const page = usePage<DashboardProps>();
 const { t } = useI18n();
 const logout = useForm({});
 const selected = computed(() => page.props.workspaces.find(choice => choice.key === page.props.activeWorkspace));
+const cms = computed(() => page.url.startsWith('/backoffice/website/pages'));
+const editing = computed(() => cms.value && page.component === 'cms/Editor');
 </script>
 
 <template>
@@ -38,7 +40,7 @@ const selected = computed(() => page.props.workspaces.find(choice => choice.key 
             </div>
         </div>
         <nav class="mt-5 text-xs text-muted-foreground" :aria-label="t('navigation')">
-            <ol class="flex flex-wrap items-center gap-2"><li>{{ t('workspace') }}</li><li><ChevronRight class="size-3 rtl:rotate-180" aria-hidden="true" /></li><li aria-current="page" class="font-medium text-foreground">{{ t('dashboard') }}</li></ol>
+            <ol class="flex flex-wrap items-center gap-2"><li><Link href="/dashboard">{{ t('workspace') }}</Link></li><li><ChevronRight class="size-3 rtl:rotate-180" aria-hidden="true" /></li><li :aria-current="!editing ? 'page' : undefined" class="font-medium text-foreground"><Link v-if="editing" href="/backoffice/website/pages">{{ t('cms.title') }}</Link><template v-else>{{ cms ? t('cms.title') : t('dashboard') }}</template></li><template v-if="editing"><li><ChevronRight class="size-3 rtl:rotate-180" aria-hidden="true" /></li><li aria-current="page">{{ t('cms.editor') }}</li></template></ol>
         </nav>
     </header>
 </template>

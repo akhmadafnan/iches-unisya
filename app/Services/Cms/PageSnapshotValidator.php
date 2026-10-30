@@ -19,6 +19,11 @@ class PageSnapshotValidator
         'cta' => ['variants' => ['default'], 'fields' => ['label' => 'text', 'href' => 'url']],
     ]) {}
 
+    public function catalog(): array
+    {
+        return $this->registry;
+    }
+
     public function validate(mixed $snapshot): array
     {
         try {

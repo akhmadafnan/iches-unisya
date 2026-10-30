@@ -18,3 +18,8 @@ export interface DashboardProps extends SharedProps {
     workspaces: Workspace[];
     activeWorkspace: string;
 }
+
+export function cmsEligible(workspaces: Workspace[], selected: string): boolean {
+    return /^assignment:[1-9][0-9]*$/.test(selected) && workspaces.some(choice => choice.key === selected
+        && choice.role === 'superadmin' && choice.event !== null && choice.institution === null);
+}
