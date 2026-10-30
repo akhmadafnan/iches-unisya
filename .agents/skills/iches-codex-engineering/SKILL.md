@@ -9,6 +9,16 @@ metadata:
 
 # ICHES Codex Engineering — Code-only Skill
 
+## CURRENT EXECUTION GUARDS — 30 October 2026
+
+**Owner exclusively runs Codex VS Code after explicit named GO CODING**; ChatGPT does not launch Codex (CLI, remote or VS Code) and retains governance/docs/review responsibility under separate permission. Current completed: S0-01..07, UI-01B/01C/01D, S1-01..04. S1-05 is audit/plan only, not authorized coding. Baseline post-S1-04: `99aa3e83306f92b72c13c99c16b6099e583ebf26`, subject to live SHA preflight. Development schema `iches_unisya`, isolated CMS test `iches_unisya_cms_test`; database writes/migrations/seeding/rollback require explicit separate permission.
+
+**Required gates:** AUDIT → PLAN → OWNER GO CODING → owner-operated CODEX VS CODE → INDEPENDENT REVIEW → GO TEST if needed → GO PUSH & PR → CI REVIEW → GO MERGE → POST-MERGE SYNC. Never auto-advance from merged or prepared tasks. Public = CMS-driven Academic Editorial; Admin = shadcn-vue Lyra V1.1 `a33J5lFw`; Laravel 13/Inertia/Vue 3/TS/Tailwind 4, scoped authorization/private storage, EN/ID/AR RTL are retained.
+
+**Permanent UAT override:** Local Browser on real Herd `.test` Laravel app and development data; report URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings in text only. NO newly generated screenshots, PNG/JPG/WebP or image-evidence folders; prior captures retained. Synthetic fixtures are tests, not live browser UAT.
+
+
+
 **Scope:** You are the **source-code implementer** in **Codex VS Code**. The owner uses **ChatGPT** for analysis, requirements, architecture, documentation, planning, review and decisions; **GitHub** is the shared record; terminal is used for authorized tests/inspection. This skill **does not authorize coding** merely because it exists.
 
 ## 21G optional specialized methodology Skills
@@ -48,16 +58,16 @@ Never copy or commit `.env`, secrets, personal participant records, payment proo
 ## Tests and evidence — do, don't just plan
 
 Inspect actual `composer.json`/`package.json` scripts and environment before selecting commands. On authorized local/test resources run relevant:
-- PHP tests (Pest/Feature), lint/static analysis, fresh migrations **test DB only**, rollback checks when schemas change.
+- PHP tests (Pest/Feature), lint/static analysis; migration/rollback tests **only on a separately owner-authorized isolated test DB**, with exact allowed operations and no implicit GO from coding authorization.
 - Vue/TS typecheck, build/lint, browser/mobile/Arabic RTL smoke when UI changes.
 - Negative permission tests (IDOR/role scopes), business state/concurrency/idempotency as applicable.
 - Countdown fake-clock boundary/timezone and CMS unpublished/published/rollback tests when relevant.
 
-Use test fixture data, not user accounts or money. **If a test cannot run, report BLOCKED and reason**, not PASS.
+Use synthetic fixtures for automated tests only, never private participant or financial data. Real visual UAT requires the actual Local Browser/Herd `.test` development application and data, with text-only evidence. **If a test cannot run, report BLOCKED and reason**, not PASS.
 
 ## Hand back to ChatGPT & owner
 
-Return concise **Task ID; branch; source files added/changed; what actually works; exact test commands/results; screenshots/preview if UI; open risks/decisions; git status; commit/PR if made**. Append sanitized execution evidence to `harness/build-log.md` only on authorized branch under named GO. Identify documentation changes needed **in your message**, but don't edit governance docs. ChatGPT handles review; owner authorizes merge/production separately.
+Return concise **Task ID; branch; source files added/changed; what actually works; exact test commands/results; real Local Browser UAT text (URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings) if UI, no new screenshots; open risks/decisions; git status; commit/PR if made**. Append sanitized execution evidence to `harness/build-log.md` only on authorized branch under named GO. Identify documentation changes needed **in your message**, but don't edit governance docs. ChatGPT handles review; owner authorizes merge/production separately.
 
 **Task is not “DONE” merely because source compiles.** Acceptance includes negative tests, approved scope and review.
 

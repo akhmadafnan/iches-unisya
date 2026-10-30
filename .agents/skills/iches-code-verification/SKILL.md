@@ -4,12 +4,21 @@ description: Run and report real verification for owner-authorized ICHES Laravel
 ---
 # ICHES Code Verification — Evidence-First
 
+## CURRENT VERIFICATION POLICY — 30 October 2026
+
+- Verify actual branch/HEAD, parent, remote, allowlist, diff and working tree; never infer an action GO from this Skill. S0-01..07, UI-01B/01C/01D and S1-01..04 are merged. S1-05 is next audit/plan only, with no GO CODING.
+- Only the **owner** runs Codex VS Code; ChatGPT handles independent review/governance. Explicit GO needed for coding, extra test/database operations, push/PR, merge and post-merge sync. Development DB `iches_unisya`, isolated CMS test `iches_unisya_cms_test`; no DB mutation without separate permission.
+- **Visual UAT:** Local Browser against actual Herd `.test` Laravel app with development data; text **URL | scenario | expected | observed | PASS/FAIL/BLOCKED | findings**. Do not create new screenshot, PNG/JPG/WebP, rendered fixture or image evidence. Historical captures preserved. Unavailable browser/database = BLOCKED.
+- Preserve Laravel 13/Inertia/Vue 3/TS/Tailwind 4, scoped authorization/private storage, EN/ID/AR RTL; Backoffice Lyra V1.1 `a33J5lFw`; public Academic Editorial CMS. See [AGENTS](../../../AGENTS.md) and [19F](../../../docs/19F-CURRENT-SPRINT-BOARD.md) for current state.
+
+
+
 **No GO = no implementation or test migration.** Read `AGENTS.md`, active Work Order and engineering Skill; inspect actual Composer/npm scripts before selecting commands.
 
 | Scope | Verification checklist |
 |---|---|
 | Laravel foundation | PHP feature/unit smoke, dependencies, bootstrap, reproducible build |
-| Database | FK/unique, migration/rollback on disposable **test DB only** |
+| Database | FK/unique, migration/rollback **only with explicit separate GO TEST/DB** on the specified isolated schema; otherwise BLOCKED |
 | Auth/RBAC/private files | 401/403, cross-user/event/institution denial, private file download rejection |
 | Admin/CMS | Server authorization, draft/preview/publish/rollback, browser responsive and RTL |
 | Countdown | Fake clock boundaries/timezone, no invented 00:00 |
@@ -33,7 +42,7 @@ Branch, commit, PR, changed paths:
 Command | exit code | PASS/FAIL/BLOCKED | evidence:
 Security negative cases:
 Migration test DB / rollback:
-UI screenshots / keyboard / mobile / RTL:
+Real browser UAT TEXT (URL | scenario | expected | observed | PASS/FAIL/BLOCKED | findings); keyboard / mobile / RTL:
 Open blocker and next authorized step:
 ```
 

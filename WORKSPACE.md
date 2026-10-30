@@ -1,6 +1,16 @@
 # ICHES 2027 — AI Agent Workspace
 
-## Current operational handoff — 29 October 2026 (supersedes historical snapshots below)
+## CURRENT HANDOFF — 30 October 2026 (ICH-GOV-01)
+
+- **Live baseline at documentation branch creation:** GitHub `main` = local `main` = `origin/main` = `99aa3e83306f92b72c13c99c16b6099e583ebf26`, clean on Laptop 2 `DESKTOP-PE5D86C` at `D:\PINJAM-AFNAN\Herd\iches-unisya`; ICH-S1-04 PR #22 merged and post-merge sync verified. Subsequent branch/commit changes require fresh preflight.
+- **Completed:** S0-01..07, UI-01B/01C/01D, S1-01..04. **Deferred:** S0-08. **Next: S1-05 audit/plan only; NO GO CODING.** S1-06 countdown, S1-07 public media/i18n/SEO, S1-08 live browser UAT and S2 submission are not automatically authorized.
+- **DB boundary:** `iches_unisya` development; `iches_unisya_cms_test` isolated CMS tests. As last audited, development CMS migrations `000005`/`000006` pending separate DB GO, so do not claim live CMS UAT PASS.
+- **Design:** Laravel 13/Inertia 2/Vue 3/TS/Tailwind 4, scoped authorization/private storage, EN/ID/AR RTL; Admin = stock Lyra V1.1 `a33J5lFw`; public = separate Academic Editorial, CMS-driven, no fake content/start hour.
+- **Execution:** follow [AGENTS.md](AGENTS.md) CURRENT operating contract and [19F](docs/19F-CURRENT-SPRINT-BOARD.md) CURRENT status. Owner personally runs Codex VS Code **only after named GO CODING**; ChatGPT owns audited governance edits under separate scoped GO DOKUMENTASI. Git publication, tests/DB changes and sync have distinct approval gates.
+- **Permanent UAT:** actual local Herd `.test` application/data in Local Browser; text-only URL/scenario/expected/observed/PASS-FAIL-BLOCKED/findings. No new screenshot or PNG/JPG/WebP UAT evidence; retain historical assets.
+- **Archive boundary:** all content after the next heading is a **dated historical handoff**, including any old `CURRENT`/`NOW`/permission/branch/status assertions. It is not an active GO and must not override verified Git or latest owner decisions.
+
+## HISTORICAL operational handoff — 29 October 2026 (superseded by 30 October CURRENT handoff)
 
 - Official device **Laptop 2 `DESKTOP-PE5D86C`**, repository `akhmadafnan/iches-unisya`, path `D:\PINJAM-AFNAN\Herd\iches-unisya`. Before this docs-only branch: clean `main`, SHA `07124e0c915fe8d12cf9e33f7a5cbed4d5e4ad63` (matching local tracking `origin/main`; no fresh remote fetch claimed).
 - **Merged foundation:** ICH-S0-01 through ICH-S0-07, including passwordless/local-demo auth, scoped workspaces, private storage, CI, and S0-06 responsive EN/ID/AR RTL Backoffice shell. Public root remains Foundation placeholder; CMS/business features not yet implemented. Optional S0-08 remains deferred.
