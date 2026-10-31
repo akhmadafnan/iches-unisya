@@ -187,18 +187,25 @@ class CmsMediaSecurityTest extends TestCase
 
     public static function incompleteDraftAlts(): iterable
     {
-        yield 'missing English translation' => [['status' => 'missing', 'content' => null]];
+        yield 'missing English translation' => [['status' => 'missing', 'content' => null], 2];
+        yield 'v3 missing English translation' => [['status' => 'missing', 'content' => null], 3];
         foreach (['', " \t\n ", 'Incomplete alternative text'] as $alt) {
-            yield 'draft '.json_encode($alt) => [['status' => 'draft', 'content' => ['alt' => $alt, 'caption' => '', 'credit' => '']]];
+            foreach ([2, 3] as $schema) {
+                yield 'v'.$schema.' draft '.json_encode($alt) => [['status' => 'draft', 'content' => ['alt' => $alt, 'caption' => '', 'credit' => '']], $schema];
+            }
         }
     }
 
     #[DataProvider('incompleteDraftAlts')]
-    public function test_incomplete_media_drafts_can_be_saved_without_publication_readiness(array $english): void
+    public function test_incomplete_media_drafts_can_be_saved_without_publication_readiness(array $english, int $schema): void
     {
         $id = (string) Str::uuid7();
         $snapshot = self::mediaSnapshot($id);
         $snapshot['sections'][0]['media']['locales']['en'] = $english;
+        if ($schema === 3) {
+            $snapshot['schema_version'] = 3;
+            $snapshot['seo'] = PublicSeoLocalizationTest::emptySeo();
+        }
         $original = $snapshot;
         $this->workspace();
         $this->user->exists = $this->event->exists = true;
@@ -265,7 +272,7 @@ class CmsMediaSecurityTest extends TestCase
         try {
             $revision = app(PageRevisionWriter::class)->saveDraft($this->user, $this->event, $page, $snapshot, 'assignment:1');
             $this->assertSame($original, $revision->snapshot);
-            $this->assertSame(2, $revision->schema_version);
+            $this->assertSame($schema, $revision->schema_version);
             $this->assertSame($english, $revision->snapshot['sections'][0]['media']['locales']['en']);
             $this->assertSame($original, $snapshot);
         } finally {
@@ -273,13 +280,19 @@ class CmsMediaSecurityTest extends TestCase
         }
     }
 
-    private function publishedFixture(string $extension = 'png', ?string $bytes = null): void
+    private function publishedFixture(string $extension = 'png', ?string $bytes = null, int $schema = 2): void
     {
         $this->workspace();
         $this->file = $this->storage->storePrivate($this->user, $this->event, 'assignment:1', 'cms_image', UploadedFile::fake()->createWithContent('sample.'.$extension, $bytes ?? base64_decode(self::PNG)));
         $this->page = (new CmsPage)->forceFill(['id' => (string) Str::uuid7(), 'event_id' => $this->event->id, 'slug' => 'about', 'published_revision_id' => (string) Str::uuid7()]);
         $this->revision = (new CmsPageRevision)->forceFill(['id' => $this->page->published_revision_id, 'page_id' => $this->page->id,
             'schema_version' => 2, 'snapshot' => self::mediaSnapshot($this->file->id)]);
+        if ($schema === 3) {
+            $snapshot = $this->revision->snapshot;
+            $snapshot['schema_version'] = $this->revision->schema_version = 3;
+            $snapshot['seo'] = PublicSeoLocalizationTest::emptySeo();
+            $this->revision->snapshot = $snapshot;
+        }
         Schema::shouldReceive('hasTable')->andReturnTrue();
         foreach ([Event::class => $this->event, CmsPage::class => $this->page, CmsPageRevision::class => $this->revision, StoredFile::class => $this->file] as $class => $record) {
             $model = Mockery::mock($class)->makePartial();
@@ -301,6 +314,7 @@ class CmsMediaSecurityTest extends TestCase
                 $query->shouldReceive('where')->with('event_id', $this->event->id)->andReturnSelf();
                 $query->shouldReceive('where')->with('kind', 'cms_image')->andReturnSelf();
                 $query->shouldReceive('whereKey')->with($this->file->id)->andReturnSelf();
+                $query->shouldReceive('first')->andReturn($record);
             }
             $query->shouldReceive('firstOrFail')->andReturn($record);
             $this->app->instance($class, $model);
@@ -312,10 +326,19 @@ class CmsMediaSecurityTest extends TestCase
         return '/events/synthetic-event/pages/about/sections/'.$this->revision->snapshot['sections'][0]['id'].'/media/'.$this->file->id;
     }
 
-    #[DataProvider('validImages')]
-    public function test_published_image_has_fixed_mime_headers_and_verified_bytes(string $extension, string $mime, string $bytes): void
+    public static function publishedImages(): iterable
     {
-        $this->publishedFixture($extension, $bytes);
+        foreach ([2, 3] as $schema) {
+            foreach (self::validImages() as $name => $image) {
+                yield $name.' schema '.$schema => [...$image, $schema];
+            }
+        }
+    }
+
+    #[DataProvider('publishedImages')]
+    public function test_published_image_has_fixed_mime_headers_and_verified_bytes(string $extension, string $mime, string $bytes, int $schema): void
+    {
+        $this->publishedFixture($extension, $bytes, $schema);
         $this->app['auth']->forgetGuards();
         $this->assertGuest();
         $this->get($this->publicUrl())->assertOk()->assertHeader('Content-Type', $mime)
@@ -324,9 +347,32 @@ class CmsMediaSecurityTest extends TestCase
         $this->assertCount(1, Storage::disk('local')->allFiles());
     }
 
-    public function test_publication_revocation_hidden_draft_removed_and_v1_images_fail_closed(): void
+    public function test_og_image_uses_verified_published_media_and_trusted_origin_only(): void
     {
-        $this->publishedFixture();
+        config(['app.url' => 'https://conference.example']);
+        $this->publishedFixture(schema: 3);
+        $reader = app(PublishedCmsPageReader::class);
+        $cms = $reader->read('synthetic-event', 'about', 'en');
+        $this->assertSame('https://conference.example'.$this->publicUrl(), $cms['seo']['image']);
+        $this->assertStringNotContainsString($this->file->storage_key, json_encode($cms['seo']));
+        $this->assertStringNotContainsString($this->file->sha256, json_encode($cms['seo']));
+        $this->file->kind = 'payment_proof';
+        $this->assertNull($reader->read('synthetic-event', 'about', 'en')['seo']['image']);
+        $this->file->kind = 'cms_image';
+        Storage::disk('local')->put($this->file->storage_key, 'corrupt');
+        $this->assertNull($reader->read('synthetic-event', 'about', 'en')['seo']['image']);
+    }
+
+    public static function mediaSchemas(): iterable
+    {
+        yield 'v2' => [2];
+        yield 'v3' => [3];
+    }
+
+    #[DataProvider('mediaSchemas')]
+    public function test_publication_revocation_hidden_draft_removed_and_v1_images_fail_closed(int $schema): void
+    {
+        $this->publishedFixture(schema: $schema);
         $url = $this->publicUrl();
         $snapshot = $this->revision->snapshot;
         app(PublishedCmsPageReader::class)->read('synthetic-event', 'about', 'en');
@@ -349,6 +395,7 @@ class CmsMediaSecurityTest extends TestCase
         $this->get($url)->assertNotFound();
         $legacy = $snapshot;
         $legacy['schema_version'] = $this->revision->schema_version = 1;
+        unset($legacy['seo']);
         foreach ($legacy['sections'] as &$section) {
             unset($section['media']);
         }
@@ -357,9 +404,10 @@ class CmsMediaSecurityTest extends TestCase
         $this->get($url)->assertNotFound();
     }
 
-    public function test_route_ids_and_foreign_publication_records_cannot_authorize_media(): void
+    #[DataProvider('mediaSchemas')]
+    public function test_route_ids_and_foreign_publication_records_cannot_authorize_media(int $schema): void
     {
-        $this->publishedFixture();
+        $this->publishedFixture(schema: $schema);
         $url = $this->publicUrl();
         $this->get(str_replace('/media/'.$this->file->id, '/media/'.Str::uuid7(), $url))->assertNotFound();
         $this->get(str_replace('/sections/'.$this->revision->snapshot['sections'][0]['id'], '/sections/'.Str::uuid7(), $url))->assertNotFound();
@@ -377,9 +425,10 @@ class CmsMediaSecurityTest extends TestCase
         $this->get($url)->assertNotFound();
     }
 
-    public function test_foreign_files_wrong_kind_paths_missing_and_corrupt_bytes_are_not_public(): void
+    #[DataProvider('mediaSchemas')]
+    public function test_foreign_files_wrong_kind_paths_missing_and_corrupt_bytes_are_not_public(int $schema): void
     {
-        $this->publishedFixture();
+        $this->publishedFixture(schema: $schema);
         $attributes = $this->file->getAttributes();
         $url = $this->publicUrl();
         foreach (['id' => (string) Str::uuid7(), 'event_id' => (string) Str::uuid7(), 'kind' => 'abstract_pdf', 'visibility' => 'public', 'disk' => 'public', 'detected_mime' => 'text/html', 'storage_key' => '../secret'] as $key => $value) {

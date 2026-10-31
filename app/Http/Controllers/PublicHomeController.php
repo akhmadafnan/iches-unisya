@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class PublicHomeController
 {
-    public function __invoke(Request $request, PublishedCmsPageReader $reader): Response
+    public function __invoke(Request $request, PublishedCmsPageReader $reader, ?string $publicLocale = null): Response
     {
         $cms = null;
         $event = config('iches-public.event_slug');

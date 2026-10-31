@@ -19,7 +19,7 @@ class PublicCmsMediaController
         try {
             [$event, , $revision] = $reader->published($event, $page);
             $snapshot = $validator->validate($revision->snapshot);
-            abort_unless($snapshot['schema_version'] === 2 && $snapshot['locales']['en']['status'] === 'ready', 404);
+            abort_unless(in_array($snapshot['schema_version'], [2, 3], true) && $snapshot['locales']['en']['status'] === 'ready', 404);
             $selected = collect($snapshot['sections'])->firstWhere('id', $section);
             abort_unless($selected && $selected['visible'] && $selected['media']
                 && $selected['media']['file_id'] === $media && in_array($media, $selected['media_ids'], true)

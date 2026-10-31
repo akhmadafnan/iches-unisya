@@ -9,6 +9,7 @@ use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PublicCmsMediaController;
 use App\Http\Controllers\PublicCmsPageController;
 use App\Http\Controllers\PublicHomeController;
+use App\Http\Controllers\PublicSitemapController;
 use App\Http\Controllers\StoredFileDownloadController;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Middleware\AuthPrivacy;
@@ -25,6 +26,14 @@ Route::get('/events/{event:slug}/pages/{page:slug}', PublicCmsPageController::cl
 Route::get('/events/{event}/pages/{page}/sections/{section}/media/{media}', PublicCmsMediaController::class)
     ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
     ->whereUuid('section')->whereUuid('media')->name('public.cms.media');
+
+foreach (['en', 'id', 'ar'] as $publicLocale) {
+    Route::get('/'.$publicLocale, PublicHomeController::class)->defaults('publicLocale', $publicLocale)->name('public.home.'.$publicLocale);
+    Route::get('/'.$publicLocale.'/events/{event:slug}/pages/{page:slug}', PublicCmsPageController::class)
+        ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
+        ->defaults('publicLocale', $publicLocale)->name('public.cms.page.'.$publicLocale);
+}
+Route::get('/sitemap.xml', PublicSitemapController::class)->name('public.sitemap');
 
 Route::middleware(AuthPrivacy::class)->group(function (): void {
     Route::post('/locale', LocaleController::class)->name('locale');

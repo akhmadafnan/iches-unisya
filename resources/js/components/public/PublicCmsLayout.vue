@@ -3,36 +3,22 @@ import { useI18n } from 'vue-i18n';
 import { router } from '@inertiajs/vue3';
 import { ref } from 'vue';
 import type { Locale } from '@/types';
-defineProps<{ eventName: string }>();
+const props = defineProps<{ eventName: string; languageUrls?: Record<Locale, string> }>();
 const { t, locale } = useI18n();
 const languages: { value: Locale; label: string }[] = [
     { value: 'en', label: 'English' }, { value: 'id', label: 'Bahasa Indonesia' }, { value: 'ar', label: 'العربية' },
 ];
 const switching = ref(false);
 const failed = ref(false);
-async function changeLanguage(event: Event) {
+function changeLanguage(event: Event) {
     const select = event.target as HTMLSelectElement;
-    switching.value = true;
-    failed.value = false;
-    try {
-        const token = document.cookie.split('; ').find(cookie => cookie.startsWith('XSRF-TOKEN='))?.slice('XSRF-TOKEN='.length);
-        // The existing locale endpoint redirects to auth pages; keep that redirect out of public navigation.
-        const response = await fetch('/locale', {
-            method: 'POST', credentials: 'same-origin', redirect: 'manual', cache: 'no-store',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json',
-                ...(token ? { 'X-XSRF-TOKEN': decodeURIComponent(token) } : {}) },
-            body: JSON.stringify({ locale: select.value }),
-        });
-        if (response.type !== 'opaqueredirect') throw new Error('Locale change was not confirmed.');
-        router.reload({
-            onError: () => { failed.value = true; },
-            onFinish: () => { switching.value = false; },
-        });
-    } catch {
-        failed.value = true;
-        switching.value = false;
-        select.value = locale.value;
-    }
+    const language = languages.find(language => language.value === select.value)?.value;
+    if (!language) return;
+    switching.value = true; failed.value = false;
+    router.visit(props.languageUrls?.[language] ?? `/${language}`, {
+        onError: () => { failed.value = true; select.value = locale.value; },
+        onFinish: () => { switching.value = false; },
+    });
 }
 </script>
 
@@ -40,7 +26,7 @@ async function changeLanguage(event: Event) {
     <div class="public-cms min-h-svh bg-[#F7F6F1] text-[#17211C]" :lang="locale" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
         <a href="#public-content" class="skip-link">{{ t('skip') }}</a>
         <header class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 border-b border-[#164734]/20 px-6 py-7 sm:px-10">
-            <a href="/" class="flex min-h-11 items-center gap-4 text-[#164734]" :aria-label="t('publicHome.home')">
+            <a :href="`/${locale}`" class="flex min-h-11 items-center gap-4 text-[#164734]" :aria-label="t('publicHome.home')">
                 <span class="text-2xl font-semibold tracking-tight" dir="ltr">ICHES</span>
                 <span class="max-w-xs border-s border-[#B79A5B] ps-4 text-xs leading-relaxed">{{ eventName }}</span>
             </a>

@@ -39,14 +39,19 @@ class PageSnapshotValidator
         } catch (JsonException) {
             $this->invalid();
         }
-        $this->keys($snapshot, ['schema_version', 'locales', 'sections']);
-        $this->require(in_array($snapshot['schema_version'], [1, 2], true));
+        $this->keys($snapshot, array_merge(['schema_version', 'locales', 'sections'], ($snapshot['schema_version'] ?? null) === 3 ? ['seo'] : []));
+        $this->require(in_array($snapshot['schema_version'], [1, 2, 3], true));
         $this->translations($snapshot['locales'], ['title' => 'text']);
+        if ($snapshot['schema_version'] === 3) {
+            $this->keys($snapshot['seo'], ['title', 'description']);
+            $this->translations($snapshot['seo']['title'], ['value' => 'text'], [], 160);
+            $this->translations($snapshot['seo']['description'], ['value' => 'text'], [], 320);
+        }
         $this->require(is_array($snapshot['sections']) && array_is_list($snapshot['sections']) && count($snapshot['sections']) <= 100);
         $ids = [];
         foreach ($snapshot['sections'] as $position => $section) {
             $this->keys($section, array_merge(['id', 'component_key', 'variant', 'position', 'visible', 'locales', 'media_ids', 'bindings'],
-                $snapshot['schema_version'] === 2 ? ['media'] : []));
+                $snapshot['schema_version'] >= 2 ? ['media'] : []));
             $this->require(is_string($section['id']) && Str::isUuid($section['id']) && ! in_array($section['id'], $ids, true));
             $ids[] = $section['id'];
             $this->require(is_string($section['component_key']) && isset($this->registry[$section['component_key']]));
@@ -59,7 +64,7 @@ class PageSnapshotValidator
                 $this->require(is_string($id) && Str::isUuid($id));
             }
             $this->require(count(array_unique($section['media_ids'])) === count($section['media_ids']));
-            if ($snapshot['schema_version'] === 2 && $section['media'] !== null) {
+            if ($snapshot['schema_version'] >= 2 && $section['media'] !== null) {
                 $this->require(in_array($section['component_key'], ['hero', 'editorial-copy'], true));
                 $media = $section['media'];
                 $this->keys($media, ['file_id', 'focal', 'locales']);
@@ -86,7 +91,7 @@ class PageSnapshotValidator
         return $snapshot;
     }
 
-    private function translations(mixed $translations, array $fields, array $optional = []): void
+    private function translations(mixed $translations, array $fields, array $optional = [], int $limit = 5000): void
     {
         $this->keys($translations, self::LOCALES);
         foreach ($translations as $translation) {
@@ -100,7 +105,7 @@ class PageSnapshotValidator
             $this->keys($translation['content'], array_keys($fields));
             foreach ($fields as $key => $type) {
                 $value = $translation['content'][$key];
-                $this->require(is_string($value) && mb_strlen($value) <= 5000
+                $this->require(is_string($value) && mb_strlen($value) <= $limit
                     && ($translation['status'] !== 'ready' || in_array($key, $optional, true) || trim($value) !== ''));
                 $decoded = html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
                 $this->require(! preg_match('/[<>\x00-\x08\x0b\x0c\x0e-\x1f\x7f]|(?:javascript|vbscript|data)\s*:|expression\s*\(/iu', $decoded));
@@ -130,6 +135,6 @@ class PageSnapshotValidator
 
     private function invalid(): never
     {
-        throw ValidationException::withMessages(['snapshot' => 'Invalid or unsafe CMS snapshot contract (schema versions 1 and 2).']);
+        throw ValidationException::withMessages(['snapshot' => 'Invalid or unsafe CMS snapshot contract (schema versions 1, 2 and 3).']);
     }
 }

@@ -5,12 +5,14 @@ import { DialogRoot, DialogTitle, DialogDescription, DialogClose } from 'reka-ui
 import { useI18n } from 'vue-i18n';
 import type { Locale } from '@/types';
 import type { EditorProps, Revision, RevisionResponse, Snapshot, TranslationStatus, MediaPage, MediaItem } from '@/lib/cms/schema';
-import { addSection, canPublish, changeSection, editableSnapshot, emptySnapshot, locales, setStatus, statuses, validField } from '@/lib/cms/editor';
+import { addSection, canPublish, changeSection, editableSnapshot, emptySnapshot, locales, localizationReview, setStatus, statuses, validField } from '@/lib/cms/editor';
 import { CmsApiError, cmsErrorKey, cmsRequest } from '@/lib/cms/api';
 import WorkspaceLayout from '@/layouts/WorkspaceLayout.vue';
 import SectionEditor from '@/components/cms/SectionEditor.vue';
 import RevisionHistory from '@/components/cms/RevisionHistory.vue';
 import Button from '@/components/ui/Button.vue';
+import Textarea from '@/components/ui/Textarea.vue';
+import Table from '@/components/ui/Table.vue';
 import Input from '@/components/ui/Input.vue';
 import Label from '@/components/ui/Label.vue';
 import NativeSelect from '@/components/ui/NativeSelect.vue';
@@ -20,6 +22,9 @@ import DialogContent from '@/components/ui/DialogContent.vue';
 const props = defineProps<EditorProps>();
 const { t } = useI18n();
 const snapshot = ref<Snapshot>(editableSnapshot(props.snapshot ?? emptySnapshot()));
+const review = computed(() => localizationReview(snapshot.value));
+const seo = computed(() => snapshot.value.seo!);
+const seoFields = ['title', 'description'] as const;
 const mediaPage = ref<MediaPage>({ data: [], next_page_url: null, prev_page_url: null });
 const upload = ref<HTMLInputElement | null>(null);
 const mediaBusy = ref(false);
@@ -151,6 +156,10 @@ async function sectionAction(index: number, action: 'up' | 'down' | 'duplicate' 
         <p v-if="!canPublish(snapshot) || dirty" class="mb-5 text-xs text-muted-foreground">{{ t('cms.publishHelp') }}</p>
         <div v-if="error" role="alert" class="mb-6 border border-destructive p-4 text-sm"><p>{{ t(error) }}</p><ul v-if="Object.keys(fields).length" class="mt-2 list-inside list-disc"><li v-for="(messages, field) in fields" :key="field"><strong>{{ field }}</strong>: {{ messages.join(' ') }}</li></ul></div>
         <p v-if="notice" role="status" class="mb-5 text-sm text-primary">{{ t(notice) }}</p>
+        <section class="mb-6 min-w-0 border border-border bg-card p-4" aria-labelledby="localization-review-title">
+            <h2 id="localization-review-title" class="mb-3 font-brand font-semibold">{{ t('localization.review') }}</h2>
+            <Table><caption class="sr-only">{{ t('localization.review') }}</caption><thead><tr class="border-b border-border"><th scope="col" class="p-2 text-start">{{ t('localization.content') }}</th><th v-for="language in locales" :key="language" scope="col" class="p-2 text-start" dir="ltr">{{ language.toUpperCase() }}</th></tr></thead><tbody><tr v-for="(row, index) in review" :key="index" class="border-b border-border"><th scope="row" class="p-2 text-start text-xs font-medium">{{ t(`localization.${row.key}`, { number: row.section }) }}</th><td v-for="language in locales" :key="language" class="p-2"><Badge :variant="row.statuses[language] === 'ready' ? 'default' : 'secondary'">{{ t(`cms.status.${row.statuses[language]}`) }}</Badge></td></tr></tbody></Table>
+        </section>
         <section class="mb-6 min-w-0 space-y-3 border border-border bg-card p-4" :aria-busy="mediaBusy" aria-labelledby="media-library-title">
             <h2 id="media-library-title" class="font-brand font-semibold">{{ t('media.library') }}</h2>
             <p class="text-xs text-muted-foreground">{{ t('media.uploadHelp') }}</p>
@@ -164,6 +173,17 @@ async function sectionAction(index: number, action: 'up' | 'down' | 'duplicate' 
         <div class="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1fr)_19rem]">
             <fieldset class="min-w-0 space-y-5" :disabled="busy" :aria-busy="busy"><legend class="sr-only">{{ t('cms.editor') }}</legend>
                 <section class="border border-border bg-card p-4 sm:p-5"><div class="grid gap-4 sm:grid-cols-2"><div><Label for="cms-language">{{ t('cms.contentLanguage') }}</Label><NativeSelect id="cms-language" v-model="locale"><option v-for="language in locales" :key="language" :value="language">{{ language.toUpperCase() }}</option></NativeSelect></div><div><Label for="cms-title-status">{{ t('cms.translationStatus') }}</Label><NativeSelect id="cms-title-status" :model-value="snapshot.locales[locale].status" @update:model-value="value => setStatus(snapshot.locales, locale, value as TranslationStatus, ['title'])"><option v-for="status in statuses" :key="status" :value="status">{{ t(`cms.status.${status}`) }}</option></NativeSelect></div></div><div class="mt-4" :dir="locale === 'ar' ? 'rtl' : 'ltr'"><Label for="cms-title">{{ t('cms.fields.title') }} · {{ locale.toUpperCase() }}</Label><Input v-if="snapshot.locales[locale].content" id="cms-title" v-model="snapshot.locales[locale].content!.title" maxlength="5000" :aria-invalid="!validField(snapshot.locales[locale].content!.title ?? '', 'text', snapshot.locales[locale].status)" aria-describedby="cms-title-help" /><p id="cms-title-help" class="mt-2 text-xs text-muted-foreground">{{ t(snapshot.locales[locale].content ? 'cms.textHelp' : 'cms.missingHelp') }}</p></div></section>
+                <section class="min-w-0 space-y-4 border border-border bg-card p-4 sm:p-5" aria-labelledby="cms-seo-title">
+                    <h2 id="cms-seo-title" class="font-brand font-semibold">{{ t('localization.seo') }}</h2>
+                    <p class="text-xs text-muted-foreground">{{ t('localization.seoHelp') }}</p>
+                    <div v-for="field in seoFields" :key="field" class="space-y-2" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+                        <Label :for="`seo-${field}-status`">{{ t(field === 'title' ? 'localization.seoTitle' : 'localization.seoDescription') }} &middot; {{ locale.toUpperCase() }}</Label>
+                        <NativeSelect :id="`seo-${field}-status`" :model-value="seo[field][locale].status" @update:model-value="value => setStatus(seo[field], locale, value as TranslationStatus, ['value'])"><option v-for="status in statuses" :key="status" :value="status">{{ t(`cms.status.${status}`) }}</option></NativeSelect>
+                        <Label v-if="seo[field][locale].content" :for="`seo-${field}`">{{ t(field === 'title' ? 'localization.seoTitle' : 'localization.seoDescription') }}</Label>
+                        <component :is="field === 'title' ? Input : Textarea" v-if="seo[field][locale].content" :id="`seo-${field}`" v-model="seo[field][locale].content!.value" :maxlength="field === 'title' ? 160 : 320" :aria-describedby="`seo-${field}-help`" :aria-invalid="!validField(seo[field][locale].content!.value ?? '', 'text', seo[field][locale].status, field === 'title' ? 160 : 320)" />
+                        <p :id="`seo-${field}-help`" class="text-xs text-muted-foreground">{{ t('localization.seoLimit', { count: field === 'title' ? 160 : 320 }) }}</p>
+                    </div>
+                </section>
                 <div class="flex flex-wrap items-end gap-2"><div class="min-w-0 flex-1"><Label for="cms-component">{{ t('cms.component') }}</Label><NativeSelect id="cms-component" v-model="componentKey"><option v-for="(_, key) in catalog" :key="key" :value="key">{{ t(`cms.components.${key}`) }}</option></NativeSelect></div><Button :disabled="snapshot.sections.length >= 100" @click="snapshot = addSection(snapshot, catalog, componentKey)">{{ t('cms.addSection') }}</Button></div>
                 <p v-if="!snapshot.sections.length" class="border border-dashed border-border p-8 text-center text-sm text-muted-foreground">{{ t('cms.noSections') }}</p>
                 <SectionEditor v-for="(section, index) in snapshot.sections" :key="section.id" v-model="snapshot.sections[index]!" :media-items="mediaPage.data" :definition="catalog[section.component_key]!" :locale="locale" :first="index === 0" :last="index === snapshot.sections.length - 1" :disabled="busy" :full="snapshot.sections.length >= 100" @action="action => sectionAction(index, action)" />

@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\CmsPage;
 use App\Models\CmsPageRevision;
 use App\Models\Event;
+use App\Models\StoredFile;
 use App\Services\Cms\CmsPublicationLifecycle;
 use App\Services\Cms\PublishedCmsPageReader;
 use Illuminate\Database\Eloquent\Builder;
@@ -193,7 +194,16 @@ class PublicCmsRenderingTest extends TestCase
         $id = (string) Str::uuid7();
         $this->revision->schema_version = 2;
         $this->revision->snapshot = CmsMediaSecurityTest::mediaSnapshot($id);
+        $files = Mockery::mock(StoredFile::class)->makePartial();
+        $query = Mockery::mock(Builder::class);
+        $files->shouldReceive('newQuery')->andReturn($query);
+        $query->shouldReceive('where')->with('event_id', $this->event->id)->andReturnSelf();
+        $query->shouldReceive('where')->with('kind', 'cms_image')->andReturnSelf();
+        $query->shouldReceive('whereKey')->with($id)->andReturnSelf();
+        $query->shouldReceive('first')->andReturnNull();
+        $this->app->instance(StoredFile::class, $files);
         $this->get($this->url())->assertOk()->assertInertia(fn (Assert $page) => $page
+            ->where('cms.seo.image', null)
             ->where('cms.sections.0.media.alt', 'Synthetic image')
             ->where('cms.sections.0.media.credit', 'Synthetic credit')
             ->missing('cms.sections.0.media.file_id')->missing('cms.sections.0.media_ids'))

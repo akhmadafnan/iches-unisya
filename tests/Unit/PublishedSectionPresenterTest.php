@@ -175,7 +175,7 @@ class PublishedSectionPresenterTest extends TestCase
     {
         yield 'unknown renderer' => ['sections.0.component_key', 'unknown'];
         yield 'unknown variant' => ['sections.0.variant', 'arbitrary'];
-        yield 'future schema' => ['schema_version', 3];
+        yield 'future schema' => ['schema_version', 4];
         yield 'html' => ['sections.0.locales.en.content.body', '<script>alert(1)</script>'];
         yield 'unapproved binding' => ['sections.0.bindings', [['source' => 'finance', 'field' => 'fee']]];
         foreach (['javascript:alert(1)', '//evil.test', 'http://evil.test', '/bad%0aevil', 'https://u:p@evil.test'] as $href) {

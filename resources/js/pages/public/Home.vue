@@ -7,7 +7,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <Head :title="t('publicHome.title')" />
+    <Head :title="t('publicHome.title')"><meta head-key="public-robots" name="robots" content="noindex, nofollow" /></Head>
     <PublicCmsLayout event-name="ICHES UNISYA 2027">
         <div class="grid gap-12 py-8 sm:py-16 lg:grid-cols-[2fr_1fr] lg:gap-20">
             <div>
