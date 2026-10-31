@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\SessionController;
 use App\Http\Controllers\CmsBackofficeController;
 use App\Http\Controllers\CmsLifecycleController;
+use App\Http\Controllers\EventScheduleController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PublicCmsPageController;
 use App\Http\Controllers\PublicHomeController;
@@ -34,6 +35,7 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
         });
     });
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::post('/workspace/events/{event}/schedule', EventScheduleController::class)->name('event.schedule');
         Route::get('/backoffice/website/pages', [CmsBackofficeController::class, 'index'])->name('cms.pages');
         Route::get('/backoffice/website/pages/{page}', [CmsBackofficeController::class, 'show'])->name('cms.editor');
         Route::prefix('/workspace/events/{event}/cms/pages')

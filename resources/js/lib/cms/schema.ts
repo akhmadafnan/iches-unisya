@@ -14,7 +14,9 @@ export interface Revision { id: string; version: number; created_at: string | nu
 export interface Audit { id: string; action: 'publish' | 'restore'; from_revision_id: string | null; to_revision_id: string; occurred_at: string | null }
 export interface CmsPage { id: string; slug: string; draft_revision_id: string | null; published_revision_id: string | null }
 export interface PageRow { id: string; slug: string; draft_version: number | null; published_version: number | null; updated_at: string | null }
+export interface EventSchedule { starts_at: string | null; local_start: string | null; timezone: string; timezones: string[] }
 export interface PagesProps extends DashboardProps {
+    eventSchedule: EventSchedule;
     cmsEvent: { id: string; name: string }; schemaAvailable: boolean; search: string;
     pages: { data: PageRow[]; current_page: number; last_page: number; prev_page_url: string | null; next_page_url: string | null } | null;
 }

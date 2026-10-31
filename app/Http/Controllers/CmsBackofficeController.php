@@ -29,7 +29,7 @@ class CmsBackofficeController
             ]) : null;
 
         return $this->render('cms/Pages', $this->context($request, $workspaces, $event) + [
-            'schemaAvailable' => $available, 'pages' => $pages, 'search' => $input['search'] ?? '',
+            'eventSchedule' => $this->schedule($event), 'schemaAvailable' => $available, 'pages' => $pages, 'search' => $input['search'] ?? '',
         ]);
     }
 
@@ -38,7 +38,7 @@ class CmsBackofficeController
         $event = $this->event($request, $workspaces);
         if (! $this->available()) {
             return $this->render('cms/Pages', $this->context($request, $workspaces, $event) + [
-                'schemaAvailable' => false, 'pages' => null, 'search' => '',
+                'eventSchedule' => $this->schedule($event), 'schemaAvailable' => false, 'pages' => null, 'search' => '',
             ]);
         }
         $page = CmsPage::where('event_id', $event->id)->whereKey($page)->firstOrFail();
@@ -72,6 +72,16 @@ class CmsBackofficeController
         Gate::authorize('create', [CmsPage::class, $grant->event, $workspace]);
 
         return $grant->event;
+    }
+
+    private function schedule(Event $event): array
+    {
+        return [
+            'starts_at' => $event->starts_at?->setTimezone($event->timezone)->toIso8601String(),
+            'local_start' => $event->starts_at?->setTimezone($event->timezone)->format('Y-m-d\TH:i'),
+            'timezone' => $event->timezone,
+            'timezones' => \DateTimeZone::listIdentifiers(),
+        ];
     }
 
     private function available(): bool
