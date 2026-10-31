@@ -61,6 +61,23 @@ class PageRevisionWriter
         return $snapshot;
     }
 
+    public function validatePublicationMedia(array $snapshot): void
+    {
+        if ($snapshot['schema_version'] !== 2) {
+            return;
+        }
+        foreach ($snapshot['sections'] as $section) {
+            if (! $section['visible'] || $section['media'] === null) {
+                continue;
+            }
+            $english = $section['media']['locales']['en'];
+            $alt = $english['content']['alt'] ?? null;
+            if ($english['status'] !== 'ready' || ! is_string($alt) || preg_match('/\S/u', $alt) !== 1) {
+                throw ValidationException::withMessages(['snapshot' => 'Publication requires ready, nonempty English alt text for visible media.']);
+            }
+        }
+    }
+
     public function isPrivateImage(StoredFile $file, Event $event): bool
     {
         $types = ['jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'webp' => 'image/webp'];

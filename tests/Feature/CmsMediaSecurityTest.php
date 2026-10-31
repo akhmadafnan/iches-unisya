@@ -8,10 +8,14 @@ use App\Models\Event;
 use App\Models\RoleAssignment;
 use App\Models\StoredFile;
 use App\Models\User;
+use App\Services\Cms\PageRevisionWriter;
 use App\Services\Cms\PublishedCmsPageReader;
 use App\Services\Files\PrivateFiles;
 use App\Services\Workspaces;
+use Illuminate\Database\ConnectionResolver;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\MySqlConnection;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +23,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Mockery;
+use PDO;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 use Tests\Unit\PublishedSectionPresenterTest as Fixtures;
@@ -178,6 +183,94 @@ class CmsMediaSecurityTest extends TestCase
         ]];
 
         return $snapshot;
+    }
+
+    public static function incompleteDraftAlts(): iterable
+    {
+        yield 'missing English translation' => [['status' => 'missing', 'content' => null]];
+        foreach (['', " \t\n ", 'Incomplete alternative text'] as $alt) {
+            yield 'draft '.json_encode($alt) => [['status' => 'draft', 'content' => ['alt' => $alt, 'caption' => '', 'credit' => '']]];
+        }
+    }
+
+    #[DataProvider('incompleteDraftAlts')]
+    public function test_incomplete_media_drafts_can_be_saved_without_publication_readiness(array $english): void
+    {
+        $id = (string) Str::uuid7();
+        $snapshot = self::mediaSnapshot($id);
+        $snapshot['sections'][0]['media']['locales']['en'] = $english;
+        $original = $snapshot;
+        $this->workspace();
+        $this->user->exists = $this->event->exists = true;
+        $page = (new CmsPage)->forceFill([
+            'id' => (string) Str::uuid7(), 'event_id' => $this->event->id, 'slug' => 'about',
+            'draft_revision_id' => null, 'published_revision_id' => null,
+        ]);
+        $page->exists = true;
+        $connection = Mockery::mock(MySqlConnection::class)->makePartial();
+        $connection->__construct(Mockery::mock(PDO::class), 'media_draft_contract', '', ['name' => 'media_draft_contract']);
+        $inserted = false;
+        $connection->shouldReceive('select')->andReturnUsing(function ($sql, $bindings) use ($id, $page, &$inserted): array {
+            if (str_contains($sql, 'from `users`') || str_contains($sql, 'from `events`')) {
+                return [(object) ['exists' => true]];
+            }
+            if (str_contains($sql, 'from `cms_pages`')) {
+                $this->assertStringContainsString('for update', $sql);
+
+                return [$page->getAttributes()];
+            }
+            if (str_contains($sql, 'from `cms_page_revisions`')) {
+                if (str_starts_with($sql, 'select exists')) {
+                    $this->assertTrue($inserted);
+                    $this->assertSame($page->id, $bindings[0]);
+                    $this->assertTrue(Str::isUuid($bindings[1]));
+
+                    return [(object) ['exists' => true]];
+                }
+                $this->assertStringContainsString('for update', $sql);
+
+                return [];
+            }
+            $this->assertStringContainsString('from `stored_files`', $sql);
+            $this->assertStringContainsString('for update', $sql);
+            $this->assertSame([$id], $bindings);
+
+            return [[
+                'id' => $id, 'event_id' => $this->event->id, 'kind' => 'cms_image', 'disk' => 'local', 'visibility' => 'private',
+                'storage_key' => 'files/'.$this->event->id.'/cms_image/'.Str::uuid7().'.png',
+                'detected_mime' => 'image/png', 'size_bytes' => 68, 'sha256' => str_repeat('a', 64),
+            ]];
+        });
+        $connection->shouldReceive('insert')->once()->andReturnUsing(function ($sql, $bindings) use ($original, &$inserted): bool {
+            $this->assertStringContainsString('insert into `cms_page_revisions`', $sql);
+            $this->assertContains(json_encode($original), $bindings);
+            $inserted = true;
+
+            return true;
+        });
+        $connection->shouldReceive('update')->once()->andReturnUsing(function ($sql) {
+            $this->assertStringContainsString('update `cms_pages`', $sql);
+            $this->assertStringContainsString('draft_revision_id', $sql);
+            $this->assertStringNotContainsString('published_revision_id', $sql);
+
+            return 1;
+        });
+        $connection->shouldNotReceive('delete');
+        $connection->shouldReceive('transaction')->andReturnUsing(fn ($callback) => $callback());
+        DB::shouldReceive('transaction')->once()->andReturnUsing(fn ($callback) => $callback());
+        $resolver = new ConnectionResolver(['media_draft_contract' => $connection]);
+        $resolver->setDefaultConnection('media_draft_contract');
+        $previous = Model::getConnectionResolver();
+        Model::setConnectionResolver($resolver);
+        try {
+            $revision = app(PageRevisionWriter::class)->saveDraft($this->user, $this->event, $page, $snapshot, 'assignment:1');
+            $this->assertSame($original, $revision->snapshot);
+            $this->assertSame(2, $revision->schema_version);
+            $this->assertSame($english, $revision->snapshot['sections'][0]['media']['locales']['en']);
+            $this->assertSame($original, $snapshot);
+        } finally {
+            Model::setConnectionResolver($previous);
+        }
     }
 
     private function publishedFixture(string $extension = 'png', ?string $bytes = null): void
