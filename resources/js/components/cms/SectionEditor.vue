@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import type { Locale } from '@/types';
-import type { ComponentDefinition, Section, TranslationStatus } from '@/lib/cms/schema';
-import { setStatus, statuses, validField } from '@/lib/cms/editor';
+import type { ComponentDefinition, Section, TranslationStatus, MediaItem } from '@/lib/cms/schema';
+import { setStatus, statuses, validField, selectMedia } from '@/lib/cms/editor';
 import Button from '@/components/ui/Button.vue';
 import NativeSelect from '@/components/ui/NativeSelect.vue';
+import Input from '@/components/ui/Input.vue';
 import Textarea from '@/components/ui/Textarea.vue';
 import Label from '@/components/ui/Label.vue';
 import Badge from '@/components/ui/Badge.vue';
 
 const section = defineModel<Section>({ required: true });
-defineProps<{ definition: ComponentDefinition; locale: Locale; first: boolean; last: boolean; disabled: boolean; full: boolean }>();
+defineProps<{ mediaItems: MediaItem[]; definition: ComponentDefinition; locale: Locale; first: boolean; last: boolean; disabled: boolean; full: boolean }>();
 defineEmits<{ action: [action: 'up' | 'down' | 'duplicate' | 'delete'] }>();
 const { t } = useI18n();
 </script>
@@ -32,7 +33,27 @@ const { t } = useI18n();
             <div class="flex items-center gap-2"><input :id="`${section.id}-visible`" v-model="section.visible" type="checkbox" class="size-4 accent-primary" :disabled="disabled" /><Label :for="`${section.id}-visible`">{{ t('cms.visible') }}</Label></div>
         </div>
         <p v-if="section.component_key === 'countdown'" class="mt-4 text-xs text-muted-foreground">{{ t('cms.countdownNote') }}</p>
-        <p v-if="section.media_ids.length" class="mt-4 text-xs text-muted-foreground">{{ t('cms.mediaPreserved', { count: section.media_ids.length }) }}</p>
+        <p v-if="section.media_ids.length && !section.media" class="mt-4 text-xs text-muted-foreground">{{ t('cms.mediaPreserved', { count: section.media_ids.length }) }}</p>
+        <fieldset v-if="['hero', 'editorial-copy'].includes(section.component_key)" class="mt-5 space-y-3 border border-border p-3" :disabled="disabled">
+            <legend class="px-1 text-xs">{{ t('media.sectionImage') }}</legend>
+            <Label :for="`${section.id}-image`">{{ t('media.choose') }}</Label>
+            <NativeSelect :id="`${section.id}-image`" :model-value="section.media?.file_id ?? ''" @update:model-value="value => selectMedia(section, String(value))">
+                <option value="">{{ t('media.none') }}</option>
+                <option v-if="section.media && !mediaItems.some(item => item.id === section.media!.file_id)" :value="section.media.file_id">{{ section.media.file_id }}</option>
+                <option v-for="item in mediaItems" :key="item.id" :value="item.id">{{ item.original_name }}</option>
+            </NativeSelect>
+            <template v-if="section.media">
+                <Button type="button" variant="outline" @click="selectMedia(section, '')">{{ t('media.remove') }}</Button>
+                <Label :for="`${section.id}-media-status`">{{ t('cms.translationStatus') }} &middot; {{ locale.toUpperCase() }}</Label>
+                <NativeSelect :id="`${section.id}-media-status`" :model-value="section.media.locales[locale].status" @update:model-value="value => setStatus(section.media!.locales, locale, value as TranslationStatus, ['alt', 'caption', 'credit'])"><option v-for="status in statuses" :key="status" :value="status">{{ t(`cms.status.${status}`) }}</option></NativeSelect>
+                <div v-for="field in ['alt', 'caption', 'credit']" v-if="section.media.locales[locale].content" :key="field" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+                    <Label :for="`${section.id}-media-${field}`">{{ t(`media.${field}`) }}</Label>
+                    <Input :id="`${section.id}-media-${field}`" v-model="section.media.locales[locale].content![field]" maxlength="5000" :aria-describedby="`${section.id}-media-help`" :aria-invalid="!validField(section.media.locales[locale].content![field] ?? '', 'text', field === 'alt' ? section.media.locales[locale].status : 'draft')" />
+                </div>
+                <p :id="`${section.id}-media-help`" class="text-xs text-muted-foreground">{{ t('media.altHelp') }}</p>
+                <div class="grid gap-3 sm:grid-cols-2"><div v-for="axis in (['x', 'y'] as const)" :key="axis"><Label :for="`${section.id}-focal-${axis}`">{{ t(`media.focal${axis.toUpperCase()}`) }}</Label><input :id="`${section.id}-focal-${axis}`" v-model.number="section.media.focal[axis]" type="range" min="0" max="100" step="1" class="block w-full accent-primary" dir="ltr" :disabled="disabled" /><output :for="`${section.id}-focal-${axis}`" class="text-xs tabular-nums">{{ section.media.focal[axis] }}%</output></div></div>
+            </template>
+        </fieldset>
         <div class="mt-5" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
             <Label :for="`${section.id}-status`">{{ t('cms.translationStatus') }} · {{ locale.toUpperCase() }}</Label>
             <NativeSelect :id="`${section.id}-status`" :model-value="section.locales[locale].status" :disabled="disabled" @update:model-value="value => setStatus(section.locales, locale, value as TranslationStatus, Object.keys(definition.fields))"><option v-for="status in statuses" :key="status" :value="status">{{ t(`cms.status.${status}`) }}</option></NativeSelect>

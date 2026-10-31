@@ -3,8 +3,10 @@
 use App\Http\Controllers\Auth\SessionController;
 use App\Http\Controllers\CmsBackofficeController;
 use App\Http\Controllers\CmsLifecycleController;
+use App\Http\Controllers\CmsMediaController;
 use App\Http\Controllers\EventScheduleController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\PublicCmsMediaController;
 use App\Http\Controllers\PublicCmsPageController;
 use App\Http\Controllers\PublicHomeController;
 use App\Http\Controllers\StoredFileDownloadController;
@@ -19,6 +21,10 @@ Route::get('/', PublicHomeController::class)->name('home');
 Route::get('/events/{event:slug}/pages/{page:slug}', PublicCmsPageController::class)
     ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
     ->name('public.cms.page');
+
+Route::get('/events/{event}/pages/{page}/sections/{section}/media/{media}', PublicCmsMediaController::class)
+    ->where(['event' => '[a-z0-9]+(?:-[a-z0-9]+)*', 'page' => '[a-z0-9]+(?:-[a-z0-9]+)*'])
+    ->whereUuid('section')->whereUuid('media')->name('public.cms.media');
 
 Route::middleware(AuthPrivacy::class)->group(function (): void {
     Route::post('/locale', LocaleController::class)->name('locale');
@@ -35,6 +41,8 @@ Route::middleware(AuthPrivacy::class)->group(function (): void {
         });
     });
     Route::middleware(['auth', ValidateWorkspace::class])->group(function (): void {
+        Route::get('/workspace/events/{event}/cms/media', [CmsMediaController::class, 'index'])->name('cms.media.index');
+        Route::post('/workspace/events/{event}/cms/media', [CmsMediaController::class, 'store'])->name('cms.media.store');
         Route::post('/workspace/events/{event}/schedule', EventScheduleController::class)->name('event.schedule');
         Route::get('/backoffice/website/pages', [CmsBackofficeController::class, 'index'])->name('cms.pages');
         Route::get('/backoffice/website/pages/{page}', [CmsBackofficeController::class, 'show'])->name('cms.editor');

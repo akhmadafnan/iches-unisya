@@ -173,10 +173,18 @@ class CmsLifecycleSecurityTest extends TestCase
         yield 'cache failure explicitly reports publication committed' => [false, true, 'publish'];
         yield 'restore commit then invalidate' => [false, false, 'restore'];
         yield 'restore audit failure rolls back without invalidation' => [true, false, 'restore'];
+        foreach (['publish', 'restore'] as $action) {
+            foreach (['missing', 'draft', 'empty draft alt', 'whitespace draft alt', 'Unicode whitespace alt'] as $case) {
+                yield $action.' rejects '.$case.' media alt before mutation' => [false, false, $action, $case, true];
+            }
+            foreach (['ready', 'ready without translations', 'ready with draft translations', 'hidden', 'no media'] as $case) {
+                yield $action.' accepts '.$case.' v2 media' => [false, false, $action, $case, false];
+            }
+        }
     }
 
     #[DataProvider('transactionOutcomes')]
-    public function test_publication_transaction_and_cache_callback_contract_without_database(bool $auditFails, bool $cacheFails, string $action): void
+    public function test_publication_transaction_and_cache_callback_contract_without_database(bool $auditFails, bool $cacheFails, string $action, ?string $mediaCase = null, bool $reject = false): void
     {
         // Simulated SQL boundary, real Eloquent/service/Gate and Laravel transaction callbacks.
         // This does not prove MySQL atomicity, FKs or concurrent interleaving.
@@ -190,22 +198,61 @@ class CmsLifecycleSecurityTest extends TestCase
         }
         $missing = ['status' => 'missing', 'content' => null];
         $snapshot = ['schema_version' => 1, 'locales' => ['en' => ['status' => 'ready', 'content' => ['title' => 'Conference information']], 'id' => $missing, 'ar' => $missing], 'sections' => []];
+        $fileId = (string) Str::uuid7();
+        $file = [
+            'id' => $fileId, 'event_id' => $event->id, 'kind' => 'cms_image', 'disk' => 'local', 'visibility' => 'private',
+            'storage_key' => 'files/'.$event->id.'/cms_image/'.Str::uuid7().'.png',
+            'detected_mime' => 'image/png', 'size_bytes' => 68, 'sha256' => str_repeat('a', 64),
+        ];
+        if ($mediaCase !== null) {
+            $snapshot = CmsMediaSecurityTest::mediaSnapshot($fileId);
+            $media = &$snapshot['sections'][0]['media'];
+            $media['locales']['en']['content']['caption'] = '';
+            $media['locales']['en']['content']['credit'] = '';
+            if ($mediaCase === 'ready without translations') {
+                foreach (['id', 'ar'] as $locale) {
+                    $media['locales'][$locale] = ['status' => 'missing', 'content' => null];
+                }
+            } elseif ($mediaCase === 'ready with draft translations') {
+                foreach (['id', 'ar'] as $locale) {
+                    $media['locales'][$locale] = ['status' => 'draft', 'content' => ['alt' => 'Draft alt', 'caption' => '', 'credit' => '']];
+                }
+            } elseif ($mediaCase === 'missing') {
+                $media['locales']['en'] = ['status' => 'missing', 'content' => null];
+            } elseif ($mediaCase === 'Unicode whitespace alt') {
+                $media['locales']['en']['content']['alt'] = "\u{00a0}\u{2003}\u{0085}";
+            } elseif (in_array($mediaCase, ['draft', 'empty draft alt', 'whitespace draft alt'], true)) {
+                $media['locales']['en']['status'] = 'draft';
+                $media['locales']['en']['content']['alt'] = match ($mediaCase) {
+                    'empty draft alt' => '',
+                    'whitespace draft alt' => " \t\n ",
+                    default => 'Incomplete English alt',
+                };
+            } elseif ($mediaCase === 'hidden') {
+                $snapshot['sections'][0]['visible'] = false;
+                $media['locales']['en'] = ['status' => 'missing', 'content' => null];
+            } elseif ($mediaCase === 'no media') {
+                $media = null;
+            }
+            unset($media);
+        }
+        $before = $snapshot;
         $pdo = Mockery::mock(PDO::class);
         $pdo->shouldReceive('beginTransaction')->once()->andReturnTrue();
         $pdo->shouldReceive('exec')->with('SAVEPOINT trans2')->andReturn(0);
         $pdo->shouldReceive('exec')->with('ROLLBACK TO SAVEPOINT trans2')->times($auditFails ? 1 : 0)->andReturn(0);
         $pdo->shouldReceive('inTransaction')->andReturnTrue();
         $committed = false;
-        $pdo->shouldReceive('commit')->times($auditFails ? 0 : 1)->andReturnUsing(function () use (&$committed): bool {
+        $pdo->shouldReceive('commit')->times($auditFails || $reject ? 0 : 1)->andReturnUsing(function () use (&$committed): bool {
             $committed = true;
 
             return true;
         });
-        $pdo->shouldReceive('rollBack')->times($auditFails ? 1 : 0)->andReturnTrue();
+        $pdo->shouldReceive('rollBack')->times($auditFails || $reject ? 1 : 0)->andReturnTrue();
         $connection = Mockery::mock(MySqlConnection::class)->makePartial();
         $connection->__construct($pdo, 'cms_contract', '', ['name' => 'cms_contract']);
         $connection->setTransactionManager(new DatabaseTransactionsManager);
-        $connection->shouldReceive('select')->andReturnUsing(function ($sql) use ($user, $event, $page, $revisionId, $snapshot): array {
+        $connection->shouldReceive('select')->andReturnUsing(function ($sql) use ($user, $event, $page, $revisionId, $snapshot, $file): array {
             if (str_contains($sql, 'from `users`')) {
                 return [$user->getAttributes()];
             }
@@ -217,11 +264,16 @@ class CmsLifecycleSecurityTest extends TestCase
 
                 return [$page->getAttributes()];
             }
+            if (str_contains($sql, 'from `stored_files`')) {
+                $this->assertStringContainsString('for update', $sql);
+
+                return [$file];
+            }
             $this->assertStringContainsString('from `cms_page_revisions`', $sql);
 
-            return [['id' => $revisionId, 'page_id' => $page->id, 'version' => 1, 'schema_version' => 1, 'snapshot' => json_encode($snapshot)]];
+            return [['id' => $revisionId, 'page_id' => $page->id, 'version' => 1, 'schema_version' => $snapshot['schema_version'], 'snapshot' => json_encode($snapshot)]];
         });
-        $connection->shouldReceive('update')->once()->andReturnUsing(function ($sql, $bindings) use ($revisionId, $event, $page): int {
+        $connection->shouldReceive('update')->times($reject ? 0 : 1)->andReturnUsing(function ($sql, $bindings) use ($revisionId, $event, $page): int {
             $this->assertStringContainsString('update `cms_pages`', $sql);
             $this->assertStringNotContainsString('draft_revision_id', $sql);
             $this->assertSame($revisionId, $bindings[0]);
@@ -230,7 +282,7 @@ class CmsLifecycleSecurityTest extends TestCase
 
             return 1;
         });
-        $connection->shouldReceive('insert')->once()->andReturnUsing(function ($sql, $bindings) use ($auditFails, $user, $revisionId, $action, $page): bool {
+        $connection->shouldReceive('insert')->times($reject ? 0 : 1)->andReturnUsing(function ($sql, $bindings) use ($auditFails, $user, $revisionId, $action, $page): bool {
             $this->assertStringContainsString('insert into `cms_publication_events`', $sql);
             $this->assertContains($user->id, $bindings);
             $this->assertContains($revisionId, $bindings);
@@ -249,9 +301,9 @@ class CmsLifecycleSecurityTest extends TestCase
         $query->shouldReceive('first')->andReturn(new RoleAssignment);
         $this->app->instance(Workspaces::class, $workspaces);
         DB::shouldReceive('transaction')->once()->andReturnUsing(fn ($callback, $attempts) => $connection->transaction($callback, $attempts));
-        DB::shouldReceive('table')->with('cms_pages')->once()->andReturnUsing(fn ($table) => $connection->table($table));
-        DB::shouldReceive('afterCommit')->times($auditFails ? 0 : 1)->andReturnUsing(fn ($callback) => $connection->afterCommit($callback));
-        if (! $auditFails) {
+        DB::shouldReceive('table')->with('cms_pages')->times($reject ? 0 : 1)->andReturnUsing(fn ($table) => $connection->table($table));
+        DB::shouldReceive('afterCommit')->times($auditFails || $reject ? 0 : 1)->andReturnUsing(fn ($callback) => $connection->afterCommit($callback));
+        if (! $auditFails && ! $reject) {
             Cache::shouldReceive('forget')->once()->with(CmsPublicationLifecycle::cacheKey($page))->andReturnUsing(function () use (&$committed, $cacheFails): bool {
                 $this->assertTrue($committed, 'Cache invalidated before outer commit.');
                 if ($cacheFails) {
@@ -266,10 +318,26 @@ class CmsLifecycleSecurityTest extends TestCase
         $resolver->setDefaultConnection('cms_contract');
         Model::setConnectionResolver($resolver);
         try {
+            if ($reject) {
+                // Exercise the real transaction/Gate/validators through Laravel's HTTP validation response.
+                Route::post('/_test/publication-media', function () use ($action, $user, $event, $page, $revisionId) {
+                    app(CmsPublicationLifecycle::class)->$action($user, $event, $page, 'assignment:1', $revisionId);
+
+                    return response()->json(['unexpected' => 'publication accepted']);
+                });
+                $this->postJson('/_test/publication-media')->assertUnprocessable()->assertJsonValidationErrors('snapshot')
+                    ->assertJsonPath('errors.snapshot.0', 'Publication requires ready, nonempty English alt text for visible media.');
+                $this->assertFalse($committed);
+                Cache::shouldNotHaveReceived('forget');
+
+                return;
+            }
             $revision = app(CmsPublicationLifecycle::class)->$action($user, $event, $page, 'assignment:1', $revisionId);
             $this->assertFalse($auditFails || $cacheFails);
             $this->assertInstanceOf(CmsPageRevision::class, $revision);
             $this->assertSame($revisionId, $revision->id);
+            $this->assertSame($before, $revision->snapshot);
+            $this->assertSame($before['schema_version'], $revision->schema_version);
         } catch (HttpException $exception) {
             $this->assertTrue($cacheFails);
             $this->assertSame(503, $exception->getStatusCode());

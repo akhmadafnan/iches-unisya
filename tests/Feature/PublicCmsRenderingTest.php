@@ -187,6 +187,21 @@ class PublicCmsRenderingTest extends TestCase
         $this->assertSame($original['page'], $reader->read('synthetic-event', 'about', 'en')['page']);
     }
 
+    public function test_v2_published_media_is_projected_without_private_or_draft_metadata(): void
+    {
+        $this->fixture();
+        $id = (string) Str::uuid7();
+        $this->revision->schema_version = 2;
+        $this->revision->snapshot = CmsMediaSecurityTest::mediaSnapshot($id);
+        $this->get($this->url())->assertOk()->assertInertia(fn (Assert $page) => $page
+            ->where('cms.sections.0.media.alt', 'Synthetic image')
+            ->where('cms.sections.0.media.credit', 'Synthetic credit')
+            ->missing('cms.sections.0.media.file_id')->missing('cms.sections.0.media_ids'))
+            ->assertDontSee('SECRET ALT')->assertDontSee('storage_key')->assertDontSee('sha256');
+        $this->revision->schema_version = 1;
+        $this->get($this->url())->assertNotFound();
+    }
+
     public function test_homepage_fallback_preserves_noindex_and_invalid_slugs_fail_closed(): void
     {
         config(['iches-public.event_slug' => null]);

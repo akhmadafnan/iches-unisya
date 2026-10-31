@@ -76,7 +76,7 @@ class CmsSnapshotContractTest extends TestCase
 
     public static function invalidCases(): iterable
     {
-        yield 'future schema' => ['schema_version', 2];
+        yield 'future schema' => ['schema_version', 3];
         yield 'string schema' => ['schema_version', '1'];
         yield 'unknown locale' => ['locales.fr', ['status' => 'missing', 'content' => null]];
         yield 'bad status' => ['locales.en.status', 'published'];
@@ -274,6 +274,43 @@ class CmsSnapshotContractTest extends TestCase
         $snapshot['sections'][0]['bindings'] = $bindings;
         $this->expectException(ValidationException::class);
         (new PageSnapshotValidator)->validate($json ? json_encode($snapshot, JSON_THROW_ON_ERROR) : $snapshot);
+    }
+
+    public function test_v2_media_is_strict_and_v1_snapshot_remains_unchanged(): void
+    {
+        $validator = new PageSnapshotValidator;
+        $v1 = $this->snapshot();
+        $this->assertSame($v1, $validator->validate($v1));
+        $v2 = CmsMediaSecurityTest::mediaSnapshot((string) Str::uuid7());
+        $this->assertSame($v2, $validator->validate($v2));
+        $this->assertSame($v2, $validator->validate(json_encode($v2)));
+        $this->assertSame($v1, $validator->validate($v1));
+        foreach ([
+            'sections.0.media.url' => 'https://remote.test/image.png',
+            'sections.0.media.file_id' => (string) Str::uuid7(),
+            'sections.0.media.focal.x' => -1,
+            'sections.0.media.focal.y' => 101,
+            'sections.0.media.focal.css' => 'background:red',
+            'sections.0.media.focal' => ['x' => '50', 'y' => 50],
+            'sections.0.media.locales.en.content.alt' => '',
+            'sections.0.media.locales.en.content.caption' => '<script>bad</script>',
+            'sections.0.media.locales.en.content.credit' => 'javascript:bad',
+            'sections.0.media.locales.en.content.extra' => 'unexpected',
+            'sections.0.media.locales.fr' => ['status' => 'missing', 'content' => null],
+            'sections.0.component_key' => 'countdown',
+        ] as $path => $value) {
+            $changed = $v2;
+            data_set($changed, $path, $value);
+            try {
+                $validator->validate($changed);
+                $this->fail('Unsafe v2 media accepted: '.$path);
+            } catch (ValidationException) {
+                $this->addToAssertionCount(1);
+            }
+        }
+        $v1['sections'][0]['media'] = null;
+        $this->expectException(ValidationException::class);
+        $validator->validate($v1);
     }
 
     public static function slugs(): iterable

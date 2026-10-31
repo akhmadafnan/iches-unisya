@@ -49,6 +49,7 @@ class CmsPublicationLifecycle
             $revision = $locked->revisions()->whereKey($revisionId)->firstOrFail();
             abort_if($locked->published_revision_id === $revision->id, 409, 'Revision is already published.');
             $snapshot = $this->writer->validateSnapshot($event, $revision->snapshot);
+            $this->writer->validatePublicationMedia($snapshot);
             if ($snapshot['locales']['en']['status'] !== 'ready' || trim($snapshot['locales']['en']['content']['title'] ?? '') === '') {
                 throw ValidationException::withMessages(['snapshot' => 'Publication requires a ready, nonempty EN title.']);
             }

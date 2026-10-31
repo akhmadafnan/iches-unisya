@@ -7,6 +7,7 @@ use App\Models\CmsPageRevision;
 use App\Models\Event;
 use App\Models\StoredFile;
 use App\Models\User;
+use App\Services\Files\PrivateFiles;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
@@ -51,18 +52,57 @@ class PageRevisionWriter
         foreach ($snapshot['sections'] as $section) {
             foreach ($section['media_ids'] as $id) {
                 $file = StoredFile::whereKey($id)->lockForUpdate()->first();
-                $types = ['jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'webp' => 'image/webp'];
-                $extension = $file ? pathinfo($file->storage_key, PATHINFO_EXTENSION) : '';
-                if (! $file || $file->event_id !== $event->getKey() || $file->kind !== 'cms_image'
-                    || $file->disk !== 'local' || $file->visibility !== 'private'
-                    || ($types[$extension] ?? null) !== $file->detected_mime || $file->size_bytes <= 0
-                    || $file->size_bytes > 5 * 1024 * 1024 || ! preg_match('/^[a-f0-9]{64}$/D', $file->sha256)
-                    || ! preg_match('~^files/'.preg_quote($event->getKey(), '~').'/cms_image/[a-f0-9-]{36}\.(jpg|jpeg|png|webp)$~D', $file->storage_key)) {
+                if (! $file || ! $this->isPrivateImage($file, $event)) {
                     throw ValidationException::withMessages(['media_ids' => 'Invalid private CMS image reference for this event.']);
                 }
             }
         }
 
         return $snapshot;
+    }
+
+    public function validatePublicationMedia(array $snapshot): void
+    {
+        if ($snapshot['schema_version'] !== 2) {
+            return;
+        }
+        foreach ($snapshot['sections'] as $section) {
+            if (! $section['visible'] || $section['media'] === null) {
+                continue;
+            }
+            $english = $section['media']['locales']['en'];
+            $alt = $english['content']['alt'] ?? null;
+            if ($english['status'] !== 'ready' || ! is_string($alt) || preg_match('/\S/u', $alt) !== 1) {
+                throw ValidationException::withMessages(['snapshot' => 'Publication requires ready, nonempty English alt text for visible media.']);
+            }
+        }
+    }
+
+    public function isPrivateImage(StoredFile $file, Event $event): bool
+    {
+        $types = ['jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'webp' => 'image/webp'];
+        $extension = pathinfo($file->storage_key, PATHINFO_EXTENSION);
+
+        return $file->event_id === $event->getKey() && $file->kind === 'cms_image'
+            && $file->disk === 'local' && $file->visibility === 'private'
+            && ($types[$extension] ?? null) === $file->detected_mime && $file->size_bytes > 0
+            && $file->size_bytes <= 5 * 1024 * 1024 && preg_match('/^[a-f0-9]{64}$/D', $file->sha256)
+            && preg_match('~^files/'.preg_quote($event->getKey(), '~').'/cms_image/[a-f0-9-]{36}\.(jpg|jpeg|png|webp)$~D', $file->storage_key);
+    }
+
+    public function imageBytes(StoredFile $file, Event $event, PrivateFiles $files): string
+    {
+        abort_unless($this->isPrivateImage($file, $event), 404);
+        $stream = $files->verifiedStream($file);
+        try {
+            $bytes = stream_get_contents($stream);
+        } finally {
+            fclose($stream);
+        }
+        $image = is_string($bytes) ? @getimagesizefromstring($bytes) : false;
+        abort_unless($image && $image['mime'] === $file->detected_mime
+            && (new \finfo(FILEINFO_MIME_TYPE))->buffer($bytes) === $file->detected_mime, 404);
+
+        return $bytes;
     }
 }

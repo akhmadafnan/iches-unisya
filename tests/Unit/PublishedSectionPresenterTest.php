@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use PHPUnit\Framework\Attributes\DataProvider;
+use Tests\Feature\CmsMediaSecurityTest;
 use Tests\TestCase;
 
 class PublishedSectionPresenterTest extends TestCase
@@ -138,11 +139,43 @@ class PublishedSectionPresenterTest extends TestCase
         $this->assertNull($countdown['bindings']['starts_at']);
     }
 
+    public function test_explicit_v2_media_uses_ready_locale_metadata_and_never_exposes_legacy_ids_or_draft_alt(): void
+    {
+        $id = (string) Str::uuid7();
+        $snapshot = CmsMediaSecurityTest::mediaSnapshot($id);
+        $presenter = app(PublishedSectionPresenter::class);
+        $cached = $presenter->editorial($snapshot);
+        $this->assertStringNotContainsString('SECRET ALT', json_encode($cached));
+        foreach (['en', 'id', 'ar'] as $locale) {
+            $section = $presenter->present($cached, self::event(), 'about', $locale)['sections'][0];
+            $this->assertSame('Synthetic image', $section['media']['alt']);
+            $this->assertSame('en', $section['media']['locale']);
+            $this->assertSame($locale !== 'en', $section['media']['fallback']);
+            $this->assertSame(['x' => 25, 'y' => 75], $section['media']['focal']);
+            $this->assertStringEndsWith('/media/'.$id, $section['media']['url']);
+            $this->assertArrayNotHasKey('media_ids', $section);
+        }
+        $snapshot['sections'][0]['media']['locales']['id'] = ['status' => 'ready', 'content' => [
+            'alt' => 'Gambar siap', 'caption' => 'Keterangan siap', 'credit' => '',
+        ]];
+        $section = $presenter->present($presenter->editorial($snapshot), self::event(), 'about', 'id')['sections'][0];
+        $this->assertSame('Gambar siap', $section['media']['alt']);
+        $this->assertSame('Keterangan siap', $section['media']['caption']);
+        $this->assertFalse($section['media']['fallback']);
+        $snapshot['sections'][0]['media']['locales']['en']['status'] = 'draft';
+        $section = $presenter->present($presenter->editorial($snapshot), self::event(), 'about', 'ar')['sections'][0];
+        $this->assertNull($section['media']);
+        $legacy = $presenter->present($presenter->editorial(self::snapshot()), self::event(), 'about', 'en');
+        foreach ($legacy['sections'] as $section) {
+            $this->assertNull($section['media']);
+        }
+    }
+
     public static function unsafe(): iterable
     {
         yield 'unknown renderer' => ['sections.0.component_key', 'unknown'];
         yield 'unknown variant' => ['sections.0.variant', 'arbitrary'];
-        yield 'future schema' => ['schema_version', 2];
+        yield 'future schema' => ['schema_version', 3];
         yield 'html' => ['sections.0.locales.en.content.body', '<script>alert(1)</script>'];
         yield 'unapproved binding' => ['sections.0.bindings', [['source' => 'finance', 'field' => 'fee']]];
         foreach (['javascript:alert(1)', '//evil.test', 'http://evil.test', '/bad%0aevil', 'https://u:p@evil.test'] as $href) {
