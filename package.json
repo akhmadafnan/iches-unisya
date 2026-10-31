@@ -8,7 +8,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "typecheck": "vue-tsc --noEmit"
+        "typecheck": "vue-tsc --noEmit",
+        "test:countdown": "node --experimental-strip-types --test tests/js/countdown.test.ts"
     },
     "dependencies": {
         "@fontsource-variable/geist-mono": "5.3.0",

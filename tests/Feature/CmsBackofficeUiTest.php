@@ -53,7 +53,7 @@ class CmsBackofficeUiTest extends TestCase
     private function workspace(bool $selected = true, bool $eligible = true): Event
     {
         $user = (new User)->forceFill(['id' => (string) Str::uuid7(), 'name' => 'Synthetic admin', 'email' => 'synthetic@iches.test', 'password' => 'never-share']);
-        $event = (new Event)->forceFill(['id' => (string) Str::uuid7(), 'name' => 'Synthetic event']);
+        $event = (new Event)->setDateFormat('Y-m-d H:i:s')->forceFill(['id' => (string) Str::uuid7(), 'name' => 'Synthetic event', 'timezone' => 'Asia/Jakarta', 'starts_at' => null]);
         $grant = (new RoleAssignment)->forceFill(['id' => 1, 'role_key' => 'superadmin', 'institution_id' => null]);
         $grant->setRelation('event', $event);
         $workspaces = Mockery::mock(Workspaces::class)->makePartial();
@@ -94,12 +94,29 @@ class CmsBackofficeUiTest extends TestCase
                 $this->get($url)->assertOk()->assertHeader('Cache-Control', 'no-store, private')
                     ->assertHeader('X-Robots-Tag', 'noindex, nofollow, noarchive')
                     ->assertInertia(fn (Assert $page) => $page->component('cms/Pages')->where('schemaAvailable', false)
+                        ->where('eventSchedule.starts_at', null)->where('eventSchedule.local_start', null)
+                        ->where('eventSchedule.timezone', 'Asia/Jakarta')->where('eventSchedule.timezones', \DateTimeZone::listIdentifiers())
                         ->where('pages', null)->where('cmsEvent', ['id' => $event->id, 'name' => $event->name])
                         ->where('locale', $locale)->where('activeWorkspace', 'assignment:1')
                         ->where('account', ['name' => 'Synthetic admin', 'email' => 'synthetic@iches.test'])
                         ->missing('snapshot')->missing('storage_key')->missing('account.password')->missing('catalog'));
             }
         }
+    }
+
+    public function test_schedule_props_use_event_timezone_and_exclude_unrelated_fields(): void
+    {
+        $event = $this->workspace();
+        $event->starts_at = '2032-06-18 07:23:00';
+        $event->timezone = 'America/New_York';
+        $event->ends_at = '2032-06-19 07:23:00';
+        Schema::shouldReceive('hasTable')->with('cms_pages')->andReturnFalse();
+        $this->get('/backoffice/website/pages')->assertOk()
+            ->assertInertia(fn (Assert $page) => $page->component('cms/Pages')
+                ->where('eventSchedule.starts_at', '2032-06-18T03:23:00-04:00')
+                ->where('eventSchedule.local_start', '2032-06-18T03:23')
+                ->where('eventSchedule.timezone', 'America/New_York')
+                ->missing('eventSchedule.ends_at')->missing('eventSchedule.status'));
     }
 
     public function test_search_and_pagination_are_validated_after_authorization(): void

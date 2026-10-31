@@ -125,6 +125,17 @@ class PublishedSectionPresenterTest extends TestCase
         $this->assertSame('Updated event', $result['sections'][0]['bindings']['name']);
         $this->assertArrayNotHasKey('name', $result['sections'][1]['bindings']);
         $this->assertStringNotContainsString('Updated event', json_encode($cached));
+        $countdown = array_values(array_filter($result['sections'], fn ($section) => $section['component_key'] === 'countdown'))[0];
+        $this->assertSame('2027-01-05T09:15:00+07:00', $countdown['bindings']['starts_at']);
+        $event->starts_at = '2032-06-18 07:23:11';
+        $event->timezone = 'America/New_York';
+        $updated = $presenter->present($cached, $event, 'about', 'ar');
+        $countdown = array_values(array_filter($updated['sections'], fn ($section) => $section['component_key'] === 'countdown'))[0];
+        $this->assertSame('2032-06-18T03:23:11-04:00', $countdown['bindings']['starts_at']);
+        $event->starts_at = null;
+        $cleared = $presenter->present($cached, $event, 'about', 'en');
+        $countdown = array_values(array_filter($cleared['sections'], fn ($section) => $section['component_key'] === 'countdown'))[0];
+        $this->assertNull($countdown['bindings']['starts_at']);
     }
 
     public static function unsafe(): iterable
