@@ -40,6 +40,18 @@ export default {
         focalX: "Horizontal focal point",
         focalY: "Vertical focal point",
     },
+    localization: {
+        review: "Localization readiness",
+        content: "Content",
+        page: "Page content",
+        section: "Section {number}",
+        media: "Image alt · section {number}",
+        seoTitle: "SEO title",
+        seoDescription: "SEO description",
+        seo: "Page SEO",
+        seoHelp: "Only ready metadata from a published revision is public. Missing titles use the published page title; missing descriptions stay omitted. Indexing and SSR remain disabled.",
+        seoLimit: "Plain text, maximum {count} characters. Missing and draft metadata do not block draft saves or publication.",
+    },
     publicCms: {
         eventStarted: "The event has started.", countingDown: "Time until the event starts", days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds",
         englishFallback: 'English content is shown because this translation is not ready.',

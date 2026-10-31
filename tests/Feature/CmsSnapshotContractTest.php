@@ -76,7 +76,7 @@ class CmsSnapshotContractTest extends TestCase
 
     public static function invalidCases(): iterable
     {
-        yield 'future schema' => ['schema_version', 3];
+        yield 'future schema' => ['schema_version', 4];
         yield 'string schema' => ['schema_version', '1'];
         yield 'unknown locale' => ['locales.fr', ['status' => 'missing', 'content' => null]];
         yield 'bad status' => ['locales.en.status', 'published'];
@@ -311,6 +311,38 @@ class CmsSnapshotContractTest extends TestCase
         $v1['sections'][0]['media'] = null;
         $this->expectException(ValidationException::class);
         $validator->validate($v1);
+    }
+
+    public function test_v3_seo_is_strict_bounded_and_backward_compatible(): void
+    {
+        $validator = new PageSnapshotValidator;
+        foreach ([$this->snapshot(), CmsMediaSecurityTest::mediaSnapshot((string) Str::uuid7()), PublicSeoLocalizationTest::snapshot()] as $snapshot) {
+            $this->assertSame($snapshot, $validator->validate($snapshot));
+            $this->assertSame($snapshot, $validator->validate(json_encode($snapshot)));
+        }
+        $v3 = PublicSeoLocalizationTest::snapshot();
+        $v3['seo']['title']['id'] = ['status' => 'draft', 'content' => ['value' => '']];
+        $this->assertSame($v3, $validator->validate($v3));
+        foreach ([
+            ['seo.canonical', 'https://attacker.invalid'],
+            ['seo.title.en.content.value', str_repeat('a', 161)],
+            ['seo.description.en.content.value', str_repeat('a', 321)],
+            ['seo.title.en.content.value', '<script>bad</script>'],
+            ['seo.description.en.content.value', '&lt;img src=x&gt;'],
+            ['seo.title.en.content.value', 'javascript:bad'],
+            ['seo.title.en.content.extra', 'unexpected'],
+            ['seo.title.en.content.value', ''],
+            ['seo.description.ar', ['status' => 'missing', 'content' => ['value' => 'invented']]],
+        ] as [$path, $value]) {
+            $changed = $v3;
+            data_set($changed, $path, $value);
+            try {
+                $validator->validate($changed);
+                $this->fail('Unsafe SEO accepted: '.$path);
+            } catch (ValidationException) {
+                $this->addToAssertionCount(1);
+            }
+        }
     }
 
     public static function slugs(): iterable

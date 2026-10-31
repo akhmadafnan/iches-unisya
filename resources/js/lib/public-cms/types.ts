@@ -23,7 +23,9 @@ export type PublicSection = {
 }[ComponentKey];
 export type SectionOf<K extends ComponentKey> = Extract<PublicSection, { component_key: K }>;
 export type PublicCatalog = Record<string, { variants: string[]; fields: Record<string, string> }>;
+export type PublicSeo = { title: string; description: string | null; canonical: string | null; image: string | null; og_locale: string; alternates: Partial<Record<Locale, string>>; language_urls: Record<Locale, string> };
 export type PublicCms = {
+    seo: PublicSeo;
     event: EventFacts & { slug: string };
     page: { slug: string; title: string; locale: Locale; fallback: boolean };
     sections: PublicSection[];

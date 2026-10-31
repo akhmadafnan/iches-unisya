@@ -6,10 +6,11 @@ export const statuses: TranslationStatus[] = ['missing', 'draft', 'ready'];
 export const emptyTranslations = (): Translations => ({
     en: { status: 'missing', content: null }, id: { status: 'missing', content: null }, ar: { status: 'missing', content: null },
 });
-export const emptySnapshot = (): Snapshot => ({ schema_version: 2, locales: emptyTranslations(), sections: [] });
+export const emptySnapshot = (): Snapshot => ({ schema_version: 3, locales: emptyTranslations(), sections: [], seo: { title: emptyTranslations(), description: emptyTranslations() } });
 export function editableSnapshot(snapshot: Snapshot): Snapshot {
     const next = copy(snapshot);
-    next.schema_version = 2;
+    next.schema_version = 3;
+    next.seo ??= { title: emptyTranslations(), description: emptyTranslations() };
     next.sections.forEach(section => { section.media ??= null; });
     return next;
 }
@@ -53,8 +54,8 @@ export function changeSection(snapshot: Snapshot, index: number, action: 'up' | 
 }
 
 // Inline feedback mirrors common v1 limits; PHP remains the final validator.
-export function validField(value: string, type: 'text' | 'url', status: TranslationStatus): boolean {
-    if ([...value].length > 5000 || (status === 'ready' && !value.trim())) return false;
+export function validField(value: string, type: 'text' | 'url', status: TranslationStatus, limit = 5000): boolean {
+    if ([...value].length > limit || (status === 'ready' && !value.trim())) return false;
     const decoded = value.replace(/&#(?:x([a-f0-9]+)|(\d+));?/gi, (_, hex, dec) => String.fromCodePoint(Math.min(parseInt(hex ?? dec, hex ? 16 : 10), 0x10ffff)))
         .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&colon;/gi, ':');
     if (/[<>\x00-\x08\x0b\x0c\x0e-\x1f\x7f]|(?:javascript|vbscript|data)\s*:|expression\s*\(/iu.test(decoded)) return false;
@@ -68,4 +69,17 @@ export function canPublish(snapshot: Snapshot): boolean {
 }
 export function sectionFields(section: Section, catalog: Catalog): Record<string, 'text' | 'url'> {
     return catalog[section.component_key]?.fields ?? {};
+}
+
+export function localizationReview(snapshot: Snapshot) {
+    const status = (translations: Translations | undefined) => Object.fromEntries(locales.map(locale => [locale, translations?.[locale].status ?? 'missing'])) as Record<Locale, TranslationStatus>;
+    const rows: { key: 'page' | 'section' | 'media' | 'seoTitle' | 'seoDescription'; section?: number; statuses: Record<Locale, TranslationStatus> }[] = [
+        { key: 'page', statuses: status(snapshot.locales) },
+    ];
+    for (const section of snapshot.sections.filter(section => section.visible)) {
+        rows.push({ key: 'section', section: section.position + 1, statuses: status(section.locales) });
+        if (section.media) rows.push({ key: 'media', section: section.position + 1, statuses: status(section.media.locales) });
+    }
+    rows.push({ key: 'seoTitle', statuses: status(snapshot.seo?.title) }, { key: 'seoDescription', statuses: status(snapshot.seo?.description) });
+    return rows;
 }

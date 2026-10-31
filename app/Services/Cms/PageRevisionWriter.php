@@ -63,7 +63,7 @@ class PageRevisionWriter
 
     public function validatePublicationMedia(array $snapshot): void
     {
-        if ($snapshot['schema_version'] !== 2) {
+        if (! in_array($snapshot['schema_version'], [2, 3], true)) {
             return;
         }
         foreach ($snapshot['sections'] as $section) {

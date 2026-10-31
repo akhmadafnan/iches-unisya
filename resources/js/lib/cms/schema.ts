@@ -12,7 +12,7 @@ export interface Section {
     id: string; component_key: string; variant: string; position: number; visible: boolean;
     locales: Translations; media_ids: string[]; media?: SectionMedia | null; bindings: { source: 'event'; field: string }[];
 }
-export interface Snapshot { schema_version: 1 | 2; locales: Translations; sections: Section[] }
+export interface Snapshot { schema_version: 1 | 2 | 3; locales: Translations; sections: Section[]; seo?: { title: Translations; description: Translations } }
 export interface Revision { id: string; version: number; created_at: string | null }
 export interface Audit { id: string; action: 'publish' | 'restore'; from_revision_id: string | null; to_revision_id: string; occurred_at: string | null }
 export interface CmsPage { id: string; slug: string; draft_revision_id: string | null; published_revision_id: string | null }

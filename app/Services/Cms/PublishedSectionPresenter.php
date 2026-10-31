@@ -18,7 +18,7 @@ class PublishedSectionPresenter
             if (! $section['visible']) {
                 continue;
             }
-            $media = $snapshot['schema_version'] === 2 ? $section['media'] : null;
+            $media = $snapshot['schema_version'] >= 2 ? $section['media'] : null;
             $sections[] = [
                 'id' => $section['id'], 'component_key' => $section['component_key'],
                 'variant' => $section['variant'], 'locales' => $this->ready($section['locales']),
@@ -27,7 +27,14 @@ class PublishedSectionPresenter
             ];
         }
 
-        return ['locales' => $this->ready($snapshot['locales']), 'sections' => $sections];
+        $seo = ['title' => [], 'description' => []];
+        if ($snapshot['schema_version'] === 3) {
+            foreach ($seo as $field => $_) {
+                $seo[$field] = $this->ready($snapshot['seo'][$field]);
+            }
+        }
+
+        return ['locales' => $this->ready($snapshot['locales']), 'sections' => $sections, 'seo' => $seo];
     }
 
     public function present(array $editorial, Event $event, string $slug, string $locale): array
@@ -61,13 +68,17 @@ class PublishedSectionPresenter
             ];
         }
 
-        return [
+        $cms = [
             'event' => ['slug' => $event->slug, ...$facts],
             'page' => ['slug' => $slug, 'title' => $editorial['locales'][$titleLocale]['title'],
                 'locale' => $titleLocale, 'fallback' => $titleLocale !== $locale],
             'sections' => $sections,
             'catalog' => $this->validator->catalog(),
         ];
+
+        $cms['seo'] = app(PublicSeo::class)->present($cms, $editorial, $locale);
+
+        return $cms;
     }
 
     private function ready(array $locales): array

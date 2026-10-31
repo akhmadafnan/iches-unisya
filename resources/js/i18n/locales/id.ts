@@ -42,6 +42,18 @@ export default {
         focalX: "Titik fokus horizontal",
         focalY: "Titik fokus vertikal",
     },
+    localization: {
+        review: "Kesiapan lokalisasi",
+        content: "Konten",
+        page: "Konten halaman",
+        section: "Section {number}",
+        media: "Alt gambar · section {number}",
+        seoTitle: "Judul SEO",
+        seoDescription: "Deskripsi SEO",
+        seo: "SEO halaman",
+        seoHelp: "Hanya metadata siap dari revisi terbit yang tampil publik. Judul yang belum tersedia memakai judul halaman terbit; deskripsi yang belum tersedia tidak ditampilkan. Pengindeksan dan SSR belum diaktifkan.",
+        seoLimit: "Teks biasa, maksimal {count} karakter. Metadata belum tersedia atau draf tidak menghalangi simpan draf maupun publikasi.",
+    },
     publicCms: {
         eventStarted: "Acara telah dimulai.", countingDown: "Waktu menuju dimulainya acara", days: "Hari", hours: "Jam", minutes: "Menit", seconds: "Detik",
         englishFallback: 'Konten bahasa Inggris ditampilkan karena terjemahan ini belum siap.',

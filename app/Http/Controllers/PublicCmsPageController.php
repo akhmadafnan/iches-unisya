@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class PublicCmsPageController
 {
     // String parameters keep implicit model binding from querying a missing CMS schema first.
-    public function __invoke(Request $request, string $event, string $page, PublishedCmsPageReader $reader): Response
+    public function __invoke(Request $request, string $event, string $page, PublishedCmsPageReader $reader, ?string $publicLocale = null): Response
     {
         return Inertia::render('public/CmsPage', ['cms' => $reader->read($event, $page, app()->getLocale())])
             ->toResponse($request)

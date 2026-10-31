@@ -176,15 +176,17 @@ class CmsLifecycleSecurityTest extends TestCase
         foreach (['publish', 'restore'] as $action) {
             foreach (['missing', 'draft', 'empty draft alt', 'whitespace draft alt', 'Unicode whitespace alt'] as $case) {
                 yield $action.' rejects '.$case.' media alt before mutation' => [false, false, $action, $case, true];
+                yield $action.' rejects v3 '.$case.' media alt before mutation' => [false, false, $action, $case, true, 3];
             }
             foreach (['ready', 'ready without translations', 'ready with draft translations', 'hidden', 'no media'] as $case) {
                 yield $action.' accepts '.$case.' v2 media' => [false, false, $action, $case, false];
+                yield $action.' accepts '.$case.' v3 media' => [false, false, $action, $case, false, 3];
             }
         }
     }
 
     #[DataProvider('transactionOutcomes')]
-    public function test_publication_transaction_and_cache_callback_contract_without_database(bool $auditFails, bool $cacheFails, string $action, ?string $mediaCase = null, bool $reject = false): void
+    public function test_publication_transaction_and_cache_callback_contract_without_database(bool $auditFails, bool $cacheFails, string $action, ?string $mediaCase = null, bool $reject = false, int $mediaSchema = 2): void
     {
         // Simulated SQL boundary, real Eloquent/service/Gate and Laravel transaction callbacks.
         // This does not prove MySQL atomicity, FKs or concurrent interleaving.
@@ -206,6 +208,10 @@ class CmsLifecycleSecurityTest extends TestCase
         ];
         if ($mediaCase !== null) {
             $snapshot = CmsMediaSecurityTest::mediaSnapshot($fileId);
+            if ($mediaSchema === 3) {
+                $snapshot['schema_version'] = 3;
+                $snapshot['seo'] = PublicSeoLocalizationTest::emptySeo();
+            }
             $media = &$snapshot['sections'][0]['media'];
             $media['locales']['en']['content']['caption'] = '';
             $media['locales']['en']['content']['credit'] = '';
