@@ -18,6 +18,7 @@ export type PublicSection = {
         locale: Locale;
         fallback: boolean;
         bindings: Partial<EventFacts>;
+        media?: { url: string; alt: string; caption: string; credit: string; focal: { x: number; y: number }; locale: Locale; fallback: boolean } | null;
     }
 }[ComponentKey];
 export type SectionOf<K extends ComponentKey> = Extract<PublicSection, { component_key: K }>;

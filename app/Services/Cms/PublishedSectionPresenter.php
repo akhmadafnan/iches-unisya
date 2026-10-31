@@ -8,7 +8,7 @@ class PublishedSectionPresenter
 {
     public function __construct(private PageSnapshotValidator $validator) {}
 
-    // This locale-independent cache projection deliberately drops all media and unready copy.
+    // Cache only explicit v2 presentation media and ready translations; legacy media IDs stay private.
     public function editorial(mixed $snapshot): array
     {
         $snapshot = $this->validator->validate($snapshot);
@@ -18,10 +18,12 @@ class PublishedSectionPresenter
             if (! $section['visible']) {
                 continue;
             }
+            $media = $snapshot['schema_version'] === 2 ? $section['media'] : null;
             $sections[] = [
                 'id' => $section['id'], 'component_key' => $section['component_key'],
                 'variant' => $section['variant'], 'locales' => $this->ready($section['locales']),
                 'bindings' => array_column($section['bindings'], 'field'),
+                'media' => $media ? ['file_id' => $media['file_id'], 'focal' => $media['focal'], 'locales' => $this->ready($media['locales'])] : null,
             ];
         }
 
@@ -43,11 +45,19 @@ class PublishedSectionPresenter
             if (! isset($section['locales'][$contentLocale])) {
                 continue;
             }
+            $media = $section['media'] ?? null;
+            $mediaLocale = isset($media['locales'][$locale]) ? $locale : 'en';
+            $image = $media && isset($media['locales'][$mediaLocale]) ? [
+                'url' => route('public.cms.media', ['event' => $event->slug, 'page' => $slug, 'section' => $section['id'], 'media' => $media['file_id']], false),
+                'focal' => $media['focal'], 'locale' => $mediaLocale, 'fallback' => $mediaLocale !== $locale,
+                ...$media['locales'][$mediaLocale],
+            ] : null;
             $sections[] = [
                 'id' => $section['id'], 'component_key' => $section['component_key'], 'variant' => $section['variant'],
                 'content' => $section['locales'][$contentLocale], 'locale' => $contentLocale,
                 'fallback' => $contentLocale !== $locale,
                 'bindings' => array_intersect_key($facts, array_flip($section['bindings'])),
+                'media' => $image,
             ];
         }
 

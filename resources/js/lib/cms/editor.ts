@@ -6,7 +6,18 @@ export const statuses: TranslationStatus[] = ['missing', 'draft', 'ready'];
 export const emptyTranslations = (): Translations => ({
     en: { status: 'missing', content: null }, id: { status: 'missing', content: null }, ar: { status: 'missing', content: null },
 });
-export const emptySnapshot = (): Snapshot => ({ schema_version: 1, locales: emptyTranslations(), sections: [] });
+export const emptySnapshot = (): Snapshot => ({ schema_version: 2, locales: emptyTranslations(), sections: [] });
+export function editableSnapshot(snapshot: Snapshot): Snapshot {
+    const next = copy(snapshot);
+    next.schema_version = 2;
+    next.sections.forEach(section => { section.media ??= null; });
+    return next;
+}
+export function selectMedia(section: Section, id: string) {
+    if (section.media?.file_id === id) return;
+    section.media_ids = id ? [id] : [];
+    section.media = id ? { file_id: id, focal: { x: 50, y: 50 }, locales: emptyTranslations() } : null;
+}
 export const copy = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 
 // getRandomValues also works on the owner's local HTTP hostname (randomUUID requires HTTPS).
@@ -25,7 +36,7 @@ export function addSection(snapshot: Snapshot, catalog: Catalog, key: string): S
     if (!catalog[key] || snapshot.sections.length >= 100) return snapshot;
     const next = copy(snapshot);
     next.sections.push({ id: sectionId(), component_key: key, variant: catalog[key].variants[0]!,
-        position: next.sections.length, visible: true, locales: emptyTranslations(), media_ids: [],
+        position: next.sections.length, visible: true, locales: emptyTranslations(), media_ids: [], media: null,
         bindings: key === 'countdown' ? [{ source: 'event', field: 'starts_at' }] : [] });
     return next;
 }

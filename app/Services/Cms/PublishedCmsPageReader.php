@@ -22,17 +22,7 @@ class PublishedCmsPageReader
     public function read(string $eventSlug, string $pageSlug, string $locale): array
     {
         try {
-            foreach (['events', 'cms_pages', 'cms_page_revisions'] as $table) {
-                abort_unless(Schema::hasTable($table), 404);
-            }
-            $event = $this->events->newQuery()->where('slug', $eventSlug)->firstOrFail();
-            $page = $this->pages->newQuery()->where('event_id', $event->getKey())->where('slug', $pageSlug)->firstOrFail();
-            abort_unless($page->event_id === $event->getKey() && $page->published_revision_id, 404);
-            $revision = $this->revisions->newQuery()->where('page_id', $page->getKey())
-                ->whereKey($page->published_revision_id)->firstOrFail();
-            abort_unless($revision->page_id === $page->getKey()
-                && $revision->getKey() === $page->published_revision_id && $revision->schema_version === 1, 404);
-
+            [$event, $page, $revision] = $this->published($eventSlug, $pageSlug);
             $key = CmsPublicationLifecycle::cacheKey($page);
             $cached = Cache::get($key);
             // Checking the fresh pointer also protects against a concurrent publish/restore cache fill.
@@ -42,6 +32,28 @@ class PublishedCmsPageReader
             }
 
             return $this->presenter->present($cached['editorial'], $event, $page->slug, $locale);
+        } catch (QueryException|ValidationException) {
+            abort(404);
+        }
+    }
+
+    public function published(string $eventSlug, string $pageSlug): array
+    {
+        try {
+            foreach (['events', 'cms_pages', 'cms_page_revisions'] as $table) {
+                abort_unless(Schema::hasTable($table), 404);
+            }
+            $event = $this->events->newQuery()->where('slug', $eventSlug)->firstOrFail();
+            $page = $this->pages->newQuery()->where('event_id', $event->getKey())->where('slug', $pageSlug)->firstOrFail();
+            abort_unless($page->event_id === $event->getKey() && $page->published_revision_id, 404);
+            $revision = $this->revisions->newQuery()->where('page_id', $page->getKey())
+                ->whereKey($page->published_revision_id)->firstOrFail();
+            abort_unless($revision->page_id === $page->getKey()
+                && $revision->getKey() === $page->published_revision_id && in_array($revision->schema_version, [1, 2], true), 404);
+
+            abort_unless(($revision->snapshot['schema_version'] ?? null) === $revision->schema_version, 404);
+
+            return [$event, $page, $revision];
         } catch (QueryException|ValidationException) {
             abort(404);
         }

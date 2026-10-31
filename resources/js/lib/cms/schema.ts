@@ -5,11 +5,14 @@ export interface Translation { status: TranslationStatus; content: Record<string
 export type Translations = Record<Locale, Translation>;
 export interface ComponentDefinition { variants: string[]; fields: Record<string, 'text' | 'url'> }
 export type Catalog = Record<string, ComponentDefinition>;
+export interface SectionMedia { file_id: string; focal: { x: number; y: number }; locales: Translations }
+export interface MediaItem { id: string; original_name: string; detected_mime: string; size_bytes: number }
+export interface MediaPage { data: MediaItem[]; next_page_url: string | null; prev_page_url: string | null }
 export interface Section {
     id: string; component_key: string; variant: string; position: number; visible: boolean;
-    locales: Translations; media_ids: string[]; bindings: { source: 'event'; field: string }[];
+    locales: Translations; media_ids: string[]; media?: SectionMedia | null; bindings: { source: 'event'; field: string }[];
 }
-export interface Snapshot { schema_version: 1; locales: Translations; sections: Section[] }
+export interface Snapshot { schema_version: 1 | 2; locales: Translations; sections: Section[] }
 export interface Revision { id: string; version: number; created_at: string | null }
 export interface Audit { id: string; action: 'publish' | 'restore'; from_revision_id: string | null; to_revision_id: string; occurred_at: string | null }
 export interface CmsPage { id: string; slug: string; draft_revision_id: string | null; published_revision_id: string | null }
