@@ -162,6 +162,13 @@ class EventScheduleSecurityTest extends TestCase
         yield 'DST overlap' => [['local_start' => '2032-11-07T01:30', 'timezone' => 'America/New_York'], 'local_start'];
         yield 'UTC below storage range' => [['local_start' => '1000-01-01T00:00', 'timezone' => 'Asia/Jakarta'], 'local_start'];
         yield 'UTC above storage range' => [['local_start' => '9999-12-31T23:59', 'timezone' => 'America/New_York'], 'local_start'];
+        yield 'one second below timestamp minimum' => [['local_start' => '1970-01-01T00:00:00', 'timezone' => 'UTC'], 'local_start'];
+        yield 'one second above timestamp maximum' => [['local_start' => '2038-01-19T03:14:08', 'timezone' => 'UTC'], 'local_start'];
+        yield 'Jakarta above timestamp maximum' => [['local_start' => '2038-01-19T10:14:08', 'timezone' => 'Asia/Jakarta'], 'local_start'];
+        yield 'west of UTC above timestamp maximum' => [['local_start' => '2038-01-18T23:14:08', 'timezone' => 'America/Halifax'], 'local_start'];
+        yield 'DST gap with seconds' => [['local_start' => '2032-03-14T02:30:01', 'timezone' => 'America/New_York'], 'local_start'];
+        yield 'DST overlap with seconds' => [['local_start' => '2032-11-07T01:30:01', 'timezone' => 'America/New_York'], 'local_start'];
+        yield 'invalid seconds' => [['local_start' => '2032-06-18T14:23:60'], 'local_start'];
         yield 'unconfirmed' => [['confirmed' => false], 'confirmed'];
     }
 
@@ -169,10 +176,15 @@ class EventScheduleSecurityTest extends TestCase
     public function test_bad_schedule_never_saves(array $input, string $field): void
     {
         $event = $this->workspace();
+        $event->starts_at = '2032-06-17 07:23:00';
+        $event->syncOriginal();
         $before = $event->getAttributes();
-        $this->postJson('/workspace/events/selected-event/schedule', array_replace([
+        $response = $this->postJson('/workspace/events/selected-event/schedule', array_replace([
             'local_start' => '2032-06-18T14:23', 'timezone' => 'Asia/Jakarta', 'confirmed' => true,
         ], $input, $input === [] ? ['local_start' => null] : []))->assertUnprocessable()->assertJsonValidationErrors($field);
+        if ($field === 'local_start') {
+            $this->assertSame('schedule.invalidTime', $response->json('errors.local_start.0'));
+        }
         $this->assertSame($before, $event->getAttributes());
     }
 
@@ -189,6 +201,13 @@ class EventScheduleSecurityTest extends TestCase
 
     public static function validTimes(): iterable
     {
+        yield 'exact timestamp minimum' => ['1970-01-01T00:00:01', 'UTC', '1970-01-01T00:00:01+00:00'];
+        yield 'one second above timestamp minimum' => ['1970-01-01T00:00:02', 'UTC', '1970-01-01T00:00:02+00:00'];
+        yield 'one second below timestamp maximum' => ['2038-01-19T03:14:06', 'UTC', '2038-01-19T03:14:06+00:00'];
+        yield 'exact timestamp maximum' => ['2038-01-19T03:14:07', 'UTC', '2038-01-19T03:14:07+00:00'];
+        yield 'Jakarta exact timestamp maximum' => ['2038-01-19T10:14:07', 'Asia/Jakarta', '2038-01-19T03:14:07+00:00'];
+        yield 'west of UTC previous local day at minimum' => ['1969-12-31T20:00:01', 'America/Halifax', '1970-01-01T00:00:01+00:00'];
+        yield 'west of UTC previous local day at maximum' => ['2038-01-18T23:14:07', 'America/Halifax', '2038-01-19T03:14:07+00:00'];
         yield 'Jakarta' => ['2032-06-18T14:23', 'Asia/Jakarta', '2032-06-18T07:23:00+00:00'];
         yield 'UTC' => ['2032-06-18T07:23', 'UTC', '2032-06-18T07:23:00+00:00'];
         yield 'after DST gap' => ['2032-03-14T03:30', 'America/New_York', '2032-03-14T07:30:00+00:00'];
@@ -199,7 +218,7 @@ class EventScheduleSecurityTest extends TestCase
     public function test_eligible_operator_converts_time_and_only_mutates_schedule_using_mock_save(string $local, string $timezone, string $expected): void
     {
         $event = $this->workspace(willSave: true);
-        $event->ends_at = '2033-01-01 00:00:00';
+        $event->ends_at = str_starts_with($expected, '2038-') ? null : '2033-01-01 00:00:00';
         $event->syncOriginal();
         $event->shouldReceive('save')->once()->andReturnUsing(function () use ($event, $expected, $timezone): bool {
             $this->assertSame($expected, $event->starts_at->format(DATE_ATOM));

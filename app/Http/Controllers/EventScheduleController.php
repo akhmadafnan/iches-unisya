@@ -22,7 +22,7 @@ class EventScheduleController
         $event = $grant->event;
         Gate::authorize('manageSchedule', [$event, $workspace]);
         $input = $request->validate([
-            'local_start' => ['required', 'string', 'date_format:Y-m-d\TH:i'],
+            'local_start' => ['required', 'string', 'date_format:Y-m-d\TH:i,Y-m-d\TH:i:s'],
             'timezone' => ['required', 'string', Rule::in(DateTimeZone::listIdentifiers())],
             'confirmed' => ['required', 'accepted'],
         ], [
@@ -44,8 +44,9 @@ class EventScheduleController
 
     private function instant(string $local, string $timezone): DateTimeImmutable
     {
-        $wall = DateTimeImmutable::createFromFormat('!Y-m-d\TH:i', $local, new DateTimeZone('UTC'));
-        if (! $wall || $wall->format('Y-m-d\TH:i') !== $local || (int) $wall->format('Y') < 1000) {
+        $format = strlen($local) === 19 ? 'Y-m-d\TH:i:s' : 'Y-m-d\TH:i';
+        $wall = DateTimeImmutable::createFromFormat('!'.$format, $local, new DateTimeZone('UTC'));
+        if (! $wall || $wall->format($format) !== $local || (int) $wall->format('Y') < 1000) {
             throw ValidationException::withMessages(['local_start' => 'schedule.invalidTime']);
         }
         $zone = new DateTimeZone($timezone);
@@ -54,11 +55,16 @@ class EventScheduleController
         $matches = [];
         foreach ($offsets as $offset) {
             $candidate = $wall->setTimestamp($epoch - $offset);
-            if ($candidate->setTimezone($zone)->format('Y-m-d\TH:i') === $local) {
+            if ($candidate->setTimezone($zone)->format($format) === $local) {
                 $matches[] = $candidate;
             }
         }
-        if (count($matches) !== 1 || (int) $matches[0]->format('Y') < 1000 || (int) $matches[0]->format('Y') > 9999) {
+        if (count($matches) !== 1) {
+            throw ValidationException::withMessages(['local_start' => 'schedule.invalidTime']);
+        }
+
+        // MySQL TIMESTAMP accepts UTC instants from 1970-01-01 00:00:01 through 2038-01-19 03:14:07.
+        if ($matches[0]->getTimestamp() < 1 || $matches[0]->getTimestamp() > 2147483647) {
             throw ValidationException::withMessages(['local_start' => 'schedule.invalidTime']);
         }
 
